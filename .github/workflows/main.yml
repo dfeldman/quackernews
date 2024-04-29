@@ -29,4 +29,5 @@ jobs:
         git config --local user.name "GitHub Action"
         git add -A
         git commit -m "Regenerate site" || echo "No changes to commit."
-        git push
+        git push --set-upstream https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/dfeldman/quackernews.git main
+        
