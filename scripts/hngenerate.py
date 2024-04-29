@@ -32,8 +32,8 @@ def generate_html(data):
                 <td bgcolor="#800080">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding:2px">
                         <tr>
-                            <td style="width:18px;padding:10px; padding-left: 12px; padding-right: 12px;">
-                                <a href="#" style="color: white; text-decoration: none;">🦆</a>
+                            <td style="width:18px;padding:2px; padding-left: 12px; padding-right: 12px;">
+                                <a href="#" style="color: white; text-decoration: none;"><img src="iconsmall.png" height="32" width="32"/></a>
                             </td>
                             <td style="line-height:12pt; height:10px;">
                                 <span class="pagetop" style="color: white;">
