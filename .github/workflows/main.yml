@@ -17,6 +17,9 @@ jobs:
     - name: Set up Environment Variables
       run: echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> $GITHUB_ENV
 
+    - name: debug
+      run: ls -l 
+      
     - name: Run Script to Generate Content
       run: bash scripts/script.sh
 
