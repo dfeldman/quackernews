@@ -19,7 +19,7 @@ jobs:
 
     - name: debug
       run: ls -l 
-      
+
     - name: Run Script to Generate Content
       run: bash scripts/script.sh
 
@@ -28,9 +28,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add -A
-        git commit -m "Regenerate site"
-        if git diff --staged --quiet; then
-          echo "No changes to commit."
-        else
-          git push
-        fi
+        git commit -m "Regenerate site" || echo "No changes to commit."
+        git push
