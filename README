@@ -5,7 +5,9 @@ Quacker News is a daily, sarcastic summary of today's Hacker News articles and c
 
 For each Hacker News post, it fetches the title; the post itself; and some comments, and feeds them to GPT-4 to ruthlessly mock. 
 
-It runs automatically each night via GitHub Actions. 
+It runs automatically each night via GitHub Actions, and is hosted on GitHub Pages. 
+
+It is accessible on [quackernews.com](http://quackernews.com).
 
 ![screenshot image](screenshot.png)
 
