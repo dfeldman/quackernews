@@ -73,7 +73,11 @@ def main(num_stories):
     data = []
     for story in stories[:num_stories]:
         print(story)
-        story_data = parse_story(story)
+        try: 
+            story_data = parse_story(story)
+        except:
+            # if we can't parse a story just skip it
+            continue
         if story_data['link']:
             data.append(story_data)
     
@@ -83,5 +87,5 @@ def main(num_stories):
     print(f"Successfully generated output.json with {len(data)} stories.")
 
 if __name__ == '__main__':
-    num_stories = 10
+    num_stories = 20
     main(num_stories)

@@ -38,7 +38,7 @@ def generate_html(data):
                             <td style="line-height:12pt; height:10px;">
                                 <span class="pagetop" style="color: white;">
                                     <b class="hnname"><a href="#" style="color: white;">Quacker News</a></b>
-                                    <a href="#" style="color: white;">new</a> | <a href="#" style="color: white;">past</a> | <a href="#" style="color: white;">comments</a> | <a href="#" style="color: white;">ask</a> | <a href="#" style="color: white;">show</a> | <a href="#" style="color: white;">jobs</a> | <a href="#" style="color: white;">submit</a>
+                                    <a href="#" style="color: white;"><i>daily automatic superturbo tech-bro mockery</i></a>
                                 </span>
                             </td>
                         </tr>
@@ -61,7 +61,7 @@ def generate_html(data):
                             <td class="title">
                                 <span class="titleline">
                                     <span class="votelinks">▲</span><a href="{story["link"]}" class="titlelink">  {story["title"]}</a>
-                                    <span class="sitebit comhead"> ({domain})</span>
+                                    <span class="sitebit comhead"> </span> 
                                 </span>
                                 <br>
                                 <span class="summary">
