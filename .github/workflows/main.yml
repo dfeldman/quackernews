@@ -20,12 +20,13 @@ jobs:
     - name: Test
       run: |
         ls -l
+        env
         date > date.txt
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add date.txt
         git commit -m "Update date"
-        git push --set-upstream https://${GITHUB_TOKEN}@github.com/dfeldman/quackernews.git main
+        git push --set-upstream https://${{ secrets.GH_TOKEN }}@github.com/dfeldman/quackernews.git main
 
 
     - name: Run Script to Generate Content
@@ -37,4 +38,4 @@ jobs:
         git config --local user.name "GitHub Action"
         git add -A
         git commit -m "Regenerate site" || echo "No changes to commit."
-        git push --set-upstream https://${GITHUB_TOKEN}@github.com/dfeldman/quackernews.git main
+        git push --set-upstream https://${{ secrets.GH_TOKEN }}@github.com/dfeldman/quackernews.git main
