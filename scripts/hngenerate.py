@@ -38,7 +38,7 @@ def generate_html(data):
                             <td style="line-height:12pt; height:10px;">
                                 <span class="pagetop" style="color: white;">
                                     <b class="hnname"><a href="#" style="color: white;">Quacker News</a></b>
-                                    <span style="color: white;"><i>daily automatic superturbo tech-bro mockery</i></span> <a href="http://github.com/dfeldman/quackernews" style="color: white;"> | github</a>
+                                    <span style="color: white;"><i>daily automatic superturbo tech-bro mockery</i> | </span> <a href="http://github.com/dfeldman/quackernews" style="color: white;">github</a>
                                 </span>
                             </td>
                         </tr>
