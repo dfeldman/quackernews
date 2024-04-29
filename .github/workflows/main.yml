@@ -7,8 +7,9 @@ on:
   workflow_dispatch: 
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Somehow this affects the PAT as well. I'm not sure how. 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
