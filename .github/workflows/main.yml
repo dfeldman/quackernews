@@ -1,0 +1,32 @@
+name: Nightly Site Regeneration
+
+on:
+  schedule:
+    # Runs at midnight UTC
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Environment Variables
+      run: echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
+
+    - name: Run Script
+      run: bash script.sh
+
+    - name: Commit and Push Changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        git commit -m "Regenerate site"
+        if git diff --staged --quiet; then
+          echo "No changes to commit."
+        else
+          git push
+        fi
