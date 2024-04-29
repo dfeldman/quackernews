@@ -17,8 +17,14 @@ jobs:
     - name: Set up Environment Variables
       run: echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> $GITHUB_ENV
 
-    - name: debug
-      run: ls -l 
+    - name: Test
+      run: |
+        ls -l
+        date > date.txt
+        git add date.txt
+        git commit -m "Update date"
+        git push --set-upstream https://${{ GITHUB_TOKEN }}@github.com/dfeldman/quackernews.git main
+
 
     - name: Run Script to Generate Content
       run: bash scripts/script.sh
@@ -29,4 +35,4 @@ jobs:
         git config --local user.name "GitHub Action"
         git add -A
         git commit -m "Regenerate site" || echo "No changes to commit."
-        git push --set-upstream https://${{ secrets.GH_TOKEN }}@github.com/dfeldman/quackernews.git main
+        git push --set-upstream https://${{ GITHUB_TOKEN }}@github.com/dfeldman/quackernews.git main
