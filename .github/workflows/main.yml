@@ -21,6 +21,8 @@ jobs:
       run: |
         ls -l
         date > date.txt
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
         git add date.txt
         git commit -m "Update date"
         git push --set-upstream https://${GITHUB_TOKEN}@github.com/dfeldman/quackernews.git main
