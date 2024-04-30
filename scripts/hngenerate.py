@@ -12,11 +12,16 @@ def generate_html(data):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quacker News</title>
     <link rel="icon" type="image/png" href="iconsmall.png">
-    <meta property="og:image" content="preview.png">
-    <meta property="og:image:width" content="1280">
-    <meta property="og:image:height" content="640">
+    <meta property="og:title" content="Quacker News">
+    <meta property="og:description" content="daily superautomated ai tech-bro mockery">
+    <meta property="og:image" content="https://quackernews.com/preview.png">
+    <meta property="og:url" content="https://quackernews.com/preview.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="preview.png">
+    <meta name="twitter:site" content="@d_feldman">
+    <meta name="twitter:title" content="Quacker News">
+    <meta name="twitter:description" content="daily superautomated ai tech-bro mockery">
+    <meta name="twitter:image" content="https://quackernews.com/preview.png">
+    <link rel="icon" type="image/png" href="iconsmall.png">
     <style>
         body { font-family: Verdana, Geneva, sans-serif; font-size: 14pt; color: #828282; background-color: #f0e6ff; }
         td { font-family: Verdana, Geneva, sans-serif; font-size: 14pt; color: #828282; padding-right: 20px;}
