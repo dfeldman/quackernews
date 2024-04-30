@@ -11,6 +11,7 @@ def generate_html(data):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quacker News</title>
+    <link rel="icon" type="image/png" href="iconsmall.png">
     <meta property="og:image" content="preview.png">
     <meta property="og:image:width" content="1280">
     <meta property="og:image:height" content="640">
