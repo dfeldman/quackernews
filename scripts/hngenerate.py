@@ -65,6 +65,7 @@ def generate_html(data):
     for i, story in enumerate(data, start=1):
         domain = urlparse(story["link"]).netloc
         summary = story["summary"].replace('\n', '<br>')
+        story["title"] = story["title"].replace("HN", "QN")
         html += f'''
                         <tr class='athing' id='story-{i}' >
                             <td align="right" valign="top" class="title" style="padding: 10px"><span class="rank">{i}.</span></td>
