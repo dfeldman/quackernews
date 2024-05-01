@@ -1,7 +1,18 @@
 [
   {
+    "title": "StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Gen (storydiffusion.github.io)",
+    "points": 30,
+    "submitter": "doodlesdev",
+    "submit_time": "2024-05-01T00:07:08",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [],
+    "link": "https://storydiffusion.github.io/",
+    "first_paragraph": "StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Generation"
+  },
+  {
     "title": "Printing Music with CSS Grid (cruncher.ch)",
-    "points": 266,
+    "points": 272,
     "submitter": "speckx",
     "submit_time": "2024-04-30T20:39:59",
     "num_comments": 33,
@@ -22,22 +33,11 @@
     "first_paragraph": ""
   },
   {
-    "title": "StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Gen (storydiffusion.github.io)",
-    "points": 19,
-    "submitter": "doodlesdev",
-    "submit_time": "2024-05-01T00:07:08",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [],
-    "link": "https://storydiffusion.github.io/",
-    "first_paragraph": "StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Generation"
-  },
-  {
     "title": "Pyinfra: Automate Infrastructure Using Python (pyinfra.com)",
-    "points": 379,
+    "points": 385,
     "submitter": "InitEnabler",
     "submit_time": "2024-04-30T14:54:45",
-    "num_comments": 148,
+    "num_comments": 149,
     "comments_url": "https://news.ycombinator.com/item?id=40211655",
     "comments": [
       "Hey all, I'm the creator/primary maintainer of pyinfra! Super excited (a little terrified) to see this on the frontpage, happy to answer any questions :)I also hang out on the Matrix room: https://matrix.to/#/#pyinfra:matrix.orgAnother thing: the GH repo points at currently in beta v3 and the docs for this are here: https://docs.pyinfra.com/en/next (highly recommend starting with v3, I just haven't had any time recently to wrap up the release, but it's stable).",
@@ -55,8 +55,30 @@
     "first_paragraph": "pyinfra automates infrastructure using Python. It\u2019s fast and scales from one server to thousands. Great for ad-hoc command execution, service deployment, configuration management and more. Here's why you should try pyinfra:"
   },
   {
+    "title": "Level of Gaussians: Real-Time View Synthesis for Millions of Square Meters (zju3dv.github.io)",
+    "points": 79,
+    "submitter": "corysama",
+    "submit_time": "2024-04-30T19:45:36",
+    "num_comments": 10,
+    "comments_url": "https://news.ycombinator.com/item?id=40215424",
+    "comments": [
+      "Crazy good results but without the paper (which the link at the time just goes back to the site) it's a bit difficult to check how good. What data is required, how long are training runs/how many steps?",
+      "Using 200 photos taken with a conventional camera, at a refresh rate of 105 frames per second - the quality of video game images - the result gives the illusion of walking through the video. Better still, if you zoom in, you can see finer details, such as the spokes of a bicycle wheel, in excellent detail.It use neural network techniques, but it's not strictly using NN.it do the same result as Nerf from google in 30min, nvidia result in 7minute. It can achieve more than 100fps if you let it train longer.https://www.inria.fr/fr/3d-gaussian-splatting-vision-ordinat...",
+      "Actual title is: Real-Time View Synthesis for Large Scenes with Millions of Square MetersWhich makes more sense than: Real-Time View Synthesis for Square Meters",
+      "Title edited. Thanks. I couldn't fit the whole title. But, didn't think I cut out \"Millions of\"...",
+      "Please Google, implement this in google maps (especially on mobile).It's been over a decade and we're still stuck with 2D maps and boxy untextured buildings.",
+      "I am really impressed by the Apple Maps implementation. I think it also uses textured polygons, but does so in a very good looking way and at 120 fps on an iPhone, showing even a whole city in textured 3d.",
+      "Google uses texture mapped polygons instead of 3D Gaussians, so this wouldn't work for Google Maps. But there actually is a collection of libraries which does the same thing for polygonal data: https://vcg.isti.cnr.it/nexus/One of the guys working on this is Federico Ponchio. His 2008 PhD thesis, which provided the core insight for Unreal Engine's Nanite, is referenced at bottom.",
+      "Looks even better than Microsoft flight simulator. Awesome!",
+      "I hope the next-gen google earth looks something like this.",
+      "I got excited because the code was just released. But, apparently the paper is still not available? Sorry..."
+    ],
+    "link": "https://zju3dv.github.io/LoG_webpage/",
+    "first_paragraph": "Zhejiang University"
+  },
+  {
     "title": "The File Filesystem (2021) (mgree.github.io)",
-    "points": 182,
+    "points": 185,
     "submitter": "wegwerff",
     "submit_time": "2024-04-30T17:43:12",
     "num_comments": 52,
@@ -77,32 +99,11 @@
     "first_paragraph": "The Unix shell is a powerful tool, and the Unix ecosystem provides an\nincredible array of tools for working with strings. But the shell\nreally only knows how to work with one data structure: the\nfilesystem. Modern systems use all kinds of\nsemi-structured\ndata, like JSON or YAML. These semi-structured formats are essentially\ntrees, and string processing is a bad match\u2014editing JSON with sed is\nnot a very good idea!"
   },
   {
-    "title": "Level of Gaussians: Real-Time View Synthesis for Millions of Square Meters (zju3dv.github.io)",
-    "points": 75,
-    "submitter": "corysama",
-    "submit_time": "2024-04-30T19:45:36",
-    "num_comments": 9,
-    "comments_url": "https://news.ycombinator.com/item?id=40215424",
-    "comments": [
-      "Crazy good results but without the paper (which the link at the time just goes back to the site) it's a bit difficult to check how good. What data is required, how long are training runs/how many steps?",
-      "Using 200 photos taken with a conventional camera, at a refresh rate of 105 frames per second - the quality of video game images - the result gives the illusion of walking through the video. Better still, if you zoom in, you can see finer details, such as the spokes of a bicycle wheel, in excellent detail.It use neural network techniques, but it's not strictly using NN.it do the same result as Nerf from google in 30min, nvidia result in 7minute. It can achieve more than 100fps if you let it train longer.https://www.inria.fr/fr/3d-gaussian-splatting-vision-ordinat...",
-      "Actual title is: Real-Time View Synthesis for Large Scenes with Millions of Square MetersWhich makes more sense than: Real-Time View Synthesis for Square Meters",
-      "Title edited. Thanks. I couldn't fit the whole title. But, didn't think I cut out \"Millions of\"...",
-      "Please Google, implement this in google maps (especially on mobile).It's been over a decade and we're still stuck with 2D maps and boxy untextured buildings.",
-      "Google uses texture mapped polygons instead of 3D Gaussians, so this wouldn't work for Google Maps. But there actually is a collection of libraries which does the same thing for polygonal data: https://vcg.isti.cnr.it/nexus/One of the guys working on this is Federico Ponchio. His 2008 PhD thesis, which provided the core insight for Unreal Engine's Nanite, is referenced at bottom.",
-      "Looks even better than Microsoft flight simulator. Awesome!",
-      "I hope the next-gen google earth looks something like this.",
-      "I got excited because the code was just released. But, apparently the paper is still not available? Sorry..."
-    ],
-    "link": "https://zju3dv.github.io/LoG_webpage/",
-    "first_paragraph": "Zhejiang University"
-  },
-  {
     "title": "Borgo is a statically typed language that compiles to Go (github.com/borgo-lang)",
-    "points": 283,
+    "points": 285,
     "submitter": "manx",
     "submit_time": "2024-04-30T15:13:22",
-    "num_comments": 208,
+    "num_comments": 210,
     "comments_url": "https://news.ycombinator.com/item?id=40211891",
     "comments": [
       "Wow, this is everything I want from a new Go!Having worked on multiple very large Go codebases with many engineers, the lack of actual enums and a built-in optional type instead of nil drive me crazy.I think I'm in love.Edit:\nLooks like last commit was 7 months ago. Was this abandoned, or considered feature complete? I hope it's not abandoned!",
@@ -111,10 +112,10 @@
       "Comments like this are what drives me away from Go; comments that enforce a particular belief about how or what features you should or should not use/introduce in your PL.\nTalking in absolutes is so far removed from a logical arguments and from good engineering.\nI would appreciate if anyone could recommend a language like Go (static, strong typed, not ancient, good tooling) with a friendly community, that won\u2019t ostracize the non-believers. Zig?",
       "panic/recover/error?",
       "The issue is that it's more or less impossible to graft onto the language now. You could add enums, but the main reason why people want them is to fix the error handling. You can't do this without fracturing the ecosystem.",
+      "I just want regular enums, that would solve the problems that result from using the current status quo.",
       "> but the main reason why people want them is to fix the error handlingWhy do you think so? Maybe I'm an odd case, but my main use case for enums is for APIs and database designs, where I want to lock down some field to a set of acceptable values and make sure anything else is a mistake. Or for state machines. Error handling is manageable without enums (but I love Option/Result types more than Go's error approach, especially with the ? operator).",
       "https://www.postgresql.org/docs/current/datatype-enum.htmlThen wrap appropriately.  Something like sqlc will actually generate everything you need.",
-      "> my main use case for enums is for APIs and database designs, where I want to lock down some field to a set of acceptable values and make sure anything else is a mistakeThen what you are really looking for is sum types (what Rust calls enums, but unusually so), not enums. Go does not have sum types, but you can use interfaces to archive a rough facsimile and most certainly to satisfy your specific expectation:    type Hot struct{}\n    func (Hot) temp() {}\n\n    type Cold struct{}\n    func (Cold) temp() {}\n\n    type Temperature interface {\n        temp()\n    }\n\n    func SetThermostat(temperature Temperature) {\n        switch temperature.(type) {\n        case Hot:\n            fmt.Println(\"Hot\")\n        case Cold:\n            fmt.Println(\"Cold\")\n        }\n    }",
-      "annoyingly go can't have proper sum types, as the requirement for a default value for everything doesn't make any sense for sum types"
+      "> my main use case for enums is for APIs and database designs, where I want to lock down some field to a set of acceptable values and make sure anything else is a mistakeThen what you are really looking for is sum types (what Rust calls enums, but unusually so), not enums. Go does not have sum types, but you can use interfaces to archive a rough facsimile and most certainly to satisfy your specific expectation:    type Hot struct{}\n    func (Hot) temp() {}\n\n    type Cold struct{}\n    func (Cold) temp() {}\n\n    type Temperature interface {\n        temp()\n    }\n\n    func SetThermostat(temperature Temperature) {\n        switch temperature.(type) {\n        case Hot:\n            fmt.Println(\"Hot\")\n        case Cold:\n            fmt.Println(\"Cold\")\n        }\n    }"
     ],
     "link": "https://github.com/borgo-lang/borgo",
     "first_paragraph": "We read every piece of feedback, and take your input very seriously."
@@ -124,7 +125,7 @@
     "points": 215,
     "submitter": "CoolCold",
     "submit_time": "2024-04-29T23:59:55",
-    "num_comments": 469,
+    "num_comments": 471,
     "comments_url": "https://news.ycombinator.com/item?id=40205714",
     "comments": [
       "I'm not a fan of sudo.  It's does so much it needs BNF to describe it's configuration format.  Who knows, maybe replacing the configuration with polkit is a good idea.   Still it's a stand alone binary with one clear job to do, simple enough that one person has no trouble getting their head around it so it's not surprising it hasn't had too many problems over it's long life time.This made me smile:> sudo has serious problems though. It's a relatively large SUID binary, i.e. privileged code that unprivileged users can invoke from their own context. It has a complicating configuration language, loadable plugins (ldap!), hostname matches and so on and so on.That is a bit rich coming from the author of systemd, which must be in the running for one of the largest bodies of code that must run as root.  It's also a very complex piece of code.  That complexity is the reason I was completely flummoxed by interactions between systemd and dll's being exploited by the XZ utils hack to attack an unrelated and uncompromised binary: openssh.   Run0 is just an extension of that ball of mud.  It's a stretch to believe it will be more secure than sudo in the long term, which is amusing because it appears Lennarts primary argument is it will be more secure.I'm not the only one who has noticed this: https://lwn.net/Articles/971812/",
@@ -143,7 +144,7 @@
   },
   {
     "title": "Show HN: I made a CLI tool to create web extensions with no build configuration (github.com/cezaraugusto)",
-    "points": 254,
+    "points": 256,
     "submitter": "cezaraugustodev",
     "submit_time": "2024-04-30T13:11:16",
     "num_comments": 55,
@@ -151,12 +152,12 @@
     "comments": [
       "Very cool stuff! I might check this out for my extension (https://github.com/herrherrmann/omnivore-list-popup). So far, I\u2019ve been creating my own scripts to manage the extension builds, dev mode etc. \u2013 but I\u2019ve been eyeing web-ext already to make my life easier. However, my main browser is Firefox, which doesn\u2019t seem fully supported yet by Extension, right?",
       "Thanks a lot!You can run your Mozilla Add-On on Chrome or Edge by adding a --polyfill flag, but for now you need to manually add the extension to Firefox. I do plan to support Firefox in the near future, but no browser runner available at the moment.",
-      "Absolutely amazing! When I was developing a chrome extension all I could think of was a severe lack of dev-tools. I'll try it when I get the opportunity.",
-      "Thank you! The ecosystem for developing extensions could be so much better, hope we can help with that",
       "This is exactly what I need right now. Thanks for building and sharing it! Looking forward to Firefox support. I hope you can get it working.Firefox Support Issue: https://github.com/cezaraugusto/extension.js/issues/5",
       "In particular, navigating the conflicting requirements for `manifest.json` would be useful, e.g. the difference between event pages and background service workers, or permissions that are inconsistently required/forbidden.",
       "It would be great if you could add more details to the Firefox support issue in github. Maybe the community could help solve it?",
       "The plugin for Firefox is on the way, but any community support is highly appreciated.",
+      "Absolutely amazing! When I was developing a chrome extension all I could think of was a severe lack of dev-tools. I'll try it when I get the opportunity.",
+      "Thank you! The ecosystem for developing extensions could be so much better, hope we can help with that",
       "Okay I love it, I feel like you should also sprinkle your magic on extension<>tab communication. Whenever I make an extension, it's always such a pain to read from the DOM or send a message from the extension to the active tab.",
       "Haha, thanks! It\u2019s not in the immediate plans, but meanwhile, I'm sure there are some good libraries on npm for that :)"
     ],
@@ -164,30 +165,29 @@
     "first_paragraph": "We read every piece of feedback, and take your input very seriously."
   },
   {
-    "title": "Alice's adventures in a differentiable wonderland (sscardapane.it)",
-    "points": 134,
-    "submitter": "tosh",
-    "submit_time": "2024-04-30T17:03:36",
-    "num_comments": 57,
-    "comments_url": "https://news.ycombinator.com/item?id=40213292",
+    "title": "Quacker News (quackernews.com)",
+    "points": 26,
+    "submitter": "adamgordonbell",
+    "submit_time": "2024-04-29T12:03:10",
+    "num_comments": 9,
+    "comments_url": "https://news.ycombinator.com/item?id=40197235",
     "comments": [
-      "> Stripped of anything else, neural networks are compositions of differentiable primitivesI\u2019m a sucker for statements like this. It almost feels philosophical, and makes the whole subject so much more comprehensible in only a single sentence.I think Fran\u00e7ois Chollet says something similar in his book on deep learning: one shouldn\u2019t fall into the trap of anthropomorphising and mysticising models based on the \u2018neural\u2019 name; deep learning is simply the application of sequences of operations that are nonlinear (and hence capable of encoding arbitrary complexity) but nonetheless differentiable and so efficiently optimisable.",
-      "Ugh, exactly, it's so cool. I've been a deep learning practitioner for ~3 years now, and I feel like this notion has really been impressed upon me only recently.I've spent an awful lot of mental energy trying to conceive of how these things work, when really it comes down to \"does increasing this parameter improve the performance on this task? Yes? Move the dial up a bit. No? Down a bit...\" x 1e9.And the cool part is that this yields such rich, interesting, sometimes even useful, structures!I like to think of this cognitive primitive as the analogue to the idea that thermodynamics is just the sum of particles bumping into each other. At the end of the day, that really is just it, but the collective behavior is something else entirely.",
-      "it comes down to \"does increasing this parameter improve the performance on this task? Yes? Move the dial up a bit. No? Down a bit...\" x 1e9This is not how gradient based NN optimization works. What you described is called \"random weight perturbation\", a variant of evolutionary algorithms. It does not scale to networks larger than a few thousand parameters for obvious reasons.NNs are optimized by directly computing a gradient which tells us the direction to go to to reduce the loss on the current batch of training data. There's no trying up or down and seeing if it worked - we always know which direction to go.SGD and RWP are two completely different approaches to learning optimal NN weights.",
-      "I don\u2019t think the author literally meant tweaking the parameters and seeing what happens; it\u2019s probably an analogy meant to give a sense of how the gradient indicates what direction and to what degree the parameters should be tweaked. Basically, substitute \u2018the gradient is positive\u2019 for \u2018increasing this parameter decreases performance\u2019 and vice versa and it becomes correct.",
-      "> At the end of the day, that really is just it, but the collective behavior is something else entirely.Exactly. It\u2019s not to say that neat descriptions like this are the end of the story (or even the beginning of it). If they were, there would be no need for this entire field of study.But they are cool, and can give you a really clear conceptualisation of something that can appear more like a sum of disjoint observations and ad hoc tricks than a discipline based on a few deep principles.",
-      "NAND gates by themselves are kind of dull, but it's pretty cool what you can do with a billion of them.",
-      "> one shouldn\u2019t fall into the trap of anthropomorphising and mysticising models based on the \u2018neural\u2019 nameOne also shouldn't fall into the dual trap of assuming that just because one understands how a model works, it cannot have any bearing on the ever-mysterious operation of the brain.",
-      "> deep learning is simply the application of sequences of operations that are nonlinear  but nonetheless differentiableThough other things fit this description which are not deep learning. Like (shameless plug) my recent paper here https://ieeexplore.ieee.org/document/10497907",
-      "I always get the impression even the proponents of these algorithms when they didn't seem so promising, are shocked at the capabilities demonstrated by models built with such a relatively simple procedure.",
-      "It is soothing to the mind because it conveys that it\u2019s understandable but it doesn\u2019t take away from the complexity. You still have to read through math and pytorch code and debug nonsensical CUDA errors, comb through the data, etc etc"
+      "Using an LLM kind of takes the sting out of an aloof parody of HN.",
+      "For similar fun, Whacker News:https://rachelbythebay.com/fun/hrand/(refresh page for a fresh shuffle)",
+      "Interestingly, all but one of the descriptions on the front page start with the word \"In\".",
+      "A landing page duck could turn pun to punchline.",
+      "I miss n-gate",
+      "omg rofl x 1000 :-phttps://twitter.com/webshitweekly/status/1332452940104179712",
+      "https://x.com/atax1a/status/1529525996507914240> An Internet (business model: Uber for tech industry criticism), who previously regularly updated on a weekly basis, hasn't been seen since August of 2021. They leave behind the following cryptic remark on Tweeter  [Oct 2021] Rumors of my death are almost as exaggerated as my writing style.  Sorry for the delay; I'm catching up.\n\nA Reddit comment claimed that n-gate was sued to stop publishing.",
+      "Some weeks would go by and I would just check n-gate to see what happened on HN.",
+      "I just checked it yesterday. I guess the writer died during COVID? I really miss his war on users take."
     ],
-    "link": "https://www.sscardapane.it/alice-book",
+    "link": "http://quackernews.com/",
     "first_paragraph": ""
   },
   {
     "title": "Arti: A Tor Implementation in Rust (torproject.net)",
-    "points": 95,
+    "points": 99,
     "submitter": "acheong08",
     "submit_time": "2024-04-30T18:54:22",
     "num_comments": 3,
@@ -201,53 +201,33 @@
     "first_paragraph": "Arti is a project to implement\n   the Tor anonymity protocols in\n   the\n      Rust programming language."
   },
   {
-    "title": "Quacker News (quackernews.com)",
-    "points": 21,
-    "submitter": "adamgordonbell",
-    "submit_time": "2024-04-29T12:03:10",
-    "num_comments": 9,
-    "comments_url": "https://news.ycombinator.com/item?id=40197235",
+    "title": "Alice's adventures in a differentiable wonderland (sscardapane.it)",
+    "points": 134,
+    "submitter": "tosh",
+    "submit_time": "2024-04-30T17:03:36",
+    "num_comments": 61,
+    "comments_url": "https://news.ycombinator.com/item?id=40213292",
     "comments": [
-      "Using an LLM kind of takes the sting out of an aloof parody of HN.",
-      "For similar fun, Whacker News:https://rachelbythebay.com/fun/hrand/(refresh page for a fresh shuffle)",
-      "Interestingly, all but one of the descriptions on the front page start with the word \"In\".",
-      "A landing page duck could turn pun to punchline.",
-      "I miss n-gate",
-      "https://x.com/atax1a/status/1529525996507914240> An Internet (business model: Uber for tech industry criticism), who previously regularly updated on a weekly basis, hasn't been seen since August of 2021. They leave behind the following cryptic remark on Tweeter  [Oct 2021] Rumors of my death are almost as exaggerated as my writing style.  Sorry for the delay; I'm catching up.",
-      "Some weeks would go by and I would just check n-gate to see what happened on HN.",
-      "I just checked it yesterday. I guess the writer died during COVID? I really miss his war on users take."
+      "> Stripped of anything else, neural networks are compositions of differentiable primitivesI\u2019m a sucker for statements like this. It almost feels philosophical, and makes the whole subject so much more comprehensible in only a single sentence.I think Fran\u00e7ois Chollet says something similar in his book on deep learning: one shouldn\u2019t fall into the trap of anthropomorphising and mysticising models based on the \u2018neural\u2019 name; deep learning is simply the application of sequences of operations that are nonlinear (and hence capable of encoding arbitrary complexity) but nonetheless differentiable and so efficiently optimisable.",
+      "Ugh, exactly, it's so cool. I've been a deep learning practitioner for ~3 years now, and I feel like this notion has really been impressed upon me only recently.I've spent an awful lot of mental energy trying to conceive of how these things work, when really it comes down to \"does increasing this parameter improve the performance on this task? Yes? Move the dial up a bit. No? Down a bit...\" x 1e9.And the cool part is that this yields such rich, interesting, sometimes even useful, structures!I like to think of this cognitive primitive as the analogue to the idea that thermodynamics is just the sum of particles bumping into each other. At the end of the day, that really is just it, but the collective behavior is something else entirely.",
+      "it comes down to \"does increasing this parameter improve the performance on this task? Yes? Move the dial up a bit. No? Down a bit...\" x 1e9This is not how gradient based NN optimization works. What you described is called \"random weight perturbation\", a variant of evolutionary algorithms. It does not scale to networks larger than a few thousand parameters for obvious reasons.NNs are optimized by directly computing a gradient which tells us the direction to go to to reduce the loss on the current batch of training data. There's no trying up or down and seeing if it worked - we always know which direction to go.SGD and RWP are two completely different approaches to learning optimal NN weights.",
+      "I don\u2019t think the author literally meant tweaking the parameters and seeing what happens; it\u2019s probably an analogy meant to give a sense of how the gradient indicates what direction and to what degree the parameters should be tweaked. Basically, substitute \u2018the gradient is positive\u2019 for \u2018increasing this parameter decreases performance\u2019 and vice versa and it becomes correct.",
+      "That substitution is the main difference between SGD and RWP.It\u2019s like describing bubble sort when you meant to describe quick sort. Would not fly on an ML 101 exam, or in an ML job interview.",
+      "> At the end of the day, that really is just it, but the collective behavior is something else entirely.Exactly. It\u2019s not to say that neat descriptions like this are the end of the story (or even the beginning of it). If they were, there would be no need for this entire field of study.But they are cool, and can give you a really clear conceptualisation of something that can appear more like a sum of disjoint observations and ad hoc tricks than a discipline based on a few deep principles.",
+      "NAND gates by themselves are kind of dull, but it's pretty cool what you can do with a billion of them.",
+      "> one shouldn\u2019t fall into the trap of anthropomorphising and mysticising models based on the \u2018neural\u2019 nameOne also shouldn't fall into the dual trap of assuming that just because one understands how a model works, it cannot have any bearing on the ever-mysterious operation of the brain.",
+      "> deep learning is simply the application of sequences of operations that are nonlinear  but nonetheless differentiableThough other things fit this description which are not deep learning. Like (shameless plug) my recent paper here https://ieeexplore.ieee.org/document/10497907",
+      "I always get the impression even the proponents of these algorithms when they didn't seem so promising, are shocked at the capabilities demonstrated by models built with such a relatively simple procedure."
     ],
-    "link": "http://quackernews.com/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "The IMEI Code: Your phone\u2019s other number (tedium.co)",
-    "points": 135,
-    "submitter": "shortformblog",
-    "submit_time": "2024-04-29T18:39:33",
-    "num_comments": 87,
-    "comments_url": "https://news.ycombinator.com/item?id=40202203",
-    "comments": [
-      "Couple of thoughts> The combination of the ICCID and the IMSI basically tells the mobile network, \u201chey, this person paid for a plan.\u201dAs far as I remember, the ICCID never actually appears in standard network messaging. It might be possible for the network to request it, but it's not part of a standard 2/3/4/5g attach.The piece seemed to miss two major uses for the IMEI (or I missed it when reading), which were working around vendor bugs and allowing emergency calling.Radio firmware and state machines have always had weird bugs, and even when it conforms to standards (some of which are extremely interpretable), does very weird things in the real world. Pre-smartphone, being able to update phone and radio firmware was extremely rare, so it was common for the networks instead to implement workarounds on a manufacturer or handset basis. Having a hardware ID that identified this was extremely useful.GSM (and onward) actually supports a handset attaching to a network, even without a SIM card, for the sake of emergency calling. It needs some form of unique identifier for this to work. As much as it could (potentially, entirely redefining the stack) generated UUIDs, it makes some sense for these unique IDs to persist across roaming/sessions/reboots.",
-      "> Radio firmware and state machines have always had weird bugs, and even when it conforms to standards (some of which are extremely interpretable), does very weird things in the real world. Pre-smartphone, being able to update phone and radio firmware was extremely rare, so it was common for the networks instead to implement workarounds on a manufacturer or handset basis. Having a hardware ID that identified this was extremely usefulNow that it\u2019s common for devices to be updated regularly, they will typically send an extended form of the IMEI to the network called the IMEISV, which is the same as the IMEI except the final check digit is replaced with a two-digit code indicating the current software version (SV = Software Version).",
-      "> As far as I remember, the ICCID never actually appears in standard network messaging.Yeah, that would be the IMSI (which a given SIM card can have multiple of, e.g. for switching to a more beneficial home network while roaming!)The ICCID is useful for identifying a given physical SIM card (e.g. so that the phone can link a given user-selected profile name to it/the associated phone line for a \"preferred line for contact\" indicator in dual-SIM phones), and probably also as an identifier when dynamically assigning a new IMSI over the air.> for the sake of emergency callingThe IMEI can indeed be an identifier of last resort for emergency calls. I wonder if some countries use it to block abuse/spam calls to emergency services, or more importantly, why some others aren't?In Germany, for example, SIM-less emergency calls are no longer possible, supposedly due to many people calling the local emergency number to test whether a used phone is in working condition without inserting a SIM card... I don't know what they're doing with the IMSI in that case, and if it's locking these callers out, why they can't do the same for the IMEI.",
-      "At least in the US, the 911 infrastructure is dated.In older systems, your caller ID is sent using in-band DTMF tones, which are decoded by the dispatch computer.On newer E-911 systems they get some additional digital address data from the telephone network, but the record format wasn't designed with VoIP or cellular in mind. So in those cases, the telephone network sends a virtual number and the dispatch computer does a seperate out-of-band lookup with the VoIP/cellular company using that number as a key to get your location.The whole emergency calling system is layers upon layers of hacks. While they can bolt additional functionality on if they're creative, it's more likely a given feature is _not_ implemented. There's a good chance that by the time the call gets to dispatchers, the IMEI/IMSI isn't displayed anywhere and they just see a random virtual number.",
-      "Gosh, yes it's a bit of a mess...The PSAP (E911 end point) likely will receive an MDN/MSISDN (10 digit number you dial for NANP networks) - this is so they can call back if the call is dropped.E911 is a special service, so in the case of deactivated/missing SIM cards, the carrier assigns a temporary MSISDN for duration of the call when the UE exits E911 mode - there are actually of regulatory and carrier requirements around E911 mode.E911 Phase 2 required not only the DN, but also if possible the location of the device - whether thru Cell Base Station Triangulation (if possible) or GNSS with a LAT/LONG based on coarse/fine location info.In any case, as @tjohns mentions, IMSI/IMEI are not typically used outside of the servicing network.",
-      "Good point, and implementing a \"this IMEI calls 911 to ask for the time of day every hour\" block on the side of the networks seems risky as well, so I get how it might not be that helpful.But then I wonder why having an IMSI (as far as I understand, the SIM can be deactivated, foreign etc., i.e. it doesn't need to actually register to the network) improves this in Germany?Maybe German authorities just hope that having to insert a SIM might deter people, since SIMs are perceived as being personally identifiable more than just phones without a SIM?",
-      "https://arcelect.com/GSM%20Developer%20Guide%20-%20GSM%20AT%...",
-      "Is there any entity or procedure that actually proves what a phone is what it claims to be?Unfortunately, neither IMEI, Serial Number or a combination of both can assert this.I bought a Samsung S24 a week ago off Facebook Marketplace. It was in the box and everything. I cross checked both the IMEIs and also the Serial Number with the #06# test. I even checked them online. Did all the tests, #0# and even downloaded Samsung members. Paid for the phone, convinced it was a genuine one.Upon registering it and using it, it becomes very clear the phone is fake and is at best a clone. The camera is nowhere near the S24 and does not have the features. It heats up after charging and does not keep charge. It runs slower than a 10 year Android once you are signed it.when you run diagnostics, it shows all the specs of an S24 Ultra. How do I know this? I went and got another S24 Ultra from the store and they are worlds apart.So my question is, if you are buying a phone from a reseller or someone, is there any way of definitely asserting whether it is authentic?",
-      "This is typically where consumer rights laws come into play and a key advantage of buying first hand from a \u201creal\u201d business rather than an individual or third party. At least there you have someone you can easily hold to account.You need to price in the risk factor when purchasing where such legislation doesn\u2019t apply or isn\u2019t easy to enforce.",
-      "The carrier can ID the device type by the radio layer itself at the PHY layer."
-    ],
-    "link": "https://tedium.co/2024/04/27/mobile-phone-imei-number-history/",
+    "link": "https://www.sscardapane.it/alice-book",
     "first_paragraph": ""
   },
   {
     "title": "Rama is a testament to the power of Clojure (redplanetlabs.com)",
-    "points": 76,
+    "points": 78,
     "submitter": "winkywooster",
     "submit_time": "2024-04-30T18:48:32",
-    "num_comments": 25,
+    "num_comments": 26,
     "comments_url": "https://news.ycombinator.com/item?id=40214692",
     "comments": [
       "I remember when the first time i read about Rama, \nwith the blog post about having duplicated Twitter scale\nat 100x code or some such.Which all in all, if you have built a platform/runtime/language\nand you pick one particular example to highlight it, being able\nto achieve XXXX% less than is trivial.I was curious about all the bluster then, \nSeeing this post I am somewhat disappointed that there does not\nappear to have been a lot of visible progression.But I guess it is still running semi stealth in private beta.I will be interesting to see what becomes of it.",
@@ -263,6 +243,28 @@
     ],
     "link": "https://blog.redplanetlabs.com/2024/04/30/rama-is-a-testament-to-the-power-of-clojure/",
     "first_paragraph": "Blog"
+  },
+  {
+    "title": "The IMEI Code: Your phone\u2019s other number (tedium.co)",
+    "points": 137,
+    "submitter": "shortformblog",
+    "submit_time": "2024-04-29T18:39:33",
+    "num_comments": 87,
+    "comments_url": "https://news.ycombinator.com/item?id=40202203",
+    "comments": [
+      "Couple of thoughts> The combination of the ICCID and the IMSI basically tells the mobile network, \u201chey, this person paid for a plan.\u201dAs far as I remember, the ICCID never actually appears in standard network messaging. It might be possible for the network to request it, but it's not part of a standard 2/3/4/5g attach.The piece seemed to miss two major uses for the IMEI (or I missed it when reading), which were working around vendor bugs and allowing emergency calling.Radio firmware and state machines have always had weird bugs, and even when it conforms to standards (some of which are extremely interpretable), does very weird things in the real world. Pre-smartphone, being able to update phone and radio firmware was extremely rare, so it was common for the networks instead to implement workarounds on a manufacturer or handset basis. Having a hardware ID that identified this was extremely useful.GSM (and onward) actually supports a handset attaching to a network, even without a SIM card, for the sake of emergency calling. It needs some form of unique identifier for this to work. As much as it could (potentially, entirely redefining the stack) generated UUIDs, it makes some sense for these unique IDs to persist across roaming/sessions/reboots.",
+      "> Radio firmware and state machines have always had weird bugs, and even when it conforms to standards (some of which are extremely interpretable), does very weird things in the real world. Pre-smartphone, being able to update phone and radio firmware was extremely rare, so it was common for the networks instead to implement workarounds on a manufacturer or handset basis. Having a hardware ID that identified this was extremely usefulNow that it\u2019s common for devices to be updated regularly, they will typically send an extended form of the IMEI to the network called the IMEISV, which is the same as the IMEI except the final check digit is replaced with a two-digit code indicating the current software version (SV = Software Version).",
+      "> As far as I remember, the ICCID never actually appears in standard network messaging.Yeah, that would be the IMSI (which a given SIM card can have multiple of, e.g. for switching to a more beneficial home network while roaming!)The ICCID is useful for identifying a given physical SIM card (e.g. so that the phone can link a given user-selected profile name to it/the associated phone line for a \"preferred line for contact\" indicator in dual-SIM phones), and probably also as an identifier when dynamically assigning a new IMSI over the air.> for the sake of emergency callingThe IMEI can indeed be an identifier of last resort for emergency calls. I wonder if some countries use it to block abuse/spam calls to emergency services, or more importantly, why some others aren't?In Germany, for example, SIM-less emergency calls are no longer possible, supposedly due to many people calling the local emergency number to test whether a used phone is in working condition without inserting a SIM card... I don't know what they're doing with the IMSI in that case, and if it's locking these callers out, why they can't do the same for the IMEI.",
+      "At least in the US, the 911 infrastructure is dated.In older systems, your caller ID is sent using in-band DTMF tones, which are decoded by the dispatch computer.On newer E-911 systems they get some additional digital address data from the telephone network, but the record format wasn't designed with VoIP or cellular in mind. So in those cases, the telephone network sends a virtual number and the dispatch computer does a seperate out-of-band lookup with the VoIP/cellular company using that number as a key to get your location.The whole emergency calling system is layers upon layers of hacks. While they can bolt additional functionality on if they're creative, it's more likely a given feature is _not_ implemented. There's a good chance that by the time the call gets to dispatchers, the IMEI/IMSI isn't displayed anywhere and they just see a random virtual number.",
+      "Gosh, yes it's a bit of a mess...The PSAP (E911 end point) likely will receive an MDN/MSISDN (10 digit number you dial for NANP networks) - this is so they can call back if the call is dropped.E911 is a special service, so in the case of deactivated/missing SIM cards, the carrier assigns a temporary MSISDN for duration of the call when the UE exits E911 mode - there are actually of regulatory and carrier requirements around E911 mode.E911 Phase 2 required not only the DN, but also if possible the location of the device - whether thru Cell Base Station Triangulation (if possible) or GNSS with a LAT/LONG based on coarse/fine location info.In any case, as @tjohns mentions, IMSI/IMEI are not typically used outside of the servicing network.",
+      "Good point, and implementing a \"this IMEI calls 911 to ask for the time of day every hour\" block on the side of the networks seems risky as well, so I get how it might not be that helpful.But then I wonder why having an IMSI (as far as I understand, the SIM can be deactivated, foreign etc., i.e. it doesn't need to actually register to the network) improves this in Germany?Maybe German authorities just hope that having to insert a SIM might deter people, since SIMs are perceived as being personally identifiable more than just phones without a SIM?",
+      "https://arcelect.com/GSM%20Developer%20Guide%20-%20GSM%20AT%...",
+      "Is there any entity or procedure that actually proves what a phone is what it claims to be?Unfortunately, neither IMEI, Serial Number or a combination of both can assert this.I bought a Samsung S24 a week ago off Facebook Marketplace. It was in the box and everything. I cross checked both the IMEIs and also the Serial Number with the #06# test. I even checked them online. Did all the tests, #0# and even downloaded Samsung members. Paid for the phone, convinced it was a genuine one.Upon registering it and using it, it becomes very clear the phone is fake and is at best a clone. The camera is nowhere near the S24 and does not have the features. It heats up after charging and does not keep charge. It runs slower than a 10 year Android once you are signed it.when you run diagnostics, it shows all the specs of an S24 Ultra. How do I know this? I went and got another S24 Ultra from the store and they are worlds apart.So my question is, if you are buying a phone from a reseller or someone, is there any way of definitely asserting whether it is authentic?",
+      "This is typically where consumer rights laws come into play and a key advantage of buying first hand from a \u201creal\u201d business rather than an individual or third party. At least there you have someone you can easily hold to account.You need to price in the risk factor when purchasing where such legislation doesn\u2019t apply or isn\u2019t easy to enforce.",
+      "I\u2019m sorry that this happened to you. The debugging and tear down sound like they would make for an extremely interesting blog post though. I encourage you to write it up and post it here - I\u2019d definitely read it."
+    ],
+    "link": "https://tedium.co/2024/04/27/mobile-phone-imei-number-history/",
+    "first_paragraph": ""
   },
   {
     "title": "Show HN: I Built a Java IDE for iPad (apps.apple.com)",
@@ -287,8 +289,30 @@
     "first_paragraph": "Introducing CodeBrew: Your Java IDE for iPad & iPhone!Unleash the power of Java coding on your iPhone or iPad with CodeBrew - the ultimate Java Integrated Development Environment designed for developers on the go. Dive into the world of seamless coding, whether you're a seasoned pro or just starting your programming journey.What sets CodeBrew apart?CodeBrew is not just an IDE; it's your complete coding sanctuary on your iPad & iPhone. The powerful code editor comes equipped with intelligent code completions and live issue highlighting, ensuring your code is not just written but crafted to perfection.Java 17 JDK On-The-Go!CodeBrew comes bundled with Java 17 JDK, running entirely on your iPad or iPhone - no internet connection required. Empower your coding journey without limitations, anytime, anywhere.Craft Simple Games with Ease!Unleash your creativity! CodeBrew boasts a custom graphics framework that simplifies game development. Whether you're building the next viral sensation or just"
   },
   {
+    "title": "Pydantic Logfire (pydantic.dev)",
+    "points": 101,
+    "submitter": "ellieh",
+    "submit_time": "2024-04-30T15:56:10",
+    "num_comments": 47,
+    "comments_url": "https://news.ycombinator.com/item?id=40212490",
+    "comments": [
+      "I love pydantic but I really have to wonder why they chose this route. There's already a ton of companies that do this really well and I'm trying to figure out how their solution is any different.The llm integration seems promising but if you care about LLM observability you probably also care about evals, guardrails and a million other things that are very specific to LLM's. Is it possible to build all this under one platform?I do hope I'm wrong for the sake of pydantic-core.",
+      "Pydantic creator here.I understand why this might be your reaction, but let me just share my thoughts:Can we build all the LLM things people want? Yes I think so, early feedback is that Logfire is already much more comprehensive than LLM specific solutions.How is our solution any different? AFAIK:* no one else offers opinionated wrapper for OTel to make it nicer to use, but with all the advantages* no one else does auto-tracing (basically profiling) using import hooks the way we do* no one else has dedicated instrumentation for OpenAI or Pydantic* no one else provides metadata about python objects the way we do so we can render a semi-faithful repr of complex objects (Pydantic models, dataclasses, dataframes etc.) in the web UI* no one else (except Sentry, who are doing something different) makes it really easy to start using it* no one else lets you query observability data with SQLIn my mind, the obvious alternative would be to do the thing most OSS companies do, and build \"Pydantic Cloud\", then start adding features to that instead of the open source package. I didn't want to do that, and I don't think our users would like that either.In the end I decided to build Logfire for two reasons:1. I wanted it, and have wanted it for years2. I think building a commercial product like this, then using OSS to spread the word and drive adoption is a really exciting way to incentivize us to make the open source as good as possible \u2014 good as-in permissive and good as-in well maintained. And it means that our commercial success is not in tension with the adoption of our open source, which has been a recurring issue for companies trying to capitalize on their open source brand.",
+      "Useful product, great marketing site. This is obviously a labor of love. Keep it up!Sadly I've moved on from Python world.Funny anecdote, using Pydantic everywhere to improve maintainability made me realize I'm fighting an uphill battle with Python and I should move to a statically typed language, so I switched to C#.Thanks for your work.",
+      "When I get tired of Python, I think of working in Ruby instead.Maybe it's the Python disease of trying to be everything at once, which can end up as the worst of all worlds.Ruby is a proudly untyped language, and that's all it is.",
+      "This is admittedly an unpopular opinion.I've actually really wondered why one wants static typing, especially with a language as expressive as Python, and where you can be so efficient with it?At a time, I was mesmerized with Zope (esp 3), but learned that nobody really learns to use it, but instead learns to work around it \u2014 for the uninitiated, Zope provided \"interfaces\", you'd have classes implementing those interfaces, and you could happily mix and match with \"configuration\" that lived in ZCML (an XML schema) files, way back in early 2000s.Static typing really kills off some of the biggest benefits of using Python (like \"duck typing\" to quickly emulate an identical API without having to construct a hierarchy of types before you can do that).How many bugs have you really hit in your Python code because of lack of static types? For ~20 years of doing Python, I honestly believe that it could have helped me at most once or twice. Generally, doing sufficient level of testing has covered most potential misuse of code, and you need to have tests anyway.The reason I'd want to move away from Python is mostly pure performance (loops should not be this slow) and library ecosystem (crappy code has risen to the top), but I find nothing is nearly as expressive, has a comparable standard library plus allows one to be so efficient.",
+      "Honestly, after spending the last 10 years developing in Python, I'm considering doing something similar. I've lived the problems. They suck for engineering software with longevity.",
+      "This is very cool. Could someone use Logfire alongside Honeycomb or another OTel platform? Honeycomb's strengths in drilling into an interactive chart vs. Logfire's strengths in drilling into a stream of text logs (and SQL support!) seem very complementary.Certainly seems like the Logfire initializer could coexist with code like in https://docs.honeycomb.io/send-data/logs/opentelemetry/sdk/p... - is this a reasonable assumption? We're looking into modernizing our Honeycomb integration from their older direct integration to their OTel SDK, and would be very curious if Logfire can exist alongside this. Do you do any patching of OTel internals that would make this impossible?",
+      "You can send data from any OTLP endpoint, so yes.I don't think we currently expose an easy way for you to send data to two (e.g. honeycomb and logfire), it it should be entirely doable, and if people want that, we can make it easy.",
+      "Thanks for the response, massive kudos - I look forward to trying it out!",
+      "Who do you like who does this well?I think Pydantic is great software and so I am inclined to see if this too will be great software."
+    ],
+    "link": "https://pydantic.dev/logfire",
+    "first_paragraph": ""
+  },
+  {
     "title": "FridgeLock: Preventing Data Theft on Suspended Linux with Memory Encryption (2020) (tum.de)",
-    "points": 33,
+    "points": 34,
     "submitter": "thunderbong",
     "submit_time": "2024-04-29T05:41:14",
     "num_comments": 3,
@@ -302,35 +326,14 @@
     "first_paragraph": ""
   },
   {
-    "title": "Pydantic Logfire (pydantic.dev)",
-    "points": 97,
-    "submitter": "ellieh",
-    "submit_time": "2024-04-30T15:56:10",
-    "num_comments": 46,
-    "comments_url": "https://news.ycombinator.com/item?id=40212490",
-    "comments": [
-      "I love pydantic but I really have to wonder why they chose this route. There's already a ton of companies that do this really well and I'm trying to figure out how their solution is any different.The llm integration seems promising but if you care about LLM observability you probably also care about evals, guardrails and a million other things that are very specific to LLM's. Is it possible to build all this under one platform?I do hope I'm wrong for the sake of pydantic-core.",
-      "Pydantic creator here.I understand why this might be your reaction, but let me just share my thoughts:Can we build all the LLM things people want? Yes I think so, early feedback is that Logfire is already much more comprehensive than LLM specific solutions.How is our solution any different? AFAIK:* no one else offers opinionated wrapper for OTel to make it nicer to use, but with all the advantages* no one else does auto-tracing (basically profiling) using import hooks the way we do* no one else has dedicated instrumentation for OpenAI or Pydantic* no one else provides metadata about python objects the way we do so we can render a semi-faithful repr of complex objects (Pydantic models, dataclasses, dataframes etc.) in the web UI* no one else (except Sentry, who are doing something different) makes it really easy to start using it* no one else lets you query observability data with SQLIn my mind, the obvious alternative would be to do the thing most OSS companies do, and build \"Pydantic Cloud\", then start adding features to that instead of the open source package. I didn't want to do that, and I don't think our users would like that either.In the end I decided to build Logfire for two reasons:1. I wanted it, and have wanted it for years2. I think building a commercial product like this, then using OSS to spread the word and drive adoption is a really exciting way to incentivize us to make the open source as good as possible \u2014 good as-in permissive and good as-in well maintained. And it means that our commercial success is not in tension with the adoption of our open source, which has been a recurring issue for companies trying to capitalize on their open source brand.",
-      "Useful product, great marketing site. This is obviously a labor of love. Keep it up!Sadly I've moved on from Python world.Funny anecdote, using Pydantic everywhere to improve maintainability made me realize I'm fighting an uphill battle with Python and I should move to a statically typed language, so I switched to C#.Thanks for your work.",
-      "This is admittedly an unpopular opinion.I've actually really wondered why one wants static typing, especially with a language as expressive as Python, and where you can be so efficient with it?At a time, I was mesmerized with Zope (esp 3), but learned that nobody really learns to use it, but instead learns to work around it \u2014 for the uninitiated, Zope provided \"interfaces\", you'd have classes implementing those interfaces, and you could happily mix and match with \"configuration\" that lived in ZCML (an XML schema) files, way back in early 2000s.Static typing really kills off some of the biggest benefits of using Python (like \"duck typing\" to quickly emulate an identical API without having to construct a hierarchy of types before you can do that).How many bugs have you really hit in your Python code because of lack of static types? For ~20 years of doing Python, I honestly believe that it could have helped me at most once or twice. Generally, doing sufficient level of testing has covered most potential misuse of code, and you need to have tests anyway.The reason I'd want to move away from Python is mostly pure performance (loops should not be this slow) and library ecosystem (crappy code has risen to the top), but I find nothing is nearly as expressive, has a comparable standard library plus allows one to be so efficient.",
-      "Honestly, after spending the last 10 years developing in Python, I'm considering doing something similar. I've lived the problems. They suck for engineering software with longevity.",
-      "This is very cool. Could someone use Logfire alongside Honeycomb or another OTel platform? Honeycomb's strengths in drilling into an interactive chart vs. Logfire's strengths in drilling into a stream of text logs (and SQL support!) seem very complementary.Certainly seems like the Logfire initializer could coexist with code like in https://docs.honeycomb.io/send-data/logs/opentelemetry/sdk/p... - is this a reasonable assumption? We're looking into modernizing our Honeycomb integration from their older direct integration to their OTel SDK, and would be very curious if Logfire can exist alongside this. Do you do any patching of OTel internals that would make this impossible?",
-      "You can send data from any OTLP endpoint, so yes.I don't think we currently expose an easy way for you to send data to two (e.g. honeycomb and logfire), it it should be entirely doable, and if people want that, we can make it easy.",
-      "Thanks for the response, massive kudos - I look forward to trying it out!",
-      "Who do you like who does this well?I think Pydantic is great software and so I am inclined to see if this too will be great software.",
-      "My last company used Splunk and SignalFx. They were fine, but I wasn't necessarily in the weeds with configuration and usage. The Observability Team made it easy to use.My current company, a much small startup, primarily uses Datadog and we are starting to better integrage Honeycomb. We mostly abandoned Google Cloud Monitoring because the UI/UX are not that great. Honeycomb is a paradigm, so took some time for us/me to understand. It's growing on us.Despite the ability to completely blow up our bill (which is now better controlled), Datadog is a good product that lets us quickly answer questions when things go wrong. It's not perfect, but it's the best we have right now. The UI is intuitive, and facilitates more discovery (esp. for metrics and their attributes)."
-    ],
-    "link": "https://pydantic.dev/logfire",
-    "first_paragraph": ""
-  },
-  {
     "title": "US drug control agency will move to reclassify marijuana (apnews.com)",
-    "points": 437,
+    "points": 442,
     "submitter": "JacobHenner",
     "submit_time": "2024-04-30T17:32:00",
-    "num_comments": 488,
+    "num_comments": 490,
     "comments_url": "https://news.ycombinator.com/item?id=40213591",
     "comments": [
+      "This change is not gonna legalize it, but will just make it \u201cless illegal\u201d acknowledging its medical use. While logically it make sense to move in this direction, I am afraid that ultimate consequences might be few large companies dominating the market completely and probably growing stuff offshore. If it gets a pass for recreational use then we will see weed induced soda in vending machines at school in couple of generations.",
       "One major effect of this is that weed stores will be able to use banks and payment processors legally once the regulators catch up.",
       "THEREFORE they will be able to move CASH money out of their stores TO BANKS, resulting in fewer \"smash and grab\" incidents ... aka, \"Hyundai meet storefront of weed shop.\"Looking forward to this, silly to see so many Kia \"boys\" being used for gross violence crimes when regulation changes could lessen it.> https://www.king5.com/article/news/crime/seattle-pot-shop-cr... for example",
       "The poor San Bernardino Sheriff's department is going to need a new funding source, too.https://www.latimes.com/california/story/2022-01-28/marijuan...",
@@ -339,8 +342,7 @@
       "Every fan of physics is recommended to look up bollard test videos.",
       "And one of the best Twitter accounts:\nhttps://twitter.com/WorldBollard",
       "I just browsed this far longer than I'd care to admit.",
-      "same :)",
-      "Just did! =)"
+      "same :)"
     ],
     "link": "https://apnews.com/article/marijuana-biden-dea-criminal-justice-pot-f833a8dae6ceb31a8658a5d65832a3b8",
     "first_paragraph": ""
@@ -350,7 +352,7 @@
     "points": 54,
     "submitter": "gnabgib",
     "submit_time": "2024-04-30T16:41:07",
-    "num_comments": 9,
+    "num_comments": 10,
     "comments_url": "https://news.ycombinator.com/item?id=40213024",
     "comments": [
       "Long time listener, first time caller (finally made a HN account)..Anyways, can someone please explain how positive/negative plays a factor here? Rh +/- is mentioned once in the article but not discussed as far as being a donor. I was always told O- is the universal red cell donor [1]. Can anyone help explain is this enzyme fixes the +/- component in addition to the ABO component? Thanks![1] https://www.redcrossblood.org/donate-blood/blood-types.html",
@@ -358,6 +360,7 @@
       "I think O is recessive (if I remember from high school correctly).A is really AO (if we're being verbose). B is BO, AB is AB, O is OO. Each parent passes one of them on. So, a A dad and O mom would mix (being verbose again) AO and OO, and thus the child might be AO or OO, A or O.The + or - is for an independent \"Rhesus\" component, as you say. Not sure how this passes through the genes. This is all like high school level knowledge, so maybe someone can share more if they want.My dad had surgery and some paperwork we received said that he had AB blood. It became a family joke because me and my siblings are all O blood type. If my dad really did have AB blood then we are not his children. The hospital later confirmed it was a mistake.",
       "there is also the HH blood group that will react negatively to O type blood as well as A and B.",
       "That's probably a separate and harder problem from this: The A and B antigens refer to the presence of carbohydrates extending from the cell membrane, whereas Rh factor + refers to the presence of a protein.Since there are different classes of bio-molecules, proteins may need different techniques to remove, alter, or cover them up.If we do find such techniques, they may have much broader applications in immunology.",
+      "Rhesus factor is a lot more forgiving though: i.e. in a crisis you can transfuse rhesus positive blood to a rhesus negative person successfully since the sensitization doesn't emerge immediately.",
       "Very cool stuff!\"For the first time, the new enzyme cocktails not only remove the well-described A and B antigens, but also extended variants previously not recognized as problematic for transfusion safety. We are close to being able to produce universal blood from group B donors, while there is still work to be done to convert the more complex group A blood. Our focus is now to investigate in detail if there are additional obstacles and how we can improve our enzymes to reach the ultimate goal of universal blood production,\" says Professor Maher Abou Hachem, who is the study leader at DTU and one of the senior scientists behind the discovery.",
       "Similar news recently about opening up the doors to less compatible donors for PBSC or bone marrow.",
       "Link?",
@@ -371,19 +374,19 @@
     "points": 95,
     "submitter": "farslan",
     "submit_time": "2024-04-29T17:43:51",
-    "num_comments": 38,
+    "num_comments": 40,
     "comments_url": "https://news.ycombinator.com/item?id=40201528",
     "comments": [
       "Question for folks who live in non-English speaking countries: do you guys wear watches with calendars in English?Last time I was in a mall in Mexico City, I asked a guy behind the counter of some store if they had any watches that had either the months or days of week in Spanish... surprisingly, the answer was no. English only.",
+      "Weird. My Seiko 5 automatic (about $150, probably one of the cheapest self-winding mechanical watches) has the days of the week in English, Spanish, and French. Weirdly, (but I suppose it makes sense if you think about how the gears work), if you look at the watch at an odd time (like say 3am) it is showing the day in one of the two non-selected languages.",
       "Same thing in Russia, only the old Soviet-era watches have calendars in Russian.",
       "As much as I will most likely never spend 6 figures on a watch, I greatly appreciate their engineering. Tangential, does anyone know how easy is it to design and build your own movement?",
       "I don't know about the difficulty, but you can look at the complexity of this ETA 6497 movement on GrabCAD [0]. After seeing this a while ago, it made sense to me why small/new brands generally use a Seiko NH35 or something similar that they can buy in bulk.[0] https://grabcad.com/library/eta-6497-1-complete-watch-moveme...",
       "Personally I find it more handy to know day (of week) than date (of month), but I don't think I've every seen a watch that does day-only, usually either date-only or day-date.",
       "This[1] 1980s Raketa has an interesting visual display of the day of the week. The red dot corresponds to the current day. It does however show the date as a number on the bottom as well.[1]: https://mroatman.wixsite.com/watches-of-the-ussr/raketa?ligh...",
-      "That's me as well; I had to look through so many watches that show the date with so few that show the weekday.  I wish my Seiko didn't show the date because I have to adjust it 5 times a year, but the day-of-week is always right.Also, Seiko's watchfinder won't let you filter based on whether or not it has a DoW complication; very annoying.",
       "This would actually be a very nice complication, as it would never need to be reset, as long as the watch stays wound. I\u2019m surprised it\u2019s not something I\u2019ve seen, or even thought of.I ended up settling on no-date watches, as I find setting the date to be annoying, and it\u2019s not something I need that often. When I do need it, I have my phone. I think I\u2019d ultimately feel the same way about a day of the week complication.",
-      "I think the idea here might be that people already know what day it is but they have to think about the date.",
-      "That might even be true for many of the population, but I'm exactly in the target demographic of people who get unsure of such things.My favourite ever gift from friends was that people bought me (last century, long before smartphones) a 24 hour radio synchronized digital alarm clock which knew the day and full date including year. Because while often I know 0600 from 1800, not always, and on a particularly bad day maybe I'm not even sure which week this is. I didn't need the year really, but it felt appropriately completionist, just in case."
+      "That's me as well; I had to look through so many watches that show the date with so few that show the weekday.  I wish my Seiko didn't show the date because I have to adjust it 5 times a year, but the day-of-week is always right.Also, Seiko's watchfinder won't let you filter based on whether or not it has a DoW complication; very annoying.",
+      "I think the idea here might be that people already know what day it is but they have to think about the date."
     ],
     "link": "https://arslan.io/2024/04/29/calendar-types-in-watches/",
     "first_paragraph": "Mechanical watches that can show a date correctly are pretty rare, and the ones that do are very expensive (starting at $10k). But why? Let me explain."
