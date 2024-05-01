@@ -35,6 +35,15 @@ def generate_html(data):
         .morelink { color: white; text-decoration: none; font-size: 14pt; margin-top:20px; margin-bottom: 20px; }
         .morelink:visited { color: white; text-decoration: none; }
     </style>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5CYCQEQYEM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5CYCQEQYEM');
+</script>
 </head>
 <body>
     <center>

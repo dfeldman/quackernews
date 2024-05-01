@@ -16,7 +16,7 @@ def summary(title, first_paragraph, comments):
 
     # Send the request to ChatGPT
     response = client.chat.completions.create(
-        model="gpt-4-turbo-preview",
+        model="gpt-4-turbo",
         messages=[
             {"role": "system", "content": "You are a creative assistant."},
             {"role": "user", "content": prompt_text}
