@@ -1,7 +1,7 @@
 [
   {
     "title": "Printing Music with CSS Grid (cruncher.ch)",
-    "points": 258,
+    "points": 266,
     "submitter": "speckx",
     "submit_time": "2024-04-30T20:39:59",
     "num_comments": 33,
@@ -23,7 +23,7 @@
   },
   {
     "title": "StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Gen (storydiffusion.github.io)",
-    "points": 6,
+    "points": 19,
     "submitter": "doodlesdev",
     "submit_time": "2024-05-01T00:07:08",
     "num_comments": 0,
@@ -34,7 +34,7 @@
   },
   {
     "title": "Pyinfra: Automate Infrastructure Using Python (pyinfra.com)",
-    "points": 376,
+    "points": 379,
     "submitter": "InitEnabler",
     "submit_time": "2024-04-30T14:54:45",
     "num_comments": 148,
@@ -56,10 +56,10 @@
   },
   {
     "title": "The File Filesystem (2021) (mgree.github.io)",
-    "points": 178,
+    "points": 182,
     "submitter": "wegwerff",
     "submit_time": "2024-04-30T17:43:12",
-    "num_comments": 51,
+    "num_comments": 52,
     "comments_url": "https://news.ycombinator.com/item?id=40213731",
     "comments": [
       "This is really neat, but when I saw the headline I got excited that it was something I have been looking for / considering writing, and I figure the comments here would be a good place to ask if something like this exists:Is there a FUSE filesystem that runs in-memory (like tmpfs) while mounted, and then when dismounted it serializes to a single file on disk? The closest I can find are FUSE drivers that mount archive files, but then you don't get things like symlinks.",
@@ -78,7 +78,7 @@
   },
   {
     "title": "Level of Gaussians: Real-Time View Synthesis for Millions of Square Meters (zju3dv.github.io)",
-    "points": 70,
+    "points": 75,
     "submitter": "corysama",
     "submit_time": "2024-04-30T19:45:36",
     "num_comments": 9,
@@ -99,95 +99,95 @@
   },
   {
     "title": "Borgo is a statically typed language that compiles to Go (github.com/borgo-lang)",
-    "points": 278,
+    "points": 283,
     "submitter": "manx",
     "submit_time": "2024-04-30T15:13:22",
-    "num_comments": 204,
+    "num_comments": 208,
     "comments_url": "https://news.ycombinator.com/item?id=40211891",
     "comments": [
       "Wow, this is everything I want from a new Go!Having worked on multiple very large Go codebases with many engineers, the lack of actual enums and a built-in optional type instead of nil drive me crazy.I think I'm in love.Edit:\nLooks like last commit was 7 months ago. Was this abandoned, or considered feature complete? I hope it's not abandoned!",
       "An Enum type has to be on the core Go team's radar by now. It's got to be tied with a try/catch block in terms of requested features at this point (now that we have generics).",
       "No one wants try/catch/exception in Go.",
+      "Comments like this are what drives me away from Go; comments that enforce a particular belief about how or what features you should or should not use/introduce in your PL.\nTalking in absolutes is so far removed from a logical arguments and from good engineering.\nI would appreciate if anyone could recommend a language like Go (static, strong typed, not ancient, good tooling) with a friendly community, that won\u2019t ostracize the non-believers. Zig?",
       "panic/recover/error?",
       "The issue is that it's more or less impossible to graft onto the language now. You could add enums, but the main reason why people want them is to fix the error handling. You can't do this without fracturing the ecosystem.",
       "> but the main reason why people want them is to fix the error handlingWhy do you think so? Maybe I'm an odd case, but my main use case for enums is for APIs and database designs, where I want to lock down some field to a set of acceptable values and make sure anything else is a mistake. Or for state machines. Error handling is manageable without enums (but I love Option/Result types more than Go's error approach, especially with the ? operator).",
       "https://www.postgresql.org/docs/current/datatype-enum.htmlThen wrap appropriately.  Something like sqlc will actually generate everything you need.",
       "> my main use case for enums is for APIs and database designs, where I want to lock down some field to a set of acceptable values and make sure anything else is a mistakeThen what you are really looking for is sum types (what Rust calls enums, but unusually so), not enums. Go does not have sum types, but you can use interfaces to archive a rough facsimile and most certainly to satisfy your specific expectation:    type Hot struct{}\n    func (Hot) temp() {}\n\n    type Cold struct{}\n    func (Cold) temp() {}\n\n    type Temperature interface {\n        temp()\n    }\n\n    func SetThermostat(temperature Temperature) {\n        switch temperature.(type) {\n        case Hot:\n            fmt.Println(\"Hot\")\n        case Cold:\n            fmt.Println(\"Cold\")\n        }\n    }",
-      "annoyingly go can't have proper sum types, as the requirement for a default value for everything doesn't make any sense for sum types",
-      "You can just default to the first variant, no?"
+      "annoyingly go can't have proper sum types, as the requirement for a default value for everything doesn't make any sense for sum types"
     ],
     "link": "https://github.com/borgo-lang/borgo",
     "first_paragraph": "We read every piece of feedback, and take your input very seriously."
   },
   {
     "title": "Run0, a systemd based alternative to sudo, announced (mastodon.social)",
-    "points": 212,
+    "points": 215,
     "submitter": "CoolCold",
     "submit_time": "2024-04-29T23:59:55",
-    "num_comments": 465,
+    "num_comments": 469,
     "comments_url": "https://news.ycombinator.com/item?id=40205714",
     "comments": [
       "I'm not a fan of sudo.  It's does so much it needs BNF to describe it's configuration format.  Who knows, maybe replacing the configuration with polkit is a good idea.   Still it's a stand alone binary with one clear job to do, simple enough that one person has no trouble getting their head around it so it's not surprising it hasn't had too many problems over it's long life time.This made me smile:> sudo has serious problems though. It's a relatively large SUID binary, i.e. privileged code that unprivileged users can invoke from their own context. It has a complicating configuration language, loadable plugins (ldap!), hostname matches and so on and so on.That is a bit rich coming from the author of systemd, which must be in the running for one of the largest bodies of code that must run as root.  It's also a very complex piece of code.  That complexity is the reason I was completely flummoxed by interactions between systemd and dll's being exploited by the XZ utils hack to attack an unrelated and uncompromised binary: openssh.   Run0 is just an extension of that ball of mud.  It's a stretch to believe it will be more secure than sudo in the long term, which is amusing because it appears Lennarts primary argument is it will be more secure.I'm not the only one who has noticed this: https://lwn.net/Articles/971812/",
       "The article you linked seems to be in support that systemd is in fact simpler than sudo.Sudo, which only does privilege escalations, is only 1/3 the amount of code of the entirety of systemd.Systemd-run has been around for many years now, this is simply an expansion of capabilities of features already exposed.",
-      "> That is a bit rich coming from the author of systemd, which must be in the running for one of the largest bodies of code that must run as root.Not really a far comparison given that it\u2019s an init system",
       "Isn't that link showing the opposite? That sudo is really large and systemd isn't? They even compare systemd with wpa_supplicant and it turns out they are the same size.",
       "Not really.  I'm not going the effort of breaking it down like he did, so just looking at total lines in the source calculated with \"wc -l $(find . -type f)\":sudo: 284,103\nsystemd: 1,981,535",
       "I find your comment here sadly indicative of the level of discussion around systemd from its haters.Your metric is utterly misleading not only because you're almost certainly counting non-code files, but more crucially, because the systemd repository contains the code for *sixty-nine* entirely separate binaries, separate tools under the overall systemd project umbrella, so counting their collective code size as if it is the code base of one single gigantic tool, a single gigantic program that compiles into a single gigantic binary, with all the interweaving that implies, is just disingenuous at best. That number does not represent the size of a single attack surface area, and pretending it does is nonsensical. It's like pulling in the source of all of gnu and doing a line count. And for the record, I've actually done this properly, cloning the systemd repository and then reading the documentation to figure out what directories and source files did what, and assembled a list of the directories and source files that represented just systemd-the-init-system, and got about 240,000 lines of code.And remember, it won't actually be systemd the init system that will be replacing sudo, it will be systemd-run, which is a separate binary, with a separate memory space, and a separate permissions model, that merely communicates with systemd the init system to get certain things done. I guarantee you it's probably smaller than the code base of sudo, and this architecture, as LP points out if you actually read his thread on mastodon, far better represents the methodology of running things with at least privilege and privilege separation and so on, because instead of having the binary that is called from unprivileged space managing transitioning itself into privileged space and then doing things, instead the binary always stays unprivileged and just communicates via a strictly defined IPC protocol that gives it no direct abikity to do anything with a process that was already privileged instead, that can decide what to do on its own.Let me leave you with this quote:> If you build systemd with all configuration options enabled you will build 69 individual binaries. These binaries all serve different tasks, and are neatly separated for a number of reasons. For example, we designed systemd with security in mind, hence most daemons run at minimal privileges (using kernel capabilities, for example) and are responsible for very specific tasks only, to minimize their security surface and impact. Also, systemd parallelizes the boot more than any prior solution. This parallization happens by running more processes in parallel. Thus it is essential that systemd is nicely split up into many binaries and thus processes. In fact, many of these binaries[1] are separated out so nicely, that they are very useful outside of systemd, too.> A package involving 69 individual binaries can hardly be called monolithic. What is different from prior solutions however, is that we ship more components in a single tarball, and maintain them upstream in a single repository with a unified release cycle.https://0pointer.de/blog/projects/the-biggest-myths.html",
+      "Two things:- Non code files were counted for both sudo and systemd.  That's because I'm lazy, not because I think it influences the result one way or the other (I don't what effect it would have).- Separate binaries are not separate logical entities.  Pointing to separate binaries is a misdirection.  systemd is a set of binaries cooperating using RPC (dbus) to yield something bigger than any single binary.  The biggest hint they are interconnected is they are in one source ball for a reason: so these binaries can share a lot of code and interact in complex ways.As for systemd-run being \"a separate binary, with a separate memory space, and a separate permissions model\", those things didn't protect openssh being hit with the XZ Utils hack via systemd.  An unexpected interconnection is more than enough.  systemd abounds with interconnections.  Being tightly interconnected often gives you greater functionality, and in the case of Run0 I suspect that is going to be a big win because systemd has a lot of process isolation mechanisms build in.  But complex interconnected systems achilles heel is security, and that's definitely true here.",
+      "> That is a bit rich coming from the author of systemd, which must be in the running for one of the largest bodies of code that must run as root.Not really a far comparison given that it\u2019s an init system",
       "Regarding your first point: some people agree, most notably the OpenBSD people who did something about it and wrote \u201cdoas\u201d as a replacement; which fits the most common use-cases of sudo without fanfare.",
       "And, as LP points out, fails to solve the actual problem because it's still locked into the exact same flawed Unix model, and refuses to integrate with anything else in the system to get things done in a better more systematic way. It's just a slightly refined version of the same tired old Unix way",
-      "Use something else then?Linux won on Unix merits.Feels a bit disingenuous to use that against it, especially when including half the system libs has caused one major and highly publicized security issue already",
-      "Ian Jackson (former Debian project leader) has been on this train for about 25 years now: https://www.gnu.org/software/userv/"
+      "Use something else then?Linux won on Unix merits.Feels a bit disingenuous to use that against it, especially when including half the system libs has caused one major and highly publicized security issue already"
     ],
     "link": "https://mastodon.social/@pid_eins/112353324518585654",
     "first_paragraph": ""
   },
   {
     "title": "Show HN: I made a CLI tool to create web extensions with no build configuration (github.com/cezaraugusto)",
-    "points": 252,
+    "points": 254,
     "submitter": "cezaraugustodev",
     "submit_time": "2024-04-30T13:11:16",
-    "num_comments": 54,
+    "num_comments": 55,
     "comments_url": "https://news.ycombinator.com/item?id=40210627",
     "comments": [
       "Very cool stuff! I might check this out for my extension (https://github.com/herrherrmann/omnivore-list-popup). So far, I\u2019ve been creating my own scripts to manage the extension builds, dev mode etc. \u2013 but I\u2019ve been eyeing web-ext already to make my life easier. However, my main browser is Firefox, which doesn\u2019t seem fully supported yet by Extension, right?",
       "Thanks a lot!You can run your Mozilla Add-On on Chrome or Edge by adding a --polyfill flag, but for now you need to manually add the extension to Firefox. I do plan to support Firefox in the near future, but no browser runner available at the moment.",
       "Absolutely amazing! When I was developing a chrome extension all I could think of was a severe lack of dev-tools. I'll try it when I get the opportunity.",
+      "Thank you! The ecosystem for developing extensions could be so much better, hope we can help with that",
       "This is exactly what I need right now. Thanks for building and sharing it! Looking forward to Firefox support. I hope you can get it working.Firefox Support Issue: https://github.com/cezaraugusto/extension.js/issues/5",
       "In particular, navigating the conflicting requirements for `manifest.json` would be useful, e.g. the difference between event pages and background service workers, or permissions that are inconsistently required/forbidden.",
       "It would be great if you could add more details to the Firefox support issue in github. Maybe the community could help solve it?",
       "The plugin for Firefox is on the way, but any community support is highly appreciated.",
       "Okay I love it, I feel like you should also sprinkle your magic on extension<>tab communication. Whenever I make an extension, it's always such a pain to read from the DOM or send a message from the extension to the active tab.",
-      "Haha, thanks! It\u2019s not in the immediate plans, but meanwhile, I'm sure there are some good libraries on npm for that :)",
-      "this is cool! how would you contrast this with Plasmo, a similar framework?https://www.plasmo.com/"
+      "Haha, thanks! It\u2019s not in the immediate plans, but meanwhile, I'm sure there are some good libraries on npm for that :)"
     ],
     "link": "https://github.com/cezaraugusto/extension.js",
     "first_paragraph": "We read every piece of feedback, and take your input very seriously."
   },
   {
     "title": "Alice's adventures in a differentiable wonderland (sscardapane.it)",
-    "points": 133,
+    "points": 134,
     "submitter": "tosh",
     "submit_time": "2024-04-30T17:03:36",
-    "num_comments": 56,
+    "num_comments": 57,
     "comments_url": "https://news.ycombinator.com/item?id=40213292",
     "comments": [
       "> Stripped of anything else, neural networks are compositions of differentiable primitivesI\u2019m a sucker for statements like this. It almost feels philosophical, and makes the whole subject so much more comprehensible in only a single sentence.I think Fran\u00e7ois Chollet says something similar in his book on deep learning: one shouldn\u2019t fall into the trap of anthropomorphising and mysticising models based on the \u2018neural\u2019 name; deep learning is simply the application of sequences of operations that are nonlinear (and hence capable of encoding arbitrary complexity) but nonetheless differentiable and so efficiently optimisable.",
       "Ugh, exactly, it's so cool. I've been a deep learning practitioner for ~3 years now, and I feel like this notion has really been impressed upon me only recently.I've spent an awful lot of mental energy trying to conceive of how these things work, when really it comes down to \"does increasing this parameter improve the performance on this task? Yes? Move the dial up a bit. No? Down a bit...\" x 1e9.And the cool part is that this yields such rich, interesting, sometimes even useful, structures!I like to think of this cognitive primitive as the analogue to the idea that thermodynamics is just the sum of particles bumping into each other. At the end of the day, that really is just it, but the collective behavior is something else entirely.",
       "it comes down to \"does increasing this parameter improve the performance on this task? Yes? Move the dial up a bit. No? Down a bit...\" x 1e9This is not how gradient based NN optimization works. What you described is called \"random weight perturbation\", a variant of evolutionary algorithms. It does not scale to networks larger than a few thousand parameters for obvious reasons.NNs are optimized by directly computing a gradient which tells us the direction to go to to reduce the loss on the current batch of training data. There's no trying up or down and seeing if it worked - we always know which direction to go.SGD and RWP are two completely different approaches to learning optimal NN weights.",
+      "I don\u2019t think the author literally meant tweaking the parameters and seeing what happens; it\u2019s probably an analogy meant to give a sense of how the gradient indicates what direction and to what degree the parameters should be tweaked. Basically, substitute \u2018the gradient is positive\u2019 for \u2018increasing this parameter decreases performance\u2019 and vice versa and it becomes correct.",
       "> At the end of the day, that really is just it, but the collective behavior is something else entirely.Exactly. It\u2019s not to say that neat descriptions like this are the end of the story (or even the beginning of it). If they were, there would be no need for this entire field of study.But they are cool, and can give you a really clear conceptualisation of something that can appear more like a sum of disjoint observations and ad hoc tricks than a discipline based on a few deep principles.",
       "NAND gates by themselves are kind of dull, but it's pretty cool what you can do with a billion of them.",
       "> one shouldn\u2019t fall into the trap of anthropomorphising and mysticising models based on the \u2018neural\u2019 nameOne also shouldn't fall into the dual trap of assuming that just because one understands how a model works, it cannot have any bearing on the ever-mysterious operation of the brain.",
       "> deep learning is simply the application of sequences of operations that are nonlinear  but nonetheless differentiableThough other things fit this description which are not deep learning. Like (shameless plug) my recent paper here https://ieeexplore.ieee.org/document/10497907",
       "I always get the impression even the proponents of these algorithms when they didn't seem so promising, are shocked at the capabilities demonstrated by models built with such a relatively simple procedure.",
-      "It is soothing to the mind because it conveys that it\u2019s understandable but it doesn\u2019t take away from the complexity. You still have to read through math and pytorch code and debug nonsensical CUDA errors, comb through the data, etc etc",
-      "the complexity is in the values learned from the optimization. even the pytorch code for a simple transformer is not that complex, attention is a simple mechanism, etc."
+      "It is soothing to the mind because it conveys that it\u2019s understandable but it doesn\u2019t take away from the complexity. You still have to read through math and pytorch code and debug nonsensical CUDA errors, comb through the data, etc etc"
     ],
     "link": "https://www.sscardapane.it/alice-book",
     "first_paragraph": ""
   },
   {
     "title": "Arti: A Tor Implementation in Rust (torproject.net)",
-    "points": 93,
+    "points": 95,
     "submitter": "acheong08",
     "submit_time": "2024-04-30T18:54:22",
     "num_comments": 3,
@@ -201,8 +201,28 @@
     "first_paragraph": "Arti is a project to implement\n   the Tor anonymity protocols in\n   the\n      Rust programming language."
   },
   {
+    "title": "Quacker News (quackernews.com)",
+    "points": 21,
+    "submitter": "adamgordonbell",
+    "submit_time": "2024-04-29T12:03:10",
+    "num_comments": 9,
+    "comments_url": "https://news.ycombinator.com/item?id=40197235",
+    "comments": [
+      "Using an LLM kind of takes the sting out of an aloof parody of HN.",
+      "For similar fun, Whacker News:https://rachelbythebay.com/fun/hrand/(refresh page for a fresh shuffle)",
+      "Interestingly, all but one of the descriptions on the front page start with the word \"In\".",
+      "A landing page duck could turn pun to punchline.",
+      "I miss n-gate",
+      "https://x.com/atax1a/status/1529525996507914240> An Internet (business model: Uber for tech industry criticism), who previously regularly updated on a weekly basis, hasn't been seen since August of 2021. They leave behind the following cryptic remark on Tweeter  [Oct 2021] Rumors of my death are almost as exaggerated as my writing style.  Sorry for the delay; I'm catching up.",
+      "Some weeks would go by and I would just check n-gate to see what happened on HN.",
+      "I just checked it yesterday. I guess the writer died during COVID? I really miss his war on users take."
+    ],
+    "link": "http://quackernews.com/",
+    "first_paragraph": ""
+  },
+  {
     "title": "The IMEI Code: Your phone\u2019s other number (tedium.co)",
-    "points": 133,
+    "points": 135,
     "submitter": "shortformblog",
     "submit_time": "2024-04-29T18:39:33",
     "num_comments": 87,
@@ -216,20 +236,21 @@
       "Good point, and implementing a \"this IMEI calls 911 to ask for the time of day every hour\" block on the side of the networks seems risky as well, so I get how it might not be that helpful.But then I wonder why having an IMSI (as far as I understand, the SIM can be deactivated, foreign etc., i.e. it doesn't need to actually register to the network) improves this in Germany?Maybe German authorities just hope that having to insert a SIM might deter people, since SIMs are perceived as being personally identifiable more than just phones without a SIM?",
       "https://arcelect.com/GSM%20Developer%20Guide%20-%20GSM%20AT%...",
       "Is there any entity or procedure that actually proves what a phone is what it claims to be?Unfortunately, neither IMEI, Serial Number or a combination of both can assert this.I bought a Samsung S24 a week ago off Facebook Marketplace. It was in the box and everything. I cross checked both the IMEIs and also the Serial Number with the #06# test. I even checked them online. Did all the tests, #0# and even downloaded Samsung members. Paid for the phone, convinced it was a genuine one.Upon registering it and using it, it becomes very clear the phone is fake and is at best a clone. The camera is nowhere near the S24 and does not have the features. It heats up after charging and does not keep charge. It runs slower than a 10 year Android once you are signed it.when you run diagnostics, it shows all the specs of an S24 Ultra. How do I know this? I went and got another S24 Ultra from the store and they are worlds apart.So my question is, if you are buying a phone from a reseller or someone, is there any way of definitely asserting whether it is authentic?",
-      "The carrier can ID the device type by the radio layer itself at the PHY layer.",
-      "This is typically where consumer rights laws come into play and a key advantage of buying first hand from a \u201creal\u201d business rather than an individual or third party. At least there you have someone you can easily hold to account.You need to price in the risk factor when purchasing where such legislation doesn\u2019t apply or isn\u2019t easy to enforce."
+      "This is typically where consumer rights laws come into play and a key advantage of buying first hand from a \u201creal\u201d business rather than an individual or third party. At least there you have someone you can easily hold to account.You need to price in the risk factor when purchasing where such legislation doesn\u2019t apply or isn\u2019t easy to enforce.",
+      "The carrier can ID the device type by the radio layer itself at the PHY layer."
     ],
     "link": "https://tedium.co/2024/04/27/mobile-phone-imei-number-history/",
     "first_paragraph": ""
   },
   {
     "title": "Rama is a testament to the power of Clojure (redplanetlabs.com)",
-    "points": 74,
+    "points": 76,
     "submitter": "winkywooster",
     "submit_time": "2024-04-30T18:48:32",
-    "num_comments": 24,
+    "num_comments": 25,
     "comments_url": "https://news.ycombinator.com/item?id=40214692",
     "comments": [
+      "I remember when the first time i read about Rama, \nwith the blog post about having duplicated Twitter scale\nat 100x code or some such.Which all in all, if you have built a platform/runtime/language\nand you pick one particular example to highlight it, being able\nto achieve XXXX% less than is trivial.I was curious about all the bluster then, \nSeeing this post I am somewhat disappointed that there does not\nappear to have been a lot of visible progression.But I guess it is still running semi stealth in private beta.I will be interesting to see what becomes of it.",
       "> Rama can build end-to-end backends at any scale on its own in a tiny fraction of the code. At its core is a new programming language implementing a new programming paradigm..Grand claims, but where are the super powerful demo apps?  The getting started docs are a trickle of info..https://redplanetlabs.com/docs/~/operating-rama.html#_access...The \"demo gallery\" has a few cherry picked examples, but I don't see how this fulfills the claim of a \"new paradigm\".  I wanted to be blown.. but this ain't it.https://github.com/redplanetlabs/rama-demo-galleryOof.",
       "Check out twitter-scale-mastodon, which is an implementation of Mastodon's backend  from scratch that scales to Twitter scale. It's more than 40% less code than Mastodon's backend and 100x less code than Twitter wrote to build the equivalent.https://github.com/redplanetlabs/twitter-scale-mastodonhttps://blog.redplanetlabs.com/2023/08/15/how-we-reduced-the...",
       "> Running on a real cluster> Until Rama is publicly available, the only way to get access to the full Rama release is by applying to our private beta.I thought it was coming out last August?  What happened?(As per your link, https://blog.redplanetlabs.com/2023/08/15/how-we-reduced-the...)Edit: @nathanmarz that's cool you have enough interest to keep things moving with it being private.  I'm only interested in open solutions for this domain, though.  IMO, accepting lock-in is a lot to ask. \n Best wishes ~ MD",
@@ -238,48 +259,14 @@
       "The chronological timeline at Twitter fans out on write. This makes sense when you consider that the most important application metric is the latency to load the timeline. That latency is a lot lower when you only need one query on the materialized timeline rather than a ton of queries for everyone you follow.",
       "Good to learn, thanks.  \"Everyone you follow\" isn't quite what I was saying, but I also don't use twitter so I'm doubly in the dark here.I'm surprised that someone with, say, a Twitter problem and tens of millions of followers - the two seem to go hand-in-hand - drives tens of millions of writes every time they post.  But there you go, learned something today.",
       "I was tech lead on that subsystem for a little while in 2010.  A lot of smart people thought about the hybrid approach, either by using the search index to drive the timeline or building a custom ring-buffer-based index of all tweets.  Ultimately two systems are harder to maintain than one, custom indices are hard, and the low-complexity approach dominated a higher-performance approach.Also, contrary to popular opinion, we didn't go down when Justin Bieber tweeted, but we did have elevated error rates when large quantities of Justin Bieber followings put pressure on the MySQL row lock of his following count.  In retrospect, lock striping would have helped, but the migration would have been horrific.",
-      "Back in the days of the fail whale, Twitter would go down when Justin Bieber tweeted because their system couldn't handle the load.",
-      "The Clojure community is extremely cult like. I worked with a dev who tried to push Datomic, and despite the huge flaws with his system, and the fact that it was closed source,  he would continuously tout how much better it was than a relational database. I don\u2019t believe the hype."
+      "Back in the days of the fail whale, Twitter would go down when Justin Bieber tweeted because their system couldn't handle the load."
     ],
     "link": "https://blog.redplanetlabs.com/2024/04/30/rama-is-a-testament-to-the-power-of-clojure/",
     "first_paragraph": "Blog"
   },
   {
-    "title": "Quacker News (quackernews.com)",
-    "points": 16,
-    "submitter": "adamgordonbell",
-    "submit_time": "2024-04-29T12:03:10",
-    "num_comments": 6,
-    "comments_url": "https://news.ycombinator.com/item?id=40197235",
-    "comments": [
-      "Interestingly, all but one of the descriptions on the front page start with the word \"In\".",
-      "A landing page duck could turn pun to punchline.",
-      "I miss n-gate",
-      "https://x.com/atax1a/status/1529525996507914240> An Internet (business model: Uber for tech industry criticism), who previously regularly updated on a weekly basis, hasn't been seen since August of 2021. They leave behind the following cryptic remark on Tweeter  [Oct 2021] Rumors of my death are almost as exaggerated as my writing style.  Sorry for the delay; I'm catching up.",
-      "Some weeks would go by and I would just check n-gate to see what happened on HN.",
-      "I just checked it yesterday. I guess the writer died during COVID? I really miss his war on users take."
-    ],
-    "link": "http://quackernews.com/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "FridgeLock: Preventing Data Theft on Suspended Linux with Memory Encryption (2020) (tum.de)",
-    "points": 33,
-    "submitter": "thunderbong",
-    "submit_time": "2024-04-29T05:41:14",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=40194842",
-    "comments": [
-      "Intel TME and AMD SME (both on boot discardable unique memory encryption technologies running in silicon) are both pretty common in consumer grade hardware and has great Linux kernel support.Both Android and iPhone's use their secure enclave's for storing their encryption keys limiting the effective targets of these attacks (and would be quite difficult to physically extract from).I suppose this is still useful for older hardware and ultra budget phones... But this is a protection against state actors and high end espionage which wouldn't use those classes of devices...Soooooo who is this for? What threat model is this meaningful for? In what world am I trusting a random unaudited security module that taints my kernel for _any_ security sensitive application?",
-      ">great Linux kernel supportFor some definition of great. E.g. Ryzen-based Thinkpad, not enabled by default, hangs on boot if requested via mem_encrypt=on kernel command line[0].https://www.kernel.org/doc/html/v5.8/x86/amd-memory-encrypti...",
-      "(2020).. doesn't seem to have been much progress since, although there is a 2019 POC (in C) by one of the authors[0][0]: https://github.com/fridgelock-lkm/fridgelock"
-    ],
-    "link": "https://www.sec.in.tum.de/i20/publications/fridgelock-preventing-data-theft-on-suspended-linux-with-usable-memory-encryption",
-    "first_paragraph": ""
-  },
-  {
     "title": "Show HN: I Built a Java IDE for iPad (apps.apple.com)",
-    "points": 93,
+    "points": 94,
     "submitter": "coolius",
     "submit_time": "2024-04-30T15:21:31",
     "num_comments": 26,
@@ -300,26 +287,19 @@
     "first_paragraph": "Introducing CodeBrew: Your Java IDE for iPad & iPhone!Unleash the power of Java coding on your iPhone or iPad with CodeBrew - the ultimate Java Integrated Development Environment designed for developers on the go. Dive into the world of seamless coding, whether you're a seasoned pro or just starting your programming journey.What sets CodeBrew apart?CodeBrew is not just an IDE; it's your complete coding sanctuary on your iPad & iPhone. The powerful code editor comes equipped with intelligent code completions and live issue highlighting, ensuring your code is not just written but crafted to perfection.Java 17 JDK On-The-Go!CodeBrew comes bundled with Java 17 JDK, running entirely on your iPad or iPhone - no internet connection required. Empower your coding journey without limitations, anytime, anywhere.Craft Simple Games with Ease!Unleash your creativity! CodeBrew boasts a custom graphics framework that simplifies game development. Whether you're building the next viral sensation or just"
   },
   {
-    "title": "Starbucks shares sink 8% as same-store sales fall, quarterly results miss (cnbc.com)",
-    "points": 20,
-    "submitter": "jamarna",
-    "submit_time": "2024-04-30T23:52:15",
-    "num_comments": 29,
-    "comments_url": "https://news.ycombinator.com/item?id=40217894",
+    "title": "FridgeLock: Preventing Data Theft on Suspended Linux with Memory Encryption (2020) (tum.de)",
+    "points": 33,
+    "submitter": "thunderbong",
+    "submit_time": "2024-04-29T05:41:14",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=40194842",
     "comments": [
-      "A coffee and banana walnut bread went from $8 to almost $11.At some point, it is a more economical option to just make coffee and pastry's at home.There is no economy of scale under this inflationary environment that would benefit from continued purchases.",
-      "Hasn't it always been cheaper to make at home? You can make a VERY GOOD coffee for ~$1. Pastries are cheap to make as well, but more time consuming.",
-      "I wonder if this is compounded by the prevalence of work-from-home. After, I can not only make very good coffee, but don't even have to go anywhere for it. Although, I don't mind a nice bike ride, and I realize that a trip to the coffee shop is more than just for procuring coffee.As for pastries, toast on homemade bread has no competition.",
-      "Always cheaper, but now really cheaper.  The line people draw when making a decision has shifted a lot.",
-      "Hell, you can make very good espresso with no effort or cleanup on a Nespresso machine for ~$1 a cup. Plus, the aluminum pods are 100% recycled by the company if you send them back.",
-      "Sure, if you enjoy the taste of plastic. As much as I like espresso drinks, I\u2019d rather opt for a good press coffee or drip. That said, my wife still loves it so I\u2019ve let it go.",
-      "The convenience factor is the killer app for me. Just loading the pod and pressing a button. Done.",
-      "I mean, Starbucks pastries are just not good. If I can pay a buck more and get something good, or go to the corner store and get a donut for $1.5 why would you go to Starbucks?",
-      "I was surprised to learn that their bread slices are frozen. I bought one and then discovered a sticker on it that was several months old. I took it back and they said that was the date on which it had to be frozen by, and that they had just defrosted it today.I used to sometimes work at a Starbucks and buy sweets to bring home, since I don't drink coffee. I don't buy sweet treats since discovering they're actually frozen/thawed.",
-      "My wife used to work there. She\u2019d bring back leftovers that had expired. Pastries, sandwiches etc that were wrapped (completely sealed) from the factory in plastic. If you didn\u2019t get to it fast enough, fly eggs would hatch in the sealed bag\u2026"
+      "Intel TME and AMD SME (both on boot discardable unique memory encryption technologies running in silicon) are both pretty common in consumer grade hardware and has great Linux kernel support.Both Android and iPhone's use their secure enclave's for storing their encryption keys limiting the effective targets of these attacks (and would be quite difficult to physically extract from).I suppose this is still useful for older hardware and ultra budget phones... But this is a protection against state actors and high end espionage which wouldn't use those classes of devices...Soooooo who is this for? What threat model is this meaningful for? In what world am I trusting a random unaudited security module that taints my kernel for _any_ security sensitive application?",
+      ">great Linux kernel supportFor some definition of great. E.g. Ryzen-based Thinkpad, not enabled by default, hangs on boot if requested via mem_encrypt=on kernel command line[0].https://www.kernel.org/doc/html/v5.8/x86/amd-memory-encrypti...",
+      "(2020).. doesn't seem to have been much progress since, although there is a 2019 POC (in C) by one of the authors[0][0]: https://github.com/fridgelock-lkm/fridgelock"
     ],
-    "link": "https://www.cnbc.com/2024/04/30/starbucks-sbux-earnings-q2-2024.html",
-    "first_paragraph": "Credit Cards"
+    "link": "https://www.sec.in.tum.de/i20/publications/fridgelock-preventing-data-theft-on-suspended-linux-with-usable-memory-encryption",
+    "first_paragraph": ""
   },
   {
     "title": "Pydantic Logfire (pydantic.dev)",
@@ -345,10 +325,10 @@
   },
   {
     "title": "US drug control agency will move to reclassify marijuana (apnews.com)",
-    "points": 434,
+    "points": 437,
     "submitter": "JacobHenner",
     "submit_time": "2024-04-30T17:32:00",
-    "num_comments": 485,
+    "num_comments": 488,
     "comments_url": "https://news.ycombinator.com/item?id=40213591",
     "comments": [
       "One major effect of this is that weed stores will be able to use banks and payment processors legally once the regulators catch up.",
@@ -367,7 +347,7 @@
   },
   {
     "title": "Enzymes open new path to universal donor blood (dtu.dk)",
-    "points": 53,
+    "points": 54,
     "submitter": "gnabgib",
     "submit_time": "2024-04-30T16:41:07",
     "num_comments": 9,
@@ -385,5 +365,27 @@
     ],
     "link": "https://www.dtu.dk/english/newsarchive/2024/04/enzymes-open-new-path-to-universal-donor-blood",
     "first_paragraph": ""
+  },
+  {
+    "title": "Calendar types in watches (arslan.io)",
+    "points": 95,
+    "submitter": "farslan",
+    "submit_time": "2024-04-29T17:43:51",
+    "num_comments": 38,
+    "comments_url": "https://news.ycombinator.com/item?id=40201528",
+    "comments": [
+      "Question for folks who live in non-English speaking countries: do you guys wear watches with calendars in English?Last time I was in a mall in Mexico City, I asked a guy behind the counter of some store if they had any watches that had either the months or days of week in Spanish... surprisingly, the answer was no. English only.",
+      "Same thing in Russia, only the old Soviet-era watches have calendars in Russian.",
+      "As much as I will most likely never spend 6 figures on a watch, I greatly appreciate their engineering. Tangential, does anyone know how easy is it to design and build your own movement?",
+      "I don't know about the difficulty, but you can look at the complexity of this ETA 6497 movement on GrabCAD [0]. After seeing this a while ago, it made sense to me why small/new brands generally use a Seiko NH35 or something similar that they can buy in bulk.[0] https://grabcad.com/library/eta-6497-1-complete-watch-moveme...",
+      "Personally I find it more handy to know day (of week) than date (of month), but I don't think I've every seen a watch that does day-only, usually either date-only or day-date.",
+      "This[1] 1980s Raketa has an interesting visual display of the day of the week. The red dot corresponds to the current day. It does however show the date as a number on the bottom as well.[1]: https://mroatman.wixsite.com/watches-of-the-ussr/raketa?ligh...",
+      "That's me as well; I had to look through so many watches that show the date with so few that show the weekday.  I wish my Seiko didn't show the date because I have to adjust it 5 times a year, but the day-of-week is always right.Also, Seiko's watchfinder won't let you filter based on whether or not it has a DoW complication; very annoying.",
+      "This would actually be a very nice complication, as it would never need to be reset, as long as the watch stays wound. I\u2019m surprised it\u2019s not something I\u2019ve seen, or even thought of.I ended up settling on no-date watches, as I find setting the date to be annoying, and it\u2019s not something I need that often. When I do need it, I have my phone. I think I\u2019d ultimately feel the same way about a day of the week complication.",
+      "I think the idea here might be that people already know what day it is but they have to think about the date.",
+      "That might even be true for many of the population, but I'm exactly in the target demographic of people who get unsure of such things.My favourite ever gift from friends was that people bought me (last century, long before smartphones) a 24 hour radio synchronized digital alarm clock which knew the day and full date including year. Because while often I know 0600 from 1800, not always, and on a particularly bad day maybe I'm not even sure which week this is. I didn't need the year really, but it felt appropriately completionist, just in case."
+    ],
+    "link": "https://arslan.io/2024/04/29/calendar-types-in-watches/",
+    "first_paragraph": "Mechanical watches that can show a date correctly are pretty rare, and the ones that do are very expensive (starting at $10k). But why? Let me explain."
   }
 ]
