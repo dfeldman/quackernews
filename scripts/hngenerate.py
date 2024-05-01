@@ -21,6 +21,9 @@ def generate_html(data):
     <meta name="twitter:title" content="Quacker News">
     <meta name="twitter:description" content="daily superautomated ai tech-bro mockery">
     <meta name="twitter:image" content="https://quackernews.com/preview.png">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
     <link rel="icon" type="image/png" href="iconsmall.png">
     <style>
         body { font-family: Verdana, Geneva, sans-serif; font-size: 14pt; color: #828282; background-color: #f0e6ff; }
