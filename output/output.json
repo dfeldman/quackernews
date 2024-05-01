@@ -1,7 +1,7 @@
 [
   {
     "title": "Printing Music with CSS Grid (cruncher.ch)",
-    "points": 241,
+    "points": 258,
     "submitter": "speckx",
     "submit_time": "2024-04-30T20:39:59",
     "num_comments": 33,
@@ -22,14 +22,24 @@
     "first_paragraph": ""
   },
   {
+    "title": "StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Gen (storydiffusion.github.io)",
+    "points": 6,
+    "submitter": "doodlesdev",
+    "submit_time": "2024-05-01T00:07:08",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [],
+    "link": "https://storydiffusion.github.io/",
+    "first_paragraph": "StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Generation"
+  },
+  {
     "title": "Pyinfra: Automate Infrastructure Using Python (pyinfra.com)",
-    "points": 372,
+    "points": 376,
     "submitter": "InitEnabler",
     "submit_time": "2024-04-30T14:54:45",
-    "num_comments": 146,
+    "num_comments": 148,
     "comments_url": "https://news.ycombinator.com/item?id=40211655",
     "comments": [
-      "Was there any thought to perhaps do a version with an agent? I really like how fast Saltstack can be as compared to Ansible.I've been using my own homegrown project that does just this - Python roles, server/client, Mako templates: https://github.com/mattbillenstein/saltyIt's very very fast to do deploys on long-lived infrastructure, but it hasn't been optimized for large clusters yet; I expect the server process will be a bottleneck with many clients, but still probably faster than Ansible for most setups.",
       "Hey all, I'm the creator/primary maintainer of pyinfra! Super excited (a little terrified) to see this on the frontpage, happy to answer any questions :)I also hang out on the Matrix room: https://matrix.to/#/#pyinfra:matrix.orgAnother thing: the GH repo points at currently in beta v3 and the docs for this are here: https://docs.pyinfra.com/en/next (highly recommend starting with v3, I just haven't had any time recently to wrap up the release, but it's stable).",
       "As you can see here, the main question is what are the advantages over Ansible, a mature and the most popular agentless configuration management tool written in Python. So I propose putting this answer right to the landing page",
       "I think I tried to shy away from specifically being \"Ansible does this bad so pyinfra does this\" and instead focus on the features that differentiate like \"Instant debugging with realtime stdin/stdout/stderr output (-vvv).\". But it seems like that isn't enough and the landing page needs to be more explicit in comparison. Ty for the feedback!",
@@ -38,14 +48,15 @@
       "Ansible is declarative?In puppet and saltstack you can declare that a folder is empty and declare a specific file in this folder. The system's smart enough to delete all the files except the one.To achieve such feat in ansible is hard. Easiest way is to have two tasks, one deletes everything and second recreates your file. Doesn't feel very declarativeUnrelated thing, they don't even try to be declarative in ansible E.g you can have a file with state \"touch\". It not a state if it updates each playbook run!",
       "You're confusing declarative with idempotent. Ansible is both, it won't change anything if the state is already what you declared. The nitpicked case you chose, you want the file to have the latest timestamp, this is a valid state to declare.",
       "Is performance better than Ansible? I have used Ansible extensively and find it excruciatingly slow.",
-      "Yes! https://docs.pyinfra.com/en/next/performance.html"
+      "Yes! https://docs.pyinfra.com/en/next/performance.html",
+      "Hi @Fizzadar and congrats on making this and getting it out the door; kudos!As you craft your \"Why this and not Ansible\" content, you might actually state clearly what you already noted on the Performance page, namely: \"One of the reasons pyinfra was started was performance of agent-less tools at the time.\"  If I read that, it'd instantly make me want to stick around and read some more, play with pyinfra, etc. BTW, i will be playing with it anyway, but just wanted to point out that you likely won;t need to start from scratch for copy (on a comparison or answering \"Why this and not Ansible\" content). Cheers!"
     ],
     "link": "https://pyinfra.com/",
     "first_paragraph": "pyinfra automates infrastructure using Python. It\u2019s fast and scales from one server to thousands. Great for ad-hoc command execution, service deployment, configuration management and more. Here's why you should try pyinfra:"
   },
   {
     "title": "The File Filesystem (2021) (mgree.github.io)",
-    "points": 176,
+    "points": 178,
     "submitter": "wegwerff",
     "submit_time": "2024-04-30T17:43:12",
     "num_comments": 51,
@@ -88,10 +99,10 @@
   },
   {
     "title": "Borgo is a statically typed language that compiles to Go (github.com/borgo-lang)",
-    "points": 271,
+    "points": 278,
     "submitter": "manx",
     "submit_time": "2024-04-30T15:13:22",
-    "num_comments": 202,
+    "num_comments": 204,
     "comments_url": "https://news.ycombinator.com/item?id=40211891",
     "comments": [
       "Wow, this is everything I want from a new Go!Having worked on multiple very large Go codebases with many engineers, the lack of actual enums and a built-in optional type instead of nil drive me crazy.I think I'm in love.Edit:\nLooks like last commit was 7 months ago. Was this abandoned, or considered feature complete? I hope it's not abandoned!",
@@ -110,10 +121,10 @@
   },
   {
     "title": "Run0, a systemd based alternative to sudo, announced (mastodon.social)",
-    "points": 208,
+    "points": 212,
     "submitter": "CoolCold",
     "submit_time": "2024-04-29T23:59:55",
-    "num_comments": 461,
+    "num_comments": 465,
     "comments_url": "https://news.ycombinator.com/item?id=40205714",
     "comments": [
       "I'm not a fan of sudo.  It's does so much it needs BNF to describe it's configuration format.  Who knows, maybe replacing the configuration with polkit is a good idea.   Still it's a stand alone binary with one clear job to do, simple enough that one person has no trouble getting their head around it so it's not surprising it hasn't had too many problems over it's long life time.This made me smile:> sudo has serious problems though. It's a relatively large SUID binary, i.e. privileged code that unprivileged users can invoke from their own context. It has a complicating configuration language, loadable plugins (ldap!), hostname matches and so on and so on.That is a bit rich coming from the author of systemd, which must be in the running for one of the largest bodies of code that must run as root.  It's also a very complex piece of code.  That complexity is the reason I was completely flummoxed by interactions between systemd and dll's being exploited by the XZ utils hack to attack an unrelated and uncompromised binary: openssh.   Run0 is just an extension of that ball of mud.  It's a stretch to believe it will be more secure than sudo in the long term, which is amusing because it appears Lennarts primary argument is it will be more secure.I'm not the only one who has noticed this: https://lwn.net/Articles/971812/",
@@ -132,32 +143,32 @@
   },
   {
     "title": "Show HN: I made a CLI tool to create web extensions with no build configuration (github.com/cezaraugusto)",
-    "points": 249,
+    "points": 252,
     "submitter": "cezaraugustodev",
     "submit_time": "2024-04-30T13:11:16",
-    "num_comments": 53,
+    "num_comments": 54,
     "comments_url": "https://news.ycombinator.com/item?id=40210627",
     "comments": [
-      "Absolutely amazing! When I was developing a chrome extension all I could think of was a severe lack of dev-tools. I'll try it when I get the opportunity.",
       "Very cool stuff! I might check this out for my extension (https://github.com/herrherrmann/omnivore-list-popup). So far, I\u2019ve been creating my own scripts to manage the extension builds, dev mode etc. \u2013 but I\u2019ve been eyeing web-ext already to make my life easier. However, my main browser is Firefox, which doesn\u2019t seem fully supported yet by Extension, right?",
       "Thanks a lot!You can run your Mozilla Add-On on Chrome or Edge by adding a --polyfill flag, but for now you need to manually add the extension to Firefox. I do plan to support Firefox in the near future, but no browser runner available at the moment.",
+      "Absolutely amazing! When I was developing a chrome extension all I could think of was a severe lack of dev-tools. I'll try it when I get the opportunity.",
       "This is exactly what I need right now. Thanks for building and sharing it! Looking forward to Firefox support. I hope you can get it working.Firefox Support Issue: https://github.com/cezaraugusto/extension.js/issues/5",
       "In particular, navigating the conflicting requirements for `manifest.json` would be useful, e.g. the difference between event pages and background service workers, or permissions that are inconsistently required/forbidden.",
       "It would be great if you could add more details to the Firefox support issue in github. Maybe the community could help solve it?",
       "The plugin for Firefox is on the way, but any community support is highly appreciated.",
       "Okay I love it, I feel like you should also sprinkle your magic on extension<>tab communication. Whenever I make an extension, it's always such a pain to read from the DOM or send a message from the extension to the active tab.",
-      "this is cool! how would you contrast this with Plasmo, a similar framework?https://www.plasmo.com/",
-      "Great question!The biggest difference, in my opinion, is that Plasmo is a framework, which means you have to learn its abstractions and rely on specific samples tailored for these abstractions to create new extensions. There are config files and specific rules to follow that are not necessarily related to browser extensions.On the other hand, Extension.js allows developers to create extensions using the standard extension APIs and abstracts only the configuration files, without the need to learn the tooling specifics. This way, a sample from Chrome or MDN that works with a manifest file as the source of truth requires no refactoring to work with Extension.js, making it easier to get started and prototype new projects."
+      "Haha, thanks! It\u2019s not in the immediate plans, but meanwhile, I'm sure there are some good libraries on npm for that :)",
+      "this is cool! how would you contrast this with Plasmo, a similar framework?https://www.plasmo.com/"
     ],
     "link": "https://github.com/cezaraugusto/extension.js",
     "first_paragraph": "We read every piece of feedback, and take your input very seriously."
   },
   {
     "title": "Alice's adventures in a differentiable wonderland (sscardapane.it)",
-    "points": 130,
+    "points": 133,
     "submitter": "tosh",
     "submit_time": "2024-04-30T17:03:36",
-    "num_comments": 55,
+    "num_comments": 56,
     "comments_url": "https://news.ycombinator.com/item?id=40213292",
     "comments": [
       "> Stripped of anything else, neural networks are compositions of differentiable primitivesI\u2019m a sucker for statements like this. It almost feels philosophical, and makes the whole subject so much more comprehensible in only a single sentence.I think Fran\u00e7ois Chollet says something similar in his book on deep learning: one shouldn\u2019t fall into the trap of anthropomorphising and mysticising models based on the \u2018neural\u2019 name; deep learning is simply the application of sequences of operations that are nonlinear (and hence capable of encoding arbitrary complexity) but nonetheless differentiable and so efficiently optimisable.",
@@ -176,7 +187,7 @@
   },
   {
     "title": "Arti: A Tor Implementation in Rust (torproject.net)",
-    "points": 91,
+    "points": 93,
     "submitter": "acheong08",
     "submit_time": "2024-04-30T18:54:22",
     "num_comments": 3,
@@ -190,33 +201,11 @@
     "first_paragraph": "Arti is a project to implement\n   the Tor anonymity protocols in\n   the\n      Rust programming language."
   },
   {
-    "title": "Google workers fired for protesting Israeli contract file NLRB complaint (theverge.com)",
-    "points": 58,
-    "submitter": "lladnar",
-    "submit_time": "2024-04-30T23:18:03",
-    "num_comments": 37,
-    "comments_url": "https://news.ycombinator.com/item?id=40217643",
-    "comments": [
-      "The meat of it is here:> Google \u201cretaliated against approximately 50 employees and interfered with their Section 7 rights by terminating and/or placing them on administrative leave in response to their protected concerted activity, namely, participation (or perceived participation) in a peaceful, non-disruptive protest that was directly and explicitly connected to their terms and conditions of work,\u201d the complaint reads.Seems very thin to call on the NLRA here. The \"protesters\" stated goals were to disrupt work even for people not a member of the non-union (therefore not a strike) which is not a protected activity. Moreover, were any of these employees or any members of the minority union actually working on the Israeli contracts they objected to? While you can protest against your job duties under the NLRA (or job duties of your collective union members) I don't see that you can protest against company functions which aren't job duties you or your class aren't a part of.If the workers had just walked off the job and peacefully and non-disruptively protested in front of the building and refused to go back to their job until they (or other members of the minority union) had their job duties modified so they were not working on those projects and google had fired them, that seems like it would violate the NLRA.Anyway this seems like some fun FAFO. I wonder how many of the people who got fired were even members of the non-union before the \"protest\".",
-      "Googler protests in the past have typically been walk-outs and other outdoor gatherings. This protest took place within the offices. Some of the protestors occupied senior executives' offices for many hours, and had to be removed by the police. Some of the protestors also streamed their protest from within the offices of the notoriously confidentiality-obsessed company.I don't buy the narrative that Google is cracking down on employee activism. It seems more like the activists in this instance went too far and were dealt with accordingly.",
-      "I think it's fair to say that Google is cracking down. They did tolerate activities like this previously, but came down like a hammer on this. It seems like they are setting a precedent and giving fair warning to anyone else thinking of doing something similar. Things like this can be viral, as seen with the college protests. And the more enabled they are, the worse they get, as seen with Columbia.And to be fair there has been a big shift in the market for tech workers. There was a sort of indispensable aura that protected tech employees before that just isn't there any more. People who think this sort of thing wouldn't yield a rapid firing are living in the past.There is a video from the participants-https://www.youtube.com/watch?v=LLiWHO71fOU&lc=I find it rather incredible. They end it by announcing that they should all be reinstated because they \"did nothing wrong\". They repeatedly talk as if they expected just to have their \"concerns heard\", to get a warning, etc.",
-      "\u201chad to be removed\u201d as if senior execs aren\u2019t capable of wfh for the day.",
-      "Rule number one of being a rebel. Don\u2019t do it at work. Protest all you want in the public streets where you have freedom of assembly. You do NOT have that freedom within a corporate office building. Regardless of employer. A few firings and maybe they\u2019ll get the message to take it outside.I empathize with people wanting to speak out over something they are passionate about. I do this often. Just know your venue and know your audience. Bridges take a while to build\u2026",
-      "> This is a marked departure from the way Google has handled employee dissent in the past. In 2018, more than 600 Google workers signed an open letter opposing Project Dragonfly, an effort to build a search engine for China. As The Verge reported at the time, the petition began with an internally shared Google Doc, and all subsequent steps were also organized using Google products. Employees also urged Google to drop Project Maven, its contract with the US Department of Defense. That same year, over 20,000 Google employees staged a walkout in protest of the company\u2019s handling of sexual harassment allegations against executives. [...]> \u201cThere\u2019s been a total change in the way Google responds to employees trying to have a voice in their workplace,\u201d the fired software engineer said. \u201cIt\u2019s night and day from the Google of even five, 10 years ago.\u201dThis is the most interesting part of the article for me. Google's approach today, versus how it reacted to the backlash against Maven in 2018, reflects a very different company with a different attitude toward the opinions of its employees.",
-      "Did Google change, or was this protest substantially different in character?In the reporting TFA links to about Maven I don't see any sign of employees staging disruptive protests on Google property. This is how Gizmodo describes that protest [0]:> Google\u2019s decision to provide artificial intelligence to the Defense Department for the analysis of drone footage has prompted backlash from Google employees and academics. Thousands of employees have signed a petition asking Google to cancel its contract for the project, nicknamed Project Maven, and dozens of employees have resigned in protest.A petition signed by thousands and a bunch of resignations are very different than staging a sit in in an executive's office and refusing to leave when asked. And both of the protests referred to in the past (Maven and sexual harassment) seem to have had a much stronger base of support than the 20-50 people who participated in this.Is it possible that Google is the same Google and these people have gotten caught up in unreasonable post-2020 expectations for what valid political expression in the workplace looks like?[0] https://gizmodo.com/google-plans-not-to-renew-its-contract-f...",
-      "I think the difference in the number of participants and base of support is material.That said, the 2018 protests were definitely more disruptive than this one. 20,000 employees left their desks. [1]Part of it might also be that several of the organizers of the 2018 walkouts left Google in the months following the walkouts (including Meredith Whittaker, who now runs the company behind Signal).I think my original argument in the GP is wrong. The more I read about this topic, the more the true narrative seems like \"after the 2018 walk-outs, Google took steps to ensure mass political action within the company like the action that tanked Maven would never happen again,\" and we're now seeing the results of those steps.[1] https://en.wikipedia.org/wiki/2018_Google_walkouts",
-      "It doesn't actually say anything about how Google handled those employee demonstrations though... Were they less draconian?",
-      ">> Google's approach today, versus how it reacted to the backlash against Maven in 2018, reflects a very different company with a different attitude toward the opinions of its employeesI guess that's one possibility. Another possibility is that the owners and board of Google have a very different attitude towards protests in favor of Palestinians than the owners and board of Google had towards other protests in the past."
-    ],
-    "link": "https://www.theverge.com/2024/4/30/24145680/google-workers-fired-project-nimbus-protest-nlrb-complaint",
-    "first_paragraph": "By  Gaby Del Valle, a policy reporter. Her past work has focused on immigration politics, border surveillance technologies, and the rise of the New Right."
-  },
-  {
     "title": "The IMEI Code: Your phone\u2019s other number (tedium.co)",
-    "points": 131,
+    "points": 133,
     "submitter": "shortformblog",
     "submit_time": "2024-04-29T18:39:33",
-    "num_comments": 84,
+    "num_comments": 87,
     "comments_url": "https://news.ycombinator.com/item?id=40202203",
     "comments": [
       "Couple of thoughts> The combination of the ICCID and the IMSI basically tells the mobile network, \u201chey, this person paid for a plan.\u201dAs far as I remember, the ICCID never actually appears in standard network messaging. It might be possible for the network to request it, but it's not part of a standard 2/3/4/5g attach.The piece seemed to miss two major uses for the IMEI (or I missed it when reading), which were working around vendor bugs and allowing emergency calling.Radio firmware and state machines have always had weird bugs, and even when it conforms to standards (some of which are extremely interpretable), does very weird things in the real world. Pre-smartphone, being able to update phone and radio firmware was extremely rare, so it was common for the networks instead to implement workarounds on a manufacturer or handset basis. Having a hardware ID that identified this was extremely useful.GSM (and onward) actually supports a handset attaching to a network, even without a SIM card, for the sake of emergency calling. It needs some form of unique identifier for this to work. As much as it could (potentially, entirely redefining the stack) generated UUIDs, it makes some sense for these unique IDs to persist across roaming/sessions/reboots.",
@@ -234,26 +223,11 @@
     "first_paragraph": ""
   },
   {
-    "title": "FridgeLock: Preventing Data Theft on Suspended Linux with Memory Encryption (2020) (tum.de)",
-    "points": 33,
-    "submitter": "thunderbong",
-    "submit_time": "2024-04-29T05:41:14",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=40194842",
-    "comments": [
-      "Intel TME and AMD SME (both on boot discardable unique memory encryption technologies running in silicon) are both pretty common in consumer grade hardware and has great Linux kernel support.Both Android and iPhone's use their secure enclave's for storing their encryption keys limiting the effective targets of these attacks (and would be quite difficult to physically extract from).I suppose this is still useful for older hardware and ultra budget phones... But this is a protection against state actors and high end espionage which wouldn't use those classes of devices...Soooooo who is this for? What threat model is this meaningful for? In what world am I trusting a random unaudited security module that taints my kernel for _any_ security sensitive application?",
-      ">great Linux kernel supportFor some definition of great. E.g. Ryzen-based Thinkpad, not enabled by default, hangs on boot if requested via mem_encrypt=on kernel command line[0].https://www.kernel.org/doc/html/v5.8/x86/amd-memory-encrypti...",
-      "(2020).. doesn't seem to have been much progress since, although there is a 2019 POC (in C) by one of the authors[0][0]: https://github.com/fridgelock-lkm/fridgelock"
-    ],
-    "link": "https://www.sec.in.tum.de/i20/publications/fridgelock-preventing-data-theft-on-suspended-linux-with-usable-memory-encryption",
-    "first_paragraph": ""
-  },
-  {
     "title": "Rama is a testament to the power of Clojure (redplanetlabs.com)",
-    "points": 73,
+    "points": 74,
     "submitter": "winkywooster",
     "submit_time": "2024-04-30T18:48:32",
-    "num_comments": 23,
+    "num_comments": 24,
     "comments_url": "https://news.ycombinator.com/item?id=40214692",
     "comments": [
       "> Rama can build end-to-end backends at any scale on its own in a tiny fraction of the code. At its core is a new programming language implementing a new programming paradigm..Grand claims, but where are the super powerful demo apps?  The getting started docs are a trickle of info..https://redplanetlabs.com/docs/~/operating-rama.html#_access...The \"demo gallery\" has a few cherry picked examples, but I don't see how this fulfills the claim of a \"new paradigm\".  I wanted to be blown.. but this ain't it.https://github.com/redplanetlabs/rama-demo-galleryOof.",
@@ -269,6 +243,39 @@
     ],
     "link": "https://blog.redplanetlabs.com/2024/04/30/rama-is-a-testament-to-the-power-of-clojure/",
     "first_paragraph": "Blog"
+  },
+  {
+    "title": "Quacker News (quackernews.com)",
+    "points": 16,
+    "submitter": "adamgordonbell",
+    "submit_time": "2024-04-29T12:03:10",
+    "num_comments": 6,
+    "comments_url": "https://news.ycombinator.com/item?id=40197235",
+    "comments": [
+      "Interestingly, all but one of the descriptions on the front page start with the word \"In\".",
+      "A landing page duck could turn pun to punchline.",
+      "I miss n-gate",
+      "https://x.com/atax1a/status/1529525996507914240> An Internet (business model: Uber for tech industry criticism), who previously regularly updated on a weekly basis, hasn't been seen since August of 2021. They leave behind the following cryptic remark on Tweeter  [Oct 2021] Rumors of my death are almost as exaggerated as my writing style.  Sorry for the delay; I'm catching up.",
+      "Some weeks would go by and I would just check n-gate to see what happened on HN.",
+      "I just checked it yesterday. I guess the writer died during COVID? I really miss his war on users take."
+    ],
+    "link": "http://quackernews.com/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "FridgeLock: Preventing Data Theft on Suspended Linux with Memory Encryption (2020) (tum.de)",
+    "points": 33,
+    "submitter": "thunderbong",
+    "submit_time": "2024-04-29T05:41:14",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=40194842",
+    "comments": [
+      "Intel TME and AMD SME (both on boot discardable unique memory encryption technologies running in silicon) are both pretty common in consumer grade hardware and has great Linux kernel support.Both Android and iPhone's use their secure enclave's for storing their encryption keys limiting the effective targets of these attacks (and would be quite difficult to physically extract from).I suppose this is still useful for older hardware and ultra budget phones... But this is a protection against state actors and high end espionage which wouldn't use those classes of devices...Soooooo who is this for? What threat model is this meaningful for? In what world am I trusting a random unaudited security module that taints my kernel for _any_ security sensitive application?",
+      ">great Linux kernel supportFor some definition of great. E.g. Ryzen-based Thinkpad, not enabled by default, hangs on boot if requested via mem_encrypt=on kernel command line[0].https://www.kernel.org/doc/html/v5.8/x86/amd-memory-encrypti...",
+      "(2020).. doesn't seem to have been much progress since, although there is a 2019 POC (in C) by one of the authors[0][0]: https://github.com/fridgelock-lkm/fridgelock"
+    ],
+    "link": "https://www.sec.in.tum.de/i20/publications/fridgelock-preventing-data-theft-on-suspended-linux-with-usable-memory-encryption",
+    "first_paragraph": ""
   },
   {
     "title": "Show HN: I Built a Java IDE for iPad (apps.apple.com)",
@@ -293,8 +300,30 @@
     "first_paragraph": "Introducing CodeBrew: Your Java IDE for iPad & iPhone!Unleash the power of Java coding on your iPhone or iPad with CodeBrew - the ultimate Java Integrated Development Environment designed for developers on the go. Dive into the world of seamless coding, whether you're a seasoned pro or just starting your programming journey.What sets CodeBrew apart?CodeBrew is not just an IDE; it's your complete coding sanctuary on your iPad & iPhone. The powerful code editor comes equipped with intelligent code completions and live issue highlighting, ensuring your code is not just written but crafted to perfection.Java 17 JDK On-The-Go!CodeBrew comes bundled with Java 17 JDK, running entirely on your iPad or iPhone - no internet connection required. Empower your coding journey without limitations, anytime, anywhere.Craft Simple Games with Ease!Unleash your creativity! CodeBrew boasts a custom graphics framework that simplifies game development. Whether you're building the next viral sensation or just"
   },
   {
+    "title": "Starbucks shares sink 8% as same-store sales fall, quarterly results miss (cnbc.com)",
+    "points": 20,
+    "submitter": "jamarna",
+    "submit_time": "2024-04-30T23:52:15",
+    "num_comments": 29,
+    "comments_url": "https://news.ycombinator.com/item?id=40217894",
+    "comments": [
+      "A coffee and banana walnut bread went from $8 to almost $11.At some point, it is a more economical option to just make coffee and pastry's at home.There is no economy of scale under this inflationary environment that would benefit from continued purchases.",
+      "Hasn't it always been cheaper to make at home? You can make a VERY GOOD coffee for ~$1. Pastries are cheap to make as well, but more time consuming.",
+      "I wonder if this is compounded by the prevalence of work-from-home. After, I can not only make very good coffee, but don't even have to go anywhere for it. Although, I don't mind a nice bike ride, and I realize that a trip to the coffee shop is more than just for procuring coffee.As for pastries, toast on homemade bread has no competition.",
+      "Always cheaper, but now really cheaper.  The line people draw when making a decision has shifted a lot.",
+      "Hell, you can make very good espresso with no effort or cleanup on a Nespresso machine for ~$1 a cup. Plus, the aluminum pods are 100% recycled by the company if you send them back.",
+      "Sure, if you enjoy the taste of plastic. As much as I like espresso drinks, I\u2019d rather opt for a good press coffee or drip. That said, my wife still loves it so I\u2019ve let it go.",
+      "The convenience factor is the killer app for me. Just loading the pod and pressing a button. Done.",
+      "I mean, Starbucks pastries are just not good. If I can pay a buck more and get something good, or go to the corner store and get a donut for $1.5 why would you go to Starbucks?",
+      "I was surprised to learn that their bread slices are frozen. I bought one and then discovered a sticker on it that was several months old. I took it back and they said that was the date on which it had to be frozen by, and that they had just defrosted it today.I used to sometimes work at a Starbucks and buy sweets to bring home, since I don't drink coffee. I don't buy sweet treats since discovering they're actually frozen/thawed.",
+      "My wife used to work there. She\u2019d bring back leftovers that had expired. Pastries, sandwiches etc that were wrapped (completely sealed) from the factory in plastic. If you didn\u2019t get to it fast enough, fly eggs would hatch in the sealed bag\u2026"
+    ],
+    "link": "https://www.cnbc.com/2024/04/30/starbucks-sbux-earnings-q2-2024.html",
+    "first_paragraph": "Credit Cards"
+  },
+  {
     "title": "Pydantic Logfire (pydantic.dev)",
-    "points": 95,
+    "points": 97,
     "submitter": "ellieh",
     "submit_time": "2024-04-30T15:56:10",
     "num_comments": 46,
@@ -315,28 +344,11 @@
     "first_paragraph": ""
   },
   {
-    "title": "Quacker News (quackernews.com)",
-    "points": 13,
-    "submitter": "adamgordonbell",
-    "submit_time": "2024-04-29T12:03:10",
-    "num_comments": 5,
-    "comments_url": "https://news.ycombinator.com/item?id=40197235",
-    "comments": [
-      "Interestingly, all but one of the descriptions on the front page start with the word \"In\".",
-      "A landing page duck could turn pun to punchline.",
-      "I miss n-gate",
-      "I just checked it yesterday. I guess the writer died during COVID? I really miss his war on users take.",
-      "Some weeks would go by and I would just check n-gate to see what happened on HN."
-    ],
-    "link": "http://quackernews.com/",
-    "first_paragraph": ""
-  },
-  {
     "title": "US drug control agency will move to reclassify marijuana (apnews.com)",
-    "points": 432,
+    "points": 434,
     "submitter": "JacobHenner",
     "submit_time": "2024-04-30T17:32:00",
-    "num_comments": 480,
+    "num_comments": 485,
     "comments_url": "https://news.ycombinator.com/item?id=40213591",
     "comments": [
       "One major effect of this is that weed stores will be able to use banks and payment processors legally once the regulators catch up.",
@@ -347,23 +359,24 @@
       "Every fan of physics is recommended to look up bollard test videos.",
       "And one of the best Twitter accounts:\nhttps://twitter.com/WorldBollard",
       "I just browsed this far longer than I'd care to admit.",
-      "Just did! =)",
-      "I guess the weed can still be stolen"
+      "same :)",
+      "Just did! =)"
     ],
     "link": "https://apnews.com/article/marijuana-biden-dea-criminal-justice-pot-f833a8dae6ceb31a8658a5d65832a3b8",
     "first_paragraph": ""
   },
   {
     "title": "Enzymes open new path to universal donor blood (dtu.dk)",
-    "points": 52,
+    "points": 53,
     "submitter": "gnabgib",
     "submit_time": "2024-04-30T16:41:07",
-    "num_comments": 8,
+    "num_comments": 9,
     "comments_url": "https://news.ycombinator.com/item?id=40213024",
     "comments": [
       "Long time listener, first time caller (finally made a HN account)..Anyways, can someone please explain how positive/negative plays a factor here? Rh +/- is mentioned once in the article but not discussed as far as being a donor. I was always told O- is the universal red cell donor [1]. Can anyone help explain is this enzyme fixes the +/- component in addition to the ABO component? Thanks![1] https://www.redcrossblood.org/donate-blood/blood-types.html",
       "There are three components that can cause problems with transfusions: \"A\", \"B\" and \"Rhesus\". A person can have any combination of those three (8 combinations).The A/B/AB/O is basically having  only A, only B, both, or neither. And the +/- is whether you have the \"Rhesus\" component.The basic rule is that you can't introduce new components to a person who doesn't have them in their system, and will be treated as foreign contaminants.So someone with all three components already (AB+) can take any blood because their system already is used to all three components.A person with none of the components in their system (O-) would have an allergic reaction to any of the three components being introduced. On the other hand their blood is safe to donate to anyone else as it won't introduce any \"unexpected components\" to a recipient.EDIT: ah, I see - article doesn't mention Rhesus. I guess it can convert AB- to O-, or AB+ to O+.",
       "I think O is recessive (if I remember from high school correctly).A is really AO (if we're being verbose). B is BO, AB is AB, O is OO. Each parent passes one of them on. So, a A dad and O mom would mix (being verbose again) AO and OO, and thus the child might be AO or OO, A or O.The + or - is for an independent \"Rhesus\" component, as you say. Not sure how this passes through the genes. This is all like high school level knowledge, so maybe someone can share more if they want.My dad had surgery and some paperwork we received said that he had AB blood. It became a family joke because me and my siblings are all O blood type. If my dad really did have AB blood then we are not his children. The hospital later confirmed it was a mistake.",
+      "there is also the HH blood group that will react negatively to O type blood as well as A and B.",
       "That's probably a separate and harder problem from this: The A and B antigens refer to the presence of carbohydrates extending from the cell membrane, whereas Rh factor + refers to the presence of a protein.Since there are different classes of bio-molecules, proteins may need different techniques to remove, alter, or cover them up.If we do find such techniques, they may have much broader applications in immunology.",
       "Very cool stuff!\"For the first time, the new enzyme cocktails not only remove the well-described A and B antigens, but also extended variants previously not recognized as problematic for transfusion safety. We are close to being able to produce universal blood from group B donors, while there is still work to be done to convert the more complex group A blood. Our focus is now to investigate in detail if there are additional obstacles and how we can improve our enzymes to reach the ultimate goal of universal blood production,\" says Professor Maher Abou Hachem, who is the study leader at DTU and one of the senior scientists behind the discovery.",
       "Similar news recently about opening up the doors to less compatible donors for PBSC or bone marrow.",
@@ -372,27 +385,5 @@
     ],
     "link": "https://www.dtu.dk/english/newsarchive/2024/04/enzymes-open-new-path-to-universal-donor-blood",
     "first_paragraph": ""
-  },
-  {
-    "title": "Calendar types in watches (arslan.io)",
-    "points": 93,
-    "submitter": "farslan",
-    "submit_time": "2024-04-29T17:43:51",
-    "num_comments": 37,
-    "comments_url": "https://news.ycombinator.com/item?id=40201528",
-    "comments": [
-      "Question for folks who live in non-English speaking countries: do you guys wear watches with calendars in English?Last time I was in a mall in Mexico City, I asked a guy behind the counter of some store if they had any watches that had either the months or days of week in Spanish... surprisingly, the answer was no. English only.",
-      "As much as I will most likely never spend 6 figures on a watch, I greatly appreciate their engineering. Tangential, does anyone know how easy is it to design and build your own movement?",
-      "I don't know about the difficulty, but you can look at the complexity of this ETA 6497 movement on GrabCAD [0]. After seeing this a while ago, it made sense to me why small/new brands generally use a Seiko NH35 or something similar that they can buy in bulk.[0] https://grabcad.com/library/eta-6497-1-complete-watch-moveme...",
-      "Personally I find it more handy to know day (of week) than date (of month), but I don't think I've every seen a watch that does day-only, usually either date-only or day-date.",
-      "This[1] 1980s Raketa has an interesting visual display of the day of the week. The red dot corresponds to the current day. It does however show the date as a number on the bottom as well.[1]: https://mroatman.wixsite.com/watches-of-the-ussr/raketa?ligh...",
-      "That's me as well; I had to look through so many watches that show the date with so few that show the weekday.  I wish my Seiko didn't show the date because I have to adjust it 5 times a year, but the day-of-week is always right.Also, Seiko's watchfinder won't let you filter based on whether or not it has a DoW complication; very annoying.",
-      "This would actually be a very nice complication, as it would never need to be reset, as long as the watch stays wound. I\u2019m surprised it\u2019s not something I\u2019ve seen, or even thought of.I ended up settling on no-date watches, as I find setting the date to be annoying, and it\u2019s not something I need that often. When I do need it, I have my phone. I think I\u2019d ultimately feel the same way about a day of the week complication.",
-      "I think the idea here might be that people already know what day it is but they have to think about the date.",
-      "That might even be true for many of the population, but I'm exactly in the target demographic of people who get unsure of such things.My favourite ever gift from friends was that people bought me (last century, long before smartphones) a 24 hour radio synchronized digital alarm clock which knew the day and full date including year. Because while often I know 0600 from 1800, not always, and on a particularly bad day maybe I'm not even sure which week this is. I didn't need the year really, but it felt appropriately completionist, just in case.",
-      "Yup. I totally get (from other comments here) that there are exceptions, because everyone's different!But most people always know exactly what day of the week it is, but rarely know the date. (The only time I'm ever unaware of the day is on vacation occasionally.)And the date is needed basically every time I sign anything on paper, as you almost always put a date next to any signature -- whether you're writing a check, filling out forms at the doctor's office, signing consent forms for an activity, and so forth."
-    ],
-    "link": "https://arslan.io/2024/04/29/calendar-types-in-watches/",
-    "first_paragraph": "Mechanical watches that can show a date correctly are pretty rare, and the ones that do are very expensive (starting at $10k). But why? Let me explain."
   }
 ]
