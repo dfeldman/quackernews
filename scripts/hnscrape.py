@@ -9,6 +9,11 @@ def fetch_url(url):
     except:
         return None
 
+def to_text(el):
+    if el is not None:
+        return el.text
+    else:
+        return ''
 
 def parse_story(story):
     title = story.find('span', class_='titleline').text.strip()
@@ -19,14 +24,14 @@ def parse_story(story):
     points = int(score.text.split()[0]) if score else 0
     
     submitter_info = story.find_next_sibling('tr').find('td', class_='subtext')
-    submitter = submitter_info.find('a', class_='hnuser').text if submitter_info else ''
+    submitter = to_text(submitter_info.find('a', class_='hnuser')) if submitter_info else ''
     submit_time = submitter_info.find('span', class_='age').get('title') if submitter_info else ''
     
     comments_link = submitter_info.find('a', string=lambda text: isinstance(text, str) and 'comments' in text)
     num_comments = 0
     comments_url = ''
     if comments_link:
-        num_comments = int(comments_link.text.split()[0])
+        num_comments = int(to_text(comments_link).split()[0])
         comments_url = f"https://news.ycombinator.com/{comments_link.get('href')}"
 
     story_data = {
@@ -36,7 +41,7 @@ def parse_story(story):
         'submit_time': submit_time,
         'num_comments': num_comments,
         'comments_url': comments_url,
-        'comments': [],
+        'comments': ['xxx'],
         'link': link,
         'first_paragraph': ''
     }
@@ -46,15 +51,29 @@ def parse_story(story):
         if article_html:
             article_soup = BeautifulSoup(article_html, 'html.parser')
             paragraphs = article_soup.find_all('p')
-            if paragraphs:
-                story_data['first_paragraph'] = paragraphs[0].text.strip()[:1000]
+            print("TEXT FROM ARTICLE", link)
+            print(paragraphs[:20])
+            #if paragraphs:
+            story_data['first_paragraph'] = ''.join([to_text(p) for p in paragraphs[:100]])[:1000]
+            print("STORING",story_data['first_paragraph'])
 
     if comments_url:
         comments_html = fetch_url(comments_url)
         if comments_html:
-            comments_soup = BeautifulSoup(comments_html, 'html.parser')
-            top_level_comments = comments_soup.select('tr.athing.comtr > td > table > tr > td.default > div.comment > span.commtext')
-            story_data['comments'] = [comment.text.strip() for comment in top_level_comments[:10]]
+            soup = BeautifulSoup(comments_html, 'html.parser')
+
+            # Try to find comments with different selectors
+            selectors = [
+                'tr.athing.comtr > td > table > tr > td.default > div.comment > span.commtext',
+                'div.comment > span.commtext',
+                'span.commtext',
+                'div.comment'
+            ]
+
+            #print("No comments found with any selector")
+            #print("COMMENTS_SOUP",comments_soup)
+            top_level_comments = soup.select('div.comment')
+            story_data['comments'] = [to_text(comment).strip() for comment in top_level_comments[:10]]
     
     return story_data
 
@@ -69,17 +88,16 @@ def main(num_stories):
     
     soup = BeautifulSoup(html, 'html.parser')
     stories = soup.find_all('tr', class_='athing')
-    
+    print("parsing",len(stories),"stories") 
     data = []
     for story in stories[:num_stories]:
-        print(story)
         try: 
             story_data = parse_story(story)
         except:
             # if we can't parse a story just skip it
             continue
-        if story_data['link']:
-            data.append(story_data)
+        #if story_data['link']:
+        data.append(story_data)
     
     with open('output/output.json', 'w') as f:
         json.dump(data, f, indent=2)
