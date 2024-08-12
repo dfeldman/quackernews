@@ -1,334 +1,393 @@
 [
   {
-    "title": "AMD's Strix Point: Zen 5 Hits Mobile (chipsandcheese.com)",
-    "points": 82,
-    "submitter": "klelatti",
-    "submit_time": "2024-08-10T21:18:51",
-    "num_comments": 29,
-    "comments_url": "https://news.ycombinator.com/item?id=41212271",
-    "comments": [
-      "IMO, the most interesting thing about this line is the battery life---within an hour of MBP3 and within 2 hours of Asus's Qualcomm. Making it comparable to ARM architectures.Which is a little surprising because ARM is commonly believed to be much more power efficient than x86.[1] https://youtu.be/Z8WKR0VHfJw?si=A7zbFY2lsDa8iVQN&t=277\n \nreply",
-      "ARM got a lot of hype since the release of the M1, but most users only compared it to the terrible Intel MBPs. Ryzen mobile has been consistently close to Apple silicon perf/watt for 5 years. But got little press coverage.Hype can be really decorrelated from real world performance.\n \nreply",
-      "Any efficiency comparison involving Apples chips also has to factor in that Tim Cook keeps showing up at TSMCs door with a freight container full of cash to buy out exclusive access to their bleeding edge silicon processes. ARM may be a factor but don't underestimate the power of having more money than God.Case in point, Strix Point is built on TSMC 4nm while Apple is already using TSMCs second generation 3nm process.\n \nreply",
-      "Process helps but have you seen benchmarks showing equivalent performance between the same process node? I think it\u2019s less that ARM is amazing than the Apple Silicon team being very good and paired with aggressive optimization throughout the stack but everything I\u2019ve seen suggests they are simply building better chips at their target levels (not server, high power, etc.).\n \nreply",
-      "But how is this the case? I never saw a single article mentioning that a non-Mac laptop was better.(Random article saying M3 pro is better than a Dell laptop https://www.tomsguide.com/news/macbook-pro-m3-and-m3-max-bat... )\n \nreply",
-      "I have heard that part of the reason for little coverage of ryzen mobile CPUs is  their limited availability as AMD was focussing on using the fab capacity for server chips.\n \nreply",
-      "Ryzen mobile is consistently close, yeah. But with the sole exception of the Steam deck, I've yet to see a Ryzen mobile-bearing laptop, Windows included, which is close to the overall performance of the Macbook.\n \nreply",
-      "> But with the sole exception of the Steam deckUuh wut? The Steam Deck is like 3-generation-old hardware in mobile Ryzen terms. In a lot of ways it's similar to a pared-back 4800u with fewer (and older) cores, and a slightly bumped up GPU.To me it's kinda the opposite. Excluding the Steam Deck, I think most of AMD's Ultrabook APUs have been very close to the products Apple's made on the equivalent nodes. Even on 7nm the 4800u put up a competitive fight against M1, and the gap has gotten thinner with each passing year. According to the OpenCL benchmarks, the Radeon 680m on 6nm scores higher than the M1 on 5nm: https://browser.geekbench.com/opencl-benchmarksEven back when Ryzen Mobile only shipped with Vega, it was pretty clear that Apple and AMD were a pretty close match in onboard GPU power.\n \nreply",
-      "Steam Deck might be behind in terms of hardware but in terms of software it's way beyond your typical x86 linux system power efficiency, and dare I say it's doing better than windows. All that contributes to make it punch well above it's weight.\n \nreply",
-      "Battery tests are important, but so is how it fairs on battery (what is the performance drop off to maintain that), what\u2019s its performance is ant its peak and how it long before it throttles when pushed.The M series processors have succeeded in all four: battery life, performance parity between battery and plugged in, high performance and performance sustainability.So far, very few benchmarks have been comparing the latter three as part of the full package assessment.\n \nreply"
-    ],
-    "link": "https://chipsandcheese.com/2024/08/10/amds-strix-point-zen-5-hits-mobile/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "I Created 175 Fonts Using Rust (chevyray.dev)",
-    "points": 17,
-    "submitter": "azhenley",
-    "submit_time": "2024-08-10T23:52:44",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://chevyray.dev/blog/creating-175-fonts/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Things I Won't Work With: Dimethylcadmium (2013) (science.org)",
-    "points": 122,
-    "submitter": "Bluestein",
-    "submit_time": "2024-08-10T19:11:39",
-    "num_comments": 72,
-    "comments_url": "https://news.ycombinator.com/item?id=41211540",
-    "comments": [
-      "[I]ts odor is variously described as \"foul\", \"unpleasant\", \"metallic\", \"disagreeable\", and (wait for it) \"characteristic\", which is an adjective that shows up often in the literature with regard to smells, and almost always makes a person want to punch whoever thought it was useful.No need to punch them; if someone has been exposed to enough dimethylcadmium to describe its odor as \"characteristic\" they probably don't have long to live...\n \nreply",
-      "A generation ago or two ago, it was common for chemists to use taste and smell as a tools for qualitative evaluation of chemical compounds.So older scientific literature is full of all sorts of knowledge that was obtained in ways that are shockingly unsafe by modern standards, including gems like the taste of all sorts of poisons and how large quantities of plutonium are warm to the touch.\n \nreply",
-      "I'm sure the author knows this, and wants to punch them anyway.\n \nreply",
-      "A consumer report not too long ago found cadmium at unsafe levels in many dark chocolate brands: https://www.consumerreports.org/health/food-safety/lead-and-...The cacao was contaminated with cadmium from the soil during harvest.\n \nreply",
-      "In short the article and conclusions are a total mess and made a nice attention grabbing headline with little to no substance.As someone that has built and managed clinical laboratories for human samples, I find this article from consumer reports extremely misleading. The describe results as a percentage of a theoretically acceptable level. For example, for cadmium, they are saying an acceptable level is 4.1 ug/day . Then they seem to imply that \"TJ The Dark Chocolate Lover's Chocolate 85% Cacao\" has 229% of the 4.1ug/day if a consumer ate a 30g piece.They never actually spell out what they mean or what the actual results they found were, or what the limit of detection of the methodology was or the error range of their tests. I guess they are saying that that chocolate has 9.3ug of cadmium in a 30g sample but it's impossible to say from what they wrote.The FDA states that the maximum daily consumption of cadmium should be limited to 0.21-0.36ug per kg of body mass. For an avg american male that would mean a threshold of 17.64-30.24ug/day. A typical salad containing 250g of romaine lettuce has 2-14ug of cadmium in it. Lettuce and cereal grains are the most common sources of cadmium in american diets.The amounts we are talking about are extraordinarily small and difficult to measure. We are talking 5-100 quadrillion individual atoms of cadmium.https://article.images.consumerreports.org/image/upload/v167...\nhttps://www.fda.gov/food/environmental-contaminants-food/cad....\n \nreply",
-      ">The amounts we are talking about are extraordinarily small and difficult to measure. We are talking 5-100 quadrillion individual atoms of cadmium.In short you're saying that the CR numbers are suspicious because they're near the limits of what labs can detect? Is there some source you can provide for this?\n \nreply",
-      "> Lettuce and cereal grains are the most common sources of cadmium in american diets.Lettuce has cadmium. TIL.-> threshold of 17.64-30.24ug/day.So; it I am not mistaken; by these measurements the amount claimed to be contained in the article, for chocolate; would be within bounds ...(It's just you then could not go ahead and have a salad :)\n \nreply",
-      "Plants take up things in the soil. That tends to also extend to heavy metals and the like.It would be really hard to find totally pristine land for a range of crops. Some of the contamination is naturally occurring.\n \nreply",
-      "It would be interesting to mix micro-beads of silica aerogels for heavy metal absorbtion. [0]It would also be interesting if it would be a good inter-mix for fallow cycles soil amendment activities... With the addition to rockdust through the cycling of fields, one can instill nutrients, while removing any heavy metal buildup.The research as to whether silica aeogels can remove all sorts of things is interesting -- would be great to see about Glyphosate Removal. In lieu of the HN post about re-invigorating for the Monarch Butterfly [1] [2] [3][0] https://link.springer.com/article/10.1007/s13399-024-05469-6...[1] https://i.imgur.com/7avnKCP.png[2] https://www.sciencedirect.com/science/article/pii/S221334372...[3] https://news.ycombinator.com/item?id=41165273This is a fun rabbit hole:https://i.imgur.com/ObiAbCs.pnghttps://i.imgur.com/af9k3R0.pnghttps://i.imgur.com/Yq4HWTd.png\n \nreply",
-      "The half life of glyphosate in the soil is not that long (studies disagree, probably influenced by who funded it) but you wouldn\u2019t expect much, if any, in the soil after a year.Not sure it matters to monarchs if it\u2019s in the soil verses on plants.I would be worried about ingesting aerogels until it was proven safe, but it\u2019s an interesting idea.\n \nreply"
-    ],
-    "link": "https://www.science.org/content/blog-post/things-i-won-t-work-dimethylcadmium",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Stapler: I remade a 32 year old classic Macintosh app (gingerbeardman.com)",
-    "points": 38,
-    "submitter": "msephton",
-    "submit_time": "2024-08-10T21:03:04",
+    "title": "Generating Simpson's Paradox with Z3 (kevinlynagh.com)",
+    "points": 62,
+    "submitter": "surprisetalk",
+    "submit_time": "2024-08-11T21:53:14",
     "num_comments": 10,
-    "comments_url": "https://news.ycombinator.com/item?id=41212193",
+    "comments_url": "https://news.ycombinator.com/item?id=41219562",
     "comments": [
-      "Nice! Similar to Brett Terpstra's Bunch[1] which has a GUI-less approach.[1]: https://bunchapp.co/\n \nreply",
-      "This is really cool \u2014 I\u2019ve wondered why something like this didn\u2019t exist for a long time and I\u2019m looking forward to checking it out.Thanks for filling in the gaps for all of us who don\u2019t just use one app at a time!\n \nreply",
-      "Any chance this could add launching windows to specific positions/sizes and/or, more importantly, to specific spaces?It still feels nuts to me that we have all this stuff and yet  when entering/exiting 'work mode' I have to either leave everything running indefinitely or reposition all my work apps every time I launch them.\n \nreply",
-      "You're not alone with this desire, and I still haven't found a good solution. I want to bookmark all apps and windows when working on something and recall them all later when I resume work. How is this not yet a thing when do much real work involves using so many different applications?.There is an app, Workspaces, I think, but it's not useful enough to bother using.Probably should be a macos feature one day\n \nreply",
-      "I would recommend using another tool to script those sorts of changes to the workspace, and then adding that to the Stapler Document.There is an app called Stay that remembers positions of Windows based on the app, title, etc. I used it for a  while, but not recently. https://cordlessdog.com/stay/\n \nreply",
-      "We might be looking for this:https://github.com/FancyWM/fancywm\n \nreply",
-      "My mind went to http://macintoshgarden.org/apps/simstapler\n \nreply",
-      "Tic-tac-toe desk accessory with the minimal DA support in system 10.4 .. running right now.. that binary is close to 40 years old if I am not mistaken.\n \nreply",
-      "This is cool.I've had a desire for something like this (windows/linux) -- what would be cool is if it knew the window size and layouts?So you could do a launch group that will do the whole desktops workspace - and can be saved (but also has a reset button to snap back to the layout if you mix things up. Support for a second desktop to launch then to - so you can throw one context cluster on each...)---Weren't you the one who lost all their archive content? What was the timeline with all of that?\n \nreply",
-      "If you quit and relaunch the app with windows open it will remember its documents positions and sizes. That function comes for free with a Document-Based App.If you want the Document to control the properies of the desktop, then I would write a little Automator app, shell script, Shortcut, etc. to do that and then add that to the Stapler Document. Use all available tools together.---Internet Archive: yes, that was me. Most of my account data is still gone. I don't think the deleted data will ever be restored. And so it goes. The blog post about that one has been updated with this info. Thanks for asking.\n \nreply"
+      "Biggest trap of Simpson's paradox is the results can change with every level of granularity.If you take the example of Treatment A vs Treatment B for tumors, you can get infinite layers of seemingly contradicting statemens:\n- Overall, Treatment A has better average results\n- But if you add tumor size, Treatment B is always better\n- But if you add gender to size, Treatment B is always better\n- But if you add age category to gender and size, Treatment A is always better\n- etc...It totally contradicts our instincts, and shows statistics can be profoundly misleading (intentionally or not).\n \nreply",
+      "Like Tumors are higher dimensional objects than what human brains are trained to perceive.\n \nreply",
+      "If the previous comment is right, then this one is plainly also true in some sense. I'm disappointed to see downvotes.\n \nreply",
+      "I just love the napkin equation in the middle of [1], it really made it clear to me[1]: https://robertheaton.com/2019/02/24/making-peace-with-simpso...\n \nreply",
+      "The wikipedia gives a reasonable take:\"Mathematician Jordan Ellenberg argues that Simpson's paradox is misnamed as 'there's no contradiction involved, just two different ways to think about the same data' and suggests that its lesson 'isn't really to tell us which viewpoint to take but to insist that we keep both the parts and the whole in mind at once.'\"My own take is that any statistic has a value and a strength (in the case of averages, strength can be the number of instances averaged, for instance). You can have to keep in mind both.https://en.wikipedia.org/wiki/Simpson%27s_paradox\n \nreply",
+      "Z3 is kind of my new favorite thing right now.  I have a problem that lends itself quite well to constraints-based reasoning, and I need it to be optimized. I'm sure I could have hacked something together using any number of programming languages, but after playing with Z3 for a bit, I realized that this could be easily done in around ~100 lines of an SMT2 file, and probably be considerably faster.Tools like this make me feel a lot better about all the time I wasted playing with predicate logic.\n \nreply",
+      "Curious, would your data constraints be related to http://equationofhappiness.com/Would like to know how you us Z3 to evaluate emotional happy Q. Could you apply that to evaluate a piece of content (like thread, feed, comment) and then evaluate the energy of the thing for its happiness quotient value whatever? then you can just Z3 the thread and determine the psychological predicted impact...Maybe you could then design casula games that provide the positive happy Q vibes.--I was in a program from when I was a baby with UCSD that was a life tracking project and they would check in with you every so often to see where you were on that trajectory - and where you were happy in life etc.Problem is that it was also tied to Morehouse University, MK, Vic Baranco, and a bunch of other Stanford thingy's from the 70s that we all know abou these days.\n \nreply",
+      "Seems like an inappropriate use of the word \"paradox\". How about Simpson's intuitive situation?\n \nreply",
+      "Paradoxical iff data sets are isolated; explains the Gemini effect. Preferences tend to model future outcomes if sample sizes of surveyors are combined.\n \nreply",
+      "\u201cGoing against common expectation\u201d is well established as one of the definitions of \u201cparadox\u201d. Check any dictionary you choose.\n \nreply"
     ],
-    "link": "https://blog.gingerbeardman.com/2024/08/10/stapler-i-remade-a-32-year-old-classic-macintosh-app/",
-    "first_paragraph": "A couple of days ago I was reading on Hacker News about a feature in some Linux window managers where they allow collections of tabs from different apps.This reminded me of BeOS, but at the same time it reminded me of an app from 1992 for classic Macintosh called Stapler, and how I\u2019d talked about that and it\u2019s one-time spiritual successor LaunchList on Twitter in the past. These were both similar apps that allowed you to collect and launch all the apps, files, folders, documents, related to a specific task, thus saving time. Or as Ali\u00a0Rantakari so succinctly put it in 2009: \u201cOpening a Bunch of Stuff at Once on Your Mac\u201d.So over the past day or so I built my own take on this concept for modern macOS!Whilst my app is inspired by both Stapler (right down to the name) and LaunchList, my app adds improvements and features of its own and is more of a hybrid of both. For example, Stapler didn\u2019t have drag and drop and LaunchList didn\u2019t have zero-click auto-launch. My goal was to keep it as sim"
+    "link": "https://kevinlynagh.com/z3-simpsons-paradox/",
+    "first_paragraph": "I\u2019ve been reading Pearl\u2019s Causal Inference in Statistics, and one of the exercises poses this problem:Baseball batter A has a better batting average than his teammate B. However, someone notices that B has a better batting average than A against both right-handed and left-handed pitchers. How can this happen?The Z3 Theorem Prover is a great lil\u2019 tool for solving these sorts of problems.\nThe following generates an example of this situation, which is more commonly known as Simpson\u2019s Paradox.Running Z3 against this file generates this output, showing an example satisyfing our constraints:The batting avergaes in tabular form:The key to understanding the paradox is that the players did not bat against the same set of pitchers. A batted against 5 lefties and 12 righties; B against 2 and 11.If you liked this, you might like Kevin\u2019s email newsletter.As an Amazon Associate, we may earn commissions from qualifying purchases from Amazon.com."
   },
   {
-    "title": "OpenSnitch is a GNU/Linux interactive application firewall (github.com/evilsocket)",
-    "points": 251,
-    "submitter": "dp-hackernews",
-    "submit_time": "2024-08-10T14:15:52",
-    "num_comments": 55,
-    "comments_url": "https://news.ycombinator.com/item?id=41209688",
+    "title": "Verso \u2013 web browser built on top of the Servo web engine (github.com/versotile-org)",
+    "points": 592,
+    "submitter": "pabs3",
+    "submit_time": "2024-08-11T12:34:41",
+    "num_comments": 202,
+    "comments_url": "https://news.ycombinator.com/item?id=41215727",
     "comments": [
-      "I've tried to use it extensively (as an interactive firewall). However there are just some problems (that are not the fault of OpenSnitch) that I'm not even sure that are even solvable.For example, supposed I run `curl` on the terminal, I can either always decide on a case-by-case basis to allow it thru, or I'm required to whitelist it permanently.\nOnce I've whitelisted generic tools like `curl` or `wget`, then the floodgates are really open, since any malware that have compromised my machine can just use `curl` or `wget` to get to the internet without hitting the firewall.\n \nreply",
-      "I\u2019ve found that by using subdomain wildcards and/or subnets, I build up a stable set of rules pretty quickly and then only have to review  requests to new endpoints once in awhile.To me, the peace of mind knowing that I\u2019ll be prompted to allow new access is worth the initial hassle. And once the habit is built, it\u2019s pretty easy to manage.Editing to add: I also use expiring rules regularly. Maybe I trust an installer and want to let it do its thing. So I open it up with a rule for the executable expiring in the near future (options include: forever, until reboot, for the next 30s, for the next 5 mins, etc). This can drastically simplify some tasks if there are a large number of endpoints for some reason and avoids leaving a hole open permanently.\n \nreply",
-      "IMO - requires a ton of work. Adoption requires updating rules quite often\n \nreply",
-      "Sounds like that varies widely by person/use case. I\u2019ve been using this software for a couple years at this point. I don\u2019t have to update rules all that often (usually a few rules/week), and when I do, it\u2019s usually a 10-30 second detour. The only time it takes more work is if I don\u2019t know why something is trying to connect. But that\u2019s exactly the scenario I\u2019m targeting, i.e. calling attention to the weird looking connections.My use cases are general productivity, development on side projects and a variety of software experiments, gaming, and some local AI stuff.I also don\u2019t see this as a ton of work. Rules are 99% pre-configured for you and all you have to do is choose the scope and duration of the rule and whether to reject or allow.I\u2019ll admit it\u2019s annoying once in awhile if there\u2019s a major update to software that spawns a bunch of new rules, but once I get past the feeling of being annoyed, it\u2019s really an extremely simple and quick process.Really have to emphasize the habit creation part. After I stuck with it for a few weeks, it became second nature and I stopped getting annoyed for the most part. I consider this a worthwhile habit to build if you\u2019re trying lots of code/libraries and want to know what\u2019s phoning where.\n \nreply",
-      "A few rules per week sounds like a lot. I think I am not paranoid enough to micromanage my connections like this.\n \nreply",
-      "In terms of time spent, that amounts to about one minute per week for me right now. Sometimes less.The user experience is streamlined, and adding rules involves responding to a dialog that automatically pops up when a connection is attempted. UX is key here and this would be a very different story if you had to go into a separate rule management interface every time.Regarding paranoia, I don\u2019t see it that way. Supply chain attacks are alive and well, and if you\u2019re running other people\u2019s code on a regular basis, this is a low cost precautionary measure. I totally recognize that not everyone has the same risk profile or tolerance.\n \nreply",
-      "a sudo like wrapper for this could be pretty cool.still will capture when processes unexpectedly try to connect to the network for the first time and there is some value in that. even if the popups aren't great.\n \nreply",
-      "Might be the same but what if you allow all curl/wget traffic for 'dev' user, but continue to flag any traffic for 'normal' userfor dev work run 'su -c curl \u2026 dev'But if malicious program in normal user space is running, then app firewall flags curl and wget use appropriately.It would be annoying to input password every time so maybe setup PAM to use yubikey or biometric? Also make sure this user cannot login and does not have a password.\n \nreply",
-      "I wonder if there's a way to configure it so that when the parent cmd is a trusted command (say, a bash/zsh owned by the user), it could let the curl command through and otherwise block it. But yeah, that seems like a bit of a hassle.\n \nreply",
-      "Then any process can do `system(\u201cbash -c curl malware.attacker\u201d)`\n \nreply"
+      "In other exciting Servo-browser news, Servo and Redox OS have submitted a joint proposal to fund the porting of SpiderMonkey and WebRender to Redox: https://www.redox-os.org/news/this-month-240731/\n \nreply",
+      "So we will, in ~5 years time have two new browser, one in Rust and one in Swift.I hope in the process of doing it we will find new ways of doing things.\n \nreply",
+      "I'd like to see Swift adopted more on non-Apple operating systems, some of the recent GTK apps written in Swift are pretty cool.\n \nreply",
+      "I'd really rather not, personally. All my Swift experiences have been fighting the abysmal compilation times.\n \nreply",
+      "That's a bit of an issue in Rust world, too.\n \nreply",
+      "What apps are you thinking of? Curious to check them out.\n \nreply",
+      "There's been a lot of work on this in the last few years with Windows support, preliminary Android support is also being worked on and should appear at some point in Swift 6.\n \nreply",
+      "Is swift going to do what flutter and kotlin multiplatform cannot?\n \nreply",
+      "sadly Gtk's support for MacOS is best efforts only\n \nreply",
+      "What swift browser are you referring to?\n \nreply"
     ],
-    "link": "https://github.com/evilsocket/opensnitch",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        OpenSnitch is a GNU/Linux interactive application firewall inspired by Little Snitch.\n      \n  Join the project community on our server!\n  \n\n\n\n\n\n\n\n\n\n\n\nOpenSnitch is a GNU/Linux application firewall.\u2022\u2022 Key Features \u2022 Download \u2022 Installation \u2022 Usage examples \u2022 In the press \u2022\u2022\n\nDownload deb/rpm packages for your system from https://github.com/evilsocket/opensnitch/releases$ sudo apt install ./opensnitch*.deb ./python3-opensnitch-ui*.deb$ sudo yum localinstall opensnitch-1*.rpm; sudo yum localinstall opensnitch-ui*.rpmThen run: $ opensnitch-ui or launch the GUI from the Applications menu.Please, refer to the documentation for detailed information.Examples of OpenSnitch intercepting unexpected connections:https://github.com/evilsocket/opensnitch/discussions/categories/show-and-tellHave you seen a connection you didn't expect? submit it!I"
+    "link": "https://github.com/versotile-org/verso",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A web browser that plays old world blues to build new world hope\n      A web browser that plays old world blues to build new world hope.Verso is a web browser built on top of Servo web engine. It's still under development. We don't accept any feature request at the moment.\nBut if you are interested, feel free to help test it.You can also use chocolatey to install if you prefer it.For unified environment setup and package experience, we choose Flatpak to build the project from the start.\nPlease follow the Flatpak Setup page to install Flakpak based on your distribution.We also support building Verso in nix shell. But we don't bundle it in nix at the moment.If you prefer to build the project without any sandbox, please follow the instructions in Servo book to bootstrap.\nBut please understand we don't triage any build issue without fla"
   },
   {
-    "title": "Our Founder \u2013 Momofuku Ando (nissin.com)",
+    "title": "Adbfs-rootless \u2013 Mount Android phones on Linux with adb. No root required (github.com/spion)",
     "points": 60,
-    "submitter": "rawgabbit",
-    "submit_time": "2024-08-09T16:24:28",
-    "num_comments": 11,
-    "comments_url": "https://news.ycombinator.com/item?id=41203269",
-    "comments": [
-      "Ever since reading \u201cThe Ramen King and I\u201d I\u2019ve been hoping/sporadically searching for a translation of Momofuku Ando\u2019s book of quotes. Hard to even find mention of them\u2026Edit: title is Momofuku Ando Speaks: Human beings are Noodle Beings. https://books.google.com/books/about/Momofuku_Ando_Speaks.ht...\n \nreply",
-      "The Cup of Noodles museum in Yokohama was well worth it (get there early if plan to go though, can get very busy).\n \nreply",
-      "Eh, I had the opposite experience. It\u2019s definitely very geared towards elementary school age children.\n \nreply",
-      "Oh /that's/ where David Chang got the name Momofuku from...? Interesting!\n \nreply",
-      "Yep. It also means \"lucky peach\", which has a lot of positive connotations in Japan. But the original ramen place name was a nod to the inventor.\n \nreply",
-      "I was thinking the same thing!\n \nreply",
-      "I\u2019d like to strongly recommend \u201cProject X: Cup Noodle,\u201d a business manga (who knew! Wish more of these were translated) covering the story of the creation of Cup Noodle. Maybe read it while enjoying the titular product.\n \nreply",
-      "That was awesome, especially the bit about the Asama-Sans\u014d incident. Also made me instantly want some noodles . . . .\n \nreply",
-      "Surprisingly that was a great story.\n \nreply",
-      "Cup Noodles (and more generally instant noodles) is easily one of the most important inventions ever.It's cheap, it's nutritious, it stores well (and easily), it ships easily (read: cheaply), and it prepares simply and quickly. Most importantly, it's delicious.I know of no other food that checks all these boxes and then some.\n \nreply"
-    ],
-    "link": "https://www.nissin.com/en_jp/about/founder/",
-    "first_paragraph": "Ando in the 1930s when he launched one enterprise after another\n          NISSIN FOODS founder Momofuku Ando was born in 1910, a year in which Halley's Comet made a close Earth approach. Ando lost both parents in early childhood and was raised by grandparents who ran a kimono fabric shop, where he gained a close-up view of a place of business. Ando, who was filled with a spirit of independence and strong business drive, desired to do something new that no one else was doing. His first choice of occupation was the textiles business, and at the tender age of twenty-two he founded a company that sold knitted goods, which enjoyed great success. Ando became involved in a variety of other business ventures, including the manufacture of slide projectors, charcoal production, the fabrication of barrack housing, salt production, and the founding of a school. Ando's characteristic entrepreneurial spirit to rapidly commercialize ideas based on a quick grasp of emerging trends. The vitality to per"
-  },
-  {
-    "title": "The surveilled society: Who is watching you and how (rnz.co.nz)",
-    "points": 17,
-    "submitter": "billybuckwheat",
-    "submit_time": "2024-08-11T00:20:41",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.rnz.co.nz/news/national/524791/the-surveilled-society-who-is-watching-you-and-how",
-    "first_paragraph": "Save your playlist nowHow to save your playlistFrom 20 August we will launch a new improved audio player. As we do not store any private data \u2014 including your playlist \u2014 items here will no longer be automatically saved. Find out how to save and rebuild your playlist.\nThe wide array of cameras and technology gathering information about our day-to-day life can be hard to get an overview of, says RNZ's Phil Pennington. \nPhoto: Supplied/ Dan Bailey\nAnalysis - Artificial intelligence-enabled cameras on billboards, in bus windshields, on petrol station forecourts and in the checkout at the supermarket - all these are here, or about to be.The selling of surveillance for safety and security's sake has been very successful around the world, and in New Zealand.It has proceeded apace, with barely a blip - though just this week a legal challenge to it has been playing out in the Auckland District Court, without any coverage by the media.In that hearing, expected to involve at least four separate c"
-  },
-  {
-    "title": "Show HN: Pg_replicate \u2013 Build Postgres replication applications in Rust (github.com/supabase)",
-    "points": 121,
-    "submitter": "imor80",
-    "submit_time": "2024-08-10T15:00:41",
-    "num_comments": 10,
-    "comments_url": "https://news.ycombinator.com/item?id=41209994",
-    "comments": [
-      "Hey HN,For the past few months, as part of my job at Supabase, I have been working on pg_replicate. pg_replicate lets you very easily build applications which can copy data (full table copies and cdc) from Postgres to any other data system. Around six months back I was figuring out what can be built by tailing Postgres' WAL. pg_replicate grew organically out of that effort. Many similar tools, like Debezium, exist already which do a great job, but pg_replicate is much simpler and focussed only on Postgres. Rust was used in the project because I am most comfortable with it. pg_replicate abstracts over the Postgres logical replication protocol[0] and lets you work with higher level concepts. There are three main concepts to understand pg_replicate: source, sink and pipeline.1/ A source is a Postgres db from which data is to be copied.\n2/ A sink is a data system into which data will be copied.\n3/ A pipeline connects a source to a sink.Currently pg_replicate supports BigQuery, DuckDb local file and, MotherDuck as sinks. More sinks will be added in future. To support a new data system, you just need to implement the BatchSink trait (older Sink trait will be deprecated soon).pg_replicate is still under heavy development and is a little thin on documentation. Performance is another area which hasn't received much attention. We are releasing this to get feedback from the community and are still evaluating how (or if) we can integrate it with the Supabase platform. Comments and feedback are welcome.[0] Postgres logical replication protocol: [https://www.postgresql.org/docs/current/protocol-logical-rep...)\n \nreply",
-      "I\u2019m curious in your experience how many clients can run pg_replicate at once?With MySQL I saw the interesting use-case of the black hole storage engine to scale out replication logs but ultimately the only usage I\u2019m aware of was for scaling other mysql read replicas.The idea of scaling an application by tailing logs from a database sounds very interesting to me, and I\u2019m curious if you\u2019ve explored this at all.  There\u2019s of course things like Kafka (and then things like Debezium), but it\u2019s hard to beat direct!\n \nreply",
-      "This is so cool! I appreciate Debezium for its wide DB support (no part of me wants to know the inner workings of MSSQL's replication protocol) but it's finnicky to run. Great to have an alternative, at least for postgres.\n \nreply",
-      "I've recently been playing with the logical replication protocol, and it enables all kinds of interesting usages. one really cool thing is that you see the transactional boundaries, so not only can you write a cache, you can do so in a way thats internally consistent.its also inherently much nicer than listen/notify, since you don't have to go back and figure out what data was associated with the event\n \nreply",
-      "This is super timely.Windmill (https://windmill.dev) used to only support webhooks to trigger code and flow jobs. We have just added email support building our own MX server, and wanted to add CDC change. We were gonna do it on Debezium but this will allow us to remove the need for a third-party service and just add this as a crate. Thank you supabase for open-sourcing this.\n \nreply",
-      "Postgres + Rust is one of the most exciting intersections of tech I've seen in a while.There's external tooling like his project, but postgres extensions in Rust are exciting.Full extensions via pgrx have been cool to see, but plrust + pg_tle is also starting to show up.If you aren't familiar with TLE (Trusted Language Extensions), it is a postgres extension from AWS that created some privileged interfaces for procedural languages (used for user-defined functions) to do some extra stuff. Right now it's mostly auth-related hooks but my hope is that it expands in the future.Plrust is a procedural language extension for Rust, allowing user defined functions written in Rust.The combination of those two could open up a world of rich extensions usable in managed hosted environments like RDS.\n \nreply",
-      "I was trying out the stdout example. Could not get it to log anything. DuckDB example worked so I went digging into the source. Apparently the stdout sink is using tracing and I did not have a `RUST_LOG` env var set.Might be a good idea to have it documented or have the default level set to info for the stdout example.Maybe this is common Rust knowledge and I just don't know what I'm doing though.\n \nreply",
-      "I too consider this a footgun.Most applications will have something like   tracing_subscriber::registry()\n           .with(\n               tracing_subscriber::EnvFilter::try_from_default_env()\n                   .unwrap_or_else(|_| \"my_app=info\".into()),\n           )\n           .with(tracing_subscriber::fmt::layer())\n           .init();\n\n\nin the `main.rs` which will default the tracing if RUST_LOG env var is not set.\n \nreply",
-      "Nice! I'm one of the authors of pg-bifrost which is in the same space. Have you thought about / have solved sharding consumption across multiple slots / multi consumers to increase throughput? This is on my radar but not something I've investigated yet.The issue we've ran into is some team at work decides to re-write an entire table and things get backed up until they stop updating rows.\n \nreply",
-      "Wow I think i build one of the first pg-rust-cdc replication module for postgresql and now it seems mainstream. It was a part of my https://github.com/posix4e/rpgffi project, which is garbage code I'm now embarrassed about. Rust programming has come a long way and we didn't have the best practices. Now it seems actual grownup engineering teams are living the dream. We truly live in the best of all universes.\n \nreply"
-    ],
-    "link": "https://github.com/supabase/pg_replicate",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          pg_replicate is a Rust crate to quickly build replication solutions for Postgres. It provides building blocks to construct data pipelines which can continually copy data from Postgres to other systems. It builds abstractions on top of Postgres's logical streaming replication protocol and pushes users towards the pit of success without letting them worry about low level details of the protocol.To quickly try out pg_replicate, you can run the stdout example, which will replicate the data to standard output. First, create a publication in Postgres which includes the tables you want to replicate:Then run the stdout example:In the above example, pg_replicate connects to a Postgres database named postgres running on localhost:5432 with a username postgres and password password. The slot name stdout_slot will be created by pg_replicate automaticall"
-  },
-  {
-    "title": "Interval parsing grammars for file format parsing (2023) (acm.org)",
-    "points": 88,
-    "submitter": "fanf2",
-    "submit_time": "2024-08-10T17:42:02",
-    "num_comments": 19,
-    "comments_url": "https://news.ycombinator.com/item?id=41211039",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://dl.acm.org/doi/10.1145/3591264",
-    "first_paragraph": ""
-  },
-  {
-    "title": "A wonderful coincidence or an expected connection: why \u03c0\u00b2 \u2248 g (roitman.io)",
-    "points": 355,
-    "submitter": "signa11",
-    "submit_time": "2024-08-10T12:24:54",
-    "num_comments": 237,
-    "comments_url": "https://news.ycombinator.com/item?id=41208988",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://roitman.io/blog/91",
-    "first_paragraph": "BlogContactLet\u2019s take a brief trip back to our school years and recall some lessons in mathematics and physics. Do you remember what the number \u03c0 equals? And what is \u03c0 squared? That\u2019s a strange question too. Of course, it\u2019s 9.87. And do you remember the value of the acceleration due to gravity, g? Of course, that number was drilled into our memory so thoroughly that it\u2019s impossible to forget: 9.81 m/s\u00b2. Naturally, it can vary, but for solving basic school problems, we typically used this value.August 9, 2024And now, here\u2019s the next question: how on earth is it that \u03c0\u00b2 is approximately equal to g? You might say that such questions aren\u2019t asked in polite society. First of all, they aren\u2019t exactly equal. There\u2019s already a difference in the second decimal place. Secondly, \u03c0 is a dimensionless number, while g is a physical quantity with its own units.And yet, no matter how you look at it, this can\u2019t just be a simple coincidence.Let's start by taking a close look at the right side. The value"
-  },
-  {
-    "title": "How the SNES Graphics System Works (fabiensanglard.net)",
-    "points": 44,
-    "submitter": "ingve",
-    "submit_time": "2024-08-10T05:48:43",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=41207608",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://fabiensanglard.net/snes_ppus_how/index.html",
-    "first_paragraph": ""
-  },
-  {
-    "title": "A/B testing mistakes I learned the hard way (posthog.com)",
-    "points": 27,
-    "submitter": "Lior539",
-    "submit_time": "2024-08-07T11:45:23",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=41180356",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://newsletter.posthog.com/p/ab-testing-mistakes-i-learned-the",
-    "first_paragraph": ""
-  },
-  {
-    "title": "US FDA approves nasal spray alternative to EpiPen for allergic reactions (reuters.com)",
-    "points": 83,
-    "submitter": "sweca",
-    "submit_time": "2024-08-10T21:30:46",
-    "num_comments": 19,
-    "comments_url": "https://news.ycombinator.com/item?id=41212364",
-    "comments": [
-      "I don't care about the needleless part. The autoinjectors are easy to use and you never see the needle. This is the real win:> The shelf life of neffy is 30 months and allows for temperature exposure up to 122\u00b0F (50\u00b0C), making it a potentially effective treatment if left in a car or outside for a length of time. If accidentally frozen, neffy can be thawed and administered. [1]The need to keep Epi-Pens below 77 degrees F (86F for short periods) is extremely constraining for something that you are supposed to carry with you at all times. Even keeping it in a jeans pocket next to your skin may not be acceptable, technically. If it's hot outside, you can't leave it in your car or even in a bag you're carrying. You're supposed to carry a thermos bottle with you the whole day every day or something? Obviously very few people do that. This is going to be far better for that reason alone. And double the shelf life is very welcome too.[1] https://ir.ars-pharma.com/news-releases/news-release-details...\n \nreply",
-      "As a practical matter epi-pens work just fine outside spec. Heat just speeds up the degradation. Also see https://www.foodallergy.org/fare-blog/expired-epinephrine-ca...> Forty EpiPen and EpiPen Jr auto-injectors that had been expired for 1 to 50 months were tested. All 40 auto-injectors contained more than 80 percent of the labeled dose\n \nreply",
-      "My first question is what took so long?For epilepsy, rescue meds to prevent one seizure from triggering another have started coming in the form of nasal spray have been on the market since 2019. Before that, outside of hospitals you either had to put a pill under someone\u2019s tongue or cream\nin their butthole. You couldn\u2019t put it under their tounge during a seizures out of risk they\u2019d bite your finger (I\u2019m currently recovering from a tongue bite I got after having a seizure while alone 8 days ago, it\u2019s pretty horrible. Amazing the amount of power the teeth/jaw can have) and let\u2019s just say the butthole option is unappealing.My second question is should I invest in the company?  This seems like it has the potential to sell a ton. And if it\u2019s priced anything like the nasal rescue med for epilepsy it\u2019s not gonna be cheap (the epilepsy nasal sprays are about $300 each without insurance, the same med in pill form is about 10 cents. Yes, I\u2019ve struggled a lot over the years with the level of privilege and inequality that having access to them reflects)\n \nreply",
-      "> ARS Pharma will offer neffy at a price of $199 for two doses via digital pharmacy sites like BlinkRx and GoodRx for eligible patients whose insurance plans do not cover neffy. Some commercially insured patients can access the treatment at $25 for each filled prescription of two single-use neffy devices through a co-pay savings program.This is considerably lower than the non-insured cost of an Epi-Pen or generic equivalent[0]. Hopefully this spurs some competition and makes the whole market more affordable. I needed to use an Epi-pen in college, and though I never took issue with needles I'm glad than an alternative is available for those fearful of them.(I didn't feel it. I was about to pass out. But I remember looking up from the floor while administering and seeing my RA terrified. He was so scared of needles that if I had lost consciousness, he wouldn't have administered for me!)[0]https://www.talktomira.com/post/how-much-does-an-epipen-cost\n \nreply",
-      "I knew someone that was\u2026 violently, ridiculously afraid of needles and to have them describe the time they had to stab a roommate with an EliPen \u2014 after failing to find a Good Samaritan to do it \u2014 it was like hearing someone describe getting the courage to take a life or something, some kind of war story. He did finally do it, though. He also puked on the person.\n \nreply",
-      "Not only is it cheaper, but you need to replace it much less as its shelf life is 30 months[0], compared to Epipens which are recommended every year of shelf life.[0]: https://ir.ars-pharma.com/news-releases/news-release-details...\n \nreply",
-      "The cheapest generic is $110 without insurance at CVS for two doses.https://www.cvs.com/content/epipen-alternative(Sometimes you could need two doses in the event of an emergency, according to doctors.)I know this because I've been buying them for years without use (thankfully), on the off chance my son has a life threatening reaction to eggs.\n \nreply",
-      "This is HUGE for kids.  Nasal spray as a delivery method is a big step up from needles, the shelf life is much longer, it's less susceptible to high/low temperatures, and if the promotional pricing is accurate, it's cheaper than EpiPens and Auvi-Q (which talks you through the injection procedure).I wouldn't be surprised, though, if insurers continue to push generic epinephine injectors ($15-$30) merely from a cost perspective.\n \nreply",
-      "Hmm... Canada had something like Auvi-Q called Allerject but it was recalled due to mechanical malfunctions.https://www.cbc.ca/news/health/epipen-shortage-canada-1.3296...\n \nreply",
-      "Slam dunk against EpiPen\u2019s de facto monopoly.\n \nreply"
-    ],
-    "link": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-fda-approves-first-nasal-spray-allergic-reactions-2024-08-09/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Imagining a personal data pipeline (joshcanhelp.com)",
-    "points": 25,
-    "submitter": "surprisetalk",
-    "submit_time": "2024-08-07T18:06:44",
+    "submitter": "peter_d_sherman",
+    "submit_time": "2024-08-11T20:22:11",
     "num_comments": 7,
-    "comments_url": "https://news.ycombinator.com/item?id=41183795",
+    "comments_url": "https://news.ycombinator.com/item?id=41219080",
     "comments": [
-      "xxx"
+      "Hello, maintainer here. Happy to see this little project on the front page of HN. Unfortunately it hasn't received the appropriate attention from me lately, mainly because of the difficulties of running tests (and the android emulator) on GH action runners. Attempt to add some basic tests can be found here https://github.com/spion/adbfs-rootless/pull/62This submission motivated me to check out the latest state of virtualization in GHA and it looks like GH shipped it for all linux runners https://github.com/actions/runner-images/discussions/7191#di... - so it might be possible to get that PR working now.\n \nreply",
+      "Hi maintainer, can you please outline the differences in functionality between using this on a rooted vs non-rooted device? Thank you\n \nreply",
+      "I've never used it with a rooted device! :)I don't think there should be any significant difference in funcitonality, other than perhaps the set of directories accessible. In general, you should be able to access anything that you can view / access using `adb shell ls`, `adb pull` and `adb push`\n \nreply",
+      "Understood, thanks. I thought there was some exploit or something in play.\n \nreply",
+      "Nothing that exciting, I'm afraid.\n \nreply",
+      "ADB is such a crummy experience for file transfers, and Android File Transfer is somehow even worse.  This sounds great!\n \nreply",
+      "MacDroid on MacOS is a shareware utility providing similar functionality of using ADB Shell level FS access inside a directory in Finder using the new File Provider API\n \nreply"
     ],
-    "link": "https://www.joshcanhelp.com/personal-data-pipeline/",
-    "first_paragraph": "Home \u203a Posts \u203a Jul 31, 2024I've been thinking a lot about personal data lately, the stuff that accrues as we live our lives in the presence of machines. About a year ago, I wrote down my thoughts on my own personal data: where it collects, what shape it takes, how it could be used.The amount of data exhaust that we're all generating is pretty staggering. I'm fairly cautious about what I sign up for but I'm still finding more and more sources of data I can export and use. It's a bit of a bind, to be honest; I love having this data available to me but I don't love allowing companies to collect it ... What I am truly cautious about, though, is how much time I spend recording and collecting and transforming ... There is a whole bunch of toil baked into this hobby and I'm wary of creating an endless source of digital chores for myself ... I want to make it easy to collect as much of my own raw data as possible, even if I don't know exactly what I want to do with it right now.Up until the en"
+    "link": "https://github.com/spion/adbfs-rootless",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Mount Android phones on Linux with adb. No root required.\n      This variant of adbfs works even WITHOUT having root access (busybox) on your phone!You will need libfuse-dev and adb. You will also need build-essential, git, and pkg-config. On Ubuntu:Clone the repository:Build:Optional: If you have a separate copy of android-sdk and would\nlike to use that adb, copy the binary adbfs to the android-sdk/platform-tools\ndirectory. If platform-tools is in your $PATH you can skip this step.Create a mount point if needed (e.g. in your home directory):You can now mount your device (also from the platform-tools dir):If you want to trigger a media rescan after every operation, use the option -o rescan:Have fun!When running you get the following error:Solution: Make sure that USB Debugging is enabled.Then fusermount -u /media/mount/path before t"
   },
   {
-    "title": "Animated Film Making Process (disneyanimation.com)",
-    "points": 26,
-    "submitter": "oumua_don17",
-    "submit_time": "2024-08-09T18:30:18",
-    "num_comments": 0,
-    "comments_url": "",
+    "title": "China's total wind and solar capacity outstrips coal (renewablesnow.com)",
+    "points": 58,
+    "submitter": "teractiveodular",
+    "submit_time": "2024-08-11T23:54:18",
+    "num_comments": 26,
+    "comments_url": "https://news.ycombinator.com/item?id=41220098",
     "comments": [
-      "xxx"
+      "Worth highlighting: The research firm projects that by 2026, solar power alone will outstrip coal as China's main energy source, reaching 1.38 TW in cumulative capacity, 150 GW above coal.Last year, China added a record 293 GW of wind and solar, driven by gigawatt-scale renewable hub projects. Coal power additions were about 40 GW in 2023, while the first half of 2024 saw only 8 GW of new coal capacity, according to Rystad Energy\u2019s estimates.After a record 216 GW of solar installations last year, China is expected to exceed 230 GW this year. Wind capacity additions are projected to be 75 GW in 2024.To put those numbers into perspective, the largest nuclear power plant complex in the US (Vogtile) has a capacity of 4.6 GW, while the world's largest power plant at the Three Gorges does 22.5 GW (max).\n \nreply",
+      "How long is the 294 GW produced , For solar is the rated output only produced when sun shining?- which means the quoted OP is only for a few hours a day?   The nuclear power plan OP would be constant.\n \nreply",
+      "Currently, the world will be deploying ~660GW of solar per year by end of year, and at current manufacturing capacity ramp rates, will reach ~1TW/year in ~18 months. This doesn\u2019t stop, it only continues to climb. The Sun delivers enough energy to Earth in under an hour to power humanity for a year. There will certainly be challenges along the way as the world heads towards net zero, but none of this is unsolvable with current renewable and storage technology.Renewable and storage costs continue to decline, new nuclear is dead, existing nuclear will run as long as safe to do so until decommissioning. Fission lost to fusion at a distance.https://www.lazard.com/media/xemfey0k/lazards-lcoeplus-june-...https://ourworldindata.org/grapher/installed-global-renewabl...https://pv-magazine-usa.com/2020/05/14/overbuilding-solar-at...https://www.wartsila.com/energy/towards-100-renewable-energy...https://www.bloomberg.com/news/newsletters/2024-07-09/china-... | \nhttps://archive.today/DklaA\n \nreply",
+      "> only produced when sun shining?- which means the quoted OP is only for a few hours a day?China has a very large desert region in the northwest that receive a LOT of sun year round, so I'd expect the panels to be producing a decent amount of power throughout most of the day.The biggest problem is actually distance - even a few years back, I was reading that there was a massive amount of solar power, but a very significant percentage was lost in transmission to the most densely populated areas of China which are predominantly in the southeast and east of the country.These areas are also where a lot of rare earth metals are mined, so feasibly it would be relatively cheap to produce giga-batteries there too smooth demand, but I also suspect that they could see significant advantage to doing things that are traditionally energy-costly like electrolysis of water to create hydrogen that could be transferred across the country by pipe with pretty minimal losses and then burned to drive turbines at the other end. Such systems might end up with overall fewer losses than just having thousands of miles of power grid.Another thing I read recently that was interesting is that it's getting approximately close to free for China to produce solar panels now, significantly cheaper than anywhere else in the world. Largely this is also due to the excess power produced in the northwest that can be cheaply used in the processing needed to produce more solar panels.\n \nreply",
+      "Capacity factor of solar is generally ~20%\n \nreply",
+      "there in lies the problem with nuclear.Solar is cheaper and easier, so when the sun is shining you get essentially free energy while the nuclear cant be ramped down so you are now producing excess energy during the day.solar eats nuclear's lunch during the day... with the long term waste issue and military target danger of nuclear thrown in.\n \nreply",
+      "I'm not one to champion China, but thank god that they seem to be pretty co2 conscious. It's easy to envision China having leadership that didn't give a fuck about climate change (or didn't want to hear it was real) and just went full on coal energy independence.\n \nreply",
+      "One of the best aspects of Chinese energy policy is there isn't much evidence they care about CO2 at all. They aren't world's largest coal consumer (by a 5x margin I believe [0]) because they care about CO2.They care about cheap energy and energy security. They've been relatively transparent that they are pursuing all available options as far as those options will go. It has been a wildly successful strategy for them in securing prosperity and I wish the west had that sort of ambition.[0] https://ourworldindata.org/grapher/coal-consumption-by-count...\n \nreply",
+      "Those quantities are astonishing, no doubt. Does \u201ccapacity\u201d here mean \u201cnameplate capacity,\u201d in the sense of the maximum that the installation can produce under peak input conditions? So for solar, the actual energy flowing into the grid would be on the order of 10-20% of that?\n \nreply",
+      "Yes, spot on, but it'd be closer to 25% for a grid-scale solar PV installation.\n \nreply"
     ],
-    "link": "https://disneyanimation.com/process/",
-    "first_paragraph": "DISNEY ANIMATIONDISNEY ANIMATION CAREERS\u00a0What We DoEach department works together to bring us the big picture. From sequence to shot to frame, the film comes together through the deep collaboration between everyone at the studio.Wish\u00a0has a total run time of 94 minutes and 56 seconds.\u00a0\nWish\u00a0has a total run time of 94 minutes and 56 seconds.\u00a0Wish\u00a0had 32 sequences that ranged from 57 seconds to 6 minutes.\nWish\u00a0had 32 sequences that ranged from 57 seconds to 6 minutes.Sequence 100\u00a0contains 59 shots and is 2 minutes and 57 seconds long.Sequence 100\u00a0contains 59 shots and is 2 minutes and 57 seconds long.Frame 01Click on the image below to toggle between the left eye and right eye images.The fairytale illustration styles of many Disney artists, including Gustaf Tenggren and Kay Nielsen, inspired the unique style of\u00a0Wish.\nThe fairytale illustration styles of many Disney artists, including Gustaf Tenggren and Kay Nielsen, inspired the unique style of\u00a0Wish.Shorts, such as Paperman, Feast, and Fa"
+    "link": "https://renewablesnow.com/news/chinas-total-wind-and-solar-capacity-outstrips-coal-rystad-says-865106/",
+    "first_paragraph": ""
   },
   {
-    "title": "Shanghai's Automotive Metamorphosis (arun.is)",
+    "title": "Server Mono: A Typeface Inspired by Typewriters, Apple's SF Mono, and CLIs (servermono.com)",
+    "points": 184,
+    "submitter": "yankcrime",
+    "submit_time": "2024-08-11T16:04:49",
+    "num_comments": 43,
+    "comments_url": "https://news.ycombinator.com/item?id=41217136",
+    "comments": [
+      "So, if you're going to demonstrate the box drawing characters \u2014 and in a monospaced font, I would \u2014 they should line up?E.g., under \"lines\", the rows are overlapping; https://i.imgur.com/KnOP2Wu.png ; I would think they're only supposed to just touch, with no gap, no overlap.The boxes, similarly, don't quite line up right. https://i.imgur.com/6pVYh9a.png (Even the 100% box isn't lining up right, although somehow what FF screenshotted != what it rendered. sigh.) The point being, you want these to tile seamlessly. Oddly, they tile differently in the pictures-of-font that break up the page. (Which I'm not sure what they're supposed to be? One is called \"5af1d7a5-fa60-4827-9b4f-808cdb635d59\" and has no alt text. They remind me of Dwarf Fortress though.)As other people hint, this seems like the line height is cramped. I/l/1 ambiguities is a deal breaker for any terminal font, though.\n \nreply",
+      "Number One, Pipe Character, lower case L, upper case I, zero and O, Parentheses and Brackets, are so common pain points on coding and terminal fonts. Those should be painfully distinct.\n \nreply",
+      "The first thing I look at on ANY font is the capital \"i.\" No crossbars? No dice.This one has those and a distinguishable zero vs. O, so far so good.Whoops; someone pointed out that 1 and l are indistinguishable. That's a major failing.\n \nreply",
+      "> Whoops; someone pointed out that 1 and l are indistinguishable. That's a major failing.Agreed.\n \nreply",
+      "They do line up, if you install and use the OTF version:https://imgur.com/a/N2tNaiOalthough some characters still seem to be missing, most of them work as intended.edit: nevermind, looks like it was using Lucida Sans instead! what is going on? does the OTF only include ASCII or something?\n \nreply",
+      "For those commenting on the importance of character ambiguity, I completely agree, and offer \"DP Sans Mono\", a font specifically designed for unambiguous proofreading.https://www.pgdp.net/wiki/DP_Sans_Monohttps://www.pgdp.net/c/faq/font_sample.phpfont download link at https://www.pgdp.net/phpBB3/viewtopic.php?t=70714\n \nreply",
+      "I can't put my finger on it but I don't find this enjoyable to read at all.. so I don't know much about readability claims here. Maybe I'm an outlier.\n \nreply",
+      "The line spacing is way too tight (this is line-spacing: 1).Obviously that is beneficial for ASCII-art (smaller vertical gaps), but plain text would benefit from at least 1.1 and maybe 1.2.I am not a typographer but the cap height of this font (I think it's the cap height) appears quite large, when perhaps it would be better to have a slightly smaller cap height so the ASCII-art features would work well at line-height 1.0 without the letters feeling so vertically cramped.Basically, slightly less-tall letters.But as I say, not an expert.\n \nreply",
+      "line spacing beyond minimal ought not be an attribute of a font. I can see a \"recommended\" line spacing for some type of \"vertical as well as horizontal beauty\", but drives me nuts when choosing a font also chooses scads of whitespace.I like to squeeze a lot of info on a page, why do other people get to say \"no\". Sure, space out your wedding invitation, I can deal, but on the daily text on my screen, that should be up to me.I do prefer \"typewriter\" fonts that are more squoze horizontally, this one seems to have loosened the ol belt a little, maybe for more \"squareness\".\n \nreply",
+      "Oh I am not saying it should be.The problem is that to resolve the readability issues many people seem to be observing on that page you need to set it to 1.1 or 1.2 (try it!)But that will break the console pseudographics.Part of the problem with this font appears to be large, space-filling (yes, squareness is another way to put it) glyphs, when if they had a bit more of a difference between the cap height and the ascender height the full-height pseudo graphical glyph stuff would still work without the textual characters feeling so cramped.At least, I think that is right. I know just about this stuff to be wrong in important ways.Either way there must be a solution to this; it feels like a missed opportunity.\n \nreply"
+    ],
+    "link": "https://servermono.com/",
+    "first_paragraph": "SERVER MONOREGULAR WEIGHTSIL OPEN FONT LICENSE 1.1Server Mono is a typeface inspired by typewriters, Apple's San Francisco Mono, ASCII art, command-line interfaces, and programming tools.Server Mono continues the long tradition of monospace fonts, renowned for their versatility in command-line interfaces due to their clear readability and uniform character width. You'll notice our own preferences reflected in the design, as we value how it performs across various viewing contexts. Server Mono offers excellent readability and pairs well with its uniform, predictable, and orderly appearance.We anticipate that Server Mono will be a valuable choice for your websites, game worlds, and custom desktop application interfaces, especially where precise alignment is essential.This single-weight font was released in 2024 by the Internet Development Studio Company of Seattle, Washington. Created by designers Tim Vanhille and Matthieu Salvaggio, with supplemental direction from Jimmy Lee and the Int"
+  },
+  {
+    "title": "The most cited authors in the Stanford Encyclopedia of Philosophy (schwitzsplinters.blogspot.com)",
     "points": 23,
-    "submitter": "surprisetalk",
-    "submit_time": "2024-08-10T03:16:14",
-    "num_comments": 7,
-    "comments_url": "https://news.ycombinator.com/item?id=41207048",
+    "submitter": "bbor",
+    "submit_time": "2024-08-11T04:03:12",
+    "num_comments": 12,
+    "comments_url": "https://news.ycombinator.com/item?id=41213902",
     "comments": [
-      "xxx"
+      "Not sure the point of having a filter to select only authors born after 1900.Does show the bias towards the American end of Anglo-American analytic philosophy though.Quine is ponderous. No idea how David Lewis made it to the top of the list either.Without Wittgenstein included, to me this list seems fairly pointless. Realise he might not be close to the top but without his work most of these American philosophers would be nowhere. Maybe I have a different idea as what counts as \u201ccontemporary\u201d.  Hume seems pretty contemporary to me. So does Nietzsche.\n \nreply",
+      "modern yes, contemporary no...\n \nreply",
+      "John Von Neumann is #145, pretty cool. Anyone else spot any other programming greats in the list?\n \nreply",
+      "> \u201dOnly authors born 1900 or later are included.\u201dAh, that\u2019s why Plato isn\u2019t #1\n \nreply",
+      "A series of footnotes to David Lewis doesn\u2019t have quite the same ring to it.\n \nreply",
+      "Plato cited Socrates a lot\n \nreply",
+      "Fascinating list that I thought yall would enjoy! If you\u2019re not yet aware, https://plato.stanford.edu is as close to \u201cphilosophical canon\u201d as it gets in modern American academia.Shoutout to G\u00f6del and Neumann taking top spots despite not really being philosophers, at least in how they\u2019re remembered. Comparatively, I\u2019m honestly shocked that neither Bohr nor Heisenberg made the cut, even though there\u2019s multiple articles on quantum physics\u2026 Turing also managed to sneak in under the wire, with 33 citations.The bias inherent in the source is discussed in detail, and I would also love to hear HN ideas on how to improve this project, and how to visualize the results! I\u2019m not the author, but this is right up my alley to say the least, and I\u2019d love to take a crack at it.\n \nreply",
+      "> and how to visualize the results!There's bound to be something to be teased out from who referenced whom and when.Eg: (random example) https://en.wikipedia.org/wiki/Graham_Priest had a great many students from the 1980s onwards, coinciding with the rise of plato.stanford.edu personal computers and the internet.He's come in at #51 or so likely on the back of a generation of philosophy students with technology crossover writing up early articles on plato and throwing in a citation to Priest.I'm in no way implying this is undeserved, just as an example of some of the weighting bias coming from the era when many plato stub articles originated.\n \nreply",
+      "very out of touch with European philosophy, and therefore global philosophy. Strange anglo-centric project.edit: that's literally the point of the post, my bad.\n \nreply",
+      "> 2. Quine, Willard van Orman (213)It's easy to become number 2 when you reference yourself /s(For reference, a Quine is a type of computer program that takes no input and only reproduces it's source code, so basically self replicating. This is based on Quine's research into the logic of recursion and replication [0])[0] - https://en.m.wikipedia.org/wiki/Quine_(computing)\n \nreply"
     ],
-    "link": "https://arun.is/blog/shanghai-cars/",
-    "first_paragraph": "6 min read\u2002\u2002August 3, 2024\u2002\u2002#Photoessays\u2002#AsiaIn 2005, I landed in China, clutching my prized fourth-generation iPod. My\nexcitement quickly diminished when I realized I had forgotten the charger.Locals were perplexed when I asked them for help. They\u2019d never seen such a\ndevice, let alone knew where to find a charger. Little did I know, this moment\nof technological disconnect would become a quaint memory in the face of China\u2019s\nimpending digital revolution.Fast forward to 2023, and the tables had turned \u2014 I was the bewildered one.\nCraving a simple coffee, I found myself in a high-tech puzzle. The coffee shop\nhad no menu or prices in sight, just a massive QR code. The staff thankfully\ndirected me to scan the QR code with Alipay , bringing up the shop\u2019s mini-app\nwithin which I could view the menu, pay, and check on my order.The China I knew was replaced by a sci-fi vision of the future. Sure, economic\nfigures could tell this story. But for a car enthusiast like me, the real tale\nwas written"
+    "link": "https://schwitzsplinters.blogspot.com/2024/08/the-378-most-cited-contemporary-authors.html",
+    "first_paragraph": "reflections in philosophy of psychology, broadly construedTime for my five-year update of the most-cited authors in the Stanford Encyclopedia of Philosophy!  (Past analyses: 2010, 2014, 2019.)\n \n\nImage of a young David K. Lewis [source]\n\nMethod\n  \n* Only authors born 1900 or later are included.\n\n* Each author is only counted once per headline entry (subentries are excluded). In 2010, I found that this generated more plausible results than counting authors multiple times per entry.\n\n* As in 2019, but unlike 2014 and 2010, I include co-authors.  Due to the unsystematic formatting of SEP references, this was a somewhat noisy process.  To capture last authors, I searched for \"and\" or \"&\" in each bibliographic line, if appearing before a \"19\", \"20\", \"forthcoming\", or \"in press\", then pulled the text immediately after.  To capture second authors that were not last authors, I searched for a second comma before such a date-preceding \"and\" or \"&\", then pulled the text after that.  I omitted co-"
   },
   {
-    "title": "Algorithmic price-fixing of rents is here (theatlantic.com)",
-    "points": 40,
-    "submitter": "jtotheh",
-    "submit_time": "2024-08-10T22:11:24",
-    "num_comments": 19,
-    "comments_url": "https://news.ycombinator.com/item?id=41212616",
+    "title": "Firefox Browser Ported to HaikuOS (haiku-os.org)",
+    "points": 407,
+    "submitter": "return_0e",
+    "submit_time": "2024-08-11T08:23:43",
+    "num_comments": 161,
+    "comments_url": "https://news.ycombinator.com/item?id=41214762",
     "comments": [
-      "It is completely anecdotal but in my local experience I've seen the following pattern happen: rent is increased substantially, present tenants move out, no one new applies, unit becomes empty, rent is decreased until someone new finally moves in.  I'm not a landlord but I don't think there is a rational basis for kicking all of your rent paying tenants out and then having half a dozen units go empty in the hope that you can squeeze an extra 100 every month out of someone, maybe, in the future.\n \nreply",
-      "This is only irrational for the landlords, not the software suggesting prices to them. If you churn 10% of your units, but prices go up by 20%, then you're making more money a rental management company.\n \nreply",
-      ">rent is increased substantially>[...] in the hope that you can squeeze an extra 100 every month [...]Which one is it? Was the increase \"substantial\" or was it only 100 bucks?> I'm not a landlord but I don't think there is a rational basis for kicking all of your rent paying tenants out and then having half a dozen units go empty in the hope that you can squeeze an extra 100 every month out of someone, maybe, in the future.Hindsight is 20/20. My guess is that the landlord thought the market was going to bear the price increase, and went all-in on it rather than only doing it on a portion of his tenants.\n \nreply",
-      "> Which one is it? Was the increase \"substantial\" or was it only 100 bucks?A 100 increase over 800 is a 12.5% increase, which is substantial relatively speaking.  In my case they wanted 150 over 800 which is an 18.75% increase.  After I said no (as well as everyone else in the complex) they wanted 1000 which is a 20% increase.  I have to say your comment comes off as condescending to me.  For many people $100 may be the difference between being able to afford a home and being homeless.  Now everyone has left, the units are all empty, and they are asking for 800 (after asking 950, then 900, then 850).> Hindsight is 20/20. My guess is that the landlord thought the market was going to bear the price increase, and went all-in on it rather than only doing it on a portion of his tenants.That is one way to describe it.  Or, to describe what you said in other words, trying to squeeze every penny out of tenants, creating an inconvenience for five people (who would have probably rather stayed and put up with a modest 2-5% increase), then losing money after all because all of the properties are now vacant.\n \nreply",
-      "> I have to say your comment comes off as condescending to me. For many people $100 may be the difference between being able to afford a home and being homeless.The implication that $100 isn't a lot of money comes from your original comment, not me. After all, the thesis in your original comment was that the landlord risked a bunch of reliable tenants for a small rent increase. It wouldn't have made sense otherwise (eg. the landlord risking the current tenants for a chance of $500 rent increase).\n \nreply",
-      "Now I see the source of confusion.  I think $100 from the perspective of a tenant may be quite a lot (as mentioned a 12.5% increase).  However as you said my thesis is from a landlord's perspective $100 is insignificant with all things considered.  If even one unit were empty for two months, that would be an annual loss greater than the extra money they would make from the previous tenants.  Also in our case they already have had a unit empty for over six months now which further baffles me.  Apologies if I read into your comment too much.",
-      "> Which one is it? Was the increase \"substantial\" or was it only 100 bucks?Not OP, but here is how I interpreted this.Increase rents substantially -> no one takes it -> decrease rents over time until it hits a rate the market can bare -> people move in when rents are 100 dollars above what the previous tenets were paying.\n \nreply",
-      "Anecdata of 1 but. In July 2021 got place for too much $$$. In July 2022 they said the rent was going up $400 a month. I moved out. In July 2023 they were asking $100 less than I was paying in July 2021I have no idea if that was this software or market change or what. It was huge complex. 700-800 units. At the time I just guessed that they raise the rent for everyone when their lease is up because most people don't want to move and will put up with the rent increase even if they hate it.For me, the place had issues. If the rent had stayed the same I'd have put up with them just because it's easier to put off finding a new place, but $400 a month was enough for me to just move.\n \nreply",
-      "Markets are rational eventually but the keyword is eventually. No timeline is provided.\n \nreply",
-      "Yeah, that's weirdly inefficient and annoying for everyone. What would be great would be if there was some algorithmic way to determine the market value for an apartment to minimize vacancy and be fair to both the current tenants and those that want to move in\n \nreply"
+      "Some history about Firefox and BeOS. Before Firefox, there was Mozilla, which had a BeOS port (called Bezilla). Bezilla was bloated and slow. So the BeOS community tried to make a stripped version of Mozilla with only the browser (minus all the bloat). This project became an inspiration to do the same for Mozilla, and that product became Firebug (or something similar - edit phoenix, then firebird), which due to trademark conflicts got renamed to Firefox that we all know today. So in a round-a-bout way, we have come full circle after 20 years, Firefox is finally ported to the platform that inspired its creation.Kind of poetic. We should write a 3-5-3 Haiku about this journey.\n \nreply",
+      "It wasn't Firebug, that was a developer  tool extension.  It was first Phoenix which hit trademark issues, and then Firebird which hit trademark issues, which then became Firefox.\n \nreply",
+      "From what I remember, Firebird was more related to the database open source project which was a fork of InterBase, so at that time it was relatively well known due to its roots with IB.\n \nreply",
+      "Maybe it hit trademark issues, but the reason I remember from slashdot was that phoenix was already a semi-popular open source project in the debian repository, so firefox had to be named from phoenix to mozilla-phoenix. But firefox at the time still named phoenix just ran so much better on windows than linux, it was funny.\n \nreply",
+      "No.Phoenix Technologies, the BIOS maker sent me an email telling us they made a BIOS web browser and our name would confuse things. Under advice from our legal support, we agreed to change the name.We changed to Firebird and the OSS database project bombed my inbox (and Mitchell's too) for a week with hundreds of nastygrams and though we were in the clear on TM, we didn't want to stomp on the little OSS project so we changed again.I was at the whiteboard when Jason Kersey of mozBin, mozillaZine, and later Chrome fame came up with Firefox. We had two columns of names, forces of nature and animals and were pairing them up.\n \nreply",
+      "was waterduck considered?\n \nreply",
+      "Stormcow\n \nreply",
+      "Both Phoenix and Firebird were over the naming and trademark clashes:For firebird, https://www.cnet.com/tech/tech-industry/mozilla-holds-fire-i... and https://www.cnet.com/tech/services-and-software/mozillas-fir... in this case it was AOL Time Warner that owned the Firebird trademark for the database.2) For Phoenix, https://web.archive.org/web/20070914035447/http://www.ibphoe... the main reporting on it seems to be lost but wikipedia still backs it up\n \nreply",
+      "Phoenix was because of a challenge from Phoenix Technologies, the BIOS maker. Firefox was because of concerns about stomping on a small OSS project, the Firebird Database. I was responsible for all of this at Mozilla. Happy to answer any questions.\n \nreply",
+      "With a fraction of the userbase it had 20 years ago, thanks to everyone that keeps shipping Chrome with their applications, testing only with Chrome developer tools, and so on.Anyway, congratulations to anyone involved in the port.\n \nreply"
     ],
-    "link": "https://www.theatlantic.com/ideas/archive/2024/08/ai-price-algorithms-realpage/679405/",
-    "first_paragraph": "Algorithmic collusion appears to be spreading to more and more industries. And existing laws may not be equipped to stop it.If you rent your home, there\u2019s a good chance your landlord uses RealPage to set your monthly payment. The company describes itself as merely helping landlords set the most profitable price. But a series of lawsuits says it\u2019s something else: an AI-enabled price-fixing conspiracy.The classic image of price-fixing involves the executives of rival companies gathering behind closed doors and secretly agreeing to charge the same inflated price for whatever they\u2019re selling. This type of collusion is one of the gravest sins you can commit against a free-market economy; the late Justice Antonin Scalia once called price-fixing the \u201csupreme evil\u201d of antitrust law. Agreeing to fix prices is punishable with up to 10 years in prison and a $100 million fine.But, as the RealPage example suggests, technology may offer a workaround. Instead of getting together with your rivals and "
+    "link": "https://discuss.haiku-os.org/t/progress-on-porting-firefox/13493?page=7",
+    "first_paragraph": "Amazing! Does it seem more stable than other browsers on haiku?Does it seem more stable than other browsers on haiku?This is what I call a true BeOS-fan lifestyle. It clearly a work in progress port, but the main question is: it is more stable than what we have right now? Is it wrong to ask about the status? I would just like to know how stable it is.Seems that the \u201ctrue BeOS fan lifestyle\u201d is to jump out on people in forums for asking questions? The current status is that no text can be shown due to some rendering issues,so it is not usable at all.\nThat may now change fast,however,considering the cause is likely something that can be fixed rather easy,now that the rest of this huge monster application seems to be working.X521 did say \u201csomewhat\u201d running. I don\u2019t know if he sent you a personal message or you\u2019re working on it aswell. However, from his given statement I dare to assume that there are other underlying issues aside of the obvious lack of text. I may be wrong but that\u2019s just "
   },
   {
-    "title": "DEF CON's response to the badge controversy (reddit.com)",
-    "points": 182,
-    "submitter": "mmastrac",
-    "submit_time": "2024-08-10T19:07:23",
-    "num_comments": 148,
-    "comments_url": "https://news.ycombinator.com/item?id=41211519",
+    "title": "Show HN: My 70 year old grandma is learning to code and made a word game (grandmasword.com)",
+    "points": 338,
+    "submitter": "lowercarbon",
+    "submit_time": "2024-08-11T16:01:50",
+    "num_comments": 127,
+    "comments_url": "https://news.ycombinator.com/item?id=41217109",
     "comments": [
-      "xxx"
+      "Caution: Spoilers in this comment!Arriving a bit late to the party, but I couldn't resist crafting a quick binary search solution in Python.  from urllib.request import urlopen, Request\n  DICT_URL = \"https://grandmasword.com/dictionary.js\"\n  response = urlopen(Request(DICT_URL, headers={\"User-Agent\": \"Mozilla/5.0\"}))\n  words = [w.strip('\"[];\\n') for w in response.read().decode().split(\"[\")[1].split(\",\")]\n  lo, hi, answer = 0, len(words) - 1, \"\"\n  while answer != \"d\":\n      mid = lo + (hi - lo) // 2\n      print(words[mid])\n      answer = input(\"after/before/done? [abd] \")\n      if answer == \"a\":\n          lo = mid + 1\n      elif answer == \"b\":\n          hi = mid - 1\n\nTook a total of 17 guesses to find the solution:  MALPIGHIAS\n  after/before/done? [abd] a\n  RUBIFIES\n  after/before/done? [abd] a\n  TEARERS\n  after/before/done? [abd] a\n  UNMANLIEST\n  after/before/done? [abd] a\n  VORTICES\n  after/before/done? [abd] b\n  UTOPIANIZING\n  after/before/done? [abd] a\n  VERTICILLASTERS\n  after/before/done? [abd] a\n  VIROSE\n  after/before/done? [abd] a\n  VIZARD\n  after/before/done? [abd] a\n  VOLCANISE\n  after/before/done? [abd] a\n  VOLUMIZER\n  after/before/done? [abd] b\n  VOLPINOS\n  after/before/done? [abd] b\n  VOLITATE\n  after/before/done? [abd] b\n  VOLCANOLOGICAL\n  after/before/done? [abd] b\n  VOLCANIZATION\n  after/before/done? [abd] a\n  VOLCANIZES\n  after/before/done? [abd] a\n  VOLCANO\n  after/before/done? [abd] d\n\nThanks for sharing this nice game on a fine Sunday evening!  It was fun to play both manually as well as programmatically!\n \nreply",
+      "let l = 0;\nlet h = dictionary.length - 1;const textbox = document.querySelector(\"input\");while (l <= h) {\n  const m = Math.floor((l + h) / 2);\n  const guess = dictionary[m];\n  const textbox = document.querySelector(\"input\");\n  console.log(\"Guessing:\", guess);  textbox.value = guess;\n  guessWord();\n\n  if (document.querySelector(\".correct\")) {\n    console.log(\"Found the word:\", guess);\n    break;\n  } else if (textbox.placeholder.includes(\"after\")) {\n    l = m + 1;\n  } else {\n    h = m - 1;\n  }\n}Here's mine in JavaScript, you can paste it in the console.\n \nreply",
+      "Thanks!  I should have realised that a solution for this could be implemented in JavaScript as well, allowing it to run directly in the web browser.   Here is my translation of my earlier Python program to JavaScript:  let lo = 0, hi = dictionary.length - 1\n  const answer = document.getElementById('guess')\n  while (document.getElementsByClassName('correct').length === 0) {\n    const mid = Math.floor(lo + (hi - lo) / 2)\n    answer.value = dictionary[mid]\n    guessWord()\n    if (answer.placeholder.indexOf('after') !== -1) {\n      lo = mid + 1\n    } else {\n      hi = mid - 1\n    }\n  }\n\nThis solution is quite similar to yours.  Thanks for this nice idea!\n \nreply",
+      "One time when I was in the Unix computer lab in college, testing my C skills on a Sun workstation, an old lady sat down at the workstation next to me. She must've been between about 70 and 80 years old, maybe older, and she had a notebook which, as it lay open, I saw C++ code hand-written in it in her spidery, old-lady hand. I thought, huh, well it's never too late to start learning this stuff!There's also the case of the 80-some-year-old Japanese lady who wrote her own iPhone app, a game about arranging traditional Japanese paper dolls: https://social-innovation.hitachi/en/article/colors-wakamiya...If you're retired, bored, and have a lot of time on your hands, learning tech proficiency and programming seems a good way to pass the time and help keep your mind sharp. Just as it was for us bored kids back in the day.\n \nreply",
+      "There is some bug in the sorting, because it sorted \u201cvol\u201d after \u201cvolatile\u201d for me. It seems to depend on some previous state, though, because I couldn\u2019t reproduce it in a new window.Edit: See also https://news.ycombinator.com/item?id=41217457.\n \nreply",
+      "It seems the previous guess is always placed either one up or one down from the entry box. So if you're guessing \"V\" words, then type \"apple\", then \"apple\" will show after \"vodka\". So the list is not getting re-alphabatized.\n \nreply",
+      "Right. My word was before \"wizard,\" and later I guessed \"yesterday,\" which is after wizard. It put yesterday adjacent to the entry box, before wizard. Same is true for words before the word. Basically, if I make bad guesses, it doesn't list them in alpha order.\n \nreply",
+      "Grandma's First Bug report\n \nreply",
+      "It might not be sorted intentionally as part of the challenge of the game.\n \nreply",
+      "I had a similar issue. Void sorted before Vogue. Breaks the game totally as far as I can tell.\n \nreply"
     ],
-    "link": "https://old.reddit.com/r/Defcon/comments/1ep00ln/def_cons_response_to_the_badge_controversy/",
+    "link": "https://grandmasword.com",
     "first_paragraph": ""
   },
   {
-    "title": "A 1940 Letter of Andr\u00e9 Weil on Analogy in Mathematics (2003) [pdf] (ams.org)",
-    "points": 68,
-    "submitter": "gone35",
-    "submit_time": "2024-08-07T07:31:12",
-    "num_comments": 16,
-    "comments_url": "https://news.ycombinator.com/item?id=41179043",
+    "title": "Things I've learned building a modern TUI Framework (textualize.io)",
+    "points": 196,
+    "submitter": "willm",
+    "submit_time": "2024-08-11T12:22:50",
+    "num_comments": 80,
+    "comments_url": "https://news.ycombinator.com/item?id=41215679",
     "comments": [
-      "xxx"
+      "It's funny how every TUI developer eventually stumbles over Unicode and then handling international characters and emojis correctly turns into its own project close to the same scope of (or even bigger than) the original TUI project. It happened to me on rivo/tview and through the resulting rivo/uniseg package, I learned that all other TUI library maintainers deal with the same issues. Finally, everyone invents their own unique solutions to the problem because character width is not standardized and terminals are messy, as noted in the article. OP simply supports Unicode 9 only (Unicode is at version 15.1 at the moment). Sooner or later, users will complain, however, that certain emojis or international characters are not rendered correctly. So I'm not sure that this is a great solution.\n \nreply",
+      "The state of the art here is to detect mode 2027, and enable it when supported. This lets you know the terminal will handle graphemes properly.I maintain two TUI libraries which use this technique and emoji support has been (nearly) great. (One of which uses your uniseg library!)https://mitchellh.com/writing/grapheme-clusters-in-terminals\n \nreply",
+      "That isn't sufficient. Codepoints with ambiguous width can't be detected in a standard way. A large number of pre-emoji symbols have been upgraded to have emoji presentation. Some systems default them to emojis with wide rendering, others maintain the text presentation with narrow rendering. Many systems ignore the presentation selectors if you want to force it.\n \nreply",
+      "I personally don't think this mode is all that very useful, to be fair. First of all, the grapheme clustering is not set in stone, it's been changed from one Unicode standard version to other.Second, and this is mostly because my personal use cases are very humble, a much, much simple to implement workaround, for everyone involved, would be a couple of OSC sequences which would mark a part of output text as the prompt (when terminal is in canonical/cooked mode), so that a huge chunk of readline could be simply thrown away.So your program could just print a prompt, and then simply read the cooked line. In the meanwhile, the terminal emulator would handle line editing, line-wrapping and asynchronous output: if you keep outputing text to the terminal while a prompt is active, the terminal would clear the prompt and the unfinished line, print the text, then re-display the prompt and the line; basically what all \"async readline\" libraries do already with rl_clear/rl_redisplay \u2014 but doing it in the terminal would take care of this properly, because the terminal definitely knows how wide all the symbols it itself thinks are. And the tab completion could be supported by returning a <TAB>-terminated line to the program, instead of an <LF>-terminated line.Unfortunately, I don't think something like this can actually become even moderately widely adopted.Edit: Or, you know, maybe we could extend terminfo? Like, introduce twcswidth() function that would take your string, and the somehow encoded Unicode grapheme clustering data that the current terminal is actually using which you can query from terminfo, and return the number of screen cells it would take on this terminal.\n \nreply",
+      "really great read, thanks. Im a little disappointed that no terminal emulator both implements the Kitty image protocol, and mode 2027. I wish there would be a terminal project that would just pick the best standards we have at the moment. Im not a fan of sixel for a lot of reasons. Im looking forward to trying Ghostty, though.\n \nreply",
+      "Ghostty has both mode 2027 and kitty image protocol\n \nreply",
+      "wezterm has both according to the above article\n \nreply",
+      "Are there any libraries in place which can normalize all emojis down to a single symbol?\n \nreply",
+      "It's a design decision.  On one end, if I'm reading your question correctly, you could use 0xFFFD (the replacement character) for anything not recognized as language-specific characters in the BMP and SMPs (this can be done within practically all existing Unicode libraries by filtering on character class) which will inadvertantly filter some non-emoji symbols and doesn't really convey any information (it can even look unprofessional, it reminds me a lot of the early web during the pre-unicode growing pains of poorly implemented i18n/l11n).There are libraries like Unidecode[0py] [0go] [0js] which convert from unicode to ASCII text that might be easiest to include in a TUI.  All the ones I looked at will convert emoji to `[?]` but many other characters are converted to that, too, including unknowns.On the other end you can keep a running list of what you mean by emoji[1] and pattern match on those characters, then substitute for a representative emoji.  But it will still pose some difficulty around what to choose for the representative symbol and how to make it fit nicely within a TUI.  An example of a library for pattern-matching on emoji is emoji-test-regex-pattern[2] but you can see it is based on a txt file that needs to be updated to correspond with additions to Unicode.[0py]: https://github.com/avian2/unidecode[0go]: \n(actually there are a few of these) https://pkg.go.dev/github.com/gosimple/unidecode[0js]: https://github.com/xen0n/jsunidecode[1]: these aren't really contiguous ranges, and opinions vary, see https://en.m.wikipedia.org/wiki/Emoji#Unicode_blocks[2]: https://github.com/mathiasbynens/emoji-test-regex-pattern\n \nreply",
+      "There's a \"trick\" that works somewhat well for some compound emoji like \"family\": replace ZWJs with whitespace. Emoji width is not standardized because it depends on platform, fonts available, shell and terminal emulator, but almost no terminal supports compound emoji correctly. Because of how they were designed, most terminals will print the emoji as its component parts. If you need to do something like underline a piece of text (like rustc has to) we decompose them ourselves, and then it is a more tractable problem to know what the width of a char is (0, 1 or 2, and var width for tabs, which we just transform to a hardcoded 4\u2014incorrect but usable). This can still be incorrect, on specific terminals, but works well enough on most.\n \nreply"
     ],
-    "link": "https://www.ams.org/notices/200503/fea-weil.pdf",
+    "link": "https://www.textualize.io/blog/7-things-ive-learned-building-a-modern-tui-framework/",
+    "first_paragraph": "I've be working on Textual for over a year now. Here's a few things I've discovered (or re-discovered) regarding terminals in Python, and software development in general.\nWill McGuganAugust 3, 2022I've be working on Textual for over a year now. Here's a few things I've discovered (or re-discovered) regarding terminals in Python, and software development in general.\u2014 Will McGugan (CEO / Founder) @willmcguganA modern terminal emulator is a remarkably sophisticated piece of software. The protocol they run may be ancient, but many are powered by the same graphics technologies used in video games. Despite this, smooth animation is not a given in the terminal. If you have ever tried any kind of visual effects in a terminal you may have been disappointed with flickering or tearing.But it is possible to achieve smooth animation as you can see from the following screencast. So what trick(s) are we pulling?There are a few factors which reduce flicker in the terminal. The first is the terminal em"
+  },
+  {
+    "title": "Genetics solves a thorny problem: how plants have prickles (cosmosmagazine.com)",
+    "points": 35,
+    "submitter": "gmays",
+    "submit_time": "2024-08-10T20:46:27",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=41212103",
+    "comments": [
+      "There are thornless varieties of blackberries, but they taste awful compared to the real thing.Hopefully this will allow to develop new thornless varieties that will duffer only in presence of thorns and not taste.\n \nreply",
+      "I have to disagree :)It\u2019s true that Marionberry is one of the most delicious as well as aggressively thorny, but there are many excellent thornless cultivars pioneered by the University of Arkansas, including Triple Crown and Prime Ark, as well as the series named after Native tribes, Apache, Navajo, Arapaho, which are among the sweetest.\n \nreply",
+      "I went a different way with it.  I was thinking of how I could figure out how to grow thorns to keep ne'er-do-wells away\n \nreply",
+      "Have a look at the thorns on a honey locust.I'm curious if they have a similar mechanism.  They are very woody and oh so so sharp.\n \nreply"
+    ],
+    "link": "https://cosmosmagazine.com/nature/plants/thorns-prickles-roses-plants/",
     "first_paragraph": ""
   },
   {
-    "title": "OneText (YC W23) is hiring a lead TypeScript/Node engineer (gist.github.com)",
-    "points": 0,
-    "submitter": "",
-    "submit_time": "2024-08-10T17:00:01",
+    "title": "OpenBSD 7.5 via QEMU on Hetzner physical machine (no phys. access / KVM console) (gfuzz.de)",
+    "points": 61,
+    "submitter": "hoschi_",
+    "submit_time": "2024-08-11T19:33:01",
+    "num_comments": 9,
+    "comments_url": "https://news.ycombinator.com/item?id=41218737",
+    "comments": [
+      "Website seems to have gotten HN\u2019s hit of death, but the headline sounds fun.I\u2019ve also got OpenBSD 7.5 running on a Hetzner server, but it runs \u201cnatively\u201d. By which I mean it\u2019s still a VM from Hetzner, but I don\u2019t have my own nested QEMU layer or anything.\n \nreply",
+      "Nice write-up. It should really not be that hard but unfortunately it is. And it is getting worse.It made me sad to see that Hetzner had discontinued the FreeBSD rescue system. But it seems to be correct:\nhttps://community.hetzner.com/tutorials/freebsd-openzfs-via-...How much did it really cost them to have the mfsbsd image available?\n \nreply",
+      "For Hetzner and other dedicated servers, there is a prepackaged script to bootstrap FreeBSD from Linux: https://depenguin.me/.\n \nreply",
+      "I tried a couple times to get OpenBSD 7.4 and 7.5 booting on EC2 and GCE with no luck (hang during the bootloader).  I ended up going with https://openbsd.amsterdam but it would be nice to have working images in the major cloud providers.\n \nreply",
+      "Vultr has OpenBSD images too.\n \nreply",
+      "nixos-anywhere is a tool that allows you to do something similar (?) to install NixOS in-place on a remote machine (using kexec \u201cmagic\u201d under the hood).https://github.com/nix-community/nixos-anywhereI tried it on a Hetzner VPS and was honestly pretty surprised that it even worked. What makes it even cooler is that you can continue to rebuild the machine\u2019s config remotely even after initialization (thanks to NixOS).\n \nreply",
+      "Pretty clever to boot a virtual QEMU VM and pass through the physical disks for installation. Nice that it can be done without a support request.\n \nreply",
+      "Did the same to install Proxmox. Pretty straightforward though I probably wouldn't have thought of it myself had I not read about it.\n \nreply",
+      "Struggling right now setting up various qemu on a hetzner, specifically with IPv6 on bridges etc. I used to have Proxmox servers for work before but never had to worry about networking.Any issues or recommendations considering the Proxmox route? You do port forwarding or multiple ipv4?Thanks for putting this idea in my head!\n \nreply"
+    ],
+    "link": "https://hackmd.gfuzz.de/s/Qsk14kc3i",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Tree Attention: Topology-Aware Decoding for Long-Context (arxiv.org)",
+    "points": 20,
+    "submitter": "diwank",
+    "submit_time": "2024-08-11T20:02:58",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://gist.github.com/bluepnume/8f2376b0893bc6b85564e7359359ecd4",
-    "first_paragraph": "\n        Instantly share code, notes, and snippets.\n      We're OneText, a YC backed (Winter '23) startup in the Bay Area, and we're looking for a lead Fullstack Typescript/Node Engineerhttps://onetextfullstackeng.paperform.coWe're growing faster than we can manage! Since raising our seed round last year, we've:So: join us if you like the idea of a startup environment that is fast paced, but in a sustainable way. There are no shortage of fun engineering challenges and new things to learn. But we always want to be deliberate and smart about what we decide to build, and not just race from one thing to the next.Email any questions to: engjobs@onetext.comThis is the general job description for all engineers at OneTextFor this role specifically, here's what we're looking for:You'll be working across the full stack, from our React front-end to our Node apis and workers, to our Postgres/Mongo/Redis database layers.You should be great at TypeScript, and a fast enough learner to figure out any "
+    "link": "https://arxiv.org/abs/2408.04093",
+    "first_paragraph": "Want to support truly open science and create access to research, regardless of disability? Sign up for the arXiv Accessibility Forum in September and Learn more.Grab your spot at the free arXiv Accessibility ForumHelp | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n                    Get status notifications via\n                    email\n                    or slack\n"
+  },
+  {
+    "title": "Segment Anything Model and Friends (lightly.ai)",
+    "points": 61,
+    "submitter": "sauravmaheshkar",
+    "submit_time": "2024-08-07T12:22:14",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=41180632",
+    "comments": [
+      "I appreciate this overview, but something that isn\u2019t clear to me is how SAM 2 compares to efficient SAM and the other improvements that are based on SAM 1? Is SAM 2 better across-the-board or is it better than SAM 1 but not a slam dunk compared to efficient SAM and the others? Especially as it relates to speed and model size. Should we wait for someone to make an efficient SAM 2?\n \nreply",
+      "SAM 2's key contribution is adding time-based segmentation to apply to videos. Even on images alone, the authors note [0] the image-based segmentation benchmark does exceed SAM 1 performance. There have been some weaknesses exposed in areas of SAM 2 vs SAM 1, like potentially medical images [1]. Efficient SAM trades SAM 1 accuracy for ~40x speedup. I suspect we will soon see Efficient SAM 2.[0] https://x.com/josephofiowa/status/1818087122517311864\n[1] https://x.com/bowang87/status/1821021898928443520?s=46&t=9K-...\n \nreply",
+      "SAM 2 not only focuses on speed, it actually performs better than SAM (1), the other models instead always trade performance for speed. SAM 2 is able to achieve this result thanks to its Hiera MAE encoder: https://arxiv.org/abs/2306.00989\n \nreply"
+    ],
+    "link": "https://www.lightly.ai/post/segment-anything-model-and-friends",
+    "first_paragraph": "Recent years have witnessed the emergence of language models pre-trained on enormous corpora of unlabeled data. These systems demonstrate the ability to perform new tasks with minimal or no specific training. Research shows that this behavior increases with model scale, dataset size, and training compute. These capabilities are often guided by engineered text prompts that provide the necessary guidance to direct the system\u2019s output toward desired results.Their vision counterparts, however, have been explored to a lesser extent (Segment Anything, 2023). Models such as CLIP (2021) and ALIGN (2021) provide strong baselines for aligning images and text with separate encoders pre-trained using a contrastive objective. While vision-language models have seen significant advancement, core computer vision tasks such as segmentation have yet to progress at the same pace. This discrepancy is likely due to the challenges in obtaining large-scale, high-quality annotated datasets for tasks like segm"
+  },
+  {
+    "title": "Trolltech's Documentation Process (gulbrandsen.priv.no)",
+    "points": 32,
+    "submitter": "whatever3",
+    "submit_time": "2024-08-11T19:27:39",
+    "num_comments": 11,
+    "comments_url": "https://news.ycombinator.com/item?id=41218696",
+    "comments": [
+      "> Our documentation process worked (we wrote documentation and it largely satisfied the readers)IIRC this is quite an understatement; Qt documentation is regarded as some of the best in GUI toolkits.\n \nreply",
+      "I mainly work with Qt, so I don't have a ton of experience with other  projects' documentation, but I have to wonder if Qt's documentation is some of the best in all of programming.It certainly has many contenders (cppreference has exhaustive documentation of all things C++), but it's very, very good.\n \nreply",
+      "Qt documentation is excellent, and so is cppreference. Definitely among the best. I also like many of the of the UNIX manpages, though it is uneven.I still often find myself reaching for the source code of Qt, which is also of great quality. Some details may be unclear, but mistakes are rare. I don't remember seeing documentation and code contradicting each othersThis, by the way, is one reason why I think open source is so important. There is no more accurate documentation than the source code.\n \nreply",
+      "IMHO Java's official documentation is quite decent as well.\n \nreply",
+      "Yeah it's really among the best. Microsoft's C++ documentation in the Visual Studio 6.0 days was also amazing, before they completely ruined it by pushing it all to the web and mixing it up with irrelevant stuff.Looking through the list of things on devdocs.io  the only other thing I can think of that is as good is MDN.\n \nreply",
+      "Qts doc is good but REALLY lacks in the details. For example how things composit with each other is generally undocumented and the fact that their codebase is quite old and full of techdebt makes that part very annoying for advanced use.An example: how in QML the Repeater element works inside an ObjectModel.\n \nreply",
+      "I first used Qt back in 2002-2003 timeframe IIRC. Its documentation was excellent for a burgeoning computer science student. We used Qt in my classes.\n \nreply",
+      "I really enjoyed his blog!On-topic: Documentation is good, and I'm glad someone like him was able to get it going.We used Qt for internal tools, in my Day Job, but never shipped anything on it.\n \nreply",
+      "Title should say 2012.\n \nreply",
+      "[flagged]"
+    ],
+    "link": "https://rant.gulbrandsen.priv.no/udoc/trolltech-documentation-process",
+    "first_paragraph": "When I arrived at Trolltech, there wasn't much documentation for Qt. Some good intentions, some outdated \u03a4\u03b5\u03c7 source, no plan for improvement. Having suffered from that (I was the world's first external Qt user and needed documentation) I set about writing a usable documentation tool and documentation. One of my jobs became Documentation Supremo. I wrote some/much documentation, wrote the tools, kept track of quality and gradually improved the way we produced our documentation.\nI did not write all of the documentation, far from it. While I wrote much and looked at the rest, I could not have written all. It was essential that everyone who wrote code, also wrote documentation.\nOur documentation process worked (we wrote documentation and it largely satisfied the readers), so in this post I attempt to document what we did and what made our process succeed.\nSufficient tools were critical. When Haavard and Eirik started out using \u03a4\u03b5\u03c7, the process did not work. The documentation quickly fell b"
+  },
+  {
+    "title": "Go structs are copied on assignment (and other things about Go I'd missed) (jvns.ca)",
+    "points": 61,
+    "submitter": "misonic",
+    "submit_time": "2024-08-10T04:40:57",
+    "num_comments": 39,
+    "comments_url": "https://news.ycombinator.com/item?id=41207355",
+    "comments": [
+      "One of the many things I find inspiring about Julia is how quick she is to admit to mistakes she has made or things that she hasn't understood.If she didn't understand it, I can 100% guarantee that there are large numbers of people out there who also didn't understand it - many of whom were probably too embarrassed to ever admit it.I think this is a useful trait for senior software engineers generally. If you're a senior engineer you should have earned enough of a reputation that the risk involved in admitting \"I didn't know that\" can be offset by everything you provably DO know already. As such, you can help everyone else out by admitting to those gaps in your knowledge and helping emphasize that nobody knows everything and it's OK to take pride in filling those knowledge gaps when you come across them.\n \nreply",
+      "This is what jumped out to me reading this article too - unashamedly admitting to having gaps in knowledge that some others might take for granted.Bucketing some of those gaps as \u201cprobably useful but not to me right now\u201d is also great. It shows a purpose to focus on what matters right now, with a hint to return to when it does pop up again later.Lots of folks I work with and respect sometimes get trapped in the weeds having to understand every little thing. It\u2019s good to be curious, but sometimes filing it away for later and shipping is more important now.\n \nreply",
+      "Personally, I think that the idea that programmers should know everything is kinda bizarre.Programming is about finding the answer. If you already knew everything, you could just sit down and type any program from your knowledge.We all know that you can't know everything otherwise, why even write documentation or use git?Unfortunately, it's difficult to move past this idea, and it's so pervasive that stating \"I don't know\" can negatively affect your standing for some.\n \nreply",
+      "Right! The best thing about our chosen career is that it's completely impossible to know everything - there's always a new corner of software engineering to dig into, be it how the Linux kernel works, or programming with Haskell, understanding Transformer LLM architectures, or how the Svelte compiler works or whatever.\n \nreply",
+      "most of the time when people don't ask questions in industry, it isn't because they already know the answers, it's because they don't care what the answers areblogging is culturally different because there's way more exhibitionism involved\n \nreply",
+      "Donovan and Kernighan's \"The Go Programming Language\" is one of the best pieces of technical writing I've ever read. Buy it and read it cover to cover.Then read the [Go Language Specification][1] cover to cover. It's dry but refreshingly not legalese.[1]: https://go.dev/ref/spec\n \nreply",
+      "The language spec was so good I was able to make tangible contributions to an open source project just by using that and I don\u2019t consider myself a go programmer at all.\n I want to buy that book but it\u2019s technical and I feel like there might be a second edition around the corner?/edit I bought it after reading this thread: https://groups.google.com/g/golang-nuts/c/U99js3UYz-U\n \nreply",
+      "Not understanding structs vs pointers is a pretty basic misconception in go.Does this trip anyone else up?  I found it unenlightening / unsurprising, and the linked \"100 mistakes\" piece also very basic and in some cases just plain wrong.\n \nreply",
+      "\"Very basic\" is the entire point of this exercise. Just because things are basic doesn't mean people won't misunderstand them, and won't benefit from clarification.Which of those 100 mistakes were \"plain wrong\"? That would be useful feedback for the author.\n \nreply",
+      "As she points out though, a lot of dynamic languages don\u2019t behave this way. A string after all points to a heap allocation; so it\u2019s not unreasonable to think of a string as a pointer.\n \nreply"
+    ],
+    "link": "https://jvns.ca/blog/2024/08/06/go-structs-copied-on-assignment/",
+    "first_paragraph": "\n\nI\u2019ve been writing Go pretty casually for years \u2013 the backends for all of my\nplaygrounds (nginx, dns, memory, more DNS) are written in Go, but many of those projects are just a few hundred lines and I don\u2019t come back to those codebases much.I thought I more or less understood the basics of the language, but this week\nI\u2019ve been writing a lot more Go than usual while working on some upgrades to\nMess with DNS, and ran into a bug that revealed I\nwas missing a very basic concept!Then I posted about this on Mastodon and someone linked me to this very cool\nsite (and book) called 100 Go Mistakes and How To Avoid Them by Teiva Harsanyi. It just came out in 2022 so it\u2019s relatively new.I decided to read through the site to see what else I was missing, and found\na couple of other misconceptions I had about Go. I\u2019ll talk about some of the\nmistakes that jumped out to me the most, but really the whole\n100 Go Mistakes site is great and I\u2019d recommend reading it.Here\u2019s the initial mistake that started "
+  },
+  {
+    "title": "Introduction to Golang Preemption Mechanisms (unskilled.blog)",
+    "points": 49,
+    "submitter": "lcof",
+    "submit_time": "2024-08-11T17:23:17",
+    "num_comments": 9,
+    "comments_url": "https://news.ycombinator.com/item?id=41217758",
+    "comments": [
+      "Are there any proposals to make the golang runtime cgroup aware? Last time I checked the go runtime will spawn a OS process for each cpu it can see even if it is running in a cgroup which only allows 1 CPU of usage.\nOn servers with 100+ cores I have seen scheduling time take over 10% of the program runtime.The fix is to inspect the cgroupfs to see how many CPU shares you can utilize and then set gomaxprocs to match that. I think other runtime like Java and .NET do this automatically.It is the same thing with GOMEMLIMIT, I don\u2019t see why the runtime does not inspect cgroupfs and set GOMEMLIMIT to 90% of the cgroup memory limit.\n \nreply",
+      "On Linux, go uses sched_getaffinity to know how many cpu core it is allowed to run on:https://cs.opensource.google/go/go/+/master:src/runtime/os_l...\n \nreply",
+      "I am guessing the API isn't stable enough for letting the runtime set maxprocs.  I use https://pkg.go.dev/go.uber.org/automaxprocs and have had to update it periodically because Redhat and Debian have different defaults.  (Should one even run k8s on Redhat?  I say no, but Redhat says yes.  That's how I know about this.)This, I think, is cgroups 1 vs. cgroups 2 and everyone should have cgroups 2 now, but ... it would feel weird for the Go runtime to decide on one.  To me, anyway.\n \nreply",
+      "Which API is not stable? Cgroupfs?I would think that cgroupfs is considered an API to userspace and therefore it shouldn\u2019t break in the future? Hence creating cgroups v2?I have written code which handles both cgroups v1 and cgroups v2, it isn\u2019t terribly hard. Golang could also only support setting automatic parameters when running in cgroups v2 if that made things easier.For a language that prides itself in sane defaults I think they have missed the mark here. I could probably add support to the golang runtime in a few hundred lines of code and probably save millions of dollars and megawatts of energy because the go runtime is not spawning 50 processes to run a program which is constrained to 1 core.\n \nreply",
+      "I\u2019m not 100% sold on the idea that Go\u2019s defaults are sane.They\u2019re highly opinionated and not really that intuitive.\n \nreply",
+      "Could you elaborate?\n \nreply",
+      "Interesting that it\u2019s temporal (according to the article, you have around 10 microseconds before the signal-based preempter kicks in). How bad is performance if the load on the host is so high that double-preempting is common, I wonder? Or am I missing something and that question is not meaningful?\n \nreply",
+      "No it\u2019s an interesting comment. This is not really about load, but about control flow: if goroutine is just spinning wild without going through any function prologue, it won\u2019t even be aware of the synchronous preemption request. Asynchronous preemption (signal-based) is mainly (I say \u201cmainly\u201d because I am not sure I can say \u201conly\u201d) for this kind of situation.I don\u2019t have the link ready, but twitch had this kind of issue with base64 decoding in some kind of servers. The GC would try to STW, but there would always be one or a few goroutines decoding base64 in a tight loop for the time STW was attempted, delaying it again and again.Asynchronous preemption is a solution to this kind of issue. Load is not the issue here, as long as you go through the runtime often enough.\n \nreply",
+      "Great post! One question that lingered for me is: what are asynchronous safe-points? The post goes into some detail about their synchronous counterparts\n \nreply"
+    ],
+    "link": "https://unskilled.blog/posts/preemption-in-go-an-introduction/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Finite State Machine Designer (madebyevan.com)",
+    "points": 66,
+    "submitter": "gurjeet",
+    "submit_time": "2024-08-11T14:48:26",
+    "num_comments": 15,
+    "comments_url": "https://news.ycombinator.com/item?id=41216560",
+    "comments": [
+      "This is a handy tool, but I wish it supported edge snapping. If you inspect the generated LaTeX it doesn't actually link up the FSM states, it just anchors them to raw TikZ coordinates.\n \nreply",
+      "You might want to add graphviz/digraph export (and possibly import). It's a pretty decent format for this kind of task, supported by several IRL tools.Oh ... 2010. I guess it's not actively being maintained.\n \nreply",
+      "Is there a way to subscript double-digit numbers? I tried S_{10} but it doesn't seem to work.Edit: Kinda hacky/unintuitive but you can type S_1_0\n \nreply",
+      "I remember using this to submit FSM related assignments for my Theory of Computation classes back in the day. Fun times.\n \nreply",
+      "Hmm doesn't appear on android mobile chrome. I just see a white square where the designer should appear.\n \nreply",
+      "Not working on my iPad either. Might not be mobile friendly.\n \nreply",
+      "Well it was made nearly 15 years ago.\n \nreply",
+      "The white square is the designer. Try double clicking on it.\n \nreply",
+      "(Double-)Tapping on the canvas doesn't seem to do anything in FF for Android.\n \nreply",
+      "For me it dlightly zooms in, so maybe the browser captured that action\n \nreply"
+    ],
+    "link": "https://madebyevan.com/fsm/",
+    "first_paragraph": "Export as: PNG | SVG | LaTeXThe big white box above is the FSM designer.\u00a0 Here's how to use it:This was made in HTML5 and JavaScript using the canvas element.Created by Evan Wallace in 2010"
+  },
+  {
+    "title": "Show HN: Pixeltune, a nicer chiptune and VGM player (pixeltune.org)",
+    "points": 29,
+    "submitter": "tomaspollak",
+    "submit_time": "2024-08-11T19:42:18",
+    "num_comments": 5,
+    "comments_url": "https://news.ycombinator.com/item?id=41218811",
+    "comments": [
+      "Is it possible to loop a song infinitely? This is a standard feature for chiptune emulation playback programs (vgmstream, GEP, foobar2000, Audacious, Droidsound-E, etc.).\n \nreply",
+      "You're right! This is definitely doable, but... wouldn't you eventually want to listen to _other_ songs?There's currently a 2:30 min time limit on songs so that they don't loop forever. I plan to make this configurable, so I could allow setting it to a very long timeframe (something like 10 minutes or so).\n \nreply",
+      "Hey Tom!\nThis is fantastic project, I see myself using it daily. But the best part of it all is your dedication to preserving the midi culture and the art form itself.(game) Music back then was truly on another level and I'm glad some people are archiving the songs and their chips.\n \nreply",
+      "Thanks mate!\n \nreply",
+      "There's also this which you can run on a Raspberry Pihttps://github.com/sasq64/chipmachine\n \nreply",
+      "I didn't know about that one. Thanks!\n \nreply"
+    ],
+    "link": "https://pixeltune.org",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Another variable-length integer encoding (2021) (dcreager.net)",
+    "points": 37,
+    "submitter": "fanf2",
+    "submit_time": "2024-08-11T17:42:05",
+    "num_comments": 23,
+    "comments_url": "https://news.ycombinator.com/item?id=41217903",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://dcreager.net/2021/03/a-better-varint/",
+    "first_paragraph": "\u21932021-03-08Many binary file formats need to store integer values.  And often, those integer values are typically \u201csmall\u201d.  That is, while the field might technically be a 32-bit integer, that field will rarely hold values from that entire 32-bit range.  Instead, values will usually be small in magnitude, and a large number of their higher-order bits will be 0.  In those cases, it can be useful to try to save space by encoding the integer value in a smaller number of bytes.  Doing so can substantially reduce the size of your file, especially when there are lots of these small-magnitude integers to store.(Note that even though the goal, and end result, is that the file is smaller, this is not a compression scheme, since it only works when your values are distributed in one particular way.  Proper compression schemes are more sophisticated, so that they can find redundancies in many other patterns of data.)With this goal, our job is to figure out a coding scheme that lets us:This is not a"
+  },
+  {
+    "title": "Samsung's New EV Battery Tech: 600-Mile Ranges, and 9-Minute Charges? (pcmag.com)",
+    "points": 17,
+    "submitter": "m463",
+    "submit_time": "2024-08-11T23:30:33",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.pcmag.com/how-to/what-is-solid-state-battery-for-electric-vehicles",
+    "first_paragraph": ""
   }
 ]
