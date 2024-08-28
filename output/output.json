@@ -1,393 +1,362 @@
 [
   {
-    "title": "What the interns have wrought, 2024 edition (janestreet.com)",
-    "points": 22,
-    "submitter": "TheNumbat",
-    "submit_time": "2024-08-26T23:51:04",
+    "title": "Microsoft donates the Mono Project to the Wine team (mono-project.com)",
+    "points": 753,
+    "submitter": "itherseed",
+    "submit_time": "2024-08-27T18:34:09",
+    "num_comments": 236,
+    "comments_url": "https://news.ycombinator.com/item?id=41371106",
+    "comments": [
+      "I worked on Mono a lot back in the early 2000s (back in the SVN days before it moved to Git, even). This move makes a lot of sense. Things evolved a lot over the years. Mono's legacy goals, which are to be a portable CLR (.NET) runtime for platforms that Microsoft didn't care about, don't make much sense today.Mono made a lot of sense for running places where full .NET didn't, like in full AOT environments like on the iPhone where you can't JIT, or for random architectures that don't matter anymore but once did for Linux (Alpha, Itanium, PPC, MIPs, etc.). When Microsoft bought Xamarin (which itself was born out of the ashes of the Novell shutdown of the Mono effort) and started the DotNET Core efforts to make .NET more portable itself and less a system-provided framework and merge in a lot of the stuff Mono did a single more focused project made more sense.Mono was still left out there to support the edge cases where DotNET Core didn't make sense, which was mostly things like being a backend for Wine stuff in some cases, some GNOME Desktop stuff (via GTK#, which is pretty dead now), and older niche use cases (second life and Unity still embed mono as a runtime for their systems). The project was limping, though, and sharing a standard library but different runtimes after much merging. Mono's runtime was always a little more portable (C instead of C++) and more accessible to experiment with, but we need that less and less, but it's still perfect for Wine. So, having it live on in Wine makes sense. It's a natural fit.\n \nreply",
+      "Is there somewhere where someone new to the ecosystem can get a simple introduction to all of these different terms and which ones are still relevant today? I looked into .NET somewhat recently and came away with the apparently mistaken impression that Mono was how .NET did cross-platform. I guess I must have been reading old docs, but I'm pretty sure they were at least semi-official.Is there good documentation somewhere for getting set up to develop with modern .NET on Linux?\n \nreply",
+      "Mono was, but newer versions of .NET run on Linux and Mac.You can install at the link below, and then making a project is just `dotnet new console` and run with `dotnet run`https://learn.microsoft.com/en-us/dotnet/core/install/linux\n \nreply",
+      "For historical context: this was before the conclusion of the antitrust case that led Microsoft to start softening its stance toward open source. https://en.wikipedia.org/wiki/United_States_v._Microsoft_Cor....This was the same year Antitrust came out: https://en.wikipedia.org/wiki/Antitrust_(film)Any support for open source or cross-platform stuff was a bulwark against claims of monopoly abuse, but none of it worked well enough to be a true replacement. Mono worked for some purposes, but it was far from the first party support cross-platform .NET gets today. Nowadays it sounds like .NET Core + third-party GUI libraries is the way to go.\n \nreply",
+      "> Nowadays it sounds like .NET Core + third-party GUI libraries is the way to go.For reference for those unfamiliar with the terms:.NET Core was the name given to the cross-platform fork of the .NET runtime.It was forked out of .NET 4.x and dropped support for a lot of things in the first versions.It ran on various distributions of Linux and MacOS.At the same time there were forks of other libraries/frameworks in the .NET ecosystem to have 'Core' variants. Often these were dropping support for legacy parts of their code so that they could run on Core.Later versions of .NET Core brought over support for a many of the things that had been dropped..NET Core and .NET had stand-alone versions until .NET Core was renamed to . NET and became .NET 5.So, if you want to do the most modern cross-platform C# you would use .NET 9.\n \nreply",
+      "Okay, this helps a lot! So .NET Core is now out of date, and any version of .NET >= 5 is cross-platform and has no Core variant?\n \nreply",
+      "That's correct\n \nreply",
+      "Good write up that wonderfully encapsulates how stupid Microsoft\u2019s naming is - you didn\u2019t even mention .NET standard.I love .NET. It\u2019s a great stack, especially for backend web apps. Blazor is a great SPA framework too. But I loathe how Microsoft continue to handle just about everything that isn\u2019t the framework and C# / F#. It\u2019s laughable.\n \nreply",
+      "Well, to be fair .NET Standard wasn't a framework, it was a standards/compatibility label and compilation target..NET Standard includes various versions of things that MS doesn't even touch.I stopped doing .NET stuff before .NET 5 so I'm not hugely up to date with the latest shenanigans.\n \nreply",
+      "Oh don\u2019t get me wrong - I wasn\u2019t criticising your write up. It was concise and still relevant.It\u2019s just funny for newcomers to peel back the onion more. Writing a source generator? Target .NET standard 2.0 (not even 2.1) for a whole host of reasons.\n \nreply"
+    ],
+    "link": "https://www.mono-project.com/",
+    "first_paragraph": "The Mono Project (mono/mono) (\u2018original mono\u2019) has been an important part of the .NET ecosystem since it was launched in 2001. Microsoft became the steward of the Mono Project when it acquired Xamarin in 2016.The last major release of the Mono Project was in July 2019, with minor patch releases since that time. The last patch release was February 2024.We are happy to announce that the WineHQ organization will be taking over as the stewards of the Mono Project upstream at wine-mono / Mono \u00b7 GitLab (winehq.org).  Source code in existing mono/mono and other repos will remain available, although repos may be archived. Binaries will remain available for up to four years.Microsoft maintains a modern fork of Mono runtime in the dotnet/runtime repo and has been progressively moving workloads to that fork. That work is now complete, and we recommend that active Mono users and maintainers of Mono-based app frameworks migrate to .NET which includes work from this fork.We want to recognize that th"
+  },
+  {
+    "title": "Faster CRDTs (2021) (josephg.com)",
+    "points": 169,
+    "submitter": "bpierre",
+    "submit_time": "2024-08-27T20:47:28",
+    "num_comments": 42,
+    "comments_url": "https://news.ycombinator.com/item?id=41372833",
+    "comments": [
+      "> And why 32 entries? I ran this benchmark with a bunch of different bucket sizes and 32 worked well. I have no idea why that worked out to be the best.If you were using 2-byte ints, this is likely because cache lines are 64 bytes, so 32 entries would be exactly one cache line, letting each cache line hold an entire bucket, thus reducing those expensive main memory transfers.\n \nreply",
+      "This is one of those rare articles which, although much of the material is over my head, I couldn't stop reading because it's written so well.\n \nreply",
+      "What are some real world apps using CRDTs that have really good experiences?IIRC Notion was supposed to be one of them but realistically taking notes with two people in Notion is almost unusable compared to Google Docs.\n \nreply",
+      "Thymer[1] uses CRDTs for everything. It's an IDE for tasks and planning. It's a multiplayer app, end-to-end encrypted and offline first, optionally self-hosted, and an entire workspace is a single graph. So CRDTs were the logical choice.All operations in Thymer get reduced to a handful of CRDT transformations. It doesn't matter whether you are moving or copying text, changing \"frontmatter\" attributes, dragging cards, uploading files, or adding tags. It's all done with the same handful of CRDT operations. Although this was a lot of extra work up front (we're not using any libraries) the benefits make it totally worth it. When your application state is a single graph you can move text between pages, link between pages (with backlinks), have transclusions, and do all sorts of cool stuff without having to worry about synchronization. CRDTs guarantee that all clients converge to the same state. And because CRDTs are by their nature append-only you get point-in-time versioning for free! We did end up having to make a couple of compromises for performance, though. Version history is not available offline (too much data) and in some cases we resort to last-writer-wins conflict resolution. On balance I think CRDTs are very much worth it, especially if you design an app with CRDTs in mind from day one. I probably wouldn't use CRDTs if I had to retrofit multiplayer in a more conventional AJAX app. Mutations in CRDTs are first applied optimistically, and then when the authoritative sequence of events is determined all clients need to revert their state to the last shared state and then re-apply all events in the correct order (thereby guaranteeing that all clients end up in the same state). Sometimes your app might need to revert and re-apply days worth of changes if you've been offline for a while. This all happens behind the scenes and the user doesn't know how many tree transformations are happening in the background but I guess my point is that CRDTs affect the design of the entire application. Most apps that are popular today were designed back when CRDT transformations were not yet well understood.[1] https://thymer.com (almost ready for beta)\n \nreply",
+      "This looks really cool, signed up for the beta!\n \nreply",
+      "Today Notion is a last-write-wins system with limited intention-preserving operations for list data (like block ordering). Text is last-write-wins, each block text or property is a last-write-wins register. We're working on a new CRDT format for block text.\n \nreply",
+      "Do you use last-write-wins using the received order of operations on the server or using a logical clock?I believe that for Notion the collaboration use case is more important than async editing, so a CRDT makes more sense, but for text editing apps that favor asynchronous collaboration maybe explicit conflict resolution is more reasonable.\n \nreply",
+      "No clocks on the write side\n \nreply",
+      "Most of iCloud's services use CRDTs underneath I believe. That includes Notes, Reminders and possibly Photos as well. FoundationDB is some of the backend as well. I was told this by a drunken former Apple SRE in a bar :)\n \nreply",
+      "Indeed, Apple Notes has a reasonably sophisticated CRDT, including support for tables: https://github.com/dunhamsteve/notesutils/blob/master/notes....\n \nreply"
+    ],
+    "link": "https://josephg.com/blog/crdts-go-brrr/",
+    "first_paragraph": "July 31 2021A few years ago I was really bothered by an academic paper.Some researchers in France put together a comparison showing lots of ways you could implement realtime collaborative editing (like Google Docs). They implemented lots of algorithms - CRDTs and OT algorithms and stuff. And they benchmarked them all to see how they perform. (Cool!!) Some algorithms worked reasonably well. But others took upwards of 3 seconds to process simple paste operations from their editing sessions. Yikes!Which algorithm was that? Well, this is awkward but .. it was mine. I mean, I didn't invent it - but it was the algorithm I was using for ShareJS. The algorithm we used for Google Wave. The algorithm which - hang on - I knew for a fact didn't take 3 seconds to process large paste events. Whats going on here?I took a closer look at the paper. In their implementation when a user pasted a big chunk of text (like 1000 characters), instead of creating 1 operation with 1000 characters, their code spli"
+  },
+  {
+    "title": "A Collection of Free Public APIs That Is Tested Daily (freepublicapis.com)",
+    "points": 234,
+    "submitter": "abhas9",
+    "submit_time": "2024-08-27T18:38:59",
+    "num_comments": 49,
+    "comments_url": "https://news.ycombinator.com/item?id=41371170",
+    "comments": [
+      "I'm glad to see https://isevenapi.xyz/ made the list.\n \nreply",
+      "I love their pricing options include larger ranges of numbers, and enterprise class also includes negative numbers. ha ha.Best part is that 'sign up' links to https://archive.org/donate/\n \nreply",
+      "I think their ad placement is even better than their pricing.API Result:GET https://api.isevenapi.xyz/api/iseven/6/{\"ad\":\"Buy isEvenCoin, the hottest new cryptocurrency!\",\"iseven\":true}\n \nreply",
+      "{\"ad\":\"Looking for someone to do yard work. Must have a hoolahoop. 760-555-7562\",\"iseven\":true}\n    {\"ad\":\"FOR SALE - collection of old people call 253-555-7212\",\"iseven\":true}\n    {\"ad\":\"Auto Repair Service: Free pick-up and delivery. Try us once, you'll never go anywhere again. Email dave57@qotmail.com\",\"iseven\":true}\n\n    $ curl https://api.isevenapi.xyz/api/iseven/9999999\n    {\"error\":\"Number out of range. Upgrade to isEven API Premium or Enterprise.\"}\n\n    $ curl https://api.isevenapi.xyz/api/iseven/2e21\n    {\"error\":\"what is this I don't even\"}\n \nreply",
+      "What I really want is isoddapi.xyz.Just like the npm package, all it should do is call isevenapi.xyz and invert the result.\n \nreply",
+      "I'd like to see isfizzbuzz.xyz.Ideally, before 11:30 AM ET this Friday.\n \nreply",
+      "I hope someone sets up isthirteenapi.xyz.\n \nreply",
+      "isprimeapi.xyz would be helpful.\n \nreply",
+      "I Seven API vs is Even API. Can't say I saw it the right way at first.\n \nreply",
+      "I feel like one of the categories they are missing is 'APIs that can be done in one line of JavaScript\"I'm not saying these shouldn't exist, I think they're pretty funny, but everything in its place.\n \nreply"
+    ],
+    "link": "https://www.freepublicapis.com/",
+    "first_paragraph": "SearchFavoritesGeneralMetricsDo SomethingCategoriesFHGRSearchFavoritesGeneralMetricsDo SomethingCategoriesFHGRSearchAPIs with the highest Health Scores. Health is calculated from latency, error rate and reliability.API providing information about characters, locations, and episodes from the Rick and Morty show. Supports GraphQL and REST endpoints for querying data.3 Endpoints100 API HealthAn API for public holiday data. Supports over 100 countries. Provides information on holidays and long weekends.1 Endpoint100 API HealthFree UK postcode lookup API and datasets. Search, validate and reverse geocode postcodes. Open sourced project.2 Endpoints100 API HealthBrowse 47,000+ automated reports, view aggregated data, merge and download data, compare reports1 Endpoint100 API HealthA free REST API for random Kanye West quotes (Kanye as a Service)1 Endpoint100 API HealthAPI providing data on Harry Potter characters and spells. Includes routes for all characters, specific character by ID, Hogwart"
+  },
+  {
+    "title": "The Monospace Web (owickstrom.github.io)",
+    "points": 203,
+    "submitter": "mrunseen",
+    "submit_time": "2024-08-27T17:09:56",
+    "num_comments": 44,
+    "comments_url": "https://news.ycombinator.com/item?id=41370020",
+    "comments": [
+      "Ooh, this is the thread to ask my question in. A few years ago I ran across a ... I think a video game walkthrough? maybe?  which was written to be read in monospace font, and it was full justified perfectly all the way through (thousands of lines!) SOLELY through word choice.Anyone know what I'm talking about and have a link?\n \nreply",
+      "Cf. also http://tom7.org/bovex/ (a layout engine that tries to achieve a similar effect by rephrasing the input using an LLM).\n \nreply",
+      "That's called bricktext[0], it used to be a thing you'd occasionally see on usenet and places like GameFAQs.[0] http://www.catb.org/esr/jargon/html/B/bricktext.html  (Also wow Google has completely erased this concept from its search results.)\n \nreply",
+      "I vaguely recall seeing a GameFAQs walkthrough that did this, and I think it might have been for a Final Fantasy game of some kind, but unfortunately I can't remember more than that.\n \nreply",
+      "GameFAQ was enough! FOUND IT! Thank you!https://gamefaqs.gamespot.com/snes/588741-super-metroid/faqs...\n \nreply",
+      "this gets discussed, or at least mentioned, often on hn, e.g.https://news.ycombinator.com/item?id=28651093 (this very faq)https://news.ycombinator.com/item?id=40773880 (jart's commit)https://news.ycombinator.com/item?id=40605970 (tom7's gnujpl)and bonus: recently i've been enjoying http://arlyle.sdf.org/(unfortunately, links do not work in preformatted text on hn)\n \nreply",
+      "Wow, this is wild! Maintaining perfect justification solely through word choice is... quite a writing constraint, lol. I don't think I've seen this done before.\n \nreply",
+      "I betcha it wasn\u2019t perfectly through word choice alone as I can think of a few \u201ctricks\u201d that could be deployed undetectably.\n \nreply",
+      "This is why the internet exists.Incredible catharsis. Love it.\n \nreply",
+      "Laravel does something similar. Each line of multi-line comments are exactly 3 characters shorter than the previous line.https://github.com/laravel/laravel/blob/11.x/config/database...\n \nreply"
+    ],
+    "link": "https://owickstrom.github.io/the-monospace-web/",
+    "first_paragraph": "Monospace fonts are dear to many of us. Some find them more readable,\nconsistent, and beautiful, than their proportional alternatives. Maybe\nwe\u2019re just brainwashed from spending years in terminals? Or are we\nhopelessly nostalgic? I\u2019m not sure. But I like them, and that\u2019s why I\nstarted experimenting with all-monospace Web.On this page, I use a monospace grid to align text and draw diagrams.\nIt\u2019s generated from a simple Markdown document (using Pandoc), and the\nCSS and a tiny bit of Javascript renders it on the grid. The page is\nresponsive, shrinking in character-sized steps. Standard elements should\njust work, at least that\u2019s the goal. It\u2019s semantic HTML,\nrendered as if we were back in the 70s.All right, but is this even a good idea? It\u2019s a technical and\ncreative challenge and I like the aestethic. If you\u2019d like to use it,\nfeel free to fork or copy the bits you need, respecting the license. I\nmight update it over time with improvements and support for more\nstandard elements.This documen"
+  },
+  {
+    "title": "Sainsbury Wing contractors find 1990 letter from donor (theartnewspaper.com)",
+    "points": 254,
+    "submitter": "bpierre",
+    "submit_time": "2024-08-27T15:49:27",
+    "num_comments": 64,
+    "comments_url": "https://news.ycombinator.com/item?id=41368866",
+    "comments": [
+      "This sort of thing is brilliant. Folks put things inside walls a lot.When doing a bathroom repair I needed a few additional tiles that would be impossible to find (was an old house). Guess what I found when we busted open the wall\u2026 the leftover tiles from when the house was built like 70 years prior! I could almost feel some tile layer from generations prior giving me a little smile and pat on the back.\n \nreply",
+      "Pretty sure that was laziness, not foresight on their behalf. Builders leave a lot of trash in walls.Not very useful to find once you've crushed up half the existing tiling.Breaking up the 50 year old concrete pad near my house, I found old 1970s crushed beer cans buried under the concrete (the kind that predate the attached pull-tab). Kind of a neat link through time, imagining them sweating in the same sort of heat that I was.Of course, it might also explain some of the other 'questionable' issues in the construction that I keep finding...\n \nreply",
+      "I think this is a case of both. For example my parents did a remodel of a 19th century house and found a bag of glass catseye marbles in the ceiling.\n \nreply",
+      "The customary place to put those is in the attic, where they can be easily found.https://alsyedconstruction.com/what-is-attic-stock-in-constr...\n \nreply",
+      "This reminds me of the letter in the pond https://thatcanadiangirl.co.uk/2008/05/30/the-letter-in-the-...\n \nreply",
+      "The columns: https://atlive-wp.s3.eu-west-2.amazonaws.com/wp-content/uplo...\n \nreply",
+      "I think it's two of the five columns on the right in this image: https://images.adsttc.com/media/images/6352/6dc1/66b7/442f/b...Note that they are absent from this render: https://images.adsttc.com/media/images/6352/6d02/da69/b45e/2...> located on the ground floor near the former cloakroom, halfway between the street entrance and the stairs and lift leading down to the basement. Three adjacent structural columns have needed to be retained.\n \nreply",
+      "That first link is spot on. Looking at the third image in the article, they are standing next to the destroyed column, and it is clearly one of the columns you indicated.https://cdn.sanity.io/images/cxgd3urn/production/0a733d1463e...\n \nreply",
+      "Why would the architect want those columns to be there? It makes absolutely no sense.\n \nreply",
+      "In architecture, there is this phenomenon where people may have an irrational fear of collapse. Adding (the suggestion of) redundant structural support may take away that fear.\n \nreply"
+    ],
+    "link": "https://www.theartnewspaper.com/2024/08/27/sainsbury-wing-contractors-find-1990-letter-from-donor-anticipating-their-demolition-of-false-columns",
+    "first_paragraph": "\"To those who find this letter\": In July 1990 John Sainsbury (Lord Sainsbury of Preston Candover) left a typed and signed note in one of the false columns during building work on the lobby of the new Sainsbury Wing of London's National Gallery Sainsbury: AP Photo/Ann Purkiss. Letter: Courtesy of the National Gallery and by permission of the Sainsbury familyA \u201ctime capsule\u201d has been discovered at London\u2019s National Gallery, buried deep in a column in the foyer of the Sainsbury Wing. It is a letter recording that one of the wing\u2019s funders, John Sainsbury (Lord Sainsbury of Preston Candover), believed the architects had committed a serious \u201cmistake\u201d. The 1990 letter, typed on Sainsbury\u2019s supermarket notepaper, has recently been deposited in the gallery\u2019s archive as an historic document.John Sainsbury is critical in the letter of the American post-Modernist architect Robert Venturi and his professional partner and wife Denise Scott Brown for inserting two large false columns in the gallery\u2019"
+  },
+  {
+    "title": "Blitzortung \u2013 real time lightning strikes around the world (blitzortung.org)",
+    "points": 152,
+    "submitter": "thunderbong",
+    "submit_time": "2024-08-27T17:21:56",
+    "num_comments": 53,
+    "comments_url": "https://news.ycombinator.com/item?id=41370187",
+    "comments": [
+      "For my kids, I have a virtual light switch in HomeKit called \"Shower Is Safe\". It's pinned to the top of the Home app.I use the Home Assistant integration to fetch this data and run some calculations on the past few minutes of lightning activity. Since the API returns lightning strike time and bearing from a given location, I can (in combination with wind direction) determine if the lightning is approaching or receding.If it's approaching and less than 30 minutes away (or if any strike is within 20 miles in any direction), it turns off the light switch. It then waits until it's been receding for at least 15 minutes (and with no more detections within 20 miles) before switching \"Shower is Safe\" back on.I can (and do) override it if I notice it's potentially hazardous to shower.\n \nreply",
+      "Wait, why would showering in a lightning storm not be safe? Do you expect the lightning to discharge in the pipes of your house? How?Or is it that your children would be scared if the power goes out when they're showering? That I understand.\n \nreply",
+      "Yes, especially in older homes or homes with poor grounding. Lightning can discharge through water supply lines[0]. There are even cases of toilets exploding due to lightning strikes[1]. (Google for more)Sure, it's exceedingly rare. But it's also exceedingly easy to avoid. I've taught my kids that some decisions are easier when defined as binary rules; judgment calls in cases like this just don't offer any tangible benefit other than \"I showered an hour earlier than I would have otherwise.\"[0]: https://www.weather.gov/safety/lightning-indoors[1]: https://fox8.com/news/lightning-blows-up-toilet-after-travel...MythBusters even did a bit on it. They rated it \"plausible\".\n \nreply",
+      "Ok, blanket advice from US governmental agencies and a Mythbusters episode with electrical and water installations that seem... Very DIY and not up to code? I mean it is mythbusters... IDK.I suspect power outage in the shower is more dangerous in my case than any other electrical issue... I guess it may be more of a US issue, especially since I am not finding any advice from EU agencies on the matter?...\n \nreply",
+      "I learned a few months ago showering in lightning is dangerous.\n \nreply",
+      "You can't just say that without explaining why.I live on the 8/10 floor of a building that gets yearly lightning rod inspections. All piping has been replaced with polypropylene (clean water) or PVC (dirty) and even when it was metal, the electrical and water systems were far apart from one another. Even if they were not far apart, all wiring is underground. The transformer is inside a nearby building and also has lightning rods/wires and all wiring to and from it is underground. There is literally no scenario apart from ball lightning coming through my bathroom window while I shower that I can think of\n \nreply",
+      "What other automations do you have? This one seems so specific I am curious what else you have going on!\n \nreply",
+      "Would you be willing to explain/share the automation for this?\n \nreply",
+      "Nice, what are the odds though? I searched around but couldn\u2019t find any hard stats.Is this like nuclear bunker in my basement type of precaution?\n \nreply",
+      "Yes, it's exceedingly rare. But it's one of those \"avoiding this activity for an hour could prevent you from dying painfully\" things, so we don't shower/bathe/wash dishes when there's lightning.\n \nreply"
+    ],
+    "link": "https://www.blitzortung.org/en/live_lightning_maps.php",
+    "first_paragraph": "\n\nA worldwide, real-time, community collaborative lightning location network. \u00a9 2003-2024 Blitzortung.org Contributors\n\n\n\n\n\n\n\n\nThis website uses cookies\n\n\n\nWe use cookies to personalise content, to analyse our traffic, and to show advertisements. Displaying advertisements could share information about your use of our site with advertising partners who may combine it with other information that you are provided to them or that they have collected from your use of their services. Choose the type of cookies you're happy for us to use (you can change them anytime), or just accept.\n\n\n\nCertain types of cookie are essential to use our site. We store the time and the selection of your consent anonymously under the identification stored in cookie \"ID\".\n\n\n\n\n\nTechnically necessary\nNecessary cookies make a website usable by enabling basic functions like page navigation and access to secure areas of the website. The website cannot function properly without these cookies.\n\n\n\n\nPreferences\nPreference "
+  },
+  {
+    "title": "Taskwarrior \u2013 CLI Task Management (taskwarrior.org)",
+    "points": 65,
+    "submitter": "httbs",
+    "submit_time": "2024-08-27T20:17:24",
+    "num_comments": 23,
+    "comments_url": "https://news.ycombinator.com/item?id=41372482",
+    "comments": [
+      "Been using taskwarrior (and the really great TUI interface https://github.com/kdheepak/taskwarrior-tui) for about 6 months now. My favorite things:- really fast day-to-day navigation using vim-like controls in the TUI- automatic sorting using due date, task dependencies (A must be done for B to start), age, etc.- task dependencies. This is really helpful for me- decent enough cross-device sync with syncthing (I already had it up and running)- ability to produce reports. E.g. what tasks did I complete for project X last month?- whole system has a good set of hooks into it, making it relatively hackableDownsides:\n- was slightly intimidating at first. If you're starting out, definitely start on the simple end, and slowly add complexity to your setup (creating tasks -> due dates -> using projects -> creating task dependencies -> using contexts for work/play/study -> ... -> ...)\n \nreply",
+      "In case anyone else is interested in seeing the schema I ran a few example commands through this and the dumped my ~/.task/taskchampion.sqlite3 database out to SQL: https://gist.github.com/simonw/ab208b18b6c3ab31ea3feb70f6502...It's mainly JSON data stored in some simple tables, with full historic change tracking modeled as JSON too.Here's that example loaded into Datasette Lite: https://lite.datasette.io/?sql=https://gist.github.com/simon...\n \nreply",
+      "Taskwarrior officially provides bash/zsh/fish completion scripts.If you're a PowerShell or nushell user and need autocompletion for Taskwarrior, try https://github.com/sigoden/argc-completions.Argc-completions provides multi-shell completions for over 1000 commands, including Taskwarrior.\n \nreply",
+      "Self plug, I'm developing a minimal gui for Taskwarrior, focused on keyboard navigation.https://github.com/tmahmood/taskwarrior-web/Task warrior is the my core of task management, as I've ADHD,I lost track of my task if it's not easily visible, this ui helps me with that. It shows timer for active task on the top.Future plan is to integrate time warrior too.\n \nreply",
+      "Thank you for posting. I\u2019m of the same mind, so I appreciate you working on this publicly. I\u2019ve bookmarked it to check it out next time I get frustrated haha (I have a \u201cproductivity things to try\u201d bookmark folder)\n \nreply",
+      "I LOVE taskwarrior but I feel any TODO software that can't easily be synced across devices is a nonstarter these days.Sure I could throw the sqlite db in Dropbox or something, but there's no good way to manage the TODOs on a phone.Every 6-12 months I'll give it another try and love it but feel it's just too limiting for most personal tasks.I do like to use it for work tasks that aren't tracked in Jira...so stuff I generally only care about when I'm at a computer.\n \nreply",
+      "https://taskwarrior.org/docs/commands/synchronize/> The synchronize command, which first appeared in version 2.3.0, allows your Taskwarrior instance to share tasks with other instances. You can have several instances making local changes all of which sync to a single server, and they will all be kept up to date, with changes flowing from instance to instance.    $ task sync\n    Syncing with foo.example.com:53589\n\n    Sync successful.  1 changes uploaded.\n\nThere was a site inthe.am which provided sync service.  While that's been shut down, the code is available on https://github.com/coddingtonbear/inthe.am - the local hosting wasn't ever finished or not designed with that in mind ( https://github.com/coddingtonbear/inthe.am )\n \nreply",
+      "There IS an android implementation on the play store I think.  I ended up just running task warrior on a VPS and shelling in though.  But that UI sucks on a phone.\n \nreply",
+      "Love taskwarrior. Looking forward\nThere's a great TUI; https://github.com/kdheepak/taskwarrior-tuiI wish cross-device-sync was feasible, but it's pretty good.\n \nreply",
+      "I've had good success using Syncthing to keep my tasks in sync between my phone, laptop, desktop, etc. Point it at your Taskwarrior data folder and you're off.\n \nreply"
+    ],
+    "link": "https://taskwarrior.org/",
+    "first_paragraph": "Taskwarrior is Free and Open Source Software that manages your TODO list from the command line.It is flexible, fast, and unobtrusive.\nIt does its job then gets out of your way.New User?\u00a0\u00a0\u00a0Start\nhere...This patch release to Taskwarrior 3.0.0 addresses a few minor issues in the 3.0.0 release: improvements to task news, better error handling and documentation, and fixes for interactions with hooks. It also fixes an issue with the release tarball, #3294.Taskwarrior 3.0 brings new, more reliable task-storage and sync support, based on TaskChampion.\nIt has been in the works for several years, and is now available at on GitHub.\nSee https://taskwarrior.org/docs/upgrade-3/ for more information on this upgrade \u2013 including steps to take before installing the new version.Need help?\nTake a look at our support page.Looking to learn?\nTake a look at our online documentation.Try our FAQ, a growing list of curated questions and answers.Copyright \u00a9 2024 Gothenburg Bit FactoryPowered by Hugo"
+  },
+  {
+    "title": "ChartDB \u2013 Free and open source, database design editor (chartdb.io)",
+    "points": 13,
+    "submitter": "nikolay",
+    "submit_time": "2024-08-27T22:38:49",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://blog.janestreet.com/what-the-interns-have-wrought-2024-edition-index/",
-    "first_paragraph": "Posts about interviewing at Jane Street and our internship programUsing ASCII waveforms to test hardware designsFinding memory leaks with MemtraceWe\u2019re once again at the end of our internship season, and it\u2019s time do our annual review\nof what the interns achieved while they were here.Jane Street is a big enough place and the internship is wide-ranging enough that it\u2019s\nimpossible to really cover the full spread of work that interns do here. So, instead,\nwe\u2019ve picked a few interesting projects to focus on, just to give you a sense of the\npossibilities.Here are the ones I\u2019m going to discuss this year:Arya Maheshwari wrote a first version of Camels, a Polars-like\ndataframe library for OCaml.Arvin Ding designed a variant of our bin-prot\nbinary-serialization protocol, which was aimed at achieving better writing speed at the\nexpense of compactness.Alex Li worked on improving a time-travel debugger for Limshare, a system we\u2019ve built\nfor sharing risk limits across multiple trading systems.Now, "
+    "link": "https://chartdb.io/",
+    "first_paragraph": "Free and open source, database design editor.No signup -> get a diagram in just 15secFree and open source, DB design editor. No signup ->  get a diagram in just 15secFree and open source, database design editor.No signup -> get a diagram in just 15secFree and open source, database design editor. No signup ->get a diagram in just 15secEditorBuild diagrams with a few clicks, see the full picture, export SQL scripts, customize your editor, and more.Build diagrams with a few clicks, see the full picture, export SQL scripts, customize your editor, and more.Build diagrams with a few clicks, see the full picture, export SQL scripts, customize your editor, and more.Import / Export100% VisuallyDBsDesign for your databasePostgreSQLReadyMySQLReadySQL ServerReadySQLiteReadyMariaDBWIPPacked with featuresImport -> Edit -> Export \u2728Ready to get started?Ready to get started?Ready to get started?Instant ImportA single query to retrieve your entire DB schemaFastFastAI Export AI to generate the DDL for yo"
   },
   {
-    "title": "Erasure Coding for Distributed Systems (transactional.blog)",
-    "points": 97,
-    "submitter": "eatonphil",
-    "submit_time": "2024-08-26T20:03:45",
-    "num_comments": 17,
-    "comments_url": "https://news.ycombinator.com/item?id=41361281",
+    "title": "KLEE Symbolic Execution Engine (github.com/klee)",
+    "points": 43,
+    "submitter": "nateb2022",
+    "submit_time": "2024-08-27T19:43:54",
+    "num_comments": 7,
+    "comments_url": "https://news.ycombinator.com/item?id=41372059",
     "comments": [
-      "Years back someone proposed a cute algorithm for erasure codes that depended not on spinning rust but on multipath networking.I believe they called it network coding and the idea was in a network with multiple routes I might get a file faster by pulling an erasure code that used two parts of the file or even two files from one upstream instead of waiting for the entire file from the primary server.\n \nreply",
-      "This has been used in Ceph for a long time:https://docs.ceph.com/en/latest/rados/operations/erasure-cod...I would not be surprised if there was a lot of stuff like this behind S3 and other cloud storage systems too, at least in the lower-access tiers of storage, but I have no actual knowledge of AWS or GCP systems.\n \nreply",
-      "I thought about something like that to make video calls more stable. For example I'll get completely different routes (sometimes noticeably lower/more predictable latency) when I use a VPN to connect to some peer in the US (from Europe.) Would be cool to combine different routes.\n \nreply",
-      "With something like https://github.com/cberner/raptorq you can do several gbits/s over high latency/lossy UDP.\n \nreply",
-      "Network coding is more than that, participants in the graph can synthesize new parts on the fly from parts they just got without having the whole thing.FWIW, freenet at least uses fec-coded files so that you can have some flexibility in what parts you get and durability against a file becoming broken just because a single part gets lost.\n \nreply",
-      "and usenet binaries with https://en.wikipedia.org/wiki/Parchive and even earlier with RAR's recovery block, and probably even earlier with BBSes, but my memory is failing me what I was using before it in the 1990s.edit: I see immediately below while I was composing this, someone mentioned pararchive..\n \nreply",
-      "Has anybody used Wirehair in a project? https://github.com/catid/wirehairI'm curious if it's well-defined enough to base a standard around--informally if not formally--for building a large file archiving/data recovery project I've been mulling over for nearly 10 years. It's the only large block erasure code I've found that has both the ideal (or nearly ideal) algorithmic performance and API. That makes it a nice blackbox for my use case, unlike something like RaptorQ, which leaks little details all over the place, driving up the complexity and rigidness of the rest of the stack. But Wirehair isn't a spec, it's an (experimental?) implementation of an idea. It seems stable, but unless/until I try writing a second implementation, or it's seen substantial use (exposing any sharp edges in the algorithm) I worry how easily it would translate to a reliable specification or second implementation.\n \nreply",
-      "We previously used it in Bitcoin Fibre (a fork of the Bitcoin node software with special enhancements for block relay).   It's extremely nice.Be aware that Qualcomm might claim that its covered by RaptorQ patents (it is conceptually related), though the earliest of those are about to expire (or just expired, haven't checked the file wrapper lately) and QC has made some commitment to not apply the RaptorQ patents outside of wireless (but that might be only for conforming implementations, I don't recall).I've looked at what it would take to specify it-- which would be something that we'd want to do if using it in the bitcoin protocol proper and wasn't super excited about doing it-- even though myself and several other bitcoin developers are quite comfortable with number theory and error correcting codes.  It's just that wirehairs structure has a fair amount of adhoc-ish details and knowing us we might get sucked into a trap of improving it. :)There might be some renewed interest in bitcoin land at getting a fountain code into wide use, if so waiting a while might result in someone else writing a spec.Depending on your exact application you might find https://github.com/catid/fecal interesting too... if your expected erasures count is very low it could be faster than wirehair.Leopard is mentioned in the article-- it's not a fountain code but it has a pretty big block size.  It has a nice advantage for specification: it's merely a very fast implementation of a boring RS code (so a spec would arguably only need to document the field and generator choice).\n \nreply",
-      "Am I right in thinking that products made during an M of N incident are coded differently to when all N are available? If so, you might want a bitflag to denote \"needs to be re-encoded when the N is restored\" or else you have some files with less than stellar recovery for a random loss in the N set.\n \nreply",
-      "Whenever you have a stripe with missing chunks they need to be re-encoded ASAP because those stripes will be lost if they lose enough chunks. Every distributed storage system needs some kind of librarian to go around grooming the stripes to keep them out of danger.\n \nreply"
+      "The project's webpage is a more helpful starting point than the repository: https://klee-se.org/\n \nreply",
+      "Is anyone actually using symbolic execution in industry these days? I personally like it but I feel like fuzzing has completely taken over in terms of academic research at least.\n \nreply",
+      "I\u2019ve been using Triton a lot lately to make sense of heavily obfuscated code. The ability to translate a symbolic \u201ctrace\u201d into an LLVM bitcode listing is super useful. You can do a lot of optimizations from there easily to recover the original code:https://github.com/JonathanSalwan/Triton/wiki\n \nreply",
+      "Your deobfuscating process would make a good blog post :)\n \nreply",
+      "I would like to - but unable to find any libraries / engines that would function in a some sort of 'mocked' environment. for example - i need to cover all execution paths for only single function with high cyclomatic complexity, given all other stuff is mocked. Maybe it would be called unit test mix with se. also for dynamic languages such as php/python/ruby.\n \nreply",
+      "does Kani count?https://github.com/model-checking/kani\n \nreply",
+      "It should! Kani\u2019s used by AWS\u2019 Firecracker hypervisor.\n \nreply"
     ],
-    "link": "https://transactional.blog/blog/2024-erasure-coding",
+    "link": "https://github.com/klee/klee",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        KLEE Symbolic Execution Engine\n      \n\nKLEE is a symbolic virtual machine built on top of the LLVM compiler\ninfrastructure. Currently, there are two primary components:The core symbolic virtual machine engine; this is responsible for\nexecuting LLVM bitcode modules with support for symbolic\nvalues. This is comprised of the code in lib/.A POSIX/Linux emulation layer oriented towards supporting uClibc,\nwith additional support for making parts of the operating system\nenvironment symbolic.Additionally, there is a simple library for replaying computed inputs\non native code (for closed programs). There is also a more complicated\ninfrastructure for replaying the inputs generated for the POSIX/Linux\nemulation layer, which handles running native programs in an\nenvironment that matches a computed test input, including setting up\nfiles, pipes, "
+  },
+  {
+    "title": "If Your World Is Not Enchanted, You're Not Paying Attention (theconvivialsociety.substack.com)",
+    "points": 39,
+    "submitter": "passwordoops",
+    "submit_time": "2024-08-25T13:59:55",
+    "num_comments": 25,
+    "comments_url": "https://news.ycombinator.com/item?id=41347368",
+    "comments": [
+      "I personally find software development to be enchanting and am often thankful to have a job like this.I get to make in the comfort of my home creations where I am only limited by my knowledge, imagination, and attention. I can experiment easily and explore completely different designs with an ease that any other discipline would be envious of. And then I can allow millions or billions to have access my creation with ease.That seems pretty enchanting and almost god-like and magical to me.\n \nreply",
+      "I recommend the youtube channel Posy. He only uploads about once a month but every time it is an exploration of something that seems so simple but it sparks that child like wonder in the world. The good sense of humour helps as well.https://www.youtube.com/c/PosyMusic\n \nreply",
+      "Second that. He's got some of the highest production quality YouTube has to offer. High effort content.Here's the one that got me hooked:https://www.youtube.com/watch?v=NSS6yAMZF78\n \nreply",
+      "This is the same video that got me hooked! I love Posy. It always feels magical to know that there are so many other curious people in the world. HN feels like a natural gathering point for that crowd as well.\n \nreply",
+      "Humanity's greatest skill is ignoring the beauty that surrounds us.\n \nreply",
+      "And secondly self deception!\n \nreply",
+      "Self deception is our #1 skill. That's why we couldn't progress before science. It's also what makes us see beauty when there's none.\n \nreply",
+      "We \"couldn't progress before science\" but developed metallurgy, mining, sailing, astronomy, democracy, ... well before the enlightenment and the development of the scientific method? Heck, we domesticated plants and animals before recorded history.Perhaps you're talking about empiricism rather than science? Empiricism is old as the hills, presumably these discoveries were made from observation and experimentation. The scientific method builds on empiricism, but incorporates mechanisms to make it more difficult to fool ourselves (such as reproducibility and peer review), and so is distinct.As for \"seeing beauty where there is none,\" that's nonsense. Beauty is in the eye of the beholder. If you see it, it's real. You can critique someone else's ideas of beauty, you can disagree with them, but to say that they are somehow objectively wrong is just chauvinism.You may as well tell someone that when they're thinking, it's just the illusion of thinking. Or when they're enjoying a meal you dislike, they're only imagining that they're enjoying it. What would that even mean?\n \nreply",
+      "I think it\u2019s more appropriate to say that self-deception is a consequence of overfitting based on other primal instincts. Our #1 skill lies in pattern recognition and imitation. A lot of time, it\u2019s faulty because it\u2019s guided by fear/anxiety for perfectly valid reasons of survival.\n \nreply",
+      "\"Our three greatest skills are ignoring the beauty that surrounds us, self-deception, and an almost fanatical dedication to the pope.\"\n \nreply"
+    ],
+    "link": "https://theconvivialsociety.substack.com/p/if-your-world-is-not-enchanted-youre",
     "first_paragraph": ""
   },
   {
-    "title": "Dokku: My favorite personal serverless platform (hamel.dev)",
-    "points": 570,
-    "submitter": "tosh",
-    "submit_time": "2024-08-26T15:21:56",
-    "num_comments": 189,
-    "comments_url": "https://news.ycombinator.com/item?id=41358020",
+    "title": "Knockknock: Simple, secure, and stealthy port knocking implementation (github.com/moxie0)",
+    "points": 9,
+    "submitter": "Bluestein",
+    "submit_time": "2024-08-24T11:49:53",
+    "num_comments": 5,
+    "comments_url": "https://news.ycombinator.com/item?id=41337469",
     "comments": [
-      "I've been enjoying using Dokploy recently.https://github.com/Dokploy/dokployIt's similar to Dokku but has a nice web UI, makes it easier to deploy Docker/Compose solutions and auto LetsEncrypt functionality is built-in by design (not as a separate plugin).I've also built a GitHub Actions workflow to trigger off a deploy to apps hosted on it (basic cURL command but works well).\nhttps://github.com/benbristow/dokploy-deploy-actionAnd put together some pre-configured Compose files you can deploy for various apps.\nhttps://github.com/benbristow/dokploy-compose-templates\n \nreply",
-      "Apologies for the very off-topic reply, but I can't help but find it a little funny that on a thread exalting a particular tool, the top comment at the time of this writing is a link to another, newer tool. Not that there's anything wrong with sharing the link, but it does seem like here at HN we have a bit of a grass-is-greener thing going on. I would understand it more if the discussion was around how bad a tool is and someone chimed in with an alternative. And it's not like I don't want people to share these other projects but personally on a thread about a particular topic, the comments I find the most useful are those from people with experience in that topic sharing their opinions, tips, etc. In this case, the comment our community found the most valuable on the topic of Dokku seems to be a link to Dokploy, a project that judging by the commit history is new as of this past April.\n \nreply",
-      "I find it helpful to have other tools listed.  I already know a decent amount about Dokku and clicked on these comments specifically to find out what other tools might be up and coming or otherwise mentioned in the space.I'm still waiting for something built on a rootless container solution and with everything defined in git (i.e. no or limited cli commands) so that exactly what is being deployed is, at all times, tracked in git.\n \nreply",
-      "If the topic is \"favorite personal serverless platform\" then discussion of other offerings is absolutely on-topic.> Apologies for the very off-topic reply ... it does seem like here at HN ...There's nothing more HN than filling the first page of comments with discussion of everything except the linked article.\n \nreply",
-      "I think I was respectful enough to word the original comment I made to the difference between Dokploy & Dokku, not just saying one is better than the other. I've used both successfully and think both are great products - just wanted to share my experience. There seems to be an umbrella recently of self-hosting tools like Coolify/Dokku/Dokploy etc. so wanted to contribute to the discussion in that way. Dokploy is also an open-source project so thought the exposure might be positive on a high ranking HN post.\n \nreply",
-      "My comment came out crankier than I intended. I do think comments like yours are valuable, and I agree that you were respectful and informative. I'm just genuinely amused that the top comment is for a completely different tool. That's more an observation about how we vote as a community, not about your post. I include myself in that group though as I have in the past been drawn to the new and shiny over the already known.\n \nreply",
-      "Thanks for the recommendation. I've just given it a try and it looks great. I had tried coolify.io before, but the multi node/swarm support wasn't great, and the registry didn't work. Dokploy seemed to work straight out of the box.One thing I wish it had to preview deployments though. Coolify had that. But I can live without it.\n \nreply",
-      "Nice. Why not use a github merge webhook for triggering deploys?\n \nreply",
-      "I have actions on my projects to build & publish container images to GitHub's container registry. The deploy trigger from the workflow makes Dokploy get the latest image from the registry and run it.\n \nreply",
-      "I was looking at many of these \"selfhosted Heroku\" type of solutions recently and read many HN discussions about the different options (coolify.io, ploi, ...) as I migrated to a new server and always copying, adapting nginx configs got a bit old.I've landed on Dokku in the end as it's the one with the least amount of \"magic\" involved and even if I stopped using it I could just uninstall it and have everything still running. Can highly recommend it!The developer is also super responsive and I even managed to build a custom plugin without knowing too much about it with some assistance. Documented this on my blog too: https://blog.notmyhostna.me/posts/deploying-docker-images-wi...\n \nreply"
+      "Knockknock was one of my favorite things back in the day. I love Moxie's mindset. Nowadays I put Wireguard in front of everything.\n \nreply",
+      "I used to use lots of port knocking setups to hide my ssh port. That was, until I discovered Tailscale's SSH setup. Now my SSH is run over wireguard which is very stealthy.\n \nreply",
+      "Same. It's amazing not having my server hammered by malicious actors and hardening it by not even offering the ssh service on the primary network interface\n \nreply",
+      "A similar tool that's actively developed was posted a few days ago.https://news.ycombinator.com/item?id=41327735> Show HN: Ruroco \u2013 like port knocking, but betterhttps://github.com/beac0n/ruroco\n \nreply",
+      "this is from 2012, must be run as root, uses python 2, and requires \"hping3\"\n \nreply"
     ],
-    "link": "https://hamel.dev/blog/posts/dokku/",
-    "first_paragraph": "\nSubscribe for updates\nHamel Husain January 9, 2024Dokku is an open-source Platform as a Service (PaaS) that runs on a single server of your choice. It\u2019s like Heroku, but you own it. It is a great way to get the benefits of Heroku without the costs (Heroku can get quite expensive!). I need to deploy many applications for my LLM consulting work. Having a cost-effective, easy-to-use serverless platform is essential for me.I run a Dokku server on a $7/month VPS on OVHcloud for non-gpu workloads. These applications include things like nbsanity and data cleaning tools for LLMs.Some of the features I love about Dokku:Make sure you install Dokku on your VPS. As I mentioned, I use OVH.An easy way to deploy applications is with a Docker container.To deploy a Docker container, I put a Dockerfile in the root of my git repo like this:The entrypoint.sh script allows me to easily run the app locally or in a Docker container. It looks like this:On the Dokku host, create the app:Locally, set up access"
+    "link": "https://github.com/moxie0/knockknock",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A simple, secure, and stealthy port knocking implementation that does not use libpcap or bind to a socket interface.\n      \n        A simple, secure, and stealthy port knocking implementation that does not use libpcap or bind to a socket interface.\n      "
   },
   {
-    "title": "NSA releases 1982 Grace Hopper lecture (nsa.gov)",
-    "points": 564,
-    "submitter": "gaws",
-    "submit_time": "2024-08-26T12:37:32",
-    "num_comments": 134,
-    "comments_url": "https://news.ycombinator.com/item?id=41356528",
+    "title": "Vulnerabilities show why STARTTLS should be avoided if possible (2021) (apnic.net)",
+    "points": 66,
+    "submitter": "fanf2",
+    "submit_time": "2024-08-27T17:42:03",
+    "num_comments": 35,
+    "comments_url": "https://news.ycombinator.com/item?id=41370420",
     "comments": [
-      "Great quote at 45:26 regarding vertical vs. horizontal scaling: https://youtu.be/si9iqF5uTFk?t=2726> \"Now back in the early days of this country, when they moved heavy objects around, they didn't have any Caterpillar tractors, they didn't have any big cranes. They used oxen. And when they got a great big log on the ground, and one ox couldn't budge the darn thing, they did not try to grown a bigger ox. They used two oxen! And I think they're trying to tell us something. When we need greater computer power, the answer is not \"get a bigger computer\", it's \"get another computer\". Which of course, is what common sense would have told us to begin with.\"\n \nreply",
-      "This is a reaction to Grosch's Law, \"Computing power increases as the square of the price\".[1] In the early 1980s, people still believed that. Seymour Cray did. John McCarthy did when I was at Stanford around then. It didn't last into the era of microprocessors.Amusingly, in the horse-powered era, once railroads started working, but trucks didn't work yet, there was a \"last mile\" problem - getting stuff from the railroad station or dock to the final destination. The 19th century solution was to develop a bigger breed of horse - the Shire Horse.[1][1] https://en.wikipedia.org/wiki/Shire_horse\n \nreply",
-      "The article you linked doesn't support your anecdote about the root of the Shire Horse. It describes their history dating back centuries before railways. Their biggest use seems to have been hauling material to and from ports, not trains.\n \nreply",
-      "Additionally, with early pioneer logging, another solution to avoiding having logs which are too large to handle was to not drop them in the first place.In the Pacific Northwest, US, early loggers would leave the huge ones - to the point where pioneers could complain about a lack of available timber in an old-growth forest.When the initial University of Washington was built, land-clearing costs were a huge portion of the overall capital spend. The largest trees on the site weren't used for anything productive; rather, they were climbed, chained together, and domino felled at the same time. By attaching the trees together, they only needed to fell one tree which brought the whole mess down into a pile and they burned it.I think there's a lesson here about choosing which logs you want to move.\n \nreply",
-      "Perhaps an analogy can be made with respect to information priority and which trees to fell.\n \nreply",
-      "Having not read the article yet, this was one confusing comment until I realized by \"logging\" you meant actual trees and not log files.\n \nreply",
-      "That's an interesting tidbit I did not know about UW. Sad the wood wasn't used.\n \nreply",
-      "That \"they didn't have any big cranes\" forces the analogy in a way that breaks it. The solution wherever cranes are used is absolutely to get a bigger crane. And also, oxen were absolutely bred to be bigger. That's kind of the defining thing that distinguishes draft oxen from other kinds of cattle. But that process was limited by some factors that are peculiar to domesticated animals. And, of course, if you need to solve the problem right now, you make do with the current state of the art in farm animal technology.Admiral Hopper's lecture wasn't delivered too long after 1976, which saw the release of both the CRAY-1 (single CPU) and the ILLIAC IV (parallel). ILLIAC IV, being more expensive, harder to use, and slower than the CRAY-1, was a promising hint at future possibility, but not particularly successful. Cray's quip on this subject was (paraphrasing) that he'd rather plow a field with one strong ox than $bignum chickens. Admiral Hopper was presumably responding to that.What they both seem to miss is that the best tool for the job depends on both the job and the available tools. And they both seem to be completely missing that, if you know what you're doing, scale up and scale out are complementary: first you scale up the individual nodes as much as is practical, and then you start to scale out once scale up loses steam.\n \nreply",
-      ">And also, oxen were absolutely bred to be bigger. That's kind of the defining thing that distinguishes draft oxen from other kinds of cattle.In your attempt to take down the analogy you just reinforced it. They quickly hit the limits of large oxen and had to scale up far faster than any selective breeding could help.The exact same thing happened in computing even during the absolute hay day of Moore\u2019s law. Workloads would very quickly hit the ceiling of a single server and the way to unblock yourself was not to wait for next gen chips but to parallelize.\n \nreply",
-      "It's not that multiprocessing systems didn't exist at the time Hopper delivered this lecture; it's that they remained fairly niche products for computing researchers and fairly deep-pocketed organizations. At the time, multiprocessing was still very difficult to pull off. It wasn't necessarily analogous to just yoking two oxen to the same cart. It was maybe more like a world where the time it takes to breed an ox that's twice as strong is comparable to the time it takes to develop a working yoke for state-of-the-art oxen, and also nobody's quite sure how to drive a two-oxen team because it's still such a new idea. So the parallel option wasn't as sure of a bet from a business perspective as it is now.\n \nreply"
+      "xxx"
     ],
-    "link": "https://www.nsa.gov/helpful-links/nsa-foia/declassification-transparency-initiatives/historical-releases/view/article/3880193/capt-grace-hopper-on-future-possibilities-data-hardware-software-and-people-1982/",
-    "first_paragraph": " Official websites use .gov Secure .gov websites use HTTPS\nOn August 26, 2024, the National Security Agency (NSA)\u00a0released a digital copy of a videotaped lecture, \"Future Possibilities: Data, Hardware, Software, and People\" that Rear Adm. Grace Hopper gave to the NSA workforce on August 19, 1982. This lecture highlights technological foundational principles, valuable perspectives on leadership and shared experiences overcoming challenges in computer science and math. The legacy of Rear Adm. Grace Hopper continues to echo across the intelligence community to light the path for women in STEM.Civil Liberties,\u00a0Privacy,\u00a0& Transparency Office"
-  },
-  {
-    "title": "Predicting the Future of Distributed Systems (colinbreck.com)",
-    "points": 24,
-    "submitter": "borisjabes",
-    "submit_time": "2024-08-27T00:26:37",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=41363499",
-    "comments": [
-      "Quick plug as I think it's relevant: we're working on an open-source, distributed operating system: https://github.com/heyPuter/puter/We're trying to abstract a lot of things so that anybody can build apps that run in distributed environments. (As Typesense would say, \"No PhD required.\")\n \nreply",
-      "What does \"distributed\" mean? Looking through your link, what I see is a remote desktop app (e.g. client/server).\n \nreply"
-    ],
-    "link": "https://blog.colinbreck.com/predicting-the-future-of-distributed-systems/",
-    "first_paragraph": "There are significant changes happening in distributed systems. Object storage is becoming the database, tools for transactional processing and analytical processing are becoming one in the same, and there are new programming models that promise some combination of superior security, portability, management of application state, or simplification. These changes will influence how systems are operated in addition to how they are programmed. While I want to embrace many of these innovations, it can be hard to pick a path forward.If a new technology only provides incremental value, most people will question the investment. Even when a technology promises a step change in value, it can be difficult to adopt if there is no migration path, and risky if it will be difficult to change if it ends up being the wrong investment. Many transactional and analytical systems are starting to use object storage because there is a clear step-change in value, and optionality is mitigating many of the risk"
-  },
-  {
-    "title": "The Big Fringe Telescope (arxiv.org)",
-    "points": 35,
-    "submitter": "belter",
-    "submit_time": "2024-08-26T21:02:00",
-    "num_comments": 11,
-    "comments_url": "https://news.ycombinator.com/item?id=41362131",
-    "comments": [
-      "If I understand Table 4 [1] correctly, they estimate the cost to be $28.5M, which looks inexpensive for a cutting-edge telescope (BTW, the new html papers on arxiv are nice).Phys.org [2] has further details.[1] https://arxiv.org/html/2408.01386v1#S5[2] https://phys.org/news/2024-08-inexpensive-kilometer-telescop...\n \nreply",
-      "Has there ever once been a telescope that cost what was initially estimated? I would expect that price to more than double at least\n \nreply",
-      "A lot of these estimates seem to be using a projected present price - this is what it costs for the hardware if you build it now - rather than what it would cost if you delay 15 years to slow-roll the program and keep a portion of an academic lab's human resource (and thus a portion of a research university, who take their large cut) alive on shoestring grants in the meantime to run it.This is one of the many reasons I tend to favor doing big hardware spends on programs to complete them at scale in five years or less.  If it's projected at $50M for N science capability, why not built it at $100M for 10N science capability starting yesterday instead of building it at $125M for N science capability starting after fifteen years of being the hobby fixation of a few scientists?  There are large economies of scale associated with increasing manufacturing spend in an R&D intensive area, and larger associated with getting the results sooner than later.\n \nreply",
-      "The big spend is okay for construction executed by the trades but it doesn\u2019t scale to e.g. instrumentation or software. You can\u2019t integrate in parallel for many of the systems\n \nreply",
-      "[flagged]",
-      "\"ooga booga indigenous groups\"Whoa, wtaf dude?!?!\n \nreply",
-      "They're a troll that thrives on negative attention.\n \nreply",
-      "[flagged]",
-      "All the names of large telescopes have been jokes for some 3 decades already.\n \nreply",
-      "How are James Webb or Hubble  jokes? Genuinely curious\n \nreply"
-    ],
-    "link": "https://arxiv.org/abs/2408.01386",
-    "first_paragraph": "The Accessibility Forum starts next week! Sign up and join us in September.arXiv's Accessibility Forum starts next month!Help | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n                    Get status notifications via\n                    email\n                    or slack\n"
-  },
-  {
-    "title": "Show HN: Remove-bg \u2013 open-source remove background using WebGPU (bannerify.co)",
-    "points": 150,
-    "submitter": "anduc",
-    "submit_time": "2024-08-26T15:58:09",
-    "num_comments": 72,
-    "comments_url": "https://news.ycombinator.com/item?id=41358490",
-    "comments": [
-      "feels like it could be nice to abide by the license terms  \nhttps://bria.ai/bria-huggingface-model-license-agreement/> 1.1 License.  \n> BRIA grants Customer a time-limited, non-exclusive, non-sublicensable, personal and non-transferable right and license to install, deploy and use the Foundation Model for the sole purpose of evaluating and examining the Foundation Model.  \n> The functionality of the Foundation Model is limited. Accordingly, Customer are not permitted to utilize the Foundation  Model  for  purposes  other  than  the  testing  and  evaluation  thereof.> 1.2.Restrictions. Customer may not: \n> 1.2.2. sell, rent, lease, sublicense, distribute or lend the Foundation Model to others, in whole or in part, or host the Foundation Model for access or use by others.> The  Foundation  Model  made  available  through  Hugging  Face  is  intended  for  internal evaluation  purposes  and/or  demonstration  to  potential  customers  only.\n \nreply",
-      "A lot of these AI licenses are a lot more restrictive than old school open source licenses were.My company runs a bunch of similar web-based services and plan to do a background remover at some stage, but as far as I know there's no current models with a sufficiently permissive license that can also feasibly download & run in browsers.\n \nreply",
-      "Meta's second Segment Anything Model (SAM2) has an Apache license. It only does segmenting, and needs additional elbow grease to distill it for browsers, so it's not turnkey, but it's freely licensed.\n \nreply",
-      "AI model weights are probably not even copyrightable.\n \nreply",
-      "Surely they would at least be protected by Database Rights in the EU (not the US):>The TRIPS Agreement requires that copyright protection extends to databases and other compilations if they constitute intellectual creation by virtue of the selection or arrangement of their contents, even if some or all of the contents do not themselves constitute materials protected by copyrighthttps://en.wikipedia.org/wiki/Database_right\n \nreply",
-      "Those require the \"database\" in question to be readable and for every single element to be so too. Model weights don't satisfy that requirement.\n \nreply",
-      "The repo doesn\u2019t include the model.\n \nreply",
-      "Does the site not distribute it?\n \nreply",
-      "It doesn't, except that it runs it. There's no download link or code playground for running arbitrary code on it, so while technically it transfers the model to the computer where it's running (I think) it's not usually considered the same as distributing it.\n \nreply",
-      "Pretty sure downloading it to your browser counts as distributing it, legally speaking.\n \nreply"
-    ],
-    "link": "https://bannerify.co/tools/remove-bg",
+    "link": "https://blog.apnic.net/2021/11/18/vulnerabilities-show-why-starttls-should-be-avoided-if-possible/",
     "first_paragraph": ""
   },
   {
-    "title": "Harvard and MIT's $800M Mistake: The Triple Failure of 2U, EdX, and Axim (classcentral.com)",
-    "points": 17,
-    "submitter": "raybb",
-    "submit_time": "2024-08-27T00:34:05",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=41363549",
+    "title": "DisTrO \u2013 a family of low latency distributed optimizers (github.com/nousresearch)",
+    "points": 60,
+    "submitter": "SchwKatze",
+    "submit_time": "2024-08-27T18:32:37",
+    "num_comments": 21,
+    "comments_url": "https://news.ycombinator.com/item?id=41371083",
     "comments": [
-      "What a great write up!The EdX brand was amazing. It\u2019s sad what it\u2019s become.I don\u2019t know too much about classcentral but I hope that the blog post was written in the interest of seeing MOOCs thrive.\n \nreply",
-      "Interesting timeline. Makes you wonder if SoftBank was involved.\n \nreply"
+      "There's no information about what this is, beyond a teaser of a loss graph. Really hoping this is something that gets released to the world, not hidden behind closed doors.\n \nreply",
+      "Paper & code in the next couple months. We're workin on em :)\n \nreply",
+      "This seems huge no? Couldn't this enable \"community based\" ai training at home?\n \nreply",
+      "Most of the information about this is in this PDF (I hate when people publish interesting information exclusively in PDFs): https://raw.githubusercontent.com/NousResearch/DisTrO/main/A...I converted it to Markdown (using Gemini 1.5 Pro) and pasted it into a Gist here: https://gist.github.com/simonw/46a33d66e069efe5c10b63625fdab...From the abstract:> Training large scale neural networks typically involves sharing gradients between all accelerators, which necessitates specialized, high-speed interconnects. To address this, we introduce DisTrO, a family of architecture-agnostic and network-agnostic distributed optimizers that reduces the inter-GPU communication requirements by four to five orders of magnitude without relying on amortized analysis, enabling low-latency training of large neural networks on slow internet bandwidths with heterogeneous networking hardware.This could be a HUGE deal.Currently if you want to train giant LLMs you need a big pile of GPUs in the same location as each other due to the amount of information that needs to shuffle between them during training.If DisTrO works as intended, it will be possible to train models using GPUs in different places - potentially enabling SETI@home style training where thousands of people with gaming PCs at home could donate their GPU time to a large training effort.Their tweet about this has more: https://twitter.com/NousResearch/status/1828121648383566270> Nous Research is proud to release a preliminary report on DisTrO (Distributed Training Over-the-Internet) a family of architecture-agnostic and network-agnostic distributed optimizers that reduces the inter-GPU communication requirements by 1000x to 10,000x without relying on amortized analysis, and matches AdamW+All-Reduce in convergence rates. This enables low-latency training of large neural networks on slow internet bandwidths with heterogeneous networking hardware.> DisTrO can increase the resilience and robustness of training LLMs by minimizing dependency on a single entity for computation. DisTrO is one step towards a more secure and equitable environment for all participants involved in building LLMs.> Without relying on a single company to manage and control the training process, researchers and institutions can have more freedom to collaborate and experiment with new techniques, algorithms, and models. This increased competition fosters innovation, drives progress, and ultimately benefits society as a whole.\n \nreply",
+      "Awwww snaaaaap, decentralized skyneeet here we goooooo! Kidding of course, but very exciting breakthrough if this pans out.\n \nreply",
+      "As much as I liked the team, there is really no information other than the loss graph :(\n \nreply",
+      "That\u2019s not quite true. They also tested benchmarks and compared with an AdamW trained model.\n \nreply",
+      "Not reproducible, so this doesn\u2019t exist.\n \nreply",
+      "Look at the PDF in simonw\u2019s first link. There\u2019s plenty of information. One part looked like the communication requirements were reduced down to under 100MB. That suggests a communication rate that could be handled by dirt-cheap instances spread across the globe. Like on vast.ai or something.\n \nreply",
+      "I'd love to believe it's true but I suspect they're overstating the result, or it's a fluke. Presumably teams at large firms like Meta would have put a lot of effort into checking whether not-synchronise-every-step training could match synchronise-every-step training before investing hundreds of millions of dollars into the low-latency, high-throughput network hardware necessary for the latter.\n \nreply"
     ],
-    "link": "https://www.classcentral.com/report/2u-edx-bankruptcy/",
-    "first_paragraph": ""
+    "link": "https://github.com/NousResearch/DisTrO",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Distributed Training Over-The-Internet\n      This is the repository for DisTrO (Distributed Training Over-The-Internet), a family of low latency distributed optimizers that reduce inter-GPU communication requirements by three to four orders of magnitude.Join us on Discord if you're interested in helping research and build the future of distributed training.\n        Distributed Training Over-The-Internet\n      "
   },
   {
-    "title": "Fixing a bug in Google Chrome as a first-time contributor (cprimozic.net)",
-    "points": 468,
-    "submitter": "Ameo",
-    "submit_time": "2024-08-26T09:10:56",
-    "num_comments": 133,
-    "comments_url": "https://news.ycombinator.com/item?id=41355303",
-    "comments": [
-      "Congratulations! And thank you for the great write-up. I work with the Chromium code base a lot, and it can indeed be daunting. I use Sublime Text, which treats the code as plain text, apart from syntax highlighting. But it's also possible with at least VS Code to get some more intelligence, such as going to the definition or declaration of a function, etc.People who have now become interested in creating their own Chromium-based browser may want to take a look at my article: https://omaha-consulting.com/how-to-fork-chromium. It gives a high-level view of what goes into maintaining a Chromium fork.\n \nreply",
-      "From your post> you will (...) want to  change the name of your browser [to] \"Browser of Bliss\" instead of as \"Chromium\". You will find that this is already hard to do. The browser name is hard-coded in many places in the millions of lines of Chromium source code. (...) Viasat are offering a (...) fork called Rebel that makes this easierI am surprised that kind of change has not been upstreamed, or is Google actively working against forks?\n \nreply",
-      "It\u2019s just the kind of thing that happens in a huge, production codebase.There are plenty of reasons to be skeptical of Google, but some strings in multiple places isn\u2019t a good reason to be skeptical of the Chromium maintainers.\n \nreply",
-      "I know it's naturally happening in a large codebase, I'm asking why they specifically maintain a fork just for that instead of trying to push what are probably easy (but tedious) upstream fixes.\n \nreply",
-      "Purely guessing: abstracting a browser name is yet another abstraction layer. A later that is not needed by chromium. Maintainers of chromium primarily care about maintainability of chromium, not other forks.\n \nreply",
-      "I'd also be surprised if that browser name is \"Chromium\", given that Google Chrome doesn't brand itself as such. (And vice versa.)\n \nreply",
-      "It depends on the individual part of Chromium. Some teams seem to be much more open to contributions than others. (I believe to recall that this is also what someone at Viasat told me at some point, but I'm not sure).Also, for example the browser name appears in a lot of places. It is very hard to fully extract it into a single configurable option.\n \nreply",
-      "> is Google actively working against forksThey could not accept those changes without being actively against forks. It would just mean they aren't actively supporting forks, which is a different thing.\n \nreply",
-      ">So how much does it cost to maintain a Chromium fork?\n>It obviously depends on the number of customizations your browser has, and on how quickly you want to incorporate security fixes from upstream. Chromium is one of the world's most complex pieces of software, and you need very capable engineers and powerful hardware to match this. It is going to be expensive. And not just once, but also on an ongoing basis.This confirms my thoughts after I tried messing with chromium's and brave's code bases.\n \nreply",
-      "I dunno, I've maintained a personal fork since around Chrome 100 or so. I am only targeting builds on Linux, I don't care about branding, and my patches are limited to about 300 lines total. The initial fork and figuring out the build process took probably 20 hours. After that, I've only had to spend on average around one hour per release of \"engineering time\" to keep my patches current. The build takes about an hour of machine time on my 5950x.I'm not saying it's trivial by any means, but I don't think it's outside the range of a motivated hobbyist or a small startup. I don't think you really need \"very capable engineers\" personally. I barely know C or C++ and I haven't had too much trouble working with the codebase.\n \nreply"
-    ],
-    "link": "https://cprimozic.net/blog/fixing-a-bug-in-google-chrome/",
-    "first_paragraph": "The BugGetting the Code + Building ChromiumFinding the Bug + Making the FixTesting + Code ReviewReleaseResults + RetrospectiveI recently finished up the process of fixing a bug in the Chromium/Google Chrome web browser.  It was my first time contributing to the Chromium project or any other open source project of that scale, and it was a very unique experience compared to other open source work I've done in the past.I figured that I'd write up an overview of the whole process from beginning to end to give some perspective for any other devs looking to try this kind of work themselves.The bug I fixed was in the Chromium Devtools - specifically the integration between Devtools and network requests made by worklets running off the main thread such as AudioWorklet.Network requests made by worklets - including the request to fetch the worklet's entrypoint JavaScript source file - were completely missing in the Devtools network tab.In addition, the \"Disable Cache\" Devtools option was also ig"
-  },
-  {
-    "title": "Vim Racer (vim-racer.com)",
-    "points": 173,
-    "submitter": "udev4096",
-    "submit_time": "2024-08-25T13:12:13",
-    "num_comments": 41,
-    "comments_url": "https://news.ycombinator.com/item?id=41347051",
-    "comments": [
-      "Hi, I just engraved myself in the highscore for the jpeg level with 17 seconds. What a lovely competitive game! I had great fun just \"shooting from the gut\" (no minmaxing, just did the movements i would do \"instinctively\" to get to the requested position)\nI particularly cherish the \"show me the moves of leaderboard games\" feature which hopefully can serve as an educational resource.In regards to how the leaderboard is constructed, i noticed some of the top players are at 1 second, which doesn't seem humanly possible to me (that would amount to < 0.05 seconds per move). my assumption is they are using scripted input, which with this interface will be hard to prevent. i read you are still figuring out how to regulate everything, so here's an idea: if you rank the leaderboard by number of keystrokes (might consider special handling for shift etc.) instead of time elapsed, you will get the most efficient leaders instead of the fastest ones - that way scripting wouldn't help cheaters anymore.All the best moving forward!\n \nreply",
-      "Well you can search for the shortest command combination to reach that position, at least to some extent.\n \nreply",
-      "VimGolf does it this way.\n \nreply",
-      "It's unfortunately very broken.\n \nreply",
-      "Do you mean vimgolf or Vim Racer?\n \nreply",
-      "This is super fun, do you know any other vim games like this? I've always wanted to vim (emacs evil mode user) but I'm not exactly fast.\n \nreply",
-      "There's Vim Adventure which is more tutorial than a game bit still: https://vim-adventures.com/\n \nreply",
-      "Vim Adventure is great! I find it annoying that it's 25$ for 6 months, because I definitely won't pay again just to quickly redo one level. I think a one-time payment would be more fair.Or maybe if they keep adding level, we could pay per level, so that the levels that have already been paid would stay forever? I don't know.\n \nreply",
-      "vimgolf.com is a classic\n \nreply",
-      "This is really cool, I ran into a bug where I deleted a line that the program would have targeted in a future step which crashed it for me though\n \nreply"
-    ],
-    "link": "https://vim-racer.com/",
-    "first_paragraph": "The goal of the game is to navigate to every target as quickly as possible. You have access to every vim motion command, so the most efficient time will make use of them. To start the race, click reset. Now your browser will be focused on the editor, so you can immediately starting using vim motions like 'w'. Thank you for playing, and any feedback is greatly encouraged through our reddit community!80s pop hits \ud83d\ude0e. The game's design is loosely inspired by the 80s: neon fashion and a pixel art font.The editor uses relative line numbers by default. In the future, users will be able to toggle this setting on or off.I'm still learning how to best regulate this game, and I'm learning more about how capable the community is; a very talented and avid user 'how', recently demonstrated that <2 seconds is a legit score. The game is trying to measure how well a user can navigate through text, manually, so while a <20ms score demonstrates resourcefulness with VIM, it is against the spirit of the ga"
-  },
-  {
-    "title": "Many FDA-approved AI medical devices are not trained on real patient data (medicalxpress.com)",
-    "points": 44,
-    "submitter": "clumsysmurf",
-    "submit_time": "2024-08-26T22:10:36",
-    "num_comments": 23,
-    "comments_url": "https://news.ycombinator.com/item?id=41362737",
-    "comments": [
-      "\"226 of 521 FDA-approved medical devices, or approximately 43%, lacked published clinical validation data.\"The lack of \"published\" clinical validation studies implies neither that the AI developer performed no clinical validation nor that the FDA hasn't seen it. So, it is not clear if the problem is with the lack of clinical validation or the lack of reporting.\nFor some reason the title exaggerates yet further (half of FDA-approved AI not \"trained\" on real patient data).\n \nreply",
-      "In the spirit of the authors' point of sharing one's supporting evidence, could you please share the data and code for scraping the list of devices from the FDA website? :)\n \nreply",
-      "Not a surprise. I worked on a \u2018AI\u2019 health insurance product for several years and even getting access to data was a struggle.\n \nreply",
-      "I'm not sure if this is relevant, but Ben Goldachre in the UK is working on how to get access to NHS patient data in a privacy-preserving manner [0]. My understanding is that you essentially submit your analysis and it is run against live data but you only recieve summary results. I'm not sure if this could be adapted to training.[0] https://assets.publishing.service.gov.uk/media/624ea0ade90e0...\n \nreply",
-      "The problem with this approach is it is very hard to do data science with messy clinical data when you have no mechanism of investigating the data yourself.\n \nreply",
-      "I really wish you had used \"impossible\" instead of \"a struggle\".\n \nreply",
-      "Yep, I'm in the rare disease space. \"impossible\" is pretty appropriate.It's tricky. On the one hand, it's obviously not appropriate to be flippant about patient privacy. On the other, it's clearly that advancements in human health are being hindered by our current approach to (dis)allowing researchers access to data.\n \nreply",
-      "For me it's a situation of \"once bitten, twice shy\". What are the odds the medical data intended for research will be handled correctly and not used outside of its intended purpose?\n \nreply",
-      "What are the potential downsides to misuse of health data? Genuinely asking - I'm not sure what someone malicious would do with my health records, especially if it's anonymized.\n \nreply",
-      "There are several examples of anonymized data not being so anonymized after all and able to be traced back to the person. As far as what could someone malicious do with health records, you have a contingent of people in some states hunting down women for having abortions so that might be something you don't want getting out there. Or you might be someone in a very religious area and you don't want people finding out you're getting AIDS treatment.\n \nreply"
-    ],
-    "link": "https://medicalxpress.com/news/2024-08-fda-ai-medical-devices-real.html",
-    "first_paragraph": "\n\n                  Click here to sign in with\n                  \n\n\n                  or\n                  \n\n\n\n\nForget Password?\n\nLearn more\nshare this!21TwitShareEmail\n                                                        August 26, 2024\n                                                        \n                                                    \n                                                    This article has been reviewed according to Science\u00a0X's \n                                                    editorial process\n                                                    and policies.\n                                                    Editors have highlighted\n                                                    the following attributes while ensuring the content's credibility:\n                                                \n fact-checked\n                                                    \n peer-reviewed publication\n                                                    \n trusted sou"
-  },
-  {
-    "title": "Roame (YC S23) Is Hiring an iOS Founding Engineer (ycombinator.com)",
+    "title": "EasyPost (YC S13) Is Hiring (easypost.com)",
     "points": 0,
     "submitter": "",
-    "submit_time": "2024-08-26T21:01:16",
+    "submit_time": "2024-08-27T21:01:46",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://www.ycombinator.com/companies/roame/jobs/e8G5FJF-founding-ios-engineer",
-    "first_paragraph": "Google flights using credit card points and milesOur mission is to make travel perfect. We empower everyone to search for flights using their credit card points and miles, which that are at least ($70 billion+ issued annually). By constantly monitoring available flight stock, we delight millions of users by finding them their dream flights and have saved members tens of millions in flights.We are growing extremely quickly: Hundreds of thousands of users, many of which are paid \u2014 this is just the beginning.\n\nRoame was part of Y Combinator\u2019s Summer 2023 class.We are hiring a Founding iOS engineer team member who has an owner mentality, can wear many hats, and is at least somewhat interested in points or aviation/travel. With Roame, there is no limit to how much responsibility you can take on from growth to operations to even product.You will report directly to the CTO and work closely with the engineering team. This position is in San Francisco with at least 4 days in-office per week. Yo"
+    "link": "https://www.easypost.com/careers",
+    "first_paragraph": "Solve complex shipping logistics problems with a single integration.Access our developer resources and learn how to easily integrate with the EasyPost API.Explore our company resources to learn more about EasyPost and the shipping industry.Our team of problem solvers brings a modern approach to shipping logistics. We collaborate across departments, ask challenging questions, explore new solutions, and take accountability for our wins and mistakes.As industry experts, we're working not only to help our customers make sense of the industry, but to define where it's headed. We are looking for candidates who are approachable, dynamic, inventive, intelligent, and reliable to join our team in unpacking the future of shipping.How can modern, flexible technology improve the customer experience of shipping? What if every business was able to offer same-day shipping? How much waste would be removed from the environment if all our shipments were consolidated into one delivery per week? At EasyPos"
   },
   {
-    "title": "Poor Foundations in Geometric Algebra (terathon.com)",
-    "points": 149,
-    "submitter": "ibobev",
-    "submit_time": "2024-08-24T08:51:00",
-    "num_comments": 47,
-    "comments_url": "https://news.ycombinator.com/item?id=41336657",
-    "comments": [
-      "I'm currently very slowly making my way through Geometric Algebra for Physicists by Doran and Lasenby. The book is a delight to read, but I'm not a mathematician, and this article is showing me that my small amount of understanding is...not nearly as deep, and especially not nearly as rigorous, as I would like. I should try to re-read with Eric's criticisms in mind.\n \nreply",
-      "Note don't to be confused with Algebraic Geometry they are different;When I first came across this topic it was eye opening, especially the fact that you could squeeze Maxwell's equations into one and the fact that pseudovector create by cross product from physics is just a bivector which in 3d could be represented like a vector orthogonal to the plane created by the two vectors in the productPrimer on the topic https://www.youtube.com/watch?v=60z_hpEAtD8 (And other videos on his channel)\nAnother greate playlist is https://www.youtube.com/watch?v=0VGMxSUDBH8&list=PLLvlxwbzkr...BTW the author has the following page https://projectivegeometricalgebra.org/ with great infographics and references\n \nreply",
-      "Hah! I knew Sudgy would be your first link. There's relatively little content about GA, but once you're hooked you begin to consume it all.It's like you never got to study Relativity, conformal geometry, electron spins, quaternions,  etc then someone comes with a simple cheat code which introduces you to these topics gently. It's like what category theory wants to do for mathematics, but simple.Here are additional resources:GA playground: https://enkimute.github.io/ganja.js/examples/coffeeshop.html...A physics engine in 100 lines (Gravity, Hook, and damping laws are just one line each!), and you can go from 2D to 3D to 4D by changing a single parameter: https://enki.ws/ganja.js/examples/pga_dyn.htmlOther resources: https://bivector.net/And anything by David Hestenes: https://worrydream.com/refs/Hestenes_2002_-_Reforming_the_Ma...\n \nreply",
-      "The absolute first video to watch should be the (ironically titled)\n Why can't you multiply vectors?https://www.youtube.com/watch?v=htYh-Tq7ZBI\n \nreply",
-      "As a former mathematician from one of the more elitist subfields of math, I have to say this is the first time I\u2019ve heard anyone claim geometric algebra lacks rigor.\n \nreply",
-      "I'm a big fan of Eric Lengyel, and I never would have ever gotten my arms around Geometric Algebra if it hadn't been for his books and articles.  How many people can do theoretical math AND code a state-of-the-art game engine?  The guy is a walking, coding miracle.So if I'm a little critical of the tone of the article, it comes from a place of love.  There has been a very toxic, clickish vibe in Geometric Algebra circles, which have lead to some pseudo-disputes among those who should be natural allies.One such is that Gunn, et al, prefer to represent a 3D vector using a dual basis (e.g. [a1, a2, a3]^T = a1*e32 + a2*e31+ a3*e12) whereas Lengyel prefers to just represent them as a1*e1 + a2*e2 +a3*e3.   Some really unfortunately hostile back and forth arguing about which one is \"the right way\"--when in reality, it's a big-endian vs little-endian thing.   One of the best parts of projective geometric algebra is that you can flip back and forth to the dual representation whenever you want to, according to what makes sense to you--and what makes the problem at hand easier to solve.  Moreover, if you look at the actual calculations doing it one way vs doing it the other it's the same damn exact numbers being multiplied/added in the same damn way.  It's not quite as silly as arguing about what font numbers should be printed with, but it's pretty close.The tone  of the article reflects wounds which are still pretty sore from these sorts of battles.  So I understand.  But sometimes the invective goes a bit to far.An example of this is his critique of Gunn's initial cut of dualizaiton for PGA.  The fact that e0 is not invertible is a big, fat wart, for sure.  And frankly, I spent weeks trying to understand Gunn's workaround and its wierd lingo.  J-map?  What in the world is a J-map?  I finally understood the concept, but I've never found out what \"J\" stands for :-)   And Lengyel's treatment is much smoother and more coherent.Yet, I don't think Gunn should be criticized for it at all.  It was an act of courage for Gunn to come up with his janky J-map, and not let its janky-ness stop him and the rest of the field from moving forward.   Sometimes that is exactly what is required in mathematics.  For example, infinitesimals.  For centuries, mathematicians from Archimedes to Newton found them indispensible, even though they had absolutely no coherent mathematical foundation.  In point of fact, if you listen to, say, a Feynman lecture, you'll find that they are still indispensible today.  But they didn't have any kind of mathematical foundation until the 1960's, when Robinson found a way to coherently axiomitize them.I saw a video of Freeman Dyson once, where he was talking about how he was able to prove something which was a longstanding open problem.  He described his proof as \"very ugly\" and then went on to say (with tongue partly in cheek) that you can judge how great a mathematician is by how many ugly proofs he creates :-)  Because the first time something is proved, the proof is almost always very ugly.  It's not until other mathematicians come in and find connections with other branches of math, and start being able to come up with more elegant proofs.So let's celebrate the ugly, messy, janky-ness which is the reality of how mathematics is actually created, and the courage of the mathematicians to not rat-hole and bike-shed.Eric Leyngel's presentation of projective geometric algebra is, IMHO, far more coherent and elegant than any other presentation.  His books (and his source code) are a joy to read.  For a newb like me, it is far easier and quicker to absorb.   Isn't that good enough?  Did he really have to go on to flame everybody else to a crisp?  sigh  like I said, he has been subjected to very unfair and toxic pillorying, and the wounds are still fresh, so like I said, I understand.  But its very regrettable nevertheless.\n \nreply",
-      "So, I've shipped a game with his engine, so have a unique relation ship with him, and he's a complicated individual.To be clear, he is a very talented, intelligent individual. But he form strong opinions, has a very hard time taking criticism, or understanding other people's differing context, and has a hard time not taking disagreements personally.This is really nothing new from him. I think the best way to interact with him, is hear out his points, and use them to synthesize your own viewpoint. And be careful to take his views as your own. I think if you do that, you can learn a lot from him, but to be careful as his strong disagreements are often more nuanced then he makes them out to be.\n \nreply",
-      "// I've shipped a game with his engine //Do you have a blog post or write-up about the experience?  I'd love to know more about what working with both the engine and the man is like--and I suspect there's more stories to be told :-)\n \nreply",
-      "Lengyel's post doesn't discuss the whole plane-based vs. point-based war at all, and he makes it clear in his book that both approaches are equivalent. He actually says both are happening at the same time whichever way you look at it, but I'm still trying to wrap my head around that. Gunn is not one of the authors of the material Lengyel is talking about in his post.\n \nreply",
-      "I don't think Lengyel is criticizing anything for just being ugly. When he says something is janky, it's because there's something mathematically wrong/incorrect/broken with it.\n \nreply"
-    ],
-    "link": "https://terathon.com/blog/poor-foundations-ga.html",
-    "first_paragraph": "Eric Lengyel \u00a0\u00a0\u2022\u00a0\u00a0 August 23, 2024You\u2019ve got to get the fundamentals down, because otherwise the fancy stuff is not going to work.\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u2014Randy PauschI have been involved in exterior algebra and geometric algebra research for about 15 years now. Over that time, I have developed a good intuition for how these subjects are viewed by mathematicians outside the field.\n\tTheir opinions are often not positive due to (a) a perceived lack of mathematical rigor and (b) a very real toxicity within the geometric algebra community. I can\u2019t do much about (b), but I have a lot to\n\tsay about (a), and that\u2019s what this post is about. Many of the foundational concepts in geometric algebra (GA) are poorly designed at the defining level and/or hijack the meanings of well established terminology.\n\tThis frequently leads to inelegant hacks that I like to call \u201cduct tape and rubber bands\u201d arising elsewhere to compensate for the shaky foundations. I am going to focus on three particular concepts,\n\tinner product"
-  },
-  {
-    "title": "Launch HN: Parity (YC S24) \u2013 AI for on-call engineers working with Kubernetes",
-    "points": 62,
-    "submitter": "wilson090",
-    "submit_time": "2024-08-26T14:55:56",
-    "num_comments": 52,
-    "comments_url": "https://news.ycombinator.com/item?id=41357765",
-    "comments": [
-      "Azure Kubernetes Wrangler (SRE) here, before I turn some LLM loose on my cluster, I need to know what it supports, how it supports it and how I can integrate into my workflow.Videos show CrashLoopBackOff pod and analyzing logs. This works if Pod is writing to stdout but I've got some stuff doing straight to ElasticSearch. Does LLM speak Elastic Search? How about Log Files in the Pod? (Don't get me started on that nightmare)You also show fixing by editing YAML in place. That's great except my FluxCD is going revert since you violated principle of \"All goes through GitOps\". So if you are going to change anything, you need to update the proper git repo. Also in said GitOps is Kustomize so hope you understand all interactions there.Personally, the stuff that takes most troubleshooting time is Kubernetes infrastructure. Network CNI is acting up. Ingress Controller is missing proper path based routing. NetworkPolicy says No to Pod talking to PostGres Server. CertManager is on strike and certificate has expired. If LLM is quick at identifying those, it has some uses but selling me on \"Dev made mistake with Pod Config\" is likely not to move the needle because I'm really quick at identifying that.Maybe I'm not the target market and target market is \"Small Dev team that bought Kubernetes without realizing what they were signing up for\"\n \nreply",
-      "I basically want to +1 this. OP isn't selling to any place that is already spending six figures on SRE salaries. Actual competitors are companies like Komodor and Robusta who sell \"we know Kubernetes better than you\" solutions to companies that don't want to spend money on SRE salaries. Companies in this situation should just seriously reconsider hosting on Kubernetes and go back to higher-level managed services like ECS/Fargate, Fly/Railway, etc.\n \nreply",
-      "Im sure this is on their roadmap, but honestly a pre-requisite should be a separate piece of software that analyzes and suggests changes to your error handling.This is a cool proof of concept but almost useless otherwise in a production systemI can already feed Claude or ChatGPT my kubectl output pretty easilyError handling and logging that are tailored for consumption of a specific pre trained model, thats where this will be ground breaking\n \nreply",
-      "The AI needs to be integrated into Dev IDE. All my logging screaming is terrible decisions made by long ago Devs but getting them fixed now is impossible because they don't want to do it and no one is going to make them.\n \nreply",
-      "That is something we're working on -- good observability is a place where teams usually fall short and often the limiting factor to better incident response. We're working on logging integrations as a first step.\n \nreply",
-      "> CertManager is on strike and certificate has expiredHad a good chuckle here, hah.\n \nreply",
-      "Your comment brings up a good point (and also one of our big challenges): there is a huge diversity in the tools teams use to setup and operate their infra. Right now our platform only speaks to your cluster directly through kubectl commands. We\u2019ll build other integrations so it can communicate with things like Elastic Search to broaden its context as needed, but we\u2019ll have to be somewhat thoughtful in picking the highest ROI integrations to build.Currently, we only handle the investigation piece and suggest a remediation to the on-call engineer. But to properly move into automatically applying a fix, which we hope to do at some point, we\u2019ll need to integrate into CI/CDAs for the demo example, I agree that the issue itself isn\u2019t the most compelling. We used it as an example since it is easy to visualize and set up for a demo. The agent is capable of investigating more complex issues we've seen in our customer's production clusters, but we're still looking for a way to better simulate these on our test environment, so if you/anyone has ideas we\u2019d love to hear them.We do think this has more value for engineers/teams with less expertise in k8s, but we think SREs will still find it useful\n \nreply",
-      ">we're still looking for a way to better simulate these on our test environment, so if you/anyone has ideas we\u2019d love to hear them.Pick Kubernetes offering from big 3, deploy it then blow it up.(I couldn't get HackerNews to format properly and done fighting it)On Azure, deploy a Kubernetes cluster with following:Azure CNI with Network PoliciesApplication Gateway for ContainersExternal DNS hooked to Azure DNSIngress NginxFlexible PostGres Server (outside the cluster)FluxCD/ArgoSomething with using Workload IdentityOnce all that is configured, put some fake workloads on it and start misconfiguring it with your LLM wired up. When the fireworks start, identify the failures and train your LLM properly.\n \nreply",
-      "> we think SREs will still find it usefulThere are two kinds of outages: people being idiots and legit hard-to-track-down bugs. SREs worth their salt don't need help with the former. They may find an AI bot somewhat useful to find root cause quicker, but usually not so valuable as to justify paying the kind of price you would need to charge to make your business viable to VCs. As for the latter, good luck collecting enough training data.Otherwise, you're selling a self-driving car to executives who want the chauffeur without the salary. Sounds like a great idea, until you think about the tail cases. Then you wish you had a chauffeur (or picked up driving skills yourself).Maybe you'll find a market, but as an SRE, I wouldn't want to sell it.\n \nreply",
-      "It would be kind of interesting if, based on an engineer accepting the suggestion, parity generated a new run book.This would allow repeated issues to be well documented.On iOS Firefox, when clicking \u201cpricing\u201d on the menu, it scrolls to the proper location, but does not close the menu. Closing the menu causes it to jump to the top of the page. Super annoying.\n \nreply"
-    ],
-    "link": "item?id=41357765",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Helen Fisher, who researched the brain\u2019s love circuitry, has died (nytimes.com)",
-    "points": 95,
-    "submitter": "dadt",
-    "submit_time": "2024-08-26T03:41:09",
-    "num_comments": 25,
-    "comments_url": "https://news.ycombinator.com/item?id=41353811",
-    "comments": [
-      "https://archive.ph/SsScR",
-      "This is her explaining her research on NPR:https://text.npr.org/2014/04/25/301824760/what-happens-to-ou...\n \nreply",
-      "Reminds me of \u201climbic resonance\u201d\n \nreply",
-      "One of her books ended up being the primary book-nerd prep homework for my first serious relationship, and it was helpful.\n \nreply",
-      "> firstMaybe should have studied more\n \nreply",
-      "Maybe Helen Fisher should've written a followup book, on the advanced topic of computer nerds pairing with brilliant artists.\n \nreply",
-      "Which book was that?\n \nreply",
-      "Probably \"Anatomy of Love\".\n \nreply",
-      "https://www.nytimes.com/2024/08/23/science/helen-fisher-dead...\n \nreply",
-      "Her TED talk is legendary. Thank you.\n \nreply"
-    ],
-    "link": "https://www.nytimes.com/2024/08/23/science/helen-fisher-dead.html",
-    "first_paragraph": ""
-  },
-  {
-    "title": "The Tao of Unicode Sparklines (2021) (jonudell.net)",
-    "points": 60,
-    "submitter": "fanf2",
-    "submit_time": "2024-08-25T14:42:02",
-    "num_comments": 25,
-    "comments_url": "https://news.ycombinator.com/item?id=41347635",
-    "comments": [
-      "This is a great hack, but it makes bad sparklines. It\u2019s probably about as good as you can get with unicode, so props to Jon.Sparklines have a few important properties which these do not exhibit. They\u2019re typically higher resolution, with more data per inch. Also the slopes from point to point, and the whitespace under the typical graph/sparkline, help readability.\n \nreply",
-      "I recently had to look at the implementation of the Sparkline [1] widget in Ratatui which uses a similar Unicode technique but scales nicely for sparklines with larger vertical size.[1] https://github.com/ratatui/ratatui/blob/20c88aaa5b9eb011a522...\n \nreply",
-      "Maybe we need terminal escape codes to temporarily switch to linked alternative fonts. ;)\n \nreply",
-      "Meta: for the old fogies out there, Jon Udell used to write for BYTE back in the day:* https://en.wikipedia.org/wiki/Jon_UdellHe stood up their first web site in 1995:> One day this spring, an HTTP request popped out the back of my old Swan 386/25, rattled through our LAN, jumped across an X.25 link to BIX, negotiated its way through three major carriers and a dozen hosts, and made a final hop over a PPP link to its rendezvous with BYTE's newborn Web server, an Alpha AXP 150 located just 2 feet from the Swan.* https://web.archive.org/web/19990128182622/http://www.byte.c...* https://twitter.com/judell/status/1278883833903898624* https://vintageapple.org/byte/pdf/199507_Byte_Magazine_Vol_2...\n \nreply",
-      "the unicode angle is great for moving sparklines back into the terminal especially making it into a postgres function, since it makes so much ad-hoc analysis easier at the point of query.it also solves the problem where sparklines feel useful to somebody reading a summary and not so useful to somebody that's just exploring data \"in the moment.\" having it be available in postgres is brilliant.a bit of shameless self promotion, i had done something similar ages ago but with a custom webfont and some small js to handle scaling of the input dataset, solving the problem of unicode graph characters not being baseline aligned well. http://nsfmc.github.io/chartjunk/ (turns into dust while looking at the last commit date)\n \nreply",
-      "FULL BLOCK is slightly shorter than LOWER SEVEN EIGHTHS BLOCK for me.  They would be the same height except LOWER SEVEN EIGHTHS BLOCK has some antialiasing that extends a tiny bit higher while FULL BLOCK is a solid edge.Also none of them drop below the baseline in the main page text, only in the code block.(Firefox on Ubuntu 20.04)\n \nreply",
-      "(Safari 17 on MacOS 14) FULL BLOCK is the largest to me, but also dips below the line by about as much as it is above LOWER SEVEN EIGTHS BLOCK.And unlike the author, LOWER HALF BLOCK (U+2584) does not dip below the line.Aah, multi-platform font rendering... ;)\n \nreply",
-      "Digital typefaces are fun! Because whether they render sensibly is 100% a font issue.\n \nreply",
-      "It\u2018s unfortunate that the fill blocks seem to dip below the baseline. It looks untidy.\n \nreply",
-      "It really depends on the font choice and terminal engine. Some terminals (such as VTE, which is the base for most Gnome terminals) renders blocks and boxes without using a font, which makes them perfectly fit the character cell.With Unicode 16, which is coming out very shortly, there will be 2x4 mosaics (originally identified on Kaypro CP/M machines), which have about half the vertical resolution of the blocks, but twice the time resolution (and allows us to leave Braille for what it was intended for).After this post came out, Unicode 13 introduced Teletext 2x3 mosaics and their \"smoothed\" versions (with diagonal lines). Those are also useful for sparklines.\n \nreply"
-    ],
-    "link": "https://blog.jonudell.net/2021/08/05/the-tao-of-unicode-sparklines/",
-    "first_paragraph": "Jon UdellStrategies for Internet citizensI\u2019ve long been enamored of the sparkline, a graphical device which its inventor Edward Tufte defines thusly:A sparkline is a small intense, simple, word-sized graphic with typographic resolution. Sparklines mean that graphics are no longer cartoonish special occasions with captions and boxes, but rather sparkline graphics can be everywhere a word or number can be: embedded in a sentence, table, headline, map, spreadsheet, graphic.Nowadays you can create sparklines in many tools including Excel and Google Sheets, both of which can use the technique to pack a summary of a series of numbers into a single cell. By stacking such cells vertically you can create views that compress vast amounts of information.In A virtuous cycle for analytics I noted that we often use Metabase to display tables and charts based on extracts from our Postgres warehouse. I really wanted to use sparklines to summarize views of activity over time, but that isn\u2019t yet an opti"
-  },
-  {
-    "title": "IOGraphica (iographica.com)",
-    "points": 53,
-    "submitter": "bookofjoe",
-    "submit_time": "2024-08-26T17:06:55",
-    "num_comments": 25,
-    "comments_url": "https://news.ycombinator.com/item?id=41359270",
-    "comments": [
-      "Weird lack of examples. I was curious but I am not going to download before I have some idea of what I am getting into.\n \nreply",
-      "I did this 13 years ago: https://blog.chewxy.com/2011/08/31/one-point-five-hours/\n \nreply",
-      "Examples: https://anatolyzenkov.com/iographica\n \nreply",
-      "My feelings exactly. Surely a gallery of examples wouldn't be hard to add?\n \nreply",
-      "damn, nostalgia hit. i installed this as a kid when it was called mousepath, and the sight of the result was definitely part responsible for my amateur interest in graphics.on the topic of graphic design, everything about the landing page (all images in a spritesheet btw), the press listing from gizmodo back when that meant something, what a class act. they really just don't make sites like this anymore. btw only just now clicked for me that one of the devs went on to pull that recent button stealer stunt; clearly his sense of technical fun hasn't dulled a bit over the years\n \nreply",
-      "For anyone fearing downloading and running a binary from an unknown source: it looks like the source is available: https://github.com/anatolyzenkov/IOGraph\n \nreply",
-      "I tried this once but my result was empty.I use vim btw\n \nreply",
-      "This is cool but also it makes me think about the security implications of giving away your mouse movement data. Seems like creating realistic mouse movements can be valuable for defeating anti-scraping systems. Some security software even claims to uniquely identify a user based on their mouse movement.\n \nreply",
-      "Downloadable software can be doing all sorts of things that you might not be aware of. Recording mouse movements is probably the least of your worries. So be a bit wary about what you download, especially free software from unknown sources.\n \nreply",
-      "From the article:> We guarantee that IOGraph is safe. Softpedia can confirm it!\n \nreply"
-    ],
-    "link": "https://iographica.com/",
-    "first_paragraph": "\n          IOGraph\u00a0\u2014 is\u00a0an\u00a0application that turns mouse\n          movements into contemporary art. The idea is\u00a0that you have the\n          program running in the background while doing your usual daily stuff\n          at\u00a0the computer. Go\u00a0back to\u00a0IOGraph after\n          a\u00a0while and grab a\u00a0nice picture of\u00a0what\n          you\u2019ve\u00a0done!\n          It\u2019s\u00a0fun, useless and totally free!\n\n          Or download it for\n          Windows or Linux.\n        \n          It\u2019s\u00a0simple application. Just push the round button\n          to\u00a0start.\n        Minimize IOGraph and forget about it\u00a0for a\u00a0while.Few hours later you\u2019ll\u00a0get your own piece of\u00a0art.\n          Formerly known as\u00a0MousePath it\u00a0was made by\u00a0Moscow\n          designer\n          Anatoly Zenkov\n          to\u00a0brighten up\u00a0the routine work. Posting\n          it\u00a0on\u00a0Flickr caused informal interest and afterward\n          Anatoly Zenkov and his colleague\n          Andrey Shipilov decided\n          to\u00a0evolve the app.\n        \n          But there\u2019s\u00a0always othe"
-  },
-  {
-    "title": "Show HN: Strict interfaces and dep management for Python, written in Rust (github.com/gauge-sh)",
-    "points": 25,
-    "submitter": "the1024",
-    "submit_time": "2024-08-26T16:58:28",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=41359181",
-    "comments": [
-      "Looks interesting, but I'm having a hard time understanding what this does that isn't covered by the ruff rules checking for uses of private functions or classes.It seems you can define an extra level of who's allowed to import what...but why would I want to add that on top rather than using standard conventions? Why would I want to let foo import baz, but not let bar import baz?\n \nreply",
-      "(author here)borplk hit this right on the head - the public/private distinction not sufficiently nuanced enough to handle the requirements of more complex codebases.To put your example in other words, I simply want baz scoped to foo. baz may be public for all members and sub-modules of foo, but external uses of baz outside of foo would create brittle and unwanted dependencies across my codebase.\n \nreply",
-      "(Not the author)In large codebases you can have a problem where people randomly import things from different locations leading to a host of issues including circular import issues.For example someone finds a convenient helper function in \"my_thing.foo.bar.helpers\" and imports it but you don't want that dependency between those modules and the helper function was not intended to be used outside of that module.In Python this problem is especially severe because there is no native module encapsulation mechanism other than a weak conventio of using the underscore prefix.A tool like this helps you enforce \"intentional\" module boundaries so modules can't randomly reach into each other to import things. You will be forced to consider an intentional modular design where the helpers that are needed by many things are separated out and other things are allowed to import from it.\n \nreply",
-      "Some related work from the same people, around how they sped up their AST analysis [0]. It looks like they have a few tools that would be very useful for wrangling existing python codebases and getting them under control.[0] https://www.gauge.sh/blog/python-extensions-should-be-lazy\n \nreply"
-    ],
-    "link": "https://github.com/gauge-sh/tach",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A Python tool to enforce dependencies, using modular architecture \ud83c\udf0e Open source \ud83d\udc0d Installable via pip \ud83d\udd27 Able to be adopted incrementally - \u26a1 Implemented with no runtime impact \u267e\ufe0f Interoperable with your existing systems \ud83e\udd80 Written in rust\n      \n\n\n\n\n\na Python tool to enforce dependencies, written in Rust. Inspired by modular monolithic architecture.DocsDiscordTach lets you define and enforce dependencies between Python modules within your project.Here's an example:If a module tries to import from another module that is not listed as a dependency, Tach can prevent it.Tach is:Tach allows you to configure where you want to place module boundaries in your project.You can do this interactively - run:Mark each module boundary with 'Enter'. You can mark all of your top-level Python source packages, or just a few which you want to isolate.If"
-  },
-  {
-    "title": "Eating the Birds of America: Audubon's Culinary Reviews of America's Birds (usbirdhistory.com)",
-    "points": 107,
-    "submitter": "Morizero",
-    "submit_time": "2024-08-26T16:55:16",
-    "num_comments": 68,
-    "comments_url": "https://news.ycombinator.com/item?id=41359132",
+    "title": "How Chrome Accessibility Works (googlesource.com)",
+    "points": 33,
+    "submitter": "lelandfe",
+    "submit_time": "2024-08-27T19:41:59",
+    "num_comments": 9,
+    "comments_url": "https://news.ycombinator.com/item?id=41372028",
     "comments": [
       "xxx"
     ],
-    "link": "https://usbirdhistory.com/audubon-eating-americas-birds/",
+    "link": "https://chromium.googlesource.com/chromium/src/+/main/docs/accessibility/browser/how_a11y_works.md",
+    "first_paragraph": "This document explains the technical details behind Chrome accessibility code by starting at a high level and progressively adding more levels of detail.Please read the accessibility overview first.As described in the overview, every platform has its own accessibility APIs that are used by both assistive technology and sometimes by automation software. To better understand the challenges of accessibility support in Chromium, let\u2018s first explore what it\u2019s like to build an accessible application using a standard UI toolkit.Examples of standard toolkits would be Win32 UI controls or .NET components on Windows, or Cocoa NSViews on macOS, or Android Views via Java or Kotlin. When you use such a toolkit to build an application, a lot of accessibility comes for free.Typically every UI element - including containers and grouping elements - gets its own corresponding accessibility element, implementing that platform\u2018s accessibility API. So if you add a button, checkbox, scroll container, or tex"
+  },
+  {
+    "title": "Launch HN: Bucket Robotics (YC S24) \u2013 Defect detection for molded and cast parts",
+    "points": 75,
+    "submitter": "lasermatts",
+    "submit_time": "2024-08-27T14:12:45",
+    "num_comments": 19,
+    "comments_url": "https://news.ycombinator.com/item?id=41367750",
+    "comments": [
+      "xxx"
+    ],
+    "link": "item?id=41367750",
     "first_paragraph": ""
   },
   {
-    "title": "DOJ sues realpage for algorithmic pricing scheme that harms renters (justice.gov)",
-    "points": 610,
-    "submitter": "pseudolus",
-    "submit_time": "2024-08-23T15:51:46",
-    "num_comments": 514,
-    "comments_url": "https://news.ycombinator.com/item?id=41330007",
+    "title": "Slime mold simulation in Rust using WASM and WebGPU (github.com/plul)",
+    "points": 16,
+    "submitter": "sshine",
+    "submit_time": "2024-08-23T05:46:53",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=41326461",
     "comments": [
-      "Companies are culluding to suppress wages by algorithm, too.  Look up a company called Aon, and their product called Radford Data & Analytics.\n \nreply",
-      "~2019 I led a team of highly qualified security R&D folks inside Cisco (we were part of an acquisition), these folks were effectively highly specialized SWEs. But because the title was something like \"security researcher\" it was compared against the closet Radform ladder which was closer to to compliance officer.This meant the specialists were on a ladder with often lower pay than a standard SWE, and I couldn't shift the bureaucracy enough to change that. People left for all sorts of reasons but a big part was being able to get 2x-4x the total compensation at other companies.\n \nreply",
-      "If anyone else runs into this issue, typically the direct route for things like this is to get involved a discussion with someone in your Total Rewards / Global Compensation team. These are usually the people that confirm the mapping of internal positions to benchmarks, and there is huge between-organizations variability in the quality behind that process.Many times normal managers or more generalist HR Partners (especially if more junior) may not appreciate that this is a data error vs. a frustrated hiring manager trying to tell you their subjective feelings are more correct than policy.That having been said: I still think the whole thing stinks.\n \nreply",
-      "HR is not your friend. Corporate Confidential by Cynthia Shapiro is a recommended read.My advice; get a better offer elsewhere, then see if HR wants to pay you your worth.\n \nreply",
-      "The comment you replied to seems to be targeted at managers trying to advocate for their teams, not at individual contributors trying to advocate for themselves. I agree that reaching out to the compensation team as an IC is generally not going to be an appropriate or effective way to get a raise. But for managers, working with HR on issues like that is just part of the job.\n \nreply",
-      "Thank you, yes. This is not an uncommon managerial problem that is often resolved (not always; I've had both experiences), though perhaps not in a timely manner.\n \nreply",
-      "I'm currently fighting this. The benchmark for my team is 10-15% lower than just our area. And 30-40% lower than the nation. And it's because we get lumped in with lower skilled titles because of the title scheme on our campus.I can't get any traction with admin or HR, and we're both hemorrhaging people and can't bring in qualified new candidates.It's very frustrating.\n \nreply",
-      "I just went through this last week and the trick was getting my finance director to tell HR that she approved the higher amount I wanted to offer. HR will play games with your budget until you take the excuse away.",
-      "> HR is not your friend.Most people don't get this.HR exists to protect the company from the employees, not protect the employees from the company.\n \nreply",
-      "+1 It's called \"Human\" resources not \"Company\" resources for a reason.\n \nreply"
+      "I was curious to see this simulation running but there does not seem to be a running demo.I don't know if this is your creation or not, but I would really recommend having a running demo before publicizing work.  It is a sad reality in software that, no matter how much time and artistry is placed into a work, it needs to be rapidly consumable for it to be properly shared.Speaking for myself, I have a backlog of at least 50 projects, with at least 5 I jump around actively, while learning foreign languages, hiking, and living life.  As much as I want to see a slime mold simulation, if it doesn't run when I check the repo with a demo link that functions on my phone, my curiosity will have to end there.5 minute later:  alright so my curiosity didn't end.  It looks like the project is using 'just' for command running (for those unfamiliar, https://github.com/casey/just).  It isn't my preferred way to do things but you probably have it already like I do.20 minutes later:  alright so after cloning the repo and running \"just demo 512x512\" (it needs a resolution), it doesn't run.  It uses assert statements so the application crashes when it fails assertions.  We are in trouble because it doesn't gracefully select a texture format.  I printed what my gpu supports and tried to find a best match.After that, it doesn't support the requested blend mode, so I switched it to one that my gpu supports.When making a gpu app, make sure to adapt based upon the capabilities a GPU supports.  It isn't much harder to do this, while making it significantly more accessible for anyone using it -- even for fun or experimenting.While it runs, it doesn't do anything -- likely because it isn't running with the expected texture format and blend modes.Unfortunately, while I really want to see a slime mold simulation, I have to stop now before I refactor this entire project and make it consumable for anyone curious.  Then I will have a working \"slime mold simulation\" at the end of the day, and I am not sure how helpful that would be to anyone, including myself.\n \nreply",
+      "It's not clear that the author of the project is the one who posted, it may never have intended to get this attention. Given it only has the one commit & mentions having been presented, I imagine this project is \"done\".\n \nreply",
+      "Would be great to see a running demo.That said, I've recently become very fascinated with slime molds, particularly Physarum polycephalum.  I bought a kit to grow one on agar plates, and it's fascinating to witness its behavior in contrast to growing a fungus or a plant.  It's surprising the kind of decisions it makes.  Sometimes it focuses entirely on one piece of food, then gets \"bored\" and starts exploring its surroundings.  It forms networks between pieces of food, but not to the extent that I was expecting.  It's rather single-minded at times.  Perhaps that will change the older and bigger it gets.  Nevertheless, I can see why creating a simulation of one would be an engaging project.\n \nreply"
     ],
-    "link": "https://www.justice.gov/opa/pr/justice-department-sues-realpage-algorithmic-pricing-scheme-harms-millions-american-renters",
-    "first_paragraph": "An official website of the United States governmentHere's how you know\nOfficial websites use .gov\n\n              A .gov website belongs to an official government organization in the United States.\n            \nSecure .gov websites use HTTPS\n\n              A lock (   \n\nLock\nA locked padlock\n\n\n\n ) or https:// means you\u2019ve safely connected to the .gov website. Share sensitive information only on official, secure websites.\n            Archived NewsPara Not\u00edcias en Espa\u00f1olThe Justice Department, together with the Attorneys General of North Carolina, California, Colorado, Connecticut, Minnesota, Oregon, Tennessee, and Washington, filed a civil antitrust lawsuit today against RealPage Inc. for its unlawful scheme to decrease competition among landlords in apartment pricing and to monopolize the market for commercial revenue management software that landlords use to price apartments. RealPage\u2019s alleged conduct deprives renters of the benefits of competition on apartment leasing terms and harms"
+    "link": "https://github.com/plul/slime-mold-simulation",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Fun with wgpu: Simulating slime mold\n      This project was presented as a talk at Copenhagen Rust Meetup on 2024-03-27.\nA link to the recording will be placed here once it is up on Youtube.For patternfly-yew, the following was done:This is vendored and version controlled.\n        Fun with wgpu: Simulating slime mold\n      "
+  },
+  {
+    "title": "The Simple Algorithm That Ants Use to Build Bridges (2018) (quantamagazine.org)",
+    "points": 50,
+    "submitter": "silverkite",
+    "submit_time": "2024-08-24T14:29:38",
+    "num_comments": 10,
+    "comments_url": "https://news.ycombinator.com/item?id=41338581",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.quantamagazine.org/the-simple-algorithm-that-ants-use-to-build-bridges-20180226/",
+    "first_paragraph": "\nAn editorially independent publication supported by the Simons Foundation.\n\nGet the latest news delivered to your inbox.\nCreate a reading list by clicking the Read Later icon next to the articles you wish to save.Type search term(s) and press enterPopular\n                                    SearchesFebruary 26, 2018Vaishakh ManoharContributing WriterFebruary 26, 2018Army ants form colonies of millions yet have no permanent home. They march through the jungle each night in search of new foraging ground. Along the way they perform logistical feats that would make a four-star general proud, including building bridges with their own bodies.Much like the swarms of cheap, dumb robots that I explored in my recent article, army ants manage this coordination with no leader and with minimal cognitive resources. An individual army ant is practically blind and has a minuscule brain that couldn\u2019t begin to fathom their elaborate collective movement. \u201cThere is no leader, no architect ant saying \u2018we "
+  },
+  {
+    "title": "Rustproofing Linux (Part 1/4 Leaking Addresses) (2023) (nccgroup.com)",
+    "points": 57,
+    "submitter": "wglb",
+    "submit_time": "2024-08-27T17:34:52",
+    "num_comments": 8,
+    "comments_url": "https://news.ycombinator.com/item?id=41370344",
+    "comments": [
+      "Summary: a naive port of a kernel driver from C to Rust can easily introduce information leak vulnerabilities, which in kernel-style C were automatically prevented by preprocessor trickery.\n \nreply",
+      "More like: the Linux kernel re-implementation of Rust \"print\" has a bug that causes it to not adhere to Linux kernel conventions.I'd expect that now that the bug has been reported, it'd be fixed by just hashing pointer addresses before printing them.I also expect that \"reimplementing X in a different programming language\" introduces logic bugs, like the one above, and that those involved have deemed what they get out of it worth the effort of hashing these sort of bugs long term.From the kernel pov, all of these bugs are safety issues, so the article authors are surprised the unsafe keyword is not required to introduce them, but from Rust's pov, they are just logic bugs, which safe Rust does not protect against. One of the main challenges those working on Rust in the kernel will have is figuring out how to educate other kernel developers about Rust (what it does and does not protect against, setting the right expectations, etc.). I think these articles are a great step in that direction.\n \nreply",
+      "> article authors are surprised the unsafe keyword is not requiredThe often surprising part of raw pointers to system programmers newly dabbling in Rust is that every operation on them is safe, except for deref. You can freely take addresses and do pointer arithmetic on them without having to deal with unsafe, and only have to tell the compiler that you know what you are doing when you either load or store something through them.\n \nreply",
+      "> is figuring out how to educate other kernel developers about RustWhy have one class of logic errors when you can have two?\n \nreply",
+      "Why have any? Zero errors is trivially achievable by not writing code.\n \nreply",
+      "Why try to improve anything when you could just keep the original implementation around for forever?\n \nreply",
+      "As they say, if it ain't broke, don't fix it\n \nreply",
+      "I think \"pitfalls of porting Linux C to Rust\" would be a more descriptive title, if verbose.\n \nreply"
+    ],
+    "link": "https://research.nccgroup.com/2023/02/06/rustproofing-linux-part-1-4-leaking-addresses/",
+    "first_paragraph": "Enter a search termFebruary 6, 20239 mins readRust is a programming\nlanguage guaranteeing memory and thread safety while still being able to\naccess raw memory and hardware. This sounds impossible, and it is,\nthat\u2019s why Rust has an unsafe keyword which allows a\nprogrammer to dereference a raw pointer and perform some other dangerous\noperations. The dangerous code is effectively contained to\nunsafe blocks, which makes Rust an interesting option for\nembedded and system programming, where it could potentially be used to\nreplace C, which has a long history of memory safety\nvulnerabilities.The Linux Kernel, like many other\noperating system kernels, has a long history of memory and thread safety vulnerabilities. The Rust for Linux\nproject aims to add Rust language support to the Linux Kernel and\ntry to improve the security situation. Serious efforts to bring Rust\ninto the mainline started in April 2021 and after\nmany patch iterations, minimal Rust support has been merged into Linux\n6.1.With r"
+  },
+  {
+    "title": "Anthropic publishes the 'system prompts' that make Claude tick (techcrunch.com)",
+    "points": 346,
+    "submitter": "gemanor",
+    "submit_time": "2024-08-27T04:45:46",
+    "num_comments": 216,
+    "comments_url": "https://news.ycombinator.com/item?id=41364637",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://techcrunch.com/2024/08/26/anthropic-publishes-the-system-prompt-that-makes-claude-tick/",
+    "first_paragraph": "CommentGenerative AI models aren\u2019t actually humanlike. They have no intelligence or personality \u2014 they\u2019re simply statistical systems predicting the likeliest next words in a sentence. But like interns at a tyrannical workplace, they do follow instructions without complaint \u2014 including initial \u201csystem prompts\u201d that prime the models with their basic qualities and what they should and shouldn\u2019t do.Every generative AI vendor, from OpenAI to Anthropic, uses system prompts to prevent (or at least try to prevent) models from behaving badly, and to steer the general tone and sentiment of the models\u2019 replies. For instance, a prompt might tell a model it should be polite but never apologetic, or to be honest about the fact that it can\u2019t know everything.But vendors usually keep system prompts close to the chest \u2014 presumably for competitive reasons, but also perhaps because knowing the system prompt may suggest ways to circumvent it. The only way to expose GPT-4o\u2018s system prompt, for example, is t"
   }
 ]
