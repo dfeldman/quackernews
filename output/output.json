@@ -1,398 +1,365 @@
 [
   {
-    "title": "Crows Are Even Smarter Than We Thought (nautil.us)",
-    "points": 77,
-    "submitter": "dnetesn",
-    "submit_time": "2024-08-30T22:46:59",
-    "num_comments": 39,
-    "comments_url": "https://news.ycombinator.com/item?id=41405195",
+    "title": "Building LLMs from the Ground Up: A 3-Hour Coding Workshop (sebastianraschka.com)",
+    "points": 212,
+    "submitter": "mdp2021",
+    "submit_time": "2024-08-31T21:45:59",
+    "num_comments": 5,
+    "comments_url": "https://news.ycombinator.com/item?id=41412256",
     "comments": [
-      "Have posted this before, but it really left an impression about crows, and the bond between their mates:Years ago I was putting out the garbage in the back alley behind our building where I lived on the 8th floor. A crow attacked me out of the blue. Distracted by the attack, the back door slammed shut behind me. Since my key was only good for the front door, I had to walk around the building. That damn crow followed me the entire time, dive bombing my head, and screaming bloody murder at me. It was a little spooky.When I finally got back inside and upstairs, I went and looked out the living room window, which looked out the same direction as the back alley. The crow had flown back around and was at the 8th floor looking in the window, from the other side of the pigeon netting we had on our balcony. On the inside of the pigeon netting, was another crow, desperately trying to figure out how it could escape. Not really sure how it had got itself through the pigeon netting in the first place.I went out and sliced a hole through the netting and the trapped crow quickly joined its mate outside, who finally stopped screaming bloody murder. To this day it still amazes me that the crow's mate, knew which apartment I lived in and spotted me downstairs.\n \nreply",
-      "Sometimes I wonder whether we're being watched by a super intelligent species beyond our current detection that occasionally places objects in certain configurations in front of the smarter of our species throughout history, and writes articles based on their observations titled things like, \"homo sapiens smarter than previously known: demonstrates understanding of unified theory of electromagnetic waves through RF send/receive devices\"\n \nreply",
-      "Found Gary Larson's alt account.You should turn it into a short movie using AI. I have thought something similar but more along the lines that in the universe above us, we are 3 days into a science experiment and either a) they don't know we exist or b) the look in with their microscope and see patterns for cities or c) they have a statistical measure of how many have developed ecosystems and set off a nuclear weapon. But on the scales they are viewing, the known universe might fit into a 50cm sphere (their dimensions).\n \nreply",
-      "Honestly I envision this concept a lot; I was first inspired by Men in Black where a cat has a universe in a bauble attached to a collar around its neck. The bauble looks like a marble.\n \nreply",
-      "No, it most definitely is not.\n \nreply",
-      "Is a joke, it is very much in the theme of humans as test subjects, a common gag in his comics.\n \nreply",
-      "We're not the only intelligent life on earth. We cant even define intelligence or measure it meaningfully. If we accept that human children are smart, then we must accept that species at equivalent levels of cognition are as well.Elephants, crows, dolphins, octopi, chimps, orang utan are all clearly very smart, and more intelligent than a human child.Besides being biologically irrelevant, the separation between humans and animals creates this weird divide where we constantly assume that we are the only intelligent life. It feels to me a bit like thinking the earth is the center of the universe. Maybe one day we'll understand better what other minds are like and we'll understand better how we are not alone or special.\n \nreply",
-      "Ted Chiang has an excellent short story on this subject, regarding the construction of the Arecibo radio telescope as told from the perspective of a parrot: https://en.wikipedia.org/wiki/The_Great_Silence_(short_story...It's very short. Worth a quick read and a long thought.\n \nreply",
-      "IMO all life is intelligent in some way or form. Evolution itself is even intelligent in that it\u2019s a learning system that adapts and solves problems.\n \nreply",
-      "> This kind of feat, according to animal behavior researchers, requires the ability to form \u201cmental templates.\u201d Essentially, a mental template is an image in the mind of what a particular object looks like, even when that object is not present.As someone with aphantasia, can I get points for recreating something I've seen _without_ having an \"image in the mind\"?\n \nreply"
+      "This is excellent. Thanks for sharing. It's always good to go back to the fundamentals. There's another resource that is also quite good: https://jaykmody.com/blog/gpt-from-scratch/\n \nreply",
+      "Excuse my ignorance, is this different from Andrej Karpathy https://www.youtube.com/watch?v=kCc8FmEb1nYAnyway I will watch it tonight before bed. Thank you for sharing.\n \nreply",
+      "Andrej's series is excellent, Sebastian's book + this video are excellent. There's a lot of overlap but they go into more detail on different topics or focus on different things. Andrej's entire series is absolutely worth watching, his upcoming Eureka Labs stuff is looking extremely good too. Sebastian's blog and book are definitely worth the time and money IMO.\n \nreply",
+      "[flagged]",
+      "fair point bud\n \nreply",
+      "Nice write up Sebastian, looking forward to the book. There are lots of details on the LLM and how it\u2019s composed, would be great if you can expand on how Llama and OpenAI could be cleaning and structuring their training data given it seems this is where the battle is heading in the long run.\n \nreply"
     ],
-    "link": "https://nautil.us/crows-are-even-smarter-than-we-thought-820066/",
-    "first_paragraph": "Art+ScienceBiology + BeyondCosmosCultureEarthLifeMindOceanOne QuestionQuanta AbstractionsRewildingScience Philanthropy AllianceSpark of ScienceThe PortholeThe Reality IssueThe Rebel IssueWomen in Science & Engineering\nNew evidence suggests the corvid family has surprising mental abilities.  \nNew evidence suggests the corvid family has surprising mental abilities.  Crows and ravens, which belong to the corvid family, are known for their high intelligence, playful natures, and strong personalities. They hold grudges against each other, do basic statistics, perform acrobatics, and even host funerals for deceased family members. But we keep learning new things about the savvy of these birds, and how widespread that savvy is among the corvid family.Earlier this year, a team of researchers from Lomonosov Moscow State University in Russia and the University of Bristol found that a species of crow called the hooded crow\u2014which has a gray bust and black tail and head feathers, making it look lik"
-  },
-  {
-    "title": "CIEL Is an Extended Lisp (ciel-lang.org)",
-    "points": 281,
-    "submitter": "todsacerdoti",
-    "submit_time": "2024-08-30T15:04:19",
-    "num_comments": 72,
-    "comments_url": "https://news.ycombinator.com/item?id=41401415",
-    "comments": [
-      "Having a standard set ofwell documented things ready to go as if they were part of the core language, all with a single snazzy name, is soo important. I love this; Maybe it can become the new standard target. All it needs now is a good mascot or logo.\n \nreply",
-      "Where is this documentation? Honestly I don't see much here. I'd call this a readme, not documentation.\n \nreply",
-      "How so?? You should have a sidebar with menu entries. Try on http://ciel-lang.org/#/librariesoh, the sidebar disappears quickly when we scroll and it disappears when we click on \"show me\"\u2026 not great.\n \nreply",
-      "I was on mobile when I looked and I never saw the sidebar. Might be something that needs fixing. Love the project regardless.\n \nreply",
-      "Follow-up: apparently there is a sidebar. In my defense, on mobile, the sidebar is closed by default, and you have to click the tiny hamburger menu in the very bottom left of the screen. I did not see this.\n \nreply",
-      "thank you (both) for the feedback. I added links to the documentation at the end of the landing page.\n \nreply",
-      "It's linked on the GitHub front page, for some reason it's not in this link at all.\n \nreply",
-      "Could this get a wrapper for building ncurses & sdl cores so that maybe one day lem could run right on top of ciel and a true lisp environment could emerge?  https://news.ycombinator.com/item?id=41357409\n \nreply",
-      "I like to bring up Joker (https://github.com/candid82/joker) whenever there is a discussion of some lisp that is fast and convenient.Clojure syntax implemented in Go.I'm not affiliated I just think it's brilliant.CEIL's example in Joker:  (prn {:a 1 :b 2 :c 3})\n\nGist for downloading, installing and executing the above example: https://gist.github.com/lsh-0/f7df23777ef35a8cc3d85e1dcbf0eb...Executing script took 2.1s overall. Execution of example took 0.007s.\n \nreply",
-      "Can you easily compile a binary?(I assume you just use standard CL methods?)> [CIEL custom REPL ] has a shell pass-through: try !ls (available in the ciel-user package)That's a kickass feature.\n \nreply"
-    ],
-    "link": "http://ciel-lang.org/",
-    "first_paragraph": "CIEL Is an Extended Lisp\nGitHub\nShow me\n$ ./myscript.lisp\n\nYou need JavaScript to see the rest of the doc :( Just look at the GitHub repository. Cheers, EWW user maybe?\n"
-  },
-  {
-    "title": "Dinosaur Footprints on Either Side of the Atlantic Are Matching Sets (gizmodo.com)",
-    "points": 13,
-    "submitter": "nickthegreek",
-    "submit_time": "2024-08-26T15:53:39",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=41358432",
-    "comments": [
-      "Previous discussion: https://news.ycombinator.com/item?id=41352656\n \nreply",
-      "turns out Moses was a dinosaur\n \nreply"
-    ],
-    "link": "https://gizmodo.com/dinosaur-footprints-on-either-side-of-the-atlantic-are-matching-sets-2000490979",
+    "link": "https://magazine.sebastianraschka.com/p/building-llms-from-the-ground-up",
     "first_paragraph": ""
   },
   {
-    "title": "Using Fibonacci numbers to convert from miles to kilometers and vice versa (catonmat.net)",
-    "points": 178,
+    "title": "Boox Palma Review: A Phone-Sized E-Ink Android Device That Isn't a Phone (ewritable.com)",
+    "points": 51,
+    "submitter": "todsacerdoti",
+    "submit_time": "2024-08-31T22:40:00",
+    "num_comments": 38,
+    "comments_url": "https://news.ycombinator.com/item?id=41412582",
+    "comments": [
+      "I don't like being negative, but I feel like I am obligated to pipe up every time I see Onyx products hit the front page here[0], because I was one of the people who politely requested that Onyx abide by the terms of the licenses for the Free Software that they use in their products. To this day, they refuse to do so.- Onyx still doesn't release kernel sources for their products.- Onyx still uses outdated and vulnerable builds of Android, with questionable settings such as disabling SELinux- Their devices are very chatty back to servers in the PRC. And their privacy policies are pretty bad (and by bad, I mean non-existant! [1])- Their digitizer API is not very documented and difficult to build off of, so claims of being friendly to 3rd party developers are overblown.- They shut down their support forums when the chorus of disgruntled customers began to get too loudAnd even worse, they are using claims of \"anti-China movement\" as an excuse to not comply with the GPL [2].Please, we've got to stop shilling this company's products with these affiliate-link blogs. They seem completely opposed to the hacker 'ethos' of this site. Otherwise, why not also shill the hundreds of Oppo or Honor or Huawei phones being released every year?Edit: To give a positive remark, I recommend the reMarkable tablet. It's what I purchased after I sold my onyx tablet. It runs linux and they give you root access out of the box! There is a vibrant community of people developing programs for the rM and even running other linux distros on the device.[0]: https://news.ycombinator.com/item?id=21041543[1]: https://foundation.mozilla.org/en/privacynotincluded/onyx-bo...[2]: https://old.reddit.com/r/Onyx_Boox/comments/hsn7kx/onyx_usin...\n \nreply",
+      "This company and its products keep gracing the HN front page. I'm not sure why.Flagging the article will help.\n \nreply",
+      "I tried their 25 inch monitor. E-Ink is such a better experience. I don't feel so jacked in to the matrix when I use it.The ghosting and refresh rate are holding this technology back though. Definitely not main driver status yet.LED and LCD screens seem to shift the brain into an agitated frequency. I wish they'd make more progress with E-Ink!\n \nreply",
+      "The Moaan Plus (available on AliExpress and from other dropshipping marketplaces) also sports an e-ink display in a similar size, is significantly cheaper, and just as functional as a single-purpose e-reader device. Just takes a bit of tweaking to overcome the initially chinese-only interface and sideload a replacement keyboard (the default one is horrendous) and e-reader apps.\n \nreply",
+      "I have a Boox Nova and it\u2019s really nice but I won\u2019t buy another one. Boox is a notorious GPL violator.\n \nreply",
+      "Kobo e-readers run Android under the hood. There are some very small ones, too. If you're cool with Pocket, you can use that to sync articles from browser to e-reader. Personally, I never have my Kobo online.\n \nreply",
+      "I feel like this device would be 10x more compelling if it had an actual modem.Like, the software looks decent, the display is nice, the battery life is good. But why would you use it if you have to carry a separate phone? Surely it wasn't that hard?\n \nreply",
+      "The target audience is probably:- Already carrying around a larger, heavier ereader- Not interested in using an e-ink display for stuff like videos, instagram\n \nreply",
+      "I've been using this thing daily for about five months and really adore it. I use it as a Kindle replacement and with Readwise Reader as a longform article dump. I've read more longform pieces in the last few months than last few years combined. The device is incredibly light, and maintains battery even if you leave it idle all day (unlike my kindles which often drained themselves). Anyway, it's been a nice surprise, the palma.[0][0]: https://craigmod.com/roden/091/#digital-reading-in-2024\n \nreply",
+      "I have been seriously considering picking up one of these for a dedicate e-reader device just for The Economist (using a custom version of the Economist I create every week), mostly for around my house.The main thing holding me back is still needing to carry two devices when im mobile, and of course, investing in hardware for a single publication.I really prefer reading on e-ink, I like the form factor of this, and the performance seems decent for reading.\n \nreply"
+    ],
+    "link": "https://ewritable.com/ereaders/boox-palma/review/",
+    "first_paragraph": "A very portable 'candy-bar style' Android e-reader that supports higher refresh rates and third-party apps.When I first found out about the Palma, I was very excited. Had Boox succeeded where Hisense had failed? Would I finally be able to achieve my dream of replacing my Samsung LCD Android phone with an e-ink Android phone?My excitement very quickly waned \u2013 the Boox Palma would not have a sim card slot.My next thoughts were What is the point of the Boox Palma? and Who would use a phone-sized Android device that doesn\u2019t support mobile connectivity?Whilst I pondered these questions, Boox sent me a review unit to check the Palma out for myself. I\u2019ve been using it for a little over a month and my thoughts are below:NOTE: For full transparency, the review unit that Boox sent me was a pre-release version and so may be slightly different from the final product. It had not been water-protected and the left sidebutton didn\u2019t work. In addition, there was no camera app installed. These issues wi"
+  },
+  {
+    "title": "My first experience with Gleam Language (pliutau.com)",
+    "points": 31,
+    "submitter": "crowdhailer",
+    "submit_time": "2024-08-27T12:01:28",
+    "num_comments": 2,
+    "comments_url": "https://news.ycombinator.com/item?id=41366614",
+    "comments": [
+      "I have been slowly getting acquainted with the language over the last few months and I really love it. It combines great features from multiple languages into a single one that is perfect for building back-end web apps:\n- It is strongly typed, and has sum types like Rust, with very similar syntax, nice error messages, full type inference and first-party LSP implementation for great IDE tooling;\n- Unlike Rust, it is a high level language with garbage collection and a sane concurrency mechanism;\n- It follows the same concurrency paradigm from Erlang, since it is compiled to it and runs in the BEAM. It is quite performant for I/O stuff, apparently in the same ballpark as Go;\n- It can also be compiled to JS either to run either in the back-end or the front-end side, making it possible to build isomorphic web apps if that's your thing.\n \nreply",
+      "I'd love something like Gleam, but it compiles to a single binary and isn't Rust. (I know that that binary would invariably be larger than something Rust might produce due to the need to include things like a GC or BEAM process manager.)\n \nreply"
+    ],
+    "link": "https://pliutau.com/my-first-experience-with-gleam-lang/",
+    "first_paragraph": "\n\t\t\t\t\tSoftware Engineering Lead passionate about Backend, Cloud, DevOps, APIs, Kubernetes, Go. Currently leading an engineering team at Solsten.\n\t\t\t\tOver the past few months, I saw a growing amount of posts on X about the Gleam language (probably the X algorithm doing its thing), and decided to give it a try. I was not disappointed, with few exceptions.Disclaimer 1: This post shares my personal experience with the language, and it is not a comprehensive review of the language. It\u2019s not sponsored by anyone, and I\u2019m not affiliated with the Gleam team.Disclaimer 2: I had little prior experience with Erlang VM or functional programming in general.The first thing I did was to go through the official Gleam Language Tour which was a pleasure. After an hour I familiarized myself with the syntax and the basic concepts of the language. I remember that\u2019s how I started with Go as well, and I believe that every language must have an interactive tour like this.The next thing I did was to install the"
+  },
+  {
+    "title": "Harder Drive: hard drives we didn't want, or need [video] (2022) (tom7.org)",
+    "points": 264,
+    "submitter": "pabs3",
+    "submit_time": "2024-08-31T15:21:30",
+    "num_comments": 44,
+    "comments_url": "https://news.ycombinator.com/item?id=41409503",
+    "comments": [
+      "Do yourself a favor and watch the entire back catalog. Not sure there\u2019s anyone more creative than tom7 working right now.\n \nreply",
+      "Seconded. My first experience with Tom7 was the \"Super Mario Bros. is Easy with Lexicographic Orderings and Time Travel...\" I've been hooked ever since.\n \nreply",
+      "SIGBOVIK is always fantastic, and Tom7 is consistently the star of the show\n \nreply",
+      "Some of these ideas are as old as time but the comic seriousness is great.Reminds me of older analog delay circuits where the signal was sent as a sound wave in glass IIRC ... with multiple taps for different delays.EDIT: Here's a cool example that maybe warrants its own submission: https://www.eevblog.com/forum/projects/glass-ultrasonic-dela...\n \nreply",
+      "I wonder how many people here are discovering tom7 for the first time beacuse of this video.\n \nreply",
+      "#metooIt\u2019s like when you think of  something that will never exist, because it is just too absurd. However, this guy not only has an even more absurd idea, he also brings it into existence and shows why it\u2019s a great idea to build a sustainable future!#nohate\n \nreply",
+      "Wait until you encounter his executable research paper about executable research papers.The NAND gates video is probably the closest humanity will ever get to perfection though.\n \nreply",
+      "Me!\n \nreply",
+      "Does he always have so much vocal fry?\n \nreply",
+      "I remember lcamtuf mentioning very similar concept ca. 2003.In his version you would partition secret data and send it out to non existing email addresses, just to get them bounced back within a couple of days.If you want to get your secrets back together you would simply start gathering appropriate parts (you need to keep track of all the chunks somewhere), otherwise you'd simply send them to another non existing email address.\n \nreply"
+    ],
+    "link": "http://tom7.org/harder/",
+    "first_paragraph": "Please leave a comment on my blog or on Twitter at @tom7!\nGet all Tom 7 thingos at \u2192 [tom7.org]\nGet all Tom 7 thingos at \u2192 [tom7.org]"
+  },
+  {
+    "title": "Did your car witness a crime? (sfchronicle.com)",
+    "points": 163,
+    "submitter": "danso",
+    "submit_time": "2024-08-31T16:21:27",
+    "num_comments": 362,
+    "comments_url": "https://news.ycombinator.com/item?id=41409882",
+    "comments": [
+      "As a somewhat regular user of Waymo, these types of conversations seem like they're going to be more and more in the (sorry!) rearview mirror because we won't own the car nor the cameras that are recording the world as we \"drive\" around.That's not to say that we should give up fighting for some level of privacy even when we don't own the cars, but seems more likely that legislation would be passed that forces the vehicle owners/operators (Alphabet in the Waymo case) to blur peoples' faces. Then of course the state (police/gov/etc.) will clamor for a backdoor key that will unlock the blurred faces/bodies if a crime is suspected to have occurred. Speaking of, I wonder if Waymo already does blur people when they capture them through Waymo rides? I can't seem to find mention of it online.This commentary assumes self-driving cars are here to stay and become the de facto way we drive instead of driving ourselves. Still not sure how their adoption plays out over time because, at least in the US, people will fight against mandates to use self-driving cars because it compromises their freedom (note that the freedom crowd (no judgment) will be saying that, at first, because they will consider it their right to drive themselves, but once the privacy implications are clear there will be full-on (figurative?) wars fought over self-driving). Guessing a politician, in Texas or another red state, will sooner than later enshrine the right-to-drive-oneself into the state constitution.\n \nreply",
+      "I am hoping for an urban camouflage fashion revolution as a response to more pervasive monitoring: https://www.axios.com/2019/09/07/fooling-facial-recognition-...Public access to object recognition models may be important.\n \nreply",
+      "I'd like to see that too, but time and time again we've seen that:a) laypeople aren't usually moved by privacy violations more abstract than someone physically watching you do something.b) most people aren't willing to don practical accessories that noticably change the perception of your face unless it emphasizes qualities considered sexy.c) safety gear generally isn't considered sexyI think that this stuff would be perceived like wearing a physical bike helmet for your data privacy with all the cachet of Google Glass.\n \nreply",
+      "Surely object recognition models will catch up to whatever attempts to thwart it (especially if it becomes popular).  As long as a person is recognizable to another person, a computer should also be able to recognize them.Trying to camouflage seems like a losing battle.\n \nreply",
+      "> these types of conversations seem like they're going to be more and more in the (sorry!) rearview mirror because we won't own the car nor the cameras that are recording the world as we \"drive\" around.Perhaps in the urban setting but the majority of this country is not contained within cities.  Even then are you planning on banning motorcycles and RVs?> because they will consider it their right to drive themselvesUntil a law is passed otherwise they are absolutely correct.> the right-to-drive-oneself into the state constitution.I doubt it.  The real fight is likely to be whether we continue using mixed vehicle and pedestrian infrastructure or if we force pedestrians off the roadway entirely.  Then we'll have a \"right to walk\" constitutional crisis.\n \nreply",
+      "> Perhaps in the urban setting but the majority of this country is not contained within cities.83% of USA population live in urban areas, and that proportion is still steadily growing. The same trends apply everywhere else in the world as well.\n \nreply",
+      "According to the 2020 US Census, about 80% live in an urban area. However, the definition is not exactly what people think of when you say \u201curban\u201d.In 2020, the census lists 2,611 urban areas, including areas with a few thousand people.https://www.census.gov/programs-surveys/geography/guidance/g...Shouldn\u2019t be too hard to break this down with a more colloquial definition (say, areas over 500k or 750k people). I\u2019m just not at a real computer :)\n \nreply",
+      "Calumet park is a village right next to Chicago with under 7000 people. Northfield village has under 6000 people and it's located within about 15 miles of Chicago. It wasn't until I was about 18 that I realized what I thought was Chicago were actually small towns/villages. There's a whole slew of small villages next to or \"in\" larger cities.\n \nreply",
+      "Yes; the ordinary thing to compare is MSAs, which take this into account; Calumet Park (and Blue Island and Oak Lawn) are all part of the Chicago MSA.\n \nreply",
+      "> 83% of USA population live in urban areasIf you combine dense urban areas with suburbs.  It's about 33% in dense areas and 55% in suburban areas.  Which actually doesn't improve the driving situation.> and that proportion is still steadily growingWhich is why I specifically mentioned motorcycles.  In areas of the world with even greater urban density than the USA there are a lot of these on the road.> The same trends apply everywhere else in the world as well.These trends are influenced by economic policy and socioeconomic mobility of the population,  which are not similar everywhere,  so expectations do need to be tailored to them.Editing to add,  I actually think we'll see a new class of Drivers License,  one that allows you to operate semi autonomous vehicles,  and one that allows you to operate fully manual vehicles with a higher level of continuous written and on the road testing required to hold it.  Which is a reasonable and non discriminatory solution to the problem.\n \nreply"
+    ],
+    "link": "https://www.sfchronicle.com/crime/article/tesla-sentry-mode-police-evidence-19731000.php",
+    "first_paragraph": ""
+  },
+  {
+    "title": "WatchYourLAN: Lightweight Network IP Scanner (github.com/aceberg)",
+    "points": 80,
     "submitter": "thunderbong",
-    "submit_time": "2024-08-28T13:48:41",
-    "num_comments": 71,
-    "comments_url": "https://news.ycombinator.com/item?id=41379500",
+    "submit_time": "2024-08-31T19:32:12",
+    "num_comments": 7,
+    "comments_url": "https://news.ycombinator.com/item?id=41411281",
     "comments": [
-      "\"just express the original number as a sum of Fibonacci numbers\"This is aways possible, see Zeckendorf's theorem.https://en.m.wikipedia.org/wiki/Zeckendorf%27s_theorem\n \nreply",
-      "As amusing as this is, I could not tell you offhand how to express 121 as a sum of fibonacci numbers. I mean I could figure it out, but I could also either multiply by 1.5 (121mi ~180km) or by 2/3 (121km ~80mi) and it would probably be a little bit faster than the fibonacci way.\n \nreply",
-      "For 121, I ratio 130:80, then because I started ten under I subtract half that at the end. So about 75.\n \nreply",
-      "As suggested elsewhere, this is more of a party trick then a practical approach to convert between km and miles.The Wikipedia entry does suggest a greedy algorithm (at each step choosing the largest fib number that fits) though, using that we have121 = 89 + 21 + 8 + 3\n \nreply",
-      "Or by the definition that the ratio between consecutive fib numbers approaches Phi, just multiply by 1.618? Though at that point might as well just use the real conversion ratio.In other news, \u03c0\u00b2 \u2248 g.\n \nreply",
-      "I find it interesting, but I question how practical it is for regular use.On a recent trip, I was driving in Canada in a car bought in the United States that did not have the metric values on the speedometer. But all of the posted speed limits were in values of 5 kph. Once you get that (roughly) 100 kph = 62 mph and 10 kph = 6 mph, there are some simple quick divisions or subtractions to convert the speed limit to close enough.- 50 kph = (100 kph) / 2 = 62 mph / 2 = 31 mph- 80 kph = 100 kph - 2 * 10 kph = 62 mph - 2 * 6 mph = 50 mph\n \nreply",
-      "I use the fib conversions quite regularly.Both of your examples are actually easy Fibonacci numbers.50kph - 5 is a fib number, and the previous number is 3. I can go 50->30 without any math at all.And 80kph, well 8 is also a fib number. And the previous is 5. I can go 80->50 without any math at all.120kph is close to 13, so I know 120kph is somewhere below 80mph. I always divide any remainder by 2, so I would quick math my way to 120->75. That's accepatably close to the real answer of 74.4Same thing with 110kph. That's close to 13, so I'd quick math to 70 mph (130->80, remainder is 20, subtract half the remainder). That's acceptably close to the real answer of 68.2\n \nreply",
-      "Instead of halving the remainder, you can do 3/5 - since it\u2019s always going to be a multiple of five - so 120kph is going to be more like 74mph because it\u2019s 10kph less than 130, and 10kph=25kph\u224823mph=6mphAlso, this doesn\u2019t only work with Fibonacci numbers, it works with any Lucas sequence, since they all tend to phi, so as well as 2-3-5-8-13 you can also use the higher numbers from 1-3-4-7-11 to fill in some gaps and help estimate.And as a bonus, it means if you know A kph is equal to B mph, you also know that A mph is ~equal to A+B kph.So given your result above of 120kph=74.4mph, I would estimate 120mph\u2248194kph. And it turns out it\u2019s actually 193.1koh, so\u2026 not far off.\n \nreply",
-      "To mult by 1.6:  double it four times then divide by 10.  Eg. 55mph = 110, 220, 440, 880, 88.0 kphTo divde by 1.6, multiply by 10, then divide by 2 4x.  Eg\n: 200 kph, 2000, 1000, 500, 250, 125 mph\n \nreply",
-      "I always just use either 6/10 or 2/3, depending on which one is easiest to do in my head.Yes, this means both 90 and 100 km/h both covert to 60mph. Close enough!\n \nreply"
+      "Where do you get your mac->vendor data from?  \"Hardware\" in your screen shot.Most OUI (MAC) lists I've seen seem to be very incomplete for what ever reason.\n \nreply",
+      "Speaking about LAN, today, I encountered an unexpected event I had never imagined or experienced before.I was working on a simple HTML/CSS game in VS Code, with Live Server running on port 5500 to serve the site. Feeling a bit tired, I decided to take a break. I put my Windows PC to sleep and moved to another room in my house. There, I spotted my Android tablet and thought it would be interesting to see how the game would perform on a tablet.I unlocked the tablet, opened Chrome, entered my PC's local IP address and port, and hit 'Go'. To my surprise, the loading spinner appeared and spun for about 3-4 seconds. I was puzzled as to why the request was taking so long to get a response, and then it hit me\u2014my PC was supposed to be sleeping.Yet, just as I was processing this realization, the game\u2019s web page loaded on the tablet. I was stunned, thinking, \"Wait a minute\u2014didn't I put my PC to sleep?\" I went back to check my PC, and sure enough, it was awake but showing the lock screen. Out of curiosity, I repeated the experiment: I put the PC to sleep again, then accessed the webpage from my phone, and, once again, my PC awoke in response to the request. It was an eye-opening moment to see how the network request could wake my PC from sleep!I googled this behavior and turned out to be called Wake on LAN or, WOL for short [1].__________________1. https://learn.microsoft.com/en-us/troubleshoot/windows-clien...\n \nreply",
+      "WoL relies on a special magic Ethernet frame being sent to the MAC of the sleeping computer. A normal ARP or TCP SYN from an incoming HTTP request won't do it. The wikipedia article has the exact frame format:\nhttps://en.wikipedia.org/wiki/Wake-on-LANI've seen setups where the router is configured to send the magic WoL packet when it sees an ARP for the IP of a computer it knows is sleeping, but you'd almost certainly know if you had an exotic configuration like that on your network.\n \nreply",
+      "The terminology here can be a little confusing, because WoL isn't a precisely standardized term but rather sort of a general label for a family of behaviors, the most common of which is the \"Magic Packet\" that originated with AMD. For some time a magic packet was mostly the only thing that could wake a computer, because the NIC had to originate a power-on event and most NICs were only capable of doing so in response to a magic packet. There were, though, particularly in more \"enterprise\" contexts, NICs that could be configured to wake the machine on other types of traffic. This kind of thing went in the option ROM of high-end NICs.Today, though, with various low-power states and \"hybrid sleep,\" packets received while in a low-power state can actually be delivered to the operating system to make a decision on waking. That's made WoL a lot more complex: with a supported network adapter and power state, Windows will wake up in response to pretty much any network traffic directed at the sleeping computer. That detection is surprisingly sophisticated, unicast packets addressed to a computer will wake it, but so will certain recognized discovery protocols sent to broadcast when they specify the computer's hostname.One the one hand, it's pretty neat that e.g. attempting to connect to an SMB share on a Windows computer will wake it. On the other hand, it means that \"nuisance\" WoL has become an occasional irritation. For that reason you can configure Windows back to the original behavior of only waking on a magic packet specifically. To be fair, the whole idea came about in part because of all the implementation limitations with magic packets that made them very flaky.Microsoft refers to all of this functionality with the term \"WoL,\" while Apple seems to have decided to avoid the confusion by calling the entire concept \"Wake on Demand\" instead.\n \nreply",
+      "Some cards seem to allow any packet, not just the WoL magic packet to wake the machine.  This is referenced in the Wikipedia article as \"Wake on Link\"You can change this.  From memory it was directly in the Control Panel for Windows.  And ethtool or similar in Linux.\n \nreply",
+      "WOL is an old feature where you could even boot a PC that is off, not just asleep, but you had to confine it in the BIOS. It has become less useful with computers able to go into power save modes that are almost as good as having it fully off energy-wise.\n \nreply",
+      "Cool now tune it with Everything and let it show me data consumption by file||process|egress-addrhttps://i.imgur.com/RJYldEq.pngintegrate with poly || htop || etchttps://www.ycombinator.com/companies/poly/jobs/L4ObRgn-foun...and give me a screen of IOs for egress ingress with nifty UFW UI\n \nreply"
     ],
-    "link": "https://catonmat.net/fibonacci-miles-kilometers",
-    "first_paragraph": "I recently learned an interesting fact about Fibonacci numbers while watching a random number theory video on YouTube. Fibonacci numbers can be used to approximately convert from miles to kilometers and back.Here is how.Take two consecutive Fibonacci numbers, for example 5 and 8.And you're done converting. No kidding \u2013 there are 8 kilometers in 5 miles. To convert back just read the result from the other end \u2013 there are 5 miles in 8 km!Another example.Let's take two consecutive Fibonacci numbers 21 and 34. What this tells us is that there are approximately 34 km in 21 miles and vice versa. (The exact answer is 33.79 km.)Mind = blown. Completely.But that's not all \u2013 if you need to convert a number that is not a Fibonacci number, just express the original number as a sum of Fibonacci numbers and do the conversion for each Fibonacci number separately. For example, how many kilometers are there in 100 miles?Number 100 can be expressed as a sum of Fibonacci numbers 89 + 8 + 3.Now, the Fibon"
+    "link": "https://github.com/aceberg/WatchYourLAN",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Lightweight network IP scanner. Can be used to notify about new hosts and monitor host online/offline history\n      \n\n\n\nLightweight network IP scanner with web GUI. Features:WarningThis is version 2.0. Version 1.0 can be found in this brunch: v1CautionBREAKING CHANGES! Version 2.0 is not compatible with v1.0. For now v2.0 docker images will be released under v2 tag. It will be tagged latest in a few weeks (probably, in October).\n\n\nReplace $YOURTIMEZONE with correct time zone and $YOURIFACE with network interface you want to scan. Network mode must be host. Set $DOCKERDATAPATH for container to save data:Web GUI should be at http://localhost:8840Configuration can be done through config file, GUI or environment variablesThis config matches Grafana's config for InfluxDB data sourceConfig file name is config_v2.yaml. Example:By default, "
   },
   {
-    "title": "To Nerves from Elixir (underjord.io)",
-    "points": 59,
-    "submitter": "lawik",
-    "submit_time": "2024-08-30T20:05:39",
+    "title": "ARM or x86? ISA Doesn't Matter (2021) (chipsandcheese.com)",
+    "points": 28,
+    "submitter": "baq",
+    "submit_time": "2024-08-27T14:35:31",
+    "num_comments": 35,
+    "comments_url": "https://news.ycombinator.com/item?id=41368004",
+    "comments": [
+      "Since Jim Keller is quoted in the article, it would be good to point out that his new company uses RISC-V cores a lot [1] and have licensed their design out [2] to other companies. It seems to have been the correct choice for them.[1] https://www.tomshardware.com/news/tenstorrent-shares-roadmap...[2] https://www.anandtech.com/show/21281/tenstorrent-licenses-ri...\n \nreply",
+      "Isn't it kind of obvious that the instruction set itself cannot directly impact performance, since operations are just single clock cycles? I assume the issue is more about the difficulties of implementation, in particular how x86 has a lot of complicated archaic features and corner cases that just absorbs space on silicon, not to mention engineering effort. Apple, being vertically integrated, is free to toss features at will.\n \nreply",
+      "This is a pretty simplistic view of how processors execute instructions. They reorder, merge, and speculate execution. Most instructions do not take a single cycle to complete, often they take less or more (and even this depends on how you look at it, since they can be less if you overlap them and more if you look at latency). While this doesn\u2019t mean ISA matters as much as people might think how CPUs work is also more complicated than people might think.\n \nreply",
+      "Say that when I need to run some program and I have an ARM processor but the only binaries available are x86...\n \nreply",
+      "Both MacOS and Windows handle that pretty well with JIT, AOT or emulation\n \nreply",
+      "And you can use qemu-user on Linux, though I don't think any distros set it up by default\n \nreply",
+      "I\u2019m guessing from your question you did not bother reading the article before commenting.That said this is a solved problem - because plenty of people have arm based machines, and run x86 binaries on them (it obviously comes with a perf cost, but there\u2019s only so much that can be done when dealing with poor engineering)\n \nreply",
+      "why would that matter?\n \nreply",
+      "... Why would it not?\n \nreply",
+      "Because that\u2019s a solved problem, and isn\u2019t relevant to this article - which I assume you also did not read\n \nreply"
+    ],
+    "link": "https://chipsandcheese.com/2021/07/13/arm-or-x86-isa-doesnt-matter/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "AirTags key to discovery of Houston's plastic recycling deception (appleinsider.com)",
+    "points": 23,
+    "submitter": "JumpCrisscross",
+    "submit_time": "2024-09-01T00:38:33",
+    "num_comments": 8,
+    "comments_url": "https://news.ycombinator.com/item?id=41413174",
+    "comments": [
+      "\"By contrast, Apple has been an industry leader in reducing its use of plastic. It uses paper for packaging, and metal rather than plastic for its computer line.\"Okay\n \nreply",
+      "Apple\u2019s like \u201coops, sorry we made 4 billion lightning cables that don\u2019t work with new phones now!\u201d\n \nreply",
+      "Thanks to an EU regulation mandating type-c connectors\n \nreply",
+      "I\u2019m impressed how fast people on HN switched from \u201cApple is terrible for not dropping lightning cables for USB-C!\u201d to \u201cApple is terrible for dropping lightning cables for USB-C!\u201d  Talk about a zero-downtime migration!\n \nreply",
+      "Different groups of people.The backlash is mystifying though. MacBooks, iPads, and Beats had been shipping with USB-C for years, a standard Apple was heavily involved in creating in the first place. Most other manufacturers had already standardized on it. Unless you lived in a very strange bubble of only interacting with iPhones and air pods, you already dealt with USB-C devices. For those very few people in that very limited bubble, the problem was fixed by replacing a single cable. It was a mountain of controversy for a figurative molehill.\n \nreply",
+      "Apple is terrible for using lightning cables in the first place.\n \nreply",
+      "At least all this plastic is now stored in one place and did not end up in rivers and landfills yet. There is a still a hope for happy ending of this story.\n \nreply",
+      "Why is plastic in landfillsma problem? It started off as oil in the ground.\n \nreply"
+    ],
+    "link": "https://appleinsider.com/articles/24/08/31/airtags-key-to-discovery-of-houstons-plastic-recycling-deception",
+    "first_paragraph": ""
+  },
+  {
+    "title": "A brief history of barbed wire fence telephone networks (loriemerson.net)",
+    "points": 23,
+    "submitter": "MBCook",
+    "submit_time": "2024-08-31T21:41:30",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://loriemerson.net/2024/08/31/a-brief-history-of-barbed-wire-fence-telephone-networks/",
+    "first_paragraph": "dot netIf you look at the table of contents for my book, Other Networks: A Radical Technology Sourcebook, you\u2019ll see that entries on networks before/outside the internet are arranged first by underlying infrastructure and then chronologically. You\u2019ll also notice that within the section on wired networks, there are two sub-sections: one for electrical wire and another for barbed wire. Even though the barbed wire section is quite short, it was one of the most fascinating to research and write about \u2013 mostly because the history of using barbed wire to communicate is surprisingly long and almost entirely undocumented, even though barbed wire fence phones in particular were an essential part of early- to mid-twentieth century rural life in many parts of the U.S. and Canada! While I was researching barbed wire fence phones and wondering whether any artists had been intrepid enough to experiment with this other network, I came across Phil Peters and David Rueter\u2018s work \u201cBarbed Wire Fence Tele"
+  },
+  {
+    "title": "Compilation of JavaScript to WASM, Part 2: Ahead-of-Time vs. JIT (cfallin.org)",
+    "points": 80,
+    "submitter": "cfallin",
+    "submit_time": "2024-08-27T15:30:12",
     "num_comments": 5,
-    "comments_url": "https://news.ycombinator.com/item?id=41403971",
+    "comments_url": "https://news.ycombinator.com/item?id=41368657",
     "comments": [
-      "what piqued my interest: nerves boots with only barebones linux and the otp/beam vm, effectively turning elixir into the embedded os [0][0] https://wiki.alopex.li/NervesNotes\n \nreply",
-      "What kinds of cool things are people doing with this?\n \nreply",
-      "I once built a firmware for the Pimoroni Keybow with it: https://xn--gckvb8fzb.com/projects/kiwi/\n \nreply",
-      "Not sure if they still do, but farm.bot was using Nerves.\n \nreply",
-      "The jacked up spacing in the config/target.exs code block is preventing me from moving on in the article - my eyes!\n \nreply"
+      "The real issue is that you cannot access the DOM via WASM.Also the previous article is here[0].[0]: https://news.ycombinator.com/item?id=37849310\n \nreply",
+      "Can you explain this a little more? This is for running JS server side right? So why would there be a DOM? Is the issue that JS libraries or other things you would be using assume a DOM?\n \nreply",
+      "That doesn\u2019t really have anything to do with this article which is about running JS quickly on server wasm runtimes.\n \nreply",
+      "This type of comment shows up on seemingly every thread about wasm and it is so tiresome. Wasm can't do any I/O unless the host passes the module a capability to do so. If you pass a module some DOM functions then it can access the DOM.\n \nreply",
+      "I\u2019m curious though, does it gain meaningful access to the DOM in the case you described, or is it more just a proxy where it\u2019s asking javascript, via some sort of channel, to manipulate the DOM?\n \nreply"
     ],
-    "link": "https://underjord.io/to-nerves-from-elixir.html",
-    "first_paragraph": "\n            Underjord is a tiny, wholesome team doing Elixir consulting and contract work. If\n            you\n            like\n            the writing you should really try the code. See our services for more\n            information.\n        I adore Nerves. I recently joined the core team. And I\u2019ll be doing my best to help people get along with this lovely way to co-mingle hardware and massively concurrent reliable software.Assuming you have a comfortable Elixir & Erlang installed, preferrably the most recent. Most conveniently through asdf/mise, but I don\u2019t judge. Instructions are lifted from the official docs but I will try to keep it leaner as I assume you are comfortable with Elixir.Install deps for your OS:Have a Raspberry Pi computer (not the Picos, those are microcontrollers), with SD-card, available. It will assume a Raspberry Pi Zero, ie. using rpi0 for referring to the target system. You can replace that in any command with another supported system:The mix burn should prompt"
+    "link": "https://cfallin.org/blog/2024/08/27/aot-js/",
+    "first_paragraph": "\n        Aug 27, 2024\n      This is a continuation of my \u201cfast JS on Wasm\u201d series; the first\npost covered PBL, a\nportable interpreter that supports inline caches, this post adds\nahead-of-time compilation, and the final post will discuss the details\nof that ahead-of-time compilation. Please read the first post first for\nuseful context!The most popular programming language in the world, by a wide margin\n\u2013 thanks to the ubiquity of the web \u2013 is\nJavaScript (or, if you\nprefer to follow international standards, ECMAScript per\nECMA-262). For\na computing platform to be relevant to many modern kinds of\napplications, it should run JavaScript.For the past four years or so, I have been working on\nWebAssembly (Wasm) tooling and platforms,\nand in particular, running Wasm \u201coutside the browser\u201d (where it was\nborn), using it for strong\nsandboxing\nof untrusted server-side code instead.This blog post will describe my work, over the past 1.5 years, to\nbuild an ahead-of-time compiler from JavaScript to Web"
   },
   {
-    "title": "Jerry (YC S17) Is Hiring Lead Product (New Product, B2B GenAI Platform) (ashbyhq.com)",
+    "title": "Percona Everest: open-source automated database provisioning and management (percona.com)",
+    "points": 28,
+    "submitter": "petecooper",
+    "submit_time": "2024-08-31T19:11:21",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://docs.percona.com/everest/index.html",
+    "first_paragraph": "We are excited to welcome you to Percona Everest, designed to demonstrate the core capabilities of our new open source cloud-native database platform!Percona Everest is the first open-source platform for automated database provisioning and management. It supports multiple database technologies and can be hosted on any Kubernetes infrastructure, in the cloud or on-premises.Let\u2019s start by enabling you to deploy an automated private DBaaS, eliminating vendor lock-in and complex in-house platform development. Percona Everest quickstart guide Manage your first cluster Discover how Percona Everest simplifies and streamlines your database management and provisioning.Discover Percona Everest Explore how our security features are designed to ensure the security of your hosted databases.Secure your deployments Learn how to manage user accounts in Percona Everest.Manage user accounts Get ready to dive into our APIs and uncover their potential.Dive into our APIs If you need assistance, visit the c"
+  },
+  {
+    "title": "Astronomers puzzled by little red galaxies that seem impossibly dense (newscientist.com)",
+    "points": 23,
+    "submitter": "jandrewrogers",
+    "submit_time": "2024-08-31T20:25:40",
+    "num_comments": 6,
+    "comments_url": "https://news.ycombinator.com/item?id=41411694",
+    "comments": [
+      "Is this what a group of type III civilizations look like on the Kardashev scale?\nBack when the universe was hot and dense and it was still fun?\n \nreply",
+      "https://archive.is/NhWAs\n \nreply",
+      "Can those be just globular clusters in their 'bright' phase? Globular clusters are not even mentioned in that article, which is weird.\n \nreply",
+      "I'm gonna guess that the prominent astronomers at several top-notch universities mentioned have heard of globular clusters, and that the reason it's not mentioned is it's not relevant.\n \nreply",
+      "Is the snark really necessary? I think a more interesting and helpful response would be to point out why these are likely not globular clusters. For instance, they contain a total stellar mass in some cases comparable to that of the Milky Way; for comparison, the Milky Way contains at least 150 distinct globular clusters and probably many more. They also seem to host supermassive black holes at their centers, which globular clusters don't have.\n \nreply",
+      "Must be heck of a night sky on one of those planets\n \nreply"
+    ],
+    "link": "https://www.newscientist.com/article/2445967-astronomers-puzzled-by-little-red-galaxies-that-seem-impossibly-dense/",
+    "first_paragraph": "Advertisement\u2018Little red dot\u2019 galaxies seen by JWST appear to be much more tightly packed with stars than other galaxies, raising big questions about how they came to be this wayBy Alex Wilkins\n                                    30 August 2024\n                                                                    JWST images of little red dot galaxiesJosephine F.W. Baggen et al. (2024)JWST images of little red dot galaxiesJosephine F.W. Baggen et al. (2024)Strangely bright galaxies spotted by the James Webb Space Telescope (JWST), called \u201clittle red dots\u201d, may have more stars packed into them than any other galaxies we know of. The density appears so high that it\u2019s unclear how the stars even survive without crashing into their neighbours, challenging astronomers\u2019 best ideas of how galaxies grow.Shortly after JWST started searching the extremely distant universe in 2022, astronomers started to see extremely bright and red, but apparently tiny, galaxies, which they called little red dots\u2026A"
+  },
+  {
+    "title": "Making an atomic trampoline [video] (youtube.com)",
+    "points": 16,
+    "submitter": "matricaria",
+    "submit_time": "2024-08-31T07:46:35",
+    "num_comments": 2,
+    "comments_url": "https://news.ycombinator.com/item?id=41407195",
+    "comments": [
+      "A thought I had when I saw the original Steve Mould video, and this video made me remember it.What happens if you just use glass for the bouncing surface? I was reading about the materials and I am not sure what property contributes to it's bounciness, but I think it is tensile strength(but it may be surface hardness). and regular glass has a slightly lower tensile strength than these amorphous  metallic structures, fused quartz has a higher tensile strength, and I was unable to find out what tempered glass is, but I suspect tempered glass would tend to shatter if a small hard ball was bounced off it. Anyway, I was unable to form a good hypothesis as to what would happen, but I did find that mcmaster-carr sells fused quartz disks if anyone wants to try.https://www.mcmaster.com/products/glass-discs/ultra-high-tem...\n \nreply",
+      "McMaster also sells discs of tool steel and glass bearing balls... and carbide, and ceramic, etc. What if the bearing ball was carbide, even harder? What would happen if you reduced the hardness of a steel ball, which usually only requires normal kitchen oven temperatures? What happens if the materials switch places, say a hardened tool steel disc and glass ball?Anyway, lots of options to safely experiment with material science concepts in very accessible and tweakable ways! No beryllium or foundry equipment required. I do think the massive, well fitted, rigid surface backing up the disc is important to constrain what this is demonstrating - plastic vs elastic deformation.\n \nreply"
+    ],
+    "link": "https://www.youtube.com/watch?v=jLX1-tNnvEo",
+    "first_paragraph": ""
+  },
+  {
+    "title": "LLMs struggle to explain themselves (jonathanychan.com)",
+    "points": 3,
+    "submitter": "jonathanyc",
+    "submit_time": "2024-08-30T10:23:19",
+    "num_comments": 7,
+    "comments_url": "https://news.ycombinator.com/item?id=41399369",
+    "comments": [
+      "> It\u2019s interesting to me that in spite of the fact that the LLM does so poorly with number sequences in general, it does pretty well with variations of the Fibonacci sequence.Not surprising, since the Fibonacci sequence will be in the text swallowed by the LLM.\n \nreply",
+      "Yea! Do you think the LLM learns a Fibonacci-specific circuit? Do you think it is possible for an LLM to learn a general pattern-recognition circuit?\n \nreply",
+      "Well, a basic LLM would not really even distinguish a Fibonacci series from a hole in the ground. But models are being built with extra stuff, though I doubt recognising number series is high on the list.\n \nreply",
+      "Thanks for sharing! The custom stack-based language that you created for randomly generating interesting integer sequences was the most interesting part of this post for me. Wish the post focused on that rather than LLMs!\n \nreply",
+      "> One day in March, I was walking my dog, saw a house numbered 3147, and thought it was a funny pattern. It\u2019s the Fibonacci sequence with a different seed (31 instead of 11).The Fibonacci sequence with 3,1 would be 3,1,4,5. I think you mean the house number was 1347. That would work and be easier to notice.\n \nreply",
+      "Haha thanks for catching that\u2014fixed! That\u2019s pretty ironic. Looks like I\u2019m the LLM and you\u2019re the human :PNow I can\u2019t remember whether the house was 3147 or 1347. The pattern might have been to add the first digit to the last digit (unrot + in the stack language). That\u2019s what I get for writing at 3am!\n \nreply",
+      "Hi HN! I'm about to go to bed, but I promise to go through comments when I wake up later today. Happy Friday!The source code for the demo is on GitHub: https://github.com/jyc/stackbee\n \nreply"
+    ],
+    "link": "https://www.jonathanychan.com/blog/llms-struggle-to-explain-themselves/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Continue (YC S23) Is Hiring a Software Engineer in San Francisco (ycombinator.com)",
     "points": 0,
     "submitter": "",
-    "submit_time": "2024-08-31T01:00:42",
+    "submit_time": "2024-08-31T21:01:53",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://jobs.ashbyhq.com/Jerry/d972d5ea-c671-49a9-b964-5fe829f075cf",
-    "first_paragraph": ""
+    "link": "https://www.ycombinator.com/companies/continue/jobs/smcxRnM-software-engineer",
+    "first_paragraph": "The leading open-source AI code assistantContinue is seeking an outstanding software engineer to help us build state-of-the-art autocomplete and codebase retrieval, who thinks rigorously and pays attention to the smallest details. In this role, you will work on fundamental, but highly open-ended problems where deliberate measurement, rapid experimentation, and empathy for users push forward the product.About youPlease keep in mind that we are describing the background that we imagine would best fit the role. If you don\u2019t meet all the requirements, but you are confident that you are up for the task, we absolutely want to get to know you!What you will doWe\u2019re a startup, so you\u2019ll have to be ready to do whatever is required to accomplish our mission. However, you can definitely expect to:We believe there is an opportunity to create a future where developers are amplified, not automated. This is why we are building the leading open-source AI code assistant and layering an enterprise produc"
   },
   {
-    "title": "AnandTech Farewell (anandtech.com)",
-    "points": 2279,
-    "submitter": "janice1999",
-    "submit_time": "2024-08-30T12:05:23",
-    "num_comments": 449,
-    "comments_url": "https://news.ycombinator.com/item?id=41399872",
-    "comments": [
-      "> Finally, I\u2019d like to end this piece with a comment on the Cable TV-ification of the web. A core belief that Anand and I have held dear for years, and is still on our About page to this day, is AnandTech\u2019s rebuke of sensationalism, link baiting, and the path to shallow 10-o'clock-news reporting. It has been our mission over the past 27 years to inform and educate our readers by providing high-quality contentThat\u2019s the core of it. And too bad they\u2019re off. Finding a news outlet that isn\u2019t \u201ctweeting\u201d an article and isn\u2019t a blog post on HN was great. And while they mention Tom\u2019s hardware. It always felt (to me) less verbose where I needed it.Fair well.\n \nreply",
-      "Google captured the web with their search product. Then they monopolised it with Adsense.\n \nreply",
-      "And absolutely did not optimize for returning quality information.\n \nreply",
-      "Tangential - your last line made me think about what \"Fare well\" means. Weird that I come across it so often, but never stopped to think what it means. :)\n \nreply",
-      "> Tangential - your last line made me think about what \"Fare well\" means.Fare is unrelated to fair:> From Middle English farewel, from fare wel! (and the variants with the personal pronoun \"fare ye well\" and \"fare you well\" used in the Renaissance), an imperative expression, possibly further derived from Old English far wel!, equivalent to fare (\u201cto fare, travel, journey\u201d) +\u200e well.** https://en.wiktionary.org/wiki/farewell#Etymology* https://en.wiktionary.org/wiki/fareSo to say \"farewell\" to someones is \"have a good journey (in life?)\".\n \nreply",
-      "In German there's a similar word, \"fahren\", which means driving or traveling. In Dutch the word \"varen\" mean to sail or in an older sense of the word \"to move\".I can only assume, but considering the Dutch \"vaarwel\" is so close to English, I'm going to guess it means \"Go well\" - or more poetically when speaking of one's path in life: may fate treat you well.\n \nreply",
-      "The Dutch word \"welvarend\" (literally \"well-sailing\") translates to \"prosperous\" in English. So \"vaarwel\" or \"farewell\" is kind of a medieval way of saying \"live long and prosper\". :-)\n \nreply",
-      "You just gave me jamais vu.\n \nreply",
-      "\u201cWe dont play silly cheap web traffic games\u201d [proceeds to pointlessly split every article across 10 pages]\n \nreply",
-      "farewell*\n \nreply"
-    ],
-    "link": "https://www.anandtech.com/show/21542/end-of-the-road-an-anandtech-farewell",
-    "first_paragraph": "It is with great sadness that I find myself penning the hardest news post I\u2019ve ever needed to write here at AnandTech. After over 27 years of covering the wide \u2013 and wild \u2013 word of computing hardware, today is AnandTech\u2019s final day of publication.For better or worse, we\u2019ve reached the end of a long journey \u2013 one that started with a review of an AMD processor, and has ended with the review of an AMD processor. It\u2019s fittingly poetic, but it is also a testament to the fact that we\u2019ve spent the last 27 years doing what we love, covering the chips that are the lifeblood of the computing industry.A lot of things have changed in the last quarter-century \u2013 in 1997 NVIDIA had yet to even coin the term \u201cGPU\u201d \u2013 and we\u2019ve been fortunate to watch the world of hardware continue to evolve over the time period. We\u2019ve gone from boxy desktop computers and laptops that today we\u2019d charitably classify as portable desktops, to pocket computers where even the cheapest budget device puts the fastest PC of 199"
-  },
-  {
-    "title": "Our slowly growing Unix monoculture (utcc.utoronto.ca)",
-    "points": 34,
-    "submitter": "matt_d",
-    "submit_time": "2024-08-30T21:33:16",
-    "num_comments": 39,
-    "comments_url": "https://news.ycombinator.com/item?id=41404704",
-    "comments": [
-      "As I read this, my homelab toilet servers in the next room are running x86 64-bit Ubuntu. My Framework 16 laptop is running x86 64-bit Ubuntu. My RPi 5 is running 64-bit Ubuntu (though that one is ARM). I used to have half a dozen dual-boot Linux distros on my fun laptop, and now it's just Ubuntu. I know those aren't the same as having other forms of Unix, but I think it echoes that even within the Linux ecosystem, Ubuntu has become the de-facto standard for a lot of people.I have never been a fan of CentOS, and SunOS was so long ago I barely remember it, and I've never tried FreeBSD, but I do want the FOSS-OS ecosystem to thrive and not collapse into Canonical alone (especially given that I don't entirely love some of their recent moves).\n \nreply",
-      "I'm wondering if/when this will extend to dev machines at work.  Macs seem very firmly entrenched but, IMHO, the experience isn't that great.\n \nreply",
-      "Why not Debian?\n \nreply",
-      "> homelab toilet servers....go on?\n \nreply",
-      "It's pretty self-explanatory?https://i.imgur.com/QqjsPge.jpg\n \nreply",
-      "I was expecting like \"terrible old server that I refer to as toilet because it's terrible\" but this is so much better. Bravo.\n \nreply",
-      "\u2026did you need that sign to be custom printed?\n \nreply",
-      "I actually got it as a Christmas present from my step-mom who runs a print shop. :D\n \nreply",
-      "...who let's a cat in their data center!?  and where did the mouse go!?\n \nreply",
-      "\"Mouse? Where we're going, we don't need mice.\"\n \nreply"
-    ],
-    "link": "https://utcc.utoronto.ca/%7Ecks/space/blog/sysadmin/OurGrowingUnixMonoculture",
-    "first_paragraph": ""
-  },
-  {
-    "title": "500 Python Interpreters (izzys.casa)",
-    "points": 81,
-    "submitter": "SAHChandler",
-    "submit_time": "2024-08-30T18:26:46",
-    "num_comments": 13,
-    "comments_url": "https://news.ycombinator.com/item?id=41403286",
-    "comments": [
-      "When they say per interpreter GIL in PEP 684, is that per thread?  I wasn't aware of multiple interpreters in one process.\n \nreply",
-      "Afaik, you could have multiple CPython interpreters per process before, but the GIL was global to the address space, not a per interpreter instance. I believe the GIL work also put interpreter state behind a single struct instead of a handful of global variables.This could be totes wrong, all from memory, too tired to fact check.\n \nreply",
-      "These were two separate and mostly unrelated PEPs but otherwise that's correct.\n \nreply",
-      "Thanks for corroborating, I'll have to trust you.Putting interpreter state behind a struct allows for multiple CPython instances per address space and each can no run on their own thread independently, they all get their own GI(L) lock. These interpreter instances would still have their own Global to This interpreter Lock, but not a Global lock for all CPython interpreters running in a process (like it was before with interpreter state in globals).Unrelated but complementary. We could remove the GIL, making Python multithreaded, but if interpreter state was still in a handful globals, you could have only one interpreter per process.Again, could be totes wrong.\n \nreply",
-      "No not per thread. Each interpreter is capable of spawning threads, all of which share that interpreter's gil\n \nreply",
-      "> \"No matter what happens there is going to be a lock occurring. No two PyThreadStates can execute Python bytecode at the same time. However, they can execute multiple C calls at the same time which is why for long running pure C operations extension and embedding developers are encouraged to release the GIL temporarily.\"Very exciting!  I wonder what the first set of motivating applications are and what kind of performance gains are they expecting.\n \nreply",
-      "I was hoping for it to be an HTTP status code.\n \nreply",
-      "I'm lo0king forward to it, but debugging this stuff is going to be another level of hard.\n \nreply",
-      "You posted this 11 days ago and it's been posted by two other people in the interim. (Why is this version of the post more popular?)\n \nreply",
-      "Sometimes articles just don't get traction and then they're invited to resubmit (by dang, the moderator). Since the submitter submitted it twice, that was probably what happened here.As to why it's \"more popular\", I guess you mean is getting more upvotes, that's part of the trick with submissions. Post it on a slow Friday work day before a holiday and you'll get more clicks than some other days or times.\n \nreply"
-    ],
-    "link": "https://izzys.casa/2024/08/463-python-interpreters/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Lem: Emacs-like editor written in Common Lisp (lem-project.github.io)",
-    "points": 176,
-    "submitter": "amarsahinovic",
-    "submit_time": "2024-08-26T14:22:38",
-    "num_comments": 41,
-    "comments_url": "https://news.ycombinator.com/item?id=41357409",
-    "comments": [
-      "Has anyone used this? I was just thinking the other day that it would be nice to have an emacs-like editor written in such a way that it made performance and parallelism easier, especially around multithreading.A real killer feature would be some kind of emacs-lisp compatibility layer so that you could load existing third-party emacs modules, but I imagine the complexity of that is so off the charts that it would be unrealistic.Has anyone successfully packaged it for NixOS? I see this aborted attempt here: https://github.com/NixOS/nixpkgs/issues/250777 (linked from https://github.com/lem-project/lem/issues/890). If not, I guess I might just try patching the binaries rather than trying to build it from scratch, since I don't have any experience building common lisp projects in nix.\n \nreply",
-      ">Has anyone used this?I have, it's awesome.  There are some rough edges and some niceties/third party packages from emacs that I missed, so I ended up going back, but lem is very promising.\n \nreply",
-      "> niceties/third party packages from emacs that I missedWas it magit?\n \nreply",
-      "Lem has Legit. While missing some features, it works well enough for the daily add/stage/commit loop that makes up 90% of my git commands. It also uses less git commands so it's a fair bit snappier than Magit on large repos.I can see the lack of org-mode being a dealbreaker for some, but I personally use markdown for my notes/docs so no issue there.\n \nreply",
-      "It\u2019s always magit\n \nreply",
-      "> A real killer feature would be some kind of emacs-lisp compatibility layer so that you could load existing third-party emacs modules, but I imagine the complexity of that is so off the charts that it would be unrealistic.Yeah while completely unrealistic some way to make interfacing with emacs packages would be nice.There seems to be a magit like interface in the works: https://lisp-journey.gitlab.io/blog/oh-no-i-started-a-magit-...\n \nreply",
-      "Yes I'm waiting for a nixos package. I have used it a bit through the Docker image and it's super cool. I can see it succeeding emacs. Seems like it's even more hackable than the latter, since it's all written in Common Lisp (there's no C core).\n \nreply",
-      "Emacs is pretty snappy these days, what kind of performance problems are you seeing with it?\n \nreply",
-      "Huh?I (used to) use it almost exclusively with eglot lsp to python language server (Jedi I think). I run emacsfoacosx 29.2 and now .3. And I\u2019ve used it since 1996 on emacs 18 on a b/w sun workstation.But most recently on the last 2020 intel MacBook Pro.The cursor moving speed through a source file is atrocious. Maybe 3 - 4 lines per second vertical and similarly horizontal.The shell just freezes on long lines and forget about font lock for multi MB json.All of these tasks would be hard a decade ago but now aren\u2019t even table stakes.It just /feels/ sluggish.I reluctantly just gave up. It was fast way back then but I think workloads have changed. I tried zed for a bit but have now reluctantly gone to pycharm CE. If you accept the different windowing metaphor and add bindings for C-a and C-e and friends (some are standard) it\u2019s not bad. And never sluggish (same hardware).I love emacs but for my outlandish workload of python programming and wrangling multi MB text output it just doesn\u2019t perform.I speculate it isn\u2019t straight line speed but threading that is hurting perceived latency.\n \nreply",
-      "I use emacs every day, with a minimal config, and would never describe it as snappy.  The entire thing is single threaded so the UI locks up at the slightest provocation, like for example when firing network requests whilst packages are updating.\n \nreply"
-    ],
-    "link": "https://lem-project.github.io/#",
-    "first_paragraph": "\n\nAfter installing lem, you can start developing in Common Lisp at once.In addition, many languages are supported with Lem\u2019s built-in LSP support.If you come from Emacs or Vim, you will feel right at home.It is an established fact that John McCarthy shared alien tech with the world in 1958 when he introduced us to Lisp. We continue that great tradition.Lem is written and extensible in Common Lisp.Since version 2.0, a GUI version is also available.It brings graphics and mouse support, as well as games and over 180\ncolour themes.Start developing on Lisp at once.Full-featured REPL and interactive debugger, with Paredit and a third-party Pareto (lispy-mode) mode.Open a tree view of the current project,use project-aware commands.Terminal integration, multiple cursors, interactive grep, directory mode, tabs, Git interface, keyboard macros,and support for:C, Scheme, Go, JavaScript, TypeScript, Python, Rust, Elixir, Haskell, Java, Nim, Dart, OCaml, Scala, Swift, Lua, shell, asmMarkdown, ASCII,"
-  },
-  {
-    "title": "Three Critical Questions to Turn the Table During Technical Interviews (bellmar.medium.com)",
-    "points": 26,
-    "submitter": "mbellotti",
-    "submit_time": "2024-08-30T20:25:14",
-    "num_comments": 19,
-    "comments_url": "https://news.ycombinator.com/item?id=41404117",
-    "comments": [
-      "Summary: \"Create an account to read the full story.\"\n \nreply",
-      "Insightful!\n \nreply",
-      "Not sure the author realized this, but there's an interesting contradiction here.> In hiring, we standardize questions to help mitigate bias and make more accurate comparisons across a group of candidates.> The people on the ground, close to the problem are often your best bet, but organizations find it difficult to handle anything they can\u2019t standardize and normalize.Standardizing is more fair, but at the cost (or benefit) of minimizing interesting outcomes.\n \nreply",
-      "https://archive.is/aCVkR\n \nreply",
-      "https://archive.is/aCVkR\n \nreply",
-      "These are ok generic questions, but not great. And I would encourage people to do learn as much as possible about the org/team they are interviewing for. If there's not much public info, then this is where you ask the questions to find out if this is work you're going to enjoy or if you're gonna end up in another round of interviews in 6 months.\n \nreply",
-      "Interviewers HATE him.\n \nreply",
-      "Great suggestions\n \nreply",
-      "> In every round, the interviewer should leave with the impression that you answered their questions as honestly as possible because you\u2019re looking for the right fit, not just a job.This is precisely what I despise about \"job interviews\". What you ask in the \"Do you have any questions?\" section of the interview should be irrelevant. I don't want to have to ask questions when I don't care about the answers just because that's what \"top candidates\" are supposed to do. What you're actually measuring is how much the person you're talking to is willing to read articles like this to come up with fake questions to ask as part of a fake performance so you'll hire them.\n \nreply",
-      "FWIW at the big tech companies I\u2019ve worked at, that part of the interview does not have any impact on hiring decisions.\n \nreply"
-    ],
-    "link": "https://bellmar.medium.com/three-critical-questions-to-turn-the-table-during-technical-interviews-dd1594c278b8",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Language and shell in Go with 92% test coverage and instant CI/CD [video] (youtube.com)",
-    "points": 107,
-    "submitter": "todsacerdoti",
-    "submit_time": "2024-08-30T15:09:03",
-    "num_comments": 29,
-    "comments_url": "https://news.ycombinator.com/item?id=41401463",
-    "comments": [
-      "Hey, it's my talk, AMA :)If you're interested in Elvish, you may also be interested in the talk on its design - https://www.youtube.com/watch?v=wrl9foNXdgM\n \nreply",
-      "Does elvish have a command history limit? Or is it configurable? I like a nearly infinite history.\n \nreply",
-      "History entries are kept indefinitely.\n \nreply",
-      "Do you have a link to a copy of the video with captions?  YouTube autogen doesn't cut it unfortunately.  Or perhaps a written-form version (slide deck + transcript)?What's in the 8% not covered by testing?\n \nreply",
-      "I don't have a version with captions, sorry. You can find the slidedeck at https://github.com/elves/elvish/blob/master/website/slides/2...The remaining 8% mostly falls into the following categories:- Code that use OS functionalities that are cumbersome to mock in tests- Code paths that are triggered relatively rarely and I was simply too lazy to add tests for themNothing is impossible to cover, but for whatever reason it was too much work for me when I wrote the code.However, it's worth mentioning that I only settled on the transcript test pattern fairly recently, and if I were to rewrite or refactor some of the untested code today I would add tests for them, because the cost of adding tests has been lowered considerably. So Elvish's test coverage is still increasing slowly as the cost of testing decreases.\n \nreply",
-      "Hey, thanks again for the talk and for answering my fork bomb question with a live demo!\n \nreply",
-      "Thanks for your question and glad that you enjoyed it!\n \nreply",
-      "I thought you handled the question really well. To be honest the whole talk was excellent. I'm gutted I missed it in person.\n \nreply",
-      "There were a lot of aspects of this talk that I thought were really great.  The willingness to try something unscripted, diving into the code repo live (e.g. to show where fuzzing is used), and the discussions of the reasoning behind the design choices.  Great job @xiaq.  This really makes me want to try elvish out, and I usually am quite skeptical of new shells.\n \nreply",
-      "Thanks! Glad that the talk is working as a marketing pitch for Elvish :)\n \nreply"
-    ],
-    "link": "https://www.youtube.com/watch?v=YzIiUjgnSsA",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Pocket-Godot: Starter Kit for mobile game development using Godot (github.com/lukky-nl)",
-    "points": 68,
-    "submitter": "console-log",
-    "submit_time": "2024-08-30T14:45:02",
-    "num_comments": 13,
-    "comments_url": "https://news.ycombinator.com/item?id=41401237",
-    "comments": [
-      "Step up your README game... at least link to your Youtube and say more docs coming soon.\n \nreply",
-      "To me it's strange when people write a starter kit for the engine that supports mobile platforms out of the box. Is mobile support there just for marketing...?\n \nreply",
-      "It's not strange at all, you just have to investigate beyond the surface.\n \nreply",
-      "As someone who has recently been doing Godot mobile development with Cursor as my IDE, this repo and the video in another comment gave me some quick thoughts.1. The main thing the library seems to offer is some pre-packaged libraries for mobile touch controls in GDScript, the custom language for the Godot game dev framework.2. I have recently come across similar problems to what that this library tries to solve.3. However, the way I went about solving it was basically using Claude and ChatGPT as my co-developers and asking them to answer coding questions. Here\u2019s a quick example prompt about coding GDScript similar to some of the attributes of the library: https://chatgpt.com/share/c8e713e3-0662-4c7d-8645-9a76b0c032...4. An optimistic perspective from all the above is that AI coding assistants can make it easier for people to develop libraries like this faster.5. A negative view would be that AI coding assistants mean people don\u2019t necessarily need \u201clibraries\u201d like this if an LLM can spit out the same results in a couple queries (rather than hunting around Github or the internet for pre-packaged code).\n \nreply",
-      "> Here\u2019s a quick example promptYou almost certainly should not be updating the character.position both every frame (in _process) and in response to a MouseMotion event. That makes no sense.\n \nreply",
-      "Yep, it is definitely worth clarifying that all the code has to be reviewed manually still. An aside is that the LLMs (both Claude and GPT) have common failure modes in using Godot 3 syntax instead of 4, etc.I meant to make the point that, having worked on mobile game dev recently, if the behavior I'm thinking of seems simple, my workflow instincts have become to go to LLMs first rather than Github. Very possible this is a bad reflex. Just one I've observed directly from my experience implementing similar functionality as the parent library.It looks like spywaregorilla's comment was downvoted at least once but I think it was making the valid point sarcastically that the idea of \"LLM generated code replacing commonly used libraries is a bad one.\" My original post was positing on whether this might be a future trend though.Also want to recognize the author of the library (prophesi) commented down below and definitely applaud their work in packaging and open sourcing their work plus making the tutorial video.\n \nreply",
-      "> 5. A negative view would be that AI coding assistants mean people don\u2019t necessarily need \u201clibraries\u201d like this if an LLM can spit out the same results in a couple queries (rather than hunting around Github or the internet for pre-packaged code).Why use a library when the LLM can spit of a unique reimplementation of the library logic every time you need it?The future is terrifying.\n \nreply",
-      "People like having standards, that's why. They make processes more simply repeatable and experience more easily transferrable\n \nreply",
-      "An LLM that just replies with an executable?\n \nreply",
-      "Maybe do a README at least before posting to HN? I compile Godot daily, but have been ignoring everything but GNU/Linux as a target platform. I don't see anything particularly unique about this being for mobile besides some pretty basic joypad and screendrag stuff.\n \nreply"
-    ],
-    "link": "https://github.com/lukky-nl/Pocket-Godot",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Starter Kit for mobile game development using Godot\n      \n        Starter Kit for mobile game development using Godot\n      "
-  },
-  {
-    "title": "Expect \u00e2\u20ac\u201c Linux tool for automating interactive programs (die.net)",
-    "points": 9,
-    "submitter": "actinium226",
-    "submit_time": "2024-08-30T23:17:38",
-    "num_comments": 6,
-    "comments_url": "https://news.ycombinator.com/item?id=41405364",
-    "comments": [
-      "I used expect a ton years ago, for AIX system janitoring. A lot of things required telnet\u2019ing into proto-ncurses mainframe applications and going through menus, typing and selecting stuff etc.The actual productive workflow is to do your task with autoexpect, and then refine the generated output:\nhttps://linux.die.net/man/1/autoexpect\n \nreply",
-      "Many years ago I used the Perl version of Expect (https://metacpan.org/pod/Expect) to automate several workflows that wanted manual inputs.I thought that it was far better than the TCL Expect because I could also use other CPAN modules and have Perl's regular expressions to parse the system's output.Expect is a great tool to have in your toolkit.\n \nreply",
-      "Arguably, Tcl can do GUIs much easily and can integrate C less awkwardly than Perl. Both have their use cases, at any rate, and more people should use Tcl, Perl and any version of Expect. Nowadays it falls into the category of tools that were once somewhat used, but now are obscure, like fold/fmt, nl, comm and pr.\n \nreply",
-      "> Perl version of Expect (https://metacpan.org/pod/Expect)Still a great answer and latest update in March this year.\n \nreply",
-      "claude.ai just suggested this as a tool for automating a workflow that involves ssh'ing into another machine and running some commands as sudo. I'm surprised I've never heard of this tool before. It works great for this scenario and the script can be used a reference to go in manually.\n \nreply",
-      "Good example of an LLM suggesting something useful, even if just RTFM for forgotten tools.O\u2019Reilly put out a book about expect back in the old days (1995).I used expect a few times to automate remote admin, and even to scrape terminal-based applications.\n \nreply"
-    ],
-    "link": "https://linux.die.net/man/1/expect",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Experience the Apollo 11 Lunar Landing (firstmenonthemoon.com)",
-    "points": 150,
-    "submitter": "marvinborner",
-    "submit_time": "2024-08-30T13:52:46",
-    "num_comments": 35,
-    "comments_url": "https://news.ycombinator.com/item?id=41400723",
-    "comments": [
-      "Do yourself a favor and look up moon landing 4k on youtube. There\u2019s some amazing immersive stuff now: https://youtu.be/boFZ3cAws20There\u2019s also a few amazing first person videos from space walks on the ISS: https://youtu.be/AmrrSfiMxGAThe footage from Artemis is gonna be incredible.Also highly recommend this \u201care we going?\u201d Talk on engineering issues in Artemis: https://youtu.be/OoJsPvmFixU\nWhich is where I learned about this report from NASA called \u201cWhat Made Apollo a Success\u201d: https://ntrs.nasa.gov/api/citations/19720005243/downloads/19...\n \nreply",
-      "Thanks!I liked reading this extensive accunt of all apollo missions and what each accomplished --A Man on the Moon: The Voyages of the Apollo Astronauts\nAndrew Chaikin\nhttps://www.amazon.in/Man-Moon-Voyages-Apollo-Astronauts/dp/...I wish there was an \"annotated verison\" or enthusiast discussion forum that corss-linked footage like this to the corresponding passages in the book so we can live it more fully\n \nreply",
-      "The Apollo Lunar Surface Journal, and the accompanying Apollo Flight Journal, are transcripts of the audio recordings, with accompanying audio/video, and annotations from post mission briefings, and interviews with the astronauts in the 1990s. There is an overwhelming amount of detail. Dave Scott of Apollo 15 was a particularly enthusiastic participant in this, but not the only one. It really is a tremendous resource for Apollo. \nhttps://www.nasa.gov/history/alsj/\nhttps://www.nasa.gov/history/afj/\n \nreply",
-      "I would like to add that everyone should check the incredible documentary \"For All Mankind\" scored by Brian Eno.\n \nreply",
-      "> amazing [...] space walksThe upcoming Polaris Dawn spacewalk will be live streamed. Its cameras were said to be a priority. It's on day 3. Launch is currently waiting on reentry weather.\n \nreply",
-      "Another chance to recommend a book that I learnt about from HN: I highly recommend the book, Sunburst and Luminary; http://www.sunburstandluminary.com/SLhome.htmlA technical pleasure and also very good glimpse into the Apollo team - working together, to land on the moon. It is a fun easy read, written by the fellow in charge of programming the guidance computer on the lunar lander. It is also a great snapshot of that time in history, the excitement of Apollo, and with the frustration of the Vietnam war going on, some protests, etc. Just a hint - the main programmer, was an English major, and his use of the right words, were a key factor in the success of of creating an efficient and effective computer language\n \nreply",
-      "Awesome to see this. One of my favorite songs to listen to that can get a pumped up feeling is Go! by Public Service Broadcasting where they use the voices from here in the song. I knew the source was Apollo landing, and it's cool to listen to the words from their origination.[0] https://www.youtube.com/watch?v=BHIo6qwJarI\n \nreply",
-      "Gives me the chills, sooo good.\n \nreply",
-      "I love the calm communications. The feeling of everything possible thought out.Regarding moon landing videos, I also enjoyed the \"story\" of the computer on board  which is told in this great presentation [1]: Light Years Ahead | The 1969 Apollo Guidance Computer by Robert Wills. Definitely worth a watch if you fancy the moon landing.[1]: https://www.youtube.com/watch?v=B1J2RMorJXM\n \nreply",
-      "That was a very good presentation. Thanks for posting. I probably would never come across otherwise\n \nreply"
-    ],
-    "link": "https://www.firstmenonthemoon.com",
-    "first_paragraph": "\n    In 1969, the entire world watched as three men\n    explored the unknown. Watch, listen, and relive the excitement of\n    the Apollo 11 lunar landing as experienced minute-by-minute by the courageous\n    crew of Apollo 11 and Mission Control.\n  \n    Are we Go for Powered Descent?\n  \n              Thamtech wants to make more sites like this. If you are interested, we'd\n              love to be able to email when we have something new to share.\n            "
-  },
-  {
-    "title": "Architectural Effects on Maximum Dependency Lengths of Recurrent Neural Networks (arxiv.org)",
-    "points": 14,
+    "title": "Neutral beam microscopy using magnetic beam spin encoding (nature.com)",
+    "points": 11,
     "submitter": "PaulHoule",
-    "submit_time": "2024-08-30T21:17:53",
+    "submit_time": "2024-08-28T17:32:08",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://arxiv.org/abs/2408.11946",
-    "first_paragraph": "The Accessibility Forum starts next week! Sign up and join us in September.arXiv's Accessibility Forum starts next month!Help | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n                    Get status notifications via\n                    email\n                    or slack\n"
+    "link": "https://www.nature.com/articles/s41467-024-51175-2",
+    "first_paragraph": "Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain\n            the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in\n            Internet Explorer). In the meantime, to ensure continued support, we are displaying the site without styles\n            and JavaScript.Advertisement\nNature Communications\nvolume\u00a015, Article\u00a0number:\u00a07046 (2024)\n            Cite this article\n638 Accesses76 AltmetricMetrics detailsThe emerging technique of neutral beam microscopy offers a non-perturbative way of imaging surfaces of various materials which cannot be studied using conventional microscopes. Current neutral beam microscopes use either diffractive focusing or pin-hole scanning to achieve spatial resolution, and are characterised by a strong dependence of the imaging time on the required resolution. In this work we introduce an alternative method for achieving spatial resolution with neutral atom b"
   },
   {
-    "title": "UK researchers find Alzheimer's-like brain changes in long Covid patients (uky.edu)",
-    "points": 79,
-    "submitter": "amichail",
-    "submit_time": "2024-08-30T21:38:08",
-    "num_comments": 45,
-    "comments_url": "https://news.ycombinator.com/item?id=41404748",
+    "title": "Client-side QR code generator with SVG output (fietkau.software)",
+    "points": 47,
+    "submitter": "kentbrew",
+    "submit_time": "2024-08-31T17:42:14",
+    "num_comments": 6,
+    "comments_url": "https://news.ycombinator.com/item?id=41410442",
     "comments": [
-      "It's quite possible that the causality goes the other direction, and a baseline population of brain disorders is being ascribed to the last notable thing that happened to them (which has also happened to ~ the entire population at this point).\n \nreply",
-      "UK meaning the University of Kentucky, not the United Kingdom.\n \nreply",
-      "Then the title is clickbait; without too much insult intended towards Kentucky.\n \nreply",
-      "Why? Would this be more interesting if they were in the UK?\n \nreply",
-      "Kind of, in the sense that it sounds like a global news headline, vs. 'University of Exeter researchers find [...]' published by exeter.ac.uk, on this globally read site.\n \nreply",
-      "It's global news to me. Hello from Australia!Edit: Ah wait, I think I get what you mean. By \"global news\" you mean it's been deemed worthy of sharing to an international audience by media outlets, as opposed to a crowdsourcing news source like HN. Is that right?\n \nreply",
-      "I mean when you write 'UK researchers find', especially to a global audience (which UoKentucky PR dept may not particularly have but HN does (Hello from the (the!) UK)) that it sounds more like the country UK than the.. no offence intended but not exactly world renowned university. (I've heard of Kentucky, probably my first time hearing of its university in its own right - though I might have assumed it had one.)\n \nreply",
-      "It seems like a fairly mediocre institution, at least in terms of research output: https://www.nature.com/nature-index/institution-outputs/gene...Not entirely surprised we'd never heard of it.\n \nreply",
-      "I feel like it would be trusted a little bit more if it was a study by the NHS from the UK rather than something from Kentucky.\n \nreply",
-      "I was just reading on the BBC that people were having to go overseas for critical surgeries because the NHS so woefully incompetent that people were on many years long waiting list.  So maybe put \"NHS excellence\" on the shelf next to \"Empire\" as UK delusions that have long since passed.U of Kentucky is a pretty decent school, ~25k students with (from personal experience) excellent Civil Engineering and Chemistry schools, at least.\n \nreply"
+      "This looks great! Wish I had it a few months ago instead of having to use qr-code-styling[0] which was a bit of a pain.I remember it was around the same time that Obsidian got native callouts, so my notes for that project are all colourful & contain valuable admonitions like this:```> [!todo]> That feeling when you're wasting hours of your life trying to make something you know is abandonware work just because it looks nice. There should be a word for that feeling. In Danish or Japanese. Or German.```[0]: https://github.com/kozakdenys/qr-code-styling\n \nreply",
+      "If you stumbled upon this looking for the smallest QR code JS library, it's probably LeanQR [0]. It's under 10kb minified and 5kb compressed.[0] https://qr.davidje13.com/\n \nreply",
+      "One of my favorite components from the open source web components library Shoelace is the QR code generator:\nhttps://shoelace.style/components/qr-code\n \nreply",
+      "Thank you for building this wonderful UI on top of my library!\n \nreply",
+      "USE THIS SOFTWARE AND LEARN FROM MY MISTAKE:We made a cute Christmas video to include in our card this year. My wife created a QR code from a random website and included it in the card as a picture. It linked to our video. We sent all of the cards out. People loved it.... except we got an email from the QR code company about a week before Christmas. We went over our \"free\" click (the QR code went through their URL shortener). If we wanted to keep the QR code active we had to pay $20/mo.We got absolutely fleeced. Never again. Control the URL and make the QR image yourself.\n \nreply",
+      "\"The demo on this page combines Project Nayuki\u2019s QR Code generator library (a multi-language open source project that can, among other things, perform the conversion of text into raw QR code data) with my own QRSVG project, which can turn a QR-like two-dimensional boolean data map into an efficient vector description of its own visualization by tracing the contours of contiguous shapes.\"\n \nreply"
     ],
-    "link": "https://uknow.uky.edu/research/uk-researchers-find-alzheimer-s-brain-changes-long-covid-patients",
-    "first_paragraph": "LEXINGTON, Ky (Aug. 30, 2024)\u00a0\u2014 New research from the University of Kentucky\u2019s\u00a0Sanders-Brown Center on Aging\u00a0shows compelling evidence that the cognitive impairments observed in long COVID patients share striking similarities with those seen in Alzheimer\u2019s disease and related dementias.\u00a0The study, published in\u00a0Alzheimer\u2019s & Dementia: The Journal of the Alzheimer\u2019s Association, highlights a potential commonality in brain disorders across these conditions that could pave the way for new avenues in research and treatment.The study was a global effort, funded by a multitude of grants from the U.S. National Institutes of Health, the Alzheimer\u2019s Association and international organizations. The project also brought together experts from various fields of neuroscience.\u00a0Researchers at the UK College of Medicine led the study, including Yang Jiang, Ph.D., professor in the Department of Behavioral Science; Chris Norris, Ph.D., professor in the Department of Pharmacology and Nutritional Sciences; "
+    "link": "https://fietkau.software/qr",
+    "first_paragraph": "Single colorGradientPaletteSome combinations of customization options may reduce the code\u2019s scannability. Be sure to test it before committing.QRSVG is a small JavaScript project to render a two-dimensional bitmask (mostly assumed to be a QR code) to an SVG element as a collection of SVG paths with defined purposes.QR codes have established themselves as a popular way to provide a chunk of digital information (most commonly a web address to jump to) via physical media. I myself occasionally use them in flyers, posters, or presentation slides.They are not too complicated to generate and a variety of free websites exist for this purpose. Sadly none of them appear to have all of the customization options that I want, plus most of them use some manner of ads and/or data tracking. The demo on this page combines Project Nayuki\u2019s QR Code generator library (a multi-language open source project that can, among other things, perform the conversion of text into raw QR code data) with my own QRSVG"
   },
   {
-    "title": "Libntruprime is a microlibrary for the Streamlined NTRU Prime cryptosyst (cr.yp.to)",
-    "points": 7,
-    "submitter": "zdw",
-    "submit_time": "2024-08-26T03:43:47",
-    "num_comments": 0,
-    "comments_url": "",
+    "title": "Brazil's X ban is sending lots of people to Bluesky (theverge.com)",
+    "points": 75,
+    "submitter": "rvz",
+    "submit_time": "2024-08-31T13:28:25",
+    "num_comments": 137,
+    "comments_url": "https://news.ycombinator.com/item?id=41408738",
     "comments": [
-      "xxx"
+      "Copying over my latest backend status update; figure folks would find it interestingServers are holding up so far! Fortunately we were overprovisioned. If we hit 4mm new signups then things should get interesting. We did have some degradations (user handles entering an invalid state, event-stream crashed a couple times, algo crashed a couple times, image servers hit bad latencies) but we managed to avoid a full outage.We use an event-sourcing model which is: K/V database for primary storage (actually sqlite), into a golang event stream, then into scylladb for computed views. Various separate services for search, algorithms, and images. Hybrid on-prem & cloud. There are ~20 of the k/v servers, 1 event-stream, 2 scylla clusters (I believe).The event-stream crash would cause the application to stop making progress on ingesting events, but we still got the writes, so you'd see eg likes failing to increment the counter but then magically taking effect 60 seconds later. Since the scylla cluster and the KV stores stayed online, we avoided a full outage.\n \nreply",
+      "Does Bluesky intend to be responsive to the kind of court orders that X rejected?\n \nreply",
+      "Speaking entirely personally as I don't handle those questions at bsky. I couldn't even begin to comment without seeing knowing what the court orders were and what the cases are. Every social company operating internationally runs into this issue, and it's daunting to say the least. So, again, this is not something I decide.What I can say is that the protocol is a neutral global layer for data, which can then enable multiple applications with their own moderation policies and decisions. There's always going to be moderation decisions we make that people will disagree with. The point is that something can be done about that disagreement - you can have other applications on the same network that makes their own decisions. I think one of the best things that could happen is that Brazilian developers fork the Bluesky app and build locally-owned social platforms on the atmosphere.\n \nreply",
+      "Context: atmosphere is like \"Fediverse\" but for the AT protocol and also way more schway\n \nreply",
+      "Clearly given he is excited to receive the traffic\n \nreply",
+      "Can you elaborate on this? I\u2019m not clear what you mean here.\n \nreply",
+      "Interestingly, the cohort moving to Bluesky isn't the same as those who were having trouble with the law.\n \nreply",
+      "That\u2019s interesting. Why do you use event sourcing? Is having a full history important for a website/app like bluesky?\n \nreply",
+      "Ahhh you know what, I should call it stream processing or something, because we don't store the data entirely as events. We store the data as a mutable K/V which emits an event stream of changes, which can then be ingested into different views. We chose not to store changes as events specifically because we don't want unbounded growth in the system. Initial syncs work by fetching the current state of the K/V store (the \"data repo\").Bluesky is built on atprotocol (atproto.com) and can be thought of as an open distributed system. The event stream is for replicating throughout the various services.\n \nreply",
+      "I left Xitter about 6 weeks ago and went all in on Bluesky. Took time to give feedback to the algo, but it's doing much better these days. I don't feel like I'm missing out on much, you'll get the same news & events on Bluesky. A lot of people who were scared of losing their following are reporting more, better engagement with lower follower counts.What I really like about it is the ATProto, which while imperfect, seems like the best current design for the next gen of social media built on a federated foundation.- DID for identity- PDS for data mobility- algo feed & moderation choice, you can build your own and anyone on Bluesky can use it (https://bsky.social/about/blog/03-12-2024-stackable-moderati...) If you didn't see, they recently added anti-toxicity features and are looking towards community notes- Bluesky is the twitter like view, but you can build anything on ATProto and leverage the shared infraI'm personally working on a \"reddit\" like view of the Bluesky network. Not a reddit clone, but a different way to organize the same information around topics, news events, and/or links. One could also design their own Lexicon and build something very close to reddit. One of the cool things is that all the objects for all apps are stored into a single SQLite database per user. So if you want to move your data to a different host, all of the apps, content, and connections survive that migration.\n \nreply"
     ],
-    "link": "https://libntruprime.cr.yp.to/",
-    "first_paragraph": "libntruprime is a microlibrary for the\nStreamlined NTRU Prime\ncryptosystem.\nStreamlined NTRU Prime (sntrup) is a lattice-based cryptosystem with the following features:libntruprime has a very simple stateless API\nbased on the SUPERCOP API,\nwith wire-format inputs and outputs,\nproviding functions\nthat directly match the KEM operations provided by the sntrup specification,\nsuch as functionsfor the sntrup1277 KEM.Internally,\nlibntruprime includes implementations designed to work portably across CPUs,\nand implementations designed for higher performance\non Intel/AMD CPUs with AVX2 instructions.\nlibntruprime includes automatic run-time selection of implementations.libntruprime is intended to be\ncalled by larger multi-function libraries\n(such as traditional cryptographic libraries),\nincluding libraries in other languages via FFI.\nThe idea is that libntruprime takes responsibility\nfor the details of sntrup computation,\nincluding optimization, timing-attack protection, and (in ongoing work) ver"
+    "link": "https://www.theverge.com/2024/8/30/24232561/brazil-x-ban-sending-people-bluesky",
+    "first_paragraph": "By  Jay Peters, a news editor who writes about technology, video games, and virtual worlds. He\u2019s submitted several accepted emoji proposals to the Unicode Consortium.X is currently banned in Brazil following an order from a Supreme Court justice, and Brazilian users seem to be turning to Bluesky, an alternate social network, in droves.\u201cBrazil, you\u2019re setting new all-time-highs for activity on Bluesky!\u201d the official Bluesky account said in a post.\u201cThere will almost certainly be some outages and performance issues,\u201d Bluesky developer Paul Frazee said. \u201cWe\u2019ve never seen traffic like this. Hang with us!\u201d The Bluesky app looks and functions a lot like X, but it\u2019s a decentralized social media platform that\u2019s built on the AT Protocol (which is also developed by Bluesky). In a 5:12PM ET post, Frazee said that Bluesky is seeing 1,000 events per second \u2014 a \u201cnew milestone\u201d \u2014 on its \u201crelay,\u201d which essentially functions as the firehose of data for the platform. On Friday night, Bluesky said it had "
   },
   {
-    "title": "Regex Crossword (mathspp.com)",
-    "points": 54,
-    "submitter": "cab404",
-    "submit_time": "2024-08-28T10:28:28",
-    "num_comments": 12,
-    "comments_url": "https://news.ycombinator.com/item?id=41378002",
+    "title": "Show HN: A retro terminal text editor for GNU/Linux coded in C (C-edit) (github.com/velorek1)",
+    "points": 118,
+    "submitter": "velorek",
+    "submit_time": "2024-08-30T20:58:17",
+    "num_comments": 30,
+    "comments_url": "https://news.ycombinator.com/item?id=41404360",
     "comments": [
-      "I'm surprised nobody's mentioned the Regex Crossword game site [0], it's shown up on HN several times [1][2] and has a fantastic user-submitted puzzle section (that includes the MIT Mystery Hunt puzzle [3]) and a puzzle builder.0: https://regexcrossword.com/1: https://news.ycombinator.com/from?site=regexcrossword.com2: Most discussed posting: https://news.ycombinator.com/item?id=86740393: https://regexcrossword.com/playerpuzzles/8cbea27f-c4c5-4d11-...\n \nreply",
-      "> I'm surprised nobody's mentionedThere's a lot of these. An embarrassment of riches!\n \nreply",
-      "I really love this kind of thing. I made one called 'redoku' a long long time ago. It generates random challenges. Try it here: https://padolsey.github.io/redoku/\n \nreply",
-      "A good puzzle poses a problem for you to solve. A regex puzzle? now you have two problems to solve.\n \nreply",
-      "This is a Mystery Hunt puzzle, so solving the obvious puzzle is only the first step of solving the puzzle. You will need to do something with the puzzle solution to somehow get a word or short phrase.I remember doing this one by hand over a decade ago. Fond memories.https://puzzles.mit.edu/\n \nreply",
-      "Yes, the original is here: https://puzzles.mit.edu/2013/coinheist.com/rubik/a_regular_c...\n \nreply",
-      "Edited - never mind, this is obviously random strings of characters.\n \nreply",
-      "I'm going to have to print this one out lol. Very creative.\n \nreply",
-      "I remember playing this in a browser. I'll try to find where.edit: https://jimbly.github.io/regex-crossword/\n \nreply",
-      "oops there went my afternoon\n \nreply"
+      "Apart from the learning experience, there is still value in a small-sized, fast TUI text editor for Linux.However, my two suggestions would be:- add Unicode support (it's the 21st century, so \u2211, \u00ae, etc. should finally work); this is not easy, but the earlier you do it the less dramatic the changes will be (check out https://github.com/unicode-org/icu/tree/main/icu4c);- don't allocate the lines individually (as you do now with malloc, having looked at the code); at least use an arena allocator, i.e. allocate larger chunks of memory and the provide your own alloc_line function that uses the larger chunks (called arenas) piecemeal. This will speed things up and reduce fragmentation. A more advanced approach would be not to use per-line buffers but to switch to rope data structures e.g. https://github.com/josephg/librope).\n \nreply",
+      "As an alternative to ICU, there is suckless's libgrapheme (https://libs.suckless.org/libgrapheme/) which is more than a 100x smaller and provides full Unicode compatibility.\n \nreply",
+      "> This will speed things up and reduce fragmentationDoes this really make much of a practical difference these last decades? I wrote a text editor back in the late 90s in DOS using DJGPP with per-line allocation and it worked fine on the Pentium MMX i had at the time (and my approach to optimization at that time was be ignorant of the concept :-P), i'm not sure it'd really make much of a difference on any desktop or laptop CPU released past 2000 - at least as far as users editing text files are concerned (might make a difference if you try to open a multiGB file with barely a line break and accidentally press a letter :-P).\n \nreply",
+      "When you mentioned retro I was expecting something like editline. Now I feel old.Anyways, the TUI on mainstream MS-DOS 6.22 and Borland from those days were incomparable to anything on mainstream Linux even on these days. For some reason Linux is the king of text mode and yet never had a proper TUI tradition.Thank you for sharing the project. Compiled well on my side, looking forward to the next developments. My (unrequested) feedback:+ consider renaming from C-edit (uppercase) to lower case c-edit, because it is simpler to type from the terminal.+ the animations of the spining part on top was distracting+ some menus missing to implement functionality, didn't test copy&paste+ mouse support would be nice, albeit optional but would complete the MS-DOS 6.22 / borland style since it supported mouse there tooThank you.\n \nreply",
+      "Glad it compiled! Most of your suggestions are on my to-do list indeed. I wanted to maintain an animation to demonstrate that it could be kept running throughout all the different dialogs and listboxes. I'll probably end up changing it. Thank you for testing it. :)\n \nreply",
+      "I have to say that when I saw retro I expected ncurses support. Not all retro terminals understand VT100 escape sequences ;-)What about those who use VT-52 terminals?\n \nreply",
+      "Unless you\u2019re using an actual hardware VT52, then it\u2019s pretty safe to assume VT100 support these days.\n \nreply",
+      "Makes good sense. Keep up the good work!\n \nreply",
+      "Love the look, definitely throwing me back to the halcyon QBasic days.Slightly related but another way to simulate a retro text editor (old school raster style green screen aesthetic in this instance) is to combine the \"cool-retro-term\" terminal with the minimal editor \"micro\".https://github.com/Swordfish90/cool-retro-termhttps://github.com/zyedidia/micro\n \nreply",
+      "I love cool-retro-term, I keep it running with a Matrix style terminal toy as a \"screensaver\" on the small PC sitting on my homelab. It's an ostentatious waste of power and CPU cycles but I appreciate the aesthetics of it.\n \nreply"
     ],
-    "link": "https://mathspp.com/blog/problems/regex-crossword",
-    "first_paragraph": "Can you solve this crossword where all hints are regular expressions?At EuroPython 2024 I watched a lightning talk about the art of puzzle solving.\nIn it, the speaker showed the regex crossword puzzle that you can see above, that I took from this URL.\nYou are supposed to fill the hexagonal grid with letters so that all of the regular expressions shown match.If you don't know regular expressions, the puzzle only uses a simple subset of the syntax:You can look this up and then you will be able to solve the challenge.\nYou can also use the site regex101 to help you check what each regular expression means.Give it some thought!In the spirit of the puzzle hunting community, I will not share my solved grid here.\nIf you need help, feel free to email me and we can talk it over.P.S. if I understood correctly, in the puzzle hunting community you're not supposed to just fill in the grid.\nIn some way, somehow, you are supposed to be able to extract an English word or phrase from that filled puzzle "
+    "link": "https://github.com/velorek1/C-edit",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A text editor in C with drop down menus from scratch. No ncurses.\n      C-EDIT for linux - ALPHA - A linux text editor in the style of the MSDOS EDIT - WITHOUT USING NCURSES\nWorks well with Termux! :)If you want to support this project:\nbitcoin:bc1qn8hzf7f07afcyasym434e9a7sflf8mpjflhg4wContact me at: velorek1@gmail.comNEW: AUGUST 2024 (merging with ceditbuf)History:TO INSTALL:So far I have implemented:As a screen buffer I have implemented a dynamic structure in memory that allows to save the current screen so that you can display new things on top and then go back to the previous (saved) screen. (simple linked list)TO-DO:\n\n        A text editor in C with drop down menus from scratch. No ncurses.\n      "
   },
   {
-    "title": "Home Assistant Presence Simulation (github.com/slashback100)",
-    "points": 100,
-    "submitter": "edward",
-    "submit_time": "2024-08-28T13:01:54",
-    "num_comments": 69,
-    "comments_url": "https://news.ycombinator.com/item?id=41379015",
+    "title": "Lucee: A light-weight dynamic CFML scripting language for the JVM (lucee.org)",
+    "points": 56,
+    "submitter": "mooreds",
+    "submit_time": "2024-08-31T15:10:43",
+    "num_comments": 22,
+    "comments_url": "https://news.ycombinator.com/item?id=41409434",
     "comments": [
-      "Just a note to anyone interested in trying out Home Assistant:It's amazing _but_ do NOT use a raspberry pi to run it. Save yourself a ton of headaches and buy a mini pc (there was a list of used mini pcs posted here yesterday from ebay). Also I recommend using HAOS (or whatever the \"we install and run the whole OS\" option is called) so that you can use things like plugins without messing around with docker. I love docker but trust me, life is easier on HAOS.I liked HA but felt like it wasn't really \"stable\". I used a Pi 3 for a while, then a Pi 4 decked out (highest ram, NVME storage, super nice case, etc) and still felt like it was unstable. I chalked this up to HA but then rolled the dice on a Beelink mini pc and it has been rock solid ever since. Also don't be misled by the lower price of the Pi, I paid more for my Pi 4 setup than the Beelink (or about the same).I blamed everything from the Zigbee/Z-wave dongles, to HAOS, to HA itself, etc but in the end it was RPi. The 4 was the last Pi I'll ever buy.EDIT: I was in a hurry and didn't add my normal disclaimer when I talk about the RPi's:Yes I know some of you have a Pi 1 that been running you entire life since it first came out and you think I'm full of crap. I've owned every Pi 1-4 and never been truly happy with them. I bought them \"raw\" and sourced all the parts myself, I bought high-end (at least in price) kits with everything included, I bought all official accessories (like power), they always were just that little bit unstable.It would work great for days/weeks then randomly not be reachable (wired or wireless). I spent just shy of $200 for my last \"builds\" which included a NVME drive (240G, lest you think this is where the cost was), RPi case, RPi NVME hat, RPi 4 8gb model, SD card, power, etc and the result was still instability. I don't know what to tell you. Maybe I'm a moron but my experience with them has not been great. That said I want to love them and I loved my RPi 1B even with all it's warts, a $35 \"credit card sized\" computer was awesome. Maybe I just don't want to tinker as much anymore and value stability.\n \nreply",
-      "100% this, my rpi3 kept running out of ram running all the services I wanted on home assistant so I moved it to proxmox and use the roi+touchscreen as a dedicated web client for the interface nowBe careful with the beelinks though, I have one with a nice ryzen API that's basically useless because the USB gave out and it's a chicken and the egg problem trying to get Bluetooth on it.  Haven't gotten around to attempt manually configuring Bluetooth on the SSD yet (from another computer) or otherwise fixing those ports\n \nreply",
-      "I've been running it for a year on a RPi 2, via WiFi, from a SD card *and* a Zigbee dongle, which is basically what everyone seems to say you should not do, and never had a single issue with it. I don't think these issues have anything to do with HA itself but rather the extensions people install on it.\n \nreply",
-      "I think it also has to do with how many devices you have on it and how often they update state. I have 300+ IP devices and have to run it on a mini PC because RPi was too slow. No custom plugins or extensions, just a few basic integrations.\n \nreply",
-      "I want to go the other way and say DO NOT use HAOS if you know anything about docker. If you have ANY experience working under linux/docker just don't bother with HAOS and save yourself the headache. You will have an incredibly better experience just running your HASS docker container by yourself.HAOS caused so many issues for me while it tried to set up the other containers (such as Node Red), specially during home assistant updates, and it also made the whole UI extremely confusing because it would \"redirect\" some things to HAOS while others would be done inside HASS itself. With it auto trying to manage the containers it was also never clear when things were still booting/loading or crash looping and when you had issues the extremely limited access HAOS gives you was painful to deal with.As with other personal anecdotes in this thread, it may not be relevant to you, but I'd share my own experience as well, as someone that has had HASS running for 6+ years now.\n \nreply",
-      "i\u2019d recommend buying \u201chome assistant green\u201d, it\u2019s plug n play:https://www.home-assistant.io/green/\n \nreply",
-      "Counterpoint: I've been running HAOS on an RPi 2 and 3 for several years without a single issue, and I do use a z-wave dongle but no Zigbee. I only do basic stuff with it (a few automations for my z-wave thermostat and switches, AdGuard Home), but it's been rock solid for me.I only had issues once, when I tried to run the Unifi Network Application addon. A RPi is not strong enough for that, but I just uninstalled it and moved on.\n \nreply",
-      "HAOS is absolutely terrible when it faces filesystem corruption.  I faced this a few times when my HAOS image crashed.  You can't even get it to fsck on boot when it happens.  I think that's one big reason people on RPIs have issues.  The FS is on an SD card, SD cards are flakey, and there's no good rescue path when the FS has issues.I guess USB power is also historically not great on RPI.  I haven't played with them in a few years but I remember needing powered hubs.  That might explain issues with Zigbee and Z-wave dongles.  Note also the '700 series' z-wave dongles have a lot of issues.  You can update the firmware to fix some.  Mine's been flakey and I'm on the latest firmware from ~2 weeks ago that's supposed to fix all of that.I was running HAOS on VirtualBox, with the disk image on ZFS.  I switched to running docker out of the same ZFS filesystem and it's much faster and more reliable, notably I don't get random filesystem corruption.  Anecdote.  YMMV.\n \nreply",
-      "I\u2019m not familiar with virtualbox, do you have any idea why HAOS on VB+ZFS was corrupting vs Docker+ZFS?\n \nreply",
-      "I wasn't sure. I had some kernel panics that I didn't dig deeply into, and I would sometimes use the image outside the VM to fsck it when HAOS would subsequently not recover.\n \nreply"
+      "At this point I'd skip Lucee which has most of the legacy baggage Adobe ColdFusion does and look at BoxLang.  https://boxlang.io/\"A modern, dynamically and loosely typed scripting language for multiple runtimes. For the Java Virtual Machine (JVM) giving you tons of Object-Oriented (OO), Functional Programming (FP) Constructs, and dynamic Metadata Programming (MP).\"\n \nreply",
+      "I wouldn\u2019t recommend it for anything large but for fast internal tools, CFML is faster than anything I\u2019ve seen to get something up and usable. When Covid started we needed to track testing and positives and notifications - all the fun stuff. And it needed to be up in running in three days. The next day I had a release candidate and we deployed and announced it on the Monday. Similar places took weeks or had to wait for off the shelf products.Would I sell it what I made? No, but if your primary concern is getting stuff done, it surely will.\n \nreply",
+      "Great product. It was forked from Railo (no relation to Rails), and the founders of Lucee came from Railo when they didn't like the direction Railo was going. The point is that Lucee is 16+ years old, and a popular alternative to Adobe ColdFusion.\n \nreply",
+      "I ended up doing cf almost by accident for quite a while (like, 8 years) and was there as it went through the adobe -> railo transition.Coldfusion had a bad rep but it was actually a pretty good tool to work with. Railo made it a million times better in every way - the performance was solid and the environment was full featured enough to let you focus on the code.The original adobe (macromedia, right?) version was a mess. There were no functions but you could import modules. Massive caveat that those modules were allowed to mutate state outside of themselves so people would import them to, for example, run some db queries and set some variables in the calling code with the results. You can imagine the absolute unmaintainable mess that ensued.\n \nreply",
+      "There were custom tags since 1997 (v3) and functions since 2001 (v5).https://cfdocs.org/coldfusion-versionsCF is interesting because it started as basically server side includes with some extra features to connect to a database. It was meant to be very approachable and not general purpose. Like a distant ancestor to Jupyter and Observable.That approachability made for some big messes, but it also spawned a huge community of software developers who might not have gotten into it otherwise.\n \nreply",
+      "To be honest I don\u2019t quite recall the history anymore and no doubt the place we were at was late with adoption. My first day they said \u201ccongratulations, you\u2019ve just inherited 3 million lines of confusion\u201d\n \nreply",
+      "Before it was bought by Macromedia ColdFusion was produced by Allaire (the Allaire brothers): https://en.wikipedia.org/wiki/Allaire_CorporationI want to say Macromedia mostly bought ColdFusion for it's editor. The language seemed to be a bit of afterthought.\n \nreply",
+      "It did the same thing PHP did in terms of convenience. Made it easy to generate \u201cdynamic\u201d HTML. Everything was a template in a sense. It grew into a more serious programming language and platform. Fond memories of year 2000 :)\n \nreply",
+      "I've joked for awhile that I might be literally the only person on earth who has had paying work in Coldfusion, Foxpro, ActionScript, Erlang, Haskell, and F#. I don't that for sure, I haven't taken a global survey, it just seems like a pretty obscure pairing.When you drop out of college, you take whatever job you can get.  My first software job was doing ColdFusion, ActionScript, and Foxpro for a Tae Kwon Do studio.  I didn't really know Coldfusion or Foxpro, but I picked them up relatively quick, and while I never really liked either of them, I did appreciate how quick I was able to prototype stuff in Coldfusion.It was relatively easy to go from 0-to-website with CFML and get something that more or less worked, and even had a few niceties as well; the SQL support was actually quite good (including built-in caching), you could fairly easily call out to Java libraries, and it was easy enough to remote with Flash/Flex, which was still relatively useful.I found it almost impossible to actually maintain anything, and I don't think I'd use it for anything now (particularly since I dont' do any frontend anymore), but there's a sentimentality that I will forever have for Coldfusion, if for no other reason it's the thing that kicked off my career.\n \nreply",
+      "I had to work on quite a few coldfusion sites in the 1998 to 2010 timeframe. I found having to write brackets for each and every statement to be tiring; <cfif> <cfelse> <cfset var mystuff \"johnnyb\">Eventually, they incorporated cfscript which let you write stuff that was more like the c derived languages. But they did not port every <cftag> function over to cfscript. Terrible oversight. If you had to resort to ending your cfscript to fall back to a cftag it made the code really ugly.<cfdump> was ahead of its time. It came out way before php var_dump.<cfquery> was really powerful. It let you take any database result and then treat that result as though it were a database itself. So you could query a query so to speak.Something else I remember is how many ColdFusion devotees I worked with. I never understand how people get so attached to a language (ColdFusion, Ruby), a company (Apple), or a database (Postgres, MongoDB). It becomes some kind of cult. So many defensive ColdFusion programmers I had to deal with.Edit to add another memory. Old ColdFusion would use YES for true and NO for false. That would cause a lot of headaches when dealing with other systems that had no notion of YES or NO.\n \nreply"
     ],
-    "link": "https://github.com/slashback100/presence_simulation",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Home Assistant Presence Simulation\n      Please \u2b50 this repo if you find it usefulThis Home Assistant component aim to provide a presence simulation in your home while you are away. It will turn on & off lights, switches, covers... based on your history.It will look in the DB for the states history of all the entities configured in the component for a period corresponding to a delta variable defined in the component.\nIt will apply to the entites the same state (and some attributes like brightness and rgb_color) as it was delta days ago, in order to simulate your presence.\nIf the service is running longer than the number of days defined as the delta, the component will simply be reset and start over, until the stop service is called.Supported entities domains:The history integration must be activated - which it is by default. The peri"
+    "link": "https://www.lucee.org/",
+    "first_paragraph": "A light-weight dynamic scripting language for the JVM that enables the rapid development of simple to highly sophisticated web applications.We are an open source project and welcome contributions in all forms. If you want to dive into code, check out our Contributors guide.Whether you're working on a small personal project or a massive corporate business, you can benefit from Lucee Server's low cost of ownership. \n Excited for CFCamp 2024 on June 13-14 in Germany? Lucee will be there!\n\t\t\t\t\t\t\nGet your tickets nowLucee is a light-weight dynamic CFML scripting language with a solid foundation. See our Hello World example.Learn Lucee\u00a0\u00a0\u00a0Get help with Lucee problems\r\non our mailing list, slack\r\nchannel and engage with the\r\ncommunity on our language\r\ndevelopment forum.\u00a0Without our supporters we wouldn't be able to help the Lucee project to grow and prosper. Being a supporter means the project you rely on can continue and grow in the future. Interested in helping out?\u00a0Contribute to the source "
   }
 ]
