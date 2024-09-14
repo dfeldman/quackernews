@@ -1,378 +1,389 @@
 [
   {
-    "title": "Data sleuths who spotted research misconduct cleared of defamation (arstechnica.com)",
-    "points": 159,
-    "submitter": "dangle1",
-    "submit_time": "2024-09-12T21:28:17.000000Z",
-    "num_comments": 28,
-    "comments_url": "https://news.ycombinator.com/item?id=41525778",
+    "title": "My 71 TiB ZFS NAS After 10 Years and Zero Drive Failures (louwrentius.com)",
+    "points": 74,
+    "submitter": "louwrentius",
+    "submit_time": "2024-09-13T23:21:10.000000Z",
+    "num_comments": 54,
+    "comments_url": "https://news.ycombinator.com/item?id=41536088",
     "comments": [
-      "While a favorable ruling for the Data Colada defendants seemed incredibly likely in the end (and of course being dismissed pre-trial before discovery is a good thing). But it still took over a year, and consisted of several pre-trial hearings with multiple back and forths between them. If I ctrl-f https://storage.courtlistener.com/recap/gov.uscourts.mad.259... I see Pyle (their lawyer) listed 11 times. All the motions and responses are a non-trivial amount of work.Do folks have a sense of how much the costs would have been just to get dismissed for DC? Seems to be definitely over 10k (50k?) Or am I overestimating.\n \nreply",
-      "I'm pretty sure this guy wouldn't get out of bed for $10k:https://princelobel.com/professional/jeffrey-j-pyle/Although given that the New Yorker stated that Pyle \"appeared not only professionally but personally incensed by the fact of the lawsuit\", perhaps some of the work was pro bono.https://www.newyorker.com/news/news-desk/how-a-scientific-di...\n \nreply",
-      "Thankfully, a lot of the filings appear short enough that I doubt he's going to charge very much.  I assume the retainer was still $20-30k, but they may get some of it back.I was hoping that there would be some fee-shifting here, but it's federal court.\n \nreply",
-      "Fortunately, they were able to raise quite a bit of money (>$300K) on GoFundMe: https://www.gofundme.com/f/uhbka-support-data-coladas-legal-...\n \nreply",
-      "You are probably not overestimating.Generally, I would guess conferring with the client on the facts, briefing, preparing for a hearing, and arguing a hearing would be north of, at least, 25k, assuming a lower-end rate estimate in the $800+ range and a lower-end work estimate of 30+ hours.  If I had to bet, I'd go higher than the low-end estimate: both the rate and hours could be close to double.  That said, the attorney / firm could be donating the time on this one.\n \nreply",
-      "We're lucky to have hard-headed people willing to put up with legal threats and bullying tactics. I'm not sure I'd have the spine for it. It reminds me of when Ben Goldacre was sued [0] which luckily his publisher covered the costs for.[0] https://www.badscience.net/files/The-Doctor-Will-Sue-You-Now...\n \nreply",
-      "\u201c[s]cientific controversies must be settled by the methods of science rather than by the methods of litigation\u201dBoom. And the researchers didn't accuse a person of fabrication, they accused the data of being fabricated.\n \nreply",
-      "The irony is that Francesca Gino and Dan Ariely are famous for their pop-sci/TED talks studying dishonesty. Turns out they were dishonest themselves.https://www.npr.org/2023/07/27/1190568472/dan-ariely-frances...\n \nreply",
-      "There is no limits a grifter wont go to in order to continue their grift. Those with the funds regularly get away with it purely because they have the funds to sue their opponents into bankruptcy. The system worked in this case but it so rarely does and we see so often people having to back down due to legal threats.\n \nreply",
-      "see: Lance Armstrong.\u2020\u2020 https://www.abajournal.com/news/article/lance_armstrong_admi...\n \nreply"
+      "Regarding the custom PID controller script: I could have sworn the Linux kernel had a generic PID controller available as a module, which you could setup via the device tree, but I can't seem to find it! (grepping for 'PID' doesn't provide very helpful results lol).I think it was used on nVidia Tegra systems, maybe? I'd be interested to find it again, if anyone knows. :)\n \nreply",
+      "> This NAS is very quiet for a NAS (video with audio).Big (large radius) fans can move a lot of air even at low RPM. And be much more energy efficient.Oxide Computer, in one of their presentations, talks about using 80mm fans, as they are quiet and (more importantly) don't use much power. They observed, in other servers, as much as 25% of the power went just to powering the fans, versus the ~1% of theirs:* https://www.youtube.com/shorts/hTJYY_Y1H9Q* https://www.youtube.com/watch?v=4vVXClXVuzE\n \nreply",
+      "just curious, are you associated with them, as these are very obscure youtube videos :DLove it though, even the reduction in fan noise is amazing. I wonder why nobody had thought of it before, it seems so simple.\n \nreply",
+      "+1 for mentioning 0xide. I love that they went this route and that stat is interesting. I hate the typical DC high RPM small fan whine.I also hope that they do something 'smart' when they control the fan speed ;-)\n \nreply",
+      "I feel like 10 years is when my drives started failing the most.I run a 8x8tb array zraid2 redundancy, initially it was a 8x2tb array but drives started failing once every 4 months, after 3 drives failed I upgraded the remaining ones.Only downside to hosting your own is power consumption. OS upgrades have been surprisingly easy.\n \nreply",
+      "I\u2019ve heard the exact opposite advice (keep the drives running to reduce wear from power cycling).Not sure what to believe, but I like having my ZFS NAS running so it can regularly run scrubs and check the data. FWIW, I\u2019ve run my 4 drive system for 10 years with 2 drive failures in that time, but they were not enterprise grade drives (WD Green).\n \nreply",
+      ">Not sure what to believeKeep them running.Why?:* The read/write heads experience literally next to no wear while they are floating above the platters. They physically land onto shelves or onto landing zones on the platters themselves when turned off; landing and takeoff are by far the most wear the heads will suffer.* Following on the above, in the worst case the read/write heads might be torn off during takeoff due to stiction.* Bearings will last longer; they might also seize up if left stationary for too long. Likewise the drive motor.* The rush of current when turning on is an electrical stressor, no matter how minimal.The only reasons to turn your hard drives off are to save power, reduce noise, or transport them.\n \nreply",
+      "Hard drives are often configured to spin down when idle for a certain time. This can cause many spinups and spindowns per day. So I don't buy this at all. But I don't have supporting evidence that back up this notion.\n \nreply",
+      "There seems to be a huge difference between spin-down while NAS is up vs shutting the whole NAS down and restart. When I start my NAS, it takes a bunch of time to be back up: it seems to do a lot of checking on/ syncing off the drives and puts a fair amount of load on them (same is true for CPU as well, just look at your CPU load right after startup).OTOH, when the NAS spins up a single disk again, I haven't notice any additional load. Presumably, the read operation just waits until the disk is ready.\n \nreply",
+      "I think NAS systems in particular are often configured to prevent drives from spinning down\n \nreply"
     ],
-    "link": "https://arstechnica.com/science/2024/09/court-clears-researchers-of-defamation-for-identifying-manipulated-data/",
-    "first_paragraph": "Front page layoutSite theme\nJohn Timmer\n    -    Sep 12, 2024 9:17 pm UTC\nEarlier this year, we got a look at something unusual: the results of an internal investigation conducted by Harvard Business School that concluded one of its star faculty members had committed research misconduct. Normally, these reports are kept confidential, leaving questions regarding the methods and extent of data manipulations.But in this case, the report became public because the researcher had filed a lawsuit that alleged defamation on the part of the team of data detectives that had first identified potential cases of fabricated data, as well as Harvard Business School itself. Now, the court has ruled on motions to dismiss the case. While the suit against Harvard will go on, the court has ruled that evidence-backed conclusions regarding fabricated data cannot constitute defamation\u2014which is probably a very good thing for science.The researchers who had been sued, Uri Simonsohn, Leif Nelson, and Joe Simmon"
+    "link": "https://louwrentius.com/my-71-tib-zfs-nas-after-10-years-and-zero-drive-failures.html",
+    "first_paragraph": "My 4U 71 TiB ZFS NAS built with twenty-four 4 TB drives is over 10 years old and still going strong.Although now on its second motherboard and power supply, the system has yet to experience a single drive failure (knock on wood).Zero drive failures in ten years, how is that possible?The 4 TB HGST drives have roughly 6000 hours on them after ten years. You might think something's off and you'd be right. That's only about 250 days worth of runtime. And therein lies the secret of drive longevity (I think):Turn the server off when you're not using it.According to people on Hacker News I have my bearings wrong. The chance of having zero drive failures over 10 years for 24 drives is much higher than I thought it was. So this good result may not be related to turning my NAS off and keeping it off most off the time.My NAS is turned off by default. I only turn it on (remotely) when I need to use it. I use a script to turn the IoT power bar on and once the BMC (Baseboard Management Controller) i"
   },
   {
-    "title": "Notes on OpenAI's new o1 chain-of-thought models (simonwillison.net)",
-    "points": 5,
-    "submitter": "loganfrederick",
-    "submit_time": "2024-09-13T00:48:01.000000Z",
+    "title": "Lisp implemented in Rust macros (github.com/ryanwelly)",
+    "points": 105,
+    "submitter": "quasigloam",
+    "submit_time": "2024-09-13T21:31:13.000000Z",
+    "num_comments": 13,
+    "comments_url": "https://news.ycombinator.com/item?id=41535354",
+    "comments": [
+      "Greenspun's tenth rule strikes again! https://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule\n \nreply",
+      "HA!\"Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp.\"HA HA!\n \nreply",
+      "What defines \"sufficiently complicated\" I wonder? Seems like a shit definition.\n \nreply",
+      "It's just a funny observation he made, it's not meant to be a rigorous academic definition :)\n \nreply",
+      "I like that the \"sufficiently complicated\" part bothered you, but not the \"ad hoc\", \"informally-specified\", \"bug-ridden\", or \"slow\" parts.\n \nreply",
+      "The rule defines it tautologically. Which is sufficiently unambiguous for its purpose!\n \nreply",
+      "Greenspun's tenth rule, corollary: Any sufficiently precise definition of \"complex system\" contains an ad hoc, informal, bug-ridden, slow specification of half of Common Lisp.\n \nreply",
+      "That was fun. Thanks for sharing!\n \nreply",
+      "Thanks! It was fun to make. It was also instructive, as I learned that rust analyser doesn't handle macros generating millions of tokens :D\n \nreply",
+      "Does this reinforce Greenspan\u2019s 10th rule?\n \nreply"
+    ],
+    "link": "https://github.com/RyanWelly/lisp-in-rs-macros",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A Lisp interpreter written fully in rust macros. \n      A simple, lexically scoped Lisp interpreter that operates fully in Rust's declarative macros. The lisp! macro expands to the lisp value computed by the code, and then stringifies it. This means that lisp!(CAR (CONS (QUOTE A) (QUOTE (B)))) expands to the string \"A\" and that all this computation happens at compile time by rustc expanding macros.It's a lisp interpreter written fully in Rust's macros, I think that's pretty cool. It's also less than 250 lines, which is neat.As another fun example, here is a quine:This code expands to:In other words, the code evaluates to itself. Isn't that wonderful?This lisp does not currently support any explicit form of recursion. Luckily, explicit recursion is not needed, all we need is lambda.You can write a simple function that appends two lis"
+  },
+  {
+    "title": "The Legend of Holy Sword: An Immersive Experience for Concentration Enhancement (arxiv.org)",
+    "points": 28,
+    "submitter": "PaulHoule",
+    "submit_time": "2024-09-13T23:07:24.000000Z",
+    "num_comments": 2,
+    "comments_url": "https://news.ycombinator.com/item?id=41536003",
+    "comments": [
+      "OK that\u2019s neat but boils down to \u201chere\u2019s a cool game\u201d. I was expecting a double blind study that measures some concentration metric vs a placebo intervention.\n \nreply",
+      "bene gesserit vibe hit hardNow there is a path forward to be able to focus on a single cell in my body.\nLoL\n \nreply"
+    ],
+    "link": "https://arxiv.org/abs/2408.16782",
+    "first_paragraph": "This week: the arXiv Accessibility ForumHelp | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n                    Get status notifications via\n                    email\n                    or slack\n"
+  },
+  {
+    "title": "Porting SBCL to the Nintendo Switch (tymoon.eu)",
+    "points": 295,
+    "submitter": "todsacerdoti",
+    "submit_time": "2024-09-13T12:53:41.000000Z",
+    "num_comments": 52,
+    "comments_url": "https://news.ycombinator.com/item?id=41530783",
+    "comments": [
+      "I have being using Trial[1] for the past few weeks to test out game development in Common Lisp, and have been having a great time. Being able to alter (almost) all aspects of your game while it's running is a blessing.I hope this port succeeds.[1]: https://github.com/Shirakumo/trial\n \nreply",
+      "Lisp languages seem well-suited for building games. The ability to evaluate code interactively without recompilation is a huge deal for feature building, incremental development, and bug-fixing. Retaining application state between code changes seems like it would be incredibly useful. Common Lisp also appears to be a much faster language than I would have blindly assumed.The main downside for me (in general, not just for game programming) is the clunkiness in using data structures - maps especially. But the tradeoff seems worth it.\n \nreply",
+      "One of the downsides is that implementations like SBCL have a deep integration and need things like a well performing GC implementation - to get this running on specialized game hardware is challenging. The article describes that. Getting over the hurdle of the low-level integration is difficult. The reward comes, when one gets to the point, where  the rapid incremental development cycles of Common Lisp, even with connected devices, kicks in.For the old historic Naughty Dog use case, it was a development system written in Common Lisp on an SGI and a C++ runtime with low-level Scheme code on the Playstation.> Common Lisp also appears to be a much faster language than I would have blindly assumed.There are two modes:1) fast optimized code which allows for some low-level stuff to stay with Common Lisp2) unoptimized, but natively compiled code, which enables safe (-> the runtime does not crash) interactive and incremental development -> this mode is where much of the software can run nowadays and which is still \"fast enough\" for many use cases\n \nreply",
+      "If that's your main downside, that's pretty good, since clunkiness is in many ways fixable. Personally with standard CL I like to use property lists with keywords, so a \"map literal\" is just (list :a 3 :b 'other). It's fine when the map is small. The getter is just getf, setting is the usual setf around the getter. There's a cute way to loop by #'cddr for a key-and-value loop, though Alexandria (a very common utility library) has some useful utils for looping/removing/converting plists as well.If typing out \"(list ...)\" is annoying, it's a few lines of code to let you type {:a 3 :b 4} instead, like Clojure. And the result of that can be a plist, or a hash table, or again like Clojure one of the handful of immutable map structures available. You can also easily make the native hash tables print themselves out with the curly bracket syntax.(On the speed front, you might be amused by https://renato.athaydes.com/posts/how-to-write-slow-rust-cod... But separately, when you want to speed up Lisp (with SBCL) even more than default, it's rather fun to be able to run disassemble on your function and see what it's doing at the assembly level, and turn up optimization hints and have the compiler start telling you (even on the individual function level) about where it has to use e.g. generic addition instead of a faster assembly instruction because it can't prove type info and you'll have to tell it/fix your code. It can tell you about dead code it removed. You can define stack-allocation if needed. Simple benchmarking that also includes processor cycles and memory allocated is available immediately with the built-in time macro...)\n \nreply",
+      "> The ability to evaluate code interactively without recompilationSBCL and other implementations compile code to machine code then execute it. That is to say, when a form is submitted to the REPL, the form is not interpreted, but first compiled then executed. The reason execution finishes quickly is because compilation finishes quickly.There are some implementations, like CCL, with a special interpreter mode exclusively for REPL-usage.[1] However, at least SBCL and ECL will compile code, not interpret.[1] https://github.com/Clozure/ccl/blob/v1.13/level-1/l1-readloo...\n \nreply",
+      "I think a lot of this is confusion between online versus batch compilation?  Most of us have only ever seen/used batch compilation.  To that end, many people assume that JIT in an interpreter is how online compilation is done.I probably am more guilty of that than I should be.\n \nreply",
+      "I specifically talk about the fast evaluator for SBCL. But even without that contrib, SBCL does have another evaluator as well that's used in very specific circumstances.\n \nreply",
+      "Do either CCL or SBCL have any kind of partial evaluation or tracing compilation?\n \nreply",
+      "> the form is not interpreted, but first compiled then executedThat's TempleOS technology right there.\n \nreply",
+      "Other way around.\n \nreply"
+    ],
+    "link": "https://reader.tymoon.eu/article/437",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Techniques I Use to Create a Great User Experience for Shell Scripts (nochlin.com)",
+    "points": 74,
+    "submitter": "hundredwatt",
+    "submit_time": "2024-09-11T16:29:14.000000Z",
+    "num_comments": 38,
+    "comments_url": "https://news.ycombinator.com/item?id=41512899",
+    "comments": [
+      "Don't output ANSI colour codes directly - your output could redirect to a file, or perhaps the user simply prefers no colour. Use tput instead, and add a little snippet like this to the top of your script:    command -v tput &>/dev/null && [ -t 1 ] && [ -z \"${NO_COLOR:-}\" ] || tput() { true; }\n\nThis checks that the tput command exists (using the bash 'command' builtin rather than which(1) - surprisingly, which can't always be relied upon to be installed even on modern GNU/Linux systems), that stdout is a tty, and that the NO_COLOR env var is not set. If any of these conditions are false, a no-op tput function is defined.This little snippet of setup lets you sprinkle tput invocations through your script knowing that it's going to do the right thing in any situation.\n \nreply",
+      "Nowhere in this list did I see \u201cuse shellcheck.\u201dOn the scale of care, \u201cthe script can blow up in surprising ways\u201d severely outweighs \u201cerror messages are in red.\u201d Also, as someone else pointed out, what if I\u2019m redirecting to a file?\n \nreply",
+      "These are all about passive experiences (which are great don't get me wrong!), but I think you can do better. It's the same phenomenon DHH talked about in the Rails doctrine when he said to \"Optimize for programmer happiness\".The python excerpt is my favorite example:```$ irbirb(main):001:0> exit$ irbirb(main):001:0> quit$ python>>> exitUse exit() or Ctrl-D (i.e. EOF) to exit```<quote>\nRuby accepts both exit and quit to accommodate the programmer\u2019s obvious desire to quit its interactive console. Python, on the other hand, pedantically instructs the programmer how to properly do what\u2019s requested, even though it obviously knows what is meant (since it\u2019s displaying the error message). That\u2019s a pretty clear-cut, albeit small, example of [Principle of Least Surprise].\n</quote>\n \nreply",
+      "if [ \"$(uname -s)\" == \"Linux\u201d ]; then \n       stuff-goes-here\n    else # Assume MacOS \n\nWhile probably true for most folks, that\u2019s hardly what I\u2019d call great for everybody not on Linux or a Mac.\n \nreply",
+      "Gotta draw a line somewhere\n \nreply",
+      "Eh. It\u2019s true for most, and if not, it\u2019s probably still a *BSD, so there\u2019s a good chance that anything written for a Mac will still work.That said, I\u2019ve never used any of the BSDs, so I may be way off here.\n \nreply",
+      "I was so frustrated by having to enter a lot of information for every new git project (I use a new VM for each project) so I wrote a shell script that automates everything for me.I'll probably also combine a few git commands for every commit and push.\n \nreply",
+      "Sounds like a cool setup! Did you write it up somewhere publicly?I also use VMs (qemu microvms) based on docker images for development.\n \nreply",
+      "Sorry it's on my other machine so I don't have it at hand. But it's an extremely simple setup that configs the email, the user, removes the need of --set-upstream when pushing, automate pushing with token.I asked ChatGPT to write it and double checked btw.\n \nreply",
+      "Not trying to offend anyone here but I think shell scripts are the wrong solution for anything over ~50 lines of code.Use a better programming language. Go, Typescript, Rust, Python, and even Perl come to mind.\n \nreply"
+    ],
+    "link": "https://nochlin.com/blog/6-techniques-i-use-to-create-a-great-user-experience-for-shell-scripts",
+    "first_paragraph": "\"You should go and check out the shell script in the repo because it's very nice. It has colored output, it's super safe... it's really a masterclass in terms of writing shell scripts.\"Thank you Gunnar Morling for the shout-out! \ud83d\ude0aIn January 2024, I along with a few dozen performance-minded geeks got nerd-sniped into participating in Gunnar's One Billion Row Challenge 1\ufe0f\u20e3\ud83d\udc1d\ud83c\udfce\ufe0f .Gunnar quickly became overwhelmed being the (unpaid) evaluator of a constant stampede of entries. I jumped in to help him automate the evaluation steps with a shell script and received the above testimonial from Gunnar at his Javazone talk (check it out to hear all about the performance techniques used in the challenge: \"# 1BRC\u2013Nerd Sniping the Java Community - Gunnar Morling\").Here are 6 techniques I used in the #1BRC shell script to make it robust, safe and fun for Gunnar to use:I believe that clear error messages are crucial for a good user experience. That's why I implemented thorough error handling and input v"
+  },
+  {
+    "title": "CrowdStrike ex-employees: 'Quality control was not part of our process' (semafor.com)",
+    "points": 225,
+    "submitter": "everybodyknows",
+    "submit_time": "2024-09-13T20:17:18.000000Z",
+    "num_comments": 105,
+    "comments_url": "https://news.ycombinator.com/item?id=41534716",
+    "comments": [
+      "Found out that the CrowdStrike Mac agent (Falcon) sends all your secrets from environment variables to their cloud hosted SIEM. In plain text.Anyone with access to your CS SIEM can search for GitHub, aws, etc creds. Anything your devs, ops and sec teams use on their Macs.Only the Mac version does this. There is no way to disable this behaviour or a way to redact things.Another really odd design decision. They probably have many many thousands of plain text secrets from their customers stored in their SIEM.\n \nreply",
+      "Is this really a criticism? Because this has been the case forever with all security and SIEM tools. It\u2019s one of the reasons why the SIEM is the most locked down pieces of software in the business.Realistically, secrets alone shouldn\u2019t allow an attacker access - they should need access to infrastructure or a certificates in machines as well. But unfortunately that\u2019s not the case for many SaaS vendors.\n \nreply",
+      "If my security software exfiltrates my secrets by design, I\u2019m just going to give up on keeping anything secure now.\n \nreply",
+      "Ideally secrets never leave secure enclaves and humans at the organization can't even access them.It's totally insane to send them to a remote service controlled by another organization.\n \nreply",
+      "Essentially, it\u2019s straddling two extremes:1) employees are trusted with secrets, so we have to audit that employees are treating those secrets securely (via tracking, monitoring, etc)2) we don\u2019t allow employees to have access to secrets whatsoever, therefore we don\u2019t need any auditing or monitoring\n \nreply",
+      "I mean it's right there in the name.  They're not really secrets any longer if you're sharing them in plaintext with another company.\n \nreply",
+      "Arbitrary bad practices as status quo without criticism, far from absolving more of the same, demand scrutiny.Arbitrarily high levels of market penetration by sloppy vendors in high-stakes activities, far from being an argument for functioning markets, demand regulation.Arbitrarily high profile failures of the previous two, far from indicating a tolerable norm, demand criminal prosecution.It is recently that this seemingly ubiquitous vendor, with zero-day access to a critical kernel space that any red team adversary would kill for, said \u201clgtm shipit\u201d instead of running a test suite with consequences and costs (depending on who you listen to) ranging from billions in lost treasure to loss of innocent life.We know who fucked up, have an idea of how much corrupt-ass market failure crony capitalism could admit such a thing.The only thing we don\u2019t know is how much worse it would have to be before anyone involved suffers any consequences.\n \nreply",
+      "But why only forced on MacOS?I think some configurability would be great. I would like to provide an allow list or the ability to redact. Or exclude specific host groups.We all have different levels of acceptable risk\n \nreply",
+      "Conspiracy theory time. Because Apple is the only OS company that has reliably proven that it won't decrypt hard drives at government request.\n \nreply",
+      "It depends on the country it is in, it rejects the US government's request. But it fully complies with any request from the Chinese government\n \nreply"
+    ],
+    "link": "https://www.semafor.com/article/09/12/2024/ex-crowdstrike-employees-detail-rising-technical-errors-before-july-outage",
+    "first_paragraph": "Sign up for Semafor Business: The stories (& the scoops) from Wall Street. Read it now.Software engineers at the cybersecurity firm CrowdStrike complained about rushed deadlines, excessive workloads, and increasing technical problems to higher-ups for more than a year before a catastrophic failure of its software paralyzed airlines and knocked banking and other services offline for hours.\u201cSpeed was the most important thing,\u201d said Jeff Gardner, a senior user experience designer at CrowdStrike who said he was laid off in January 2023 after two years at the company. \u201cQuality control was not really part of our process or our conversation.\u201dThe issues were raised during meetings, in emails, and in exit interviews, ex-employees told Semafor. Almost two dozen former software engineers, managers and other staff described a workplace where executives prioritized speed over quality, workers weren\u2019t always sufficiently trained, and mistakes around coding and other tasks were rising. One former sen"
+  },
+  {
+    "title": "Defend against vampires with 10 gbps network encryption (synacktiv.com)",
+    "points": 144,
+    "submitter": "alxjsn",
+    "submit_time": "2024-09-13T14:42:41.000000Z",
+    "num_comments": 42,
+    "comments_url": "https://news.ycombinator.com/item?id=41531699",
+    "comments": [
+      "I had a friend who worked in federal law enforcement who once described a vampire device that they used. It would clamp around a power cable and inject a UPS in the mix so that an electronic device could be removed without turning it off. Seemed like a useful little trick.\n \nreply",
+      "If nothing else, would let you move a Frogger machine.More seriously, I have wondered if you can detect these kinds of external interference. Auto lock the machine if power/network/wifi/Bluetooth/USB conditions change.Nabbing an unlocked laptop was how they got the Silk Road guy (though they probably already had sufficient evidence elsewhere).https://arstechnica.com/tech-policy/2015/05/sunk-how-ross-ul...\n \nreply",
+      "One trick you could use is to abuse the fact that law enforcement often plugs in a mouse wiggler on an unlocked desktop and kill your server the moment you see a new HID device (make sure to run some kind of desktop on your server so they think they can keep the session open, best to do it in a VM).You could also monitor the ethernet link. They can move your server but they can't move the entire network, set up an encrypted tunnel between two distant physical servers and self destruct the moment that tunnel gets disrupted.Some computers come with gyros/accelerometers built in. My old HP laptop had some kind of head crash prevention that used that hardware. I know this, because Gnome thought it was a tablet style sensor and turned my screen upside down if I didn't disable the sensor. Maybe getting a HP server can already get you a whole bunch of movement sensors.You could probably figure out if the server is being moved by measuring capacitance of the case, measuring accelerometers, maybe add a GPS dongle. Or you could add an LTE connector and measure any signals you may receive that you shouldn't from inside a server room. You can probably measure _something_ in the server room, though, so to make sure your LTE dongle doesn't get interrupted, also measure whatever reliable signal you can find to detect Faraday cages.Lastly, you could put a video camera in the case on all sides and measure changes. Detecting law enforcement badges probably isn't that hard with opencv if you're dedicated enough.You have to hide your security measures and never tell anyone, though, or they'll just leave the server as-is and use the classic rubber hose exploit to make you give up the key material.\n \nreply",
+      "> Or you could add an LTE connector and measure any signals you may receive that you shouldn't from inside a server room.Incoming Bluetooth Low Energy announcements should have a receive power level associated with them. Stick a beacon (like say a standard ble temperature/humidity sensor) somewhere, and you should be able to tell if the distance to it changes.\n \nreply",
+      "All these suggestions are so unreliable. What happened to HN? This is 2024, have some creativity. Feed all the surrounding cameras and mics into a massive neural network and you have a more robust solution than anything else. Just make sure you don't cosplay (or roleplay too much during sex) as a hobby.   P(cop in the house | cameras and mic and sensor data)\n\nIt's not like America lacks finetuning data for cop shows and swatting videos.\n \nreply",
+      "Maybe attack the problem from a different angle: use an accelerometer.  Or spend a little bit more money to add a gyro and make a real, if very low accuracy, IMU.\n \nreply",
+      "That is a great suggestion. I think Android just implemented a \u201csnatch detection\u201d system for phones. Although, I like the idea of not requiring additional hardware. I guess when I start running a drug empire I will have to pony up for the extra dongle.\n \nreply",
+      "BusKill was created for this, USB with a magnetic attachment to a keyring that can be configured to take action on disconnect.\n \nreply",
+      "Seems like an mems accelerometer would be all you need. Rotation isn't really a threat...\n \nreply",
+      "Rotation itself isn\u2019t a threat, but if you want to directly estimate displacement to distinguish between earthquakes and someone stealing the machine, without relying on heuristics, actual inertial measurement would do the trick. And inertial measurement involves tracking the direction of acceleration, which involves tracking rotation.\n \nreply"
+    ],
+    "link": "https://www.synacktiv.com/en/publications/defend-against-vampires-with-10-gbps-network-encryption",
+    "first_paragraph": "Discover how attackers can sniff your data on network cables and how you can defend against it, by encrypting on-the-fly all your ethernet traffic with very good performance.keywords : wireguard, vxlan, tapping, fiber optics, lan2lan, macsecLet's say you have a fiber optic line running between two buildings, or between two spaces you rent in the same building. You use trunk ports on the switches connected to the fiber, in order to \"stretch\" your L2 Ethernet network and its different VLANs, so computers, servers, printers, cameras, etc. in both offices easily communicate with their peers.But there is next to no physical security in the shared wiring closets and common cabling paths, and so you are concerned about someone tapping\u00a0into the fiber line and capturing data.First you may ask, is that really possible? And if so, is it easy to do? Would you need NSA-level hardware and skills or could anyone do it?Turns out, it is both possible and easy, so you're right to worry! But there is a s"
+  },
+  {
+    "title": "Intel Solidifies $3.5B Deal to Make Chips for Military (bloomberg.com)",
+    "points": 34,
+    "submitter": "mfiguiere",
+    "submit_time": "2024-09-13T23:29:40.000000Z",
+    "num_comments": 24,
+    "comments_url": "https://news.ycombinator.com/item?id=41536131",
+    "comments": [
+      "Intel left the military business in 1997 because making chips for the military is kind of awful. The volume is small and if a military plane gets canceled, the volume can suddenly become zero. (See the F-22 and Comanche.) Moreover, the military wants parts for decades, so you're stuck building obsolete parts on an obsolete process.link: https://www.militaryaerospace.com/computers/article/16710194...\n \nreply",
+      "It is not the first choice of revenue of course, they and everyone would like to be Nvidia and pick and choose the customers standing patiently in line outside the door.However in tough times, having the culture to change and deal with customers or use cases you wouldn't prefer to survive is a good sign. AMD during the bulldozer era, had many deals they didn't like or barely made money just to survive, it paid off with Ryzen, it can happen to Intel as well. Good to see Intel branching out and trying new things to turn the ship around.\n \nreply",
+      "This is nothing more than Intel joining the ranks of the other tbtf government contractors. That's how they plan to survive.\n \nreply",
+      "It also increases the likelihood of a secure supply chain for mil components. Seems like a win-win.\n \nreply",
+      "I did not know intel was so short of cash it needs military money to stay afloat.\n \nreply",
+      "The military is probably using a lot more tech now than they did in 1997?\n \nreply",
+      "Procurement is probably just as screwed up though.\n \nreply",
+      "can't they just create enough for decades and stock pile it somewhere?\n \nreply",
+      "When I used to work in defense contracting, this is precisely what we (the contractor) did. We would buy up all available stock of any difficult-to-replace parts (often specific SBCs) when the manufacturer announced end of life.\n \nreply",
+      "There's a market in conforming interface and ABI spec meeting hardware to emulate the boot and upgrade devices for German tanks, or some other hardware. Sd card or USB behind, giant milspec plug to the fore.\n \nreply"
+    ],
+    "link": "https://www.bloomberg.com/news/articles/2024-09-13/intel-solidifies-3-5-billion-deal-to-make-chips-for-us-military",
+    "first_paragraph": "To continue, please click the box below to let us know you're not a robot.Please make sure your browser supports JavaScript and cookies and that you are not\n            blocking them from loading.\n            For more information you can review our Terms of\n                Service and Cookie Policy.For inquiries related to this message please contact\n            our support team and provide the reference ID below."
+  },
+  {
+    "title": "Zero-Click Calendar invite vulnerability chain in macOS (mikko-kenttala.medium.com)",
+    "points": 333,
+    "submitter": "jviide",
+    "submit_time": "2024-09-13T16:50:26.000000Z",
+    "num_comments": 127,
+    "comments_url": "https://news.ycombinator.com/item?id=41532946",
+    "comments": [
+      "Lots of comments on this thread about bounty payouts. If a tech giant with a standing bounty program isn't paying a bounty, the odds are very strong that there's a good reason for that. All of the incentives for these programs are to award bounties to legitimate submissions. This is a rare case where incentives actually align pretty nicely: companies stand up bounty programs to incentivize specific kinds of research; not paying out legitimate bounties works against that goal. Nobody on the vendor side is spending their own money. The sums involved are not meaningful to the company. Generally, the team members running the program are actually incentivized to pay out more bounties, not less.\n \nreply",
+      "No, it's because Apple's 'product security' team that investigates and pays out bug bounties is horribly mismanaged and ineffective. It was recently moved from the SWE program office to SEAR (security engineering & arch), and the manager was recently shown the door and went to AirBNB. The team members are mostly new college grads (ICT2's and 3's) who wouldn't pass a coding interview elsewhere in the company, and mostly function as bug triagers. They spend more time going to conferences and hanging out with hackers, than in front of a computer screen working. Their portal of 'open investigations' shows a graph that only goes up (aka they only get more swamped with emails and don't even try to catch up).Shaming Ivan, the head of SEAR, on Twitter is how people who should get paid bounties, but aren't, make progress.\n \nreply",
+      "I have no idea about how well the bounty program at Apple is managed, so, without affirming this, I acknowledge this is another plausible explanation: it's just an understaffed team that needs to get its act together.The only crusade I'm on is against the idea that companies ruthlessly avoid paying bounties, which is, on information and belief, flatly false, like, the opposite of the truth. I think it's valuable for people to get an intuition for that.Thanks for this!\n \nreply",
+      "That's the same thing.\n \nreply",
+      "Obviously no.\n \nreply",
+      "Honestly, Apple is a 3.5 trillion dollar company. If the bug bounty program is understaffed then it's an intentional choice and they should fix it. And I say that as someone who's generally sympathetic to Apple.\n \nreply",
+      "Sure. My comment isn't really about Apple specifically so much as bounty program misconceptions generally.\n \nreply",
+      "I think suspicion of bug bounties even from organizations who would clearly benefit the nost from doing them right are well founded and you are over simplifying the situation.Every organization includes a mess of situations where the overall best interest of the organization no longer comes through. Groups and individuals don't want to admit mistakes both personal and in wider senses and have alliances, competitions, team and organizational loyalty that twists their behavior.A lot of organizations know they would benefit from having a proper whistle blower program and then proceed to crucify the first person who uses it.\n \nreply",
+      "Bug bounty programs aren't whistleblower programs.\n \nreply",
+      "Getting paid to fuck off at conferences and hang out with hackers on the company dime instead of staring at a screen in a cubicle all day sounds pretty awesome. Do I detect some jealousy or resentment that you haven't mastered the art of the corporate grift?\n \nreply"
+    ],
+    "link": "https://mikko-kenttala.medium.com/zero-click-calendar-invite-critical-zero-click-vulnerability-chain-in-macos-a7a434fc887b",
+    "first_paragraph": ""
+  },
+  {
+    "title": "NextNav's Callous Land-Grab to Privatize 900 MHz (eff.org)",
+    "points": 37,
+    "submitter": "hn_acker",
+    "submit_time": "2024-09-13T23:06:06.000000Z",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=41535994",
+    "comments": [
+      "How common is enforcement in these situations? What happens if a 900MHz baby monitor continues to be used after this chunk of the spectrum is privatized?\n \nreply",
+      "Has there been a precedent like this? I imagine tracking down a gazillion baby monitors would be very tiresome\n \nreply",
+      "Not to mention that probably a majority of the electric gas and water meters in the US operate in the 902-928 range.\n \nreply",
+      "Generally, from my time in a radio spectrum regulatory body, you start by enforcing EMR compliance at the importer/manufacturing level, so no-one can buy a new 900ishMHz baby monitor that would cause interference - either by regulating allowed transmitter power or just flat out verboten.Then you respond to interference complaints as they come up, and commercial operators tend to be very vigorous in monitoring their spectrum that they're paying for, and can often pinpoint the location reasonably well already, and then the nice radio inspectors come out, triangulate it, and have a friendly talk.Never really had a situation where spectrum that was regulated as \"general user\" (e.g., no need for a licence, but also no protection against interfering signals) and heavily used by by consumer appliances was modified to no longer be general user though.\n \nreply"
+    ],
+    "link": "https://www.eff.org/deeplinks/2024/09/nextnavs-callous-band-grab-privatize-900-mhz",
+    "first_paragraph": "The 900 MHz band, a frequency range serving as a commons for all, is now at risk due to NextNav\u2019s brazen attempt to privatize this shared resource.\u00a0Left by the FCC for use by amateur radio operators, unlicensed consumer devices, and industrial, scientific, and medical equipment, this spectrum has become a hotbed for new technologies and community-driven projects. Millions of consumer devices also rely on the range, including baby monitors, cordless phones, IoT devices, garage door openers. But NextNav would rather claim these frequencies, fence them off, and lease them out to mobile service providers. This is just another land-grab by a corporate rent-seeker dressed up as innovation.\u00a0EFF and hundreds of others have called on the FCC to decisively reject this proposal and protect the open spectrum as a commons that serves all.NextNav wants the FCC to reconfigure the 902-928 MHz band to grant them exclusive rights to the majority of the spectrum. The country's airwaves are separated into"
+  },
+  {
+    "title": "Irish museum solves mystery of Bronze Age axe heads delivered in porridge box (theguardian.com)",
+    "points": 50,
+    "submitter": "speckx",
+    "submit_time": "2024-09-10T15:24:03.000000Z",
+    "num_comments": 30,
+    "comments_url": "https://news.ycombinator.com/item?id=41501709",
+    "comments": [
+      "> It is against the law in Ireland to search for archaeological objects using a metal detector unless written permission has been given. Penalties can be up to three months in prison or a fine of up to \u20ac63,486 (\u00a353,435). Written permission from who?  He was on his own farmland.  You have to write a plea to the government to request permission to use a metal detector on your own land?  And, if that's the case, are such requests usually granted?  What's the rationale here, and what harms does this permission-first system aim to prevent?> It is understood, however, that Dunne will not face charges.If it's a bad law that they're making a point of not enforcing, why not repeal the law?So many questions.\n \nreply",
+      "These laws are a balancing act between heritage conservation and civil rights like allowing people to enjoy metal detecting as a hobby. Without these laws and effective enforcement of them, looters show up with bulldozers, metal detectors, and work crews in the middle of the night to dig up anything they can sell to what's now a billion dollar global market. I've spent a lot of time as an archaeologist looking at the aftermath and doing public education to stop it.Antiquities laws are generally designed to make antiquities \"visible\" to the state while also giving authorities teeth if they need to go after these sorts of people. To do that, there's a whole host of laws and conventions that require reporting virtually everything and align the financial incentives/penalties to ensure valuations on any antiquities discovered are as reasonably accurate as possible. It makes things a little inconvenient for the hobbyists, but I personally find that a reasonable tradeoff given the damage that otherwise occurs.\n \nreply",
+      ">>These laws are a balancing act between heritage conservation and civil rights like allowing people to enjoy metal detecting as a hobby. Without these laws and effective enforcement of them, looters show up with bulldozers, metal detectors, and work crews in the middle of the night to dig up anything they can sell to what's now a billion dollar global market. I've spent a lot of time as an archaeologist looking at the aftermath and doing public education to stop it.That doesn't seem to happen in England, which allows metal detecting.\n \nreply",
+      "The sitcom The Detectorists goes into this hobby in the UK in a lot of detail and has several plots about reporting responsibilities.\n \nreply",
+      "Effectively the same thing applies in the UK. Intentionally searching for these kinds of objects requires an archaeological excavation permit. Unintentionally finding one requires reporting it.\n \nreply",
+      "From the end of the article:> The NMI also wishes to remind the public that unregulated use of detection devices causes serious damage to Ireland\u2019s archaeological heritage.If you want to know more, the NMI have a detailed article explaining the rationalehttps://www.museum.ie/en-IE/Collections-Research/The-Law-on-...\n \nreply",
+      "So much will never be found thanks to this law.\n \nreply",
+      "Random amateurs digging stuff up is next to useless from an archaeological perspective - once you've disturbed the earth and taken stuff out of the ground you've already destroyed so much contextual information.Even professional trained \narchaeologists intentionally only excavate parts of sites when they know there's more to find because we expect there to be much better technology in the future.Amateurs digging for artifacts are destroying knowledge, not discovering it.\n \nreply",
+      "I mean, this incident should call your assumptions about this into question.Yes, some might be lost by random digging. But if it would not otherwise ever be found then nothing has been lost.\n \nreply",
+      "If something's been in the ground for hundreds of years, it'll still be there for a few hundred more. There's little reason to want to maximize the amount you're excavating right now. Unless your goal is to find treasure and profit somehow.I think the greater concern for artifact loss is someone doing earthworks, finding something, and then not reporting it because they don't want to wait for archaeologists to check out the site.\n \nreply"
+    ],
+    "link": "https://www.theguardian.com/science/article/2024/jul/25/irish-museum-solves-mystery-of-bronze-age-axe-heads-delivered-in-porridge-box",
+    "first_paragraph": "Artefacts sent by farmer, who made the \u2018absolutely mad\u2019 discovery while cutting silageWhen the national museum of Ireland received two 4,000-year-old axe heads, \u201cthoughtfully\u201d wrapped in foam inside a porridge box, from an anonymous source last month, it put out an appeal. The objects were \u201csignificant\u201d and \u201cexciting\u201d, it said, but experts needed to know more about where exactly they had been found.Now they have their answer: a farmer from County Westmeath has come forward as the mysterious sender, saying he made the \u201cabsolutely mad\u201d discovery while using a metal detector on his land.Thomas Dunne said he had found the items by chance on his silage field at Banagher at the end of June. \u201cI was cutting silage [grass fodder for beef cattle] one day and a bit of metal fell off a mower,\u201d he told the Irish Times.He said: \u201cWe started looking for it then because we thought it might go into the silage harvester and break it up. So, I got a man with a metal detector to look for it and that\u2019s how "
+  },
+  {
+    "title": "The Cellular Secret to Resisting the Pressure of the Deep Sea (quantamagazine.org)",
+    "points": 18,
+    "submitter": "Brajeshwar",
+    "submit_time": "2024-09-11T16:00:05.000000Z",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://simonwillison.net/2024/Sep/12/openai-o1/",
-    "first_paragraph": "12th September 2024OpenAI released two major new preview models today: o1-preview and o1-mini (that mini one is also a preview, despite the name)\u2014previously rumored as having the codename \u201cstrawberry\u201d. There\u2019s a lot to understand about these models\u2014they\u2019re not as simple as the next step up from GPT-4o, instead introducing some major trade-offs in terms of cost and performance in exchange for improved \u201creasoning\u201d capabilities.OpenAI\u2019s elevator pitch is a good starting point:We\u2019ve developed a new series of AI models designed to spend more time thinking before they respond.One way to think about these new models is as a specialized extension of the chain of thought prompting pattern\u2014the \u201cthink step by step\u201d trick that we\u2019ve been exploring as a a community for a couple of years now, first introduced in the paper Large Language Models are Zero-Shot Reasoners in May 2022.OpenAI\u2019s article Learning to Reason with LLMs explains how the new models were trained:Our large-scale reinforcement learn"
+    "link": "https://www.quantamagazine.org/the-cellular-secret-to-resisting-the-pressure-of-the-deep-sea-20240909/",
+    "first_paragraph": "\nAn editorially independent publication supported by the Simons Foundation.\n\nGet the latest news delivered to your inbox.\nCreate a reading list by clicking the Read Later icon next to the articles you wish to save.Type search term(s) and press enterPopular\n                                    SearchesSeptember 9, 2024Why does a comb jelly adapted to life at high pressure disintegrate at the ocean surface? The answer lies in the shapes of the molecules in its cell membranes.Jacob WinnikoffStaff WriterSeptember 9, 2024The bottom of the ocean is cold, dark and under extreme pressure. It is not a place suited to the physiology of us surface dwellers: At the deepest point, the pressure of 36,200 feet of seawater is greater than the weight of an elephant on every square inch of your body. Yet Earth\u2019s deepest places are home to life uniquely suited to these challenging conditions. Scientists have studied how the bodies of some large animals, such as anglerfish and blobfish, have adapted to wit"
   },
   {
-    "title": "Learning to Reason with LLMs (openai.com)",
-    "points": 1410,
-    "submitter": "fofoz",
-    "submit_time": "2024-09-12T17:08:46.000000Z",
-    "num_comments": 1072,
-    "comments_url": "https://news.ycombinator.com/item?id=41523070",
+    "title": "Show HN: FlowTracker \u00e2\u20ac\u201c Track data flowing through Java programs (github.com/coekie)",
+    "points": 250,
+    "submitter": "coekie",
+    "submit_time": "2024-09-13T11:33:28.000000Z",
+    "num_comments": 29,
+    "comments_url": "https://news.ycombinator.com/item?id=41530190",
     "comments": [
-      "Some practical notes from digging around in their documentation:\nIn order to get access to this, you need to be on their tier 5 level, which requires $1,000 total paid and 30+ days since first successful payment.Pricing is $15.00 / 1M input tokens and $60.00 / 1M output tokens.  Context window is 128k token, max output is 32,768 tokens.There is also a mini version with double the maximum output tokens (65,536 tokens), priced at $3.00 / 1M input tokens and $12.00 / 1M output tokens.The specialized coding version they mentioned in the blog post does not appear to be available for use.It\u2019s not clear if the hidden chain of thought reasoning is billed as paid output tokens. Has anyone seen any clarification about that?  If you are paying for all of those tokens it could add up quickly. If you expand the chain of thought examples on the blog post they are extremely verbose.https://platform.openai.com/docs/models/o1\nhttps://openai.com/api/pricing/\nhttps://platform.openai.com/docs/guides/rate-limits/usage-ti...\n \nreply",
-      "> Some practical notes from digging around in their documentation: In order to get access to this, you need to be on their tier 5 level, which requires $1,000 total paid and 30+ days since first successful payment.Tier 5 level required for _API access_. ChatGPT Plus users, for example, also have access to the o1 models.\n \nreply",
-      "Reasoning tokens are indeed billed as output tokens.> While reasoning tokens are not visible via the API, they still occupy space in the model's context window and are billed as output tokens.From here: https://platform.openai.com/docs/guides/reasoning\n \nreply",
-      "This is concerning - how do you know you aren\u2019t being fleeced out of your money here\u2026? You\u2019ll get your results, but did you really use that much?\n \nreply",
-      "Also, now we're paying for output tokens that aren't even output, with no good explanation for why these tokens should be hidden from the person who paid for them.\n \nreply",
-      "If you read the link they have a section specifically explaining why it is hidden.\n \nreply",
-      "I read it. It's a bad explanation.The only bit about it that feels at all truthful is this bit, which is glossed over but likely the only real factor in the decision:> after weighing multiple factors including ... competitive advantage ... we have decided not to show the raw chains of thought to users.\n \nreply",
-      "Good catch. That indicates that chains of thought are a straightforward approach to make LLMs better at reasoning if you could copy it just by seeing the steps.",
-      "obfuscated billing has long been a staple of all great cloud products. AWS innovated in the space and now many have followed in their footsteps\n \nreply",
-      "Also seems very impractical to embed this into a deployed product. How can you possibly hope to control and estimate costs? I guess this is strictly meant for R&D purposes.\n \nreply"
+      "Cool! I wrote something on the same spirit but for Clojure, called FlowStorm http://www.flow-storm.org/For instrumentation, instead of an instrumenting agent it uses a fork of the official Clojure compiler (in Clojure you can easily swap compilers at dev) that adds extra bytecode. What is interesting about recording Clojure programs execution is that most values are immutable, so you can snapshot them by just retaining the pointers.Edit: Since the OP demo is about exploring a web app for people interested in this topics I'm leaving a demo of FlowStorm debugging a web app also https://www.youtube.com/watch?v=h8AFpZkAwPo\n \nreply",
+      "This is beautiful! great job! - What was the reason you choose javafx? After you choose fx, did you look at cljfx?\n \nreply",
+      "Thanks! I started with cljfx and then moved to pure javafx, first because it wasn't straight forward for me to understand the performance overhead of cljfx under different scenarios (when using subscriptions and contexts), and second because I want to drag as few dependencies as possible so they don't conflict with debuggee one's.\n \nreply",
+      "Nice!Do you like use data structure metadata for tracking values?\n \nreply",
+      "Not sure I follow, can expand on that? I gave a presentation on it recently https://www.youtube.com/watch?v=BuSpMvVU7j4 which goes over demos and implementation details if you are interested in those topics.\n \nreply",
+      "I meant this [0], and so tracking a data via tagging it with a metadata and seeing where it ends up.Thanks for the video, I'm gonna go watch it.[0[: https://clojure.org/reference/metadata\n \nreply",
+      "So recording in FlowStorm doesn't use Clojure metadata capabilities in any way, it is basically about storing function calls, function returns and the pointers to all expressions intermediate immutable values together with their code coordinates.\n \nreply",
+      "This is incredibly cool.I love how good the tooling is in the java/jvm ecosystem.\nLast time I was this blown away was with jitwatch ( https://github.com/AdoptOpenJDK/jitwatch )FlowTracker reminds me a little of taint analysis, which is used for tracking unvalidated user inputs or secrets through a program, making sure it is not leaked or used without validation.search keywords are \"dynamic taint tracking/analysis\"https://github.com/gmu-swe/phosphorhttps://github.com/soot-oss/SootUphttps://github.com/feliam/klee-taint\n \nreply",
+      "Blown away by the demo tracking an HTML element back to the SQL statement that added that value to the database.I can totally see a future where tools like this are the first line of defense when troubleshooting bugs.\n \nreply",
+      "Thanks.As I was developing FlowTracker, a lot of the work was driven by making tracking of specific example programs work.\nI knew what result I was aiming for, but it was hard to predict what lower level mechanisms needed to be supported to make a specific example work. That often depended on internal implementation details of the JDK or libraries being used where the data was passing through.But the HTML element linking back to the SQL script that added that data into the database wasn't like that.\nI didn't expect or work towards it, that just happened, so it blew me away a little too and got me excited about what else this approach could accomplish.\n \nreply"
     ],
-    "link": "https://openai.com/index/learning-to-reason-with-llms/",
-    "first_paragraph": ""
+    "link": "https://github.com/coekie/flowtracker",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Track data flowing through Java programs\n      Track data flowing through Java programs, gain new understanding at a glimpse.FlowTracker is a Java agent that tracks how a program reads, manipulates, and writes data.\nBy watching a program run, it can show what file and network I/O happened, but more importantly connecting its inputs and outputs to show where its output came from.\nThis helps you understand what any Java program's output means and why it wrote it.This proof-of-concept explores what insights we get by looking at program behaviour from this perspective.Spring PetClinic is a demo application for the Spring framework.\nTo demonstrate FlowTracker's abilities, we let it observe PetClinic handling an HTTP request and generating an HTML page based on a template and data from a database.\nYou can use this demo in your browser, wi"
   },
   {
-    "title": "Breaking Down OnlyFans' Economics (matthewball.co)",
-    "points": 38,
-    "submitter": "mef",
-    "submit_time": "2024-09-09T01:06:26.000000Z",
-    "num_comments": 9,
-    "comments_url": "https://news.ycombinator.com/item?id=41484634",
-    "comments": [
-      "Seminal article (I guess), https://xsrus.com/the-economics-of-onlyfans> It\u2019s just as easy to imagine demand for the \u201creal thing\u201d going down due to the emergence of more substitutes as it is to imagine the premium for parasocial authenticity going up. And yet only Generative AI \u201ccreators\u201d will truly do whatever \u201cyou\u201d want and only for you. And unlike real ones, they speak in every language and are available at any time (and eventually, in immersive 3D).Disagree. When (AI is) mentioned it has a negative correlation. Real content will fetch a premium\n \nreply",
-      "It's the same pipe dream as \"AI content creators will take over youtube\".There is no \"formula\" for success in the creator economy - the winners are largely random. A better way to look at it is there are 4 million humans out there trying every permutation to crack success, and ~400k actually do it.Unless you have a sufficiently advanced AI agent that is both varying it's content and it's marketing strategy to the tune of maybe ~1000 different iterations it's unlikely we will see a version of OnlyFans that exists that is majority AI generated.The \"parasocial ai girlfriend\" sounds like a flawed premise aswell. OF girls are not therapists - Cardi B, Bhad Bhabie, and others aren't raking in millions because they are good girlfriends (although that is part of the upsell). Social status plays a part in the most successful girls, people seem to subscribe because the creator is popular, especially if she's already built a platform elsewhere.In short, social status does not have an AI substitute.\n \nreply",
-      "From another angle, a bunch of us in the tech sector made pretty nice salaries. Very few of us were really all-stars in the sense that everyone knew who we we were on YouTube, etc. Which was fine.\n \nreply",
-      "Step 1. ProfitStep 2. Donate to AIPAChttps://archive.ph/Ko8O5\n \nreply",
-      "OnlyFans is run by a very small tight knit group of people. A while back, I sat at a poker table in vegas with one for 5 hours. We discussed technology and the future of OF. I was offered a job to run a technology team there - often think I made a mistake not taking it.\n \nreply",
-      "[flagged]",
-      "I know a few people that \u2018do\u2019 OnlyFans (\u2026and yes, I don\u2019t know them through via their job). The money they\u2019re making ranges from \u2018fairly ok supplementary income\u2019 to \u2018more than satisfies their financial needs\u2019.None have been involved with these \u2018online pimps\u2019 as you put it.I\u2019m not saying that what you\u2019re saying doesn\u2019t happen. I\u2019m aware that you said \u201ca huge segment\u201d.  But you\u2019re showing your hand in your final paragraph. If one has a moral etc view to cut this issue one way or another, there\u2019s sufficient anecdata to do so. The reality is that the adult entertainment industry is large and heterogenous.\n \nreply",
-      "> Nearly every creator is making little and are forced to make more and more extreme content to compete.> A huge segment of \"creators\" are still working for online \"networks\" aka pimps who force them to share their earnings under threat of abuse.Can you link some sources for these?\n \nreply",
-      "Do you have data or research to back these opinions with?\n \nreply",
-      "Their opinion on what constitutes \"porn\" is probably reductive. It's not a straightforward scale or a solid line.There's a lot of nuance in how far away nudity is from pure lace, to corset, shoulderless, miniskirt, onesie, all the way to burka.\n \nreply"
-    ],
-    "link": "https://www.matthewball.co/all/fansprofitandloss",
-    "first_paragraph": "Though a private company, Fenix International (\u201cOnlyFans\u201d) is a UK company and therefore required to publicly disclose certain information pertaining to its business and operations. And while these disclosures are limited, they reveal enough about the OnlyFan\u2019s revenues, profits, scale, defensibility, reach, and impact to say that it is probably the most successful UK company founded since DeepMind in 2010, and the most significant media platform founded since TikTok (via Musical.ly in 2014), and dedicated creator economy platform\u2026 everIn 2024, OnlyFans generated $6.3 billion in gross revenues, up from $300 million five years earlier. Though the company is unlikely to ever match its pandemic growth rates given its current scale, revenues in FY 2023 grew 19% (or $1.1 billion) year-over-year, three percentage points greater than 2022 (which grew $754 million). Though OnlyFans is based around subscriptions, over 60% over consumer spending is now via transactions (and unlike say, Candy Cru"
-  },
-  {
-    "title": "F3 \u2013 Fight Flash Fraud (fight-flash-fraud.readthedocs.io)",
-    "points": 35,
-    "submitter": "CTOSian",
-    "submit_time": "2024-09-09T09:16:58.000000Z",
-    "num_comments": 14,
-    "comments_url": "https://news.ycombinator.com/item?id=41486736",
-    "comments": [
-      "This appears to be a cross-platform version of h2testw, which is widely recommended for finding the true capacity of a storage device. Another common recommendation is ChipGenius and the various manufacturer-specific tools, which can read the real ID of the NAND ICs, that AFAIK is beyond the ability of nearly all the fakers to change:https://blog.elcomsoft.com/2019/01/identifying-ssd-controlle...From the research I've done (mainly related to data recovery), the NAND flash industry seems extremely secretive and shady in many ways --- from the near-zero availability of public datasheets, to the many rebrands/\"reclaimed\"/recycled part sources, to what they're doing to SLC and higher-reliability technologies. There are also ways to determine how worn-out a NAND IC is, but even those may be reversible with the right physical treatments.\n \nreply",
-      "Somebody should make this up as a handheld device. Something that you can use to inspect new items, and retailers can use to inspect what their suppliers are sending them.Can a Flipper Zero be programmed for this? It connects to Micro SD cards and USB ports.\n \nreply",
-      "A retailer wouldn't want to deal with this. They would expect their distributor to weed out the fakes for them. If enough people complain about poor quality drives, you fire them. In my opinion, anyone selling these must be doing it knowingly at this point.Distributors that care probably use something like this: https://www.ureach-inc.com/\n \nreply",
-      "Someone unrmployed should offer to MITM amazon purchases and ensure low priced cards get tested and reshipped or files fraud reports.\n \nreply",
-      "So this always overwrites the device to test it, and I was wondering if that was necessary (say, you had started using it). Presumably you only need to write at most N+1 blocks, where N is the number of blocks the device actually has.l, in order to detect exaggeration. But at that point the fake device will have overwritten all of your files anyway, even if they were theoretically on different blocks (of the exaggerated inventory). So I guess the minimum harm to test a device is to hash all your files, then write at most N+1 (unused) blocks, stopping after each to check if any of your files got harmed. In theory that risks at most one block...Of course, it's better to back up the suspect one.\n \nreply",
-      "This also has the option of f3probe: https://fight-flash-fraud.readthedocs.io/en/latest/usage.htm...\n \nreply",
-      "> hash all your files, then write at most N+1 (unused) blocks, stopping after each to check if any of your files got harmedThat strategy adds O(n^2) reads on top of O(n) writes, though.Even reads don't come for free on modern multi-level cell NAND (due to read disturb), and for just a thousand blocks, you'd end up reading the first block a million times.That's to say nothing of the time this would take.\n \nreply",
-      "How long does this tool take to verify a real drive?\"it only writes what\u2019s necessary to test the drive\"How does that actually work, wouldn't that mean the whole stated capacity would have to be written?\n \nreply",
-      "Define hash(x) that takes an integer and returns a sector-sized hash.Define S = claimed total number of sectors.  for(i=0; i<S; ++i) {\n    write_sector(i, hash(i))\n    for(j=0; j<=i; ++j) {\n      if(hash(j) != read_sector(j)) {\n        return i\n      }\n    }\n  }\n  return S\n\nThe above pseudo code will return the number of sectors the flash drive actually has.\n \nreply",
-      "Sure, so if the drive is genuine, or even one sector short (I recognize it's more typically a much larger fraction for the fraudulent drives), you'd still have to write to nearly the full stated capacity to verify.This approach though, seems to require reading the first sector many times.\n \nreply"
-    ],
-    "link": "https://fight-flash-fraud.readthedocs.io/en/latest/",
-    "first_paragraph": "Contents:"
-  },
-  {
-    "title": "Imbue (Formerly Generally Intelligent) (YC S17) Is Hiring Software Engineers",
+    "title": "Charge Robotics (YC S21) is hiring MechEs to build robots that build solar farms (ycombinator.com)",
     "points": 0,
     "submitter": "",
-    "submit_time": "2024-09-13T01:01:08.000000Z",
+    "submit_time": "2024-09-13T21:00:46.000000Z",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "item?id=41527191",
-    "first_paragraph": ""
+    "link": "https://www.ycombinator.com/companies/charge-robotics/jobs/ml4f9l4-senior-mechanical-engineer",
+    "first_paragraph": "Robots that build solar farmsCharge Robotics is a Series A startup building robots that build solar farms.Demand for new solar projects is booming (1/5th of all the solar that exists in the US was installed last year!), but today\u2019s construction companies can\u2019t keep up due to limited labor resources.We thought this was insane, so we started working on robots to directly address this bottleneck and speed up the world\u2019s transition to renewables.Charge is a fast-moving company which means constant opportunities for learning and growth. You\u2019ll have a large impact on the direction of our company and our product, which will be reflected in significant equity compensation. And you get to work with \ud83e\udd16 giant robots \ud83e\udd16.If you are excited to work on interesting technical problems with direct climate impact, you\u2019re going to fit right in at Charge Robotics.Read more about Charge in recent press:Charge\u2019s funding:We\u2019re MIT-founded and backed by some of Silicon Valley\u2019s top investors, including Lux, YC ("
   },
   {
-    "title": "The Strange Case of the Rogue HP-12c Calculator (dm319.github.io)",
-    "points": 20,
-    "submitter": "dm319",
-    "submit_time": "2024-09-12T18:59:41.000000Z",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=41524294",
-    "comments": [
-      "I wish more was spent on trying to verify the authenticity of the hardware, or contacting HP for comment. The simplest explanation is that a distributor in Brazil sourced counterfeit hardware. Authenticatic hardware shipping with some bespoke and defective firmware seems even less likely than simple counterfeiting.\n \nreply",
-      "> Authenticatic hardware shipping with some bespoke and defective firmware seems even less likely than simple counterfeiting.It's not as unlikely as you would think. Electronic counterfeiters are often just ghost shifts at contract manufacturers. If a single company is handling the injection molding, PCB, and assembly, they can run a secret shift that makes units for them to sell themselves. Even if they can't get ahold of all the surplus parts they need, they can design their own.Since the firmware is different,  HP could have also outsourced production maintenance too (i.e. updating firmware if a chip reaches end of life and needs to be replaced with something that's not exactly compatible) which isn't unheard of for legacy products that no one wants to deal with.\n \nreply",
-      "Cracking it open to examine the board might be helpful.\n \nreply",
-      "The article mentions getting replacements from HP which exhibited the same behavior.\n \nreply"
-    ],
-    "link": "https://dm319.github.io/pages/2024_09_09_hp12_comma.html",
-    "first_paragraph": "2024-09-11\u201cThat\u2019s a non-trivial computation\u201d~Prof Kahan on the time-value of money calculationThe HP-12c is probably the most iconic financial calculator.  Not being in finance myself, and in fact being terribly bad at that kind of thing, I never quite got the purpose of these special-purpose devices.  My ignorance came to a halt due to an unfortunate combination of my fixed-rate mortgage period ending and Liz Truss happening, and I was driven to a sudden keen interest in the \u2018time value of money\u2019 (TVM) calculation.My story begins when I programmed my scientific calculator to solve the TVM unknowns.  As a demonstration of pocket calculator programming, the manual of the venerable HP-42s scientific gives two ways you can write your own TVM solver.  While great as a programming tutorial, it was less good at TVM solving from both an accuracy and a user-interface angle.  I set about improving this program, and as a result learned far more about TVM solving than I could ever have imagined. "
-  },
-  {
-    "title": "Show HN: iFixit created a new USB-C, repairable soldering system (hackaday.com)",
-    "points": 673,
-    "submitter": "kwiens",
-    "submit_time": "2024-09-12T15:18:43.000000Z",
-    "num_comments": 323,
-    "comments_url": "https://news.ycombinator.com/item?id=41521919",
-    "comments": [
-      "Soldering is one of those things where the tools you use have a direct impact on the quality and enjoyment of the work. Shitty $20 soldering irons from Home Depot not only produce awful results but they are incredibly frustrating. I\u2019m pretty sure most people who think they suck at soldering and hate it only feel that way because their tool sucks. A good quality soldering iron and high quality, thin solder make a huge, huge difference in output.If your experience with soldering is one of those cheap flimsy $30 dollar things from Amazon paired with fat, chunky solder\u2026 yeah you will hate soldering and you\u2019ll never get even remotely good results. You don\u2019t need to spend $500 dollar or anything but something like what is in this post and a $40 roll of thin gauge solder (which will last the rest of your life) will make soldering actually fun and enjoyable.\u2026I should also mention a solid, heavy parts holder factors into this as well.\n \nreply",
-      ">a $40 roll of thin gauge solder (which will last the rest of your life)I dunno, I'm 56 and I'm about to finish the roll I bought as a teenager. (Albeit bought in pre-RoHS times.)\n \nreply",
-      "Hopefully your affairs are in order\u2026\n \nreply",
-      "Be interesting to see how this stacks up to a good entry level iron like the Hakko FX-888DX.https://hakkousa.com/fx-888dx.html\n \nreply",
-      "Hakko fx888 is a good quality iron but quite outdated tech. The biggest downside is it doesn\u2019t measure the temperature at the tip, but at the heater.\n \nreply",
-      "When I first bought mine I tried to adjust the temperature in what felt like the natural way to do so, without rtfm first of course.Then I quickly learned that I had adjusted the temperature calibration. I reverted what I had done but now I am not confident about the temperature its operating at, at all. Seems a terrible interface design.\n \nreply",
-      "Yep I did that too.I recalibrated by using the thermocouple on my multimeter.That's not my biggest problem though - my biggest problem has just been keeping tips tinned properly. I've succeeded once, but it constantly feels like a struggle.\n \nreply",
-      "Can you suggest an alternative please?\n \nreply",
-      "In the hakko line, fx-951 is the step-up which uses a heater and sensor in the tip (t15/t12 tips).The alternative, for a hobbyist, would be something like this new iFixit iron, the Pinecil, Miniware TS80/TS100 or one of the variety of chinese irons from amazon and Aliexpress that take Hakko T12 tips (Quicko and similar).On the high-end, professional side, it's JBC and Metcal. Expensive.\n \nreply",
-      "I can guarantee it is leagues better. Frankly, I won't solder anymore unless it is with a direct-heat iron. They heat up instantly, cool down quickly, provide far better thermal transfer, and are much more comfortable to hold.Don't brush off what I'm saying before you try a direct-heat iron (Hakko sells them, Pace does, and JBC is the gold standard). They are usually expensive from the big names, but even a Pinecil direct-heat iron for $30$ would be many times better than non-direct-heat irons.\n \nreply"
-    ],
-    "link": "https://hackaday.com/2024/09/12/review-ifixits-fixhub-may-be-the-last-soldering-iron-you-ever-buy/",
-    "first_paragraph": "Like many people who solder regularly, I decided years ago to upgrade from a basic iron and invest in a soldering station. My RadioShack digital station has served me well for the better part of 20 years. It heats up fast, tips are readily available, and it\u2019s a breeze to dial in whatever temperature I need. It\u2019s older than both of my children, has moved with me to three different homes, and has outlived two cars and one marriage (so far, anyway).As such, when the new breed of \u201csmart\u201d USB-C soldering irons started hitting the scene, I didn\u2019t find them terribly compelling. Oh sure, I bought a Pinecil. But that\u2019s because I\u2019m an unrepentant open source zealot and love the idea that there\u2019s a soldering iron running a community developed firmware. In practice though, I only used the thing a few times, and even then it was because I needed something portable. Using it at home on the workbench? It just never felt up to the task of daily use.So when iFixit got in contact a couple weeks back and"
-  },
-  {
-    "title": "FDA Authorizes First Over-the-Counter Hearing Aid Software (fda.gov)",
-    "points": 13,
-    "submitter": "mgerdts",
-    "submit_time": "2024-09-12T22:24:31.000000Z",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=41526288",
-    "comments": [
-      "Consider the plausible scenario of Apple developing a superior hearing aid -- a medical device.If that happens, will people be able to use best medical device without being subject to the various liberties that tech companies take with users -- violating privacy, and exercising leverage to other purposes?We've become acclimated to expect violation from the \"tech\" industry, but what about the medical field?\n \nreply",
-      "The FDA, for all of its warts, is pretty good at curbing bad behavior like this.  All medical devices are pretty rigorously controlled, to the point where you can't really add anything to it that isn't absolutely necessary for the device to function.  And if you do, there's an encyclopedia worth of paperwork you're going to have to write to defend why the functionality is needed.FDA likes to \"duck type\" things, and if your duck doesn't look like the other ducks, you need to create a new animal or make your duck look like other ducks.\n \nreply"
-    ],
-    "link": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-over-counter-hearing-aid-software",
-    "first_paragraph": "The .gov means it\u2019s official.Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you're on a federal government site.The site is secure. The https:// ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.FDA News Release\nToday, the U.S. Food and Drug Administration authorized the first over-the-counter (OTC) hearing aid software device, Hearing Aid Feature, intended to be used with compatible versions of the Apple AirPods Pro headphones. Once installed and customized to the user\u2019s hearing needs, the Hearing Aid Feature enables compatible versions of the AirPods Pro to serve as an OTC hearing aid, intended to amplify sounds for individuals 18 years or older with perceived mild to moderate hearing impairment.\u00a0\u201cHearing loss is a significant public health issue impacting millions of Americans,\u201d said Michelle Tarver, M.D., Ph.D., acting director of the FDA's Center"
-  },
-  {
-    "title": "GAZEploit: Remote keystroke inference attack by gaze estimation in VR/MR devices (wired.com)",
-    "points": 146,
-    "submitter": "wallflower",
-    "submit_time": "2024-09-12T13:11:25.000000Z",
-    "num_comments": 82,
-    "comments_url": "https://news.ycombinator.com/item?id=41520516",
-    "comments": [
-      "I'm genuinely shocked. I assumed that Apple would have foreseen this possibility and locked the Persona's eyes somewhere as long as the user was typing, at least for passwords.\n \nreply",
-      "Whole point of the digital face is to look real though, and freezing the gaze would look unnervingly fake.\n \nreply",
-      "I'm confident they could come up with a filler eye animation algorithm that was convincing enough to pass muster for short periods of time. Even if hand coding something didn't quite work out, they certainly have tons of eye tracking data internally they could use to train a small model, or optimize parameters.\n \nreply",
-      "Why? Most people are capable of fixating at a single point with basically no perceptible eye movement.\n \nreply",
-      "But you could at least dampen out or randomize eye travel while looking at the keyboard. Fully reproducing eye output is a recipe for disaster, and that should have been obvious.\n \nreply",
-      "It's about tradeoffs, the device is barely 7 months old at this point.  Thankfully the fix is fairly obvious too.\n \nreply",
-      "OTOH once you as an outsider know that sometimes the AVP is lying to you about where the wearer is looking why would you ever trust it?For example, you could then use the AVP to stare at people and then claim afterwards you were doing no such thing.\n \nreply",
-      "Add a faint glow to indicate they're typing and the continued face animation is a stand-in.\n \nreply",
-      "Throw people for a loop and switch your headset keyboard to DVORAK. When they scan your eye movements and apply to QWERTY, they'll be confused AF!\n \nreply",
-      "Well, you still only have to try one other password.  If you get locked out after one password attempt and nobody knows that you use dvorak, your defense works, but if you have three attempts, you can also add colemak to your list of things to try ;)\n \nreply"
-    ],
-    "link": "https://www.wired.com/story/apple-vision-pro-persona-eye-tracking-spy-typing/",
-    "first_paragraph": "To revisit this article, visit My Profile, then View saved stories.You can tell a lot about someone from their eyes. They can indicate how tired you are, the type of mood you\u2019re in, and potentially provide clues about health problems. But your eyes could also leak more secretive information: your passwords, PINs, and messages you type.Today, a group of six computer scientists are revealing a new attack against Apple\u2019s Vision Pro mixed reality headset where exposed eye-tracking data allowed them to decipher what people entered on the device\u2019s virtual keyboard. The attack, dubbed GAZEploit and shared exclusively with WIRED, allowed the researchers to successfully reconstruct passwords, PINs, and messages people typed with their eyes.\u201cBased on the direction of the eye movement, the hacker can determine which key the victim is now typing,\u201d says Hanqiu Wang, one of the leading researchers involved in the work. They identified the correct letters people typed in passwords 77 percent of the t"
-  },
-  {
-    "title": "Notepat \u2022 Aesthetic Computer (aesthetic.computer)",
-    "points": 9,
-    "submitter": "justanothersys",
-    "submit_time": "2024-09-12T23:31:48.000000Z",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://aesthetic.computer/notepat",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Random access string compression with FSST and Rust (spiraldb.com)",
-    "points": 36,
-    "submitter": "aduffy",
-    "submit_time": "2024-09-09T14:49:05.000000Z",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://blog.spiraldb.com/compressing-strings-with-fsst/",
-    "first_paragraph": "Random access string compression with FSST and RustVortex\u00a0is our open-source Rust library for compressed Arrow. If you want to have compressed Arrow arrays on-disk, in-memory, or over-the-wire, Vortex is designed to help out. Vortex opts for a columnar representation that is the same both on-disk and in-memory, relying on a set of lightweight compression schemes that allow readers to just-in-time decompress the data you need, when you need it. We\u2019re building out a toolkit of open codecs to efficiently and effectively compress the widest range of data.Our initial focus has been on numeric codecs, and we\u2019ve written about our approach using the FastLanes layout to compress integers at the bleeding edge of what\u2019s possible on today\u2019s hardware. We\u2019ve also implemented ALP to compress floating point arrays, as well as Roaring Bitmaps.However, not all data is numeric. String data is incredibly prevalent in the real world. Apache Parquet, the most popular analytics data format, supports compress"
-  },
-  {
-    "title": "Defusedxml \u2013 defusing XML bombs and other exploits (github.com/tiran)",
-    "points": 57,
-    "submitter": "gudzpoz",
-    "submit_time": "2024-09-12T17:11:18.000000Z",
-    "num_comments": 13,
-    "comments_url": "https://news.ycombinator.com/item?id=41523098",
-    "comments": [
-      "> XML BombThis reminds me of Zip Bomb [1], aka, Zip of Death  (ZOD) [2]1. https://en.m.wikipedia.org/wiki/Zip_bomb2. https://github.com/iamtraction/ZOD\n \nreply",
-      "Back in one day\u2026 I saw my first xml/html exploit by another script kiddie on AOL. I was like wtf and began trying to crash my own account. A simple quote mismatch with a bunch of ampersands eventually did it (something 1000 nested ampersand escape sequences). Anyways was pretty proud of what I built, so I found a guy smarting off in an AOL chat and decided to bomb him. And yeah, he was a moderator for AOL\u2026 so at 12 years old I got our family amount blocked and my dad had a uncomfortable call with the AOL reps and how his son was hacking.Ah those were the days\n \nreply",
-      "Fascinating reading:> The majority of developers are unacquainted with features such as processing instructions and entity expansions that XML inherited from SGML. At best they know about <!DOCTYPE> from experience with HTML but they are not aware that a document type definition (DTD) can generate an HTTP request or load a file from the file system.I was one of them!\n \nreply",
-      "Developers are even less aware that SGML has (and always had) quantities in the SGML declaration, allowing among other things to restrict the nesting/expansion level of entities (and hence to counter EE attacks without resorting to heuristics).Regarding DOCTYPE and DTDs, browsers at best made use of those to switch into or out of \"quirks mode\", on seeing special hardcoded public identifiers but ignored any declarations. WHATWG's cargo cult \"<!DOCTYPE html>\" is just telling an SGML parser that the \"internal and external subset is empty\", meaning there are no markup declarations necessary to parse HTML which is of course bogus when HTML makes abundant use of empty elements (aka void/self-closing elements in HTML parlance), tag omission, attribute shortforms, and other features that need per-element declarations for parsing. Btw that's what defines the XML subset of SGML: that XML can always be parsed without a DTD, unlike HTML or other vocabularies making use of above stated features.Keep in mind SGML is a markup language for text authoring, and it would be pretty lame for a markup language to not have text macros (entities). In fact, the lack of such a basic feature is frequently complained about in browsers. The problems came when people misused XML for service payloads or other generic data exchange. Note SOAP did forbid DTDs, and stacks checked for presence of DTDs in payloads. That said, XML and XML Schema with extensive types for money/decimals, dates, hashes, etc. is heavily used in eg ISO 20022 payments and other financial messages, and to this date, there hasn't evolved a single competitor with the same coverage and scope (with the potential exception of ASN.1 which is even older and certainly more baroque).\n \nreply",
-      "> I was one of them!I still one of them!\n \nreply",
-      "DefusedXML is an amazing piece of code.This being said, many of the mitigations it enables are now also available by default in many \u201cstandard\u201d libraries. For example, bandit will often tell you to not use lxml in Python, but instead use defusedxml. However, modern versions don\u2019t suffer the same issues at all, and this is a case where automatically following the advice of the linter/SCA is not a great idea.\n \nreply",
-      "Do you mean that it is, in fact, a mistake to use defusedxml instead of lxml in Python?\n \nreply",
-      "From the author themselves, 6 years ago:> defusedxml.lxml is no longer needed and supported. Nowadays libxml2 has builtin limitation for entity expansion.https://github.com/tiran/defusedxml/issues/25#issuecomment-4...\n \nreply",
-      "Note that this is not enabled by default, although there is an upper bound on tree size which does limit the reach of the issue.See https://lxml.de/FAQ.html#is-lxml-vulnerable-to-xml-bombs for more about the tuning knobs.\n \nreply",
-      "libxml2 segfaults on me whenever I give it vaguely complicated xsl templates so I'm doubtful about how effective that handling will be.\n \nreply"
-    ],
-    "link": "https://github.com/tiran/defusedxml",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n\n\n\n\n\"It's just XML, what could probably go wrong?\"Christian Heimes <christian@python.org>The results of an attack on a vulnerable XML library can be fairly\ndramatic. With just a few hundred Bytes of XML data an attacker can\noccupy several Gigabytes of memory within seconds. An attacker\ncan also keep CPUs busy for a long time with a small to medium size\nrequest. Under some circumstances it is even possible to access local\nfiles on your server, to circumvent a firewall, or to abuse services to\nrebound attacks to third parties.The attacks use and abuse less common features of XML and its parsers.\nThe majority of developers are unacquainted with features such as\nprocessing instructions and entity expansions that XML inherited from\nSGML. At best they know about <!DOCTYPE> from experience with HTML but\nthey are not aware that a document type defi"
-  },
-  {
-    "title": "Kolmogorov-Arnold networks may make neural networks more understandable (quantamagazine.org)",
-    "points": 214,
-    "submitter": "isaacfrond",
-    "submit_time": "2024-09-12T10:14:05.000000Z",
-    "num_comments": 63,
-    "comments_url": "https://news.ycombinator.com/item?id=41519240",
-    "comments": [
-      "The main author of KANs did a tutorial session yesterday at MLCAD, an academic conference focused on the intersection of hardware / semiconductor design and ML / deep learning.\n It was super fascinating and seems really good for what they advertise it for, gaining insight and interpret for physical systems (symbolic expressions, conserved quantities , symmetries). For science and mathematics this can be useful but for engineering this might not be the main priority of an ML / deep learning (to some extent).There are still unknowns for leaning hard tasks and learning capacity over harder problems. Even choices in for things like the chosen basis function used for the KAN \u201cactivations\u201d and what other architectures these layers can be plugged into with some gain is still unexplored. I think as people mess around with KANs we\u2019ll get better answers to these questions.\n \nreply",
-      "Presentation by the same author made 2 months back:https://www.youtube.com/watch?v=FYYZZVV5vlY\n \nreply",
-      "Is there a publicly available version of the session?\n \nreply",
-      "They cannot.Just because one internal operation is understandable, doesn't imply that the whole network is understandable.Take even something much simpler: decision trees. Textbooks give these as an example of understandable systems. A tree where you make one decision based on one feature at a time then at the leaves you output something. Like a bunch of if statements. And in the 90s when computers were slow and trees were small this was true.Today massive decision trees and approaches like random forests can create trees with millions of nodes. Nothing is interpretable about them.We have a basic math gap when it comes to understanding complex systems. Yet another network type solves nothing.\n \nreply",
-      "I think of it as \"Could Newton have used this to find the expressions for the forces he was analyzing (eg gravitational force = g m_1 m_2 / d^2)?\". I once asked a physics prof whether that was conceivable in principle, and he said yes. It seems to me like KANs should be able to find expressions like these given experimental data. If that was true, then I don't see how that wouldn't deserve being called interpretability.\n \nreply",
-      "> It seems to me like KANs should be able to find expressions like these given experimental data.Perhaps, but this is not something unique to KANs: any symbolic regression method can (at least in theory) find such simple expressions. Here is an example of such type of work (using non-KAN neural networks): https://www.science.org/doi/10.1126/sciadv.aay2631Rephrasing: just because you can reach simple expressions with symbolic regression methods based on neural networks (or KANs) does not necessarily imply that neural networks (or KANs) are inherently interpretable (particularly once you start stacking multiple layers).\n \nreply",
-      "Just giving the force law hardly counts as interpret-ability. You probably know that the 1/r^2 in the force law comes from the dimensionality of space. That is the interpretation.\n \nreply",
-      "yeah. you can run SHAP[0] on your xgboosted trees, results are kinda interesting, but it doesn't actually explain anything IME.[0] https://shap.readthedocs.io/en/latest/index.html\n \nreply",
-      "No wonder. \"Shapley values\" have the problem that they assume all necessary conditions are equally important. Say a successful surgery needs both a surgeon and a nurse, otherwise the patient dies. Shapley values will then assume that both have contributed equally to the successful surgery. Which isn't true, because surgeons are much less available (less replaceable) than nurses. If the nurse gets ill, a different nurse could probably do the task, while if the surgeon gets ill, the surgery may well have to be postponed. So the surgeons are more important for (contribute more to) a successful surgery.\n \nreply",
-      "Clearly both are equally important, 100% necessary. This doesn't account for rarity, nor does it account for wages, agreeability, smell or any of the other things it isn't trying to measure. You'll need a different metric for that and if you want to take both into account you should.\n \nreply"
-    ],
-    "link": "https://www.quantamagazine.org/novel-architecture-makes-neural-networks-more-understandable-20240911/",
-    "first_paragraph": "\nAn editorially independent publication supported by the Simons Foundation.\n\nGet the latest news delivered to your inbox.\nCreate a reading list by clicking the Read Later icon next to the articles you wish to save.Type search term(s) and press enterPopular\n                                    SearchesSeptember 11, 2024Nico Roper for Quanta MagazineContributing WriterSeptember 11, 2024\u201cNeural networks are currently the most powerful tools in artificial intelligence,\u201d said Sebastian Wetzel, a researcher at the Perimeter Institute for Theoretical Physics. \u201cWhen we scale them up to larger data sets, nothing can compete.\u201dAnd yet, all this time, neural networks have had a disadvantage. The basic building block of many of today\u2019s successful networks is known as a multilayer perceptron, or MLP. But despite a string of successes, humans just can\u2019t understand how networks built on these MLPs arrive at their conclusions, or whether there may be some underlying principle that explains those results"
-  },
-  {
-    "title": "Why Haskell? (gtf.io)",
-    "points": 309,
-    "submitter": "mesaoptimizer",
-    "submit_time": "2024-09-12T08:06:27.000000Z",
-    "num_comments": 402,
-    "comments_url": "https://news.ycombinator.com/item?id=41518600",
-    "comments": [
-      "> We can generalise this idea of being forced to handle the failure cases by saying that Haskell makes us write total functions rather than partial functions.Haskell doesn't prevent endless recursion. (try e.g. `main = main`)As the typed FP ecosystem is moving towards dependent typing (Agda, Idris, Lean), this becomes an issue, because you don't want the type checker to run indefinitely.The many ad-hoc extensions to Haskell (TypeFamilies, DataKinds) are tying it down. Even the foundations might be a bit too ad-hoc: I've seen the type class resolution algorithm compared to a bad implementation of Prolog.That's why, if you like the Haskell philosophy, why would you restrict yourself to Haskell? It's not bleeding edge any more.Haskell had the possibility of being a standardized language, but look at how few packages MicroHS compiles (Lennart admitted to this at ICFP '24[0]). So the standardization has failed. The ecosystem is built upon C. The Wasm backend can't use the Wasm GC because of how idiosyncratic GHC's RTS is.[1]So what does unique value proposition does GHC have left? Possibly the GHC runtime system, but it's not as sexy to pitch in a blog post like this.[0]: Lennart Augustsson, MicroHS: https://www.youtube.com/watch?v=uMurx1a6Zck&t=36m[1]: Cheng Shao, the Wasm backend for GHC: https://www.youtube.com/watch?v=uMurx1a6Zck&t=13290s\n \nreply",
-      "For a long time already I've wanted to make the leap towards learning dependently typed programming, but I was never sure which language to invest in - they all seemed either very focused on just proofs (Coq, Lean) or just relatively far from Haskell in terms of maturity (Agda, Idris).I went through Software Foundations [0] (Coq) which was fun and interesting but I can't say I ever really applied what I used there in software (I did get more comfortable with induction proofs).You're mentioning Lean with Agda and Idris - is Lean usable as a general purpose language? I've been curious about Lean but I got the impression it sort of steps away from Haskell's legacy in terms of syntax and the like (unlike Agda and Idris) so was concerned it would be a large investment and wouldn't add much to what I've learned from Coq.I'd love any insights on what's a useful way to learn more in the area of dependent types for a working engineer today.[0] https://softwarefoundations.cis.upenn.edu/\n \nreply",
-      "Lean aims to be a general purpose language, but I haven't seen people actually write HTTP servers in it. If Leo de Moura really wanted it to be general purpose, what does the concurrent runtime look like then? To my knowledge, there isn't one?That's why I've been writing an HTTP server in Idris2 instead. Here's a todo list demo app[1] and a hello world demo[2]. The advantage of Idris is that it compiles to e.g. Racket, a high level language with a concurrent runtime you can bind to from Idris.It's also interesting how languages don't need their own hosting (e.g. Hackage) any more. Idris packages are just listed in a TOML file[3] (like Stackage) but still hosted on GitHub. No need for versions, just use git commit hashes. It's all experimental anyway.[1]: https://janus.srht.site/docs/todolist.html\n[2]: https://git.sr.ht/~janus/web-server-racket-hello-world/tree/...\n[3]: https://github.com/stefan-hoeck/idris2-pack-db/blob/main/STA...\n \nreply",
-      "There are tasks, which are implemented as part of the runtime and they appear to plan to integrate libuv in the future. Some of the runtime seems to be fairly easy to hack and have somewhat nice ways of interoperating with both C, C++ and Rust.\n \nreply",
-      "> (like Stackage) but still hosted on GitHubI don't have much experience with Haskell, but one of the worst experiences has been Stack's compile time dependency on GitHub. GitHub rate limits you and builds take forever.\n \nreply",
-      "That's interesting. Could you say more? This is something that we (speaking as part of the Haskell community) should fix.  As far as I know Stack/Stackage should pick up packages from Hackage.  What does it use GitHub for?\n \nreply",
-      "I'm not entirely sure where it uses GitHub and where Hackage, but there are a few GitHub issues on the Stack repo about it:-  Binary upgrade of Stack fails due to GitHub API request limit #4979 (https://github.com/commercialhaskell/stack/issues/4979)-  GitHub rate limiting can affect Stack CI #6034 (https://github.com/commercialhaskell/stack/issues/6034)And a few more. The \"fix\" is having Stack impersonate the user (https://github.com/commercialhaskell/stack/pull/6036) and authenticate to the API. This unblocks progress, but this is really a design bug and not something I think people should emulate.Every other language I've used allows you to build code without authenticating to a remote service.\n \nreply",
-      "Lean can be used to write software in [0]. I dare say that it may even be the intended use for Lean 4. Work on porting mathlib to Lean 4 is far along and the mathematicians using it will certainly continue to do so. However there is more space for software written in Lean 4 as well.However...it's no where near ready for production use. They don't care about maintaining backwards compatibility. They are more focused on getting the language itself right than they are about helping people build and maintain software written in it. At least for the foreseeable future. If you do build things in it you're working on shifting ground.But it has a lot of potential. The C code generated by Lean 4 is good. Although, that's another trade-off: compiling to C is another source of \"quirks.\"[0] https://agentultra.github.io/lean-4-hackers/\n \nreply",
-      "> Work on porting mathlib to Lean 4 is far alongAs far as I understand, that work is in fact done.\n \nreply",
-      "When I last looked into Lean, I was highly unimpressed, even for doing math proofs. There's no way I'd invest into as a general-purpose language.Idris at least does state that they what people building real programs with it and don't want it to just be a research language.For dependent types, I myself am skeptical about languages trying to continuously push more and more stuff into types. I am not certain that such efforts are a net positive on writing good software. By their very definition, the more typed a language gets, the less programs it can represents. That obviously reduces buggy programs, but it also reduces non-buggy programs that you can implement. Highly typed languages force more and more effort into pre-compile time and you will often find yourself trying to fit a problem into the chains of the type system.Rather, I think reasonably multi-paradigm languages like F# are the sweet spot. Just enough strict typing and functional core to get you going for most of your program, but then it allows classes and imperative programming when those paradigms are appropriate.I think the way to go to write better software is better tooling and ergonomics. I don't think type systems are going to magically save us.\n \nreply"
-    ],
-    "link": "https://www.gtf.io/musings/why-haskell",
-    "first_paragraph": "10 Sep, 2024, 6591 words\u201cImpractical\u201d, \u201cacademic\u201d, \u201cniche\u201d. These are a few of the reactions I get when someone discovers that my favourite programming language is Haskell, and not only my favourite in some sort of intellectually-masturbatory way, but favourite for building things, real things, mostly involving web servers. Hobby projects would be one thing, but it gets worse: I have actual teams at Converge working in Haskell, too.I find this reaction quite curious: not only can any problem suitable to one general-purpose programming language be tackled in another, but a lot of the new features we see making their way into programming languages like Python, Rust, and Typescript, are either inspired by, or at least more robustly implemented in, Haskell. It seems to me that part of this response is a version of \u201cchoose boring technology\u201d (although Haskell is far older than most of the most popular programming languages) twisted to suit another pernicious ideology: that programming is no"
-  },
-  {
-    "title": "If I could dissect a sauropod (svpow.com)",
-    "points": 105,
-    "submitter": "surprisetalk",
-    "submit_time": "2024-09-12T13:54:04.000000Z",
-    "num_comments": 14,
-    "comments_url": "https://news.ycombinator.com/item?id=41521002",
-    "comments": [
-      "I recently discovered this blog via Adam Mastroianni's essay contest.(my submission on \"offensive horticulture\" did not even make honorable mention haha)Experimental History, the host of the contest, is a doing amazing work on democratizing science! Check it out[0] https://www.experimental-history.com/p/blog-extravaganza-the...[1] https://www.experimental-history.com\n \nreply",
-      "> (my submission on \"offensive horticulture\" did not even make honorable mention haha)Do you have this posted anywhere? I for one would like to learn more about \"offensive horticulture.\"\n \nreply",
-      "Thanks for asking :)The original essay was pretty long, so I'm releasing it in chapters here:[0] https://taylor.town/ohChapter 1: \"Proplifting, Plant Piracy, and Dumpster Chocolates\"[1] https://taylor.town/oh-theft\n \nreply",
-      "If you haven\u2019t run across https://www.crimepaysbutbotanydoesnt.com/ you may be in for a treat.\n \nreply",
-      "Discussion: https://news.ycombinator.com/item?id=41453455\n \nreply",
-      "Great article! I've just installed an rss reader for the first time in years  specifically to subscribe to your site. Looking forward to reading more\n \nreply",
-      "The blog post recommended the TV show \"inside nature's giants\", and I second it.The bit about the recurrent laryngeal nerve of the giraffe is particulary memorable: https://www.youtube.com/watch?v=cO1a1Ek-HD0\n \nreply",
-      "How did enough birds survive post-impact in order for them to still exist, if their \u2018air sack\u2019 lungs are so sensitive to air quality?\n \nreply",
-      "I'd guess that the inner parts of a forest environment, perhaps especially if wet (trapping dust on leaves) would have better air quality, but I'd expect that limited sunlight due to dust would be more of a problem than air quality. Smaller more generalist animals like birds and mammals understandably did better than large herbivores (and their predators) dependent on a single type of food source.\n \nreply",
-      "yeah thats probly right, inner parts of forest would be cleaner air wise dust gets trapped on leaves and stuff but sunlight is probly a bigger issue, less of it gets thru all the dust and thats bad for plants and animals alike, especially ones that need lots of it like big herbivores and their predators, theyd struggle to survive on limited sunlight and maybe even worse air quality than outer parts of forest, generalist animals like birds and small mammals would do ok tho, they can eat lots of diff things and dont need as much sunlight\n \nreply"
-    ],
-    "link": "https://svpow.com/2024/09/12/if-i-could-dissect-a-sauropod/",
-    "first_paragraph": "SV-POW!  \u2026  All sauropod vertebrae, except when we're talking about Open Access. ISSN 3033-3695Luke Horton asked in a comment on a recent post:Given the chance to examine a titanosaur cadaver with your hypothetical army of anatomists, what would you look for first?*FACEPALM* How we\u2019ve gone almost 17 years without posting about a hypothetical sauropod dissection is quite beyond my capacity. I am also contractually obligated to remind you that the TV show \u201cInside Nature\u2019s Giants\u201d shows dissections of a whale, elephant, giraffe, tiger, anaconda, giant squid, etc., so it\u2019s probably the closest we\u2019ll ever get. Go look up photos of Dr. Joy Reidenberg standing, um, amidst a partially-dissected whale, or just watch that episode, and your sauropod-dissection-visualizer will be properly calibrated.To get back to Luke\u2019s question, there are loads of interesting things that could be dissected in a sauropod, but since the remit here is Matt Wedel x titanosaur, there\u2019s only one possible answer: the l"
-  },
-  {
-    "title": "Some pterosaurs would flap, others would soar (phys.org)",
-    "points": 4,
-    "submitter": "wglb",
-    "submit_time": "2024-09-09T17:27:57.000000Z",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://phys.org/news/2024-09-pterosaurs-soar-flight-capability-giants.html",
-    "first_paragraph": "\n\n                  Click here to sign in with\n                  \n\n\n                  or\n                  \n\n\n\n\nForget Password?\n\nLearn more\nshare this!376TwitShareEmail\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tSeptember 6, 2024\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\tThis article has been reviewed according to Science\u00a0X's \n\t\t\t\t\t\t\t\t\t\t\t\t\teditorial process\n\t\t\t\t\t\t\t\t\t\t\t\t\tand policies.\n\t\t\t\t\t\t\t\t\t\t\t\t\tEditors have highlighted\n\t\t\t\t\t\t\t\t\t\t\t\t\tthe following attributes while ensuring the content's credibility:\n\t\t\t\t\t\t\t\t\t\t\t\t\n fact-checked\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n peer-reviewed publication\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n trusted source\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n proofread\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t by \t\t\t\t\t\t\t\t\t\t Taylor & Francis\nSome species of pterosaurs flew by flapping their wings while others soared like vultures, demonstrates a new study published in the Journal of Vertebrate Paleontology.It has long been debated whether the largest pterosaurs could fly at all.However, \"remarkable\" and \"rare\" three-dimensional fossils of two different large-bodied azhdarchoi"
-  },
-  {
-    "title": "Show HN: Galaxy Visualization (github.com/avicted)",
-    "points": 46,
-    "submitter": "avicted",
-    "submit_time": "2024-09-12T16:32:48.000000Z",
-    "num_comments": 11,
-    "comments_url": "https://news.ycombinator.com/item?id=41522670",
-    "comments": [
-      "This is a cool project. One thing I was confused on at first tho was the large earth sphere in the center of a what looks like a spherical universe of galaxies.  This makes it look more like a cloud of satellites orbiting earth.\n \nreply",
-      "Unfortunately this is what is possible to render with only celestial coordinates as input data. I'm looking into getting redshift at data right now, so that I could have the camera at the center of the earth and looking out from earth at different galaxies with different distances and brightness.\n \nreply",
-      "For anyone else trying this out on Linux, the build infrastructure can all be replaced with just:    cp -i src/* includes/* .\n    g++ frontend.cpp -lraylib\n    ./a.out\n \nreply",
-      "Hi!Thank you!I added a variation of your good solution to the main branch.https://github.com/Avicted/galaxy_visualization_raylib/blob/...\n \nreply",
-      "Astronomer here. \nSorry for criticism, but I think it would be much better if galaxies were shown in 3d. There are a lot of surveys providing redshifts, hence 3d positions. Then one would see the cosmic web, otherwise it looks a bit weird just projected on the sphere.\n \nreply",
-      "I agree, if you keep the heavenly filament model you should probably restrict the view point origin to the center to have at least have one plausibly correct interpretation.\n \nreply",
-      "Hi!Thank you for the criticism! My input data only contains celestial coordinates:\n- Right ascension in arcminutes\n- Declination in arcminutesI can perhaps try to get some redshift data and implement the 3D position for each galaxy. Great idea! Thank you!\n \nreply",
-      "Given that oftentimes you get a range of estimated distances (in megaparsecs, MPc), maybe you can show the galaxy as a line instead of a point. The innermost end of the line would be the closest estimated distance. The furthest out end of the line would be the furthest estimated distance. You can put the median estimated distance as a dot on the line. Either that or you'd have to use the median estimated distance for a singular point.Andromeda we have pretty-well established at 0.78 MPc, and M32 at 0.77 MPc.NGC 7768 at 120 MPc.Whereas the largest galaxy we currently know of, ESO 383-G 076, is at 200.59 \u00b1 14.12 MPc. That gives a variability in distance far larger than the distance to most of our nearby closest galaxies!\n \nreply",
-      "Well, to play student's advocate here for a second: wouldn't that make it harder to see the immediate difference, given the more complex presentation? IMO this visualization makes it pretty immediately obvious that galaxies aren't random in a way that a massive volumetric map might not.Would definitely be cooler in 3D, of course, I agree with that. Out of curiousity, do you know of any systems that do that? All I can find is multipurpose industry tools like https://www.openspaceproject.com/images and broken tools like https://spacein3d.com/universe-sandbox/.\n \nreply",
-      "Fascinating, thanks for posting! Some interesting things I noticed:1. I think we hugged your university site to death, lol.2. When it finally loaded, I saw this: \"Prerequisites: Programming 101\" given this work, that's pretty hilarious! You at the very least used a Data Structure or two, which is Programming 201...3. Am I correct in understanding the implicit approach is \"look, the blue ones are all bunched up and the red ones aren't, so galaxies aren't randomly distributed\"?4. Any takeaways in terms of things you'd like to add, similar ideas that occurred to you, or other cool stuff? You seem like a creative soul and I love dreaming up Three.js-driven space simulations like https://platform.leolabs.space/visualization, so I'd enjoy hearing any thoughts you might have :).\n \nreply"
-    ],
-    "link": "https://github.com/Avicted/galaxy_visualization_raylib",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        100k real ( +100k random ) galaxies from a sector. Visualized with Raylib.\n      Visualization of 100,000 real galaxies in blue and 100,000 randomly distributed galaxies in red.This project visualizes 100,000 real galaxies in blue and 100,000 randomly distributed galaxies in red. The data is sourced from the GPU programming course at\n\u00c5bo Akademi UniversityThis course teaches parallel programming using CUDA.The assignment is to use CUDA to calculate 10 billion angles between galaxies and prove they are not randomly distributed.\nThe students must leverage the GPU for these calculations on their own using a supercomputer.The students have to prove this on their own.The expected runtime for the calculation is approximately 3 seconds.This program is a visualization of the data, not the solution to the assignment.This project can be built"
-  },
-  {
-    "title": "DEF Con 32 \u2013 AMD Sinkclose Universal Ring-2 Privilege Escalation (Not Redacted) [pdf] (defcon.org)",
-    "points": 185,
-    "submitter": "ruik",
-    "submit_time": "2024-09-07T19:44:07.000000Z",
+    "title": "Don't Take Advice from a Habsburg (thedial.world)",
+    "points": 47,
+    "submitter": "lermontov",
+    "submit_time": "2024-09-10T05:25:47.000000Z",
     "num_comments": 29,
-    "comments_url": "https://news.ycombinator.com/item?id=41475975",
+    "comments_url": "https://news.ycombinator.com/item?id=41497419",
     "comments": [
-      "I was confused by the title, by \"Ring-2\" it means \"Ring -2\" (minus two), which is \"traditionally\" SMM (System Management Mode), a horrible relic that lets your BIOS/UEFI silently steal the CPU from the OS to implement janky drivers or workarounds directly in the firmware (occasionally causing all sorts of mayhem).(Actual Ring 2 is very rarely seen, so perhaps I should have known!)\n \nreply",
-      "Wait, there are negative rings!? I'd like to learn more about this but it's not a very easy to search term. Any pointers?\n \nreply",
-      "Just terminology. Whenever a new higher-privileged entity is created, it is sometimes described as a negative ring.There was a time when people thought if we could put the secure code in a lower ring, then with it we could protect the rest of the system. With virtualization, the hypervisor is in ring -1, which is technically not a ring, but rather a mode called VMX root operation, post-VMXON. This enables things like the blue pill attack, where the hypervisor is itself presented with a false image of the underlying physical hardware, by a malicious layer. You can find the same pattern in ARM TrustZone, where the secure code is repeatedly broken.\"if only we had ring -N\"\n \nreply",
-      "Crazy complexity.  Mind blown!\n \nreply",
-      "It's the same reason that the nominal thrust level on the Space Shuttle Main Engines is 104.5%[1].No, not 100% (it was originally), 104.5%. Why? Because you don't go back and change all your rules and documentation following subsequent developments in the field, that causes unnecessary confusion and errors down the road.[1]: https://en.wikipedia.org/wiki/RS-25#Engine_throttle/output\n \nreply",
-      "Good article on negative rings:https://medium.com/swlh/negative-rings-in-intel-architecture...\n \nreply",
-      "I don't think there actually are, in the sense that there isn't a register somewhere with these values that gets compared against, the way there is with rings 0-3. I've only heard this in the context of reverse engineers describing the layers of access that undocumented parts of a modern CPU system have, I think it's just a made-up analogy. There is presumably some proprietary documentation out there with more official names.\n \nreply",
-      "I can't imagine it's a standard thing.On X86 we have ring 0 and 3, with 1 and 2 never used and removed in newer CPUs. ARM has 3 or 4 privilege layers, but they're named differently.They probably just called it ring -2 because it's a couple layers below ring 0.\n \nreply",
-      "Arm (Aarch64) Exception Level 0 corresponds to Ring 3 of x86.Arm (Aarch64) Exception Level 1 corresponds to Ring 0 of x86.Arm (Aarch64) Exception Level 2 corresponds to the Hypervisor level a.k.a. Ring -1 of x86.Arm (Aarch64) Exception Level 3 corresponds to the System Management Mode a.k.a. Ring -2 of x86.Fortunately, in Arm EL3 the same instruction set is used as in any other level, unlike in x86, where SMM uses the obsolete 16-bit 8086 ISA, so for compiling programs that will be executed in SMM you have to use a special tool set.Unfortunately, both the Arm EL3 and the x86 SMM allow the manufacturers of computing devices to do things that are either stupid or in direct contradiction with the interests of the owners of the devices and the owners may not be able to do anything to correct this, unless they can exploit vulnerabilities like the one that has now been patched by AMD.There are no valid arguments for the existence of SMM and EL3 and the fact that they are not forbidden by law is a disgrace for the computing industry.Arm EL3 has been created as an imitation of the Intel SMM. The Intel SMM has been created because Microsoft was too lazy to introduce the required power management functions in the Windows and MS-DOS operating systems, so they passed the task to the motherboard or laptop manufacturers, for which Intel has provided SMM, to enable this.\n \nreply",
-      "Ring -1 is the host system / virtual machine manager when the ring 0 OS is running as a VM. Ring -2 is more privileged than that since it can interrupt Ring -1 and can affect the execution of VM instructions.\n \nreply"
+      "Was wondering if the article was about this guy, and it is!https://x.com/hop_scotch_/status/1664017656926687234?lang=en\n \nreply",
+      "A true patron of the modern arts. He seems quite pleasant based on every interaction I've seen on twitter.\n \nreply",
+      "I\u2019m reminded of the thesis of \u201cParasite\u201d: that niceness is a privilege those on the breadline cannot afford.\n \nreply",
+      "I think that the people in the breadline would have better things to do than be rude on twitter. Or maybe not, it is a fun way to pass the time for some.\n \nreply",
+      "If you're in the breadline, hobbies and other idle time activities cost money in comparison to twitter that is \"free\". Don't be surprised the rhetoric is toxic like 4chan and its hordes of basement dwelling NEETs.\n \nreply",
+      "I recently fell down a wikipedia rabbit hole and found the interesting story of \nArchduke Wilhelm of Austria.https://en.wikipedia.org/wiki/Archduke_Wilhelm_of_AustriaIt was interesting to read about the diverse opinions of the different parts of the Hapsburg.\n \nreply",
+      "\"Unemployed landowner\" is a pretty funny job status.\n \nreply",
+      "We have a lot of those today. We just call them Landlords.\n \nreply",
+      "Boo. Every landlord I ever had was retired, working full time to earn enough to buy second properties, or were a management company, so the landlord there is actually a CEO of a property management firm.If there's somebody renting property without doing any work they're probably better characterized as a slumlord.\n \nreply",
+      "I can recommend the book \"Vanished Kingdoms: The History of Half-Forgotten Europe\"   for anyone wanting to inoculate themselves against survivorship bias.\n \nreply"
     ],
-    "link": "https://media.defcon.org/DEF%20CON%2032/DEF%20CON%2032%20presentations/DEF%20CON%2032%20-%20Enrique%20Nissim%20Krzysztof%20Okupski%20-%20AMD%20Sinkclose%20Universal%20Ring-2%20Privilege%20Escalation.pdf",
-    "first_paragraph": ""
+    "link": "https://www.thedial.world/articles/news/issue-20/eduard-habsburg-the-habsburg-way-review",
+    "first_paragraph": "For two decades, Marie Antoinette\u2019s mother gave birth almost annually. She had her first child in 1737 at age 20 and her 16th in 1756 at 39. The future queen of France, born Maria Antonia, was child number 15, and arrived the day after the calamitous 1755 Lisbon earthquake, whose tremors were felt across Europe. For her mother, the Habsburg empress Maria Theresa, these quakes of body and earth coincided with those of politics. She had just wrangled a new alliance with archenemy France \u2014 negotiated secretly through the French king\u2019s mistress \u2014 that soon erupted into the Seven Years\u2019 War. \u00a0War waging and baby making went together for Maria Theresa from the start, as we learn in a magisterial\u00a0new biography\u00a0by Barbara Stollberg-Rilinger. The only woman to rule in the long history of the Habsburg dynasty, she held sway over Central Europe for 40 eventful years. When at age 23 she inherited the crown \u2014 or rather crowns \u2014 from her father, Charles VI, she had already birthed three daughters. H"
   },
   {
-    "title": "Jax and Equinox: What are they and why should I bother? (garymm.org)",
-    "points": 45,
-    "submitter": "spearman",
-    "submit_time": "2024-09-09T14:46:07.000000Z",
-    "num_comments": 5,
-    "comments_url": "https://news.ycombinator.com/item?id=41489026",
+    "title": "I Added SVG Maps to My Travel Posts (cyberb.space)",
+    "points": 66,
+    "submitter": "todsacerdoti",
+    "submit_time": "2024-09-13T16:51:46.000000Z",
+    "num_comments": 11,
+    "comments_url": "https://news.ycombinator.com/item?id=41532958",
     "comments": [
-      "Equinox has great idioms \u2014 really pioneered the Pytree perspective. Penzai is also great.JAX feels close to achieving a sort of high-level GPGPU ecosystem. Super fledgling \u2014 but I keep finding more little libraries that build on JAX (and can be compositionally used with other JAX libraries because of it).Only problem is that lots of compositional usage leads to big code and therefore big compile times for XLA.\n \nreply",
-      "There's quite a few other libraries associated with Equinox in the JAX ecosystem:https://github.com/patrick-kidger/equinox?tab=readme-ov-file...I've enjoyed using Equinox and Diffrax for performing ODE simulations. To my knowledge the only other peer library with similar capabilities is the Julia DifferentialEquations.jl package.\n \nreply",
-      "Personally a big fan of Flax. The way it separates the params and the compute graph is - imo - the right (TM) way. Saying this after many years of soing ML :)\n \nreply",
-      "For me the questions to answer for whether or not I should bother.Will it try and bind me to other technologies?Does it work out of the box on ${GPU}?Is it well supported?Will it continue to be supported?\n \nreply",
-      "Playing with JAX on Google Colab (Nvidia T4), everything works great.Sadly, I cannot get JAX to work with the built-in GPU on my M1 MacBook Air. In theory it's supposed to work:https://developer.apple.com/metal/jax/But it crashes Python when I try to run a compiled function. And that's only after discovering I need an older specific version of jax-metal, because newer versions apparently don't work with M1 anymore (only M2/M3) -- they don't even report the GPU as existing. And even if you get it running, it's missing support for complex numbers.I'm not clear whether it's Google or Apple who is building/maintaining support for Apple M chips though.JAX works perfectly in CPU mode though on my MBA, so at least I can use it for development and debugging.\n \nreply"
+      "I love this Josh! I recently discovered Protomaps (https://protomaps.com) and have been having a lot of fun doing mapping without paying Google or Mapbox a small fortune for the privilege. I found the the basemaps look much better than the protomaps site makes them appear (they're super zoomed out in the samples where the styles don't come together as well as they do when zoomed in)\n \nreply",
+      "Super neat, the end result looks great and adds a lot to the posts. On the downside, inlining the map causes the HTML to balloon up to ~500kB/~180kB gzipped, compared to 30kB/10kB on this post (which lacks a map). The site is already insanely fast, but you could pull the map SVG into an actual file, so it's cached between pages, and becomes a lower-priority resource (which will ~halve First Contentful Paint). Then you'd just position the circle on top of that generic map file!\n \nreply",
+      "You could then also run it through SVGO to compress it further.\n \nreply",
+      "Indeed - looks like SVGO can crush that map from 500kB down to like 80kB! Users on constrained data plans will love that. Of course, the author notes they want higher fidelity at some point. They could consider breaking the SVG into quadrants, perhaps? Or something more clever :)\n \nreply",
+      "the author is also using many large, multi-megabyte photos in their travel posts, so I'm not sure how significant the size of the SVG content is, in comparison\n \nreply",
+      "Big inlined resources impact paint time - a lot! You'll see this by running Lighthouse/PageSpeed Insights on the posts. E.g. no map: https://imgur.com/a/5CJjEUq vs map: https://imgur.com/a/mX1ZDz7That means users are staring at blank for longer. That can really stink on a poor connection.Images are requested at a lower priority and so don't cause the same problems for rendering. But it's a great idea to compress them, too, and use something like `srcset` to send an appropriately sized version!\n \nreply",
+      "Really impressive! I've implemented a few kinds of maps on my blog, and I fail all of their requirements:- I use a 3rd party platform- My maps are generated at runtime- They looks... let's say vaguely consistent on mobile & desktopMaps were the most painful and time-consuming part of building a travel blog, but also perhaps the most satisfying.\n \nreply",
+      "Also if the author views this, would love an rss feed. Can use the github pretty easily but maybe commits have updates, not new blog posts\n \nreply",
+      "what a great looking website.love the craft. now I need to set aside some time to read the post\u2026 !\n \nreply",
+      "same here, looks really nice. Some websites are cool, if slightly gratuitous in how they try to look fancy. This looks elegant and cohesive\n \nreply"
     ],
-    "link": "https://www.garymm.org/blog/2024/09/08/jaxwhat/",
-    "first_paragraph": "2024-09-08This post is written as a Jupyter notebook which you can run and edit using the link below:"
+    "link": "https://cyberb.space/notes/2024/how-i-added-maps-to-my-travel-posts/",
+    "first_paragraph": "Travel posts on my blog now have maps at the top. With any big(ger) change to this website, I like to take a minute to walk through why I did it, and how it came together. I enjoy doing this a) because it's a nice memento of how I approached and solved a problem I set for myself, and b) I hate to horde knowledge and on the off chance someone wants to add svg maps to their personal website, maybe this will help them navigate the process.Two main reasons, both of them more personal and emotional than logical. First, I like maps and I miss working with them! All of the best jobs I've had in my adult life revolved around working with maps on a regular basis. As a research assistant in grad school, I was lucky to work for an old school Geography Professor who would have me plot historical data on maps by hand. As a Software Engineer, I managed to end up working on a small corner of the Mapbox platform for a few years. Long workdays are much more enjoyable when you are working on something t"
+  },
+  {
+    "title": "Janet Jackson had the power to crash laptop computers (2022) (microsoft.com)",
+    "points": 109,
+    "submitter": "mellonaut",
+    "submit_time": "2024-09-13T19:44:45.000000Z",
+    "num_comments": 37,
+    "comments_url": "https://news.ycombinator.com/item?id=41534483",
+    "comments": [
+      "5400rpm laptop hard drives were notoriously sensitive to external force because of their thin metal construction and low power motor.I remember having a MacBook Pro with a Toshiba 5400rpm hard drive that failed shortly after I rested it on an HVAC  unit in our server closet (the HVAC unit happened to be the perfect height off the floor for doing work while standing). Just to be sure that was the cause, I had the drive replaced under warranty, did the same thing again and it died again after only a short while of using it on that HVAC unit.After Apple replaced the drive a second time, I instead used a crash cart as a laptop desk and put a sign on the HVAC unit that read \"Don't put laptops on here.\"\n \nreply",
+      "> \"Don't put laptops on here.\"With an explanation why not? I feel like having that, instead of a \"Here Be Dragons\" note would be more helpful, so someone won't ignore the sign thinking \"It'll be fine\".Also it'd be funny if the sign is still there even though all* laptops have SSDs now...\n \nreply",
+      "> so someone won't ignore the sign thinking \"It'll be fine\".If they do whatever happens is on them for assuming that.\n \nreply",
+      "Not hard drive related AFAIK, but I used to work in a media lab with about 30 mac desktops of around the powermac g4 vintage.We noticed that the macs were rebooting unexpectedly when certain people were in the room. After a bit of observation we worked out that the call button on our walkie talkies could trigger a reboot from a couple of feet away, which turned out to be an awesome superpower if you'd had a gobful from an especially obnoxious student.\n \nreply",
+      "Adam Neely has a good video on this effect, explaining why it is specifically the Janet Jackson song in question: https://www.youtube.com/watch?v=-y3RGeaxksY\n \nreply",
+      "This is a fun article but seriously lacking in details... musical frequencies crashing hard drives, including hard drives of laptops within earshot? That's a pretty extraordinary bug so I hoped there would be more elaboration. I also wonder if that patch to block those frequencies is still in effect.\n \nreply",
+      "Shouting in data center increases disk latency: https://youtu.be/tDacjrSCeq4\n \nreply",
+      "Old man yells at the clouds.\n \nreply",
+      "I wouldn't call it a \"bug\", more \"unfortunate physics\". Still possible to guard against that, specifically. (There will always be more \"unfortunate physics\", for example I bet that the hard disk also fails if I smash it against a wall at 100mph, but nobody's going do care designing a consumer HD that stops exhibiting that specific behavior.)\n \nreply",
+      "There's more physics issues with the speakers themselves; especially for something like a laptop speaker in a small enclosed space, it's totally possible to blow it out by turning the volume up too high.There are various ways to protect against this, easiest being to just limit the top volume. If this is done in the official audio drivers then watch out if you decide to install Linux.\n \nreply"
+    ],
+    "link": "https://devblogs.microsoft.com/oldnewthing/20220816-00/?p=106994",
+    "first_paragraph": "A colleague of mine shared a story from Windows XP product support. A major computer manufacturer discovered that playing the music video for Janet Jackson\u2019s \u201cRhythm Nation\u201d would crash certain models of laptops. I would not have wanted to be in the laboratory that they must have set up to investigate this problem. Not an artistic judgement.One discovery during the investigation is that playing the music video also crashed some of their competitors\u2019 laptops.And then they discovered something extremely weird: Playing the music video on one laptop caused a laptop sitting nearby to crash, even though that other laptop wasn\u2019t playing the video!What\u2019s going on?It turns out that the song contained one of the natural resonant frequencies for the model of 5400 rpm laptop hard drives that they and other manufacturers used.The manufacturer worked around the problem by adding a custom filter in the audio pipeline that detected and removed the offending frequencies during audio playback.And I\u2019m su"
+  },
+  {
+    "title": "OpenAI o1 Results on ARC-AGI-Pub (arcprize.org)",
+    "points": 17,
+    "submitter": "z7",
+    "submit_time": "2024-09-13T22:14:26.000000Z",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=41535694",
+    "comments": [
+      "This is best AGI benchmark out there in my opinion. Surprising results that underscore how good Sonnet is.\n \nreply",
+      "Disagree. My opinion is that solving ARC-AGI won't get us any closer to AGI and it's mostly a distraction.\n \nreply",
+      "How so? I think if a team is fine-tuning specifically to beat ARC that could be true but when you look at Sonnet and o1 getting 20%, I think a standalone frontier model beating it would mean we are close or already at AGI.\n \nreply"
+    ],
+    "link": "https://arcprize.org/blog/openai-o1-results-arc-prize",
+    "first_paragraph": "Over the past 24 hours, we got access to OpenAI's newly released o1-preview and o1-mini models specially trained to emulate reasoning. These models are given extra time to generate and refine reasoning tokens before giving a final answer.Hundreds of people have asked how o1 stacks up on ARC Prize. So we put it to test using the same baseline testing harness we've used to assess Claude 3.5 Sonnet, GPT-4o, and Gemini 1.5. Here are the results:Is o1 a new paradigm towards AGI? Will it scale up? What explains the massive difference between o1's performance on IOI, AIME, and many other impressive benchmark scores compared to only modest scores on ARC-AGI?There's a lot to talk about.o1 fully realizes the \"let's think step by step\" chain-of-thought (CoT) paradigm by applying it at both training time and test time inference.In practice, o1 is significantly less likely to make mistakes when performing tasks where the sequence of intermediate steps is well-represented in the synthetic CoT traini"
+  },
+  {
+    "title": "Gottfried Mind, the Raphael of Cats (publicdomainreview.org)",
+    "points": 5,
+    "submitter": "prismatic",
+    "submit_time": "2024-09-11T14:58:55.000000Z",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://publicdomainreview.org/essay/gottfried-mind-the-raphael-of-cats",
+    "first_paragraph": "Search The Public Domain ReviewBy Kirsten TamblingLabelled a \u201ccretin\u201d and \u201cimbecile\u201d in his lifetime, the Swiss artist Gottfried Mind had profound talents when it came to drafting the feline form. Kirsten Tambling reconstructs the biography of this elusive figure, whose savant-like qualities inspired later French Realists, early psychiatric theorists, and Romantic visions of the artist as outsider.\nPublishedSeptember 11, 2024Lithograph by Johann Heinrich Lips after a self-portrait by Gottfried Mind, 1816 \u2014 Source.It was August 1801, and Mrs Freudenberger was newly widowed. In his youth, her husband, the artist Sigmund Freudenberger, had worked in Paris, producing drawings and book illustrations in the rococo style fashionable in the mid- to late eighteenth century. Since returning to his hometown of Berne, Switzerland, in 1773, Mr Freudenberger\u2019s primary output had been scenes of Swiss peasant life and national costume. In works such as \u201cThe Rustic Toilette\u201d and its pendant, \u201cVillage C"
+  },
+  {
+    "title": "Stolen iPhones Will Be Even More Useless from iOS 18 Onwards (macobserver.com)",
+    "points": 16,
+    "submitter": "miles",
+    "submit_time": "2024-09-13T23:48:08.000000Z",
+    "num_comments": 5,
+    "comments_url": "https://news.ycombinator.com/item?id=41536232",
+    "comments": [
+      "This is a good step. Phone snatching is a serious problem. Making stolen phones totally useless is exactly the way to go about it.If eBikes could have a similar system, that would be great.\n \nreply",
+      "Doesn't this effectively kill 3rd party parts/repairs?  Or salvaging dead phones for parts?Is this gonna make more e-waste, or make repairs more expensive, or both?\n \nreply",
+      "If \"extending Activation Lock to other components\" means what I think it does, then the phone's owner should have control over this and 3rd party repairs should be fine. It may cut out the market for unofficial parts, but does that even exist today? Is anyone making iphone compatible batteries with any scale? (I'm curious if so)The thrust of this move devalues phones to thieves, which I generally think is a good thing. Cutting down the hardly salvageable value even further should help the \"market\" sort this out and lead to less theft. I like it.\n \nreply",
+      ">However, it aligns with Apple\u2019s recent policy changes that allow repairs with genuine used parts while maintaining stringent security measures.Doesn't this imply that so long as the phone is unliked from apple id, the parts can be re-paired (hah) with a new phone?\n \nreply",
+      "If they use lost or stolen parts, probably.\n \nreply"
+    ],
+    "link": "https://www.macobserver.com/ios/stolen-iphones-will-be-even-more-useless-from-ios-18-onwards/",
+    "first_paragraph": ""
   }
 ]
