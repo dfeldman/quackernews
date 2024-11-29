@@ -1,388 +1,405 @@
 [
   {
-    "title": "Malware can turn off webcam LED and record video, demonstrated on ThinkPad X230 (github.com/xairy)",
-    "points": 335,
-    "submitter": "xairy",
-    "submit_time": "2024-11-27T20:10:55 1732738255",
-    "num_comments": 220,
-    "comments_url": "https://news.ycombinator.com/item?id=42259278",
+    "title": "Send someone you appreciate an official 'Continue and Persist' Letter (continueandpersist.org)",
+    "points": 216,
+    "submitter": "adnanaga",
+    "submit_time": "2024-11-28T21:16:55 1732828615",
+    "num_comments": 29,
+    "comments_url": "https://news.ycombinator.com/item?id=42268580",
     "comments": [
-      "I thought the whole point of these camera LEDs was to have them wired to/through the power to the camera, so they are always on when the camera is getting power, no matter what.Having the LED control exposed through the firmware completely defeats this.\n \nreply",
-      "They are hardwired on Macbooks. From Daring Fireball, quoting an email from an Apple engineer.> All cameras after [2008] were different: The hardware team tied the LED to a hardware signal from the sensor: If the (I believe) vertical sync was active, the LED would light up. There is NO firmware control to disable/enable the LED. The actual firmware is indeed flashable, but the part is not a generic part and there are mechanisms in place to verify the image being flashed. [\u2026]> So, no, I don\u2019t believe that malware could be installed to enable the camera without lighting the LED. My concern would be a situation where a frame is captured so the LED is lit only for a very brief period of time.https://daringfireball.net/2019/02/on_covering_webcams\n \nreply",
-      ">The actual firmware is indeed flashable, but the part is not a generic part and there are mechanisms in place to verify the image being flashed.That might make it harder to develop a hack, but one would hope that if the hardware team tied the LED to a hardware signal, it would not matter if the firmware were reflashed.\n \nreply",
-      "I believe that it\u2019s not literally hardwired in the sense that powering up the camera also powers up the camera LED, and instead this relies on logic in the hopefully un-flashable camera+LED firmware.  Someone correct me if I\u2019m wrong.You need some logic to enforce things like a minimum LED duration that keeps the LED on for a couple seconds even if the camera is only used to capture one brief frame.I have a script that takes periodic screenshots of my face for fun and I can confirm the LED stays on even if the camera only captures one quick frame.\n \nreply",
-      "A capacitor can hold enough charge to power led for noticable amount of time even if powered for a brief moment, no logic needed\n \nreply",
-      "I don't think they would waste a high value capacitor just to keep a led lit for longer, also a led directly lit by a capacitor would be noticeable by slowly dimming when the capacitor discharges. It's more likely that the signal driving the led comes out of a monostable implemented in code: pin_on() drives the led on; pin_off() waits n secs then drives the led off.\n \nreply",
-      "Surely a clock available to the camera firmware would be more expensive than a capacitor?",
-      "The trick is to keep using the camera until that capacitor is discharged. I'm pretty sure most cameras can run at voltages below a LED's forward voltage nowadays.\n \nreply",
-      "I happen to have some first-hand knowledge around the subject! In 2014 someone did a talk[0] on disabling the camera on some older Macbooks. It was fairly trivial, basically just reflashing the firmware that controlled the LED. I worked on the security team at Apple at the time and in response to this I attempted to do the same for more modern Macbooks. I won't go into the results but the decision was made to re-architect how the LED is turned on. I was the security architect for the feature.A custom PMIC for what's known as the forehead board was designed that has a voltage source that is ALWAYS on as long as the camera sensor has power at all. It also incorporates a hard (as in, tie-cells) lower limit for PWM duty cycle for the camera LED so you can't PWM an LED down to make it hard to see. (PWM is required because LED brightness is somewhat variable between runs, so they're calibrated to always have uniform brightness.)On top of this the PMIC has a counter that enforces a minimum on-time for the LED voltage regulator. I believe it was configured to force the LED to stay on for 3 seconds.This PMIC is powered from the system rail, and no system rail means no power to the main SoC/processor so it's impossible to cut the 3 seconds short by yoinking the power to the entire forehead board.tl;dr On Macbooks made after 2014, no firmware is involved whatsoever to enforce that the LED comes on when frames could be captured, and no firmware is involved in enforcing the LED stay on for 3 seconds after a single frame is captured.0: https://www.usenix.org/system/files/conference/usenixsecurit...\n \nreply",
-      "Thanks, this is the reason I browse Hacker News\n \nreply"
+      "As someone who is coming to increasingly believe that 99% of the world problems are caused by powers seeking to intentionally divide us one from the other, I cannot tell you how much joy this brings me to see. I wish you great success in this effort, however small it might appear to be in the scheme of things.\n \nreply",
+      "Every day, thousands of Cease and Desist letters are issued, telling people to stop what they\u2019re doing (Looking at you, David Chang). What a bummer!That\u2019s why we created: The Continue and Persist Letter. A official-looking legal letter that encourages and uplifts people, one that tells people to keep doing what they\u2019re doing! Surprise someone you appreciate by sending them a Continue and Persist Letter.\n \nreply",
+      "Cool idea! It sounds like you're offering it for free, with the option for a donation. How are you going to deal with the influx of what I imagine will be hundreds of free requests? Won't that get pretty expensive fast?\n \nreply",
+      "I think the rules are you have to put a Show HN: in the title when you self post\n \nreply",
+      "I don\u2019t think that\u2019s a rule, but it does give you a better chance of being noticed because it goes on the show list.\n \nreply",
+      "They're also downranked a little, IIRC.\n \nreply",
+      "Yes, but, they admit they\u2019re not lawyers :\u2019 )\n \nreply",
+      "This reminds me of how my father (a lawyer) sent fake subpoenas to invite people to his brother's bachelor party. Most found it hilarious but it freaked a few people out. I suspect that this would have the same problem.\n \nreply",
+      "It would be nice to have a pdf copy of the letter downloadable for those who are outside of the USA.\n \nreply",
+      "Love the idea, it's similar to the formal letters of http://www.bureauofcommunication.com/\n \nreply"
     ],
-    "link": "https://github.com/xairy/lights-out",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Tools for controlling webcam LED on ThinkPad X230\n      This repository contains tools that allow getting software control of the webcam LED on ThinkPad X230 without physical access to the laptop.\nThese were created as a practical demonstration that malware can record video through the webcam without the LED indication.This works via reflashing the webcam firmware over USB (the X230 webcam is connected over USB internally) to add a capability of arbitrarily controlling the LED.\nThis approach likely affects many other laptops, as connecting the webcam over USB and allowing to reflash its firmware is a common design pattern across laptop manufacturers.See the \"Lights Out: Covertly turning off the ThinkPad webcam LED indicator\" talk (pdf) I gave at POC 2024 for the details: discovering a way to reflash the X230 webcam firmware, reverse"
+    "link": "https://ContinueAndPersist.org",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Hetzner raises prices while significantly lowering bandwidth (US) (adriano.fyi)",
+    "points": 237,
+    "submitter": "acaloiar",
+    "submit_time": "2024-11-28T20:56:05 1732827365",
+    "num_comments": 170,
+    "comments_url": "https://news.ycombinator.com/item?id=42268475",
+    "comments": [
+      "As a Hetzner bandwidth enjoyer affected by this, this is why (HN cough) multi-cloud/dedi k3s is great, because if you get rug pulled you just migrate to another provider with better prices.That said, $1/TB for bandwidth overage seems pretty fair. I empathize with the complaining but if the new price is such a ripoff everyone should be recommending what cloud VM provider they're migrating to for a better deal.\n \nreply",
+      "I use OVH (VPS\u2019s specifically), which offers unlimited bandwidth. In my experience they\u2019ve been both reliable and affordable which is a rarity. I run a few applications that require high amounts of bandwidth, so silly caps like the ones that Hetzner are imposing are a non-starter for me\n \nreply",
+      "That's what a friend said also. If you look beyond the marketing material, hoever, the ToS says:> OVHcloud reserves the right to restrict the VPS Service bandwidth to 1 Mbps (1 Megabit per second) until the end of the current billing period in cases of excessive use by the Clientbut it advertises with \"unmetered\"... so is a meter attached by which they can tell whether your bandwidth use is excessive or not? Would they eat those costs for you?I checked out some numbers. Quoting myself from chat history:> it begs the question: what's \"excessive\"? I dunno but if they charge $5/month for the VPS and, while AWS may be ~1/3rd cheaper [than some other thing], that's still on the order of 70$/month. And AWS has insane economies of scale working for them, maybe their cost price is $7/month if they don't need to have a competitive price but that's still a loss then> I bet you'd win the lawsuit where [OVH] falsely advertised with unmetered 500mbps and a terms of service saying \"excessive\", so when you transfer 2 TB/day on a connection advertised to be capable of 500mbps\u00d724h = 5.4TB/day... that's reasonable right? But then you're having a lawsuit over a 5$/month VPS\n \nreply",
+      "OVH is the most set and forget experience I've ever had.  They email me maintenance notices 3 or 4x a year, but I don't think I've ever had any downtime.  It just stays happily humming along for years.  I think I pay something like 60 a year for it.\n \nreply",
+      "OVH and reliable, in the same sentence? They're cheap, so suitable for projects you don't mind going poof.Personal anecdote. A few years ago, I lost a lot of sleep on a domain renewal at OVH. Their incompetence was mind-boggling. A less common tld was the only slightly challenging bit. After a week of calling and emailing, and on the verge of the domain lapsing, I gave up and sent someone to the tld registry with cash.Also, do search for OVH SBG2 should you have missed that.\n \nreply",
+      "OVH's infrastructure is absolutely very reliable.The pain begins when you need support. Just like you, I have lost a lot of sleep over domains held hostage by their incompetence (for almost a year in one instance). Lesson learned, never use OVH for domains.The support for their dedicated servers is just as bad, mind you, but short of a hardware failure you really don't need them. I have several years of uptime on all my current services.So for personal projects their vps/dedicated is still a fantastic value.\n \nreply",
+      "> OVH's infrastructure is absolutely very reliable.Well except that time one of their datacenters burned down, likely due to insufficient fire suppression, and they kept the data backups in the same building as the originals so they were also lost.https://www.datacenterdynamics.com/en/news/ovhcloud-ordered-...These reports criticize OVHcloud for having no fire prevention system and no power cut-off on the site, for using wooden floors, and for a free-cooling design that created airflows that spread the fire. The reports also say that water was detected near electrical systems before the fire broke out.It takes quite a while to regain trust after shitting the bed that badly.\n \nreply",
+      "They can be terrible.  But it is dirt cheap. So if you use their stuff in a way that you can recover somewhere else if they have issues, you save a lot.As you mentioned I would stay away from them for things like domain hosting.  Just use them for cheap compute, etc.\n \nreply",
+      "I've only ever been on OVH and was surprised to discover a few years ago that bandwidth is not only unlimited but also costly at most other hosting companies (including cloud ones).\n \nreply",
+      "Shout-out to Microtronixdc, my colocation provider.  For their $55/month/U colocation package, they provide unmetered gigabit for no additional cost.https://microtronixdc.com/\n \nreply"
+    ],
+    "link": "https://adriano.fyi/posts/hetzner-raises-prices-while-significantly-lowering-bandwidth-in-us/",
+    "first_paragraph": "This morning I received an email from Hetzner stating that they are raising prices in the US while significantly reducing bandwidth.The largest price percentage increase is 27.52% for CPX21 servers, and the smallest is 4.17% for CX3+ servers.Bandwidth allotments are decreasing on average, across all products, 88.19% from previous allotments.I\u2019ve been a big fan of Hetzner. Unfortunately they\u2019ve made a feeble attempt to dress this change up in the name of \u201cfairness\u201d.With the new tariff structure, we want to make conditions for our customers around the world as fair as possible \u2026 Until this change, customers who have used fewer resources have covered the costs, in a way, for other customers who have used much more resources. We want to make things more balanced. The new prices will give our customers the best possible price for the resources they use.I\u2019d love to see a better explanation for why prices are increasing so much in exchange for such a significant drop in bandwidth allotments. "
+  },
+  {
+    "title": "The UX of Lego Interface Panels (2020) (interactionmagic.com)",
+    "points": 222,
+    "submitter": "rcdemski",
+    "submit_time": "2024-11-28T19:00:47 1732820447",
+    "num_comments": 23,
+    "comments_url": "https://news.ycombinator.com/item?id=42267725",
+    "comments": [
+      "A thread at the time https://news.ycombinator.com/item?id=24035866 and a little one a bit later https://news.ycombinator.com/item?id=29502811 both with some author comments\n \nreply",
+      "Thanks! Macroexpanded:The UX of Lego Interface Panels (2020) - https://news.ycombinator.com/item?id=29502811 - Dec 2021 (10 comments)The UX of Lego Interface Panels - https://news.ycombinator.com/item?id=24035866 - Aug 2020 (38 comments)\n \nreply",
+      "Hah! Awesome post. I have to say my favorite as a kid was the white radar screen with the \"38\" on it. Maybe I should have gone into UX?\n \nreply",
+      "Only tangentially related, but just yesterday I learned of Lego's defunct \"Modulex\" brand, and the serious and apparently widely popular Lego-brick-based project management display boards from the '60s to the '90s.The small size and comforting pastel colors seemed especially inviting to me.It makes me yearn for more tactile and actually pleasant-to-work-with computer UIs.\n \nreply",
+      "I wonder if there\u2019s a 3D printed version somewhere online\n \nreply",
+      "The analysis of real-life interfaces is quite interesting, and as a novice in the field I had never reflected much on the by-feature / by-operation / by-technology / by-use case distinction.\n \nreply",
+      "I'd like it if I could zoom on my phone on a site about ui/ux with small pictures.\n \nreply",
+      "If you're on Android, there's an accessibility option in Firefox and Chrome that allows you to always zoom on any page, even if the website normally prevents it. On Firefox it's under Settings -> Accessibility -> Zoom on all websites.\n \nreply",
+      "That's better, thanks\n \nreply",
+      "Hey, I'm the author of this site!\nYou're on Android I think, based on the other comments here? I only have an iPhone to test, but I can pinch+expand the site on my phone no problem. Was not intentional to have blocked it! Sorry, I'll see if I can work out why.\n \nreply"
+    ],
+    "link": "https://interactionmagic.com/UX-LEGO-Interfaces/",
+    "first_paragraph": "Piloting an ocean exploration ship or Martian research shuttle is serious business. Let's hope the control panel is up to scratch. Two studs wide and angled at 45\u00b0, the ubiquitous \"2x2 decorated slope\" is a LEGO minifigure's interface to the world.These iconic, low-resolution designs are the perfect tool to learn the basics of physical interface design. Armed with 52 different bricks, let's see what they can teach us about the design, layout and organisation of complex interfaces. Welcome to the world of LEGO UX design.At a glance, the variety of these designs can be overwhelming, but it's clear that some of these interfaces look far more chaotic than others. Most interfaces in our world contain a blend of digital screens and analog inputs like switches and dials. These LEGO panels are no different.Plotting the panels across these two axes reveals a few different clusters. Screens with an accompanying row of buttons sit in the top left. A small cluster of very organised switch panels l"
+  },
+  {
+    "title": "The success and failure of Ninja (2020) (neugierig.org)",
+    "points": 99,
+    "submitter": "quincepie",
+    "submit_time": "2024-11-28T20:21:14 1732825274",
+    "num_comments": 24,
+    "comments_url": "https://news.ycombinator.com/item?id=42268310",
+    "comments": [
+      "> we talk about programming like it is about writing code, but the code ends up being less important than the architecture, and the architecture ends up being less important than social issues.A thousand times this!  This puts into words something that's been lurking in the back of my mind for a very long time.\n \nreply",
+      "Strongly agree. Peopleware 1987 [1]>  The first chapter of the book claims, \"The major problems of our work are not so much technological as sociological in nature\". The book approaches sociological or 'political' problems such as group chemistry and team jelling, \"flow time\" and quiet in the work environment, and the high cost of turnover[1] https://en.wikipedia.org/wiki/Peopleware:_Productive_Project...\n \nreply",
+      "I\u2019ve been drumming this for so long now, even before I heard of (let alone read) this book.I feel that the development of psychology and sociology has been lost on the workplace and it isn\u2019t well applied. Executives want everyone to be widgets except themselves, even when study after study shows that for companies to perform optimally their workers must feel well compensated, well valued, balanced freedom in the workplace, chances for advancement etc.In many respects you could apply psychology and sociology to how products should / could behave etc. as well, which I\u2019m sure due to the monetary component some companies have taken seriously at least in some periods of their lifecycle, like Apple under Steve Jobs in his comeback\n \nreply",
+      "https://en.wikipedia.org/wiki/Conway's_law> Organizations which design systems (in the broad sense used here) are constrained to produce designs which are copies of the communication structures of these organizations. \u2014 Melvin E. Conway, How Do Committees Invent?\n \nreply",
+      "Considering that programing and tools used for it are not for computers but humans, and that apart from most trivial things more than one people is necessary to make something that work on/with computer(s), it is no surprise that SE is much more social science than many would like to admit or feel comfortable with, over-emphasizing its natural science part to the level of failure eventually (on the product level aimed at addressing needs of the people). Probably because social sciences are very fluid and much less reliable than natuaral sciences, so we have an inner tendency avoiding the social bit, or handling it on a very primitive level? I do not know, this is a feeling. So much focus on atomic details of technology yet the group effort of the product is still rubbish too many times.\n \nreply",
+      "In my experience roughly 80% of technical issues are because 2 people (or teams) didn\u2019t want to just sit down together and talk it out.\n \nreply",
+      "This precisely describes why Google Glass failed.\n \nreply",
+      "Discussed at the time:The Success and Failure of Ninja - https://news.ycombinator.com/item?id=23157783 - May 2020 (38 comments)(Reposts are fine after a year or so! links to past threads are just to satisfy extra-curious readers)\n \nreply",
+      "> I also believe that programmers feel latency and it affects their mood even if they don't notice it. (Google has recently done some research in this area that kinda confirmed my belief, here's hoping they'll publish it publicly!)Anyone knows if it happened? Has the google research on latency been published?\n \nreply",
+      "Given that ninja is required for C++20 modules when using CMake, it is going to stay around for quite a bit.\n \nreply"
+    ],
+    "link": "https://neugierig.org/software/blog/2020/05/ninja.html",
+    "first_paragraph": "You're reading a single entry.\nGo back to the front page for more.Around nine years ago I published Ninja, a build system that is\nmostly comparable to Make.  At the time I was a bit embarrassed to\nshare my side\nproject\nbut since then it has become widely popular.I can't list all of the users off the top of my head anymore, but some\nof the \"big\" projects that use Ninja include:Ninja has been by far my most successful open source project,\ndepending on how you quantify success.  (Other projects of mine like\nChrome have more users, but I was responsible for only parts of\nChrome; Ninja also has had important contributions by collaborators\nbut it feels more like \"mine\".)  I released Ninja in 2011, gave\nownership of the Ninja project away in 2014, and it has since been\npassed on again to a third maintainer, so now that my part in the\nstory is pretty much over I here would like to reflect on what I\nlearned.If I were to summarize what I learned in a single sentence, it would\nbe this: we talk ab"
+  },
+  {
+    "title": "Engineers Do Not Get to Make Startup Mistakes When They Build Ledgers (alvaroduran.com)",
+    "points": 16,
+    "submitter": "fagnerbrack",
+    "submit_time": "2024-11-28T23:03:47 1732835027",
+    "num_comments": 15,
+    "comments_url": "https://news.ycombinator.com/item?id=42269227",
+    "comments": [
+      "OK but apparently they did get to make the startup mistakes? They built the quick thing that worked well enough, got some customer traction, and then when they had bugs they were able to rework it and continue.Frankly I'm not even convinced that double-entry is the sole right answer in this space. There are things you need to be able to represent, but the original reasons for doing double-entry (making errors when subtracting figures) no longer apply.(I've worked at investment banks and fintech startups)\n \nreply",
+      "Cool post, wish it existed 2 years ago when we started building Pave Bank, or 10 years ago when we started building Monzo.If you're starting a bank or need a ledger these days (and aren't using a core banking provider that has one), then i usually recommend Tiger Beetle.\n \nreply",
+      "No tests either? If you lose track of enough money every transaction that you can make an example of 'Every $5 purchased resulted in $4.98 in the transaction log' I think your problem is far, far bigger than not having double entry bookkeeping.Who builds a financial system like that an considers it normal? The compensation is one thing, but you'd flee a service like that with all possible haste.\n \nreply",
+      "These guys.  They said it themselves.  \u201cWe could have built it right, but we didn\u2019t.\u201d  They chose not to.  It was not an accident.  They made jokes about \u201cdancing cents\u201d.  They did these things because there would never be meaningful consequences for doing them, and they knew it.  They move fast, they broke things - money things - and they laughed about it.  And now they\u2019re lecturing people as if having willfully made these decisions gives them both moral and technical authority.  This is magnificently pompous, startup VC culture nonsense.\n \nreply",
+      "Yeah that was my thought as well. Ledgers have tons of benefits but they\u2019re not going to fix your dancing cents problem. You\u2019re going to have bad number on the ledger.Sure, maybe that points you to the bugs, but so would writing basic tests.\n \nreply",
+      "It's a suicide to build a finance system or similar without double entry ledger.Worse, I've worked at where the transaction reference id from vendor is not recorded, it's lost so the past data cannot be reconciled!\n \nreply",
+      "is there no individual accountability regime in the US?in the UK, as an engineer, if I'd built this I would expect the regulator to come after me personally for not ensuring the system had adequate controls to protect clients money/investmentswith a potentially unlimited fine + prison time\n \nreply",
+      "Has that ever happened?  It's incredibly hard to prosecute directors in the UK for obvious malfeasance.  I have never heard of a software engineer being sanctioned for crap code.\n \nreply",
+      "for engineers[1] it is relatively new, having only been introduced in the last couple of years[1]: technically those performing a Certified Function\n \nreply",
+      "Depends if the particular activity is regulated or not.\n \nreply"
+    ],
+    "link": "https://news.alvaroduran.com/p/engineers-do-not-get-to-make-startup",
+    "first_paragraph": ""
+  },
+  {
+    "title": "A pretty visualisation of the European power grid (2022) (121gigawatts.org)",
+    "points": 195,
+    "submitter": "9dev",
+    "submit_time": "2024-11-28T14:33:44 1732804424",
+    "num_comments": 99,
+    "comments_url": "https://news.ycombinator.com/item?id=42265533",
+    "comments": [
+      "I get irrationally angry when a map is skewed in this way and there is no way to change it.  The more you zoom in, the worse the distortion is made to be.  Even zooming all the way out does not eliminate the angular distortion.  This took actual effort on some programmer's part!  Who ever thought that this is a good idea?!?It's like those navigational mini maps (car or computer game) that won't keep north pointing up... only worse.\n \nreply",
+      "Angry or slightly annoyed? Because if angry is the right emotion then there might be some other underlying causes and this is just a trigger for them.\n \nreply",
+      "Also got annoyed by this, but worked out pretty quickly that if you hold down right click and drag then you can change the angle\n \nreply",
+      "Two fingers scroll on mobile.\n \nreply",
+      "Don't get angry so much over minor things, your older self will thank you. Somebody did something for free, gave it to you for free, and so they did not do a perfect job. There are worse things in life.\n \nreply",
+      "You can also change the perspective by simultaneously holding the Ctrl key and moving the mouse.\n \nreply",
+      "Or move the cursor while right-clicking.\n \nreply",
+      "Where's the Gibraltar Wave Farm?https://en.wikipedia.org/wiki/Gibraltar_Wave_FarmPerhaps omitted since Gibraltar is a British possession and therefore not in the EU?\n \nreply",
+      "When looking at France, at a zoom level where one can see the whole country, all the green dots are located next to nuclear power plants. It's a good reminder that the french grid is mostly powered by nuclear.It'd be nice to see the same map over summer to see if the different electric mix then gives birth to a different map.\n \nreply",
+      "if it wasn't for France having primarily used nuclear power decades ago, Europe as a whole would be in a much much worse state when it comes to CO2 emissions. That makes it abundantly clear that nuclear needs to be a part of the mix when it comes to non-emission generating energy production.\n \nreply"
+    ],
+    "link": "https://121gigawatts.org/copper-sushi-power-flow-european-grid/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Tk9.0: CGo-free, cross platform GUI toolkit for Go (go.dev)",
+    "points": 130,
+    "submitter": "nateb2022",
+    "submit_time": "2024-11-28T15:18:57 1732807137",
+    "num_comments": 38,
+    "comments_url": "https://news.ycombinator.com/item?id=42265817",
+    "comments": [
+      "Back in the day, I used to really dislike anything TK related. It looked old and ugly.Now it looks like a wonderful alternative to all the bloated, wasteful, Electron JS applications out there.\n \nreply",
+      "Edit: CORRECTION! This is a person that used to use the cznic nickname, maybe because they worked in CZNIC for a while, but now goes by \"modernc\"Seems like they've been involved in transpiling C projects, like TCK, to Go.Some context:  https://news.ycombinator.com/item?id=33197603==previous message before my edit==Oh, seems like this is made by CZNIC, the org that admins .cz TLD.They've also done the Omnia Turris routers, KNOT DNS server or BIRD routing daemon...\n \nreply",
+      "> Seems like they've been involved in transpiling C projects, like TCK, to Go.Probably best known for their port of SQLite: https://pkg.go.dev/modernc.org/sqlite\n \nreply",
+      "Includes beautiful modern themes, e.g. azure https://pkg.go.dev/modernc.org/tk9.0@v0.53.0/themes/azure\n \nreply",
+      "As someone who doesn\u2019t know a lot about go: why is CGo-free a feature? In what situations is CGo (which is basically just calling C libs from go, right?) bad?\n \nreply",
+      "It makes cross-compiling a lot more difficult. Instead of being able to build on whatever OS/architecture you use and produce binaries for any other OS/architecture you want to target with a single command (one of Go's superpowers), you need a complex build pipeline.\n \nreply",
+      "FFI is an additional headache. Instead of having a single hermetic build process that just works, with FFI you now have to deal with shared libraries which may or may not be present, and may or may not support all the architectures or operating systems you want to target. FFI is why so many Python projects blow up when you run pip install. Then it takes sometimes hours to untangle that horror show.\n \nreply",
+      "This is using purego which is still using FFI, it is dynamically linking the C libs so you still have the same shared library issues. You don\u2019t have to setup a C compiler toolchain though which is nice.\n \nreply",
+      "It\u2019s not a technical thing.It\u2019s not bad.It\u2019s a misguided community thing.Cgo is the correct choice for many domains (ui, gamedev, systems stuff) where you can\u2019t use a network boundary as your \u201cinteracts with other languages\u201d.The language is opinionated; it\u2019s not good at playing with others. It\u2019s good at other things (network services, etc)\u2026 but you can and it\u2019s not bad.\u2026it\u2019s just hard, and people don\u2019t like hard things.\n \nreply",
+      "By eliminating cgo, they cut the supported platform list in half.\n \nreply"
+    ],
+    "link": "https://pkg.go.dev/modernc.org/tk9.0",
+    "first_paragraph": "Common problems companies solve with GoStories about how and why companies use GoHow Go can help keep you secure by defaultTips for writing clear, performant, and idiomatic Go codeA complete introduction to building software with GoReference documentation for Go's standard libraryLearn what's new in each Go releaseVideos from prior eventsMeet other local Go developersLearn and network with Go developers from around the worldThe Go project's official blog.Get help and stay informed from GoThis package is not in the latest version of its module.\n          The Go module system was introduced in Go 1.11 and is the official dependency management\n          solution for Go.\n        \n          Redistributable licenses place minimal restrictions on how software can be used,\n          modified, and redistributed.\n        Modules with tagged versions give importers more predictable builds.When a project reaches major version v1 it is considered stable.Using Go embedded images (_examples/photo.go)"
+  },
+  {
+    "title": "In the Rockets' Red Glare: The past and future of hot-rodding in America (harpers.org)",
+    "points": 32,
+    "submitter": "delichon",
+    "submit_time": "2024-11-28T20:19:51 1732825191",
+    "num_comments": 14,
+    "comments_url": "https://news.ycombinator.com/item?id=42268304",
+    "comments": [
+      "If you have not been to a Top Fuel drag race, and have the opportunity to go, you should go. They are quite the spectacle. Being there, hearing, feeling, and seeing those 10,000HP monsters fly down the track is worthy of experiencing live, at least once. The kind of thing you can't watch on TV.I can say the same for a Monster Truck rally. Go there and embrace your inner 10 year old watching those machines Move. (And, boy, can they move!)Bring earplugs.There's more to the sports than the pinnacle of achievement. There are innumerable classes within drag racing, something for everyone. It's not a \"solved\" problem by any means. Folks will continue to try and master the start, getting traction, keeping that beastly powered thing straight in the lane, trying to not choke on their beating heart that has surged into their throat.Bracket racing is a hoot where folks bring whatever they like, and they're rated by time (i.e. a \"time bracket\"). Whether you're running a old 60's hot rod, a Jet Powered car, or anything else, if you can run within the time, it's pretty much fair game. And it can be fun to watch, and real fun to participate in.Racing of all kinds can be a fun culture to be around.\n \nreply",
+      "I wholeheartedly agree: Monster truck stadium shows are once-in-a-lifetime events\u2014as in, see one, and you\u2019re good for life. That said, they\u2019re hugely entertaining, and I\u2019m glad I went.Other things I would recommend in the \u201csee at least once and you\u2019re good\u201d category:1/ A major sporting event where the fans believe something is at stake, like the run-up to the playoffs. In the U.S., baseball tickets can be had for reasonable prices in small markets late in the season, and the seats don\u2019t matter. You want to experience the emotion and energy firsthand. Unlikely to turn you into a fan, but the experience will be one you think on for years to come.2/ A live sporting event where the outcome makes no difference, like your local minor league team. Again, seats don\u2019t matter\u2014you want to feel the buzz and sense of community.3/ Amateur musical theatre. The on-stage talent is often top-tier, while the rest of the production is endearingly amateurish. But the enthusiasm, honesty, and agenda-free earnestness of the production will make you love people a little more.4/ Opera\u2026You get the point. Any endeavor where a group of people dedicate huge energy\u2014often their lives\u2014into making a show, along with their incredibly enthusiastic fans, is worth your time. Also, sometimes you can get corn dogs or drink wine out of a plastic cup.\n \nreply",
+      "The article is mostly focused on race tracks, and especially drag racing. But to me \"hot rodding\" explicitly means street racing.And in street racing, and driving fast responsive cars in general, electric is the future.I just recently started owning one, and it drives better than any other vehicle I have ever driven.The instant acceleration, the very fine power control, and the weight distribution make it more responsive and better handling than literally any other car I've ever driven (and I've been driving for 50 years).\n \nreply",
+      "Power hasn't been a problem in racing for decades now. All the major racing circuits, from F1 to NASCAR, have power limits in some form. It's maintaining ground contact that's hard.There was an electric dragster, the Lead Wedge, in 1969.[1] It was really crude but performed OK. There was enough unhappiness about an electric doing so well that the sponsoring battery company didn't do it again. Their main customer was auto companies.The fastest motorcycle is currently an electric.[2] Somebody took it up to Alice's Restaurant above Woodside and drove Skyline on it. Which is a scary thought, if you know the area.[1] https://www.hotrod.com/features/batteries-and-a-salt-februar...[2] https://newatlas.com/lightning-ls218-review-ls-218/36470\n \nreply",
+      "You are absolutely right about electric cars and how fun it is to drive them. I just want to make the obligatory statement that street racing is very dangerous for innocent people and nobody should do it or encourage it.\n \nreply",
+      "> The article is mostly focused on race tracks, and especially drag racing. But to me \"hot rodding\" explicitly means street racing.Hot rodding about fast cars. Racing doesn't need to come into the picture at all to have a hot rod.\n \nreply",
+      ">Hot rodding about fast cars.the whole hotrod culture produced those fast cars in order to compete with the police, it then turned into in-group competition, and then formal racing.'hot rodding' wouldn't exist without competition.The first SCTA style 'hot-rods' were 'souped up' ford flatheads that were lucky to have over 80 horsepower going for top speed runs.What i'm saying is that 'racing' was before 'fast' in the history of hot-rodding.p.s. this also applies to the almost-entirely-disconnected very early European car scene. It was racing events and famous individuals that drove the entire culture -- this then lead to 'fast cars'. The history of the Mille Miglia comes to mind.\n \nreply",
+      "Amecdotally, I was behind a Tesla 3 performance at a recent track day; it was lowered on eibach springs, but had more mass than my stock height 2004 bmw 3 series.It couldn't handle the Gs on a slightly negative camber straight, as opposed to I could floor it there. I definitely expected it to clear me on the straights faster.\n \nreply",
+      "Yup--electric performance vehicles are unreal when you first give one a try. I test drove a Ford Lightning this week and it is ridiculous what a 7,000-lb vehicle can do with that powertrain (to the point where honestly maybe it should require a CDL to drive). Just for kicks I also tried a Mach-E, which was the same kind of zip but without the novelty of being in a three-ton monster. Both felt glued to the road and they were real pleasures to drive.I really wanted to pull the trigger on the Lightning, but it really was Too Big (won't even really fit in my driveway). Instead I picked a PHEV Escape SUV that'll become my wife's in 4-5 years (so we retain gas ranges on at least one vehicle) and I'll reevaluate what I can get in electric then. The Escape PHEV, however, has all the other advantages except the instant torque; I've never had a vehicle so able to finely control power and the eCVT smooths out the kind of lagging a conventional transmission has on hills and the like. Using zero gas for an hour-long drive is a nice plus, too.The future of cars, including and maybe especially fast cars, is exciting.\n \nreply",
+      ">>And in street racing, and driving fast responsive cars in general, electric is the future.Street racing is entirely too dangerous and of course illegal. You don't have to race to take part in the street scene, which in that scenario the actual power to weight ratio is somewhat irrelevant in itself. What is relevant to me, personally, is the ambience that surrounds a supercharged radically cammed V8 rumbling down the street. That will give me goosebumps every time. The power is in it's growl, not necessarily it's bite. I don't know how you replicate that in an electric vehicle and I think that feeling transfers to the racetrack as well. I would rather watch a 3-4 second top fuel race rather than a 2-3 second electric car race.Oh yeah if you ever do happen to catch one of those top fuel events don't miss watching them rebuild the engines and the 'let's make sure it runs' startups. The fumes will cause tears in your eyes and your lungs will hurt but it's as good or better than the actual race.\n \nreply"
+    ],
+    "link": "https://harpers.org/archive/2024/12/in-the-rockets-red-glare-rachel-kushner/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "AI and the Last Mile 2: Subsidiarity (hollisrobbinsanecdotal.substack.com)",
+    "points": 24,
+    "submitter": "HR01",
+    "submit_time": "2024-11-22T12:49:02 1732279742",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=42213391",
+    "comments": [
+      "This really only presents the hypothesis that artificial intelligence (AI) will significantly impact the final stages of various processes, often referred to as the \"last mile.\" However, she does not provide substantial evidence or detailed arguments to support this claim. The article lacks specific examples, data, or references that would substantiate her position, making it more of an opinion piece than a thoroughly backed analysis.Don't get me to be wrong I would love this to be true.\n \nreply",
+      "Context is a challenge for LLMs, but the challenge feels of a different quality to me, than the challenge of incorporating local context into automated decision-making AI like algorithmic hiring, banking decisions, and real estate valuation like Zillow. These examples are more like \"pre-LLM\" machine learning, and it's not clear to me that LLMs are inherently limited in the same way. If anything, I think there's potential for LLMs to more flexibly handle a much broader variety of local contextual information by ingesting natural language rather than non-LLM machine learning systems where how to featurize or represent this information is typically quite bespoke. Take the neighbors' practicing death metal in their garage every Sunday and its impact on house valuation - it feels harder to get a non-LLM ML system to \"understand\" this, as a very sparse \"feature\", than an LLM.\n \nreply",
+      "Was thinking about this today in context of hiring.We have these amazing LLMs that are continually improving. Yet if you say to them, here\u2019s my business, now takeover the marketing department. You will end up with so much output that\u2019s not localized that the value of the whole output is worth very little. Yet when you have a highly experienced localized marketing leader use the LLM to speed up work the whole output is very valuable.I don\u2019t think this problem is solved by solely defining preferences better. It\u2019s clear a human adaptation layer beyond solely RLHF is needed for at least the short term.\n \nreply",
+      "Agreed. The problem is that many SaaS products want to integrate AI into their systems in ways that strike this balance, but in my experience, giving individuals an OpenAI account and letting them figure out how to automate the boring parts of their job is more effective. However, different people in the same job will likely use AI slightly differently, and it can be hard to find the right abstraction that suits a SaaS product.And then, like it or not, companies are hopping on the agent train hoping to automate out a percentage of their headcount because that\u2019s how they\u2019re being pitched on it behind closed doors.\n \nreply"
+    ],
+    "link": "https://hollisrobbinsanecdotal.substack.com/p/ai-and-the-last-mile-2",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Rapid colonization of a space-returned Ryugu sample by terrestrial microorganism (wiley.com)",
+    "points": 44,
+    "submitter": "f1shy",
+    "submit_time": "2024-11-25T18:19:02 1732558742",
+    "num_comments": 17,
+    "comments_url": "https://news.ycombinator.com/item?id=42238603",
+    "comments": [
+      "I'm not super familiar, but I think a \"Class 10,000\" clean room is actually quite on the \"dirty\" end of the clean room spectrum. Perhaps they figured this had a low likelihood of being the source of domestic microbes?\n \nreply",
+      ">  opened in nitrogen in a class 10,000 clean roomSince these samples were collected in a vacuum, doesn't it make sense to keep them in a vacuum, at least for science that requires the smallest possible amount of contamination?\n \nreply",
+      "Nitrogen gas is for most purposes chemically and organically inert, particularly in the absence of oxygen.It's also abundant, cheap, and non-toxic, so long as the surrounding environment has sufficient oxygen that leaks don't put personnel at risk.  Glovebox construction and use is also much easier than with vacuum.A positive-pressure nitrogen environment will also limit infiltration of oxygen or other contaminants, something which cannot be said of vacuum chambers.Past experiences (see Nasa SP-88 below) show that vacuum handling provides few if any benefits and numerous risks and complexities.Nitrogen-flooded environments can be made arbitrarily large, again a characteristic that's not true of vacuum chambers.A StackExchange question addresses this topic in more depth:<https://space.stackexchange.com/questions/29727/why-does-nas...>That sources a 1965 Nasa document:  \"NASA 1965 Summer Conference on Lunar Exploration and Science\" <https://www.lpi.usra.edu/lunar/documents/65_lunar_conf.pdf> [PDF] (NASA SP-88).  See p. 255.\n \nreply",
+      "occurs to me that sample return missions\nshould ,not end up ON, earth, but in orbit\nwhere they could be retrieved and studied\ninitialy, befor bieng packaged for earth\nlanding, therby vastly limiting any possible cross contamination, and having a pristine storage environment for control\nsamples\n \nreply",
+      "Yeah but spacecraft themselves being contaminated is a real possibility.NASA found that some bacteria can metabolize isopropyl alcohol [1][1] https://www.theatlantic.com/science/archive/2018/06/bacteria...\n \nreply",
+      "I'd prefer we seed life where we go, but I know that's against some others philosophy\n \nreply",
+      "I am not opposed to it in most cases for any moral reason, but if we did accidentally contaminate an example of even incredibly simple ET life it would be an enormous scientific loss. What one second example of life could teach us would be massive. Contamination would mean we could never be sure we were studying the authentic thing.\n \nreply",
+      "Okay, refine procedures and try again\n \nreply",
+      "Color me a bad reader: what does this mean? The abstract pretty much leaves me in the abstract.\n \nreply",
+      "> The presence of terrestrial microorganism within a sample of Ryugu underlines that microorganisms are the world's greatest colonizers and adept at circumventing contamination controls. The presence of microorganisms within space-returned samples, even those subject to stringent contamination controls is, therefore, not necessarily evidence of an extraterrestrial origin.Basically that preventing terrestrial contamination of extraterrestrial samples is super tough, and in the specific case of Ryugu the study concludes that contamination did occur.\n \nreply"
+    ],
+    "link": "https://onlinelibrary.wiley.com/doi/10.1111/maps.14288",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Bootkitty: Analyzing the first UEFI bootkit for Linux (welivesecurity.com)",
+    "points": 100,
+    "submitter": "doener",
+    "submit_time": "2024-11-28T11:02:45 1732791765",
+    "num_comments": 41,
+    "comments_url": "https://news.ycombinator.com/item?id=42264345",
+    "comments": [
+      "The researchers are keen to note things about this, but also likely want to avoid giving attackers \"more ideas\", which I feel limits the discussion. Plus, I highly doubt these attackers don't know everything we should be discussing.This is obviously a low hanging fruit and first PoC implementation. The fact that secure boot can \"mitigate\" some of this attack right now is mostly due to the attacker being lazy or deploying an unfinished product. The researchers describe this as \"unless they install the attackers certificate\", which is a nice way of saying that the attacker has not spent much time fishing through DKMS and abusing the keys used for this purpose.There are a lot of systems that are affected by this type of attack because for various purposes they have to sign their own modules. The most common example of this (until extremely recently, sort of) is Nvidia.\n \nreply",
+      ">The fact that secure boot can \"mitigate\" some of this attack right now is mostly due to the attacker being lazy or deploying an unfinished product. The researchers describe this as \"unless they install the attackers certificate\", which is a nice way of saying that the attacker has not spent much time fishing through DKMS and abusing the keys used for this purpose.Can you explain, or link to a source explaining this?\n \nreply",
+      "if you can add keys and sign things on the fly secure boot doesn't matter. it only protects you from downward payloads. if the one above the one that cares about secureboot is compromised its useless. you're confused because it's sold differently from this.\n \nreply",
+      "That all makes sense, but is it really that easy for an attacker to add keys?  If so, the entire thing seems a little silly.\n \nreply",
+      "Attackers don't need to add their own keys. They can piggyback off of the key that you added legitimately to get DKMS working.\n \nreply",
+      "What fraction of Linux laptop users do this?Seems to me that in an ideal world, you would only have to add the public key, and an attacker wouldn't be able to forge a signature without the private key...\n \nreply",
+      "I found this a rather interesting read, nice.I cannot help but think the move to UEFI and Secure Boot made things less secure :(\n \nreply",
+      "It was just a way for Microsoft's partners to limit the ease with which one can install alternative OSes. Try explaining to your mother how to disable SecureBoot to install Ubuntu. It used to be a single sentence - pop the CD in and follow the instructions, but Microsoft couldn't have that. As is always the case with Microsoft, security is never the goal unless they gain a competitive advantage or make it harder for their customers to move away in the process.\n \nreply",
+      "> Try explaining to your mother how to disable SecureBoot to install UbuntuGood news: you don't need to!\n \nreply",
+      "\"It was just to keep people from installing something other than Windows\" seems very counter-indicated by it taking ~7 years for a Windows UEFI bootkit to come out, and 13 years for one for Linux....and this bootkit is not able to work if Secure Boot is set up.UEFI is also a godsend in terms of fixing a lot of the legacy BIOS crap\n \nreply"
+    ],
+    "link": "https://www.welivesecurity.com/en/eset-research/bootkitty-analyzing-first-uefi-bootkit-linux/",
+    "first_paragraph": "\n      Award-winning news, views, and insight from the ESET security community\n    \n        Award-winning news, views, and insight from the ESET security community\n      ESET ResearchESET researchers analyze the first UEFI bootkit designed for Linux systemsMartin Smol\u00e1rPeter Str\u00fd\u010dek\n27 Nov 2024\n\u00a0\u2022\u00a0\n, \n14 min. read\nOver the past few years, the UEFI threat landscape, particularly that of UEFI bootkits, has evolved significantly. It all started with the first UEFI bootkit proof of concept (PoC) described by Andrea Allievi in 2012, which served as a demonstration of deploying bootkits on modern UEFI-based Windows systems, and was followed with many other PoCs (EfiGuard, Boot Backdoor, UEFI-bootkit). It took several years until the first two real UEFI bootkits were discovered in the wild (ESPecter, 2021 ESET; FinSpy bootkit, 2021 Kaspersky), and it took two more years until the infamous BlackLotus \u2013 the first UEFI bootkit capable of bypassing UEFI Secure Boot on up-to-date systems \u2013 appeare"
+  },
+  {
+    "title": "The Denver OWASP Chapter is proud to present SnowFROC '25 (snowfroc.com)",
+    "points": 6,
+    "submitter": "mooreds",
+    "submit_time": "2024-11-28T21:16:44 1732828604",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://snowfroc.com/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "A new start after 60: I became a 'hummingbird' for people with dementia (theguardian.com)",
+    "points": 72,
+    "submitter": "bookofjoe",
+    "submit_time": "2024-11-25T15:10:09 1732547409",
+    "num_comments": 5,
+    "comments_url": "https://news.ycombinator.com/item?id=42236903",
+    "comments": [
+      "> At their worst, they can come out with some unexpected things, like swearing at you ...Sounds like they've screened the residents for bad behaviour.Some people with dementia are much worse.  ie: extremely aggressive, and can be pretty violent. :( :( :(\n \nreply",
+      "I cannot recommend volunteering enough.It's not just for old folks. Many of the skills that I used in my career, were honed doing volunteer work.I've been doing this kind of work, all my life, and retiring just gave me more time to devote to it.> NOTE: Not a bed of roses, unless you count all the thorns.\n \nreply",
+      "I've talked about it on here before, but I love volunteering in nursing homes for very selfish reasons.The people in there have lived lives. They may be out of touch but they know things. I talk with residents about my hobbies of woodworking, gardening, canning, hunting, fishing, and wild gathered food.I've learned WAY more with those conversations than YouTube or books could've ever taught me. It's absolutely worth your time.And nursing homes are always looking for people to spend time with the very lonely residents.Anyone with a hobby that isn't technology should do that.\n \nreply",
+      "Volunteering is such a great way to fill the soul!There's so many ways to volunteer, always another way to help if you need a change. I got into fire fighting last year, and now help with ambulance volunteering. I also do free job skills tutoring, that's a fun way to interact with people directly.\n \nreply",
+      "happiness isn't something we can \"demand.\" It\u2019s something that comes upon us quietly, when we serve others.\n \nreply",
+      "On top of that, imo, happiness isn't a state we can live in, it comes and it goes, and that is ok.\n \nreply"
+    ],
+    "link": "https://www.theguardian.com/lifeandstyle/2024/nov/25/new-start-after-60-hummingbird-for-people-with-dementia-volunteering-care-home",
+    "first_paragraph": "When Ann Thomas-Carter retired, she lost her sense of purpose. Then she began volunteering in a care home and found six hours could fly past in six minutes At 63, Ann Thomas-Carter stepped into Framland care home for the first time and was immediately taken aback. \u201cIt wasn\u2019t like a care home at all; it was this beautiful old manor house overlooking the Oxfordshire countryside and there were only 21 residents,\u201d she says. \u201cIt felt like a big family, especially since everyone calls the residents \u2018family members\u2019. I fitted in right away.\u201dThomas-Carter used to work as a pharmacy dispenser at Boots in Oxford town centre. \u201cI had worked most of my life at Boots and it was a safe place for me, somewhere I could be face to face with customers and help them,\u201d she says. But when it emerged that the job was about to change, Thomas-Carter decided to retire. \u201cI thought I would start to spend time pottering around the garden, but after a few weeks without work I began to feel like I never should have "
+  },
+  {
+    "title": "The Thinker Who Believed in Doing (2018) (neh.gov)",
+    "points": 8,
+    "submitter": "prismatic",
+    "submit_time": "2024-11-26T03:44:04 1732592644",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.neh.gov/humanities/2018/winter/feature/the-thinker-who-believed-in-doing-0",
+    "first_paragraph": "William James and the philosophy of pragmatismThe photograph of William James was taken in 1865 in Brazil, where James had traveled to explore the Amazon with the biologist Louis Agassiz.MS Am 1092 (1185), Houghton Library, Harvard University\"Be not afraid of life, believe that life is worth living and your belief will help create the fact.\"\"The martial type of character can be bred without fear.\"\u2014William JamesOn a late September morning in 1891, William James walked reluctantly to his class in Harvard College\u2019s Sever Hall. Characteristically dressed in a colorful shirt and a Norfolk jacket with a boutonniere, he must have seemed slightly bohemian. His lectures were spontaneous and rambling, unlike those of his more logical, organized colleagues. James claimed he did not like teaching, particularly to listless Harvard undergraduates. Yet he was good at it, even exceptional. Conversation with James, Walter Lippmann recalled, was \u201cthe greatest thing that has happened to me in my college "
   },
   {
     "title": "You can use C-Reduce for any language (bernsteinbear.com)",
-    "points": 254,
+    "points": 456,
     "submitter": "Tomte",
     "submit_time": "2024-11-27T17:56:24 1732730184",
-    "num_comments": 48,
+    "num_comments": 102,
     "comments_url": "https://news.ycombinator.com/item?id=42258103",
     "comments": [
       "Well, aren't you going to share the reduced file?Okay fine, let's see for ourselves:    # Setup\n    git clone git@github.com:RustPython/RustPython.git && cd RustPython && cargo build --release\n    git clone git@github.com:tekknolagi/scrapscript.git && cp scrapscript/scrapscript.py .\n\n    # Download interesting.sh, replace the path to RustPython\n    chmod +x interesting.sh\n\n    # Command in article:\n    nix run nixpkgs#creduce -- --not-c interesting.sh scrapscript.py\n\n\nNiiice:    (93.2 %, 13717 bytes)\n    (93.2 %, 13683 bytes)\n    (93.3 %, 13614 bytes)\n    (93.3 %, 13592 bytes)\n    (93.3 %, 13571 bytes)\n    (93.3 %, 13517 bytes)\n    (93.3 %, 13449 bytes)\n    (93.4 %, 13412 bytes)\n    (93.4 %, 13365 bytes)\n    (93.4 %, 13333 bytes)\n    (93.4 %, 13313 bytes)\n\n\nIt seems to have stopped at \"(96.4 %, 7347 bytes)\" with the following output: https://gist.github.com/judofyr/47cba8a20cb2cd5798943ef975d0...\n \nreply",
+      "FWIW shrinkray gets to 162 bytes if I leave it to run for about 10 minutes. https://gist.github.com/DRMacIver/ee025c90b4867125b382a13aaa...I think it might do a little but not a lot better if I left it to run for longer but it looked to have mostly stalled then so I got bored and killed it.\n \nreply",
       "Random thought. Another commenter worried about the runtime of the program becoming mangled and performing destructive operations on your machine. What if you run the reducer as a source-to-source Nix derivation? Protects against dangerous things, and can be easily distributed to remote builders.\n \nreply",
+      "Oh, that\u2019s a neat idea. To reply to the sibling comment: Nix runs commands under a sandbox. It\u2019s not bullet proof, but useful enough that it will prevent obvious commands like deleting local files and accessing the network.It took some time to get RustPython to run, but it seems to work fine: https://gist.github.com/judofyr/82d2255c92ebb0c6b3a6882ac9fd...Also, after running it for 5 minutes it was now able of reducing it to a much smaller case:    class a:\n        def b() : c\n        def h(d) :\n            while d:\n                    break\n            else:\n                return \n            d.b()\n    def j(e) :\n        f = a()\n        if f.h  () :\n                g\n    i = \"\"\n    j(i)\n \nreply",
+      "You generally shouldn\u2019t use absolute paths in your programs. That makes it dangerous for local development, and makes running two copies of the program to compare behaviors difficult.There\u2019s a Venn diagram of people who don\u2019t care enough to do that (works for me!) and people who would never think to use c-reduce. It\u2019s not a perfect circle, but it\u2019ll be fairly close.\n \nreply",
+      "> You generally shouldn\u2019t use absolute paths in your programs.This is true, but I was enjoying the irony that there is an old sys-sdmin adage that you should only use absolute paths in your program(usually a shell script, in this environment) this is to make sure it is running exactly what you expect it to run.So always put \"/usr/bin/awk\" instead of just \"awk\"I had a co-worker once who took this as gospel. His scripts were always... interesting... to port to a new environment.\n \nreply",
+      "How does this protect against dangerous things?My understanding is that this would just cause the dangerous things to be repeatable.\n \nreply",
+      "It must be that by running any program within the nix build sandbox you don't expose your files unless you discover a privilege escalation attack by chance during the reduction process.\n \nreply",
       "Note that as recommended by John Regehr, author of C-Reduce, for this use case you might also want to try Shrinkray, a tool that was written to be format independent and works well for cases that C-Reduce dow not: https://mastodon.social/@regehr/113489759789563570\n \nreply",
-      "Is this[0] the official repo of Shrinkray?[0]: https://github.com/DRMacIver/shrinkray\n \nreply",
-      "Looking forward to try it! A shout out to cvise (https://github.com/marxin/cvise) as a python alternative that works well too for non c languages.\n \nreply",
-      "A paper by the authors John Regehr et al. from 2012 explaining how it works https://fsl.cs.illinois.edu/publications/regehr-chen-cuoq-ei....\n \nreply",
-      "I read this paper and I still feel lost as to how can this even be possible. It seems to understand how to tokenize, merge lines, remove tokens etc for arbitrary programming languages. Is there another paper that explains this algorithm alone?\n \nreply",
-      "It basically runs transformation passes over the code until they stop changing the code or break its behaviour.It seems like a small number of the passes are not specific to C:https://github.com/csmith-project/creduce/blob/master/creduc...`\"C\" => 1,` means it is only for C.I would guess `pass_lines` is the most important for non-C code; I'm guessing (it's written in unreadable Perl) that it removes lines.So while it can work for languages other than C, most of its features are C-specific so it's not going to work nearly as well. Still I'd never heard of C-Reduce; pretty cool tool!Someone make one based on Tree Sitter, quick!\n \nreply",
-      "\u3069\u3046\u305e https://langston-barrett.github.io/treereduce/\n \nreply",
-      "This paper is not about C-Reduce as a whole but 3 new \"domain-specific test-case reducers\" that the authors added to the project.Most of the non-domain specific reductions in C-Reduce is simply brute force IIRC.\n \nreply"
+      "Is this[0] the official repo of Shrinkray?[0]: https://github.com/DRMacIver/shrinkray\n \nreply"
     ],
     "link": "https://bernsteinbear.com/blog/creduce/",
     "first_paragraph": "C-Reduce is a tool by Regehr and\nfriends for minimizing C compiler bug reproducers. Imagine if you had a 10,000\nline long C file that triggered a Clang bug. You don\u2019t want to send a massive\nblob to the compiler developers because that\u2019s unhelpful, but you also don\u2019t\nwant to cut it down to size by hand. The good news is that C-Reduce can do that\nfor you. The bad news is that everyone thinks it only works for C.It\u2019s pretty widely applicable. You only need:I ran into a bug with RustPython\nrunning scrapscript and wanted to\nreport it. So I ran wrote a script interesting.sh to reproduce the bug:And then I ran C-Reduce. This all happened within a couple of seconds:What you see is C-Reduce cutting down the file by 50% nearly instantly\u2026 and I\ndon\u2019t even have a very fast computer.We use --not-c because otherwise C-Reduce uses a bunch of C-specific passes.\nIf we\u2019re working on Python, it will likely just slow things down (but not\nmaterially change the outcome).There you have it. Fast and easy. As "
   },
   {
-    "title": "The Forgotten Story of How IBM Invented the Automated Fab (ieee.org)",
-    "points": 39,
-    "submitter": "jnord",
-    "submit_time": "2024-11-27T22:18:58 1732745938",
-    "num_comments": 7,
-    "comments_url": "https://news.ycombinator.com/item?id=42260364",
-    "comments": [
-      "When I interned at IBM and this was a big deal. IBM was really invested on being \"vertically\" integrated \"from sand to software\" as they would say. One wonders what another run at this concept would be like given advances in semiconductor manufacture.I have often wondered if a chip fab that could make 1,000 chips of a given type economically (which is to say using your custom chip in your system was less expensive than adopting an off the shelf chip) would be a thing. The whole 'tiny tapeout' thing would be a lot more interesting too.\n \nreply",
-      "Multi product wafers are a thing, especially on older nodes.  It\u2019s accessible to hobbyists\n \nreply",
-      "My understanding is that a chip design for one fab isn\u2019t portable to another.How does can hobbyist design be just be slapped onto a wafer (with others\u2019 designs) and call it a day?\n \nreply",
-      "Indeed, you develop using a fab-specific PDK. But if you share a (Tower Semi, for instance) PDK, your device can have shuttle wafers with multiple designs from different companies. This is done for old nodes and low-volume or RnD parts.\n \nreply",
-      "Node size and price / sq mm? The last time I looked at what it would cost to have a partial wafer it was > $25,000 (of which slightly more than half was NRE charges) but would love to find something \"hobbyist accessible.\" !\n \nreply",
-      "It's not the wafer cost. The masks (the \"negatives\" for the lithography) are the problem. A mask set (you need multiple exposures for one device) for a modern EUV node costs 20-30m$. That's the limiting factor. You can't get cheaper than that.As a sibling comment notes, multi-product wafers are a theoretical answer. However, since you have process corners (manufacturing defects aren't uniformly distributed on the wafer), it is unfeasible for anything but the cheapest parts.The real next moonshot in the foundry business would be to lower the respin costs, i.e., the amount of money it costs when your fabbed first silicon doesn't yield or validate functionally in the way you had expected/planned.If I were the US government (or any other), I'd focus on that. Subsidize the respin cost to zero in the short-term, given certain prerequisites for start-ups, and push an all-out Manhatten project RnD effort to lower the respin cost in the long run.\n \nreply",
-      "What a fascinating read. Thanks for sharing.\n \nreply"
-    ],
-    "link": "https://spectrum.ieee.org/semiconductor-fabrication",
-    "first_paragraph": "See our latest special report, \u201cReinventing Invention: Stories From Innovation\u2019s Edge\u201d \u2192Fifty years ago, a brash middle manager had a vision: a chip in a dayThe Project SWIFT fabrication line was based on sectors, as shown in this patent diagram of the system from 1973. Each sector contained in an enclosure all of the wafer-processing equipment needed to accomplish a segment of the fabrication process between lithographic-pattern exposures.In 1970, Bill Harding envisioned a fully automated wafer-fabrication line that would produce integrated circuits in less than one day. Not only was such a goal gutsy 54 years ago, it would be bold even in today\u2019s billion-dollar fabs, where the fabrication time of an advanced IC is measured in weeks, not days. Back then, ICs, such as random-access memory chips, were typically produced in a monthlong stop-and-go march through dozens of manual work stations.\n\n\tAt the time, Harding was the manager of IBM\u2019s Manufacturing Research group, in \n\tEast Fishkill"
-  },
-  {
-    "title": "Show HN: Feels Like Paper (lukasmoro.com)",
-    "points": 132,
-    "submitter": "MoroL",
-    "submit_time": "2024-11-27T18:43:04 1732732984",
-    "num_comments": 42,
-    "comments_url": "https://news.ycombinator.com/item?id=42258540",
-    "comments": [
-      "That is a dead butterfly [0] being reanimated, not a live butterfly flying[0]: https://www.emilydamstra.com/please-enough-dead-butterflies/\n \nreply",
-      "I'd also link to a recent HN post [0] exploring butterfly flight. The top comment shows the actual flight pattern of a butterfly.Perhaps zombie butterfly fly differently, but otherwise it's doubly dead.This isn't a real nit, but I figured I throw it out there anyway.[0] https://news.ycombinator.com/item?id=42183079\n \nreply",
-      "Until I clicked on the link, I thought you were just using a metaphor :)\n \nreply",
-      "Thanks for providing that link. What an amazing artist!\n \nreply",
-      "Agree 100%. Needs iteration. Thanks for the link.\n \nreply",
-      "Ugh one of those things I kinda hate to know now.\n \nreply",
-      "It ruined pretty much all butterfly drawings for me. It's the kind of thing that is better not knowing lol\n \nreply",
-      "I think it's overblown. It made me pay more attention to butterflies in the real world and what I see is when landed they often flap their wings intermittently. So I just think of the drawings with wings open as catching one of those moments.\n \nreply",
-      "Ce n'est pas un papillon.\n \nreply",
-      "From the article: Keichii Matsuda wrote a manifesto called \"GODS\". In it he describes an anaphor for augmented reality rooted in pagan animism. Unlike monotheistic Western approaches of interfacing artificial intelligence like ChatGPT or Siri, he advocates to leverage the possibility of augmented reality technologies to extend places and objects to populate the world with many different agents or \"gods\".Author should read Daemon by Daniel Suarez written in 2006 that explores the idea of persistent and potentially powerful AR entities that interact with humans. It also loosely plays with the idea of AR somatic gestures acting as a mystical conduit for \"primitive incantations\" that have a physical affect on the real world.\n \nreply"
-    ],
-    "link": "https://www.lukasmoro.com/paper",
-    "first_paragraph": ""
-  },
-  {
-    "title": "QwQ: Alibaba's O1 Like Reasoning LLM (qwenlm.github.io)",
-    "points": 90,
+    "title": "QwQ: Alibaba's O1-like reasoning LLM (qwenlm.github.io)",
+    "points": 284,
     "submitter": "amrrs",
     "submit_time": "2024-11-27T20:00:25 1732737625",
-    "num_comments": 47,
+    "num_comments": 209,
     "comments_url": "https://news.ycombinator.com/item?id=42259184",
     "comments": [
-      "QwQ can solve a reverse engineering problem [0] in one go that only o1-preview and o1-mini have been able to solve in my tests so far. Impressive, especially since the reasoning isn't hidden as it is with o1-preview.[0] https://news.ycombinator.com/item?id=41524263\n \nreply",
-      "Somehow o1-preview did not find the answer to the example question. It hallucinated a wrong answer as correct. It eventually came up with another correct answer:    (1 + 2) \u00d7 3 + 4 \u00d7 5 + (6 \u00d7 7 + 8) \u00d7 9 = 479\n\n\nSource: https://chatgpt.com/share/6747c32e-1e60-8007-9361-26305101ce...\n \nreply",
-      "It's hard to know the right questions to ask to explore these reasoning models. It's common for me to ask a question that's too easy or too hard in non-obvious ways.\n \nreply",
-      "> Find the least odd prime factor of 2019^8+1God that's absurd. The mathematical skills involved on that reasoning are very advanced; the whole process is a bit long but that's impressive for a model that can potentially be self-hosted.\n \nreply",
-      "Also probably in the training data: https://www.quora.com/What-is-the-least-odd-prime-factor-of-...It's a public AIME problem from 2019.\n \nreply",
-      "Does anyone know what GPUs the Qwen team has access to to be able to train these models? They can't be Nvidia right?\n \nreply",
-      "Nvidia still sells GPUs to China, they made special SKUs specifically to slip under the spec limits imposed by the sanctions:https://www.tomshardware.com/news/nvidia-reportedly-creating...Those cards ship with 24GB of VRAM but supposedly there's companies doing PCB rework to upgrade them to 48GB:https://videocardz.com/newz/nvidia-geforce-rtx-4090d-with-48...Assuming the regular SKUs aren't making it into China anyway through back channels...\n \nreply",
-      "A company of Alibaba's scale probably isn't going to risk evading US sanctions. Even more so considering they are listed in the NYSE.\n \nreply",
-      "There was also a video where they are resoldering memory chips on gaming grade cards to make them usable for AI workloads.\n \nreply",
-      "That only works for inference, not training.\n \nreply"
+      "This one is crazy. I made up a silly topology problem which I guessed wouldn't be in a textbook (given X create a shape with Euler characteristic X) and set it to work. Its first effort was a program that randomly generated shapes, calculated X and hoped it was right. I went and figured out a solution and gave it a clue.Watching it \"think\" through the answer is surreal and something I haven't felt since watching GPT-2 write punchlines for jokes.Here's the lightbulb moment it \"realizes\" what the clue meant:> For example, if you have a covering space of degree n, then the Euler characteristic of the covering space is n times the Euler characteristic of the base space.> But I'm not sure how that relates here.> Alternatively, perhaps it's about considering the Euler characteristic of a quotient space.> But again, that might be too advanced for this problem.> Maybe I'm overcomplicating things.> Let me go back to the beginning.> The problem says: \"Consider the Euler characteristic of the tetrahemihexahedron and of a genus g torus. Then consider the additive property of the Euler characteristic. Then try again.\"> So, perhaps it's simply about adding their Euler characteristics together.I'm under no illusions about how LLMs are built and operate, but this really feels somehow more \"real\" and person-y than previous generations, even when you coax them into an answer.I'm going to go and try having GPT-4o roleplay a student solving the problem and see if it's genuinely different. I've been getting impressive answers from o1, but just coldly getting the result is much more robot than human.\n \nreply",
+      "This one is pretty impressive. I'm running it on my Mac via Ollama - only a 20GB download, tokens spit out pretty fast and my initial prompts have shown some good results. Notes here: https://simonwillison.net/2024/Nov/27/qwq/\n \nreply",
+      "What hardware are you able to run this on?\n \nreply",
+      "If your job or hobby in any way likes LLMs, and you like to \"Work Anywhere\", it's hard not to justify the MBP Max (e.g. M3 Max, now M4 Max) with 128GB.  You can run more than you'd think, faster than you'd think.See also Hugging Face's MLX community:https://huggingface.co/mlx-communityQwQ 32B is featured:https://huggingface.co/collections/mlx-community/qwq-32b-pre...If you want a traditional GUI, LM Studio beta 0.3.x is iterating on MLX: https://lmstudio.ai/beta-releases\n \nreply",
+      "Works well for me on an MBP with 36GB ram with no swapping (just).I've been asking it to perform relatively complex integrals and it either manages them (with step by step instructions) or is very close with small errors that can be rectified by following the steps manually.\n \nreply",
+      "I am running it on a 32G memory mac mini with an M2 Pro using Ollama. It runs fine, faster than I expected. The way it explains plans for solving problems, then proceeding step by step is impressive.\n \nreply",
+      "How many tokens per second?\n \nreply",
+      "I am away from my computer, but I think it was about 10/second - not too bad.\n \nreply",
+      "Sorry for the random question, I wonder if you know, what's the status of running LLMs non-NVIDIA GPUs nowadays? Are they viable?\n \nreply",
+      "I run llama on 7900XT 20GB, works just fine.\n \nreply"
     ],
     "link": "https://qwenlm.github.io/blog/qwq-32b-preview/",
     "first_paragraph": "GITHUB\nHUGGING FACE\nMODELSCOPE\nDEMO\nDISCORDNote: This is the pronunciation of QwQ: /kwju:/ , similar to the word \u201cquill\u201d.What does it mean to think, to question, to understand? These are the deep waters that QwQ (Qwen with Questions) wades into. Like an eternal student of wisdom, it approaches every problem - be it mathematics, code, or knowledge of our world - with genuine wonder and doubt. QwQ embodies that ancient philosophical spirit: it knows that it knows nothing, and that\u2019s precisely what drives its curiosity. Before settling on any answer, it turns inward, questioning its own assumptions, exploring different paths of thought, always seeking deeper truth. Yet, like all seekers of wisdom, QwQ has its limitations. This version is but an early step on a longer journey - a student still learning to walk the path of reasoning. Its thoughts sometimes wander, its answers aren\u2019t always complete, and its wisdom is still growing. But isn\u2019t that the beauty of true learning? To be both capa"
   },
   {
-    "title": "Show HN: TeaTime \u2013 distributed book library powered by SQLite, IPFS and GitHub (github.com/bjesus)",
-    "points": 81,
-    "submitter": "yoavm",
-    "submit_time": "2024-11-27T13:56:20 1732715780",
-    "num_comments": 18,
-    "comments_url": "https://news.ycombinator.com/item?id=42256104",
+    "title": "London's 850-year-old food markets to close (bbc.co.uk)",
+    "points": 245,
+    "submitter": "kepler471",
+    "submit_time": "2024-11-27T21:36:38 1732743398",
+    "num_comments": 202,
+    "comments_url": "https://news.ycombinator.com/item?id=42260027",
     "comments": [
-      "Any particular reason for choosing IPFS instead of bittorrent or other p2p protocols? It feels like every time I try an IPFS tool it just crashes, whereas I rarely have issues with torrents.\n \nreply",
-      "Yeah - the desire to have TeaTime run as a normal website. BitTorrent doesn't run over HTTP, unless you use WebTorrent, which most BitTorrent clients aren't 100% compatible with. This means you can basically only download from other WebTorrent nodes - and there aren't many.I do think this might change with the introduction of things like the Direct Sockets API, but for now they are too restricted and not widely supported.It's my first time working with IPFS and I agree it hasn't always been 100% reliable, but I do hope that if I manage to get TeaTime users to also be contributing nodes, this might actually improve the reliability of the whole network. Once it's possible to use BitTorrent in the browser, I do think it would be a great addition (https://github.com/bjesus/teatime/issues/3).\n \nreply",
-      "> (I'm looking into using Helia so that users are also contributing nodes in the network)I had to look that term up <https://github.com/ipfs/helia#readme> but while sniffing around in their <https://github.com/ipfs/helia/wiki/Projects-using-Helia> I was reminded of https://github.com/orbitdb/orbitdb#readme which seems like it may be much less rolling your own parts\n \nreply",
-      "Thanks, I haven't heard of it before. I wonder if it's possible to use OrbitDB to download a file from IPFS though? Based on it's CID, I mean, because that was my intention with Helia. I thought that one of the nice thing about reading books is that it takes time, and if users could be seeding their files from IndexedDB to the network, they could automatically and effortlessly become \"contributing citizens\".Another interesting use case would be to see if this can replace (or be an addition to) SQLite as the database in which the queries are ran.\n \nreply",
-      ">  The databases used in TeaTime are GitHub repositories tagged with the teatime-database topic, which are published on GitHub Pages.Couldn't this be a security issue, for a bad actors to use this tag?\n \nreply",
-      "That's a fair point - I guess it could be abused. Databases are sorted by their number of GitHub stars, so I was hoping that with the power of the crowds it will be possible to minimize the bad effect such actor might have, by simply not voting them up.\n \nreply",
-      "there's been several attacks recently where a bad actor takes over a repo where the original maintainer wants to take a step back, then launch a supply chain attack. in recent cases, the attack came from obfuscated binary files in the repo rather than code. given we are dealing with documents here (books) that would be easy to hide malicious code in a file. pdfs have all sorts of execution vulnerabilities  for example\n \nreply",
-      "Interesting - I'm kinda counting on PDF.js, which is used for PDF rendering, on doing it safely, but of course that doesn't always have to be the case. Do you have any thoughts on how to make this safer?\n \nreply",
-      "some other method of collection where you can hav eknown trust of the files contributed, some method of 'registering' a submission to create trust,",
-      "PDFs are not executables.\n \nreply"
+      "Statement from the City of London Corporation which is closing them down:> Chris Hayward, policy chairman of the City of London Corporation, said the\n> decision represented a \"positive new chapter\" for the markets as it \"empowers\n> traders to build a sustainable future in premises that align with their\n> long-term business goals\".This is a great statement. Like firing people to free them up to find jobs that better align with their desire for employment.\n \nreply",
+      "We had to destroy the village to save it https://www.thisdayinquotes.com/2015/02/it-became-necessary-...\n \nreply",
+      "If I\u2019m reading the article correctly they need parliament\u2019s permission (\u201cprivate bill\u201d).Write your MP.\n \nreply",
+      "After translation via https://www.bullshitremover.com/:> \"Positive new chapter\" = \"We're closing this place down\".> \"Empower traders\" = \"Kick them out\".> \"Sustainable future\" = \"Nowhere to go\".> \"Financial support and guidance\" = \"Good luck, you're on your own\".> \"Unlock the huge potential\" = \"We'll figure something out, maybe\".\n \nreply",
+      "no no\n> \"Unlock the huge potential\" = \"We have big money with big self serving plans coming in.\"tldr from bsremover too:Smithfield: Big meat market, been there since 1860s.\nBillingsgate: Huge fish market, been there since 1327, now moving to make way for homes.So a real state take over, pretty much?\n \nreply",
+      "Yes. Canary Wharf is being transformed from a purely financial district into a mixed business-residential district. They want to move noisy and smelly businesses away from the offices and apartments.\n \nreply",
+      "Smithfield Market and the City of London are nowhere near Canary Wharf\n \nreply",
+      "Billingsgate Market, subject of this article, is on Canary Wharf.\n \nreply",
+      "It's Smithfield and Billingsgate.\n \nreply",
+      "https://chainsawsuit.krisstraub.com/20171207.shtml\n \nreply"
     ],
-    "link": "https://github.com/bjesus/teatime",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A fully static distributed library system powered by IPFS, SQLite and GitHub \n      \nTeaTime is a fully static distributed library system powered by IPFS, SQLite, and GitHub\n\n \nAuto-updating instances are hosted on Netlify and GitHub Pages\nThe TeaTime web application is completely decoupled from its databases and the files it fetches. The databases used in TeaTime are GitHub repositories tagged with the teatime-database topic, which are published on GitHub Pages. Each repository contains a config.json file that points to an SQLite database. Before a user performs a search in TeaTime, they choose which database to use and then TeaTime queries the SQLite database using sql.js-httpvfs. Each row in the SQLite database is an item in the library, and a file hash column is used for getting the item from IPFS.Since the web application is a "
+    "link": "https://www.bbc.co.uk/news/articles/cje050wz22qo",
+    "first_paragraph": "Smithfield is the largest wholesale meat market in the UKThe oldest meat and fish markets in London, which date back 850 years, are facing permanent closure from 2028.Smithfield meat market, near St Paul's Cathedral, and Billingsgate fish market in Canary Wharf are to be closed after the City of London Corporation voted to withdraw support for them.The Corporation said it would now work with traders to help them find alternative premises.Traders, who have been offered compensation, have said the move means a London tradition will be lost, with one saying \"it's all about the money now\".Meat has been traded at its current site since the 1860sSmithfield is the largest wholesale meat market in the UK and one of the biggest in Europe. The current iteration of the market has been trading at the site since the 1860s. Prior to that it was a livestock market, which dated back to the medieval period.Work has already begun on turning this site into a new cultural and commercial hub,  which includ"
   },
   {
-    "title": "TrunkVer (trunkver.org)",
-    "points": 43,
-    "submitter": "todsacerdoti",
-    "submit_time": "2024-11-27T20:48:08 1732740488",
-    "num_comments": 18,
-    "comments_url": "https://news.ycombinator.com/item?id=42259604",
-    "comments": [
-      "I think this is a nice way to clarify the different use cases for version numbers:- SemVer is a communication tool for when an author needs to tell a potential user what to expect from a new version.- TrunkVer is an auditing/engineering tool for when you need to give a unique identifier to a version for technical reasons.I think this page is a nice codification of a useful practice, but it does itself a disservice by positioning itself against SemVar and claiming to be a \"drop-in\" replacement.\n \nreply",
-      "In what way is this \u201eSemVer-compatible\u201c when you just ignore the \u201eMajor increment <=> breaking changes\u201c convention? It has 3 numbers separated by dots? This just increments major version every time a build is started, even though there might not be breaking changes.Edit: When looking at the SemVer page: https://semver.org/#if-even-the-tiniest-backward-incompatibl...The formal spec technically only tells you that you MUST increment Major for breaking changes, and not that you can\u2019t do it every time, but the FAQ makes it clear what the spirit of the rule is. I can\u2019t see how TrunkVer can be called SemVer compatible with this construction method.\n \nreply",
-      "In semver terms, I believe this translates to \"every change might be breaking\", which sounds right for trunk-based deployments.\n \nreply",
-      "It sounds like a disaster. Trunk-based deployment does not imply such an extreme degree of instability, because all development may happen on other branches. I see what you're trying to say though. I think the real keyword is \"continuous integration.\"\n \nreply",
-      "It\u2019s semver compatible because it can be parsed, accepted and compared by any system that expects or requires a semver formatted version?The whole point of this is that in trunk-based releases the version isn\u2019t significant, so why not call each one breaking.\n \nreply",
-      "20241127214906.0.0 will be marked as incompatible with 20241127214907.0.0 by any such system that parses them.\n \nreply",
-      "That's (in-)compatibility between versions, not compatibility between versioning schemes.\n \nreply",
-      "You're not technically wrong but using the 3 numbers this way is in fact going to create problems for people trying to use this info. It means that you can never know if any version is compatible with others, and even if they were you could not easily link it.\n \nreply",
-      "Sure, but it does parse them and it does rightly understand that one is an newer version.That\u2019s\u2026 compatibility.\n \nreply",
-      "Newer is not always compatible. That's why SemVer looks like work to authors. They don't like to think about compatibility.\n \nreply"
-    ],
-    "link": "https://trunkver.org/",
-    "first_paragraph": "so we can stop talking about versions and start shipping.TrunkVer is a SemVer-compatible versioning scheme for\ncontinuously-delivered, trunk-based applications and systems that don't follow a release scheme.It is a drop-in replacement for semantic versions and replaces the version with meaningful meta data, telling you at a glance what the artifact is, when it was built and where you may find the build log.We have identified a frequent source of avoidable confusion, conflict and cost in the software delivery process caused by versioning software that should not be versioned - or rather, the versioning should be automated.Historically, countless versioning schemes have been used to signify changes to a piece of software, using a lot of not clearly defined words such as beta, final or release candidate as well as arbitrary numbering schemes that typically involve one or more digits that are incremented according to certain rules, or worse, without clear rules.Over time, semantic versioni"
-  },
-  {
-    "title": "MIT Aluminum Bicycle Project 1974 (sheldonbrown.com)",
-    "points": 7,
-    "submitter": "anschwa",
-    "submit_time": "2024-11-27T23:59:38 1732751978",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=42261053",
-    "comments": [
-      "> He ruled out magnesium, which is best per unit weight in compressive buckling but is brittle and difficult to extrude.There's a fascinating, and very new, class of nano-laminate magnesium alloys called Long Period Stacking-Ordered (LPSO) alloys.  These are very lean -- the standard version is 97% Mg + 1% Zn + 2% Y -- and they have outstanding mechanical properties.  At an equal weight, they're much stronger and stiffer than 6061 aluminum, and the kicker is that this is generally true only if they're extruded.  If they're not extruded, the laminate-like grain structure doesn't form properly.Could make excellent bike frames.Magnesium corrosion would still be a problem, though.  I got some LPSO-Mg samples from Fuji Light Metals, in Japan, and they were quite badly degraded within weeks.\n \nreply",
-      "Favorite road bike I\u2019ve ever owned was the aluminum Klein Quantum Race designed by Greg Klein.\n \nreply",
-      "The pinnacle of the modern tubular aluminum road bike frame was probably reached with the cannondale CAAD8 and CAAD9 frames, which could easily be built into UCI-illegal-weight bikes using expensive components and wheelsets.stripped example:\nhttps://weightweenies.starbike.com/forum/viewtopic.php?t=153...https://www.reddit.com/r/cannondale/comments/1d9nind/2009_ca...\n \nreply"
-    ],
-    "link": "https://www.sheldonbrown.com/AluminumBikeProject.html",
-    "first_paragraph": "This article appeared in the Proceedings of the 27th International Cycling History Conference, North Haven, Connecticut, USA, 2016In 1974, Professor Shawn Buckley ran an M.I.T. Independent Activities Period\ncourse where participants, including Marc Rosenbaum and Harriet Fell, got to build their own bicycle frames.  Marc Rosenbaum, then a student at the Massachusetts Institute of Technology, set out to create a bicycle that would give a rider an acceleration advantage by being ultra light without sacrificing stiffness. In this paper, we describe some of Marc\u2019s design, the frames he and Harriet built in the IAP course, and how these played a role in the Klein vs. Cannondale patent litigation in the mid-1980s.In 1974, Marc Rosenbaum was a senior at M.I.T. majoring in mechanical engineering. The goal of his undergraduate thesis (Rosenbaum 1974) project was to create and describe\na bicycle that would give a rider an acceleration advantage by being ultra light without sacrificing stiffness. "
-  },
-  {
-    "title": "Device-detector: Universal Device Detection library from User Agent (github.com/matomo-org)",
-    "points": 42,
-    "submitter": "josephscott",
-    "submit_time": "2024-11-27T20:11:21 1732738281",
-    "num_comments": 7,
-    "comments_url": "https://news.ycombinator.com/item?id=42259283",
-    "comments": [
-      "If you're looking for a Ruby implementation based on the same underlying user-agent parsing data, here you go: https://github.com/podigee/device_detector\n \nreply",
-      "The README lists all the ports here:\nhttps://github.com/matomo-org/device-detector?tab=readme-ov-...\n \nreply",
-      "Good tool. I wish Google had gone even further with Chrome in reducing the information in the user agent. It seems like user agent is primarily used as a browser fingerprinting signal.\n \nreply",
-      "PHP made it to the front page!\n \nreply",
-      "Yeah.. The decline in quality of HN continues to be a source of sadness.\n \nreply",
-      "Does something similar exist for python or node.js ?If not I would like to contribute to that as an open source.\n \nreply",
-      "https://github.com/matomo-org/device-detectorList of ports\n \nreply"
-    ],
-    "link": "https://github.com/matomo-org/device-detector",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        The Universal Device Detection library will parse any User Agent and detect the browser, operating system, device used (desktop, tablet, mobile, tv, cars, console, etc.), brand and model. \n      \n\n\n\n\n\n\nThe Universal Device Detection library that parses User Agents and Browser Client Hints to detect devices (desktop, tablet, mobile, tv, cars, console, etc.), clients (browsers, feed readers, media players, PIMs, ...), operating systems, brands and models.Using DeviceDetector with composer is quite easy. Just add matomo/device-detector to your projects requirements.And use some code like this one:Methods check device type:Methods check client type:Get OS family:Get browser family:Instead of using the full power of DeviceDetector it might in some cases be better to use only specific parsers.\nIf you aim to check if a given useragent is a"
-  },
-  {
-    "title": "Sleep regularity and major adverse cardiovascular events (bmj.com)",
-    "points": 20,
-    "submitter": "domofutu",
-    "submit_time": "2024-11-27T20:25:40 1732739140",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://jech.bmj.com/content/early/2024/10/30/jech-2024-222795",
-    "first_paragraph": "Article TextPDFBackground This study examines the associations between device-measured sleep regularity and the risk of major adverse cardiovascular events (MACE), and aims to determine whether sufficient sleep duration attenuates or eliminates the effects of irregular sleep on MACE risk.Methods A prospective cohort study of adults aged 40\u201379 years from the UK Biobank who wore wrist-attached accelerometers for 7\u2009days was conducted. Sleep Regularity Index (SRI) scores were calculated for each participant using a validated algorithm, and categorised as irregular (SRI <71.6), moderately irregular (SRI between 71.6 and 87.3), and regular (SRI >87.3 (reference group)). Information on MACE and its subtypes (myocardial infarction, heart failure, stroke) was obtained from inpatient hospitalisation and death records.Results We analysed data from 72\u2009269 individuals followed for 8 years, without a previous history of MACE and without an event in the first year of follow-up. Irregular (HR 1.26, 95"
-  },
-  {
-    "title": "'Dear Mr. Kubrick': 1960s Audience Responses to 2001 \u2014 A Space Odyssey (2009) [pdf] (participations.org)",
-    "points": 26,
-    "submitter": "wslh",
-    "submit_time": "2024-11-24T18:56:59 1732474619",
-    "num_comments": 31,
-    "comments_url": "https://news.ycombinator.com/item?id=42229613",
-    "comments": [
-      "\u201cThe audience for Stanley Kubrick\u2019s 2001: A Space Odyssey \u2026 has always included an unusually large number of people \u2026 who felt the need to express their feelings and thoughts about the film in writing.\u201dThis may be the truest statement I have ever read.  I\u2019m rolling.FWIW, I like it.\n \nreply",
-      "This reminds me of the wide range of reactions sparked by Andrei Tarkovsky\u2019s Mirror, his most avant-garde film. On one hand, you can put that film on before a gathering of fairly open-minded cinephile friends, and even they might reject it as artsy-fartsy or unintelligible. On the other hand, a number of ordinary proletariat people in the USSR wrote to Tarkovsky to say how his film touched them deeply and felt directly relatable to their own lives.\n \nreply",
-      "> On the other hand, a number of ordinary proletariat people in the USSR wrote to Tarkovsky (...)A number of ordinary proletariat, that strikes me as an oddly specific subset of people. Is the implication that \"proletariat people\" are down to earth people who like simple things and so Mirror was in a sense down to earth, if only you had the right sensibilities? Or what's the implication?In any case I for one can't imagine anything more fartsy than someone who'd self identify as proletariat. You realize that regular workers didn't call themselves proletariat, right? Communists called workers proletariat. So anyone calling himself proletariat was a communist, not a regular worker who just want to do his job. In other words, supremely fartsy. So you're saying that fartsy people liked a fartsy movie. That actually makes sense.Edit: just started reading the movie's Wikipedia page> including newsreel footage of major moments in Soviet historyOF COURSE it was popular with communists. Damn, I'm good.\n \nreply",
-      "I\u2019m sorry to interrupt your flight of fancy there, but the word \"proletariat\" came from me and not the people writing letters to Tarkovsky (as someone from Eastern Europe of a certain generation, I\u2019m as likely to reach for that word to describe people in highly menial jobs as, say, \u201cworking class\u201d, but then again nearly everyone in the USSR was working class).I would suggest watching the film before furthering speculating about it. That newsreel footage and the nonlinear way it is presented is far more likely to challenge viewers than arouse any patriotic or otherwise enthusiastic sentiments.\n \nreply",
-      "> nearly everyone in the USSR was working classFor most of its history, nearly everyone in the USSR was a farmer, so not proletariat and not communist.> I would suggest watching the filmThe first few paragraphs on how the movie is about a person remembering important episodes of his life got me curious and gave me Butterfly Effect vibes (good), but reading further down I started getting Mulholland Drives vibes (not good).\n \nreply",
-      "\"For most of its history, nearly everyone in the USSR was a farmer, so not proletariat.\" They certainly were in the context we are speaking of here. Official Soviet terminology, apparently starting at least from Lenin but I haven\u2019t checked this thoroughly, divided the proletariat into rural proletarians (in Russian \u0441\u0435\u043b\u0441\u043a\u0438\u0435 \u043f\u0440\u043e\u043b\u0435\u0442\u0430\u0440\u0438\u0438) and urban proletarians (\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0438\u0435 \u043f\u0440\u043e\u043b\u0435\u0442\u0430\u0440\u0438\u0438). In any event, in colloquial contexts the word serves handily to refer to a life of rather menial trudging wherever it\u2019s lived.\n \nreply",
-      "Of course Lenin had an interest in selling the idea that everyone is actually proletariat. In reality by Marx's definition, proletariat are those who don't own the means of production (and are therefore stuck in earning by selling their labour), whereas farmers at least until the NEP died, mostly owned their own farms which means they did own the means of their production, which is also why farmers, or virtually everyone in the USSR outside the cities hated the communists.But I got your point.\n \nreply",
-      "You really cracked the case here wow!\n \nreply",
-      "> \u201c she had gone to a drive-in cinema with her husband and\nchildren to see a double bill of Winnie the Pooh and the Blustery Day and 2001: A Space\nOdyssey\u201dBizarre choice - apparently they marketed it as a family movie\n \nreply",
-      "She had a valid complaint, putting pooh at 11pm after 2001And honestly, thinking back, the end of 2001 is pretty nonsensical to most normal people.  I remember watching it when I was young and it was hard to figure out what the trippy stuff meant, let alone the end.In comparison, 9 years later Star Wars was completely approachable to the entire family.\n \nreply"
-    ],
-    "link": "https://www.participations.org/06-02-06-kramer.pdf",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Float Self-Tagging (arxiv.org)",
-    "points": 15,
-    "submitter": "ndjdjddjsjj",
-    "submit_time": "2024-11-27T21:36:52 1732743412",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://arxiv.org/abs/2411.16544",
-    "first_paragraph": "Help | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n                    Get status notifications via\n                    email\n                    or slack\n"
-  },
-  {
-    "title": "Ancient Sumerians created the first writing system (lithub.com)",
-    "points": 126,
-    "submitter": "HR01",
-    "submit_time": "2024-11-27T13:15:57 1732713357",
-    "num_comments": 141,
-    "comments_url": "https://news.ycombinator.com/item?id=42255829",
-    "comments": [
-      "James Scott, in his book Against the Grain, offers an in-depth and nuanced exploration of the factors that led to the appearance of projects such as writing and irrigation channels in Mesopotamia as intensive agriculture gradually became the only possible means of sustenance. There was a lot more going on than a simple/linear intensification, and it was less cut and dry than the brief summary given of that development in this article would suggest.Jennifer Pournelle's 2003 paper[1] presenting new evidence for the area's landscape in antiquity is also quite eye opening, as the presence of the coast further inland than was previously believed upended a lot of long-established notions about the development of civilization there.[1] https://www.researchgate.net/publication/258858442_The_Litto...\n \nreply",
-      "Daughter of Jerry Pournelle, btw. Google identifies her in the knowledge bar as \"Jerry Pournelle's son\", which is not the case, and furthermore, never was.My sole interest was in confirming the family connection, which I vaguely recalled, but the blurb was strange enough that I felt I needed to share it anyway.  Brilliant AI-powered future we have here.\n \nreply",
-      "Highly recommend the \"Tides of History\" podcast (hosted by an actual historian who keeps up with the field), which has several episodes on Mesopotamian civilization.https://wondery.com/shows/tides-of-history/\n \nreply",
-      "I've always wondered whether the Sumerians knew they were the first. Past empires, lost civilizations, and ancient artifacts have always fascinated us. The first museum emerges is Mesopotamia around 530 BC; the Egyptian obelisk installed next to the brand-new Colosseum in Rome was older then than the Colosseum is now; legends of giants and heroes of bygone ages are literary universals. We hunger for the past.But the Sumerians were first. There was no glorious but crumbled past empire to inspire them. They figured out everything for the first time, and we know little about what they thought about it.Now consider that humanity is likely the first in the Milky Way galaxy. We too have to figure things out for the first time, but on a grander scale. What will history think of us?\n \nreply",
-      "The Epic of Gilgamesh references him gloriously restoring ancient cities destroyed by the Flood. Of course, by the time is was written, Sumerian civilisation was already ~2,500-3,000 years old, so it's hard to tell if Sumerians thought those cities were theirs, or someone else's.The ever-scholarly answerers on r/AskHistorians think that yes, they believed they were the first: https://www.reddit.com/r/AskHistorians/comments/8oskfv/did_a...\n \nreply",
-      "I love this question! I got curious about how ancient people interpreted stone tools. When did humanity first realize \u201ccavemen\u201d had come before?I saw this guy on youtube talking specifically about this topic. Im no historian but i felt like he gave it a serious grounded exploration (no ancient aliens!)https://youtu.be/4jRbHhOOjw4\n \nreply",
-      "They believed their writing was gifted to them by the Gods. According to them they were not the first, they were just the next in line after the Gods.\n \nreply",
-      "> They believed their writing was gifted to them by the Gods.This is an essentially universal belief in the past, and not just about writing. People are able to notice that their lifestyle depends on technologies, and that the only way to learn those technologies is for someone else to teach you. So they decide that the technologies on which their lives depend - pressing olives, farming grain, writing, harvesting wool*... - were taught to their ancestors by the gods.In the case of writing specifically, the ancient Greeks attributed it to Cadmus, who was not personally a god. But (1) he was a hero with descent from Poseidon, (2) Greek heroes receive prayers and sacrifices and grant supernatural blessings just the same way gods do, and (3) they credited him with introducing writing from Phoenicia, not inventing it out of whole cloth.* In early records, sheep are not yet sheared - they're plucked. The sheep we have today aren't the sheep they had then.\n \nreply",
-      "Sure. They had a creation mythos like everyone else. What they didn't have is evidence of a real precursor civilization to ground those myths. The classical Greeks could see Mycenaean ruins.\n \nreply",
-      "Not as many as later civilizations but there are buildings that likely pre-date the Sumerian civilization like the desert kites. And in Syria and Turkey there are megaliths and ruins which are older than Sumer which builders the Sumerians might have know of from oral history.\n \nreply"
-    ],
-    "link": "https://lithub.com/how-the-ancient-sumerians-created-the-worlds-first-writing-system/",
-    "first_paragraph": "\u201cIn Uruk he built walls, a great rampart, and the temple of blessed Eanna for the god of the firmament Anu, and for Ishtar the goddess of love. Look at it still today: the outer wall where the cornice runs, it shines with the brilliance of copper; and the inner wall, it has no equal. Touch the threshold, it is ancient.\u201d\n\u2013The Epic of Gilgamesh, ca. 1750 BC\n*In the middle of the fourth millennium before Christ, men and women could feed themselves and their families, much of the time, but almost nobody else. They did not yet have the wheel. They could fight, but they did not have the capacity to make war. They could not read or write, for there was no writing. Without writing, there was no history. There were stories but no literature. Art was something that people might produce on their pottery, but never for a living. There were customs but no laws. There were chiefs but no kings, tribes but no nations. The city was unknown.And then, around that time, civilization was born: urban life, "
-  },
-  {
-    "title": "Most American farmers have second jobs to stay afloat (marketplace.org)",
-    "points": 40,
-    "submitter": "ilamont",
-    "submit_time": "2024-11-27T23:45:56 1732751156",
-    "num_comments": 47,
-    "comments_url": "https://news.ycombinator.com/item?id=42260983",
-    "comments": [
-      "How much of this is because of hobby farming and kids inheriting the family farm?Going back a couple hundred years, ~80% of the population was a \"farmer\". But by any standard, they had \"multiple jobs\".I.E., they were doing a lot more than just growing food to sell.You probably had a sweet spot somewhere between the 20s and 60s where you didn't yet have mega farms, but also <20% of the population was a \"farmer\" - so you could actually make a living off that.Now, most of those farms have been sold off to mega farms or handed off to kids that don't really want to be a \"farmer\".With the mega farms came efficiency, and if you're trying to be an inefficient small farmer, you're going to have a bad time competing. Hence, the need for a second job.Anyone under 30 trying to compete with a mega farm is like some solo developer trying to build the next Google.It's never going to happen.Either you're doing it as a \"hobby\", or you REALLY want to farm.\n \nreply",
-      "\"Now, most of those farms have been sold off to mega farms or handed off to kids that don't really want to be a \"farmer\".\"It's common practice that the person doing the farming may not be the land owner. Field leases are extremely common. So they can inherit the land and just lease the fields until they decide to sell to a residential developer for big money as the urban sprawl encroaches.\n \nreply",
-      "A lot of time businesses that farmers could do as side gigs become the primary gig over the generations but the farm just has to stay there and keep doing farming things so you don't get screwed by the municipality or state on zoning or facility  related compliance BS.\n \nreply",
-      "Or you get to keep your agricultural property tax breaks.\n \nreply",
-      "That's often how it goes. The market starts out with lots of small businesses, but over time it ends up up with a few giant companies. Economists call it industry consolidation. There are some interesting nuances at the beginning and the end of the \"consolidation curve\" [1].[1] https://hbr.org/2002/12/the-consolidation-curve\n \nreply",
-      "Old joke:A farmer wins the lottery. When asked what he's going to do, he replies, \"I'm going to keep farming. And when the money runs out I'll find another way to keep farming.\"\n \nreply",
-      "I think the title should read \"most family farmers have second jobs to stay afloat\", as that appears to be the statistic the article asserts. This leaves out large-scale factory farming, obviously; the statement might still be true when large-scale factory farming is taken into account, but that's not what the article seems to assert?To me this is as inflammatory and concerning as a title which might read \"most woodworkers have second jobs to stay afloat\" or \"most cobblers have second jobs to stay afloat\".\n \nreply",
-      "How many of these farmers are hobbyists, though? Or, use the farm land to offset their taxes (like they do a lot where I live)? Maybe farming is their second job, rather than the other way around?If you go to the actual report, you'll see that the \"very large scale farms\" have the smallest percent of acres while also providing the largest value. Maybe the small-scale farms are inefficiently managed and operated.https://www.ers.usda.gov/webdocs/publications/108074/eib-263...\n \nreply",
-      "The guy running two head of cattle on 1 acre just so he can claim to be a \"farmer\" for the tax benefits will never have a profitable operation.\n \nreply",
-      "you can replace \u201cfarmers\u201d with most professions these days and this would still ring true\n \nreply"
-    ],
-    "link": "https://www.marketplace.org/2024/11/27/to-stay-on-the-farm-more-and-more-farmers-are-working-extra-jobs/",
-    "first_paragraph": "\n \n\n\n\n\nOn the Leelanau Peninsula, known as Michigan\u2019s pinky, the rolling hills and insulating lake effect make it possible to grow fruit. Cherry farmer Phil Hallstedt said he never tires of looking at the landscape, but growing cherries here is not the stable business it once was.\u201cI don\u2019t go to Vegas because I gamble every year,\u201d he said. \u201cCherries are so, so risky.\u201dAfter several tough years, Hallstedt has switched to a labor-saving U-Pick model, where people pay to harvest their own cherries. He said his family made this change after years of juggling jobs off the farm.\u201cTwo years ago, I was ready to throw in the towel,\u201d Hallstedt said. \u201cAnd my wife said, \u2018I\u2019m not,\u2019 and I love my wife, and I follow my wife. And so I was like, \u2018OK, I gotta figure this out.\u2019 So together we\u2019re trying this new business model.\u201dOnly 37% of farmers held a primary job off the farm in 1974. Today, roughly 85% of family farmers rely on other jobs to support their livelihoods, according to a 2023 report from the "
-  },
-  {
-    "title": "Psychoacoustic and archeoacoustic nature of ancient Aztec skull whistles (nature.com)",
-    "points": 39,
-    "submitter": "tosh",
-    "submit_time": "2024-11-22T12:03:20 1732277000",
-    "num_comments": 19,
-    "comments_url": "https://news.ycombinator.com/item?id=42213125",
-    "comments": [
-      "The skull whistles remind me of an experience in Central Asia. I was in an expedition camped out in the middle of nowhere, a day's drive from the nearest permanent settlement and miles from the nearest nomads. It's the middle of the night and this terrifying scream like a woman being murdered wakes me up. It was right on the edge of sounding inhuman in the same way.The sound kept happening as I made my way down the ravine in the direction of the sound and at the bottom... Camels. Just a normal herd of camels fording the river.\n \nreply",
-      "There's two types of people in horror movies, the ones trying to get away from the scary things and the ones trying to get closer to the scary thing. At least you know which one you are.\n \nreply",
-      "Now imagine you heard that terrifying scream, followed it down the ravine, and there's a shaman sitting cross legged, looking at you unblinkingly and blowing into a human skull\n \nreply",
-      "Choose your own adventure:a) you run away screamingb) you approach and inquire what services are offered.\n \nreply",
-      "The submitted URL was https://arstechnica.com/science/2024/11/study-why-aztec-deat.... Interested readers might want to look at both.Sound examples related to the paper: https://caneuro.github.io/blog/2024/study-skullwhistle/via:The scary sound of Aztec skull whistles - https://news.ycombinator.com/item?id=42181466 - Nov 2024 (27 comments)\n \nreply",
-      "FYI went to Mexico City last year and you can find replica death whistles all over the place in little shops. Also some eagle sound ones, jaguar growl ones, etc. Had a lot of fun with the kids getting a bunch of different ones and they make nice little mementos! Takes a bit of practice to get the sound right, but they can be pretty loud!\n \nreply",
-      "I went in thinking... haha it's a whistle, how bad can it be.But jesus fuck that's actually a super terrifying sound!\n \nreply",
-      "Wow you\u2019re not kidding!\n \nreply",
-      "These skull whistles were used by Erykah Badu, Marc Rebillet, and Reggie Watts on their collaborative stream session. It\u2019s quite a fun jam to witness those three discover the sound.\n \nreply",
-      "It's kind of a freaky sound, yes, but seems to me that we wouldn't react like this if it wasn't called a skull whistle.  Like, if it were sculpted like a puppy and called the Aztec Doggie Whistle.\n \nreply"
-    ],
-    "link": "https://www.nature.com/articles/s44271-024-00157-7",
-    "first_paragraph": "Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain\n            the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in\n            Internet Explorer). In the meantime, to ensure continued support, we are displaying the site without styles\n            and JavaScript.Advertisement\nCommunications Psychology\nvolume\u00a02, Article\u00a0number:\u00a0108 (2024)\n            Cite this article\n14k Accesses485 AltmetricMetrics detailsMany ancient cultures used musical tools for social and ritual procedures, with the Aztec skull whistle being a unique exemplar from postclassic Mesoamerica. Skull whistles can produce softer hiss-like but also aversive and scream-like sounds that were potentially meaningful either for sacrificial practices, mythological symbolism, or intimidating warfare of the Aztecs. However, solid psychoacoustic evidence for any theory is missing, especially how human listeners cognitively an"
-  },
-  {
-    "title": "Structured Editing and Incremental Parsing (tratt.net)",
-    "points": 19,
-    "submitter": "ltratt",
-    "submit_time": "2024-11-27T20:42:52 1732740172",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=42259547",
-    "comments": [
-      "Trying to use any kind of syntax highlighter with TeX is a pain in the butt. I didn't mean LaTeX there. I mean TeX, which can rewrite it's own lexer, and a lot of libraries work by doing so. I move in and out of TeXInfo syntax and it basically just causes most editors to sit there screaming that everything is broken.\n \nreply",
-      "I think simpler is better when it comes to structured editing. Recursive teXt has the advantage that it proposes a simple block structure built into the text itself [1]. Of course, you will need to design your language to take advantage of this block structure.[1] http://recursivetext.com\n \nreply"
-    ],
-    "link": "https://tratt.net/laurie/blog/2024/structured_editing_and_incremental_parsing.html",
-    "first_paragraph": "As someone who has\nfrom\ntime\nto\ntime written on\nparsing, and even published some\nparsing\nresearch,\nI get asked questions about parsing fairly regularly, some of which I\u2019m even\ncapable of answering.One thing that I\u2019ve increasingly been made aware of is a widening interest in\n\u201cfancier\u201d ways of editing text. In essence, most people who\u2019ve been programming\nfor a while come to realise that having an editor that only thinks of a program\nas a sequence of UTF-8 characters is rather limiting. I suspect the rapid\nproliferation of the LSP (Language Server\nProtocol) has opened\neven more people\u2019s eyes to what the editing of programs could be.One long-standing approach to better editing is structured\nediting (sometimes called\n\u201cprojectional editing\u201d). The basic idea is to have an editor which fully\nunderstands the syntactic structure of the language you\u2019re editing. This has\nvarious benefits: the editor can give instant feedback about what the next\nthing the user can type is; it makes semantic-based f"
-  },
-  {
-    "title": "Chebyshev Polynomials in the 16th Century (2022) (arxiv.org)",
-    "points": 73,
-    "submitter": "IdealeZahlen",
-    "submit_time": "2024-11-27T14:58:25 1732719505",
-    "num_comments": 26,
-    "comments_url": "https://news.ycombinator.com/item?id=42256589",
-    "comments": [
-      "I will always be amazed at these guys who did numerical algorithms before computers were a type of machine.Something that has always confused me about these Russians, Chebyschev and Krylov, what use did they have for their iterative methods and subspaces? I guess they weren\u2019t solving big sparse linear systems on distributed computers in the year 1900.\n \nreply",
-      "Not in this case but sometimes mathematicians of old did have access to \u201ccomputers\u201d, ie savants who can do large calculations in their heads easily. Gauss used the services of such a person: https://hsm.stackexchange.com/questions/15609/autistic-assis...\n \nreply",
-      "\"The History of Approximation Theory\" by Karl-Georg Steffens is a great reference for historical contexts.For Chebyshev, who devoted his life to the construction of various 'mechanisms' [1][2], his motivation was to determine the parameters of mechanisms (that minimizes the maximal error of the approximation on the whole interval).[1] https://en.wikipedia.org/wiki/Mechanism_(engineering)[2] https://tcheb.ru/\n \nreply",
-      "In particular he studied Watt's mechanism, which was an integral component of steam engines powering the industrial revolution in Western Europe. Its optimal configuration wasn't really well understood at the time which led to practical problems. Chebyshev traveled from Russia (which wouldn't really enjoy an industrial revolution till much later) to Western Europe and discussed with experts and people who operated these engines. He brought back to Russia with him notes and experimental data, and those informed the development of what would later be known as minimax theory, and Chebyshev polynomials which provide polynomial solutions to minimax problems.In the course of developing that theory he founded the modern field of approximation theory, and the St. Petersburg school of mathematics. I think his approach of using applied problems and techniques to inform the development of pure math deeply influenced the whole of Soviet and Slavic mathematics in the century that followed(and yes, the book by Karl-Georg Steffens is beautiful!)Edit: To answer the grandparent's question, aside from things directly invented by Chebyshev or his students, often things are called \"Chebyshev\" when there's either a Chebyshev polynomial or a minimax problem lurking in the background\n \nreply",
-      "Ballistics, celestial bodies, even a ton of competitions between mathematicians. You can trace down analysis concepts to Archimedes easily, but by Descartes (rolling tangent) and eventually Newton / Leibniz who formalized calculus there was a lot of stuff happening. E.g. Descartes was contemporary with Galileo. So applied math and the theoretical part was under natural philosophy that eventually became physics.\n \nreply",
-      "I was reading a book from the early 1900's, and it referenced using computers to calculate some complex algorithms.  Threw me for a loop, and I finally realized the author was talking about people. Apparently it was a thing to send long computations to a room/building full of people and get the answer back.\n \nreply",
-      "The word \"computer\" to describe a person who does computations dates back into the 1600s, and is exactly where we got the current word.Up to around 1940, the vast majority of the world's computers were people, and there were legions of them across all areas of government and industry.There were around 250 total automated computers in 1955, around 20,000 in 1965, so I doubt human computers were outnumberd until the 1970s/1980s at best.\n \nreply",
-      "The first job of my father, after finishing his university studies, three quarters of century ago, when there were only a handful of electronic computers in the entire world, was as a \"computer\" at an astronomical observatory.With the revenue secured by that job, he decided that he can afford to marry my mother.\n \nreply",
-      "I wonder if the \u201cprogrammers\u201d could be much sloppier back then. \u201cFind the eigenvalues? Which ones? You know, the ones we always want!\u201d\n \nreply",
-      "Prompt engineers, basically.\n \nreply"
-    ],
-    "link": "https://arxiv.org/abs/2203.10955",
-    "first_paragraph": "Help | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n                    Get status notifications via\n                    email\n                    or slack\n"
-  },
-  {
-    "title": "Generate video sprites using just FFmpeg (steelcm.com)",
-    "points": 31,
-    "submitter": "steelcm",
-    "submit_time": "2024-11-27T18:30:09 1732732209",
-    "num_comments": 7,
-    "comments_url": "https://news.ycombinator.com/item?id=42258407",
-    "comments": [
-      "A long time ago, we used this approach to play videos at 15 fps in IE6, with no flash or realplayer plugins required!  No sound though...\n \nreply",
-      "I wish there was some way to get vlc to use external sprite files.While I'm thinking about it, external chapter files would be great too. Then you could make your own bookmarks without modifying the video file.\n \nreply",
-      "Back in the day a sprite was a smaller 2d bitmap you'd superimpose on the screen. A key frame was a marker like this.\n \nreply",
-      "I\u2019m trying to remember the name of a UI control that could be backed by something like this. It was a sequence of thumbnails laid out in a row like a film strip. (For all I know, that was what it was called.)\n \nreply",
-      "Could be a poster frame or chapter frame or chapter marker\n \nreply",
-      "Yes, and the sprites were supported by a specific coprocessor. For example, the Apple II didn't have one.\n \nreply",
-      "Cool thanks\n \nreply"
-    ],
-    "link": "https://steelcm.com/blog/generating-video-sprites-using-ffmpeg/",
-    "first_paragraph": "Learn how to create video sprites with just FFmpeg \u2014 perfect for lightweight video previews.The following is an example of a video preview of the\nBig Buck Bunny\nvideo using a sprite sheet generated from Ffmpeg. Hover over the image to see\nthe preview change.Save the following shell script as sprite.sh, and update the permissions so\nyou can execute it (ie. chmod +x ./sprite.sh).You can then run the script as follows:The ffmpeg command can be explained as follows:-y Override any existing output.-i \"$INPUT\" The input file.-frames 1 Only output a single image (one frame).-q:v 2 Ouput quality, 0 is the best.-filter_complex That's where all the magic happens.The final output image look as follows. Once combined with some basic CSS and\nJS, the scrubbing preview seen at the start of this article can be achieved. \u00a9 2024, Panda Bridge Ltd. All Rights Reserved "
-  },
-  {
-    "title": "Building a Harrison Wooden Longcase [pdf] (bhi.co.uk)",
+    "title": "Aftershock II (uscrpl.com)",
     "points": 3,
-    "submitter": "jstanley",
-    "submit_time": "2024-11-24T17:31:56 1732469516",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=42229049",
+    "submitter": "defrost",
+    "submit_time": "2024-11-23T08:26:26 1732350386",
+    "num_comments": 0,
+    "comments_url": "",
     "comments": [
-      "The author of the article reports that it is quite mysterious how the circular cheeks and the pendulum work together to compensate for differences in air pressure.  And indeed, most clockmakers and virtually all books get it wrong.  Conventional wisdom is to have a very heavy pendulum (so small vibrations won't affect it as much) and a very small swinging arc--so that the small angle approximation (sin(t) = t) holds.Harrison threw this all out.The problem being solved is that when the air pressure is low, there is less friction resistance to the swinging pendulum--and when the air pressure is high, the denser air gives more resistance to the swinging pendulum.Therefore, in denser air, the pendulums swinging arc will be fewer degrees.  For true simple harmonic motion, changing the swing arc wouldn't change the period of the pendulum  Unfortunately, pendulums don't exactly swing as simple harmonic oscillators--and for clocks as accurate as Harrison's, this makes a difference.So Harrison paid attention to the aerodynamic properties of his pendulum.  He made it lighter than usual, so that its movement would be more sensitive to barometric pressure differences, and he gave it a very wide swinging arc, so that there was more room for the circular cheeks at the top of the pendulum to correct for the differences.  And instead of making it slice as smoothly as possible through the air, he deliberately shaped it to have more drag, so it could \"sense\" the air pressure more accurately.The length this guy went to for precision was incredible.  And the craftsmanship!  He could make clocks out of wood which can (and have) been keeping very accurate time for centuries.\n \nreply",
-      "Thanks for the insightful comment! I've just been (re-)reading \"Harrison Decoded\", it's very difficult to know how much of the \"conventional thinking is wrong, Harrison was right\" stuff to take seriously.Harrison definitely had some interesting ideas, and the tests of the Burgess Clock B proves that they had merit.I'm curious if you can suggest any other good resources for learning about Harrison's precision pendulum clock ideas that I might have missed?\n \nreply",
-      "This guy is the kenner.  He gives the references he used in building his clock, and reviews of each reference as to how helpful it is.  Since his clock works :-)  I kinda trust that he's qualified to comment :-)https://www.youtube.com/watch?v=N-wm39a6r_k&t=1082s\n \nreply"
+      "xxx"
     ],
-    "link": "https://bhi.co.uk/wp-content/uploads/2024/11/09-HJSeptember24-AOTM.pdf",
-    "first_paragraph": ""
+    "link": "http://www.uscrpl.com/aftershock-ii",
+    "first_paragraph": "Following the successful launch and recovery of Aftershock II, the second of the USC Rocket Propulsion Laboratory\u2019s Aftershock-series solid-motor vehicles, data from the on-board avionics unit was collected and used to reconstruct its flight path. After an internal review of the raw data, advanced filtering methods and reconstruction simulations were used to determine and validate an apogee of 470,400 ft \u00b1 27,300 ft (3\u03c3), breaking the amateur altitude record of 380,000 ft, previously set by CSXT\u2019s GoFast rocket. USCRPL also determined a maximum speed of 5,283 ft/s, breaking the record of 5,019 ft/s also set by the GoFast rocket. This establishes Aftershock II as the fastest and highest amateur rocket of all-time.Previous student rocketry record was held by \u2018Traveler IV\u2019 when it reached 339,800 ft (104 km). Previous amateur rocketry record was set in 2004 when \u2018GoFast\u2019  reached 385,800 ft (117.6 km). Aftershock II shattered this record by reaching 470,400 ft (143.3 km), which is nearly "
   },
   {
-    "title": "The Rise of the NormieNet \u2013 Echo chamber politics (bugeyedandshameless.com)",
-    "points": 10,
-    "submitter": "verdverm",
-    "submit_time": "2024-11-27T21:26:55 1732742815",
-    "num_comments": 6,
-    "comments_url": "https://news.ycombinator.com/item?id=42259950",
+    "title": "Show HN: Myphotos.site \u2013 Make a gallery website from Google Photos (myphotos.site)",
+    "points": 142,
+    "submitter": "gabigrin",
+    "submit_time": "2024-11-28T11:02:17 1732791737",
+    "num_comments": 70,
+    "comments_url": "https://news.ycombinator.com/item?id=42264344",
     "comments": [
-      "> So, is it an echo chamber?> The short answer is, yes, of course it is. Because Bluesky\u2019s core userbase is made up of those who are fed up with the weaponized anger of Twitter and the liminal space of Threads, they automatically have a unifying identity./thread\n \nreply",
-      "> Because Bluesky\u2019s core userbase is made up of those who are fed up with the weaponized anger of Twitter...There's no weaponized anger on Twitter. Twitter defends free speech. But you can't silence those who have views opposing your own echo chamber on X / Twitter anymore.Those who want censorship to continue leave for Bluesky.\n \nreply",
-      "> Twitter defends free speech.\nDo you just take everything someone says at face value?\n \nreply",
-      "Musk kicked off a bunch of Lfetist and progressive accounts when he took over. He rigged the platform to favor people with his political views. He sold check marks to put posts at the top of conversations to drown the platform in posts from his fan club. There\u2019s nothing about free speech happening on twitter.The people leaving for other platforms don\u2019t want censorship. They want to get away from a toxic environment. Claiming otherwise is either ignorant or dishonest. (I have never had an account on twitter or any similar platform; I just pay attention to what people who used to like it and now hate it say.)\n \nreply",
-      "> It succeeded because it looked and felt like Twitter, from an era before Musk, and because it already had a sizable, active, and fun userbase.Bluesky is not a good place. On X you can go and post controversial thing. For example even if you believe X is full of ultra-far right nazis, you can still go there and post \"there are an infinity of genders\". You won't get censored.Try to go to Bluesky and post \"Only human born with the XY chromosomes can get pregnant\" and see what happens: as soon as your post gets noticed, you'll see that the wokes are in control and they'll censor you. Science much.There was no freedom of speech on Twitter before Musk bought it. And there's none on Bluesky.It's a leftist echo chamber and there's nothing fun in that.There's a reason people make fun of it calling it \"Bluecry\" and \"Pedosky\": if you post things like \"Trans dancing in nylon and garter belt with a little kid at the Olympics opening ceremony at a time when hundreds of millions of children were watching was beautiful\", you won't get banned.It's the place where all the full on nutsies went now that X / Twitter is not anymore in control of the wokes.And you're supposed to believe \"X evil / Bluesky all fun and nice\" because propaganda pieces with an agenda want you to believe that.These people still don't get it: it's because of them that Trump got elected.\n \nreply"
+      "My mom is an avid traveler who takes a ton of photos and puts them on albums she then shares with the family, and a while ago she was asking if I had a solution so she could have a website where all her albums are listed. She wanted to not have to share a new link each time, and have people easily look up older ones.I didn't have any easy solution and this looks promising, congrats!A few dealbreaker things I can share:- she has lots of albums already on gphoto. She'd need to easily import them.- she makes heavy use of the map and text blocks you can add in gphoto albums, which makes each album a kind of travel diary. I don't get the sense these are supported in your product yet, these would be required for her.- she doesn't have a ton of videos but sometimes she does have a few.- I'd have some concerns about the longevity of your product - if she invests time into it she wants to be able to look back at the albums in 10-20 years time. Having a convenient way to export the albums would be reassuring to me.- I think she has a few 1000s photos in those albums, so your highest tier would be too low for her, if there was a way to buy storage that might suit her usage better (though she has a hobbyist budget).It might be technically difficult and you rejected that path already, but I'm thinking an ideal way for her would be to keep editing her albums in gphotos and sync them to your site, which would take care of the longevity concerns and allow her to keep using the interface she knows (if you  linked directly to the pics/vids on google server that would eliminate the cost of storing pictures for you, but I assume that's impossible or prohibited by google's tos).Anyway, just sharing my use case in case that's useful but congrats on launching and on the good looking product!\n \nreply",
+      "First of all, your mom sounds awesome.Second, thanks for the detailed thoughts!Easy import of existing albums - We have that! find the album on GPhotos, select all and import. Check out how quick it is here: https://youtu.be/7gi58SuQ6Rk?si=Wk1wtDoPO5_DYWEVMap and text blocks - These are currently not supported, but we're still considering different use cases and will add features to match the ones we focus on soon.Videos - These are currently not supported but might be added soon. They pose some storage and pricing issues but we'll try to solve that. Again depending on the use case we end up pursuingLongevity - This is a legitimate concern. Obviously we're hoping that this product keeps growing and plan to maintain it. Regardless - The north star of this product is to be fast and easy to set up. So we hope that the time investment won't be that big anyhow.Pricing and Storage - We've just launched so the pricing plans will definitely change over time. We'll take that into account.Syncing albums - Seamlessly syncing albums to online galleries was our dream. Unfortunately Google's API doesn't support that (for obvious security and privacy concerns).We'd love for your mom to give our product a try and will be happy to give her a generous period of free usage of the premium plan for some of her feedback.\nIf you're interested, please reach out at hey@myphotos.site.Thanks again!Or\n \nreply",
+      "Is it 1000 photos per album? Or is it max 1000 photos regardless of number of albums? If it is so, how does unlimited albums work in such case?\n \nreply",
+      "It's currently 1000 photos total that you can divide between as many albums you like.But honestly we've just launched, so pricing and tiers might very well change as we discover what users want and are willing to pay for.\n \nreply",
+      "> she could have a website where all her albums are listed. She wanted to not have to share a new link each time, and have people easily look up older ones.Would a static site with a list of links to Google Photos albums work?  I've done this with my family.If so, there are ample static website providers out there.\n \nreply",
+      "Been looking for something like this myself and surprisingly not that many options out there especially self hosted. All of the new ones are trying to chase after AI. Older ones don\u2019t support object storage.Using Google for my photos is a no go though so hopefully OP will come up with a solution for that.\n \nreply",
+      "Cool. \nCan you elaborate a bit on your issue with Google?\n \nreply",
+      "I have a different use case in a similar situation.My girlfriend runs an art studio that does art workshops. She uses Google workspace. She and her other teachers use Google workspace and have Google photos. They create albums of each workshop.They want to have all the albums in one place so the social media person can easily find and use them.Ideally there should be a way to make a Google photos account shared with the rest of the team. Unfortunately Google photos is not officially part of Workspace so it\u2019s not treated as a b2b product.\n \nreply",
+      "Great website and the pricing makes sense. Some links still go to gphotos.site (automatic redirected). I tried so see how easy the iframe feature is, or rather if a non-technical person would understand the documentation. But the guides seem to be mostly AI generated SEO. Quickly the good impression of personal photos from genuine authors of the website turned into gen-AI slob https://www.myphotos.site/platforms/wordpress\n \nreply",
+      "I would be concerned that it also flies a bit too close to the sun with the gen AI photos; if one of the primary markets is creatives who are trying to showcase their (non-AI) photos, it doesn't inspire confidence to see the company they're entrusting with that task to seemingly disregard the field they're in.\n \nreply"
     ],
-    "link": "https://www.bugeyedandshameless.com/p/the-rise-of-the-normienet",
-    "first_paragraph": ""
+    "link": "https://www.myphotos.site",
+    "first_paragraph": "\u26a1\ufe0f Super Fast\ufe0fWe dare you to find a faster way to do it.How it WorksShare your photos in minutes.Step 1Link your Google account to get started.Step 2We only need permission to view the photos you want to display. Nothing else.Step 3You have a beautiful gallery website! Share a direct link or embed it in your website!ExamplesShow your art, keep friends up-to-date or share family photos with loved ones.Set up in 3 minutes \u2014 enjoy forever.Your website looks professional and impressive but still lets your photos shine.Show all photos together or give each album its own page.Get a beautiful website to present your work."
+  },
+  {
+    "title": "Malware can turn off webcam LED and record video, demonstrated on ThinkPad X230 (github.com/xairy)",
+    "points": 966,
+    "submitter": "xairy",
+    "submit_time": "2024-11-27T20:10:55 1732738255",
+    "num_comments": 498,
+    "comments_url": "https://news.ycombinator.com/item?id=42259278",
+    "comments": [
+      "I thought the whole point of these camera LEDs was to have them wired to/through the power to the camera, so they are always on when the camera is getting power, no matter what.Having the LED control exposed through the firmware completely defeats this.\n \nreply",
+      "They are hardwired on Macbooks. From Daring Fireball, quoting an email from an Apple engineer.> All cameras after [2008] were different: The hardware team tied the LED to a hardware signal from the sensor: If the (I believe) vertical sync was active, the LED would light up. There is NO firmware control to disable/enable the LED. The actual firmware is indeed flashable, but the part is not a generic part and there are mechanisms in place to verify the image being flashed. [\u2026]> So, no, I don\u2019t believe that malware could be installed to enable the camera without lighting the LED. My concern would be a situation where a frame is captured so the LED is lit only for a very brief period of time.https://daringfireball.net/2019/02/on_covering_webcams\n \nreply",
+      "That's backwards.The LED should be connected to camera's power, or maybe camera's \"enable\" signal. It should not be operable via any firmware in any way.The led also has to be connected through a one-shot trigger (a transistor + a capacitor) so that it would light up, say, for at least 500 ms no matter how short the input pulse is. This would prevent making single shots hard to notice.Doing that, of course, would incur a few cents more in BOM, and quite a bit more in being paranoid, well, I mean, customer-centric.\n \nreply",
+      "or, you can have a physical switch, like the Framework. that also hits your BOM but its not complex!\n \nreply",
+      "My previous HP Envy x360 had such a switch on the side of the laptop that would electronically disconnect the webcam; it would completely disconnect according to the system. Enabling it would show a new device being connected in `dmesg`.Not a great laptop otherwise, but that was pretty good!\n \nreply",
+      "My envy x360 has that button as well and it even puts a physical shutter in front of the webcam in addition to disconnecting USB.\n \nreply",
+      "You can buy/print and stick a physical \u00abwebcam cover\u00bb[1] manually on your notebook or phone.My current notebook, manufactured in 2023, has very thin bar on top of screen with camera, so I need a thin, U-like attachment for the switch, which is hard to find.[1]: https://www.printables.com/model/2479-webcam-cover-slider\n \nreply",
+      "Am I the only one that is not worried at all about the camera and super concerned about microphones ? The camera may see me staring into the screen, woo hoo. The microphones will hear everything I discuss, incl. confidential information.There is no physical microphone cover there, is it ?\n \nreply",
+      "Sound is usually more sensitive, yes. But even if there is a physical switch on the laptop, only very exotic smartphones have them.Also, loudspeakers can act as microphones, too.In other words, paranoia gets exhausting in modern times.(And my smartphone has a replacable battery for that reason to at least sometimes enjoy potentially surveillance free time)\n \nreply",
+      "I have an old iPhone 7 which has an audio IC issue and the microphone is physically disconnected. Calls don\u2019t work, video records without sound etc. need to connect an external microphone to have one.Apart from the inconvenience it was somehow liberating knowing there is no microphone physically active.\n \nreply"
+    ],
+    "link": "https://github.com/xairy/lights-out",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Tools for controlling webcam LED on ThinkPad X230\n      This repository contains tools that allow getting software control of the webcam LED on ThinkPad X230 without physical access to the laptop.\nThese were created as a practical demonstration that malware can record video through the webcam without the LED indication.This works via reflashing the webcam firmware over USB (the X230 webcam is connected over USB internally) to add a capability of arbitrarily controlling the LED.\nThis approach likely affects many other laptops, as connecting the webcam over USB and allowing to reflash its firmware is a common design pattern across laptop manufacturers.See the \"Lights Out: Covertly turning off the ThinkPad webcam LED indicator\" talk (pdf) I gave at POC 2024 for the details: discovering a way to reflash the X230 webcam firmware, reverse"
   }
 ]
