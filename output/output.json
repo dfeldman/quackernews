@@ -1,395 +1,386 @@
 [
   {
+    "title": "Ghostty 1.0 (ghostty.org)",
+    "points": 846,
+    "submitter": "matrixhelix",
+    "submit_time": "2024-12-26T20:14:57 1735244097",
+    "num_comments": 194,
+    "comments_url": "https://news.ycombinator.com/item?id=42517447",
+    "comments": [
+      "<3 This has been a work of passion for the past two years of my life (off and on). I hope anyone who uses this can feel the love and care I put into this, and subsequently the amazing private beta community (all ~5,000 strong!) that helped improve and polish this into a better release than I ever could alone.Ghostty got a lot of hype (I cover this in my reflection below), but I want to make sure I call out that there is a good group of EXCELLENT terminals out there, and I'm not claiming Ghostty is strictly better than any of them. Ghostty has different design goals and tradeoffs and if it's right for you great, but if not, you have so many good choices.Shout out to Kitty, WezTerm, Foot in particular. iTerm2 gets some hate for being relatively slow but nothing comes close to touching it in terms of feature count. Rio is a super cool newer terminal, too. The world of terminals is great.I\u2019ve posted a personal reflection here, which has a bit more history on why I started this, what\u2019s next, and some of the takeaways from the past two years. https://mitchellh.com/writing/ghostty-1-0-reflection\n \nreply",
+      "Looks really awesome.  I'm going to sound like I don't belong in the hipster terminal club, but the reason I shied away from some of the other terminals is the lack of tabs, which looks like yours has when I did a quick Google question/search.  (if wezterm and the like have them, I must have missed it or it wasn't obviously apparent in the settings how to achieve them).I know everyone will say but tmux and/or native multiplexing bla, but I'm kind of old school and only do screen remotely if needed, and I just like a lot of terminal tabs in my workflow with a quick mod left/right arrow to navigate between (and if native multiplexing in Ghostty is simple and easy I'd probably do some of that too). \n Perhaps this is why I've never left iterm2.\n \nreply",
+      "Wezterm does have tabs, and their related keyboard shortcuts are configurable.See https://wezfurlong.org/wezterm/config/lua/keyassignment/Spaw... for a starting point in the config.\n \nreply",
+      "Thanks!\n \nreply",
+      "I also use tmux, but I love the native tabs of Konsole in KDE. I have Shift-Arrow configured to move between them, it is far more comfortable than the dual shortcuts needed by tmux, Ctrl-B to call tmux's attention then l (if I remember correctly) to get to the last tab.Konsole also has easy resizing of text and supports images in the console, you might like it.\n \nreply",
+      "I just tried, \"tmux bind -n S-Left prev\"... works. Thank you, good idea. I now have 'S-Up switch-client -n' and 'S-Down last'\n \nreply",
+      "We've got native tabs and splits on both macOS and Linux. :)WezTerm has tabs but they're not native UI elements.\n \nreply",
+      "Right, I was admittedly too lazy to dig far enough with wezterm it appears.  Was looking for the button to click I guess.\n \nreply",
+      "Quick correction: I currently use Wezterm on Linux and it has tabs. Alacritty does not for developer philosophical reasons.Looking forward to checking out Ghostty.\n \nreply",
+      "Wezterm has tabs right out of the box and they are fully customizable, though I prefer tmux since I prefer to not have my data extinguished if I accidentally close the terminal :DWezTerm shines in ease and breadth of configurability due to using lua, so it's simple to have the theme change between light/dark depending on host OS theme.\n \nreply"
+    ],
+    "link": "https://ghostty.org/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "The CAP theorem of Clustering: Why Every Algorithm Must Sacrifice Something (codingconfessions.com)",
+    "points": 41,
+    "submitter": "fagnerbrack",
+    "submit_time": "2024-12-26T23:04:17 1735254257",
+    "num_comments": 5,
+    "comments_url": "https://news.ycombinator.com/item?id=42518562",
+    "comments": [
+      "It's interesting idea but so I don't see it as a matter of tradeoffs since just the \"richness\" sounds undecidable by itself. I mean, dividing a set into \"things have low Kolmogorov complexity and things having high Kolmogorov complexity\" is definitely undecidable so \"any grouping that might make sense for your data\" seems impossible without any other requirements.\n \nreply",
+      "The \"richness\" definition also seemed hand wavey to me so I looked at the referenced paper. The actual definition of \"richness\" of an algorithm is that for any arbitrary partition P of your original data (singletons, one cluster, etc), there is a distance function on the data, which when used in the clustering algorithm, produces P.\n \nreply",
+      "A cute and thought-provoking theorem for sure, but arguably none of the three given criteria for clustering are well motivated, so the result is much less relevant than usually claimed.- scale-invariance: stretching data along some dimensions should not change clustering.This is clearly not true:  . . . (three well-spaced spots) may be reasonably seen as three clusters, whereas ||| (three nearby elongated bars) not.- richness: all groupings must be reachable.Also not quite true, both of the two cases: (1) all clusters are singleton points and (2) a single cluster that contains all points, mean the same: no useful cluster structure found. So it is enough if one of these groupings are reachable, and not both.- consistency: increasing inter-cluster differences and decreasing intra-cluster differences should not change clustering.Also not quite true: suppose we have 9 clusters:  . . .\n  . . .\n  . . .\n\nnow move the points so that the columns get further apart, at some point we will get:\n|  |  |, where 3 clusters are more reasonable.\n \nreply",
+      "Actually, scale-invariance only refers to scaling all dimensions by the same scalar (this is more clearly specificed in the paper linked by the article, page 3). For arbitrary scaling on each coordinate, of course you're correct, it's impossible to have a clustering algorithm that is invariant for such transformations (e.g., the 6-point group ::: may look like either 2 or 3 clusters, depending on whether it's stretched horizontally or vertically).As for your last two points, I believe I agree! It seems that in the counterexample you give for consistency, some notion of scale-invariance is implicitly assumed -- perhaps this connection plays some role in the theorem's proof (which I haven't read).This reminds me a bit of Arrow's impossibility theorem for voting, which similarly has questionable premises.\n \nreply",
+      "Sounds like Richness is an index in SQL terms.  Would you agree?\n \nreply"
+    ],
+    "link": "https://blog.codingconfessions.com/p/the-cap-theorem-of-clustering",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Sub-pixel distance transform (2023) (acko.net)",
+    "points": 94,
+    "submitter": "ChadNauseam",
+    "submit_time": "2024-12-26T20:48:01 1735246081",
+    "num_comments": 13,
+    "comments_url": "https://news.ycombinator.com/item?id=42517685",
+    "comments": [
+      "Discussed at the time:Sub-pixel distance transform - https://news.ycombinator.com/item?id=36809404 - July 2023 (31 comments)\n \nreply",
+      "> some of the established practice on generating SDFs from masks is incorrectSDFs are for some reason riddled with false beliefs. Earlier this year it drove me nuts to learn that boolean operations for SDFs are not correct\n \nreply",
+      "How would you even do a boolean operation over two distances ?\n \nreply",
+      "Inigo Quilez (who is basically the CEO of SDFs in my book) has a page on this: https://iquilezles.org/articles/interiordistance/.The goal isn't boolean operations over distances themselves, because as you point out that makes no sense. What you often want though is boolean operations over the surfaces the functions are returning the distance to. For example, you have one function that gives the distance to the surface of a sphere, and another that gives the distance to the surface of a cube, and you want to AND them, to get a function that gives you the distance to whichever surface is closer. That explanation probably doesn't make any sense, so just check out the page I linked which has some great visualizations.\n \nreply",
+      "> boolean operations for SDFs are not correctThey're not?\n \nreply",
+      "They return approximations which can be very slow to iterate over depending on how far off of the actual value they are.\n \nreply",
+      "I mentioned it in another comment, but Inigo Quilez has a page on this: https://iquilezles.org/articles/sdfxor/.\n \nreply",
+      "What do you mean by \"boolean operations for SDFs are not correct\"?\n \nreply",
+      "Most of them are approximations instead of exact, so they can produce incorrect SDFs.\n \nreply",
+      "I've not seen \"Grumpy wizards make toxic brew for the evil queen and jack\" before. Is suppose to be a pangram?I see no H.Edit: oh wow. I missed that one.\n \nreply"
+    ],
+    "link": "https://acko.net/blog/subpixel-distance-transform/",
+    "first_paragraph": "This page includes diagrams in WebGPU, which has limited browser support. For the full\u00a0experience, use Chrome on Windows or Mac, or a developer build on other\u00a0platforms.In this post I will describe Use.GPU's text rendering, which uses a bespoke approach to Signed Distance Fields (SDFs). This was borne out of necessity: while SDF text is pretty common on GPUs, some of the established practice on generating SDFs from masks is incorrect, and some libraries get it right only by accident. So this will be a deep dive from first principles, about the nuances of subpixels.The idea behind SDFs is quite simple. To draw a crisp, anti-aliased shape at any size, you start from a field or image that records the distance to the shape's edge at every point, as a gradient. Lighter grays are inside, darker grays are outside. This can be a lower resolution than the target.Then you increase the contrast until the gradient is exactly 1 pixel wide at the target size. You can sample it to get a perfectly ant"
+  },
+  {
+    "title": "A Tongue-in-Cheek Look Back at Broderbund's 'The Print Shop' (theprintshop.club)",
+    "points": 12,
+    "submitter": "mikerg87",
+    "submit_time": "2024-12-26T23:53:52 1735257232",
+    "num_comments": 5,
+    "comments_url": "https://news.ycombinator.com/item?id=42518808",
+    "comments": [
+      "I had The Print Shop Deluxe and remember thinking it was the future, and that we woull all be making our own holiday cards, signs, etc. in no time. Every holiday, I'm amazed that everyone I know (including me) is now back to using store-bought cards. I was surprised to just find out that there is a modern version, though it is Windows-only.\n \nreply",
+      "I remember the Print Shop as a kid! Yah I guess specialization won out. We don't even have to see our holiday cards now. Upload a photoshopped picture and mail merge and start getting compliments from friends and family a week later.\n \nreply",
+      "One of the most useful pieces of software of all time. You couldn't go far without seeing a mini banner made in Print Shop.\n \nreply",
+      "Print Shop is what we used in my 1994 elementary school \"special topics\" class to do the student newspaper. One of the factoids was like, \"the world record for balancing golf balls on top of each other is 8\" and the person making that part of the paper inserted and visually stacked all 8 golf balls, and I remember thinking, \"this is so cool!\"What a world!\n \nreply",
+      "The Print Shop and Bannermania have been extremely popular in Turkey in the 80\u2019s and 90\u2019s.\n \nreply"
+    ],
+    "link": "https://theprintshop.club/2021/07/12/a-tongue-in-cheek-look-back-at-broderbunds-the-print-shop/",
+    "first_paragraph": "The Print Shop ClubIn the early 1980s, if you wanted posters to advertise a yard sale or a party, your options were pretty limited.You could get some blank sheets of paper and some crayons or felt markers for the whole do-it-yourself experience, which was cheap but unless you were a professional illustrator the results were bound to leave something to be desired, if not be downright embarrassing. Otherwise you could get the local printer to do it but it wasn\u2019t going to be very cost-effective, especially in such a small quantity. Each poster could end up running you the same price as a Big Mac \u2013 or even a whole Meal Deal \u2013 and with that kind of overhead it could make the whole yard sale endeavour smell much less appetizing. And so, usually it was back to the felt markers or whatever else you could find lying around the house, and being the tightwad you were you would not-so-happily contribute an additional indignity to the ever-growing mountain of your own personal shame, because you wa"
+  },
+  {
+    "title": "Write Your Own Virtual Machine (2022) (jmeiners.com)",
+    "points": 122,
+    "submitter": "sebg",
+    "submit_time": "2024-12-26T19:30:18 1735241418",
+    "num_comments": 19,
+    "comments_url": "https://news.ycombinator.com/item?id=42517164",
+    "comments": [
+      "As a teenager I took an intro CS class at a community college, and the instructor had us design a simple cpu instruction set, and write our own VM and assembler that worked and let me write and run assembly programs. It was shockingly easy, and it was amazing how much is demystified computers for me.I feel like one could learn every level of computing this way- from designing a real cpu for a FPGA, to writing a simple OS and programs that run on it. This stuff is all shockingly simple if you just want it to work and don\u2019t need all of the extra performance and security modern computing needs.\n \nreply",
+      "Our CS 101 class had such a system. Simple computer/assembler written in BASIC on the PDP.One of the assignments was to do a simple multiply (i.e. add in a loop).Rather than do that, my friend simply altered the program and created a new MUL command.The teacher was not amused.\n \nreply",
+      "Teachers don't want extra work.My first 360 assembler class our first assignment: add two numbers, fault, print the crashdump and circle the answer to the ADD in the printout.I wrote an RPN calculator, had it do a series of calculations and print the result. Turned that in.The teacher wrote on it \"You have 24 hours to turn in the required assignment\"\n \nreply",
+      "That sounds like a fun class! It sounds very similar to https://www.nand2tetris.org/ or Charles Petzold's book \"Code\".\n \nreply",
+      "I think once you move from early fantasy CPUs to early CPUs in production such as 80286, the complexity immediately moves up drastically. IIRC it involves at least memory segmentation,  protected mode (MMU).\n \nreply",
+      "True enough, but having designed a \u201cfantasy cpu\u201d gives you a better frame of reference for understanding the more complex features of a cpu (privilege levels, memory segmentation, virtual addresses, cache hierarchy, etc.)I often feel like those who haven\u2019t done the exercise of understanding the ISA of a \u201cfantasy cpu\u201d have a really hard time understanding those more advanced features.I guess all I am saying is that learning the \u201cfantasy cpu\u201d still has value even if everything else in the real world is more complex.Walking before running and all that.\n \nreply",
+      "I've been doing some planning for a 24-bit fantasy CPU,  my plan is to make it pretty baroque.  For instance it has some instructions to do things like unpack UTF-8 strings into chars, do alpha compositing, etc.  The CPU part looks like a strange mainframe that didn't quite get built into the 1970s and it is coupled to a video system that would make a Neo-Geo blush.\n \nreply",
+      "agreed! A fantasy CPU is good for the first project.\n \nreply",
+      "80286 is the PHP of CPUs.A wonderfully different early CPU with plenty of existing software is the https://en.wikipedia.org/wiki/RCA_1802 which was a target of the https://en.wikipedia.org/wiki/CHIP-8 interpreter.\n \nreply",
+      "the 80286 has its own problems/inessential complexityif you look at this from the riscv angle, moving from \"u-mode only vm that doesn't use paging under the hood\" to \"u+s-mode vm with sv39\" isn't an enormous jump in complexity imoi think i might teach it starting as like, \"sv21\" (page tables aren't nested), then pose real sv39 and the tree structure as the solution to making a sparse mapping over 512GiBthen moving on to the idea of having a TLB is simple, especially if students have already been introduced to hashtables\n \nreply"
+    ],
+    "link": "https://www.jmeiners.com/lc3-vm/",
+    "first_paragraph": "By: Justin Meiners and Ryan PendletonView the final code and other resources in the GitHub repo.In this tutorial, I will teach you how to write your own virtual machine (VM) that can run assembly language programs, such as my friend\u2019s 2048 or my Roguelike. If you know how to program, but would like to gain a deeper understanding of what is going on inside a computer and better understand how programming languages work, then this project is for you. Writing your own VM may sound a little scary, but I promise that you will find it to be surprisingly simple and enlightening.The final code is about 250 lines of C (unix, windows).\nAll you need to know is how to read basic C or C++ and how to do binary arithmetic.Note: This tutorial is a literate program.\nThis means you are reading the source code right now!\nEach piece of code from the VM project will be shown and explained thoroughly, so you can be sure nothing is left out.\nThe final code was created by \u201ctangling\u201d the blocks of code togethe"
+  },
+  {
+    "title": "A Tour of WebAuthn (imperialviolet.org)",
+    "points": 146,
+    "submitter": "caust1c",
+    "submit_time": "2024-12-26T18:27:49 1735237669",
+    "num_comments": 53,
+    "comments_url": "https://news.ycombinator.com/item?id=42516800",
+    "comments": [
+      "There are some hairy edge cases during registration that many get wrong. (At least GitHub and google  had this bug) that if create() returns but the passkey never reaches the server due to bad networking conditions that your password manager thinks it can log in but the server never recorded the passkey for the user. Basically there is no transactionality and you can get in a split brain situation where your password manager and your server don't agree and it's very confusing for end users.https://github.com/w3c/webauthn/issues/2038They apparently came up with a fix for this using something called Signals API but I don't think any browser implemented that yet.Just wanted to highlight that this part of the UX is hairy and hard to get right\n \nreply",
+      "Chrome on desktop did: https://developer.chrome.com/docs/identity/webauthn-signal-a...\n \nreply",
+      "Looks like an amazing resource for webauthn. Currently diving into this so it comes at a nice time for me.But it's also great advertising against WebAuthn. Hard to believe that this kind of complexity is needed, but as with OpenID Connect it feels like enterprise  interests are running the ship, not end-users. Ease of implementation seems like a non-goal.\n \nreply",
+      "It interested me how quickly all of my auth methods started to include \"pick the right one of three presented numbers\" tests after TOTP got widespread. I'm guessing there is some replay method which they wanted to prevent? This is distinct from in protocol large random value challenges, it must be to ensure a Hooman, or very numerate dog is actually present.\n \nreply",
+      "Pick the right number is not secure (enough), unfortunately - MFA exhaustion leads to users hitting one of three at random in an attempt to \"make the notifications stop\" (that are, naturally, being spammed by the attacker with a password but no mfa).The attacker just has to spam them a few dozen times to get the victim to pick the right one at random and let the attacker in.This is why it's switched on good platforms to \"type in the number you see\", which mitigated this.\n \nreply",
+      "TOTP codes are phishable and repayable in real-time - both via web (visiting the wrong site which asks for a TOTP and relays it within a few seconds), and via social engineering over the phone (give us one of the codes to prove it's you and we can keep your account safe).Adding number matching or similar helps ensure that the same user is initiating the session as is approving it - an issue when people discovered that Microsoft (among others) would do push messages to authenticate a login, and that users (if spammed late at night with constant requests), would often eventually hit allow to stop the notifications.\n \nreply",
+      "I've always wanted to write a serverless OIDC provider/SAML IdP but got stymied by the WebAuthn standards, which don't seem to be written for normal people.  :(  But this e-book looks like it might have enough actual code interleaved with exposition to serve as more than just a high-level intro.\n \nreply",
+      "Adam Langley is probably one of the most gifted teachers when it comes to explaining cryptography concepts.  Very clear, concise, precise, and makes it simple enough for me to follow without getting my neurons all knotted up.\n \nreply",
+      "Agreed, I implemented TLS key pinning for a project at Okta using one of Adam's blog posts\n \nreply",
+      "OIDC providers are surprisingly NOT complicated! I created one to implement single sign-on with AWS, and it ended up being only around 200 lines of code in Go. All you need to do is create a JSON blob that is signed by a public key that is known to the consumer of the IDP.I'll need to do a write-up for it.\n \nreply"
+    ],
+    "link": "https://www.imperialviolet.org/tourofwebauthn/tourofwebauthn.html",
+    "first_paragraph": "This book was distributed at the FIDO Authenticate conference in\n2024. Its intended format was as a PDF, which you can find here.The following is the contents of the PDF converted to HTML.Adam Langley2024-12-23Passwords are rubbish.If you\u2019re reading this book then hopefully you\u2019re already on board\nwith this idea, but let\u2019s recap anyway.The typical practice with passwords is to remember a few different\nones and re-use them widely. (Password managers support generating\nrandom passwords, but people mostly don\u2019t.) Sites must store hashes of\nthese passwords to recognize them, but most passwords have too little\nentropy to resist brute-forcing when the hashes leak. (The website\nhaveibeenpwned.com now has records of about 13.5 billion accounts that\nhave been found in account database leaks from nearly 800 websites.)When a password database leaks, not only can any successfully cracked\npasswords be used immediately to sign in to that site but, because of\npassword re-use, those users\u2019 accounts on"
+  },
+  {
+    "title": "A Simple ELF (4zm.org)",
+    "points": 146,
+    "submitter": "signa11",
+    "submit_time": "2024-12-26T18:10:23 1735236623",
+    "num_comments": 39,
+    "comments_url": "https://news.ycombinator.com/item?id=42516697",
+    "comments": [
+      "I haven't done a proper write-up yet but this is my current technique for emitting minimal ELF files written in freestanding C:1. hand-written minimal ELF headers, with enough asm to do `_exit(main(argc, argv))`: https://github.com/DavidBuchanan314/kurl/blob/main/golfed/el... (currently only implemented for aarch64)2. \"Linux Syscall Support\" library for conveniently making raw syscalls from C: https://chromium.googlesource.com/linux-syscall-support/3. To avoid custom linker scripts (which I hate with a passion), I embed my hand-crafted ELF within a regular ELF, and slice it out at the end (using a python script). The \"container\" ELF is a regular full-fat ELF, potentially including working debug symbols, but the inner ELF has none of the cruft.Using this technique, I wrote a barely-functional TLS1.3 client that fits in ~3.5KB (see the rest of repo from the first link)\n \nreply",
+      "The Linux kernel source tree has nolibc [1], a header-only C standard library implementation that is about as barebones and paper-thin as it gets and is the next step up from a pure freestanding environment as shown in this article. I've used it to create a tiny but working program that prints out the ASCII table [2] as part of my Ghidra extension test suite.[1] https://github.com/torvalds/linux/tree/master/tools/include/...[2] https://github.com/boricj/ghidra-delinker-extension/tree/mas...\n \nreply",
+      "If you think this sort of thing is fun, you'll enjoy this: https://github.com/jcalvinowens/asmhttpd/blob/master/asmhttp...It's a webserver written in x86 assembler, which makes raw syscalls. It has no functions, and unmaps the stack so it uses only one 4KB page of memory at runtime.\n \nreply",
+      "I love articles like this. If you want to see a tutorial on how you can take this a step further, by creating a tiny ELF file that runs on Linux, FreeBSD, NetBSD, and OpenBSD 7.3 then check out https://justine.lol/sizetricks/#elf\n \nreply",
+      "I would also recommend the legendary Teensy Files:https://www.muppetlabs.com/~breadbox/software/tiny/They sparked my interest in ELF and freestanding programs.\n \nreply",
+      "If anyone's interested, last year I replicated this exercise for an x86-64 Linux executable [0], and also golfed a Hello World as small as I could. I ended up using a little-known pattern (an ET_DYN executable with no interpreter, normally only used for the ld.so binary) to shave off more bytes than anyone else who had tried it, to the best of my knowledge.[0] https://tmpout.sh/3/22.html\n \nreply",
+      "And Chris Wellons' \"A Magnetized Needle and a Steady Hand,\" detailing how to build an ELF implementation of 'true' using nothing more than 'echo' or 'printf': https://nullprogram.com/blog/2016/11/17/\n \nreply",
+      "Huge fan of that blog and its author!\n \nreply",
+      "For 32-bit x86 (i386 and i686), I've written a libc and a toolchain to.automate this: https://github.com/pts/minilibc686 . It can use mainstream free C compilers (GCC, Clang, OpenWatcom cc386, TinyCC and PCC) and assemblers (GNU as and NASM) out of the box.A printf-hello-world is about 1 KiB. A write-hello-world (syscalls only) is less than 200 bytes. Assembly programming skills not needed to use it.\n \nreply",
+      "A while ago, I created an interactive explanation of the different parts of a minimal ELF file: https://scratchpad.avikdas.com/elf-explanation/elf-explanati...I wrote this page for my own compiler that I'm working on, but I think it would be a good complement to this article. Note that the page is not that great on mobile, the extra real estate on desktop really helps.\n \nreply"
+    ],
+    "link": "https://4zm.org/2024/12/25/a-simple-elf.html",
+    "first_paragraph": "Let's write a simple program for Linux. How hard can it be? Well, simple is the opposite of complex, not of hard, and it is surprisingly hard to create something simple. What is left when we get rid of the complexity from the standard library, all the modern security features, debugging information, and error handling mechanisms?\u2022  \u2022  \u2022Let's start with something complex:Wait, what?! It doesn't look very complex, does it... Hmm, let's compile it and take a look:Still looks pretty simple, right? Wrong! While this might be familiar territory and easy to comprehend, the program is far from simple. Let's take a look behind the curtain.That's a lot of symbols! Actually, as far as symbol tables go, this one is quite modest. Any non-trivial program will have many more symbols, but still, what are they all for? We're just printing a string!We recognize our main function in the .text segment at address 0x1149. But where is the printf function?It turns out that for simple cases, where there is no"
+  },
+  {
+    "title": "Write a Shell in C (2015) (brennan.io)",
+    "points": 63,
+    "submitter": "sebg",
+    "submit_time": "2024-12-26T19:53:39 1735242819",
+    "num_comments": 5,
+    "comments_url": "https://news.ycombinator.com/item?id=42517303",
+    "comments": [
+      "Honestly this was one of the most influential pieces of writing I've ever read. Back in the day this opened up a lot of the implementation details on interpreters and C for me. It quite literally helped \"get\" how programs are designed and written.I found this piece around eighth grade and I'm very glad I did! :-)\n \nreply",
+      "For people who are interested in this stuff, I really recommend just getting a copy of Advanced Programming in the UNIX Environment and flipping through all (or most) of it. Pretty de-mystifying (and a good argument for caring about what OS you use!).Then you can pick up some book on shells (Effective Linux at the Command Line is one I'm going through right now), and you can piece a lot of it together.There's no magic, just a combo of decent ideas working together. But no single idea is hard to implement. Maybe just hard to come up with from scratch.\n \nreply",
+      "Related. Others?Write a Shell in C - https://news.ycombinator.com/item?id=26126010 - Feb 2021 (80 comments)Write a Shell in C (2015) - https://news.ycombinator.com/item?id=13112589 - Dec 2016 (68 comments)Write a Shell in C - https://news.ycombinator.com/item?id=8907392 - Jan 2015 (8 comments)\n \nreply",
+      "I wrote a toy shell last summer and this was one of the pieces I referred to most.Writing the beginnings of a shell is surprisingly easy. fork() and exec() do all the heavy lifting. I would recommend it as a great systems programming exercise.\n \nreply",
+      "The glibc manual has a section about writing a job control shell: https://www.gnu.org/software/libc/manual/html_mono/libc.html...\n \nreply"
+    ],
+    "link": "https://brennan.io/2015/01/16/write-a-shell-in-c/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Show HN: I've made a Monte-Carlo raytracer for glTF scenes in WebGPU (github.com/lisyarus)",
+    "points": 87,
+    "submitter": "lisyarus",
+    "submit_time": "2024-12-26T17:24:28 1735233868",
+    "num_comments": 31,
+    "comments_url": "https://news.ycombinator.com/item?id=42516433",
+    "comments": [
+      "Very cool. I did a similar project with wgpu in Rust - https://github.com/bezdomniy/Rengin\nnice to find your projects to see where I can improve!\n \nreply",
+      "It's a mega-kernel, so you'll get poor occupancy past the first bounce. A better strategy is to shoot, sort, and repeat, which then also allows you to squeeze in an adaptive sampler in the middle.> // No idea where negative values come from :(I don't know, but:> newRay.origin += sign(dot(newRay.direction, geometryNormal)) * geometryNormal * 1e-4;The new origin should be along the reflected ray, not along the direction of the normal. This line basically adds the normal (with a sign) to the origin (intersection point), which seems odd.Poor's man way to find where the negatives come from is to max(0,...) stuff until you find it.\n \nreply",
+      "> A better strategy is to shoot, sort, and repeatDo we have good sorting strategy whose costs are amortized yet? Meister 2020 (https://meistdan.github.io/publications/raysorting/paper.pdf) shows that the hard part is actually to hide the cost of the sorting.>  squeeze in an adaptive sampler in the middle.\nCan you expand on that? How does that work? I only know of adaptive sampling in screen space where you shoot more or less rays to certain pixels based on their estimated variance so far.\n \nreply",
+      "> It's a mega-kernel, so you'll get poor occupancy past the first bounceSure! If you look into the to-do list, there's a \"wavefront path tracer\" entry :)> new origin should be along the reflected rayI've found that doing it the way I'm doing it works better for preventing self-intersections. Might be worth investigating, though.\n \nreply",
+      "It probably works better when the reflected ray is almost tangent to the surface. But that should be an epsilon case.\n \nreply",
+      "Do you have a link that runs in the browser?\n \nreply",
+      "Nope, this project is desktop-only\n \nreply",
+      "You should try building it with Emscripten. SDL2 is supported.\n \nreply",
+      "> \"GPU \"software\" raytracer\"> WebGPU> this project is desktop-onlyBoss, I am confused, boss.\n \nreply",
+      "I'm using WebGPU as a nice modern graphics API that is at the same time much more user-friendly and easier to use compared to e.g. Vulkan. I'm using a desktop implementation of WebGPU called wgpu, via it's C bindings called wgpu-native.My browser doesn't support WebGPU properly yet, so I don't really care about running this thing in browser.\n \nreply"
+    ],
+    "link": "https://github.com/lisyarus/webgpu-raytracer",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A software raytracing engine written in WebGPU\n      See more screenshots in the screenshots directory.This is a GPU \"software\" raytracer (i.e. using manual ray-scene intersections and not RTX) written using the WebGPU API. It expects a single glTF scene as input. It supports flat-colored and textured materials with albedo, normal, and material maps. It doesn't support refraction (yet).There are a bunch of test scenes in the test_scenes directory.It uses wgpu-native WebGPU implementation, and SDL2 to create a window to render to.To run the program, first build it (see instructions below), then run it with a single glTF scene in the command arguments. For example, if you've built the project in a build directory inside the project root, then you can run ./webgpu-raytracer ../test_scenes/bunny/bunny_100k.gltf.An optional second comman"
+  },
+  {
     "title": "Cognitive load is what matters (minds.md)",
-    "points": 631,
+    "points": 1560,
     "submitter": "zdw",
     "submit_time": "2024-12-22T22:18:12 1734905892",
-    "num_comments": 258,
+    "num_comments": 653,
     "comments_url": "https://news.ycombinator.com/item?id=42489645",
     "comments": [
-      "Aligning the computer's and the humans' thinking processes.  Cognitive load is exceptionally important - one of the few uncontravenable facts in human psychology is that healthy human short term memory has a capacity of 5 items plus or minus 2.  So reliably 5.  And thus the maximum number of thinking balls you should be juggling at one time.Which then leads to thinking about designs that lead to the management of cognitive load - thus the nature of the balls changes due to things like chunking and context.  Which are theoretical constructs that came out of that memory research.So yes, this is pretty much principal zero -  cognitive load and understanding the theory underneath it are the most important thing - and are closely related to the two hard problems in computer science (cache invalidation, naming things and off by one errors).Thank you for attending my TED talk\n \nreply",
       "I've been thinking about the notion of \"reasoning locally\" recently. Enabling local reasoning is the only way to scale software development past some number of lines or complexity. When reasoning locally, one only needs to understand a small subset, hundreds of lines, to safely make changes in programs comprising millions.I find types helps massively with this. A function with well-constrained inputs and outputs is easy to reason about. One does not have to look at other code to do it. However, programs that leverage types effectively are sometimes construed as having high cognitive load, when it in fact they have low load. For example a type like `Option<HashSet<UserId>>` carries a lot of information(has low load): we might not have a set of user ids, but if we do they are unique.The discourse around small functions and the clean code guidelines is fascinating. The complaint is usually, as in this post, that having to go read all the small functions adds cognitive load and makes reading the code harder. Proponents of small functions argue that you don't have to read more than the signature and name of a function to understand what it does; it's obvious what a function called last that takes a list and returns an optional value does. If someone feels compelled to read every function either the functions are poor abstractions or the reader has trust issues, which may be warranted. Of course, all abstractions are leaky, but perhaps some initial trust in `last` is warranted.\n \nreply",
       "> A function with well-constrained inputs and outputs is easy to reason about.It's quite easy to imagine a well factored codebase where all things are neatly separated. If you've written something a thousand times, like user authentication, then you can plan out exactly how you want to separate everything. But user authentication isn't where things get messy.The messy stuff is where the real world concepts need to be transformed into code. Where just the concepts need to be whiteboarded and explained because they're unintuitive and confusing. Then these unintuitive and confusing concepts need to somehow described to the computer.Oh, and it needs to be fast. So not only do you need to model an unintuitive and confusing concept - you also need to write it in a convoluted way because, for various annoying reasons, that's what performs best on the computer.Oh, and in 6 months the unintuitive and confusing concept needs to be completely changed into - surprise, surprise - a completely different but equally unintuitive and confusing concept.Oh, and you can't rewrite everything because there isn't enough time or budget to do that. You have to minimally change the current uintuitive and confusing thing so that it works like the new unintuitive and confusing thing is supposed to work.Oh, and the original author doesn't work here anymore so no one's here to explain the original code's intent.\n \nreply",
-      "> Oh, and in 6 months the unintuitive and confusing concept needs to be completely changed into - surprise, surprise - a completely different but equally unintuitive and confusing concept.But you have to keep the old way of working exactly the same, and the data can't change, but also needs to work in the new version as well.  Actually show someone there's two modes, and offer to migrate their data to version 2?  No way - that's confusing!  Show different UI in different areas with the same data that behaves differently based on ... undisclosed-to-the-user criteria.  That will be far less confusing.\n \nreply",
-      "As a user 'intuitive' UIs that hide a bunch of undisclosed but relevant complexity send me into a frothing rage.\n \nreply",
-      "I'm trying to learn acceptance: how not to get so angry at despicable UIs.Although I admit I'm kinda failing. My minor successes have been by avoiding software: e.g. giving up programming (broken tools and broken targets were a major frustration) and getting rid of Windows.\n \nreply",
-      "Having given up programming, what do you do now?\n \nreply",
-      "Plus to everything said. It's an everyday life of \"maintainer\", picking the next battle to pick the best way to avoid sinking deeper and defending the story that exactly \"this\" is the next refactoring project. All that while balancing different factors as you mention to actually believe oneself, because there are countless of paths..\n \nreply",
-      "This puts things really well. I\u2019ll add into it that between the first white boarding session and the first working MVP there\u2019ll be plenty of stakeholders who change their mind, find new info, or ask for updates that may break the original plan\n \nreply",
-      "It can be done. Sometimes.I am so proud and happy, when I can make a seemingly complicated change quickly, because the architecture was well designed and everthing neatly seperated.Most of the time though, it is exactly like you described. Or randalls good code comic:https://xkcd.com/844/Allmost too painful to be funny, when you know the pain is avoidable in theory.Still, it should not be an excuse to be lazy and just write bad code by default. Developing the habit of making everything as clean, structured and clear as possible allways pays of. Especially if that code, that was supposed to be a quick and dirty throw away code experiment somehow ended up being used and 2 years later you suddenly need to debug it.\n(I just experienced that joy)\n \nreply"
+      "> Oh, and the original author doesn't work here anymore so no one's here to explain the original code's intent.To be fair, even if I still work there I don't know that I'm going to be of much help 6 months later other than a \"oh yeah, I remember that had some weird business requirements\"\n \nreply",
+      "Might I recommend writing those weird business requirements down as comments instead of just hoping someone will guess them six months down the line?\n \nreply",
+      "So even if comments are flawlessly updated they are not a silver bullet. Not everyone are good at explaining confusing concepts in plain English so worst case you have confusing code and a comment that is 90% accurate but describe one detail in a way that doesn't really match what the code says.  This will make you question if you have understood what the code does and it will take time and effort to convince yourself that code is in fact deterministic and unsurprising.(but most often the comment is is just not updated or updated along with the code but without full understanding, which is what caused the bug that is the reason you are looking at the code in question)\n \nreply",
+      "> So even if comments are flawlessly updated they are not a silver bullet.This \"has to be perfect in perpetuity or it is of no value\" mentality I don't find helpful.Be kind to FutureDev.  Comment the weird \"why\"s.  If you need to change it later, adjust the comment.\n \nreply",
+      "Thing is, good documentation has to be part of the company's process. eg, a QA engineer would have to be responsible for checking the documentation and certifying it. Costs money and time.You can't expect developers, already working 60 hour weeks to meet impossible deadlines, to spend another 15 hours altruistically documenting their code.\n \nreply",
+      "Any documentation at all > no documentation, 99 times out of 100. And requiring your people to work 60 hours/week is symptomatic of larger problems.",
+      "Every line of documentation is a line of code and is a liability as it will rot if not maintained. That\u2019s why you should be writing self documenting code as much as possible that\u2019s obviates the need for documentation. But unlike code, stale/wrong doc will not break tests.Spending 15 hours documenting the code is something no leader should be asking of engineering to do. You should not need to do it. Go back and write better code, one That\u2019s more clear at a glance, easily readable, uses small functions written at a comparable level of abstraction, uses clear, semantically meaningful names.Before you write a line of documentation, you should ask yourself whether the weird thing you were about to document can be expressed directly in the name of the method of the variable instead. Only once you have exhausted all the options for expressing the concept in  code, then, only then, are you allowed to add the line of the documentation regarding it.",
+      "Don't let perfect be the enemy of good.\"We don't write any documentation because we can't afford a dedicated QA process to certify it\" <- that's dumb.\n \nreply"
     ],
     "link": "https://minds.md/zakirullin/cognitive",
-    "first_paragraph": "The logo image was taken from Reddit.It is a living document, last update: November 2024. Your contributions are welcome! There are so many buzzwords and best practices out there, but let's focus on something more fundamental. What matters is the amount of confusion developers feel when going through the code.Confusion costs time and money. Confusion is caused by high cognitive load. It's not some fancy abstract concept, but rather a fundamental human constraint.Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code. Cognitive load is how much a developer needs to think in order to complete a task.When reading code, you put things like values of variables, control flow logic and call sequences into your head. The average person can hold roughly four such chunks in working memory. Once the cognitive load reaches this threshold, it becomes much harder to understand thi"
+    "first_paragraph": "The logo image was taken from Reddit.It is a living document, last update: December 2024. Your contributions are welcome! There are so many buzzwords and best practices out there, but most of them have failed. We need something more fundamental, something that can't be wrong.Sometimes we feel confusion going through the code. Confusion costs time and money. Confusion is caused by high cognitive load. It's not some fancy abstract concept, but rather a fundamental human constraint. It's not imagined, it's there and we can feel it.Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code. Cognitive load is how much a developer needs to think in order to complete a task.When reading code, you put things like values of variables, control flow logic and call sequences into your head. The average person can hold roughly four such chunks in working memory. Once the cognitive lo"
   },
   {
-    "title": "Portspoof: Emulate a valid service on all 65535 TCP ports (github.com/drk1wi)",
-    "points": 160,
-    "submitter": "nateb2022",
-    "submit_time": "2024-12-25T17:44:04 1735148644",
-    "num_comments": 59,
-    "comments_url": "https://news.ycombinator.com/item?id=42509953",
+    "title": "Gondwanaland: The search for a land before (human) time (australiangeographic.com.au)",
+    "points": 37,
+    "submitter": "bryanrasmussen",
+    "submit_time": "2024-12-26T17:39:10 1735234750",
+    "num_comments": 17,
+    "comments_url": "https://news.ycombinator.com/item?id=42516512",
     "comments": [
-      "It feels inevitable that computer security will continue evolving towards \"active defense\" typified by approaches like the above. Look at how complex and many-layered your immune system is, and consider that eventually your computer and/or network will resemble that as well.\n \nreply",
-      "IMO this is still a passive type of security through obfuscation. Active defence would be more like returning zip bombs to known intruders in order to crash the process.\n \nreply",
-      "Or a tar pit: https://github.com/skeeto/endlessh\n \nreply",
-      "IT is growing up gradually.  It's only had a few decades to worry about security and I've seen most of them.One day, IT will become time served but not today.\n \nreply",
-      "Interesting concept, am curious how this withstands community review and analysis.Bit puzzled though, by the statement made immediately after stating that it is GPL2: For commercial, legitimate applications, please contact the author for the appropriate licensing arrangements.Since the GPL2 doesn't permit restricting what others do with GPLd software, I don't think this statement is doing what the author hopes; they might want to consult a lawyer.(IANAL, etc., but there is nothing in there to prevent me, e.g., from building a business out of this, charging gazillions, and keeping it all for myself, provided I make the source available to my customers.)\n \nreply",
-      "Provided you make the source for any derivative works available to your customers.It\u2019s not uncommon that in situations where that\u2019s undesirable (e.g. a closed-source C library that statically links a GPL\u2019d project) that the library owner pays a fee for a separate license allowing that closed-source distribution.Also, this is sometimes done when it\u2019s not strictly legally necessary, either for risk avoidance or as a way to support the project in corporate environments where \u201clicensing fee\u201d gets waved through but \u201cdonation\u201d gets blocked.\n \nreply",
-      "I believe the this doesn't apply if you're using existing APIs or using GPL code as a library, otherwise many many corporate codebases would be forced to be open sourced.\n \nreply",
-      "GPL absolutely applies when using a library (unless a separate exception has been made).  Of course, the LGPL is often used for libraries when this isn't desired by the author.\n \nreply",
-      "> or using GPL code as a libraryNo. The copyleft nature still applies to libraries. That's why the LGPL exists. And the exception in the license for gcc for programs compiled by gcc.\n \nreply",
-      "Only if you distribute the binary/source of the GPLd library. You may build a non-GPL program that dynamically links with a GPL library and freely distribute it. As long as your program does not contain copyrightable code, you do not have to comply with the licence requirements, because you do not need a licence at all to do that. Same applies for static linking if you only distribute the source and require your users compile the program themselves.This is not limited to GPL, but applies to proprietary libraries as well. It's OK to require a proprietary library at runtime and you don't need a licence to do that. As long as you do not distribute some intellectual property, copyright law and its limitations are not applicable at all.This sounds quite assertive, so compulsory \"IANAL, this is just my interpretation\".\n \nreply"
+      "> \u201cThese rainforests were historically neglected by tourists and walkers in favour of supposedly more \u2018Australian\u2019 eucalypt forests,\u201dI don't think that's correct.  Lamington National Park, one of the mentioned rainforests, was gazetted in 1915 and has long been a mecca for walkers, tourists and bird watchers.  The O\u2019Reilly and Binna Burra guest houses have been there for almost 100 years.https://parks.desi.qld.gov.au/parks/lamington/about/centenar...\n \nreply",
+      "Would humans be able to live on earth 400m years ago if we time travelled back to Gondwanaland, considering the 7x CO2 and hot tropical climate?\n \nreply",
+      "Yes, sure. Just imagine being somewhere 5-10C warmer and a few hundred metres higher in elevation than where you are now.\n \nreply",
+      "I do see significant change from our current dependence on fossil fuels, but for argument\u2019s sake, what\u2019s the best case scenario for global warming and climate change? Could we create a super verdant earth epoch? What probability do our most advanced climate models have for such an outcome? And what\u2019s the economic cost of moving coastal populations and those in high risk zones to new cities designed from ground up using the latest thinking in urban planning? What\u2019s the cost benefit from high one off relocation costs to long term gains from smarter cities?\n \nreply",
+      "Thought this might be about Fastmail's Bron Gondwana\n \nreply",
+      "I find geology's power fascinating.A person was once able to surmise from geological features that India was once part of Africa.(He was resoundingly mocked of course.)\n \nreply",
+      "It is fascinating once we consider how little, both of technology and mobility scientists had in the past. To verify some little fact they had to wait months, years.\n \nreply",
+      "Also, from the distribution of lemurs.  Before plate tectonics this lead to the idea of the sunken continent of Lemuria, which has since migrated into weird science fantasy stories.\n \nreply",
+      "Ozs don't need to feel so isolated. Their continent is moving north towards China & will one day ram into it.\n \nreply",
+      "https://archive.is/ewwb1\n \nreply"
     ],
-    "link": "https://github.com/drk1wi/portspoof",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Portspoof\n      Portspoof software overview (https://drk1wi.github.io/portspoof/)** Short description:**The Portspoof program primary goal is to enhance OS security through a set of following techniques:All 65535 TCP ports are always openInstead of informing an attacker that a particular port is in a CLOSED or FILTERED state Portspoof will return SYN+ACK for every port connection attempt/As a result it is impractical to use stealth (SYN, ACK, etc.) port scanning against your system, since all ports are always reported as OPEN:Every open TCP port emulates a servicePortspoof has a huge database of dynamic service signatures, that will be used to generate fake banners and fool scanners.Scanning software usually tries to determine a service version that is running on an open port. Portspoof will respond to every service probe with a val"
-  },
-  {
-    "title": "I Thought I Found a Bug (os2museum.com)",
-    "points": 28,
-    "submitter": "MBCook",
-    "submit_time": "2024-12-25T19:55:07 1735156507",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.os2museum.com/wp/i-thought-i-found-a-bug/",
+    "link": "https://www.australiangeographic.com.au/topics/history-culture/2024/09/gondwanaland/",
     "first_paragraph": ""
   },
   {
-    "title": "Reads Causing Writes in Postgres (jesipow.com)",
-    "points": 33,
-    "submitter": "thunderbong",
-    "submit_time": "2024-12-22T10:24:07 1734863047",
-    "num_comments": 0,
-    "comments_url": "",
+    "title": "Differential Growth Addon for Blender (okunskiy.name)",
+    "points": 245,
+    "submitter": "kelseyfrog",
+    "submit_time": "2024-12-26T04:41:31 1735188091",
+    "num_comments": 29,
+    "comments_url": "https://news.ycombinator.com/item?id=42513157",
     "comments": [
-      "xxx"
+      "Blender is an amazing piece of software.A few years ago I asked myself \"Why spend hundreds of hours sucking at video games when I could spend the same time sucking at Blender?\"Since then I have spent many an enjoyable evening making terrible 3d models, some of which actually made it into a game. Apart from my lack of skill, there is no reason why somebody like me can't do world-class renders in a piece of software they downloaded for free. It isn't even that hard to use any more.\n \nreply",
+      "I just recently had this revelation! I a full time software dev who has dabbled in game dev for years, but i\u2019ve always given up on ideas because i can\u2019t make \u201cgood\u201d art/assets. just a couple of months ago it dawned on me that i love inept/amateurish/DIY/outsider art in most other mediums (except writing maybe) and decided to just put time into to awkward crappy looking models. and i love them! now i\u2019m just trying to create a distinctive shambolic aesthetic for my tiny games. it\u2019s so freeing.\n \nreply",
+      "\"distinctive shambolic aesthetic\", what a great phrase. I use the friend of every hack fraud - \"extreme stylization\" to cover a multitude of sins.Somebody actually nominated my interactive fiction game for a best graphics ribbon, which amused me no end.I have often thought that we spend too much time studying and trying to emulate the great artists, musicians, and writers. It is more productive to see what the mediocre talents are doing, how their works succeed, and try to copy their techniques. Even if you fail you will find your own voice and produce something distinctive.\n \nreply",
+      "I agree - one of those bits of software you can't believe is free. I've also done some pretty terrible modelling, even my doughnuts suck.\n \nreply",
+      "Those are the best kind!\n \nreply",
+      "Maybe also check out this free Blender geometry nodes differential grown add-on from the brilliant Alex Martinelli\u2026https://www.blendernation.com/2023/07/25/differential-growth...\n \nreply",
+      "I think a cool addition would be to add a light source, and inhibit growth when a vertex doesn't receives light.\n \nreply",
+      "Maybe also to inhibit growth when exposed to a saline environment?If this were recreated in Blender\u2019s geo nodes these functions would be relatively easy to add using the raycast node.\n \nreply",
+      "This is really cool, I'd echo other comments here that ask for a math explainer - I'd love to understand exactly what's going on under the hood.\n \nreply",
+      "https://inconvergent.net/generative/differential-line/\n \nreply"
     ],
-    "link": "https://jesipow.com/blog/postgres-reads-cause-writes/",
-    "first_paragraph": "2024-12-21It is good practice to regularly inspect the statements running in the hot path of your Postgres instance. One way to do this is to examine the pg_stat_statements view, which shows various statistics about the SQL statements executed by the Postgres server.Among many other interesting columns, you will find the shared_blks_dirtied and shared_blks_written columns. They keep track of how many blocks, Postgres' smallest unit of I/O, in the shared buffer cache are modified by a statement and (ultimately) written to disk.One observation you may make when inspecting the view is that SELECT queries show non-zero values in the shared_blks_written and shared_blks_dirtied columns. This seems counterintuitive at first as it indicates that a simple SELECT query, which you would expect to only read data, can in fact cause data to be written (keeping track of the statement statistics themselves is not what causes these writes).This article discusses two mechanisms, setting hint bits for tr"
+    "link": "https://boris.okunskiy.name/posts/blender-differential-growth",
+    "first_paragraph": "Latest Release \u00b7 Tutorial VideoThere\u2019s something inexplicably fascinating about the shapes and patterns occurring in nature.People have always been attracted to organic forms, as is evidenced by an endless number of various design elements found in human craft and art since prehistoric times; the \u201cMother Nature\u201d has always been a source of inspiration and symbolism for people throughout the globe. The desire to contemplate and reflect upon the organic processes seems to be an inherent part of human nature.In search for beauty people have come up with a large number of tools and ways to produce organic patterns.Today I\u2019m proud to introduce my humble contribution to the generative art ecosystem \u2014 Differential Growth Addon for Blender. Fully in-line with Blender Manifesto, it\u2019s open source, completely free to use and built with tons of love.A few examples follow.If you like what you see, please feel free to grab the latest release from GitHub. The star \ud83c\udf1f is also a great way to show your a"
   },
   {
-    "title": "Show HN: Super Snowflake Maker (supersnowflakemaker.com)",
-    "points": 33,
-    "submitter": "shalanah",
-    "submit_time": "2024-12-23T12:09:28 1734955768",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=42493832",
-    "comments": [
-      "A few years ago I saw a talk at a Math conference about some mathematical models for how the shapes of snowflakes come to be.I don't recall the details, but I believe one of them was even able to generate non-hexagonal snowflakes which happen under some circumstances.I've been hoping to create a website around one of these models for some time now.\n \nreply",
-      "That was really neat. Thank you!\n \nreply",
-      "Hugged to death.\n \nreply"
-    ],
-    "link": "https://supersnowflakemaker.com",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Server-Sent Events (SSE) Are Underrated (igorstechnoclub.com)",
-    "points": 119,
-    "submitter": "Igor_Wiwi",
-    "submit_time": "2024-12-25T21:35:55 1735162555",
-    "num_comments": 57,
-    "comments_url": "https://news.ycombinator.com/item?id=42511318",
-    "comments": [
-      "A while ago I created Mercure: an open pub-sub protocol built on top of SSE that is a replacement for WebSockets-based solutions such as Pusher. Mercure is now used by hundreds of apps in production.At the core of Mercure is the hub. It is a standalone component that maintains persistent SSE (HTTP) connections to the clients, and it exposes a very simple HTTP API that server apps and clients can use to publish. POSTed updates are broadcasted to all connected clients using SSE. This makes SSE usable even with technologies not able to maintain persistent connections such as PHP and many serverless providers.Mercure also adds nice features to SSE such as a JWT-based authorization mechanism, the ability to subscribe to several topics using a single connection, events history, automatic state reconciliation in case of network issue\u2026I maintain an open-source hub written in Go (technically, a module for the Caddy web server) and a SaaS version is also available.Docs and code are available on https://mercure.rocks\n \nreply",
-      "The site mentions battery-efficiency specifically. I'm curious what features does Mercure provide in that direction?\n \nreply",
-      "I utilized SSE when building automatic restart functionality[0] into Doppler's CLI. Our api server would send down an event whenever an application's secrets changed. The CLI would then fetch the latest secrets to inject into the application process. (I opted not to directly send the changed secrets via SSE as that would necessitate rechecking the access token that was used to establish the connection, lest we send changed secrets to a recently deauthorized client). I chose SSE over websockets because the latter required pulling in additional dependencies into our Golang application, and we truly only needed server->client communication.\n One issue we ran into that hasn't been discussed is HTTP timeouts. Some load balancers close an HTTP connection after a certain timeout (e.g. 1 hour) to prevent connection exhaustion. You can usually extend this timeout, but it has to be explicitly configured. We also found that our server had to send intermittent \"ping\" events to prevent either Cloudflare or Google Cloud Load Balancing from closing the connection, though I don't remember how frequently these were sent. Otherwise, SSE worked great for our use case.[0] https://docs.doppler.com/docs/automatic-restart\n \nreply",
-      "Generally you're going to want to send ping events pretty regularly (I'd default to every 15-30 seconds depending on application) whether you're using SSE, WebSockets, or something else. Otherwise if the server crashes the client might not know the connection is no longer live.\n \nreply",
-      "What do you do for mobile phones: using data/radio for pings would kill the battery?After locking the phone, how is the ping restarted when the phone is unlocked? Or backgrounding the browser/app?\n \nreply",
-      "Yeah with cloudflare you need to do it every 30 seconds as the timeout is is 60 seconds\n \nreply",
-      "Then why not do it every 59 seconds :)\n \nreply",
-      "I also used SSE 6 or so years ago, and had the same issue with out load balancer; a bit hacky but what I did was to set a timer that would send a single colon character (which is the comment delimiter IIRC) periodically to the client. Is that what you meant by \u201cping\u201d?\n \nreply",
-      "It doesn\u2019t mention the big drawback of SSE as spelled out in the MDN docs:\u201cWarning: When not used over HTTP/2, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is per browser and is set to a very low number (6).\u201d\n \nreply",
-      "One of my company's APIs uses SSE, and it's been a big support headache for us, because many people are being corporate firewalls that don't do HTTP/2 or HTTP/3, and people often open many tabs at the same time. It's unfortunately not possible to detect client-side whether the limit has been reached.Another drawback of SSE is lack of authorization header support. There are a few polyfills (like this one [1]) that simulate SSE over fetch/XHR, but it would be nice to not need to add the bloat.[1] https://github.com/EventSource/eventsource\n \nreply"
-    ],
-    "link": "https://igorstechnoclub.com/server-sent-events-sse-are-underrated/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Into CPS, Never to Return (bernsteinbear.com)",
-    "points": 56,
-    "submitter": "g0xA52A2A",
-    "submit_time": "2024-12-25T19:43:10 1735155790",
-    "num_comments": 19,
-    "comments_url": "https://news.ycombinator.com/item?id=42510696",
-    "comments": [
-      "In case anyone is wondering, \"when would I EVER use this (in hand-written code)?\", it's a trick that makes DSL (domain specific language) and small language implementation much easier. A great reference for this is Peter Norvig's Paradigms of Artificial Intelligence Programming, when he implements a subset of Prolog and bolsters the functionality using CPS[1].The second, although more\nobscure, is that you can use it in languages that do not have \"non-local exits\" to terminate a deeply nested computation early or return to an earlier point in the call stack.  For example, Clojure does not have nonlocal exits, as only the final form of the function is returned. However, using CPS, you can terminate the expression early and return to the original caller without executing the rest of the function. You probably only want to use this in specialized cases though or it may upset your team, they are tricky to debug.Lastly and probably most controversially, you can make an extensible \"if\" statement using CPS if you are in a dynamic language and you have no other tools to do so. Admittedly I do sometimes use this in ClojureScript.  This allows you to write \"append only\" code without continually growing the \"cond\". Again, most teams don't like this, so it depends on the circumstances, but might be\nnice to have in your back pocket if you need it.[1]: https://github.com/norvig/paip-lisp/blob/main/docs/chapter12...\n \nreply",
-      "I've also used it to make a function tail recursive, which is useful in languages with TCO.\n \nreply",
-      "It's also really helpful with defunctionalization; search \"defunctionalize the continuation\" for stuff on that\n \nreply",
-      "The author references [scrapscript](https://scrapscript.org/), hopefully we'll hear more about it.\n \nreply",
-      "Now that I'm back at a computer:* https://bernsteinbear.com/blog/scrapscript/* https://bernsteinbear.com/blog/scrapscript-baseline/* https://bernsteinbear.com/blog/scrapscript-tricks/* https://bernsteinbear.com/blog/type-inference/* https://bernsteinbear.com/blog/row-poly/and the repo for the main implementation: https://github.com/tekknolagi/scrapscript\n \nreply",
-      "See my other blog posts and GitHub if you would like some more!\n \nreply",
-      "I realize this is something I should probably know but I've never been able to pin down a definition nor have I used a language with this feature -- could you maybe explain what a \"content addressable language\" is and why that is important? It seems like it's really important but I have no idea why.  You explain it here[1] but it's somewhat brief. I realize it probably should be self-evident why it's important but it's not clicking for me.It's somewhat like when Jack Skelington is trying to explain the meaning of Christmas to the residents of Halloween Town[2] and somehow it hasn't stuck yet.[1]: https://scrapscript.org/#ContentAddressibleEverything[2]: https://youtu.be/l6QZUcRJw-A\n \nreply",
-      "To be clear, I am not Taylor and I did not come up with scrapscript! That website belongs to him and I'm just a random guy on the internet who emailed him and built an implementation.The way I think about it is kind of like software versions. Say you want to do some kind of reproducible software. You can write that your software depends on jazzinator==3.0.0 but that's kind of unsatisfying because it relies either on tools or people to make sure that versions are immutable. It also relies on jazzinator to specify its own dependencies pretty strictly. So maybe you end up inventing the concept of a lockfile to partially solve that problem, but you still have the issue of relying on a third party to not change things up on you.However, if you can address a library by a name that is computed from its code (a hash), things get interesting. You end up with this tree/DAG of dependencies where every dependency is immutable--you can't change the code without also changing the name. It's a Merkle DAG like Git. You do lose the ability to say things like \"above version 2.5\"... sort of.If you also build a ref or tag system (similar to Git refs), you can kinda do normal style versioning on top of this content addressable world. But again, that relies on someone or something (maybe your hash-based store) to keep a map point-version names to hash names.The other thing that's interesting with scrapscript in particular is since everything is addressable, you can use (sort of implicitly import/download) any value from any other program in a repository readable by you. But no scrapscript implementation fully does this yet, as far as I'm aware. For a fully working system, check out Unison.\n \nreply",
-      "Oh that is really fascinating, thank you. That has some really interesting implications for dependency management that I will have to think through. It sounds like that implies some really useful tree properties on dependency checking, like if the part of the program you are relying on matches a certain hash you don't need to check down the chain because you can be sure the rest of the nodes are as you expect.Much appreciated!\n \nreply",
-      "It\u2019s also useful in typed languages to introduce an existentially quantified type\n \nreply"
-    ],
-    "link": "https://bernsteinbear.com/blog/cps/",
-    "first_paragraph": "CPS, or continuation-passing style, is an intermediate representation for\nprograms, particularly functional programs. It\u2019s used in compilers for\nlanguages such as SML and Scheme.In CPS, there are two rules: first, that function/operator arguments must\nalways be trivial; second, that function calls do not return. From this, a\nlot falls out.In this post, we\u2019ll introduce CPS by building a simple (Plotkin1) CPS\ntransform from a small Scheme-like language. We\u2019ll sketch some optimizations on\nthe IR. Then we\u2019ll look at a couple of the common ways to actually compile the\nIR for execution.We have integers: 5We have some operations on the integers: (+ 1 2), (< 3 4) (returns 1 or 0)We can bind variables: (let ((x 1)) x) / (letrec ...) ?We can create single-parameter functions2: (lambda (x) (+ x 1))\nand they can close over variablesWe can call functions: (f x)We can branch: (if (< x y) x y) (where we have decided to use 0 and 1 as\nbooleans)We\u2019re going to implement a recursive function called cps i"
-  },
-  {
-    "title": "A new learning experience on MDN (developer.mozilla.org)",
-    "points": 112,
-    "submitter": "Vinnl",
-    "submit_time": "2024-12-23T12:36:03 1734957363",
-    "num_comments": 36,
-    "comments_url": "https://news.ycombinator.com/item?id=42493962",
-    "comments": [
-      "It doesn\u2019t look too great to be honest. It\u2019s quite verbose and gets steps out of order. It starts out with loading a font from Google Fonts. https://developer.mozilla.org/en-US/docs/Learn_web_developme...Where MDN used to excel and for now still does, reference documentation, is also showing cracks, due to the recent changes at Mozilla. A long time contributor gave up. https://github.com/mdn/content/pull/36294\n \nreply",
-      "> It starts out with loading a font from Google Fonts.Besides the steps order... My first impression is that it's taking someone who knows nothing, and conditioning them from step 1 to not even think about compromising a privacy-respecting, free and open Internet.  Your First Third-Party Tracker.  Your First Gratuitous Third-Party Dependency.A couple times they hit on copyright and licensing, however.  Which I approve of, but is also a corporate-friendly thing to emphasize.Another one:> To choose an image, go to [Google Images](https://www.google.com/imghp) and search for something suitable.If you have to name and link a search engine for the exercise, how about not endorsing a famously privacy-invading option, but instead have the student use a more privacy-respecting one?\n \nreply",
-      "> To choose an image, go to Google ImagesOr plug one of the many royalty-free photo sites like Unsplash or Pexels (and comes with the bonus of teaching people to consider copyrights when you publish a site).\n \nreply",
-      "And also those two sites you mentioned have higher quality and less clutter. A significant improvement in tool choice to what MDN suggested.Hopefully we can fix this via contribution.\n \nreply",
-      "I don\u2019t think either of those websites pay Mozilla millions of dollars. Maybe the more important lesson they\u2019re teaching is that money makes the world go round.\n \nreply",
-      "The search engine they linked to happens to provide a significant portion of Mozilla's revenue.\n \nreply",
-      "I have zero outside context on that pr but judging it purely by the actual written text in the comments it seems the mdn maintainer was bring far more mature than the contributor who ended up quitting. They both mention a lot of background in the comments themselves; what information is missing which would make the contributor seem more sympathetic? As matters stand, this doesn\u2019t appear as a loss for mdn.\n \nreply",
-      "100% agree. This is their contributions: https://github.com/mdn/content/commits?author=WebReflection+Not seeing them as a major contributor.\n \nreply",
-      "> A long time contributor gave up. https://github.com/mdn/content/pull/36294Reading through that issue MDN was almost definitely in the right. Also calling them a long time contributor might be a bit off, from what I can see they did one typofix and added one link: https://github.com/mdn/content/commits?author=WebReflection\n \nreply",
-      "The author of that pr is acting like a spoilt child. I would reject his contributions on principle alone.\n \nreply"
-    ],
-    "link": "https://developer.mozilla.org/en-US/blog/curriculum-learn-web-development/",
-    "first_paragraph": "Web technology reference for developersStructure of content on the webCode used to describe document styleGeneral-purpose scripting languageProtocol for transmitting web resourcesInterfaces for building web applicationsDeveloping extensions for web browsersLearn to make the web accessible to allWeb technology reference for developersLearn web developmentLearn web developmentLearn to structure web content with HTMLLearn to style content using CSSLearn to run scripts in the browserA customized MDN experienceGet real-time assistance and supportAll browser compatibility updates at a glanceLearn how to use MDN PlusFrequently asked questions about MDN PlusWrite, test and share your codeScan a website for freeGet real-time assistance and supportA major update to the MDN Learn Web Development section started in November 2024 and was finally published in December 2024.\nTo summarize, the MDN Curriculum has been merged into Learn Web Development.\nThis post looks at the background leading up to th"
-  },
-  {
-    "title": "F*: A proof oriented general purpose programming language (fstar-lang.org)",
-    "points": 151,
-    "submitter": "akkad33",
-    "submit_time": "2024-12-25T13:16:40 1735132600",
-    "num_comments": 39,
-    "comments_url": "https://news.ycombinator.com/item?id=42508642",
-    "comments": [
-      "I studied formal languages for ~2 years and have professional experience programming coq. The real benefit of this language, over other formal languages is the focus on being able to write real programs in it. Most theorem proving languages are focused on mathematics or proving things about a program, and they are very abstract. This language appears to have a goal of bridging the gap and making it simple to write programs and prove parts of them. I believe this is the future of formal languages. If you write something in Rust, it would be great to prove aspects about it. Why not? Well F* is a vision if this future. As proof automation gets better, we will be able to prove many things about our programs, something which is not typically attempted due to difficulty. For instance, imagine proving that a certain path has no allocations, spawns no threads, cannot deadlock, preserves privacy, only modifies a certain subset of global data, is a specific algorithmic complexity, is not subject to timing attacks, maintains the conference of a cache, is memory safe (without a borrow checker). The limit is your imagination and Rice's theorem.\n \nreply",
-      ">memory safe (without a borrow checker)This sounds like a very weird statement.In my opinion, a proper proof-oriented language would inevitably contain a borrow checker variant as a subset of its functionality (assuming the language has notion of pointers/references and focuses on achieving \"zero cost abstractions\"). Lifetime annotations and shared/exclusive references provide essential information and code use restrictions which enable automatic proof generation.After all, type and borrow checkers are nothing more than limited forms of automatic proof generation which are practical enough for wide use.\n \nreply",
-      "https://dafny.org/ also allows proof checking and allows do write real programs with it. It has a java like syntax and is also from MS I believe\n \nreply",
-      "Having used both Dafny and F* quite extensively, Dafny, and its predecessor Spec#, are simple and practical, thanks to being based on Hoare logic (contracts).It's a great place to start with verification, as proofs are discharged to SAT/SMT, so things are automated. It can get a bit frustrating when automation is not able to prove things, that's the major disadvantage of SAT/SMT.But it's not a toy. Some of the largest verification efforts have been done in Dafny. See e.g. IronFleet [1].[1] https://www.andrew.cmu.edu/user/bparno/papers/ironfleet.pdf\n \nreply",
-      "Agree it\u2019s not a toy. AWS implemented a large chunk of IAM in Dafny. Though IIRC they have their own non-public compiler to Java\n \nreply",
-      "F* also uses SAT/SMT, specifically Z3.\n \nreply",
-      "Do you think you might be able to elaborate a little bit more about this?I was skimming the \"Proof-Oriented Programming\" book, and it seems that the primary way to execute F* programs is by extraction or trusted compilation (same as Rocq and Lean, for example). Does F* have some special way to work directly with realistic source code that these other systems don't?\n \nreply",
-      "F* is a programming language with proof support. Lean/Coq are theorem providers that can be used to model and generate code. In Coq, there's not a standard way to generate code, you might model and create code many different ways. F* seems to bring this in as the central goal of the language. So I'm discussing this structural difference. F* has an SMT solver, but Lean can import an SMT solver. So the goal is the important difference here - making theorem proving as accessible as possible in a real language. It's a move in the right direction, but we want to get to the point standard program languages have this support if you need it.\n \nreply",
-      "I\u2019ll add that SPARK Ada allows this now, has commercial tooling from Adacore, and was field-prove in years of commercial deployments.https://en.m.wikipedia.org/wiki/SPARK_(programming_language)It builds on the Why3 platform which also supports Frama-C for the C language. IIRC, SPARK can be compiled to C for C-only, runtime targets as well.\n \nreply",
-      "Where would a smooth brained CRUD app web developer who failed high school maths perhaps learn more  about the point of this?\n \nreply"
-    ],
-    "link": "https://fstar-lang.org/",
-    "first_paragraph": "\n  F* (pronounced F star) is a general-purpose proof-oriented\n  programming language, supporting both purely functional and\n  effectful programming. It combines the expressive power of dependent\n  types with proof automation based on SMT solving and tactic-based\n  interactive theorem proving.\n  \n  F* programs compile, by default, to OCaml. Various fragments of F*\n  can also be extracted to F#, to C or Wasm by a tool\n  called KaRaMeL,\n  or to assembly using\n  the Vale\n  toolchain. F* is implemented in F* and bootstrapped using OCaml. \n  \n  F* is open source on GitHub and is under \n  active development by Microsoft Research, \n  Inria, and by the community.\n\n  F* programs compile, by default, to OCaml. Various fragments of F*\n  can also be extracted to F#, to C or Wasm by a tool\n  called KaRaMeL,\n  or to assembly using\n  the Vale\n  toolchain. F* is implemented in F* and bootstrapped using OCaml. \n  \n  F* is open source on GitHub and is under \n  active development by Microsoft Research, \n "
-  },
-  {
-    "title": "This open problem taught me what topology is [video] (youtube.com)",
-    "points": 354,
-    "submitter": "surprisetalk",
-    "submit_time": "2024-12-25T06:08:45 1735106925",
-    "num_comments": 54,
-    "comments_url": "https://news.ycombinator.com/item?id=42507185",
-    "comments": [
-      "I loved this. I did my PhD in algebraic topology, but studied lots of topology so was familiar with this material. I doubt I could ever have explained these concepts so clearly or tied the esoteric world of topology to a \"practical\" problem.Since my PhD I've had a couple of careers and ended up as a research software engineer working on AI. I often feel nostalgic about pure math (maybe even a little regretful I left academic math). But I think it'd be almost impossible for me to return to academic math. The 3B1B videos always remind me that math is available to all and you don't have to be a working mathematician to enjoy, learn, and even discover, new math. You don't have to be employed as a mathematician in a university.\n \nreply",
-      "I agree. My PhD is technically in CS but it made heavy use of algebraic topology. Being 5 years out, having worked briefly in tech, then at a national lab as a software engineer has given me enough outsiders' perspective on pure math. You probably need to work as a professional mathematician to be at the research frontier of a given area, but otherwise the fundamentals of math are unchanging, and in my opinion, that makes it accessible to anyone who is sufficiently interested in and passionate about math.\n \nreply",
-      "> working on AII think we're about to enter an incredible new age of mathematics, driven by AI and theorem provers.  It's going to be hugely disruptive to mathematics, but lots of fun to amateur mathematicians.\n \nreply",
-      "Yeah, I really hope so. I'm hoping that my background is going to allow me to work/play in this area. I'm currently learning about theorem provers so I can get involved.\n \nreply",
-      "Is there some area of math that you consider particularly useful for software developers?\n \nreply",
-      "Depending on the area of software development then trigonometry, geometry, linear algebra, number theory, combinatorics and probability theory are the most obviously useful. Beyond that I know that there's a close relationship between category theory and functional programming. I'm not familiar with the details of that or whether it's useful in practice or more of an area of theoretical study. I'm sure there's others on HN that know though. Interestingly I used a fair amount of category theory in algebraic topology, but never closed the loop and learned much about the relationship to programming.\n \nreply",
-      "The original understanding of a manifold was simply a \"configuration space\", which is very concrete, so I'm not sure what you mean that you are surprised that the world of topology could be practical.\n \nreply",
-      "I didn't say I'm surprised the world of topology could be practical. I said that _I_ wouldn't have been able to explain the concepts in the video so clearly and tie them to a practical problem.\n \nreply",
-      "3b1b shows us what\u2019s possible in math pedagogy. I\u2019m excited for the future of the space, but sad it will take so long to adopt methods like this for teaching math\n \nreply",
-      "The amount of effort to do a single 30 minute video of this sort when scaled out to a half or full year math class is significant.Another consideration is that we learn things from it because we want to learn it.  We are engaged with the topic the instant we hit play because we want to watch it.Compare that with a high school or college setting where the majority of the class is taking it because they have to - not because they want to.  This means that there's no initial engagement and a professor can't call out the student in the 3rd row from the back that is starting to fall asleep.This can work really well for the people who want to learn it.  However, it potentially adds to people who don't want to become competent in the material falling further behind.\n \nreply"
-    ],
-    "link": "https://www.youtube.com/watch?v=IQqtsm-bBRU",
-    "first_paragraph": ""
-  },
-  {
-    "title": "The software you need for holiday overdecoration (dbos.dev)",
-    "points": 145,
-    "submitter": "KraftyOne",
-    "submit_time": "2024-12-23T14:17:51 1734963471",
-    "num_comments": 36,
-    "comments_url": "https://news.ycombinator.com/item?id=42494512",
-    "comments": [
-      "If you're in the greater Sacramento area...6516 Jackson Ct, Rocklin, CA 95765It's basically an entire Christmas light show, synced with music which is broadcasted on an FM radio station. The main problem is that because few people have access to an FM radio outside of their car, it pretty much causes traffic chaos in that little cul de sac, and the best view requires you to not be in a car.\n \nreply",
-      "If you are in the greater Boston area stop by: https://www.youtube.com/watch?v=xBxB1aroSqE.Lots of animated displays in New England: https://www.nelights.org/\n \nreply",
-      "Leeds UK:\nhttps://x.com/HodgsonLights\n \nreply",
-      "Northeast of Columbus, OH is Silent Night, Holy Lights and worth at least a 30 minute drive.1215 Venetian Way, Columbus, OH 43230\n \nreply",
-      "Are there any good examples for apartments? I am interested in doing similar stuff, but don\u2019t own a house. Seems like all examples are from houses\u2026\n \nreply",
-      "Apartments are a lot harder because you can't usually drill into the side.  I've seen some balconies on apartments in my area with small animations, and one person has a matrix in the window.But at the end of the day it's the same as house, you just have a much smaller canvas to work with.You'll want to look up the ESPixelStick to get started if you're in an apartment, it can probably meet all your needs, since you won't be able to do too many lights.[0] https://forkineye.com/product/espixelstick-v3/\n \nreply",
-      "I once had a crazy idea to build an inner frame and my own floor and walls onto those frames, in a room I was renting for a long time. I ended up not doing that, and depending on your situation it might not be allowed to do it (either because of rules from the landlord, or fire safety that you have to consider).I still think it\u2019s an idea worth considering in some situations though, as long as you are sure it\u2019s compliant with rules from the landlord and fire safety regulations etc.\n \nreply",
-      "I don't know about building an entire false frame (what do you do with it when you move?  You would lose a ton of interior space.  Your ceilings would only be 7 feet, etc).But I've definitely seen people build a false wall that covered 1/2 of a real wall to make fake builtins over a fake fireplace.  But they could take it with them when they left.\n \nreply",
-      "Yeah, the idea was to disassemble it and take it with me when I moved out. The inner frame would be assembled using screws, rather than nails and also not using any glue.It might take several days, or even a couple of weekends if you have busy days during Mondays to Fridays, to disassemble it. And that\u2019s if you originally built the whole thing in one go and kept in mind and made notes of how to disassemble it.The worst situation is if your lease suddenly ends on short notice and you don\u2019t have time to disassemble it on the time you have left before you have to leave.Another thing is that even if you disassemble it on time, the dimensions of your frame probably won\u2019t fit well into the next room you rent in a different place. And then you have to do a bunch of cutting and maybe buying even more materials or throwing away some of what you had, or find somewhere to store it or something.There\u2019s also the possibility that you might accidentally damage the original floor or walls even though you try to be super careful, if you go about constructing such a thing.These sorts of potential complications are part of the reason that I ended up not actually building such a thing myself so far. Aside from also not having much in terms of extra cash on hand at the time to even go buy the materials I would have needed for it.The half wall you suggested is far more practical for sure.\n \nreply",
-      "Fire safety rules are a good point. Wasn\u2019t thinking about that aspect. But using outdoor compliant lights and hanging from frames outsides could be an option. Guess it would be an interesting start\n \nreply"
-    ],
-    "link": "https://www.dbos.dev/blog/ezrgb-dbos-light-shows",
-    "first_paragraph": "People have been overdecorating for the holidays for a long time.However, as engineers, we realize that the problem shouldn\u2019t just involve more lights, what we really need is computers!Making a good light show sequence is a creative process.\u00a0 In the same way that composing a song requires a pleasing combination of interesting sounds through time, a light show sequence is a combination of interesting lighting effects through time.\u00a0 I\u2019ve been told that it takes about 50 hours per light show to mark the timings, choose colors and effects, line everything up, and adjust to achieve a great sequence.Because sequencing requires lots of time (and creativity), many of us buy the sequences from vendors.Even with purchased sequences, there is still a challenge, because every house is different. Sequences have to be \u201cmapped\u201d from one layout to another.\u00a0The lighting equipment varies significantly between shows.This is where DBOS\u00a0fits in; it was used to build and run the services that coordinate and"
-  },
-  {
-    "title": "Ugandan runner due to arrive in London after 516 days, 7,700 miles on the road (theguardian.com)",
-    "points": 25,
-    "submitter": "thunderbong",
-    "submit_time": "2024-12-23T14:08:04 1734962884",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=42494466",
-    "comments": [
-      "A man went on a mission to raise awareness.  I'd say he accomplished that.\n \nreply",
-      "Having to deal with police four times a day on average on the part of the journey through Croatia is insane. I\u2019d have given up and flown to the next country.\n \nreply",
-      "Thankfully our hero is made of sterner stuff than either you or me:\"On other occasions, however, he almost packed it in. In Uganda, his one-man support crew resigned, leaving him without a support vehicle or help at a time when his funding for the run was almost exhausted. To compound matters, all routes ahead involved either conflict or extreme risk.\"\n \nreply"
-    ],
-    "link": "https://www.theguardian.com/global-development/2024/dec/20/ugandan-runner-deo-kato-cape-town-london-hope-racism-europe-africa",
-    "first_paragraph": "Deo Kato says journey from Cape Town gave him hope in humanity, despite facing racism from police and passersby on a daily basisA Ugandan athlete who arrives in London this weekend after running 7,730 miles (12,440km) from South Africa to raise awareness about racism has revealed he suffered repeated abuse on reaching Europe.Deo Kato set off from Cape Town in July 2023, running steadily north on a 516-day odyssey that has seen him jailed for weeks, laid low with serious illness and having to pass through war zones.The epic run was conceived by the London-based Kato to highlight the history of human migration and the discrimination faced by many black Africans, a message underlined by the fact he endured daily racism from police and passersby in parts of Europe.After climbing the equivalent height of 11 Mount Everests during the journey, Kato is due to reach central London on Sunday where he will be joined by hundreds of runners outside Downing Street before completing his route in Hamm"
-  },
-  {
-    "title": "Show HN: Map of YC Startups (yc-map.vercel.app)",
+    "title": "Magnetic swarm intelligence of mass-produced, programmable microrobot assemblies (cell.com)",
     "points": 7,
-    "submitter": "yoouareperfect",
-    "submit_time": "2024-12-25T22:37:31 1735166251",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=42511663",
-    "comments": [
-      "Really neat! We were Tule, in the industrials part of the map in grey.There's something wonky when I zoom in on Chrome on my laptop. It abruptly shifts to another part of the map.\n \nreply",
-      "Cool concept! What are the X and Y axes?Oh, and your website has an unchanged Wordpress favicon...\n \nreply",
-      "hella nice mate very interestingwhat's the x and y axes?\n \nreply",
-      "they don't have meaning by themselves. they are two dimensions that umap projected the original embeddings down to in order to show a combination of local neighborhood similarity or closenes\n \nreply"
-    ],
-    "link": "https://yc-map.vercel.app/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Sherlock: Hunt down social media accounts by username across 400 social networks (sherlockproject.xyz)",
-    "points": 169,
-    "submitter": "leonry",
-    "submit_time": "2024-12-25T17:14:45 1735146885",
-    "num_comments": 97,
-    "comments_url": "https://news.ycombinator.com/item?id=42509809",
-    "comments": [
-      "And this makes it obvious why you should use a unique username everywhere!It makes pervasive tracking a lot harder.Also when you do any research on health related topics, be extra privacy conscious.\n \nreply",
-      "Doesn't matter for the next day's witch huntThey are just gonna make fake accounts that look like yours and shitpost ahead anyways.Social media has multiple problems, including authenticity, transparency, validity and verifiability. All of which don't exist and make it the optimum propaganda machine (referring to the criteria that Chomsky described) because it can be corrupted through multiple attack vectors.If we want to survive this hellhole of misinformation, the mentioned criteria has to be implemented for the \"next big platform\" so that censorship and other legislative processes can be encountered with increased transparency and openness.On a network/society scale it can't be driven by financial incentives to prevent corruption, ergo it must be financed by taxes. Preferably on an EU or UN legislative level to prevent political corruption of single state actors.\n \nreply",
-      "A state funded platform with a focus on authenticity, transparency, validity and verifiability, is the best thing against censorship? I don\u2019t get how.\n \nreply",
-      "Well, the EU is based on federalistic principles, meaning that many states have many opinions on censorship; and a compromise between those states' opinions is what's likely best for the citizens of said states/nations.I mean, that is if we wouldn't have capitalism as the bug of democracy.",
-      "This is why I try to use the same name across websites. I want to be identified as the same person. Just resist the urge to post information you don't want others to have.\n \nreply",
-      "We often don't know what is or isn't information we don't want others to have, and it will be a lot harder, if not impossible, to delete it after-the-fact. Especially when you consider how it only takes a few innocuous data points to derive what might be information you'd rather not disclose.\n \nreply",
-      "> Just resist the urge to post information you don't want others to have.Self-censor you mean?I personally like that information anonymous account `William Shakespeare` posted around 1585\u20131613.\n \nreply",
-      "The secret is multiple accounts. I too have a Brand Name Account(tm) I like to float around but it sure as heck isn\u2019t this one.Doing the multiple account thing isn\u2019t as easy as it sounds though. Some sites like Reddit make switching between accounts incredibly easy while others aren\u2019t so much. Plus laziness kicks in and soon enough your Brand Name Account gets tainted and you have to consider taking it out back to the dumpster.Such is life I guess.\n \nreply",
-      "> Doing the multiple account thing isn\u2019t as easy as it sounds though. Some sites like Reddit make switching between accounts incredibly easyAnd it's as easy to dox yourself by responding with the wrong account, as I have seen multiple times on Reddit.\n \nreply",
-      "> The secret is multiple accounts.There was a \"show hn\" many months ago that did stylometry on HN commenters to show which accounts were most stylistically similar; I ran a throwaway account of mine through it, and it showed my account in the top 3 - which was impressive.Having multiple accounts won't save you when your own word choice, grammar and style can uniquely identify you to anyone sufficiently motivated to link your disparate identities at any point in the future. The author even said their tool was rather basic; IIRC the basis was all pairs similarity on n-grams\n \nreply"
-    ],
-    "link": "https://sherlockproject.xyz/",
-    "first_paragraph": "Hunt down social media accounts by username across 400+ social networks"
-  },
-  {
-    "title": "The Swedish cabin on the frontline of a possible hybrid war (theguardian.com)",
-    "points": 96,
-    "submitter": "Sami_Lehtinen",
-    "submit_time": "2024-12-23T13:31:22 1734960682",
-    "num_comments": 37,
-    "comments_url": "https://news.ycombinator.com/item?id=42494256",
-    "comments": [
-      "Tangential, after reading the description of the archipelago.Sweden is the country with most islands in the world, followed by Norway and Finland.https://www.worldatlas.com/articles/which-countries-have-the...\n \nreply",
-      "If you've never visited the Stockholm archipelago, I highly recommend it. In fact, I think it's perhaps the best thing about Stockholm, and one of the most beautiful places in the world in general \u2014 if you're into sailing, islands and seas. It's almost too easy to find an island just for yourself for the weekend, and \"Allemansr\u00e4tten\", the law that grants people the right to access wilderness, only makes it even more accessible. Going there at the midst of winter or during summer are both very different experiences, but both are very charming.\n \nreply",
-      "Also, the superb torpedo museum!\n \nreply",
-      "Do they use the same methods to define \"island\"?The section for Australia seems very broad: \"Australia itself dominates the islands around its coastal fringe, which range in size from smaller rocks that are not covered by water at high tide to ...\"While it says the US has 18,617 islands, I struggle to find an official source for that very precise number.I also see how https://en.wikipedia.org/wiki/List_of_islands_of_Florida says \"The U.S. state of Florida has a total of 4,510 islands that are ten acres or larger\", suggesting that ten acres is the minimum sized used for \"island\" in the US.https://en.wikipedia.org/wiki/List_of_islands_of_Maine says \"Maine is home to over 4,600 coastal islands, ranging from large landmasses like Mount Desert Island to small islets and ledges exposed above mean high tide.\"Clearly these are not using the same definitions.I managed to find the Global Islands data set at https://www.sciencebase.gov/catalog/item/63bdf25dd34e92aad3c... with an explorer at https://rmgsc.cr.usgs.gov/gie/ which should have exactly what I want, except 1) it only lists ocean islands, not inland ones, and 2) I can't figure out how to get the data by country.It categories things as \"Big Islands (greater than 1 km2), Small Islands (less than or equal to 1 km2 and greater than or equal to 0.0036 km2), and Very Small Islands (less than 0.0036 km2).\" \"There are 21,818 big islands in the database. The remaining 318,868 islands are all less than 1 km2 and are classed as small islands.'I give up.\n \nreply",
-      "I don't think that quote implies a limit for the definition in any way. It just says that this is the count below a given threshold. It doesn't say anything about that threshold being a standard or anything of that sort.\n \nreply",
-      "There\u2019s just literally no possible way that Sweden has an order of magnitude more islands than the US or Canada.Open up Google Earth and scan around northern coastlines of all these countries and you\u2019ll laugh at the premise of this article.With that said I wouldn\u2019t be surprised if they have the most documented/counted islands. That\u2019s another thing entirely and also sort of interesting I suppose.\n \nreply",
-      "It all depends on what you count/map. By some european definition Sweden has 24 islands if you discount all the small ones. We basically have an extreme anount of small ones from the last ice age.Bit whatever, it\u2019s a great place to sail/visit no matter how you count.\n \nreply",
-      "It's actually quite an interesting question. The West Coast of the contiguous US has almost no islands, you really start getting \"islandy\" only in the Puget Sound.The East Coast has more islands, but then you need to decide how you classify the river deltas. Is a bump in a brackish swamp an island or not?On the other hand, Sweden has thousands of really small but also well-defined islands. They can be just several square meters in area, but they are well above the water and clearly separated from the main landmass.Alaska has similar terrain, though.\n \nreply",
-      "Yeah I\u2019m talking about more polar \u201cdrowned coastlines\u201d which clearly are the place to go hunting for lots of islands. In the US that\u2019s Maine and Alaska especially.Sweden sure has a lot of islands I\u2019d believe they are #1. It\u2019s the +10x claim that seems suspicious.\n \nreply",
-      "In sweden if you dig a canal around some land, they call the result an island.\n \nreply"
-    ],
-    "link": "https://www.theguardian.com/world/2024/dec/23/swedish-cabin-frontline-possible-hybrid-war-undersea-cables-sabotage",
-    "first_paragraph": "Amid claims of sabotage of undersea cables, a small wooden structure houses a key cog in Europe\u2019s digital connectivityAt the end of an unmarked path on a tiny island at the edge of Stockholm\u2019s extensive Baltic Sea archipelago lies an inconspicuous little wooden cabin, painted a deep shade of red. Water gently laps the snow-dusted rocks, and the smell of pine fills the air.The site offers few clues to the geopolitical drama that has gripped Scandinavia in recent months, driven by accusations of infrastructure sabotage. But in fact the cabin houses a key cog in Europe\u2019s digital connectivity, and a point of vulnerability in a potential hybrid war: a datacentre that amplifies the signal from a 1,615-mile fibre-optic cable running from northern Sweden to Berlin.Last month, two nearby fibre-optic cables were severed, prompting a continuing investigation by Swedish authorities. Western intelligence officials from multiple countries have said they are confident a Chinese ship caused the cuts a"
-  },
-  {
-    "title": "I Saved an Electron Microscope from the Trash [video] (youtube.com)",
-    "points": 40,
-    "submitter": "starbugs",
-    "submit_time": "2024-12-25T21:54:14 1735163654",
-    "num_comments": 10,
-    "comments_url": "https://news.ycombinator.com/item?id=42511426",
-    "comments": [
-      "My favourite part of these videos of people rescuing obscure tech is when they talk about the community of other people also rescuing the same obscure tech and team up with them. The internet might be a bit of a cesspool now but these little nuggets that remind me of the early promise of a connected world warm my heart.\n \nreply",
-      "It's funny too how they exist in the same kinds of spaces they used to. Chat rooms, forums and other areas no one ever talks about anymore with the Twitters, TikToks and so forth dominating most social media attention.\n \nreply",
-      "Wonder if there'll be a day when a hobbyist can buy a < $1k SEM?Other equipment like spectrum analyzers, VNAs, scopes, etc. are now way more accessible, but they seem way less complex.\n \nreply",
-      "I don\u2019t think an SEM is that much more complex, it\u2019s just necessarily big due to the lack of miniaturization in the supporting components (lens system, transformer, vacuum chamber).  When I was a grad student, there was an old SEM from some defunct company that was being maintained by undergrad assistants (with the equivalent of duct tape and bubblegum)\n \nreply",
-      "Is there an effort to get this underway? I\u2019m no expert, but I would guess that the two expensive parts are the electron source and the vacuum pump. UHV chambers seem solvable, and detectors are probably cheaply obtainable. High voltage power supplies can probably also be cheap.\n \nreply",
-      "You probably need a sputter coating machine too for most applications, and, at least in some cases, tricky consumables like liquid nitrogen.I'm with you in wishing that they were more accessible, though. So many people want to do skydives, bungee jumps etc. that have never experienced the thrill of exploring the anatomy of tiny insects in incredible detail. They don't know what they're missing! That's before you even get onto cool stuff like WDS/WDX which I remember thinking was like science fiction when I first saw it.\n \nreply",
-      "> tricky consumables like liquid nitrogenLN2 costs like $1/liter-- it's cheap.\n \nreply",
-      "I'm not going to say it is impossible, but the thing to keep in mind is electronics test equipment benefited from incredible improvements in and the mass adoption of most of the components that go into them. While SEMs can benefit from that, I don't foresee it happening for some of the vital components.\n \nreply",
-      "But they need to be calibrated, which is a real bitch.I used to work for a defense contractor, with millions of dollars' worth of that kind of gear, and keeping it calibrated was an expensive pain.\n \nreply",
-      "Once hacker-level-hobbyists get involved they'll probably figure out how to calibrate it with a Raspberry Pi and a 3D printer.\n \nreply"
-    ],
-    "link": "https://www.youtube.com/watch?v=Kqx9blbYDB0",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Air missile accident emerges as probable cause of Azerbaijan E190tragedy (euronews.com)",
-    "points": 132,
-    "submitter": "bratao",
-    "submit_time": "2024-12-25T21:25:13 1735161913",
-    "num_comments": 68,
-    "comments_url": "https://news.ycombinator.com/item?id=42511267",
-    "comments": [
-      "This is odd.I'm from the area, near Grozny. If Grozny were under fog, there are at least 10 airports nearby (Makhachkala, Vladikavkaz, Nalchik, Minvody, Rostov, Krasnodar etc) in the North Caucasus. Why would you fly east, across the Caspian Sea, toward Kazakhstan?\n \nreply",
-      "Obviously just speculation but if one was just fired upon, yet still in one piece and at least somewhat in control, a pilot might decide braving a longer diversion over a body of water to get away from the area, might be the safest course of action.\n \nreply",
-      "If I was a pilot flying into an at-war country I\u2019d want my alternate to point in a different direction, the exact opposite course of the war zone ideally. Which this pretty much is.And, to further that point, multiple airports you listed here are currently closed because of that war.\n \nreply",
-      "Grozny was not under fog.\n \nreply",
-      "Mountains\n \nreply",
-      "Just zooming into the tail section photo one can find on main stream media shows very suspicious signs of possible shrapnel hit ...\n \nreply",
-      "The shrapnel damage is pretty much established as there are multiple videos from inside the plane during this flight prior to  the crash and you can see shrapnel damage on the fuselage. The survivors are also confirming it, and report that there was a bang(which might be confused for bird strike).The question is, who shot the plane? This part is pure speculation at this point.\n \nreply",
-      "> The question is, who shot the plane? This part is pure speculation at this point.It doesn't seem to be too difficult to put together what is likely.  Grozny was under active drone attack at the time with air defenses working.  And Russian air defense crews are pretty infamous for the jumpy trigger fingers at this point.\n \nreply",
-      "And notably, the \"drones\" were civilian propeller aircraft fitted out to fly an unmanned suicide trajectory. I'm not sure they would even look all that distinguishable on a SAM operator's screen from a small jet like this.\n \nreply",
-      "Is there anyone besides Russia who would have even been capable of shooting it down?\n \nreply"
-    ],
-    "link": "https://www.euronews.com/2024/12/25/azerbaijani-passenger-plane-crashes-near-kazakh-city-of-aktau",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Show HN: I made a website to semantically search ArXiv papers (mitanshu.tech)",
-    "points": 215,
-    "submitter": "Quizzical4230",
-    "submit_time": "2024-12-25T05:44:12 1735105452",
-    "num_comments": 55,
-    "comments_url": "https://news.ycombinator.com/item?id=42507116",
-    "comments": [
-      "1. why mixbread's model?2. how much efficiency gain did you see binarising embeddings/using hamming distance?3. why milvus over other vector stores?4. did you automate the weekly metadata pull? just a simple cron job? anything else you need orchestrated?user thoughts on searching for \"transformers on byte level not token level\" - was good but didnt turn up https://arxiv.org/abs/2412.09871 <- which is more recent, more people might wantalso you might want more result density - so perhaps a UI option to collapse the abstracts and display more in the first glance.\n \nreply",
-      "I enjoy seeing projects like this!If you expand beyond arxiv, keep in mind since coverage matters for lit reviews, unfortunately the big publishers (Elsevier and Springer) are forcing other indices like OpenAlex, etc. to remove abstracts so they're harder to get.Have you checked out other tools like undermind.ai, scite.ai, and elicit.org?You might consider what else a dedicated product workflow for lit reviews includes besides search(used to work at scite.ai)\n \nreply",
-      "Thank you for the appreciation and great feedback!| If you expand beyond arxiv, keep in mind since coverage matters for lit reviews,I do have PaperMatchBio [^1] for bioRxiv and PaperMatchMed [^2] for medRxiv, however I do agree having multiple sites for domains isn't ideal. And I am yet to create a synchronization pipeline for these two so the results may be a little stale.| unfortunately the big publishers (Elsevier and Springer) are forcing other indices like OpenAlex, etc. to remove abstracts so they're harder to get.This sounds like a real issue in expanding the coverage.| Have you checked out other tools like undermind.ai, scite.ai, and elicit.org?I did, but maybe not thoroughly enough. I will check these and add complementing features.| You might consider what else a dedicated product workflow for lit reviews includes besides searchDo you mean a reference management system like Mendeley/Zotero?[1]: https://papermatchbio.mitanshu.tech/\n[2]: https://papermatchmed.mitanshu.tech/\n \nreply",
-      "Unusual use case but I write literature reviews for French R&D tax cut system, and we specifically need to: focus on most recent papers, stay on topic for a very specific problematic a company has, potentially include grey literature (tech blog articles from renowned corp), be as exhaustive as possible when it comes to freely accessible papers (we are more ok with missing paid papers unless they are really popular).\nA \"dedicated product workflow\" could be about taking business use cases like that into account.\nThis is a real business problem, the Google Scholar lock up is annoying and I would pay for something better than what exists.\n \nreply",
-      "This is quite unique. I believe a custom solution might help you better than Google Scholar.\n \nreply",
-      "This can be seen as technology watch, as opposed to a thesis literature review for instance.\nGoogle Scholar gives the best results but sadly doesn't really want you to build products on top of it : no api, no scraping.\nBreaking this monopoly would be a huge step forward, especially when coupled with semantic search.\n \nreply",
-      "\"|\" it's a terrible character for signaling quotes, as it looks a bit too much like \"I\" or \"l\" and sometimes even \"1\" or \"i\" depending on the font used. I believe the greater-than symbol (>) is better suited for this task.\n \nreply",
-      "For what it's worth, back in the day (a few years ago, before the LLM boom a few years) I found on a similar sized vector database (gensim / doc2vec), it's possible to just brute force a vector search e.g. with SSE or AVX type instructions.  You can code it in C and have a python API. Your data appears to be a few gigs so that's feasible for realtime CPU brute force, <200 ms\n \nreply",
-      "What are other good areas where semantic search can be useful? I've been toying with the idea for a while to play around and make such a webapp.Some of the current ideas I had:1. Online ads search for marketers: embed and index video + image ads, allow natural language search to find marketing inspiration.\n2. Multi e-commerce platform search for shopping: find products across Sephora, zara, h&m, etc.I don't know if either are good enough business problems worth solving tho.\n \nreply",
-      "3. Quick lookup into internal documents. Almost any company needs it. Navigating file-system like hierarchy is slow and limited. That was old way.4. Quick lookup into the code to find relevant parts even when the wording in comments is different.\n \nreply"
-    ],
-    "link": "https://papermatch.mitanshu.tech/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Ruby 3.4.0 (ruby-lang.org)",
-    "points": 304,
-    "submitter": "aaronbrethorst",
-    "submit_time": "2024-12-25T06:40:07 1735108807",
-    "num_comments": 176,
-    "comments_url": "https://news.ycombinator.com/item?id=42507312",
-    "comments": [
-      "I am most excited about the parser change, previously discussed here:https://news.ycombinator.com/item?id=36310130 - Rewriting the Ruby parser (2023-06-13, 176 comments)I remember being taught to use yacc in our compiler course because \"writing it by hand is too hard\".  But looks like Ruby joins the growing list of languages that have hand-written parsers, apparently working with generated parsers turned out to be even harder in the long run.That said, replacing a ~16k line parse.y[1] with a 22k line prism.c[2] is a pretty bold move.[1] https://github.com/ruby/ruby/blob/master/parse.y[2] https://github.com/ruby/prism/blob/main/src/prism.c\n \nreply",
-      "Number of line is as any metrics, it gives you a quick idea of some amount, and that's it. To start having a sense of what it means, you need to be more acquainted with the topic at end.It's not that uncommon to have an implementation with code that is lengthier but with an obvious pattern, while the smarter compressed  implementation whose understanding is not necessary trivial to grab even for people seasoned to metaprogramming, reflexivity and so on.Not to say that is what happen here, the point here was to recall that number of lines is not an absolute linear metrics.\n \nreply",
-      "I'm pretty sure the only reason people ever used parser generators is that it allows a language that vaguely resembles the formal description of the target language. I always found them very confusing to write, confusing to debug, and much less efficient than writing your own. It's actually pretty straightforward once you get the tokenization and lookahead working.\n \nreply",
-      "Agreed. Parser generators are a magic black box. Parsing is not too difficult, there is some actual computer science in some spots, but I think parsing should be a core complacency of a programming language to unlock full potential.\n \nreply",
-      "A very very long list of CVEs disagrees with that parsers are \"not too difficult\".\n \nreply",
-      "Binary format parsing != Programming language parsing.\n \nreply",
-      "Binary formats are rarely context free.\n \nreply",
-      "Agreed, but there are different things being prioritized with each approach.\n \nreply",
-      "It seems like you're ignoring the context/environment. Ruby has enough advanced developers, large enough test  suite and enough people who care about performance, that it can tackle the parser as a longer project regardless of its complexity. The same thing will apply to other popular languages. But it won't apply to smaller projects with very localised parser use. In those cases writing anything custom would be a waste of time (and potential introduce bugs solved years ago in generators).\n \nreply",
-      "Having tried both on solo projects, I disagree: like other commenters here, I've found parser generators to be a big waste of time.Writing a parser by hand requires understanding the theory of parsing and understanding your implementation language. Writing a parser with a parser generator requires understanding the theory of parsing, your implementation language, and a gigantic black box that tries unsuccessfully to abstract away the theory of parsing.The time spent learning and troubleshooting the black box is almost always better spent putting together your own simple set of helper methods for writing a parser and then using them to write your own. The final result ends up being far easier to maintain than the version where you pull in a generator as a dependency.\n \nreply"
-    ],
-    "link": "https://www.ruby-lang.org/en/news/2024/12/25/ruby-3-4-0-released/",
-    "first_paragraph": "Posted by naruse on 25 Dec 2024We are pleased to announce the release of Ruby 3.4.0. Ruby 3.4 adds it block parameter reference,\nchange Prism as default parser, adds Happy Eyeballs Version 2 support to socket library, improves YJIT,\nadds Modular GC, and so on.it is added to reference a block parameter with no variable name. [Feature #18980]it very much behaves the same as _1. When the intention is to only use _1 in a block, the potential for other numbered parameters such as _2 to also appear imposes an extra cognitive load onto readers. So it was introduced as a handy alias. Use it in simple cases where it speaks for itself, such as in one-line blocks.Switch the default parser from parse.y to Prism. [Feature #20564]This is an internal improvement and there should be little change visible to the user. If you notice any compatibility issues, please report them to us.To use the conventional parser, use the command-line argument --parser=parse.y.The socket library now features Happy Eyeba"
-  },
-  {
-    "title": "Converting shopping malls into apartments [video] (youtube.com)",
-    "points": 14,
-    "submitter": "debo_",
-    "submit_time": "2024-12-23T20:29:44 1734985784",
+    "submitter": "bookofjoe",
+    "submit_time": "2024-12-26T21:43:47 1735249427",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://www.youtube.com/watch?v=J1GIF6VNipE",
+    "link": "https://www.cell.com/device/fulltext/S2666-9986(24)00583-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2666998624005830%3Fshowall%3Dtrue",
     "first_paragraph": ""
+  },
+  {
+    "title": "Thermodynamic model identifies how gold reaches Earth's surface (phys.org)",
+    "points": 6,
+    "submitter": "wglb",
+    "submit_time": "2024-12-26T23:11:21 1735254681",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://phys.org/news/2024-12-thermodynamic-gold-earth-surface.html",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Inverse Design of Complex Nanoparticle Heterostructures via DL on Graphs (chemrxiv.org)",
+    "points": 10,
+    "submitter": "pizza",
+    "submit_time": "2024-12-26T21:04:51 1735247091",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://chemrxiv.org/engage/chemrxiv/article-details/6769dc3a81d2151a02b75ef6",
+    "first_paragraph": ""
+  },
+  {
+    "title": "A Minecraft server written in COBOL (github.com/meyfa)",
+    "points": 259,
+    "submitter": "notamy",
+    "submit_time": "2024-12-26T03:59:54 1735185594",
+    "num_comments": 82,
+    "comments_url": "https://news.ycombinator.com/item?id=42513022",
+    "comments": [
+      "> Well, there are quite a lot of rumors and stigma surrounding COBOL. This intrigued me to find out more about this language, which is best done with some sort of project, in my opinion. You heard right - I had no prior COBOL experience going into this.I hope they'd write an article about any insights they gained. Like them, I hear of these rumors and stigma, and would be intrigued to learn what a new person to COBOL encountered while implementing this rather complex first project.\n \nreply",
+      "One of the rumoured stigma is that the object-oriented flavour of COBOL goes by the unwieldy name of ADD ONE TO COBOL YIELDING COBOL.At least it doesn't have the unrumoured stigma of older FORTRANs, which ignored whitespace, allowing:    DO 10 I=1.10\n\nto silently compile an assignment:    DO10I = 1.10\n\ninstead of signalling an error for the syntax of the loop the flight software programmer had intended:    DO 10 I=1,10\n \nreply",
+      "No one seems to have written a Minecraft server in FORTRAN yet... but I think your comment just gave some people here ideas.\n \nreply",
+      "If you have to go to 1977 or prior to slag a language, there are tons of languages that will disappoint you.\n \nreply",
+      "PL/I\n \nreply",
+      "I would assess C++ has already outpaced PL/I complexity, and I do enjoy using C++.\n \nreply",
+      "You can get a C++ compiler which is (more or less) correct,  I'm not sure that was ever quite true of PL/I.\n \nreply",
+      "Yeah, I love these insights.If you are interested, here are insights from making a COBOL to C# compiler: https://github.com/otterkit/otterkit-cobol/issues/40I am now convinced that COBOL is just a high level assembler.\n \nreply",
+      "This is Awesome.For my high school graduation project, I wrote a full COBOL system to automate soccer betting odds. Long past its prime, but my school hadn\u2019t quite caught up with the times.It was hilariously out of place, but I loved every line of it. There\u2019s something oddly satisfying about a language that whispers, \u201cRemember punched cards?\u201d as you type.\n \nreply",
+      "I'm sure this is some kind of fallacy, but I feel I quite often see ostensibly impressive small side projects like this written in simple plain languages like C (or here COBOL). Every similar, e.g., Rust project I see seems almost non-functional despite having 10x the SLOC.My working theory is that simpler languages lend themselves to blueprinting ideas and getting something working even with an ugly messy codebase, whereas modern languages force you to write code that will last longer. Or maybe modern languages are just doing something wrong.\n \nreply"
+    ],
+    "link": "https://github.com/meyfa/CobolCraft",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A Minecraft server written in COBOL\n      \nA Minecraft server written in COBOL. It supports Minecraft 1.21.4 (the latest version at time of writing).The following features are already working:Note that blocks with multiple states, orientations, or interactive blocks require large amounts of specialized code\nto make them behave properly, which is way beyond the scope of this project.\nSome are supported, however:CobolCraft was developed using GnuCOBOL and is meant to be run on Linux.\nSupport for other operating systems such as Windows has not been tested.\nHowever, it is possible to use Docker for a platform-independent deployment.To deploy on Linux, make sure all prerequisites are installed:Then execute make to build, followed by make run to start a server on port 25565.Or, using Docker:To configure the server, edit the server.propert"
+  },
+  {
+    "title": "Siyuan: Privacy-first, self-hosted personal knowledge management software (github.com/siyuan-note)",
+    "points": 244,
+    "submitter": "thunderbong",
+    "submit_time": "2024-12-26T02:26:39 1735179999",
+    "num_comments": 116,
+    "comments_url": "https://news.ycombinator.com/item?id=42512713",
+    "comments": [
+      "Looks cool, but as I have been on this knowledge management / productivity journey like everybody. Here are my findings:If you are reasonably comfortable with computers / Unix.- You need to first rely on a directory structures, filenames, plaintext, lists and maybe markdown. Stick with a \"File over app\", Unix approach.- Try to sort things with universal concepts: locations, things, people, events, metrics, howtos. A bit like the 5Ws approach.- Leverage good Unix tools: unix commands, make/justfiles, (rip)grep, git, fzf, etc.- Do not try to solve the problem through the Web. Because you will end up trying to solve web problems instead of basic knowledge management and productivity issues.- The smartphone/touchscreen is a major problem, but as with the Web do not try to solve it. Use your file manager or even fzf in termux can be adapted to be reasonably usable on a touchscreen.Something I have been wondering about is the \"backlink\" feature. It would be cool to link items/notes together through references. \nWhat I would be looking for is a Unix tools that can scan my text files for references to other files in the hierarchy.\n \nreply",
+      "I've been experimenting with Flatnotes (https://github.com/Dullage/flatnotes) for a while and really like the design. No notebooks or even folders, just a single directory with markdown files and decent search & tagging. It feels a lot like what happened to email when we gave up all the up-front structuring with deep hierarchies and just said index it and we'll find it when we need to.The project is just \"good enough\" for what I need, and aside from tiny bugs whenever I find a gap I can either work around it or live without. Constraints are a powerful motivator for both creativity and getting stuff done.\n \nreply",
+      "Tagging is a strictly more powerful tool than hierarchies, at least with same amount tags vs directories/categories, because an item can be tagged using multiple different tags, but can only be in one directory, unless you create duplicates or symlinks or whatever.\n \nreply",
+      "I find the opposite. Being forced to consider hierarchical categorisation leads to a more powerful system in practice. It helps me create a mental reference to the item being stored. And it often causes me to see a better way to form an item in the first place \u2014 eg maybe this note is really two notes, maybe this idea can actually just be discarded, etc. Or, on rare occasions, a new item doesn\u2019t fit anywhere (but is important) so I need to tweak the hierarchy itself \u2014 and that\u2019s a good thing, once in a while, as it can lead to creative insights about the domain as a whole.I\u2019ve found tagging systems usually become a kind of dark swamp where things go never to be seen again. The lack of structure means I have little memory of what\u2019s gone into the system, so I end up with too much duplication of ideas and inconsistency of style (mess). All this makes it uninviting and difficult to \u2018explore\u2019, so I don\u2019t use it much except as a dumping ground, and the swampiness compounds over time.\n \nreply",
+      "Hierarchy doesn\u2019t make sense if you care about multiple dimensions, which I often do with notes.Sometimes I want to look at all notes relating to c++, sometimes everything related to a personal project. Directories don\u2019t support that without symlinking everything that mentions c++ into a folder for that.\n \nreply",
+      "I really like tagging but somehow the concept could never become central to any filesystem:- I believe BeOS tried,- MS tried with WinFS but cancelled it in Windows Vista,- I am sure some cloud storage service bet on it but can't cite any.Actually tagging is probably mainly successful in cases where we can reliably automate the tagging such as email or photos.\n \nreply",
+      "MacOS has had first-class support for file tagging for years: You can add arbitrary tags either from \u201cSave as\u201d dialogs or from Finder, and can then browse by tags in Finder or search through your file system filtered by tags.\n \nreply",
+      "I like tagging for bookmarks in Firefox and derivatives of Firefox.\n \nreply",
+      "This is exactly the conclusion I came to. I still use Obsidian for a lot of things, but I've developed my own task management software that uses plain text files and fzf for everything: https://codeberg.org/ngp/tskIt has worked great for me! That being said, sync and mobile usage is still a bit of a sore spot with it. It works beautifully with Termux, but I wish there was some way to slap a basic UI on top of a CLI application for mobile. Tk/Tcl is the closest but there's only options on Android (I'm mostly an iOS user) and even then it's not really ideal. For sync, I at least have a reasonable plan: IMAP4 or git-based sync. The roadmap and tasks for the project are tracked in-repo with itself, so it definitely works.\n \nreply",
+      "If you want some windows-forms-esq app development, I highly recommend checking out Flutter Flow. It isn\u2019t exactly cheap, but I\u2019ve used it for some basic personal apps.\n \nreply"
+    ],
+    "link": "https://github.com/siyuan-note/siyuan",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A privacy-first, self-hosted, fully open source personal knowledge management software, written in typescript and golang.\n      \n\n\nRefactor your thinking\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\u4e2d\u6587 | \u65e5\u672c\u8a9e\nSiYuan is a privacy-first personal knowledge management system, support fine-grained block-level reference and Markdown\nWYSIWYG.Welcome to SiYuan English Discussion Forum to learn more.Most features are free, even for commercial use.Some features are only available to paid members, for more details please refer to Pricing.It is recommended to give priority to installing through the application market on the desktop and mobile, so that you can upgrade the version with one click in the future.Mobile:Desktop:The easiest way to serve SiYuan on a server is to deploy it through Docker.The overall program is located under /opt/siyuan/, which is basically th"
+  },
+  {
+    "title": "Cull Front: A new front end generator for Htmx and AlpineJS (cullfront.com)",
+    "points": 18,
+    "submitter": "limenleap",
+    "submit_time": "2024-12-26T17:37:00 1735234620",
+    "num_comments": 5,
+    "comments_url": "https://news.ycombinator.com/item?id=42516497",
+    "comments": [
+      "I like the idea of a separate tree, but would prefer something other than a child-list for building the tree.  I find building a graph with an outward-edge list (which is what this does) to be more error prone and less clear than a either the braces or indentation based approach that is more common; IMO the only advantage to an edge-list is to make circular graphs, which isn't needed here.[edit]Also, if you are going to have lists that will be edited a lot, don't require commas for separating items; splicing lists with only whitespace for separators is a much faster operation in many editors.\n \nreply",
+      "Splitting code into multiple files and lowering cohesion is quite far from \"separation of concerns\". It makes changes, navigation and reasoning artificially harder. It's like tearing building blueprint into random pieces.\n \nreply",
+      "I coded new kind of front-end generator. You can \"kaizen\" into your HTML frontend/website with at least 40% less typing. It allows separation of concerns and you can code using HTMX and AlpineJS (or equivalent tech) Been planning this for a long time -- finally coded it on Christmas day.   https://cullfront.com/   The website is sparse. But do read the documentation -- it explains everything. This is fresh off the oven. So kindly let me know your thoughts.\n \nreply",
+      "This is awesome. Can't help but be reminded of linker step -> compiler step. Hm I wonder what the analogy of static versus shared libraries would feel like here. Or LD_PRELOAD ;)\n \nreply",
+      "It is a Windows, no source provided executable. No idea what response you expected but it is what I expected ;)\n \nreply"
+    ],
+    "link": "https://cullfront.com",
+    "first_paragraph": "Version 0.5Design front-end/sites like an architect, not a carpenter.\n\u00a9 Sabu Francis, 2024. All rights reserved. This is donation-ware.\n        If I raise at least $20,000 USD, I will definitely open-source this.\nDonate!DownloadDocumentationFeedbackLast release date: Dec 26, 2024"
+  },
+  {
+    "title": "Ocular AI (YC W24) Is Hiring a Founding Backend Engineer ($120K to $200K, SF) (ycombinator.com)",
+    "points": 0,
+    "submitter": "",
+    "submit_time": "2024-12-26T17:33:54 1735234434",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.ycombinator.com/companies/ocular-ai/jobs/BFBHWQd-member-of-technical-staff-founding-backend-engineer",
+    "first_paragraph": "Data engine for Generative AI, Computer Vision, and Enterprise AI.Ocular AI is the data annotation engine for Generative AI, Computer Vision, and Enterprise AI models.We help companies transform unstructured, multi-modal data into golden datasets to power generative AI, frontier models, and computer vision.Ocular Foundry is the most intuitive, data-centric, and fastest platform that lets you label, annotate, version, and deploy your data for training models. It also orchestrates your annotation jobs, improving collaboration with members and annotators.With Ocular Bolt, shift from humans in the loop to experts in the loop to supercharge your data labeling and annotation projects. Our global expert workforce ensures fast, accurate results\u2014no matter the scale or complexity of your data.In just 3 months, our small team of 3 (including founders) has achieved remarkable progress, making this an exceptional opportunity for you to join a fast-moving, well-funded startup backed by top investors"
+  },
+  {
+    "title": "OpenAI is Visa \u2013 Buttering up the government to retain a monopoly (sherwood.news)",
+    "points": 145,
+    "submitter": "gpi",
+    "submit_time": "2024-12-26T19:44:51 1735242291",
+    "num_comments": 76,
+    "comments_url": "https://news.ycombinator.com/item?id=42517260",
+    "comments": [
+      "Lol, visa had network effect.It also took a long time to build up such a network.Replacing all payment terminals is not easy. And as a customer I'm more likely to care of my card works and not care if I'm charged x% fee.The visa trick if any, was hiding the credit card fee and pushing it to merchants.\nWhether its a trick or not is hard to tell, for small businesses it was probably bad, but for a big business dealing with lots of cash is probably not cheap.\n \nreply",
+      "Doesn't explain what regulations Visa pushed for and got which helped it maintain its monopoly. Would be helpful to have some concrete examples of what it did and what OpenAI is trying to do.The point of the article sounds plausible, but doesn't really present any evidence to support it.Also OpenAI in no way has a monopoly of the kind that Visa/MC has.\n \nreply",
+      "> Also OpenAI in no way has a monopoly of the kind that Visa/MC has.I think this is misreading how literal the comparison is meant to be; Sherwood's running a bunch of \"OpenAI is X\" articles today. This is not about the massive duopoly which has been catastrophic for US payments, but about the way companies entrench themselves.> Doesn't explain what regulations Visa pushed for and got which helped it maintain its monopoly.Those details are in the linked WSJ article; https://www.wsj.com/finance/banking/visa-wanted-a-vast-empir...> but doesn't really present any evidence to support it.The main points of concern are mentioned; OpenAI is pushing for \"AI regulation\" that focusses on the nebulous \"doomsday\"/skynet scenarios, rather than any of the material harms of AI. The subtext of that is a straightforward \"you should ban anyone else building AI because only we can do it safely\".Similarly, OpenAI demanding it's investors not fund competitors is pretty ridiculous and explicitly trying to establish a monopoly.\n \nreply",
+      "> I think this is misreading how literal the comparison is meant to be; Sherwood's running a bunch of \"OpenAI is X\" articles today.This is ... a useful piece of information with which to update our credulity of the narrative these articles are trying to present.\n \nreply",
+      "https://sherwood.news/tech/what-companys-past-reveals-the-fu... provides more context as to what the articles are trying to achieve.\n \nreply",
+      "The duopoly isn\u2019t really as problematic as the concept itself. Credit cards, where customers are bribed to insert a middleman into all transactions and suppliers are largely powerless to refuse it; are a plague. The switching costs of a consumer to a different credit card are small. The switching cost of a business saying they no longer allow certain payment types is potentially very painful.\n \nreply",
+      "Credit cards are probably the most consumer friendly innovation ever \u2014 a product of the time they were developed. It was an era when the federal government functioned and the credit card operations were so problematic a heavy hand was required.Every supposedly better alternative adds margin for the supplier, increases the risk of fraud, and leaves the user with poor recourse due to the lack govnerment regulation.Adding a 3% overhead is cheap for the value. Let the suppliers be squeezed - it\u2019s tiny for big merchants and the little ones are bitching because they\u2019d rather lose sales than pay taxes.\n \nreply",
+      "> Those details are in the linked WSJ article; https://www.wsj.com/finance/banking/visa-wanted-a-vast-empir...if you're trying to make a point in an article, summarize your evidence rather than link to a paywalled article that your readers may not be able to access\n \nreply",
+      "Yea, I don't want to defend Visa, but a lot of their dominance came from network effects. Merchants want to accept Visa because it's what people have in their wallet. Customers want Visa because it's what merchants accept. That cycle keeps reinforcing itself.That's not to say that Visa hasn't worked toward favorable regulations, but the biggest problem with alternative payment networks (to Visa/MC/Discover/AMEX) is that most retailers don't take them which means most customers don't want to set them up. If most customers don't have those payment methods, there's little incentive for a merchant to setup those payment methods.With OpenAI, there isn't the same network effect. I don't care what LLM you're using or what LLM Walmart or anyone else is using. If Anthropic or Google start offering better/cheaper LLMs, companies can simply switch over. Maybe some integrations will need to be rewritten, but that's a lot easier than getting hundreds of millions of customers to sign up for something new. Plus, companies like Google are simply implementing the OpenAI API so that integrations don't have to be rewritten.By contrast, if another company launches a payment network, it isn't enough just to convince a company to switch. You need to convince millions of consumers to switch - which would require convincing enough companies to switch.\n \nreply",
+      "> Yea, I don't want to defend Visa, but a lot of their dominance came from network effects.I think it's worth noting that VISA is also really doing a pretty good job. Like the cards work. Here in Europe they seem eager to adopt emerging technology and are willing to invest to maintain their dominance.There's a ton of not so consumer friendly backroom deals with kickbacks for the banks and stuff, but the core product is roughly what consumers desire. A card that works almost 100% of the time without any difficulty. While simultaneously implementing and adopting whatever weird regulations get passed into law.They are, in my opinion, doing a decent job.\n \nreply"
+    ],
+    "link": "https://sherwood.news/tech/openai-is-visa/",
+    "first_paragraph": "Buttering up the government to retain a monopoly.OpenAI is on the verge of becoming the Visa of artificial intelligence. Visa\u2019s success wasn\u2019t just about building a payments network; it was about creating barriers that locked in customers and locked out competitors. And just as Visa faced threats from national payment networks and tech giants, OpenAI must contend with competitors like Google, Meta, and Amazon.In 1958, 60,000 Californians got a fully working credit card in the mail. It was the first unsolicited credit-card drop, and it led to massive fraud and delinquency problems. Bank of America, which ran the campaign, realized it had to build a payments network with account verification and fraud detection. The network it built and licensed to other banks eventually became Visa, which IPO\u2019d in 2008 at a $44 billion valuation. Today the company is worth about $600 billion.But in the 2010s Visa faced numerous threats to its core business. Digital providers like PayPal and well-capital"
   }
 ]
