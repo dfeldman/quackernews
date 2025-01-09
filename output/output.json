@@ -1,380 +1,390 @@
 [
   {
-    "title": "Magic/tragic email links: don't make them the only option (recyclebin.zip)",
-    "points": 253,
-    "submitter": "gepeto42",
-    "submit_time": "2025-01-07T21:06:24 1736283984",
-    "num_comments": 160,
-    "comments_url": "https://news.ycombinator.com/item?id=42627453",
+    "title": "NeuralSVG: An Implicit Representation for Text-to-Vector Generation (sagipolaczek.github.io)",
+    "points": 347,
+    "submitter": "lnyan",
+    "submit_time": "2025-01-08T18:16:37 1736360197",
+    "num_comments": 38,
+    "comments_url": "https://news.ycombinator.com/item?id=42636873",
     "comments": [
-      "Issues I\u2019ve encountered building an app with magic links:1. Include a fallback sign-in code in your magic link, in case the user needs to log in on a device where accessing their email isn\u2019t practical.2. Make sure the sign-in link can handle email clients that open links automatically to generate preview screenshots.3. Ensure the sign-in link works with email clients that use an in-app browser instead of the user\u2019s preferred browser. For example, an iOS user might prefer Firefox mobile, but their email client may force the link to open in an in-app browser based on Safari.\n \nreply",
-      "We went to a lot of trouble to make our magic link implementation work with anti-phishing software, corp link checkers and more. https://github.com/FusionAuth/fusionauth-issues/issues/629 documents some of the struggle.I think that a link to a page where you enter a one time code gets around a lot of these issues.\n \nreply",
-      "I arrived at the same conclusion after going through the steps and seeing that some corporate systems mark the login link as malicious, and there\u2019s nothing I can do about it.Sending a code goes around a lot of issues.\n \nreply",
-      "1 and 3 are mentioned in the article. It\u2019s still annoying if there is no password option.\n \nreply",
-      "3 isn't really possible, because the redirect needs to take you back to the browser session where you initiated the login from.\n \nreply",
-      "It definitely does not.Have your logging-in session wait for / poll \"has visited magic link\", and authenticate that session when it's done.Tons of systems do this.  It works great, and it can quite easily work without any web browser at all on the logging-in side because it just needs to curl something -> poll for completion and save the cookies -> curl against the API.  A number of oauth flows for e.g. TVs work this way, for instance, because it's a heck of a lot easier than integrating a full browser in the [embedded thing].  Many app-based 2FA (e.g. Duo) works this way too.\n \nreply",
-      "No \"tons\" of systems do not do this. If you come across one that does it was built by a team that has no idea about security.TVs etc. are special cases because obviously there is no way to redirect to them, and even there developers will always have some kind of secondary checks like having you enter a code displayed on the screen.\n \nreply",
-      "So I misclick a link in my email client and the evil guy who requested in is now logged in on his browser god knows where? Surely that can\u2019t be real. It sounds awful. TVs involve copying a code to make sure the right device is being authenticated, or the ones I\u2019ve used have at least.\n \nreply",
-      "Duo 2FA works the same way.  In principle yes.  And it's basically always accompanied by a \"click this link\" -> \"are you trying to log in, and is this you? yes/no\" page to resist that.Small code copying is also a very good answer though, yes.  Roughly as easily manipulated, but nothing's perfect, and it's less \"I didn't mean to click that button\"-prone.\n \nreply",
-      "Yeah but I routinely click links in emails whereas logging in is the sole purpose of Duo. I could easily just intend to scroll the page and end up tapping the link.\n \nreply"
+      "This is excellent!I think the utility of generating vectors is far, far greater than all the raster generation that's been a big focus thus far (DALL-E, Midjourney, etc). Those efforts have been incredibly impressive, of course, but raster outputs are so much more difficult to work with. You're forced to \"upscale\" or \"inpaint\" the rasters using subsequent generative AI calls to actually iterate towards something useful.By contrast, generated vectors are inherently scalable and easy to edit. These outputs in particular seem to be low-complexity, with each shape composed of as few points as possible. This is a boon for \"human-in-the-loop\" editing experiences.When it comes to generative visuals, creating simplified representations is much harder (and, IMO, more valuable) than creating highly intricate, messy representations.\n \nreply",
+      "Have you looked at https://www.recraft.ai/ recently? The image quality of their vector outputs seems to have gotten quite good, although you obviously still wouldn't want to try to generate densely textured or photographic-like images like Midjourney excels at. (For https://gwern.net/dropcap last year or before, we had to settle for Midjourney and create a somewhat convoluted workflow through Recraft; but if I were making dropcaps now, I think the latest Recraft model would probably suffice.)\n \nreply",
+      "There is also the possibility for using these images as guidance for rasterization models.  Generate easily manipulatable and composible images as a first stage then add detail once the image composition is satisfactory.\n \nreply",
+      "My little project for the highly intricate, messy representation ;) https://github.com/KodeMunkie/shapesnap (it stands on the backs of giants, original was not mine). It's also available on npm.\n \nreply",
+      "Ah, we should be friends!I'm not sure what else to add, except that these are exactly the thoughts I think, and it used to feel lonely ;)\n \nreply",
+      "I am a huge fan of this type of incremental generative approach. Language isn\u2019t precise enough to describe a final product, so generating intermediate steps is very powerful.I\u2019d also like to see this in music generation. Tools like Suno are cool but I would much rather have something that generates MIDIs and instrument configurations instead.Maybe this is a good lesson for generative tools. It\u2019s possible to generate something that\u2019s a good starting point. But what people actually want is long tail, so including the capability of precision modification is the difference between a canned demo and a powerful tool.> Code coming soonThe examples are quite nice but I have no idea how reproducible they are.\n \nreply",
+      "I\u2019d also like to see this in music generation. Tools like Suno are cool but I would much rather have something that generates MIDIs and instrument configurations instead.Sounds like you're looking for something like https://www.aiva.ai\n \nreply",
+      "Honestly that site feels like they have a database of midis tagged by genre and pick them out randomly. It\u2019s totally different from their demo song.I guess I\u2019m hoping for something better. It\u2019s also closed source, the web ui doesn\u2019t have editing functionality, and the output is pretty disjointed. Maybe if I messed around with it enough the result would be decent.\n \nreply",
+      "MIDI isn't enough. I want MIDI + filters, plus separate voice and custom sounds tracks.\n \nreply",
+      "microtonal midi would be super awesome\n \nreply"
     ],
-    "link": "https://recyclebin.zip/posts/annoyinglinks/",
-    "first_paragraph": "The term \u201cMagic Links\u201d once meant a futuristic PDA. Nowdays, companies like Auth0 use it to refer to the slightly-magical feat of including a login link in an email.Last week, the great website you should subscribe to if you haven\u2019t already (it\u2019s great, when you\u2019re not logged out), 404 Media, posted \u201cWe Don\u2019t Want Your Password\u201d in defense of so-called magic links.Of course, as stated in the article, such email links are harder to phish than passwords, can\u2019t lead to a breach of passwords, and protect the site itself against users who might reuse passwords previously compromised.The article even covers some of my annoyances with this system, but throws out this sentence:We find this to be a much easier login process and wish it was more common across the web where appropriate.Easier than what? Easier than a long password, without a password manager? Easier than a passkey? Easier than an OTP sent to the same email address?This sentence reads to me as one written by someone mostly working"
+    "link": "https://sagipolaczek.github.io/NeuralSVG/",
+    "first_paragraph": "\r\n                            Vector graphics are essential in design, providing artists with a versatile medium for creating resolution-independent\r\n                             and highly editable visual content. Recent advancements in vision-language and diffusion models have fueled interest \r\n                             in text-to-vector graphics generation. However, existing approaches often suffer from over-parameterized outputs or \r\n                             treat the layered structure --- a core feature of vector graphics --- as a secondary goal, diminishing their practical \r\n                             use. Recognizing the importance of layered SVG representations, we propose NeuralSVG, an implicit neural representation\r\n                              for generating vector graphics from text prompts. Inspired by Neural Radiance Fields (NeRFs), NeuralSVG encodes the \r\n                              entire scene into the weights of a small MLP network, optimized using Score D"
   },
   {
-    "title": "Mistakes engineers make in large established codebases (seangoedecke.com)",
-    "points": 199,
-    "submitter": "BerislavLopac",
-    "submit_time": "2025-01-07T20:44:35 1736282675",
-    "num_comments": 98,
-    "comments_url": "https://news.ycombinator.com/item?id=42627227",
-    "comments": [
-      "I've worked in codebases like this and disagree. Consistency isn't the most important, making your little corner of the codebase nicer than the rest of it is fine, actually, and dependencies are great - especially as they're the easiest way to delete code (the article is right about the importance of that). What's sometimes called the \"lava layer anti-pattern\" is actually a perfectly good way of working, that tends to result in better systems than trying to maintain consistency. As Wall says, the three cardinal virtues of a programmer are laziness, impatience, and hubris; if you don't believe you can make this system better then why would you even be working on it?Also if the system was actually capable of maintaining consistency then it would never have got that large in the first place. No-one's actual business problem takes 5M lines of code to describe, those 5M lines are mostly copy-paste \"patterns\" and repeated attempts to reimplement the same thing.\n \nreply",
-      "I agree that consistency is important \u2014 but what about when the existing codebase is already inconsistent? Even worse, what if the existing codebase is both inconsistent and the \"right way to do things\" is undocumented? That's much closer to what I've experienced when joining companies with lots of existing code.In this scenario, I've found that the only productive way forward is to do the best job you can, in your own isolated code, and share loudly and frequently why you're doing things your new different way. Write your code to be re-used and shared. Write docs for it. Explain why it's the correct approach. Ask for feedback from the wider engineering org (although don't block on it if they're not directly involved with your work.) You'll quickly find out if other engineers agree that your approach is better. If it's actually better, others will start following your lead. If it's not, you'll be able to adjust.Of course, when working in the existing code, try to be as locally consistent as possible with the surrounding code, even if it's terrible. I like to think of this as \"getting in and out\" as quickly as possible.If you encounter particularly sticky/unhelpful/reticent team members, it can help to remind them that (a) the existing code is worse than what you're writing, (b) there is no documented pattern that you're breaking, (c) your work is an experiment and you will later revise it. Often asking them to simply document the convention that you are supposedly breaking is enough to get them to go away, since they won't bother to spend the effort.\n \nreply",
-      "> If it's actually better, others will start following your lead.Not really my experience in teams that create inconsistent, undocumented codebases... but you might get 1 or 2 converts.\n \nreply",
-      "It depends on the day but generally I believe that most engineers want to write good code, want to improve their own skills, and like learning and critiquing with other engineers. Sometimes a small catalyst is all it takes to dramatically improve things. Most of the times I've thought that individual contributors were the problem, the real issue was what the company's leaders were punishing/rewarding/demanding.\n \nreply",
-      "ahh, there's a lot of scenarios here.in my scenario, those people were gone.\n \nreply",
-      "I rarely see large 10m+ LOC codebases with any sort of strong consistency. There are always flavors of implementations and patterns all over the place. Hell, it's common to see some functionality implemented multiple times in different places\n \nreply",
-      "And it's fine, right? Honestly I think people need to realize that part of being a good engineer is being able to deal with inconsistency. Maybe submodule A and submodule B do network requests slightly differently but if both ways are reasonable, working, and making the company money, it's probably not worth delaying product improvements in order to make things \"more consistent.\"On the other hand if no one in your company cares about consistency, at some point everything becomes so awful you basically won't be able to retain engineers or hire new ones, so this is a place where careful judgement is needed.\n \nreply",
-      "Yeah 100%.  Honestly style / technique / language consistency are implementation details, it helps with engineer fungibility and ramp up, but it also works against engineers applying local judgement.  This is something to briefly consider when starting new services/features, but definitely not something to optimize for in an existing system.On the other hand, data and logic consistency can be really important, but you still have to pick your battles because it's all tradeoffs.  I've done a lot of work in pricing over the decades, and it tends to be an area where the logic is complex and you need consistency across surfaces owned by many teams, but at the same time it will interact with local features that you don't want to turn pricing libraries/services into god objects as you start bottlenecking all kinds of tangentially related projects.  It's a very tricky balance to get right.  My general rule of thumb is to anchor on user impact as the first order consideration, developer experience is important as a second order, but many engineers will over-index on things they are deeply familiar with and not be objective in their evaluation of the impact / cost to other teams who pay an interaction cost but are not experts in the domain.\n \nreply",
-      "A common experience (mostly in the Pacific North West) I have had is to implement a feature in a straightforward manner that works with minimal code, for some backlog issue. Then I'm told the PR will be looked at.A couple days later I am told this is not the way to do X. You must do it Y? Why Y? Because of historical battles won and lost why, not because of a specific characteristic. My PR doesn't work with Y and it would be more complicated...like who knows what multiplier of code to make it work. Well that makes it a harder task than your estimate, which is why nobody ever took it up before and was really excited about your low estimate.How does Y work? Well it works specifically to prevent features like X. How am I supposed to know how to modify Y in a way that satisfies the invisible soft requirements? Someone more senior takes over my ticket, while I'm assigned unit tests. They end up writing a few hundred lines of code for Y2.0 then implement X with a copy paste of a few lines.I must not be \"a good fit\". Welcome to the next 6-12 months of not caring about this job at all, while I find another job without my resume starting to look like patchwork.\n \nreply",
-      "And to be practical, that's fine. In a big codebase it's more important to encourage consistent, well-defined, small interfaces, and a clean separation of concerns, than to try to get consistency in the lower-level implementation details. Other non-code concerns like coordinating releases and migration of shared services are also way more important than getting everyone to use the same string library.(Of course, if you carry that principle to the extreme you end up with a lot of  black-box networked microservices.)\n \nreply"
-    ],
-    "link": "https://www.seangoedecke.com/large-established-codebases/",
-    "first_paragraph": "Working in large established codebases is one of the hardest things to learn as a software engineer. You can\u2019t practice it beforehand (no, open source does not give you the same experience). Personal projects can never teach you how to do it, because they\u2019re necessarily small and from-scratch. For the record, when I say \u201clarge established codebases\u201d, I mean:I\u2019ve now spent a decade working in these codebases. Here\u2019s what I wish I\u2019d known at the start.There\u2019s one mistake I see more often than anything else, and it\u2019s absolutely deadly: ignoring the rest of the codebase and just implementing your feature in the most sensible way. In other words, limiting your touch points with the existing codebase in order to keep your nice clean code uncontaminated by legacy junk. For engineers that have mainly worked on small codebases, this is very hard to resist. But you must resist it! In fact, you must sink as deeply into the legacy codebase as possible, in order to maintain consistency.Why is consi"
-  },
-  {
-    "title": "Show HN: Tramway SDK \u2013 The Unholy Union Between Half-Life and Morrowind Engines (racenis.github.io)",
-    "points": 422,
-    "submitter": "racenis",
-    "submit_time": "2025-01-07T16:22:09 1736266929",
-    "num_comments": 151,
-    "comments_url": "https://news.ycombinator.com/item?id=42624116",
-    "comments": [
-      "\"Some might say \"just get a better computer\". This is why getting a better computer is bad:1. Affordance: A lot of people, especially from 3rd world countries are very poor and can't afford to buy hardware to run Turbobloat.2. e-Waste: Producing computer chips is very bad on the environment. If modern software wasn't Turbobloated you would buy new hardware only when the previous hardware broke and wasn't repairable.3. Not putting up with Turbobloat: Why spend money on another computer if you already have one that works perfectly fine? Just because of someone else's turbobloat? You could buy 1000 cans of Dr. Pepper instead.\"Took the words from my mouth. What a great project. Please keep posting your progress.\n \nreply",
-      "\"Screen resolutions from 320x200 to 800x600.\"Still, higher resolutions were not just invented because of Turbobloat.\n \nreply",
-      "Important:This was just a joke from the site, I actually took serious!There is no 800x600 limit.\n \nreply",
-      "But also a convenient excuse to sell more ramm and disk space 'for the textures'.\n \nreply",
-      "Hard to know how to respond to that.  This could be applied to virtually all technology changes that benefit users but also make money for someone else.I assume you use a refrigerator and not a hole in the ground with ice. Have you been manipulated into giving money to Big Appliance?\n \nreply",
-      "To an absolute hardliner for appropriate technology, probably -- but simplicity isn't necessarily all-or-nothing, and (IMO) helping people pull off cool things with simpler tools isn't so bad.https://en.wikipedia.org/wiki/Appropriate_technology\n \nreply",
-      "Sure, but we're not talking about how to irrigate a field here, we're talking about being limited to 600x800 resolution when playing a game.Some people were teenagers when that was the best you could get, so I'm guessing they see it as a \"good old days\" baseline that they can be principled about while indulging their nostalgia.\n \nreply",
-      "I can see that, but I think calling it just nostalgia-driven is judging a book by its cover.First off, I want to say you can totally have a design ethos that covers game engines as much as irrigation systems -- Lee Felsenstein explicitly cited Ivan Illich's notion of 'convivial technology' as an influence on his modems. And Illich mostly talked about bicycles.What I see in this project is a specific kind of appropriate technology -- 'toaster compatibility' -- mixed with conscious adoption of old methods and aesthetics to serve and signal that end. Which is cool, IMO.HTMX uses similar techniques in trying to 'bring back' hypermedia and reduce dependencies, although I think they're after a different kind of simplicity. And of course, their Hypermedia Systems book makes similar nods to 90s-software aesthetics: https://hypermedia.systems/\n \nreply",
-      "I remember that was the best I can get and I was thrilled for it at the time. But then I was even more thrilled when Far Cry came out. Then Crysis ... why would I go back? Now you surely can argue, that nowdays the creativity got lower in favour of just more textures, but I like to have both.Still, for a simple game limiting to 800x600 for performance and dev reasons - why not? But for me it means I see no use case for myself.\n \nreply",
-      "It is enough to make gameplay the main challenge?https://i.chzbgr.com/full/9632128256/hDF15F98F/cat\n \nreply"
-    ],
-    "link": "https://racenis.github.io/tram-sdk/why.html",
-    "first_paragraph": "\nTramway SDK (heavy metal spelling \u2013\n\tT\u0308ra\u0326m\u030aw\u0308a\u0326y\u0308 SD\u0308K) is a graphics\n\tpackage/framework/game engine that I have been working on for the past\n\t3 years.\n\n\tIn this article I attempt to turn you against mainstream engines and I will\n\texplain, in detail, why Tramway SDK is not as awful as them.\n\n\tUnity needs very powerful hardware and consumes enough power to burn down a\n\trainforest. Godot is slightly better, but you still need relatively capable\n\thardware.\n\n\tBut what if all that you really want to make is just a lowpoly horror\n\troguelite deckbuilder simulator? 15 year old hardware is more than capable\n\tof running a game like that, but not if you use a mainstream engine, due to\n\tTurbobloat.\n\n\tTramway SDK can run on virtually any hardware from the last 15 years, since\n\tit is not Turbobloated. It doesn't even need a graphics card, since it can\n\tbe switched to use software rasterization, making it perfect for displaying\n\tgraphics on\ttoasters and fridges.\n\n\tSome might say \"just get a better "
-  },
-  {
-    "title": "Show HN: HipScript \u2013 Run CUDA in the Browser with WebAssembly and WebGPU (lights0123.com)",
-    "points": 151,
-    "submitter": "lights0123",
-    "submit_time": "2025-01-07T15:44:34 1736264674",
-    "num_comments": 23,
-    "comments_url": "https://news.ycombinator.com/item?id=42623593",
-    "comments": [
-      "The GoL example it loaded with seemed to be running way slower than I expected it to.  It turns out that there's actually a `usleep(1000 * 100)` call in the code which was inserted to make it easier to see the output; the actual kernels execute quickly and take up very little GPU time.When I looked at the profiler, I was confused to see that one worker thread was at 100% usage the whole time it was running.  At first, I thought that maybe it was actually running the code via Wasm on the CPU rather than on the GPU like it said.Instead, it turns out that the worker was just running `emscripten_futex_wait` - which as far as I can tell is implemented by busy waiting in a loop.  Probably doesn't matter for performance since I imagine that's just for the sleep call anyway.----Altogether this is an incredibly cool tool.  I'm sure there is some performance gap compared to native, but even so this is a extremely impressive and likely has a ton of potential use cases.\n \nreply",
-      "Thank you so much for this! I was a bit concerned that the performance on my Mac was nearly identical to my new 3090 on PC and thought I might have messed up the setup there!\n \nreply",
-      "From the \"Learn More\" link (https://lights0123.com/blog/2025/01/07/hip-script/):\"By chaining chipStar\u00b9 (a HIP and NVIDIA\u00ae CUDA\u00ae to OpenCL compiler), Clspv\u00b2 (an OpenCL to Vulkan compiler), and Tint\u00b3 (among others, a Vulkan shader to WebGPU shader compiler), you can run CUDA code in the browser!\"\u00b9 https://github.com/CHIP-SPV/chipStar/ \u00b2 https://github.com/google/clspv/ \u00b3 https://dawn.googlesource.com/dawn/+/refs/heads/main/src/tin...\n \nreply",
-      "Firefox supports WebGPU, but needs a setting in about:config. I enabled the setting but HipScript still denies running on Firefox with the message: \"Please try a Chromium-based browser like Google Chrome or Microsoft Edge.\"Please do feature detection, not browser detection.\n \nreply",
-      "I do do feature detection\u2014WebGPU is blocked on Release Firefox regardless of config, you'll need nightly. It does support Safari with its experimental mode enabled for example.\n \nreply",
-      "I enabled WebGPU in safari on my m1 Mac and got this error when running the GoL demo:```\nTypeError: B.values().some is not a function. (In 'B.values().some(r=>r.args.length)', 'B.values().some' is undefined)\n```EDIT: I got the same error with all three sample scripts\n \nreply",
-      "I believe I just fixed this\u2014JavaScriptCore doesn't have support for a recently-introduced function.\n \nreply",
-      "What an incredible demo/hack. This is actually the simplest way to actually execute CUDA code that I've seen.\n \nreply",
-      "Not to mention that it Just Works on Apple devices! Really, really cool.\n \nreply",
-      "This is an awesome use of WASIX [1] and the Wasmer SDK [2]. Quite exciting to see!I recommend as well reading through the blogpost (repo on [3]): https://lights0123.com/blog/2025/01/07/hip-script/ (many things to improve on the Wasmer side... we have some work to do!)[1] https://wasix.org/[2] https://github.com/wasmerio/wasmer-js[3] https://github.com/lights0123/hipscript/\n \nreply"
-    ],
-    "link": "https://hipscript.lights0123.com/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Automated Accessibility Testing at Slack (slack.engineering)",
-    "points": 20,
-    "submitter": "teivah",
-    "submit_time": "2025-01-07T23:20:43 1736292043",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=42628934",
-    "comments": [
-      ">A few developers gave us early feedback and requested screenshots of the pages where accessibility violations occurred.It's amazing how much a screenshot will do for my motivation to fix a frontend bug. Visually identifying severity is much easier than reading and making a mental judgement.\n \nreply",
-      "I like using video as well. The whole \"picture is worth 1000 words\" adage is true, and it makes all kinds of bugs far easier to recognize.I'm sure other tools are great too but I find Cleanshot on macOS makes it super convenient to do it, so there's no excuse not to document reports with images and/or videos.I do the same with pull requests. Words are almost always essential, but demonstrating bugs/changes/features directly through accompanying visuals is hard to beat.\n \nreply"
-    ],
-    "link": "https://slack.engineering/automated-accessibility-testing-at-slack/",
-    "first_paragraph": "SearchLatest PostsArchivesAt Slack, customer love is our first priority and accessibility is a core tenet of customer trust. We have our own Slack Accessibility Standards that product teams follow to guarantee their features are compliant with Web Content Accessibility Guidelines (WCAG). Our dedicated accessibility team supports developers in following these guidelines throughout the development process. We also frequently collaborate with external manual testers that specialize in accessibility.\u00a0In 2022, we started to supplement Slack\u2019s accessibility strategy by setting up automated accessibility tests for desktop to catch a subset of accessibility violations throughout the development process. At Slack, we see automated accessibility testing as a valuable addition to our broader testing strategy. This broader strategy also includes involving people with disabilities early in the design process, conducting design and prototype review with these users, and performing manual testing acr"
-  },
-  {
-    "title": "Ending our third party fact-checking program and moving to Community Notes model (fb.com)",
-    "points": 506,
-    "submitter": "impish9208",
-    "submit_time": "2025-01-07T12:15:22 1736252122",
-    "num_comments": 754,
-    "comments_url": "https://news.ycombinator.com/item?id=42621627",
-    "comments": [
-      "I'd like to hear an informed take from anybody who thinks that Facebook's fact-checkers were a better product feature than Community Notes.All of the articles I'm seeing about this online are ideological, but this feels like the kind of decision that should have been in the works for multiple quarters now, given how effective Notes have been, and how comically ineffective and off-putting fact-checkers have been. The user experience of fact-checkers (forget about people pushing bogus facts, I just mean for ordinary people who primarily consume content rather than producing it) is roughly that of a PSA ad spot series saying \"this platform is full of junk, be on your guard\".\n \nreply",
-      "The ideological bits are:* Dana White added to the board.* \"Move our trust and safety and content moderation teams out of California, and our US content review to Texas. This will help remove the concern that biased employees are overly censoring content.\" - like people being in Texas makes them more objective?!The actual mechanisms of running a social media network at scale are tricky and I think most of us would be fine with some experimentation. But it looks pretty political in the broader context, so maybe it's just a way of saying that certain kinds of 'content' like attacking trans people is going to be ok now.I can't quite FB entirely, but Threads looks like a much less interesting option with Blue Sky being available and gaining in popularity.\n \nreply",
-      "I get how the partisan story is easy to tell here, but I'm saying something pretty specific: I think it would have been product development malpractice for this decision not to have been in the works for many, many months, long before the GOP takeover of the federal government was a safe bet. Community Notes has been that successful, and Facebook's fact-checkers have been that much of a product disaster.I've never seen a wrong Facebook fact-check; I am warmly supportive of intrusive moderation; that's not where I'm coming from.\n \nreply",
-      "Clegg left a few days ago, and the Oversight Board issued a statement which sounds like they were in the dark:> \u201cWe look forward to working with Meta in the coming weeks to understand the changes in greater detail, ensuring its new approach can be as effective and speech-friendly as possible.\u201d [1]So is it possible this was only announced recently.  It might have been \"in the works\" in the C-suite for a bit longer, but there doesn't seem to be any evidence it was widely known before very recently.[1] https://www.theguardian.com/technology/2025/jan/07/meta-face...\n \nreply",
-      "As a product decision taken independently, maybe. Running one of those things at scale with all kinds of people trying to subvert it for various reasons, including some downright evil ones, is not an easy task.Announced together with everything else  and given the timing, I just can't help but think there's a political component to all of it.\n \nreply",
-      "I don't at all doubt that they're going to do whatever they can to cast this presumably longstanding product plan in the light most favorable to the governing majority! I just want to get the causality right.\n \nreply",
-      "I don't understand though: What makes you think that you are getting the causality right? It seems to me like you're asserting the causality goes one direction, when there doesn't seem to be any evidence (at least in public) for that assertion at the moment. Have I just missed some other information on this that you're basing this on?\n \nreply",
-      "I think he is suggesting that this move has favorable PR optics for the incoming administration.  Making it appear like a conservative victory may give them some slack or earn them some favors.\n \nreply",
-      "Fact checking, Community Notes, whatever you want to call it, is inherently political.\n \nreply",
-      "To be clear: I absolutely do not dispute this. But in 2025 it seems pretty clear that you cannot run a mainstream large-scale social network without some kind of moderation, so every platform is going to do something. And all I'm saying is: what Facebook was doing before was bad, just as a product experience. Just wretched. Solved no problems, mostly surfaced stuff I wouldn't have paid attention to in the first place.\n \nreply"
-    ],
-    "link": "https://about.fb.com/news/2025/01/meta-more-speech-fewer-mistakes/",
-    "first_paragraph": "\nMeta\nMeta\u2019s platforms are built to be places where people can express themselves freely. That can be messy. On platforms where billions of people can have a voice, all the good, bad and ugly is on display. But that\u2019s free expression.In his 2019 speech at Georgetown University, Mark Zuckerberg argued that free expression has been the driving force behind progress in American society and around the world and that inhibiting speech, however well-intentioned the reasons for doing so, often reinforces existing institutions and power structures instead of empowering people. He said: \u201cSome people believe giving more people a voice is driving division rather than bringing us together. More people across the spectrum believe that achieving the political outcomes they think matter is more important than every person having a voice. I think that\u2019s dangerous.\u201dIn recent years we\u2019ve developed increasingly complex systems to manage content across our platforms, partly in response to societal and pol"
-  },
-  {
-    "title": "A video tour of the Standard Model (2021) (quantamagazine.org)",
-    "points": 60,
-    "submitter": "goodway",
-    "submit_time": "2025-01-05T21:43:44 1736113424",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.quantamagazine.org/a-video-tour-of-the-standard-model-20210716/",
-    "first_paragraph": "\nAn editorially independent publication supported by the Simons Foundation.\n\nGet the latest news delivered to your inbox.\nCreate a reading list by clicking the Read Later icon next to the articles you wish to save.Type search term(s) and press enterPopular\n                                    SearchesJuly 16, 2021Video: The Standard Model of particle physics is the most successful scientific theory of all time. In this explainer, Cambridge University physicist David Tong recreates the model, piece by piece, to provide some intuition for how the fundamental building blocks of our universe fit together.Emily Buder/Quanta Magazine;\u00a0Adrian Vasquez de Velasco,\nKristina Armitage and Rui Braz for Quanta MagazineContributing WriterJuly 16, 2021Recently, Quanta has explored the collaboration between physics and mathematics on one of the most important ideas in science: quantum field theory. The basic objects of a quantum field theory are quantum fields, which spread across the universe and, thro"
-  },
-  {
-    "title": "Physicists Magnetize a Material with Light (news.mit.edu)",
-    "points": 104,
-    "submitter": "thunderbong",
-    "submit_time": "2025-01-07T17:54:41 1736272481",
-    "num_comments": 35,
-    "comments_url": "https://news.ycombinator.com/item?id=42625219",
-    "comments": [
-      "> scientists believe antiferromagnetic materials could be a more robust alternative to existing magnetic-based storage technologiesScientists working on interesting anti-ferromagnetic materials need a justification for doing so under the crazy grant system we operate, more like.The downside of antiferromagnetic data storage, or skyrmion storage, or any of the other various ideas recently, is that reading the data is very difficult even if it is present, to the point of making a real world device pretty much practically impossible. I know, I also worked on this sort of thing before leaving academia!\n \nreply",
-      "Knowledge in itself is good. We don\u2019t need everything to have a direct commercial application. In fact most discoveries by their nature do not have directly applicable commercial applications.\n \nreply",
-      "Here's an excellent lecture that drives this point home:\"Physics in the Interest of Society Lecture 2019: John Parmentola\"https://www.youtube.com/watch?v=sx-55BhuFks\n \nreply",
-      "I agree and I am sure physicguy also agree but, alas, those who manage the grants system frequently don't.\n \nreply",
-      "Because those who pay for the taxes frequently don't. So some justification needs to happen to spend other peoples money. A better way would be nice, though.\n \nreply",
-      "Divert a percentage of military spending to a pool of money for scientists to use.\n \nreply",
-      "Isn\u2019t that what government grants essentially already are?\n \nreply",
-      "In the US, maybe. But other countries don't need to launder research money through their defense budgets.\n \nreply",
-      "What do the taxpayers say?(Me I say yes! But I learned, I usually do not represent a majority)\n \nreply",
-      "> the team worked with FePS3 \u2014 a material that transitions to an antiferromagnetic phase at a critical temperature of around 118 kelvins (-247 degrees Fahrenheit).\n> [...]\n> They placed the sample in a vacuum chamber and cooled it down to temperatures at and below 118 K.I feel like this massive caveat was buried half way through the article. This is why I dislike university press. I mean, the wizardry is impressive, but it isn't gonna revolutionize anything anytime soon if it requires a vacuum and liquid Krypton-ish temperatures.\n \nreply"
-    ],
-    "link": "https://news.mit.edu/2024/physicists-magnetize-material-using-light-1218",
-    "first_paragraph": "Suggestions or feedback?\n    Images for download on the MIT News office website are made available to non-commercial entities, press and the general public under a \n    Creative Commons Attribution Non-Commercial No Derivatives license.\n    You may not alter the images provided, other than to crop them to size. A credit line must be used when reproducing images; if one is not provided \n    below, credit the images to \"MIT.\" \n  \n\n\n\n\n\n\n\n\n\n\n\n\nPrevious image\nNext image\n\n\n\n\n\n\n\n\n\n\n\n\n\nMIT physicists have created a new and long-lasting magnetic state in a material, using only light.In a study appearing today in Nature, the researchers report using a terahertz laser \u2014 a light source that oscillates more than a trillion times per second \u2014 to directly stimulate atoms in an antiferromagnetic material. The laser\u2019s oscillations are tuned to the natural vibrations among the material\u2019s atoms, in a way that shifts the balance of atomic spins toward a new magnetic state.The results provide a new way to "
-  },
-  {
-    "title": "A Day in the Life of a Prolific Voice Phishing Crew (krebsonsecurity.com)",
-    "points": 7,
-    "submitter": "todsacerdoti",
-    "submit_time": "2025-01-07T23:51:43 1736293903",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://krebsonsecurity.com/2025/01/a-day-in-the-life-of-a-prolific-voice-phishing-crew/",
-    "first_paragraph": "Besieged by scammers seeking to phish user accounts over the telephone, Apple and Google frequently caution that they will never reach out unbidden to users this way. However, new details about the internal operations of a prolific voice phishing gang show the group routinely abuses legitimate services at Apple and Google to force a variety of outbound communications to their users, including emails, automated phone calls and system-level messages sent to all signed-in devices.Image: Shutterstock, iHaMoo.KrebsOnSecurity recently told the saga of a cryptocurrency investor named Tony who was robbed of more than $4.7 million in an elaborate voice phishing attack. In Tony\u2019s ordeal, the crooks appear to have initially contacted him via Google Assistant, an AI-based service that can engage in two-way conversations. The phishers also abused legitimate Google services to send Tony an email from google.com, and to send a Google account recovery prompt to all of his signed-in devices.Today\u2019s sto"
-  },
-  {
-    "title": "Collusion through Common Leadership [pdf] (northwestern.edu)",
-    "points": 115,
-    "submitter": "MPLan",
-    "submit_time": "2025-01-05T17:05:01 1736096701",
-    "num_comments": 56,
-    "comments_url": "https://news.ycombinator.com/item?id=42603140",
-    "comments": [
-      "Common leadership, via the sharing of board members, significantly increased the likelihood that tech firms would not hire each others' workers. This form of 'no-poaching' may have had much bigger impacts on wage suppression:\"It is worth noting that such collusion against workers may have costs beyond just the directly impacted workers in the high-tech sector. Wages and salaries of jobs in one industry can serve as reference points when workers in other firms/industries negotiate their wages. Thus, if high-tech workers get paid less, this may impact wages of other workers, say in finance, which may then impact wages in another sector and so on. Collusion in one sector can have impacts on other industries.\"To read more: https://www.nominalnews.com/p/competition-no-poaching-real-p...\n \nreply",
-      "And I'd say it is probably worse for society & small shareholders than it is for workers. These board-members aren't particularly skilled and companies mostly just fall into success by accident. Having a small set of board members everywhere is basically corruption and is surely funnelling money away from businesses into the hands of a small politically connected group of people.That being said, the best response would be to make it easier for workers to split off and spin up new businesses (ideally co-op style, we really should be experimenting with communal ownership styles now that communication tech is so much better). There isn't a mechanism to stop small politically connected groups conspiring with each other, that is just how power works. It isn't feasible to out-law the politically connected.\n \nreply",
-      "What did you have in mind to make it easier?It\u2019s already not hard for workers to split off and form a new company with whatever ownership structure they want.What\u2019s somewhat harder is to find a way to cover your bills until the company is able to pay your salary, assuming you aren\u2019t willing to sell part of the company in exchange for that funding. (I\u2019m not giving you money in exchange for nothing; I\u2019m probably not lending you money to immediately spend on salaries without collateral that will be worth something if you fail, and if you have that collateral, you could already use it to raise funds.)Unless you\u2019re proposing some government scheme to give money for no security, I\u2019m not sure of  the form of making it easier that wouldn\u2019t be immediately gamed.\n \nreply",
-      "It's been argued that similar dynamics also inflate executive pay, although I'm not well-versed enough in the overall economic policy debate to know how well-established this actually is [1].[1] https://www.epi.org/publication/reining-in-ceo-compensation-...\n \nreply",
-      "I mean thats a pretty big stretch.  You can certainly make the argument but I believe they call it casting a wide net.\n \nreply",
-      "It's baumol's cost disaease no? rising wages in one sector, have a side-effect of bringing up wages in another.\n \nreply",
-      "I agree that its possible but it seems to be the authors trying to cast a wide net via hypotheticals.  Its easy to say its possible - but without any evidence its heresay, and within a paper like this its about trying to show the widest and broadest potential wage suppression possible.It seems sloppy to me to be honest.\n \nreply",
-      "I mean I know a lot of people who explicitly decide between sectors early/mid career.Tech vs consulting/finance for MBAs, tech vs. HFT for SWEs, tech vs. advertising for creatives, etc etc\n \nreply",
-      "I really doubt that could override the fundamental supply and demand forces.If hiring a finance \"worker\" will make my company $500k/year I will offer him $450k regardless of what Google engineers make.\n \nreply",
-      "Will you offer him $450k regardless of whether he would accept $250k because his next best alternative is offering $200k?\n \nreply"
-    ],
-    "link": "https://wwws.law.northwestern.edu/research-faculty/clbe/events/antitrust/documents/prager_collusion_through_common_leadership.pdf",
-    "first_paragraph": ""
-  },
-  {
-    "title": "A minimax chess engine in regular expressions (carlini.com)",
-    "points": 482,
-    "submitter": "ilya_m",
-    "submit_time": "2025-01-07T05:46:11 1736228771",
-    "num_comments": 87,
-    "comments_url": "https://news.ycombinator.com/item?id=42619652",
-    "comments": [
-      "This is from the same gentleman who (among other things) demonstrated that printf() is Turing complete and wrote a first person shooter in 13kB of Javascript.https://github.com/HexHive/printbfhttps://github.com/carlini/js13k2019-yet-another-doom-clone\n \nreply",
-      "> demonstrated that printf() is Turing complete and wrote a first person shooter in ...Not gonna lie, I thought that sentence would end with the FPS being done in printf.\n \nreply",
-      "This guy wrote tic-tac-toe in a single call to printf for IOCCC 2020 competition:https://github.com/carlini/printf-tac-toe\n \nreply",
-      "That is quite literally a work of art.\n \nreply",
-      "It\u2019s very fun and impressive but it\u2019s absolutely not a single call.\n \nreply",
-      "Maybe a generous interpretation of the comment and a realisation that common language isn't always 100% precise would be better than pointless arguments about semantics.There is only a single printf written in the source code.\n \nreply",
-      "That I can agree with!\n \nreply",
-      "I don't think it's an unreasonable criticism, otherwise the challenge is trivial:```\nfunction printg(arg) {\n   printf(arg);\n}\n```\n \nreply",
-      "That, of course, isn't what they did.\n \nreply",
-      "The development writeup for the Doom is interesting, with many details. https://nicholas.carlini.com/writing/2019/javascript-doom-cl...There was one month time to complete the competition. But it seems you were allowed to reuse any existing other code.Looks like this was quite fun to work on.(I feel a bit sad that I would never be able to get one month of free time to work on this now, due to family and job...)\n \nreply"
-    ],
-    "link": "https://nicholas.carlini.com/writing/2025/regex-chess.html",
-    "first_paragraph": "\nby\n              \n                Nicholas Carlini\n              \n\n                2025-01-05\n              \n\n\n        Over the holidays I decided it's been too long since I did something\n        with entirely no purpose. So without further ado, I present to you ...\n        Regex Chess: sequence of 84,688 regular expressions that,\n        when executed in order, will play a (valid; not entirely terrible) move given a chess board as input.\n        Here, I'll show you.\n      Sorry, PGN moves are not supported. Please just enter the source and destination square (e.g., e2e4).Enter moves by combining the source square and destination square coordinates. For example, to move from e2 to e4, type: e2e4Each square has a coordinate made of a letter (a-h) and a number (1-8).\n        Specifically, this is the entirety of the program that is playing a move against you (no really, I'm not kidding, it really is this short):\n      let regex_list = [/* a very long list of regular expressions */]let b"
-  },
-  {
-    "title": "The Evaporative Cooling Effect in Social Networks (2010) (cornell.edu)",
-    "points": 53,
-    "submitter": "yamrzou",
-    "submit_time": "2025-01-04T21:53:51 1736027631",
-    "num_comments": 15,
-    "comments_url": "https://news.ycombinator.com/item?id=42597962",
-    "comments": [
-      "Isn't this model a bit outdated with prevalence of likes and retweets?Users on modern social platforms optimize output to maximize favorable responses, thereby gratification. There are not really ceilings, barrier to entry, or way around the system, so it's resistant to spams and manipulations.Classical BBS systems did have this problem. It was said that a community beegins with interesting people posting interesting topics, then uninteresting people joins to read interesting topics, and ends when uninteresting people starts posting uninteresting topics.What was missing was feedback signaling, and social media got past this at some point during 2010s.\n \nreply",
-      ">There are not really ceilings, barrier to entry, or way around the system, so it's resistant to spams and manipulations.I feel like we must be using different internets.  Spam and manipulation are rampant on social networks lately, far beyond what they used to be, and while there aren't really barriers to entry there absolutely are barriers to reach: you're not as widely followed as the spammers, your stuff will be drowned out.As evidence I offer: any cursory glance at Facebook or Twitter, both of which have likes and retweets.\n \nreply",
-      "> I feel like we must be using different internets.I can't shake off the thought that this statement might be more truthful than it deserves to be. Some of social media accounts are closer to what you have described, some are more like what I have. The Dead Internet Syndrome must be not spreading uniformly, but there must be significant disparity across fields and bubbles, deepening divides between common folks without clean freshwater supply and those privileged that has access to spam-immune input source.My Twitter timeline is... not great, not terrible. Reddit is out of question.\n \nreply",
-      "Aren\u2019t \u2018barriers to reach\u2019 pretty much necessary beyond a certain scale?Since a pure chronological feed would be unusable for anyone following more than a few dozen people.Or for anyone searching any terms more popular than the most obscure niches.So there has to be some system deciding winners and losers effectively.\n \nreply",
-      "This pretty much describes a lot of what I\u2019ve experienced in online language learning communities. A large majority of my friends who eventually reached fluency in their target language ended up leaving or becoming significantly less active over time despite their success. Over time, the quantity of \u2018wannabe\u2019 language learners has generally increased and reduced the overall quality of the communities. I used to be completely anti-gatekeeping but my opinion has been slowly changing on this point.It is interesting that HN still seems to be very high quality (though I haven\u2019t been using it super duper long to truly judge). Does HN have any healthy gatekeeping mechanisms aside from its (ugly) UI to keep it high quality?\n \nreply",
-      "> Does HN have any healthy gatekeeping mechanisms aside from its (ugly) UI to keep it high quality?Yes, the mods.\n \nreply",
-      "Previous discussion:The Evaporative Cooling Effect in Online Communities \u2014 https://news.ycombinator.com/item?id=1777665 (2010, 35 comments)https://archive.ph/q8DlQ\n \nreply",
-      "That\u2019s a different discussion, because this one has the added benefit of being from a cornell.edu domain! /sThe submission here is also more of a discussion of that post, so this thread would be a discussion of a discussion, not direct comments on the article.\n \nreply",
-      "It's worthwhile to link earlier related discussions, and both the original article (now linkrotted) and a direct discussion of it satisfy that relation to me.\n \nreply",
-      "Doesn't this complaint assume a strict stack-ranking of contributors, where the \"top\" person has no reason to stay and thus leaves, and then the new top does the same, etc?Which is not at all how actual humans and relationships work.  We each bring different value to the table, along multiple dimensions.\n \nreply"
-    ],
-    "link": "https://blogs.cornell.edu/info2040/2015/10/14/the-evaporative-cooling-effect-in-social-network/",
-    "first_paragraph": "Course blog for INFO 2040/CS 2850/Econ 2040/SOC 2090http://blog.bumblebeelabs.com/social-software-sundays-2-the-evaporative-cooling-effect/The Evaporative Cooling Effect describes the phenomenon that high value contributors leave a community because they cannot gain something from it, which leads to the decrease of the quality of the community. Since the people most likely to join a community are those whose quality is below the average quality of the community, these newcomers are very likely to harm the quality of the community. With the expansion of community, it is very hard to maintain the quality of the community. In this article, the author proposes four examples of Evaporative Cooling Effect, and also gives some advice on how to minimize the influence of Evaporative Cooling Effect. In the following paragraphs I will try to explain those examples and suggestions based on my knowledge and understanding.First of all, the author argues that openness is a major factor contributing t"
-  },
-  {
-    "title": "Building Ultra Long Range Toslink (benjojo.co.uk)",
-    "points": 164,
-    "submitter": "ingve",
-    "submit_time": "2025-01-07T12:39:37 1736253577",
-    "num_comments": 73,
-    "comments_url": "https://news.ycombinator.com/item?id=42621766",
-    "comments": [
-      "Laugh, but this probably does have some real world applications for Live Audio.Digital Live audio mixing is taking over, but it suffers one flaw compared to analog: Latency. Humans can adjust pretty easily to performing an action and hearing a delayed response (that's pretty natural in our daily lives, basically think of it as echolocation). This is sort of like standing farther from a guitar amplifier (sound travels roughly 1 ms per foot). However, singers have it the worst: there is 0 latency from their voice to the ear canal, so monitor systems try to use analog as much as possible.For digital audio links, every time you join then end-to-end or decode them, you get a bit of latency added.There are a few audio interconnects that run on Ethernet's OSI Layer 0 (physical medium)* AES50 is standardized, basically you can think of it as the 100Base-T of digital live audio. It's synchronously clocked with a predictable latency; with roughly ~62us per link. Pretty nice. Cat5e cables are dirt cheap and musicians are destructive as feral cats, so it it's a pretty good solution. Max length is 100meters.* AudioDante is also popular but actually relies on IP Layer 3, so latency is variable. Typical values are 1ms - 10ms. Max length is pretty much unlimited, with a lot of asterisks.FTA: 11us is _unbelievably good_ digital latency, but with near unlimited length is actually a pretty good value proposition for Live Audio. There may be a niche demand for a product like this: slap in some SFP adapters, transmit a channel of digital audio over whatever medium you like.\n \nreply",
-      "> FTA: 11us is _unbelievably good_ digital latency, but with near unlimited length is actually a pretty good value proposition for Live Audio. There may be a niche demand for a product like this: slap in some SFP adapters, transmit a channel of digital audio over whatever medium you like.Used to be you could get an PRI (ISDN/T1) phone line for this kind of work, but I think it's pretty doubtful that you can keep it end-to-end low latency PRI with modern telephony. You'd have to be ok with single channel 8-bit, 8k uLaw, but that's not that bad; you could probably orchestrate multiple calls for multiple channels. Someone is going to convert it to SIP with 20ms packets and there goes your latency.\n \nreply",
-      "On a related note, the excellent DIY Perks youtube channel recently replaced toslink leds with lasers to do a wireless surround system https://www.youtube.com/watch?v=1H4FuNAByUs\n \nreply",
-      "Such a great video. There is a really good chance I use that technique for a remote subwoofer at some point. Really elegant solution.\n \nreply",
-      "What happens when your sub starts kicking so hard that your walls start to vibrate causing the line of sight to go intermittent?\n \nreply",
-      "Then the audio drops out, so it's a self-correcting problem!Also, the beam is a bit divergent, even if it vibrates the beam could still cover the sensor.\n \nreply",
-      "Not necessarily. The sub is not usually attached to a wall, so it wouldn't self correct like you're suggesting\n \nreply",
-      "I think you missed a joke there.Loss of signal -> silence -> no vibrations -> signal resumption.\n \nreply",
-      "no, you're missing the point. the subwoofer is not connect to a wall that vibrates, so it wouldn't miss the signal. the surround speakers and possibly the front and surround speakers tend to be attached to a wall. The floor doesn't shake enough for the sub to loose alignment is the point.\n \nreply",
-      "The problem with DIY perks solution is that the manchester clock+data encoding is an amplitude modulated thing and isnt really very robust to using in free space. LED bulbs, sunlight, or all manner of other stuff can and will fuss with it. This is probably why he ended up having to go with lasers instead of just a big IR blaster against the ceiling. If he modulated the OOK signal onto some kind of carrier the entire thing would be a lot more reliable and as a bonus could probably ditch the lasers. This is more or less how the infrared wireless speakers and headphones of yore (80's and 90's) did the job.\n \nreply"
-    ],
-    "link": "https://blog.benjojo.co.uk/post/sfp-experiment-ultra-long-range-toslink",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Streets GL \u2013 3D OpenStreetMap (streets.gl)",
-    "points": 23,
-    "submitter": "faebi",
-    "submit_time": "2025-01-07T20:20:01 1736281201",
+    "title": "A Supermarket in California (1955) (poetryfoundation.org)",
+    "points": 24,
+    "submitter": "squircle",
+    "submit_time": "2025-01-08T23:29:06 1736378946",
     "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=42626964",
+    "comments_url": "https://news.ycombinator.com/item?id=42639691",
     "comments": [
-      "This is awesome. I didn't realise OSM even had such detailed data on building shapes. As others have noted, outside (or on the outskirts of) major cities the data is quite sparse but central London, for example, looks great.\n \nreply",
-      "How is it generated the 3d objects? using CV on the stat-elite data?\n \nreply",
-      "They have open street data on building height,  and roof shape, which lets them render 3d shapes.\n \nreply",
-      "I think it must be using the building outline data (and metadata like the heights) that people have entered, because in my city the inner-city has very complete data but a bit further out, around where I live there aren't any building outlines on OSM and there's nothing in this 3D map apart from just the streets.The result is very impressive given that seems to be the case!Edit: There are some more details on the github about data sources: https://github.com/StrandedKitty/streets-gl\n \nreply"
+      "Apparently Mr Ginsberg was a friend to young men. And not in a good way:https://chroniclesmagazine.org/web/allen-ginsberg-pedophilia...\n \nreply",
+      "Wonderful. And another Ginsberg Berkeley poem, maybe my favorite:https://www.poetryfoundation.org/poems/49304/sunflower-sutra\n \nreply",
+      "Nice. I was vibing to this poem you shared earlier:\nhttps://news.ycombinator.com/item?id=42639593(I'm not familiar with Carl Sandburg and appreciate the introduction.)\n \nreply",
+      "Go Bears\n \nreply"
     ],
-    "link": "https://streets.gl/#47.35245,8.50958,21.25,42.00,459.10",
+    "link": "https://www.poetryfoundation.org/poems/47660/a-supermarket-in-california",
     "first_paragraph": ""
   },
   {
-    "title": "Optimizing uint64_t Digit Counting: A Method that Beats Lemire's by up to 143% (github.com/realtimechris)",
+    "title": "Salesforce will hire no more software engineers in 2025, says Marc Benioff (salesforceben.com)",
+    "points": 162,
+    "submitter": "lordswork",
+    "submit_time": "2025-01-08T22:56:27 1736376987",
+    "num_comments": 166,
+    "comments_url": "https://news.ycombinator.com/item?id=42639417",
+    "comments": [
+      "Current SFDC software engineer - this is just cover for a widespread engineering hiring freeze since the layoffs in January 2023. There's a ton of pressure to control costs after the near shareholder revolt that caused the layoffs.The public nature of the announcement is certainly marketing for our AI offerings as well, but at this point I think most engineers are just worried there will be additional layoffs, in the event management cannibalizes product for short term stock gains again.\n \nreply",
+      "Ah, the toxic env, I'm too familiar with it. Quarterly layoffs, perks gone, more RTO, but execs can still travel around lavishly.\n \nreply",
+      "Thanks for sharing some inside baseball.This definitely reads more like a \u201ceverything is going AWESOME ignore anything else you hear about us\u201d PR-ese.I read this as messaging to shareholders more than anyone else (and sure some word-spreading about the product).\n \nreply",
+      "2$ per interactions (negotiable to 1$) btw\n \nreply",
+      "I really don't care generally if a business feels the need to hype things like this - but these kinds of announcements have downstream effects on salaries and job availability far outside a company like this. Other management/C-suites are gonna hear \"we replaced all our engineers with AI!\" and similarly slow down hiring/etc. This is already being seen throughout the industry, I am aware, but such a visible player making an announcement like this, while it almost certainly is just marketing, drives me a little crazy because it indirectly affects a lot of people.\n \nreply",
+      "Well to the extent that this happens (I agree it probably has this effect) that would benefit them anyway and I suspect they know about it.\n \nreply",
+      "Sure, but it's either true or it's not.  If they fall for the hype, the company will pay the price for it eventually.(And it's not true - if you could \"replace engineers with AI\" we engineers would have already done it and be relaxing while AI does our work)\n \nreply",
+      "There is no company-wide hiring freeze, but there\u2019s teams/products/etc\u2026 who have them.There\u2019s other things going on though this will help spin.There\u2019s no way that productivity metric includes the last 2-4 months.\n \nreply",
+      "Looks like it. The only other explanation is they just stopped investing in other products and focused on Agents, thus no need for loads more of engineering.No way in the world they got 30% gains. 5 maybe realistically\n \nreply",
+      "Their ultimate agent product strategy feels like reducing cost of sales... by automating salespeople.I have doubts that will ever happen, but who knows?Sales folks are highly-compensated, so even making a few of them redundant (or making existing salespeople more efficient) would be a big win for companies (Salesforce's customers).\n \nreply"
+    ],
+    "link": "https://www.salesforceben.com/salesforce-will-hire-no-more-software-engineers-in-2025-says-marc-benioff/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Cracking a 512-bit DKIM key for less than $8 in the cloud (dmarcchecker.app)",
+    "points": 570,
+    "submitter": "awulf",
+    "submit_time": "2025-01-08T12:32:34 1736339554",
+    "num_comments": 295,
+    "comments_url": "https://news.ycombinator.com/item?id=42633501",
+    "comments": [
+      "Me writing over 14 years ago: https://blog.jgc.org/2010/06/facebooks-dkim-rsa-key-should-b... This was doable 14 years ago for 512-bit keys.\n \nreply",
+      "For a number of years it was (non-officially) thought to be a feature to use weak DKIM keys. Some folks argued that short keys allowed you to preserve deniability, since DKIM signatures would only be short-lived and nobody would be able to use DKIM signatures to prove that any email was authentic. (I\u2019m not saying that this is why most companies used short keys, just that there was a general view that short keys were not all bad.)DKIM deniability is a particular hobbyhorse of mine [1]. These short keys are obviously not the way to achieve it, but I view this kind of thing as a result of the muddled thinking that\u2019s been associated with DKIM and the community\u2019s lack of desire to commit to the implications of an all-email signing mechanism.[1] https://blog.cryptographyengineering.com/2020/11/16/ok-googl...\n \nreply",
+      "I forget where but someone proposed regularly rotating your DKIM key and publishing old keys for deniability.  So you can still use strong keys and provide a level of deniability.\n \nreply",
+      "Doing this only provides deniability in public. If this was brought to a court there are enough server logs to build out if that DKIM record was valid along with a number of DNS history providers.\n \nreply",
+      "As if courts care about any of that. They'll just ask the witness \"did you send this email\"\n \nreply",
+      "Counter-example: I've used DKIM as evidence in court.\n \nreply",
+      "Counter-example example: I've been an expert witness in court to prove an email was a forgery; using DKIM.\n \nreply",
+      "It'd be funny if we were working together and just telling the same story behind our aliases.\n \nreply",
+      "My case was a family court dispute where one parent forged an email from the other parent about the child's care. It was a pretty wild case. After that, I was pretty convinced some people are just evil.\n \nreply",
+      "That would be a counter-counterexample, wouldn't it?\n \nreply"
+    ],
+    "link": "https://dmarcchecker.app/articles/crack-512-bit-dkim-rsa-key",
+    "first_paragraph": "In our study on the SPF, DKIM, and DMARC records of the top 1M websites, we were surprised to uncover more than 1,700 public DKIM keys that were shorter than 1,024 bits in length. This finding was unexpected, as RSA keys shorter than 1,024 bits are considered insecure, and their use in DKIM has been deprecated since the introduction of RFC 8301 in 2018.Driven by curiosity, we decided to explore whether we could crack one of these keys. Our goal was to extract the private key from a public RSA key, enabling us to sign emails as if we were the original sender. We were also curious to see whether emails signed with this compromised key would pass the DKIM verification checks of major email providers like Gmail, Outlook.com, and Yahoo Mail, or if they would outright refuse to verify a signature generated with such a short key.For our experiment, we chose redfin.com after discovering a 512-bit RSA public key at key1._domainkey.redfin.com (now no longer available):The public key, located in "
+  },
+  {
+    "title": "You don't have to pay the Microsoft 365 price increase (consumer.org.nz)",
+    "points": 11,
+    "submitter": "lancewiggs",
+    "submit_time": "2025-01-09T00:25:39 1736382339",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.consumer.org.nz/articles/you-don-t-have-to-pay-the-microsoft-365-price-increase",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Show HN: Atlas of Space (atlasof.space)",
+    "points": 347,
+    "submitter": "pieix",
+    "submit_time": "2025-01-08T14:47:34 1736347654",
+    "num_comments": 84,
+    "comments_url": "https://news.ycombinator.com/item?id=42634787",
+    "comments": [
+      "This is incredibly well done. Thank you!Love that it works so seamlessly on mobile. I clicked on it expecting it to be almost impossible to useInstead, I was able to easily navigate everything without getting lostAlso, the speeding up/down controls are excellent, very useful\n \nreply",
+      "Well done! I could spend a long time on this.One minor suggestion: you should make the labels clickable instead of just the planets/stars. I found it difficult to click on a tiny pixel on screen.\n \nreply",
+      "... also the orbits themselves ideally? Maybe I missed it but in looking at some of the larger orbits it was hard to zoom in and out to figure out what orbit went with what. It would have been nice to more easily click on the orbit.I really like it though.\n \nreply",
+      "After 90s of playing I came back to add the same comment :)\n \nreply",
+      "The project is amazing, thanks and congrats.A bit of an off-topic comment, I can't cease to be amazed by the quality of HTML apps we can build these days. I remember the days when rendering too many rows on a table could completely break the browser.\n \nreply",
+      "Thank you and not off topic at all, I was thinking this the whole time I was working on this project. The modern browser is magic.\n \nreply",
+      "This is very nice. I didn't know Pluto's orbit was more inclined than many of the others.It also gives me strong \"The Expanse\" vibes. Probably because there are so many orbital bodies shown that were mentioned in those books. I also learned that Pallas is an actual asteroid.\n \nreply",
+      "Appreciate the comment! The Expanse and Paul McAuley's Quiet War series both get a lot of inspiration credit for this project. I tried to include every body that has some \"brand recognition\", whether from fiction or from real spacecraft missions. There are actually quite a few asteroids and comets that have been visited in real life \u2014 NASA, ESA, and JAXA have been doing amazing things in the Asteroid Belt over the past few decades.\n \nreply",
+      "Where is the ring gate?\n \nreply",
+      "It doesn't seem it is showing the tilt for Earth correct. When I zoom in for around now, the North Pole is in full sun rather than mid Winter. (I'm in Australia so I don't know if it is somehow using my local timezone wrongly)\n \nreply"
+    ],
+    "link": "https://atlasof.space/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "I had to take down my course-swapping site or be expelled (linkedin.com)",
+    "points": 324,
+    "submitter": "jdkaim",
+    "submit_time": "2025-01-08T21:27:12 1736371632",
+    "num_comments": 170,
+    "comments_url": "https://news.ycombinator.com/item?id=42638626",
+    "comments": [
+      "Update: I immediately took down my class project site after receiving yesterday\u2019s ultimatum. I still don\u2019t think the simple demo site violated the letter or spirit of the registration rules, but I took it down because I always want to operate in good faith.They followed up today to thank me for doing it, but also indicated that they were putting a hold on my account anyway. As a result, I am not going to be able to register for my final quarter and have been de facto expelled at the end of this quarter.Unless, that is, I agree to work on a comparable solution for the university focused on solving the underlying problem I was building HuskySwap for. They would presumably own the IP and were clear that I wouldn\u2019t be compensated. But it was implied that they would then remove the hold, allowing me to graduate.I really love UW and have had a wonderful time here. But this is so demoralizing.Update #2:I appreciate you guys for all of your advice.This platform was never intended to be monetized, and I am not planning to get a lawyer involved as I have faith that UW leadership will make it right in the end.I'm not planning to pursue this project at this point. If they came up to me at first with the offer to work with them it might be different, but the way they handled it makes me just want to walk away.\n \nreply",
+      "> I am not planning to get a lawyer involved as I have faith that UW leadership will make it right in the end.All evidence so far indicates they will not make it right, but instead they may make it even worse. Your faith is wildly misplaced. Seriously, talk to a lawyer.Keep in mind, just because you seek advice from a lawyer doesn't mean you need to take legal action against the school. Talking to a lawyer is not an escalation; the school doesn't even need to know you consulted one. A lawyer will advise whether you should take legal action and any more amicable alternatives available before they do anything on your behalf.\n \nreply",
+      "Just piling on here because upvotes are not visible. The one thing you can guarantee is that your good faith is not reciprocated by the university. Get a lawyer.To make it easier: it sounds like you're still registered. University of Washington offers Student Legal Services ( https://depts.washington.edu/slsuw/ ). Set up a referral with one of them and talk to them. Even if they're employees of the university and don't want to work with you to sue the university itself they may be able to give you good advice about how to proceed.\n \nreply",
+      "It\u2019s a funny thought, but looks like a nonstarter:> SLS cannot represent a student when the opposing party is another UW-Seattle, Tacoma, or Bothell student or UW entity.\n \nreply",
+      "OP please consider listening to this reply. Do not rely on an unaccountable bureaucracy to \"do the right thing.\" They don't.\n \nreply",
+      "At least he'll learn this valuable lesson pretty young. It was fairly devastating to me by the time I learned it well into my 30's.\n \nreply",
+      "Having seen what some other university administrations have done to darling students and innovators even just around such things as lab space, parent comment is right on the money.\n \nreply",
+      "If you had managed to build this system during my time at UW, I know for a fact that I and dozens of other students would have happily paid hundreds of dollars to use your project. The class and reservation system there was (and presumably is?) incredibly broken.I remember literally the only way to get a spot reserved in some /mandatory/ courses was to find an upper classman with prioritized registration dates and a free schedule to hold the class for you. In you're in a frat, great. If you're a bit of an introvert that lives off campus, you're shit out of luck.I imagine UW is fully aware of this, I cant believe that it's still so much an issue that they felt the jeed to expell you for even having the gall to demo an idea. Absolutely appalling\n \nreply",
+      "You may want to consult with a lawyer. This is starting to sound like extortion.\n \nreply",
+      "100% this. You'd be surprised what kinds of problems go away when you mention your lawyer casually or you have a lawyer send a letter. Even if you don't get the right kind of lawyer right away, they might be able to recommend someone or tell you how to research the right kind of lawyer to get ahold of. Professionals are usually helpful about those kinds of things.Also get a second or third opinion. I've sometimes gotten different answers from different lawyers about our prospects of success on things we've called about.\n \nreply"
+    ],
+    "link": "https://www.linkedin.com/posts/jdkaim_github-jdkaimhuskyswap-huskyswap-project-activity-7282609173316415488-1jdb",
+    "first_paragraph": "\n              Agree & Join LinkedIn\n            \n      By clicking Continue to join or sign in, you agree to LinkedIn\u201a\u00c4\u00f4s User Agreement, Privacy Policy, and Cookie Policy.\n    \n                CS @ UW | Prev @ GitHub\n            Welp, looks I might be getting expelled from the University of Washington.\n\u00ac\u2020\nAs many of you know, last quarter I built an initial version of HuskySwap for a class project. It was a simple app designed to help students find partners to trade spots in critical classes after they filled up. I\u201a\u00c4\u00f4m sure other people have pursued this kind of thing before, but there\u201a\u00c4\u00f4s no go-to solution at UW and I wanted to contribute something cool for everyone.\n\u00ac\u2020\nAt first it was a fun project to catch up to the latest versions of .NET and Angular with some practice implementing features around database abstraction, real-time chat, and the full stack challenges associated with things like role-based permissions. I was probably going to build it anyway, so it was great that I c"
+  },
+  {
+    "title": "Fidget (mattkeeter.com)",
+    "points": 355,
+    "submitter": "todsacerdoti",
+    "submit_time": "2025-01-08T14:30:58 1736346658",
+    "num_comments": 41,
+    "comments_url": "https://news.ycombinator.com/item?id=42634624",
+    "comments": [
+      "Hi, this is my project :)I particularly love this corner of CS because there's something for everyone \u2013 data structures and algorithms, low-level performance work, compilers, rendering / computer graphics, UI/UX for design tools, GPGPU programming, and more!I'll be answering questions in the threads as I see them, but feel free to connect on social media (https://mattkeeter.com/links/) or follow my blog's RSS feed for further updates (https://mattkeeter.com/atom.xml)\n \nreply",
+      "Hi Matt,\nSince you're here I have a quick question. I did not do my homework so please excuse if that's too general or stupid.How does Fidget differ from libfive and Ao, functionality wise?Thanks in advance.\n \nreply",
+      "Here's a quick list, off the top of my head:\"Ao\" was an early codename for libfive, so those are the same thing (at different stages of development).Fidget is written in Rust, versus C/C++ for libfive.  This makes it easier to use as a dependency (in Rust projects) and cross-compile to WebAssembly.  Also, I don't have to debug segfaults anymore, except when touching the raw assembly in the JIT.They both implement a similar set of algorithms (meshing, 2D and 3D rasterization).Fidget has the potential to be faster due to its JIT, and is faster for 2D / 3D rasterization.  (I suspect that the non-JIT interpreter is also faster at rasterization, for architectural reasons)libfive has more effort put into its meshing algorithms, so it does a better job of handling edge cases (heh).  I've heard reports that libfive is faster than Fidget at meshing, but haven't done much investigation.Fidget is not limited to 2D and 3D functions: it can be used wherever you want to quickly evaluation graphs of math, with arbitrary numbers of inputs and outputs.  libfive, on the other hand, is specialized to functions of the form f(x, y, z, *vars) -> v.Extremely in the weeds: if you know what libfive's \"feature\"-flavored evaluator is, Fidget doesn't have it.\n \nreply",
+      "Neat!  I remember contributing the expression parser code for the Knoll et. al 2009 work that you cited in your SIGGRAPH paper.  That just rewrote a single user-friendly expression into nested function calls to our IA library in GLSL, without any sort of optimization.You've clearly taken things waaay farther.  Nicely done.\n \nreply",
+      "Coincidentally I was just reading this other wonderful post from the author https://www.mattkeeter.com/projects/constraints/\n \nreply",
+      "Hah, I actually wrote a similar constrain solver that uses Fidget's evaluation + differentiation!  This blog post was getting too long, so I'm going to write it up separately, but in the meantime:demo:\nhttps://mattkeeter.com/projects/fidget/constraintssource: https://github.com/mkeeter/fidget/blob/main/demos/constraint...docs on the solver: https://docs.rs/fidget/latest/fidget/solver/\n \nreply",
+      "You might be interested in http://omrelli.ug/g9/gallery/ too\n \nreply",
+      "Oh wow. This would have been incredibly useful to have found when I was writing my own implicit-surface drawer. My approach is similar in some ways (interval arithmetic), and different in others (not as optimized, I directly produce GLSL for a fragment shader).Honestly I'm tempted to just toss everything away and replace it with (a reimplementation of) this. Dunno if I should be happy or sad about that.\n \nreply",
+      "Happy! You work in a field where you can both make your own tools and use tools others have created. Maybe you can steal some of his ideas and use them, or use his stuff and contribute to the project. either way, rad.\n \nreply",
+      "> libfive is 40K lines of mostly C++, and is extremely challenging to hack on, even as the original author. It's also frustrating to touch: if it's been a few months since I last compiled it, it's inevitable that the build will have broken, and I'll have to mess with CMake for 10 minutes to unbreak it.I'm a bit shocked at this. Is build breakage that much of an issue? Is this \"we are merging in patches and then fixing them up later\"? Why would something not being touched break?\n \nreply"
+    ],
+    "link": "https://www.mattkeeter.com/projects/fidget/",
+    "first_paragraph": "Fidget is a library for representing,\ncompiling, and evaluating large-scale math expressions, i.e. hundreds or\nthousands of arithmetic clauses.  It's mainly designed as a backend for\nimplicit surfaces, but the\nlibrary is flexible enough for many different uses!\nTry the demo\nImplicit surfaces are expressions of the form\n$f(x, y, z) \\rightarrow d$\nreturning a single distance value $d$.\nIf that value is positive, then the point $(x, y, z)$ is outside the model;\nif it's negative, then the point is inside the model.For example, a sphere of radius 1 can be expressed\nas$$ f(x, y, z) = \\sqrt{x^2 + y^2 + z^2} - 1 $$By evaluating the expression at many points in space and checking its sign, we\ncan render this function into an image.  In this example, we'll render a\nheightmap, where filled-in voxels are colored based on their distance to the\ncamera:Fidget focuses on closed-form implicit surfaces, which build their\nexpressions out of basic arithmetic operations. This is in contrast with more\nflexi"
+  },
+  {
+    "title": "Operating System in 1,000 Lines \u2013 Intro (operating-system-in-1000-lines.vercel.ap...)",
+    "points": 760,
+    "submitter": "ingve",
+    "submit_time": "2025-01-08T07:18:50 1736320730",
+    "num_comments": 84,
+    "comments_url": "https://news.ycombinator.com/item?id=42631873",
+    "comments": [
+      "Author here.I wrote this book so you can spend a boring weekend writing an operating system from scratch. You don\u2019t have to write it in C - you can use your favorite programming language, like Rust or Zig.I intentionally made it not UNIX-like and kept only the essential parts. Thinking about how the OS differs from Linux or Windows can also be fun. Designing an OS is like creating your own world\u2014you can make it however you like!BTW, you might notice some paragraphs feel machine-translated because, to some extent, they are. If you have some time to spare, please send me a PR. The content is written in plain Markdown [1].Hope you enjoy :)[1] https://github.com/nuta/operating-system-in-1000-lines/tree/...\n \nreply",
+      "> Designing an OS is like creating your own worldOr like building your temple so you can talk to God directly\n \nreply",
+      "TempleOS: https://en.m.wikipedia.org/wiki/TempleOS\n \nreply",
+      "Great resource, thanks for sharing.I thought the written text was very high quality and didn't show many of the usual tells of a non-native writer. Could you share some details of how you used AI tools to help write it?\n \nreply",
+      "Are you planning to also provide an English translation of your microkernel book? That sounds very interesting...\n \nreply",
+      "How does your book compare with the classic \"Operating systems design and implementation\" by Andrew S. Tanenbaum and Albert S. Woodhull implementing MINIX?\n \nreply",
+      "Hi OP, this looks super cool. I remember hearing about this (https://www.linuxfromscratch.org/) many years ago but have never done it.Curious, what are the prerequisites for this? Do I have to know about how kernels work? How memory management, protection rings or processes are queued? Some I'd like to definitely learn about.\n \nreply",
+      "LFS is about building a Linux distribution from scratch (i.e. using the Linux kernel.)The book in question is about how to build your own operating system (i.e. a non-Linux) kernel from scratch.> We'll implement basic context switching, paging, user mode, a command-line shell, a disk device driver, and file read/write operations in C. Sounds like a lot, however, it's only 1,000 lines of code!\n \nreply",
+      "Did you post to OSDev?\n \nreply",
+      "This is fantastic. Thank you so much for writing this.\n \nreply"
+    ],
+    "link": "https://operating-system-in-1000-lines.vercel.app/en",
+    "first_paragraph": "Hey there! In this book, we're going to build a small operating system from scratch, step by step.You might get intimidated when you hear OS or kernel development, the basic functions of an OS (especially the kernel) are surprisingly simple. Even Linux, which is often cited as a huge open-source software, was only 8,413 lines in version 0.01. Today's Linux kernel is overwhelmingly large, but it started with a tiny codebase, just like your hobby project.We'll implement basic context switching, paging, user mode, a command-line shell, a disk device driver, and file read/write operations in C. Sounds like a lot, however, it's only 1,000 lines of code!One thing you should remember is, it's not as easy as it sounds. The tricky part of creating your own OS is debugging. You can't do printf debugging until you implement it. You'll need to learn different debugging techniques and skills you've never needed in application development. Especially when starting \"from scratch\", you'll encounter ch"
+  },
+  {
+    "title": "Steve Langasek, One of Ubuntu Linux's Leading Lights, Has Died (thenewstack.io)",
+    "points": 73,
+    "submitter": "CrankyBear",
+    "submit_time": "2025-01-08T23:13:08 1736377988",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=42639563",
+    "comments": [
+      "45 years :(The article says illness, but which illness?\n \nreply",
+      "https://discourse.ubuntu.com/t/remembering-and-thanking-stev...\n \nreply",
+      "So young.. It's sad\n \nreply",
+      "Sad news. He did a lot for Debian and Ubuntu.\n \nreply"
+    ],
+    "link": "https://thenewstack.io/steve-langasek-one-of-ubuntu-linuxs-leading-lights-has-died/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Bringing SerenityOS to real hardware, one driver at a time (sdomi.pl)",
+    "points": 182,
+    "submitter": "LorenDB",
+    "submit_time": "2025-01-08T16:54:39 1736355279",
+    "num_comments": 59,
+    "comments_url": "https://news.ycombinator.com/item?id=42636086",
+    "comments": [
+      "Read somewhere that it is relatively easy to adapt NetBSD's drivers into a custom kernel... maybe Serenity folks can go that way? Device drivers are huge obstacle for any fledgling OS.\n \nreply",
+      "One of Serenity's philosophical decisions is that as much as possible they build everything themselves from scratch. So even if NetBSD's drivers would be easy to adapt and have a compatible license they probably wouldn't go that route and would instead write their own drivers.\n \nreply",
+      "> Device drivers are a huge obstacle for any fledgling OS.I've wondered if new/hobby OSes would fare better by starting out targeting a popular single board computer like a raspberry pi? A mostly fixed set of hardware to make/get drivers for and test your system on.\n \nreply",
+      "I think the path Serenity took is the better one. Initially targeting QEMU as the single supported platform. You have the same advantage as far as targeting a single platform for drivers but contributors don't need to buy additional hardware, can develop using the platform/tools they are accustomed to, starting instances is faster than rebooting hardware and no need to deal with the issues of remotely debugging. Targeting a specific SBC as a 2nd platform after a certain level of stability is reached is probably a good idea.\n \nreply",
+      "That implies AArch64 support which many hobby OSes don't have, usually because the introductory osdev material is written largely for x86.But yes, raspi is a good platform if you are targeting arm.As I'm also designing an OS, my biggest piece of advice for anyone seriously considering it is to target two archs at once, in parallel. Then adding a third becomes much easier.\n \nreply",
+      "Raspberry Pi has a bizarre boot sequence and bringup process, much of it which is not open and not implemented in open source code.  I think it's probably not a great platform for this sort of thing, despite it being decently well-documented.(And even then, its USB controller, for example, has no publicly-available datasheet.  If you want to write your own driver for it, you have to read the Linux driver source and adapt it for your needs.)\n \nreply",
+      "QEMU is a fixed set of hardware. And far easier to target than a Pi.The founder of SerenityOS created it as therapy and a pure \u201chappiness\u201d project. I am not sure actually using it was a real goal. So, he did the stuff he found interesting. That led him to writing display servers and web engines and crypto libraries and away from \u201creal\u201d drivers. He wrote his own C/C++ standard libraries and userland utilities but only enough driver code to make QEMU happy. It only ever ran in a VM on his Linux desktop. In the end, he found the web browser more interesting than the OS it was created for.Very different project from Linux where what Linus wanted was an OS for his own computer. Linus was happy to leave the userland to others and still sticks to the kernel even now.\n \nreply",
+      "I've also argued in favor of that; I don't actually like Pis personally, but they're a super common, cheap enough, easy to acquire system and that's huge.\n \nreply",
+      "Raspberry Pi's are highly proprietary for hardware blobs...\n \nreply",
+      "Well unless they want to target PowerPC and make interested parties buy a Raptor Talos workstation what else is open enough for you? (Actually I would support this) Are there RISCV systems that are blobless?\n \nreply"
+    ],
+    "link": "https://sdomi.pl/weblog/23-serenityos-realhw/",
+    "first_paragraph": "Many moons ago, around the time when Andreas formally resigned from being Serenity's BDFL, I decided that I want to get involved in the project more seriously. Looking at it from a perspective of \"what do I not like about this (codebase)\", the first thing that came to mind was that it runs HERE points at QEMU and not THERE points at real hardware. Obvious oversight, let's fix it.First thing I looked at was UEFI support, but there's an ongoing effort by spholz which I didn't want to hijack. For my purposes, kernel from the master branch successfully boots from GRUB running on a TianoCore UEFI runtime, so this is fine.Debugging the OS on the same machine as your main isn't fun, and I wanted to focus my efforts on porting it to something I'd actually want to daily drive - which limited me to recent-ish hardware. I went onto Allegro (polish online auction site) and searched for the cheapest Chromebook I could find. After discarding the literal cheapest option (due to it being a fire hazard"
+  },
+  {
+    "title": "28h Days: year 1 update (sidhion.com)",
+    "points": 6,
+    "submitter": "HAMSHAMA",
+    "submit_time": "2025-01-08T23:37:54 1736379474",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://sidhion.com/blog/28h_days_update_1/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Multiplicative Infinitesimals (github.com/ericson2314)",
+    "points": 50,
+    "submitter": "Ericson2314",
+    "submit_time": "2025-01-08T19:58:22 1736366302",
+    "num_comments": 24,
+    "comments_url": "https://news.ycombinator.com/item?id=42637853",
+    "comments": [
+      "I find infinitesimals more intuitive than the formal 'limits-based' approach. I'm currently studying my old degree material but using a fairly interesting book:\"Full Frontal Calculus: An Infinitesimal Approach\" by Seth Braver.I like his readable style. His poetic intro finally gave me an intuition why infinitesimals might be useful, compared to the good old reals:\"Yet, by developing a \"calculus of infinitesimals\" (as it was known for two centuries), mathematicians got great insight into `real` functions, breaking through the static algebraic ice shelf to reach a flowing world of motion below, changing and evolving in time.\"\n \nreply",
+      "If you are going to use infinitesimals, though, it requires some additional doing for notation.  The standard notation for higher-order derivatives (and partial derivatives) needs to be modified in order for them to work (but they do work great once you do this).Instead of the second derivative being \"d^2y/dx^2\" it is \"(d^2y/dx^2) - (dy/dx)(d^2x/dx^2)\" and the differentials can be manipulated just like any other entity.  Additionally, you can infer this notation by simply applying the quotient rule to the first derivative (which is a quotient of infinitesimals).See more:\"Extending the Algebraic Manipulability of Differentials\" ( 10.48550/arXiv.1801.09553 )\"Total and Partial Differentials as Algebraically Manipulable Entities\" ( \n10.48550/arXiv.2210.07958 )\n \nreply",
+      "It's a tradeoff. You can have excluded middle in your logic or infinitestimals in your extended reals. For mathematicians dealing with all the wild stuff coming out of studying infinities in the calculus, getting rid of excluded middle was a non-starter, so the system based on limits was created. If non-constructible proofs via contradiction aren't useful to you, as in physics, then you can certainly use infinitesimals.\n \nreply",
+      "That's interesting - I read something similar in Bell's 'A primer of infinitesimal analysis' where he said the price for 'Smooth World' infinitestimals is giving up the Law of Excluded Middle (LEM).Don't really understand why (he said something about unconstrained use of LEM allows discontinuous functions...)Is there any link to Brouwer's Intuitionism where LEM is rejected too (?!)Ah it's all an interesting can of worms...\n \nreply",
+      "https://ncatlab.org/nlab/show/real+numbers+object you can definitely have real numbers without the infinitesimals in constructive math, however.\n \nreply",
+      "Side comment: anyone interested in calculus via infinitesimals may also be interested in taking a look at Radically Elementary Probability Theory by Ed Nelson: https://web.math.princeton.edu/~nelson/books/rept.pdf\n \nreply",
+      "My recollection from real analysis was that I liked sequential continuity a lot (https://en.wikipedia.org/wiki/Continuous_function#Sequences_...).Sequences form a nice beginner-friendly monad (`bind` is the diagonal nth from nth), and lifting a real function over a real sequence is just `fmap`! (This is the same notion of sequence that https://clash-lang.org/ uses for sequential circuits, but it skips the monad because circuits are first order.)Convergent sequences are like ordered binary tree sets, they do also form a monad, but one in a sub-category: sequentially continuous functions are precisely those that are in the domain of the underlying functor! :)\n \nreply",
+      "Nice, I didn't know about this book. Did you try the Keisler book too, \"Elementary Calculus: An Infinitesimal Approach\"? See https://people.math.wisc.edu/~hkeisler/calc.html\n \nreply",
+      "Thanks for the tip...  it seems to mention Robinson's 'hyperreals' too...!\n \nreply",
+      "I'm generally a little skeptical about approaches that treat infinitesimals in a symbolic computation. The approach typically is to solve traditional analysis problems but throw in some infinitesimals and show that you can get the same answers. But if you approach infinitesimals from first principles I feel like you run into a lot of problems.For example it is almost always the case that you can remove higher order infinitesimals, like (dx)^2, when computing things like derivatives. But this always necessitates a step where you translate from infinitesimals to \"standard\" reals, and then continue on your merry way. We happily round away the higher-order terms when we compute something like ((x + dx)^3 - x^3) / dx, but if we're continuing to do infinitesimal math they may become relevant again. Call that function, f_1(x) = 3x^2 + 3xdx + dx^2; we'll typically just call this f_2(x) = 3x^2, but these functions are not equivalent if we then proceed to compute (f(x) - 3x^2) / dx, which, presumably, we can just do because we've admitted this horror of a syntax into our formal language.I'm very skeptical of this being useful outside of being able to reason about trivial limits for this reason.\n \nreply"
+    ],
+    "link": "https://github.com/Ericson2314/baccumulation/blob/main/math/multiplicative-infinitesimals.md",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          This goes with Geometric Calculus, but where as that is mostly summarizing others work, this is original as far as I know, and so I split it out.Despite their lack of formal rigor (in conventional analysis), infinitesimals are liked in some settings, like informally solving differential equations, and other applied tasks.\nThey are, \"additive\", in a few key ways:They are near 0, which is the additive identity, and \"not a multiplicative number\"They correspond to subtraction inside limits.They thus suffice for regular additive calculus, but not the geometric calculus linked above.For the first, the intuition for a regular infinitesimal is that is a very small number, smaller than any non-zero real number.\nIf we multiply a real number by an infinitesimal, we always get another infinitesimal, never a real number, just like when we multiply any re"
+  },
+  {
+    "title": "How many real numbers exist? New proof moves closer to an answer (2021) (quantamagazine.org)",
     "points": 16,
-    "submitter": "realtimechris",
-    "submit_time": "2025-01-06T00:23:48 1736123028",
-    "num_comments": 7,
-    "comments_url": "https://news.ycombinator.com/item?id=42606285",
+    "submitter": "lisper",
+    "submit_time": "2025-01-07T20:47:38 1736282858",
+    "num_comments": 0,
+    "comments_url": "",
     "comments": [
-      "A latency improvement would be to have digitCountThresholds be indexed by the lzcnt, instead of the result of the other LUT. Increases the size of that lookup table from 160B to 512B though. Funnily enough I've had this approach in a local copy of Ryu when I was working on cutting it down for my purposes. Unfortunately whatever ended up public had cut this out too.edit: some chat messages of me at [0]. Some previous unrelated discussion found at [1].[0]: https://app.element.io/#/room/#bqn:matrix.org/$KKIK86x0tygAf...[1]: https://github.com/ulfjack/ryu/issues/34\n \nreply",
-      "*Optimizing uint64_t Digit Counting: A New Method that Beats Lemire's by Up to 27%*In the quest to improve the performance of my high-speed JSON library, JSONIFIER, I recently stumbled upon a breakthrough in optimizing the calculation of digit counts for `uint64_t` values. While Lemire\u2019s method of using the `lzcnt` instruction for determining the number of digits in a 32-bit unsigned integer has been widely regarded as efficient, I\u2019ve developed a new method that achieves even faster results for 64-bit unsigned integers (i.e., `uint64_t`), with significant gains across different compilers and platforms.### The Existing Method: Lemire\u2019s ApproachLemire\u2019s method, known for its efficiency, calculates the number of digits in a `uint32_t` by leveraging the `lzcnt` instruction, which finds the index of the most significant bit set to 1. This is combined with a static lookup table to map the result to the corresponding number of digits.Here\u2019s the code for Lemire\u2019s method:```cpp\nJSONIFIER_INLINE int int_log2(uint32_t x) {\n    return 31 - simd_internal::lzcnt(x | 1);\n}JSONIFIER_INLINE int fast_digit_count(uint32_t x) {\n    static uint64_t table[] = { ... };\n    return (x + table[int_log2(x)]) >> 32;\n}\n```While this approach works well for 32-bit integers, the need for a faster and more efficient solution for `uint64_t` led me to create an alternative method, which uses a more streamlined approach without the overhead of a lookup table.### My New Method: RTC-64-Bit Digit CountingI\u2019ve designed a new approach for 64-bit unsigned integers that leverages a similar logic but optimizes the process by storing precomputed digit counts for specific ranges and applying simple threshold checks. The result is faster execution with reduced computational overhead.Here's the code for the new method:```cpp\nJSONIFIER_INLINE_VARIABLE uint8_t digitCounts[]{ ... };JSONIFIER_INLINE_VARIABLE uint64_t digitCountThresholds[]{ ... };JSONIFIER_INLINE uint64_t fastDigitCount(const uint64_t inputValue) {\n    const uint64_t originalDigitCount{ digitCounts[simd_internal::lzcnt(inputValue)] };\n    return originalDigitCount + static_cast<uint64_t>(inputValue > digitCountThresholds[originalDigitCount]);\n}\n```This method works by using a static array to hold the precomputed digit counts and another array for threshold values that determine the exact number of digits in a `uint64_t`. The key optimization lies in the efficient use of a bit manipulation technique and direct threshold checking to avoid unnecessary computations.### [Benchmark Results](https://github.com/RealTimeChris/BenchmarkSuite/blob/digit-c...)I ran performance benchmarks comparing my new RTC-64-bit method with Lemire\u2019s approach and the traditional `log10` method across various platforms and compilers. The results were consistently impressive:#### GCC/Ubuntu:\n- *RTC-64-bit* outperforms *Lemire-32-bit* by *27.33%*.\n- *Lemire-32-bit* beats *Log10-32-bit* by a massive *814.16%*.#### Clang/Ubuntu:\n- *RTC-64-bit* outperforms *Lemire-32-bit* by *143.34%*.\n- *Lemire-32-bit* beats *Log10-32-bit* by *522.01%*.#### MSVC/Windows:\n- *RTC-64-bit* is *12.50%* faster than *Lemire-32-bit*.\n- *Lemire-32-bit* beats *Log10-32-bit* by *515.90%*.#### Clang/MacOS:\n- *RTC-64-bit* is *25.37%* faster than *Lemire-32-bit*.\n- *Lemire-32-bit* beats *Log10-32-bit* by *343.97%*.### Key TakeawaysThe RTC-64-bit method not only delivers improved performance on modern hardware but also significantly reduces the overhead of traditional methods by eliminating the need for a large lookup table. This is especially beneficial for high-performance applications where every cycle counts, such as in JSON serialization and parsing, where speed is critical.\n \nreply",
-      "FYI, Hackers Delight uses a slight variation of Lemire's. He multiplies by 19/64 (so the divisor is a shift) and has the highest integer at the end of his table (i.e. 2^64 - 1). He also uses a shift instead of a conditional, so his code is branchless.Generally I prefer this kind of approach. But, I suspect your digit counting is a very hot path so your tables will generally be in cache. So your approach will likely win anyway.\n \nreply",
-      "if you prefix your code by two space on every lines it will be more readable, ex:  JSONIFIER_INLINE int fast_digit_count(uint32_t x)\n  {\n    static uint64_t table[] = { ... }; \n    return (x + table[int_log2(x)]) >> 32; \n  }\n \nreply",
-      "Very nice work. But could you please explain why counting digits quickly (or even slowly) is useful for a JSON serializer? This is lower level than I'm used to working. Is this so you can alloc the right amount of memory, or something else?\n \nreply",
-      "Honestly? Most of the time you can use an approximation. At worst you allocate a single extra byte unless your integers are hundreds of bits long (I worked this out once but I forget where I left the details). Just multiply by the ratio of logs or something like that.\n \nreply",
-      "Yes. And for string formatting in general such as sprintf to calculate buffer size. Also for proposes of calculating length for string padding and alignment.\n \nreply"
+      "xxx"
     ],
-    "link": "https://github.com/RealTimeChris/BenchmarkSuite/blob/digit-counting/Benchmark/main.cpp",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          "
+    "link": "https://www.quantamagazine.org/how-many-numbers-exist-infinity-proof-moves-math-closer-to-an-answer-20210715/",
+    "first_paragraph": "\nAn editorially independent publication supported by the Simons Foundation.\n\nGet the latest news delivered to your inbox.\nCreate a reading list by clicking the Read Later icon next to the articles you wish to save.Type search term(s) and press enterPopular\n                                    SearchesJuly 15, 2021There are an infinite number of infinities. Which one corresponds to the real numbers? Olena Shmahalo/Quanta MagazineSenior EditorJuly 15, 2021In October 2018, David Asper\u00f3 was on holiday in Italy, gazing out a car window as his girlfriend drove them to their bed-and-breakfast, when it came to him: the missing step of what\u2019s now a landmark new proof about the sizes of infinity. \u201cIt was this flash experience,\u201d he said.Asper\u00f3, a mathematician at the University of East Anglia in the United Kingdom, contacted the collaborator with whom he\u2019d long pursued the proof, Ralf Schindler of the University of M\u00fcnster in Germany, and described his insight. \u201cIt was completely incomprehensible "
   },
   {
-    "title": "How is my Browser blocking RWX execution? (rwxstoned.github.io)",
+    "title": "Ratchet effects determine engineer reputation at large companies \u2013 sean goedecke (seangoedecke.com)",
+    "points": 61,
+    "submitter": "rbanffy",
+    "submit_time": "2025-01-06T12:30:11 1736166611",
+    "num_comments": 26,
+    "comments_url": "https://news.ycombinator.com/item?id=42610021",
+    "comments": [
+      "I work at a \"large company\", and I don't agree with most of this. Your write-up is highly subjective, and fairly pessimistic.Some people hit the ground running, and teams/organizations/companies can thrive if they find ways to embrace that. Sometimes people get hired at the wrong level, and everyone benefits if some sort of work demonstrates that quickly. I have seen promotions happen based on prudent choices around one's individual strengths, simply by choosing to do a bit of the right work and getting eyes on your capabilities. There is no \"one size fits all\" prescription for what someone should work on.Having a \"shadow lead\" can be one of the best situations for your growth, too. Not only do you get the experience leading a thing (for most of what that means, anyway), you may end up with a very strong ally when you knock it out of the park. I had a version of this experience, and I've watched others have it as well.I'm guessing most of the negatives here are based on your personal experience, and for that I'm sorry. Hopefully you can encourage positive changes in your company's engineering culture.\n \nreply",
+      "> Having a \"shadow lead\" can be one of the best situations for your growth,In a successful company with high retention, many senior engineers who would fill these roles as shadow lead, often have their ego turned down, less to prove, and will encourage you to succeed. In companies with a lot of churn, or always on the brink of disaster, you don't get that support.overall though, I do agree with the article. orgs run on reputation, and it's slow to change, and snap judgements sadly matter.\n \nreply",
+      "> you may end up with a very strong ally when you knock it out of the parkI imagine this will be determined by the culture and the system of rewards which are out of your control. A shadow lead could be an ally, or they could pin any deficiencies on you. The author\u2019s comment is sound in my opinion: depending on altruistic behavior is a bad position to be in.\n \nreply",
+      "I\u2019m engineering adjacent (analytics / data sci) but my experience has been the best engineers pitch and pick their own projects rather than being assigned out weeks in advance.Just recently an engineering manager told me \u201cI trust [IC7 engineer] to go where he is most impactful\u201dSo this isn\u2019t the only model, and successfully identifying and pitching working on high impact projects is a seniority marker that will lead to rapid promotion. In any organization. The pitch may look different in different places but I promise you - if an engineer is successfully pitching and delivering high impact projects promotion WILL follow.Identifying and pitching high impact projects is a combo of technical and soft skills though, and the way this happens depends on the org.\n \nreply",
+      "This seems generally true in my experience.\nAnother aspect of this, from personal experience: while it may be easy to move around in a large organization, you risk losing reputational capital. I had a habit of building reputation in some team/platform, then after I no longer found it engaging or there was enough turnover/focus shift, I'd ask to transition to a wildly different team for a new challenge. \nIt _is_ fun, but if you opt to start as an IC and work your way up, you're sorta letting the ratchet slip, and if you do it every couple years you may have broad experience, but your reputation (and likely level) will be well below where it could be.Thus, unless you can ramp to expertise really quickly to leverage your skills developed elsewhere, I'd recommend (perhaps obviously) to try to move to peripheral teams where your skills and relationships transfer as much as possible.\n \nreply",
+      "There is a time honored tradition of blaming the last person for all of your problems, or at least any they had proximity to.Somewhat awkward if you later see them in a meeting.\n \nreply",
+      "Quite true! Having been fairly instrumental in a few areas that I'd eventually moved on from, it was always interesting to see some of my trademark accomplishments become The Old Thing We're Trying To Replace (or even just The Big Thing We Have To Maintain); gave me a lot of empathy for prior contributors of code I ended up inheriting. \nI tend to assume that the old thing seems dumb because of the constraints when it was written and changing requirements over time; if a tool made by one person in a few weeks seems hopelessly naive to the medium sized team investing a few quarters in replacing it a few years later, that seems to be a rousing success for the original author.\n \nreply",
+      "Problem for new hires is the onboarding process is very critical to determine if you'll be doing good work or not. Fighting against a code base all the time as you're left to your own devices is an uphill battle.\n \nreply",
+      "Problem for new hires is also whether your manager will support the onboarding. If you get throw n to the wolves with 1 month of \u201conboarding\u201d, you\u2019ll fail even with straightforward codebases. I\u2019ve seen managers who bring you in and ask you, what the you and the team should be doing. And that\u2019s never ended well.\n \nreply",
+      "A lot of places end up selecting for their own brand of crazy because of that.The people who think, \"this is fine\" tend to fit in better. From a team stability perspective that's fine? But echo chambers eventually eat themselves and new perspective can lead to new features or bug fixes.\n \nreply"
+    ],
+    "link": "https://www.seangoedecke.com/ratchet-effects/",
+    "first_paragraph": "How do engineers become higher-status or lower-status at large tech companies? In other words, what determines who gets promoted and who doesn\u2019t, or who gets assigned the exciting difficult work and who gets put on keep-the-lights-on maintenance duty?The naive answer is that strong engineers are recognized and rewarded for their talent. There\u2019s a grain of truth in this (talent does matter), but it\u2019s broadly false. Many technically strong engineers go unrecognized and many technically weak engineers succeed. The slightly-less naive answer is that engineers who can deliver value to shareholders (e.g. by shipping projects) are placed in positions where they can do that. This is closer to the truth, but it doesn\u2019t explain the mechanism. Nobody at a large tech company is sitting in a high tower assessing how much value you personally can deliver. They\u2019re all busy with their own jobs. How, then, do effective engineers get recognized?The answer is a natural ratchet effect. When an engineer jo"
+  },
+  {
+    "title": "Who killed the rave? (ft.com)",
+    "points": 247,
+    "submitter": "this_weekend",
+    "submit_time": "2025-01-06T00:29:35 1736123375",
+    "num_comments": 624,
+    "comments_url": "https://news.ycombinator.com/item?id=42606318",
+    "comments": [
+      "https://archive.is/ul4Ui",
+      "One big change is that they got better and much more organized. I go to an annual event with a few hundred of my friends and family. We rent a lodge in a national forest, set up an enormous sound system, and dance for 3 days around some very confused deer. There are food trucks and coffee bars and dozens of portapotties scattered around, plus daytime poolside sets while we swim around and listen to 100dB house.We grayvers still like to have fun, just more comfortably. We have work next week, you know.\n \nreply",
+      "I\u2019m confused. You say that you  \u201cgo to\u201d an annual event, but then you describe it at a massive private festival that you\u2019re self organizing. Which is it?\n \nreply",
+      "There are all sorts of volunteer roles someone needs to do, from directing parking, to helping in the kitchen, to roaming around at 3am to see if anyone needs help, to working the first aid stand, and a hundred other things. I always sign up for at least a couple of shifts doing something, so feel like part of the \"we\" helping to put it on, but it's still something I go to as a participant to have fun.\n \nreply",
+      "As someone who does something similar, it\u2019s easily both\n \nreply",
+      "Those two things are not mutually exclusive.\n \nreply",
+      "The best festivals are co-creative experiences.\n \nreply",
+      "I still remember the first one I was supposed to go to. They didn't tell you the location until the day of.It was a high school gymnasium.Didn't work out so well.\n \nreply",
+      "> One big change is that they got better and much more organized.If I'm thinking of the same groups you're mentioning, they were already super organized. Mostly because they've been going for decades now.\n \nreply",
+      "If you\u2019re thinking of groups, plural, then you probably know the ones I mean. And yeah, I wear the 20th anniversary tank top to the gym.\n \nreply"
+    ],
+    "link": "https://www.ft.com/content/2138e940-0c81-44b0-87a7-325f278413e1",
+    "first_paragraph": "Once registered, you can:\n\n\u2022 Read this article and many more, free for 30 days with no card details required\n\u2022 Enjoy 8 thought-provoking articles a day chosen for you by senior editors\n\u2022 Download the award-winning FT Edit app to access audio, saved articles and moreThen $75 per month. Complete digital access to quality FT journalism. Cancel anytime during your trial.Essential digital access to quality FT journalism on any device. Pay a year upfront and save 20%.Complete digital access to quality FT journalism with expert analysis from industry leaders. Pay a year upfront and save 20%.Terms & Conditions applySee why over a million readers pay to read the Financial Times."
+  },
+  {
+    "title": "Robotics 101 at UMich: Applied numerical linear algebra as intro linear algebra (umich.edu)",
+    "points": 182,
+    "submitter": "jamesliudotcc",
+    "submit_time": "2025-01-08T13:11:40 1736341900",
+    "num_comments": 43,
+    "comments_url": "https://news.ycombinator.com/item?id=42633805",
+    "comments": [
+      "I took this course 3 years ago. I found it fast-moving, and it focused a lot more on applications than fundamentals, which meant it was more wide than it was deep. This didn't turn out so well when I decided to study ML later and needed stronger linear algebra fundamentals, but it was a fun course. There were a couple interesting course projects, one of which was using linear algebra to balance a (simulated) 2D robot.\n \nreply",
+      "No one, and let me repeat that, no one \"gets\" linear algebra, differential equations, or frequency domain on the first pass. It takes years to absorb and multiple passes.See:Bruner / Spiral Curriculum.Ebbinghaus / Spacing effectHattie / Deep-surface-transfer learningChunking (\"How People Learn\" has a good copy on this)Etc.The way you do this is you take a course, and then you take more courses. After a few years, it all connects and makes sense. The first course, I find, is often best short, simplified, and applied. Once you get through that, you can go deeper.Different angles are nice too. For linear algebra:- Quantum computing- Statistics and probability- Machine learning- Control theory- Image processing- Abstract algebra / groups / etc.- Computer graphicsAll come to mind.On a mile-high level, this course seems ideal for a first pass. On a detailed level, I'm confused by some licensing issues.\n \nreply",
+      "Not with the way it is taught. But if the course structure is changed slightly to have reinforcement of early concepts woven through the course, people learn much better.At least that was my experience when I taught it. See https://bentilly.blogspot.com/2009/09/teaching-linear-algebr... for more detail on my experience.\n \nreply",
+      "Where do you feel the gaps were for what you needed for ML? Downthread, Jesse Grizzle notes they've added some stuff in 2023 (it's on Github I think?) to support an ML class.\n \nreply",
+      "What would you recommend for building a strong linear algebra foundation?\n \nreply",
+      "Also a big fan of Strang. \"Linear algebra and its applications\" has problem sets with solutions for odd number questions.Would highly recommend https://mathacademy.com/courses/linear-algebra or https://mathacademy.com/courses/mathematics-for-machine-lear...I originally spent time working through practice problems from one of Strang's books, now really appreciate how systematic math academy is in assessing, building a custom curriculum, then doing spaced repetition.\n \nreply",
+      "I took 18.085 (applied linear algebra) as a grad student at MIT. The best taught math course I've ever taken. Strang is a fantastic teacher.\n \nreply",
+      "After working with math academy, any form of video learning seems so inefficient. I think people lose a lot of time watching these videos thinking that they are learning  without applying anything by themselves.\n \nreply",
+      "UMich has a couple other linear algebra courses that might be better for that: MATH 214, MATH 217 are the numbers if I remember correctly. 217 is known for having a high workload and greater rigor, but some say it's worth it even for non-Math majors.\n \nreply",
+      "In terms of books, I would say Linear Algebra Done Right. The book requires some background to understand efficient. But, once you have some background, it is very good for having a systematic and rigorous understanding of Linear Algebra theory\n \nreply"
+    ],
+    "link": "https://robotics.umich.edu/academics/courses/course-offerings/rob101-fall-2020/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Brief Introduction to Fix and Fix JSON (fixparser.dev)",
     "points": 4,
-    "submitter": "lucasRW",
-    "submit_time": "2025-01-05T11:08:16 1736075296",
-    "num_comments": 0,
-    "comments_url": "",
+    "submitter": "logotype",
+    "submit_time": "2025-01-05T15:33:47 1736091227",
+    "num_comments": 9,
+    "comments_url": "https://news.ycombinator.com/item?id=42602438",
     "comments": [
-      "xxx"
+      "For anyone interested: it's an extraordinarily simple protocol (it predates complexity in protocols), consisting of key=value pairs, where the keys are all numbers (look up \"fix tag dictionary\" for 100 different decoder rings), everything's in text, and, IIRC, all the KVPs are separated by ASCII 01h (SOH), which by convention is written with the pipe filter. That's it, that's the protocol.A real-world FIX gateway will demand a BodyLength tag, so you have to compute your message length, and it'll want SenderCompID and TargetCompID (\"from\" and \"to\", respectively). So it's like, well, that much more complicated.The complexity in these systems will all be the semantics given to the messages and the zillion fields your vendor/partner supports.\n \nreply",
+      "If it meets the guidelines, this might make a good 'Show HN'. Show HN guidelines: https://news.ycombinator.com/showhn.html\n \nreply",
+      "Thanks! not sure if it meets the guidelines given that it is a paid product. cheers\n \nreply",
+      "Paid products are ok (so long as they are consistent with the rest of HN).If in doubt, you can ask the mods using the contract link.\n \nreply",
+      "HN people have to be able to use the thingy, and signup forms don't count (\"you have to have something more than a signup\", per 'dang).\n \nreply",
+      "Isnt xml preferred in fix and not json?\n \nreply",
+      "It's been like 10 years for me but all the systems I worked with just use the classic ASCII format; the last thing you'd want to do is inflate the messages with XML or JSON. Has that changed?\n \nreply",
+      "https://www.fixtrading.org/standards/json-online/#issues-for...\nI guess so.\n \nreply",
+      "Mine was actually a question as well. My thought was because of nano second accuracy, json won't be preferred. XML causes no issues here just the bloat.\n \nreply"
     ],
-    "link": "https://rwxstoned.github.io/2025-01-04-Reviewing-browser-hooks/",
-    "first_paragraph": "While testing payloads, I stumbled across a security feature implemented within a popular browser, which acts like an EDR. By hooking a key Windows API, it checks thread creation at runtime and then decides whether this should run or not.I have been testing a new type of process injection technique. It will probably be published on this blog in the near-future but the purpose here is not that injection technique in particular, but how I randomly came across a mechanism within a browser which acts like an EDR.While injecting and executing successfully against something simple as notepad.exe is a nice start, the real test consists in confirming that this still works properly against more complex applications (.NET, large multi-threaded apps like browsers, etc\u2026).This is especially important for injection techniques since they will in some way interfere with the target process. Therefore, ensuring stability is key.To that effect, I have been writing a simple shellcode in an RWX memory rang"
+    "link": "https://fixparser.dev/what-is-fix",
+    "first_paragraph": "The FIX Protocol (Financial Information Exchange) is a standardized messaging system for real-time electronic communication of trade-related information in financial markets.Developed in the early 1990s, the FIX Protocol enables the seamless exchange of trade-related information, such as orders, executions, and market data, between trading institutions, brokers, exchanges, and other financial entities. It is highly valued for its speed, reliability, and real-time capabilities, which are essential for high-frequency trading and other time-sensitive financial activities. The protocol defines a comprehensive set of message types and field formats, making it adaptable for a variety of trading environments.A FIX tag value message is structured as a sequence of key-value pairs where each key (tag) is a numeric identifier representing a specific data field, and the value contains the associated data. FIX tagvalue encoding is standardised in ISO 3531-1:2022.8=FIXT.1.1|9=61|35=A|34=1|49=EXEC|52"
   },
   {
-    "title": "Type 2 Diabetes and cardiovascular disease attributable to sugar beverages (nature.com)",
-    "points": 186,
-    "submitter": "tchalla",
-    "submit_time": "2025-01-07T17:51:18 1736272278",
-    "num_comments": 176,
-    "comments_url": "https://news.ycombinator.com/item?id=42625193",
-    "comments": [
-      "Interesting. I think folks in the comments here maybe missed this paper is way more about the beverages part making it important. The research is around sugar sweetened beverages (SSBs). If I'm reading it right, the SSBs have a differentmetabolic effect.\"Due to their liquid form, SSBs are rapidly consumed and digested, resulting in lower satiety, higher caloric intake and weight gain. High doses of rapidly digested glucose also activate insulin and other regulatory pathways, which can result in visceral fat production, hepatic and skeletal muscle insulin resistance and weight gain. High doses of rapidly digested fructose directly activate hepatic fat synthesis, leading to ectopic fat deposition and metabolic dysfunction in liver and muscle\"Unfortunately I can't find where they define high dose, but if you look at what they say is high elsewhere, it seems to be around 9 servings a week of \"any beverage with added sugars and >50 kcal per 8 oz serving, including commercial or homemade beverages, soft drinks, energy drinks, fruit drinks, punch, lemonade and aguas frescas.\" - A can of coke is 12oz I believe?\n \nreply",
-      "About 15 years ago, I stopped drinking soda. Not out of a desire to be healthy or loose weight but simply because it dawned on me that for the same amount of sugar in one soft drink that I drink without any afterthought, I could enjoy a really good pastry that I can slowly savor.I do the same for fats. The way I look at it, I want to maximize the \"enjoyment per kcalorie\". :)More recently, I'm starting to apply this to meat as well. I really enjoy meat, but I'm not one for quantity since I'm on the skinnier side. So I'm trying to enjoy meat more, and in doing so, get better quality, prepare it better, etc. while at the same time eating less of it. This is still a work in progress, and eating in restaurants can be challenging as they usually favor quantity over quality\u2014except for the very high-end & costly places.\n \nreply",
-      "> About 15 years ago, I stopped drinking soda. Not out of a desire to be healthy or loose weight[...]Same thing happened to me at probably around the same time. I realized I could just have a lollypop, and it would be a tenth of the sugar. Most of the sweetness in soda doesn't even get a chance to touch your tongue before it's going down your throat. If I want candy, I should just have a piece of candy. If I'm thirsty, I should have a glass of water.Also, the carbonation in soda enables them to get twice the sugar into it. Drinking a flat soda is like drinking maple syrup.\n \nreply",
-      "It's probably a risky line of thinking, if you're addicted to sugar, to substitute in some other source of sugar. Best to avoid pastries, lollipops and sugary sodas.\n \nreply",
-      "I drink 250 ml soda cans/bottles. 25-28g of sugar.Be aware that a lot of candy has similar amounts of sugar. M&M packets have even more.\n \nreply",
-      "The typical soda in the US is either 12oz (can) or 20oz (bottle).A 12oz coke has 39g of sugar. A 20oz bottle of coke is 65g.Coke isn't close to the worst offender and this ignores soda at restaurants when 28oz is often the smallest you can buy\n \nreply",
-      "> The typical soda in the US is either 12oz (can) or 20oz (bottle).True but you can get 250ml cans in most grocery stores.Also, there are plenty of places I shop at where the smallest Hershey's bar or M&M packet is the King/share size one. The M&M one has 57g of sugar.Difficulty in buying smaller portions is not unique to soda.\n \nreply",
-      "Good for you.I think for meat especially, there's a difference between the stuff people talk about (like premium steaks they almost never eat) and the reality of what ends up on their plates which is a lot less glamorous.A typical fast food burger just isn't that great in terms of texture, taste, looks, etc. and IMHO almost always disappointingly unsatisfying and slightly uncomfortable afterwards. I'll eat that once in a while; usually because there's nothing more convenient and never because I crave one. For me the cheap and nasty stuff is easy to skip on a daily basis and it's not like I eat the expensive premium stuff that often anyway. I love a good steak, but I don't splurge on paying 3x the other items on the menu when I'm at a restaurant typically. Which is what it takes typically to get a nice premium cut of meat.I do enjoy cooking with meat but I'll make an effort to make the most of it. E.g. I made a nice beef stew over the weekend. That's a bit of of work and a humble/affordable cut of meat. And very tasty.If you like Indian food, try having or making a dal. As it turns out, Indians know a thing or two about making very tasty vegan food from cheap/simple ingredients. And this can as nice as some chicken curry with a few chunks of cheap chicken that is maybe a bit overcooked and dry (I've been served that in many Indian restaurants). Those curries actually still taste fine if you don't eat those chunks of meat. And the whole point of heavy spicing in countries with warm climates like India was historically to mask the flavor of cheap cuts of meat that were maybe a bit past their prime. Which is possibly also a reason why vegan food is popular in India. Fridges are a fairly recent novelty too.And the meat doesn't even add a lot of flavor; they just add it last minute typically. Lots of Indian restaurants usually have vegan or vegetarian versions of most of their curries where they toss in some tofu or paneer instead of meat. The only difference between eating meat or vegan in such places is literally what protein is added to the dish at the last minute. The rest is basically vegan or vegetarian by default.Anyway, I skip sugary drinks mostly. And I've cut down on my alcohol intake as well. Most of what I drink has basically very little or no calories.Most of my remaining food challenges are unhealthy snacks, unnecessary carbs and the temptations of unhealthy restaurant food, or late night shopping in super markets and the associated bad decision making.Restaurants bulk out their dishes with carbs and they make things taste good by adding salt and fats. It's hard to eat healthy in restaurants. So, I try to limit my restaurant food intake. And like with meat, most of the restaurants people visit aren't actually that great anyway. At least where I work, Michelin stars are not a thing for the typical lunch options. Quite the opposite actually. I'm only an OK cook but I can cook tastier/better versions of a lot of the shit I get served in places like that. It's not that hard.I recently actually started just skipping lunch entirely at work mainly for this reason and I'm training myself out of having a Pavlovian craving for food just because the clock says so. I don't actually need the calories. Or the post lunch dip in productivity. I especially don't need the lousy food choices imposed by that one person that wants to go to the burger place. There's a lot of group thinking inspiring unhealthy choices around lunch time. I took part in that for years. It's stupid when you think about it and I've suffered the health consequences as well. There's a cumulative effect if you do that for a few decades.\n \nreply",
-      "> Restaurants bulk out their dishes with carbs and they make things taste good by adding salt and fats.Anthony Bourdain wrote in Kitchen Confidential: \u201cIf you eat at any good restaurant, assume you've eaten a stick of butter.\u201d\n \nreply",
-      "\"Sugar: The Bitter Truth\" (https://robertlustig.com/sugar-the-bitter-truth/) is a pretty long watch, but it's incredibly eye-opening in terms of explaining in detail exactly why our current dietary sugar intake is so damaging to our bodies.Note: Robert Lustig is a professor of pediatric endocrinology at UCSF, I promise I wouldn't ask you (the reader) to watch a long-ass youtube video unless it contained extremely relevant science about how you (the biological machine) work.\n \nreply"
-    ],
-    "link": "https://www.nature.com/articles/s41591-024-03345-4",
-    "first_paragraph": "Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain\n            the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in\n            Internet Explorer). In the meantime, to ensure continued support, we are displaying the site without styles\n            and JavaScript.Advertisement\nNature Medicine\n\n                         (2025)Cite this article\n874 AltmetricMetrics detailsThe consumption of sugar-sweetened beverages (SSBs) is associated with type 2 diabetes (T2D) and cardiovascular diseases (CVD). However, an updated and comprehensive assessment of the global burden attributable to SSBs remains scarce. Here we estimated SSB-attributable T2D and CVD burdens across 184 countries in 1990 and 2020 globally, regionally and nationally, incorporating data from the Global Dietary Database, jointly stratified by age, sex, educational attainment and urbanicity. In 2020, 2.2 million (95% uncertai"
-  },
-  {
-    "title": "Nvidia announces next-gen RTX 5090 and RTX 5080 GPUs (theverge.com)",
-    "points": 430,
-    "submitter": "somebee",
-    "submit_time": "2025-01-07T03:12:11 1736219531",
-    "num_comments": 574,
-    "comments_url": "https://news.ycombinator.com/item?id=42618761",
-    "comments": [
-      "Similar CUDA core counts for most SKUs compared to last gen (except in the 5090 vs. 4090 comparison).\nSimilar clock speeds compared to the 40-series.The 5090 just has way more CUDA cores and uses proportionally more power compared to the 4090, when going by CUDA core comparisons and clock speed alone.All of the \"massive gains\" were comparing DLSS and other optimization strategies to standard hardware rendering.Something tells me Nvidia made next to no gains for this generation.\n \nreply",
-      "I started thinking today, when Nvidia seemingly keeps just magically increasing performance every two years, that they eventually have to \"intel\" themselves, where they haven't made any real architectural improvements in ~10 years and just suddenly power and thermals don't scale anymore and you have six generations of turds that all perform essentially the same, right?\n \nreply",
-      "it's possible, but idk why you would expect that. just to pick an arbitrary example since steve ran some recent tests, a 1080 ti is more or less equal to a 4060 in raster performance, but needs more than double the power and a much more die area to do it.https://www.youtube.com/watch?v=ghT7G_9xyDUwe do see power requirements on the high end parts every generation, but that may be to maintain the desired SKU price points. there's clearly some major perf/watt improvements if you zoom out. idk how much is arch vs node, but they have plenty of room to dissipate more power over bigger dies if needed for the high end.\n \nreply",
-      "Nvidia is a very innovative company. They reinvent solutions to problems while others are trying to match their old solutions. As long as they can keep doing that, they will keep improving performance. They are not solely reliant on process node shrinks for performance uplifts like Intel was.\n \nreply",
-      "I mean it's like 1/6 of their revenue now and will probably keep sliding in importance over the datacenter. No real competition no matter how we would wish. AMD seems to have given up on the high end and Intel is focusing on the low end (for now, unless they cancel it in the next year or so).\n \nreply",
-      "The 5090's core increase (30%) is actually underwhelming compared to the 3090->4090 increase (60% more), but the real game changer is the memory improvements, both in size and bandwidth.\n \nreply",
-      "> All of the \"massive gains\" were comparing DLSS and other optimization strategies to standard hardware rendering.> Something tells me Nvidia made next to no gains for this generation.Sounds to me like they made \"massive gains\". In the end, what matters to gamers is1. Do my games look good?\n2. Do my games run well?If I can go from 45 FPS to 120 FPS and the quality is still there, I don't care if it's because of frame generation and neural upscaling and so on. I'm not going to be upset that it's not lovingly rasterized pixel by pixel if I'm getting the same results (or better, in some cases) from DLSS.To say that Nvidia made no gains this generation makes no sense when they've apparently figured out how to deliver better results to users for less money.\n \nreply",
-      "Rasterizing results in better graphics quality than DLSS if compute is not a limiting factor. They are trying to do an apples to oranges comparison by comparing the FPS of standard rendering to upscaled images.I use DLSS type tech, but you lose a lot of fine details with it.  Far away text looks blurry, textures aren\u2019t as rich, and lines between individual models lose their sharpness.Also, if you\u2019re spending $2000 for a toy you are allowed to have high standards.\n \nreply",
-      "> Rasterizing results in better graphics quality than DLSS if compute is not a limiting factor.Sure, but compute is a limiting factor.\n \nreply",
-      "> if compute is not a limiting factor.If we're moving towards real time tracing compute is going to always be a limitting factor, as it was in the days of pre rendering. Granted currently raster techniques can simulate ray trace pretty well in many scenarios and looks much better in motion, IMO that's more limitation of real time ray trace. There's a bunch of image quality improvements beyond raster to be gained if enough compute is throw at ray tracing, i think a lot of dlss / frame generation goal is basically to offload more cpu to generate higher IQ hero frames while filling in blanks.\n \nreply"
-    ],
-    "link": "https://www.theverge.com/2025/1/6/24337396/nvidia-rtx-5080-5090-5070-ti-5070-price-release-date",
-    "first_paragraph": "By  Tom Warren, a senior editor and author of Notepad, who has been covering all things Microsoft, PC, and tech for over 20 years.If you buy something from a Verge link, Vox Media may earn a commission. See our ethics statement.Nvidia is officially announcing its RTX 50-series GPUs today. After months of leaks and rumors, the next-generation RTX Blackwell GPUs are now official, and there are four of them on the way. Nvidia CEO Jensen Huang revealed the RTX 50-series GPUs during a CES keynote this evening, announcing a $1,999 RTX 5090, a $999 RTX 5080, a $749 RTX 5070 Ti, and a $549 RTX 5070. Nvidia\u2019s new RTX 5090 and RTX 5080 GPUs will both be available on January 30th, with the RTX 5070 Ti and RTX 5070 to follow in February.The RTX 50-series GPUs include a new design for the Founders Edition, with just two double flow-through fans, a 3D vapor chamber, and GDDR7 memory. All of the RTX 50-series cards are PCIe Gen 5 and include DisplayPort 2.1b connectors to drive displays up to 8K and "
-  },
-  {
-    "title": "OmniAI (YC W24) Hiring Engineers to Build Open Source Document Extraction (ycombinator.com)",
-    "points": 0,
-    "submitter": "",
-    "submit_time": "2025-01-07T18:49:42 1736275782",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.ycombinator.com/companies/omniai/jobs/LG5jeP2-full-stack-engineer",
-    "first_paragraph": "Automate document workflowsHelp us build the best OCR / document extraction on the planet!We\u2019re looking for founding engineers to join our team. If you\u2019ve ever dreamed of exploring the fascinating and terrible world of PDFs, this is your chance!You can check out our open source library: https://github.com/getomni-ai/zeroxAnd try out our OCR model: https://getomni.ai/ocr-demoThe main things we spend our time on:All of these problems are hard, especially in conjunction with each other. If you\u2019ve had any experience with structured LLM output, we\u2019d love to chat.The primary tech stack is Node, TypeScript, React/NextJS, Postgres, Docker. For our integrations we support MySQL, Snowflake, Mongo, BigQuery and more. We don\u2019t use these much internally, but our customers do so it\u2019s helpful to know.On the LLM side, we interface with OpenAI, Mistral, Llama, and Anthropic, so users have the choice of model to run.Companies can use Omni via the cloud product, or a VPC deploy. So knowledge of Docker + "
-  },
-  {
-    "title": "The Patterns of Barricelli (2024) (akkartik.name)",
+    "title": "Did we miss P In CAP? Partial Progress Conjecture under Asynchrony (arxiv.org)",
     "points": 14,
-    "submitter": "surprisetalk",
-    "submit_time": "2025-01-07T16:17:22 1736266642",
+    "submitter": "belter",
+    "submit_time": "2025-01-05T15:23:00 1736090580",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://akkartik.name/post/2024-08-30-devlog",
-    "first_paragraph": "\nI've been obsessed recently with the work of Nils Aall Barricelli who pioneered cellular automata 15 years before John Conway, artificial life 20 years before Christopher Langton and chaos theory 15 years before Benoit Mandelbrot. Barricelli called his creation \"symbioorganisms\", but it's interesting to try to demystify them without any analogies with living organisms.\n\n\nThe playing field is a finite, circular 1D space of discrete squares. Squares can be occupied by one of many different kinds of elements. Each kind of element has a propensity to move through the space with a constant step. To this space of elements striding around, Barricelli adds 3 rules. (Well, he experimented with many different tweaks in his papers, but this is one concrete, elegant formulation.)\n\n\n\n Destruction: When two objects collide, delete both. (This isn't quite what Barricelli says. But it suffices!)\n\n Creation: When an object A moves to where a second object B used to be, make a new copy of it, somewhere"
+    "link": "https://arxiv.org/abs/2501.00021",
+    "first_paragraph": "Help | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n                    Get status notifications via\n                    email\n                    or slack\n"
+  },
+  {
+    "title": "A Pixel Parable (olano.dev)",
+    "points": 80,
+    "submitter": "facundo_olano",
+    "submit_time": "2025-01-06T00:48:58 1736124538",
+    "num_comments": 7,
+    "comments_url": "https://news.ycombinator.com/item?id=42606433",
+    "comments": [
+      "Beautifully written and worth the read. And the screensaver nerd snipe is epic.\n \nreply",
+      "That was a great read!The library at Skywalker Ranch looked like a wonderful place.\n \nreply",
+      "I\u2019ve heard him recount the story of how he ended up at LucasFilm Games before, so I could tell that \u201dMark\u201d refers to Mark Ferrari. But it certainly feels a little unusual to tell a story like this using only his first name.\n \nreply",
+      "It worked for me. It's intentionally written like a piece of fiction, you don't even have to know the characters are all real people to enjoy the story. Though I guess most readers at least know who \"Ron\" refers to.\n \nreply",
+      "Anyone have a link to \"Purcell\u2019s million-dollar animation\" of the grail scene? I'm really curious to see it now.\n \nreply",
+      "https://www.reddit.com/r/indianajones/comments/1hwce4a/india...\n \nreply",
+      "I started researching Skywalker Ranch recently and I've found it quite difficult to find floor plans or  pictures of the interior of the building.It's kind of odd.  I wonder what Disney has in store for that place.I hope that it is preserved due the historical role that it had in being the site of the genesis of so many of our cherished cultural artifacts.\n \nreply"
+    ],
+    "link": "https://olano.dev/blog/a-pixel-parable/",
+    "first_paragraph": "An imagined town is at least\nas real as an actual town.\nRichard Hugo\n\u201cHow would you like to work on video games?\u201d\nMark is holding his Best of the Show certificate in one hand and Gary\u2019s card in the other:Gary W.Art DirectorLucasFilm Games\nLucasFilm Games. As in George Lucas. As in Star Wars.\nThis is his second lucky break of the weekend. A friend recommended he go to this sci-fi convention; she said it would be good for networking. Mark wouldn\u2019t mind having one of his illustrations on a trading card, or a rule book, or, who knows, one of those fantasy novels he used to read in high school.\nSo he shows up to the convention on Friday. Someone notices his work\u2014his pencil landscapes that look hand-painted\u2014, they invite him to join in the art show, he does, two days later he wins first place. That\u2019s his first lucky break. The second is this guy, Gary, coming over to him, praising his work, asking him to \u2018audition\u2019 for a video game job.\n\u201cCould you come over to the Ranch for an interview?\u201d Ga"
   }
 ]
