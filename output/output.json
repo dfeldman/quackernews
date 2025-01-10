@@ -1,70 +1,394 @@
 [
   {
+    "title": "Show HN: Tetris in a PDF (th0mas.nl)",
+    "points": 733,
+    "submitter": "ThomasRinsma",
+    "submit_time": "2025-01-09T13:31:33 1736429493",
+    "num_comments": 131,
+    "comments_url": "https://news.ycombinator.com/item?id=42645218",
+    "comments": [
+      "This is amazing and terrifying (I am a security engineer and parsing complex document formats is a never-ending treasure trove of vulnerabilities).\n \nreply",
+      "The amount of attack surface in various format parsers is pretty stunning and terrifying indeed\n \nreply",
+      "AI agents run in isolated VMs, but PDFs have been out here running in the open for 30 years!\n \nreply",
+      "But can your PDF run an AI agent?\n \nreply",
+      "In my opinion the question isn\u2019t so much \u201cif\u201d but rather \u201cwhen\u201d.When will AI research and hardware capabilities reach a point that it\u2019s practical to embed something like that into a regular document?We\u2019ve already seen proof of concept LLMs embedded into OpenType fonts.I guess the other question is then \u201cwhat capabilities would these AI agents have?\u201d You\u2019d hope just permission to present within that document. But that depends entirely on what unpatched vulnerabilities are lurking (such as the Microsoft ANSI RCE also featured on the HN front page)\n \nreply",
+      "For Chrome's PDF renderer, the runtime is V8, so we're literally one (hilarious) line of code away from this glorious future existing today:https://pdfium.googlesource.com/pdfium/+/refs/heads/main/fpd...> // Use interpreted JS only to avoid RWX pages in our address space. Also, --jitless implies --no-expose-wasm, which reduce exposure since no PDF should contain web assembly.> return \"--jitless\";\n \nreply",
+      "Looking forward to a day when you may not have a powerful enough GPU to open a PDF\n \nreply",
+      "The first widespread AI Malware will be a historic moment in this century. It will adapt like a real biological virus to its host and we have no cure for this.\n \nreply",
+      "This isn't even the beginning of what's possible in PDFs.\n \nreply",
+      "Related: Ange Albertini, the creator of the .PDF/.ZIP/ELF reference diagrams (github/corkami) has started posting overview videos on his YT channel (@corkami-albertini) including creating .PDF+.PNG+.ZIP chimera files.The .PDF basics vid was the first in the series: https://www.youtube.com/watch?v=q6KgFezu8tw\n \nreply"
+    ],
+    "link": "https://th0mas.nl/downloads/pdftris.pdf",
+    "first_paragraph": ""
+  },
+  {
+    "title": "WorstFit: Unveiling Hidden Transformers in Windows ANSI (blog.orange.tw)",
+    "points": 212,
+    "submitter": "notmine1337",
+    "submit_time": "2025-01-09T16:19:34 1736439574",
+    "num_comments": 47,
+    "comments_url": "https://news.ycombinator.com/item?id=42647101",
+    "comments": [
+      "This is a tough one. It\u2019s systemic \u2014- MS provides a \u201cbest fit\u201d code mapping from wide Unicode to ASCII, which is a known, published, \u201cvibes-based\u201d mapper. This best fit parser is used a lottt of places, and I\u2019m sure that it\u2019s required for ongoing inclusion based on how MS views backward compatibility. It\u2019s linked in by default everywhere, whether or not you know you included it.The exploits largely revolved around either speccing an unusual code point that \u201cvibes\u201d into say a slash or a hyphen or quotes. These code points are typically evaluated one way (correct full Unicode evaluation) inside a modern programming language, but when passed to shell commands or other Win32 API things are vibes-downed. Crucially this happens after you check them, since it\u2019s when you\u2019ve passed control.To quote the curl maintainer \u201ccurl is a victim\u201d here \u2014 but who is the culprit? It seems certain that curl will be used to retrieve user supplied data automatically by a server in the future. When that server mangles user input in one way for validation and another when applied to system libraries, you\u2019re going to have a problem.It seems to me like maybe the solution is to provide an opt-out of \u201cbest fit\u201d munging in the Win32 space, but I\u2019m not a Windows guy, so I speculate. At least then open source providers could just add the opt out to best practices, and deal with the many terrible problems that things like a Unicode wide variant of \u201c or \\ delivers to them.And of course even if you do that, you\u2019ll interact with officially shipped APIs and software that has not opted out.\n \nreply",
+      "The opt-out is to use the unicode windows APIs (the functions ending in \"w\" instead of \"a\"). This also magically fixes all issues with paths longer than 260 characters (if you add a \"\\\\?\\\" prefix or set you manifest correctly), and has been available and recommended since Windows XP.I'm not sure why the non-unicode APIs are still so commonly used. I can't imagine it's out of a desire to support Windows 98 or Window 2000.\n \nreply",
+      "As mentioned elsewhere in this discussion, 99% of the time the cause is likely the use of standard C functions (or C++ `std::string`\u2026) instead of MS's nonstandard wide versions. Which of course is a ubiquitous practice in portable command-line software like curl.\n \nreply",
+      "So the culprit is still the software writer. They should have wrapped the C++ library for OS-specific behavior on Windows. Because they are publishing buggy software and calling it cross-platform.\n \nreply",
+      "curl first released in 1996, shortly after Windows 95 has born and runs on numerous Windows versions even today. So, how many different versions shall be maintained? Are you going to help one of these versions?On top of that, how many new gotchas these \u201cmodern\u201d Windows functions hide, and how many fix cycles are required to polish them to the required level?\n \nreply",
+      "If we're talking about curl specifically, I absolutely think they would (NOT \"should\") fix/workaround it if there are actually common problems caused by it.Yes it would have required numerous fix cycles, but curl in my mind is such a polished product and they would have bit the bullet.",
+      "_Or_ set your application to use UTF-8 for the \"A\" APIs.  Apparently this is supported as of a Windows 10 update from 2019. [1][1] https://learn.microsoft.com/en-us/windows/apps/design/global...\n \nreply",
+      "I think the issue is that native OS things like the windows command line, say, don\u2019t always do this. Check the results of their \u2018cd\u2019 commands with Japanese Yen characters introduced. You can see that the path descriptor somehow has updated to a directory name with Yen (or a wide backslash) in it, while the file system underneath has munged, and put them into an actual directory. It\u2019s precisely the problem that you can\u2019t control the rest of the API surface to use W that is the source of the difficulties.\n \nreply",
+      "> I'm not sure why the non-unicode APIs are still so commonly used. I can't imagine it's out of a desire to support Windows 98 or Window 2000.Nowadays, it's either for historical reasons (code written back when supporting Windows 9x was important, or even code migrated from Windows 3.x), or out of a desire to support non-Windows systems. Most operating systems use a byte-based multi-byte encoding (nowadays usually UTF-8) as their native encoding, instead of UTF-16.\n \nreply",
+      "> paths longer than 260 characters (if you add a \"\\\\?\\\" prefix or set you manifest correctly)A long ago released build of Windows 10 did this automatically so no need for adjustments anymore, 32k is the max.......except for Office! It can't handle long paths. But Office has always been hacky (the title bar, for example).\n \nreply"
+    ],
+    "link": "https://blog.orange.tw/posts/2025-01-worstfit-unveiling-hidden-transformers-in-windows-ansi/",
+    "first_paragraph": "\ud83d\udccc This is a cross-post from DEVCORE. The research was first published at Black Hat Europe 2024. Personally, I would like to thank splitline, the co-author of this research & article, whose help and idea were invaluable. Please also give him a big shout-out!The research unveils a new attack surface in Windows by exploiting Best-Fit, an internal charset conversion feature. Through our work, we successfully transformed this feature into several practical attacks, including Path Traversal, Argument Injection, and even RCE, affecting numerous well-known applications!\u00a0Given that the root cause spans compiler behavior, C/C++ runtime and developer\u2019s mistakes, we also discussed the challenges of pushing fixes within the open-source ecosystem.\u00a0Get the latest update and slides on our website!\ud83d\udd25 \u2192 https://worst.fit/Let\u2019s imagine that: you\u2019re a pentester, and your target website is running the following code. Can you pop a calc.exe with that? You can have a quick try on your own. The PHP code uses a"
+  },
+  {
+    "title": "Soldering the Tek way (hackaday.com)",
+    "points": 79,
+    "submitter": "zdw",
+    "submit_time": "2025-01-09T22:37:01 1736462221",
+    "num_comments": 40,
+    "comments_url": "https://news.ycombinator.com/item?id=42650561",
+    "comments": [
+      "Curious if anyone has tips on lead-free soldering. I basically always see in online forums \"just use lead,\" but never any tips on how to actually become capable on using lead-free solder. Esp. as my son is around a lot, it seems prudent to stay lead-free, even if you can generally handle lead safely. Thanks.\n \nreply",
+      "Leaded solder is not a big health risk for hobbyists as long as you have proper fume extraction. Metallic lead is poorly absorbed through the skin (it _is_ absorbed from what I can find, but very very slowly), the major risk is from lead vapour and at normal soldering temperatures that\u2019s very minimal.However, lead free tin-silver-copper (SAC) solder is fairly easy to work with. You need a hotter soldering iron at around 300\u00b0C, and if soldering PCBs preheating the board to 80-100\u00b0C may be needed for good results. It may also take a bit longer for the solder to propagate flow and wet, since the surface needs to be hotter.If you\u2019re using additional flux or non-fluxed solder you\u2019ll need to check it for compatibility, that should be on the data sheet. Most fluxes are fine, but I\u2019ve seen a couple that say not to use with some lead free solder formulations.The main downside to SAC lead free solder is the higher temperature required which can overheat some components, particularly capacitors and ICs in my experience. It\u2019s a case of being careful to keep the heat duration as short as possible.Personally I went back to lead solder and manage my exposure with ventilation and HEPA filters.\n \nreply",
+      "I've heard that the soldering temperatures aren't nearly enough to make the lead a gas and the fumes from the flux are what can kill you. I suppose the same advice applies in that case, but is that accurate?\n \nreply",
+      "Yes that\u2019s accurate for hobbyist work. There will be some lead vapour, but at the temperatures used for soldering we\u2019re talking a few atoms. The flux is much more of a risk, and both are mitigated with proper fume extraction.Lead does bioaccumulate so continual exposure to low levels is dangerous, but unless you\u2019re soldering all day every day it\u2019s not likely to be dangerous.If you\u2019re a factory and have multiple wave soldering baths operating it\u2019s a different story.\n \nreply",
+      "Lead has a boiling point of 1749 degrees C. That is at least 1200 degrees higher than your typical soldering temperature. If you use a propane torch you\u2019ll almost touch that temp.\n \nreply",
+      "Correct, but all materials have a vapour pressure so there will be a very small amount of lead vapour when soldering. Based on lead\u2019s vapour pressure it\u2019s in the range of a few atoms, I haven\u2019t done the math though.I mentioned it for completeness because someone else would if I didn\u2019t.",
+      "Quick math shows that vapor pressure of lead at 500 degrees C is  1/7,600,000 of an atmosphere.",
+      "Do you know how dangerous new vs old flux is? I'm using some old  \u041a\u0430\u043d\u0438\u0444\u043e\u043b\u044c from the USSR and get headaches while soldering. Fume extraction would probably be a good idea, but I solder no more than 4h a year\n \nreply",
+      "It really depends on the flux, even modern fluxes have a range of toxicity. The only way to know is to check the MSDS.I use \u041a\u0430\u043d\u0438\u0444\u043e\u043b\u044c/rosin flux as well and use a fume extractor. Rosin flux is the most common for flux-cored solder in my experience.But a few times a year is unlikely to be an issue, soldering health effects are in people who do it for work.",
+      "There is a technique where you breathe out as you solder. No idea if \u043a\u0430\u043d\u0438\u0444\u043e\u043b\u044c is toxic or not but honestly if it gives you headaches why not try another type? Or wear a respirator?"
+    ],
+    "link": "https://hackaday.com/2025/01/09/retrotechtacular-soldering-the-tek-way/",
+    "first_paragraph": "For a lot of us, soldering just seems to come naturally. But if we\u2019re being honest, none of us was born with a soldering iron in our hand \u2014 ouch! \u2014 and if we\u2019re good at soldering now, it\u2019s only thanks to good habits and long practice. But what if you\u2019re a company that lives and dies by the quality of the solder joints your employees produce? How do you get them to embrace the dark art of soldering?If you\u2019re Tektronix in the late 1970s and early 1980s, the answer is simple: make in-depth training videos that teach people to solder the Tek way. The first video below, from 1977, is aimed at workers on the assembly line and as such concentrates mainly on the practical aspects of making solid solder joints on PCBs and mainly with through-hole components. The video does have a bit of theory on soldering chemistry and the difference between eutectic alloys and other tin-lead mixes, as well as a little about the proper use of silver-bearing solders. But most of the time is spent discussing the"
+  },
+  {
+    "title": "Chat-Driven Development: A Better Way to Use LLMs for Coding (shekhargulati.com)",
+    "points": 20,
+    "submitter": "ingve",
+    "submit_time": "2025-01-07T06:53:14 1736232794",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=42620012",
+    "comments": [
+      "Low signal, see the post he refers to:\nhttps://crawshaw.io/blog/programming-with-llms\n \nreply",
+      "I've been using Claude to help me with an ESP32 project using the esp-idf and wifi dual core stuff. \nIt's gotten be all the way to where I wanted to be by writing specific detailed things I want the code to do and specific things I don't want it to do. It also helped me learn some specific memory mapping lingo and lets me ask questions that help me further understand the nuances.The code it would produce did have errors but after telling it \"this code gives me this error\" it would rewrite it usually fixing the error or causing a new one. You can quickly find out if it's in an \"error-spiral\" after a few back and forths at which you do some googling to see if maybe the way you're doing it is completely off base or if there's something the ai is missing.\n \nreply",
+      "Have you tried Cursor instead of copilot? It feels more like a chat-driven development experience, but baked into the IDE.\n \nreply",
+      "What if you need to make design changes, but don\u2019t have the skills?\n \nreply"
+    ],
+    "link": "https://shekhargulati.com/2025/01/07/chat-first-development-a-better-way-to-use-llms-for-coding/",
+    "first_paragraph": "Shekhar GulatiWritings on Software Engineering, Software Architecture, Generative AI and LLMsIn the last couple of years, I have subscribed to GitHub Copilot multiple times, each time canceling its subscription. It never felt natural to me, feeling annoying and getting too much in my way. To me, chat-driven development with ChatGPT or Claude feels more natural. I feel I\u2019m in more control as I can be explicit about what I want, work on smaller problems, and pass relevant context. This helps LLMs generate better code for me.Today, I was reading a blog where the author shared similar experiences. They listed the following reasons:Along with the above, there are a few more reasons why I didn\u2019t like LLM IDE integrations:\u0394\nI am Shekhar Gulati, independent consultant and architect working in LLM and Generative AI ecosystem. \n\nYou can register for my Building Production Ready LLM Applications Course here -> \nLink to Registration Form\n\nYou can reach out to me via Contact Form\n\n\t\t\t\t\t\t\t\tType your"
+  },
+  {
+    "title": "How Britain got its first internet connection (2015) (theconversation.com)",
+    "points": 66,
+    "submitter": "samizdis",
+    "submit_time": "2025-01-09T20:02:36 1736452956",
+    "num_comments": 44,
+    "comments_url": "https://news.ycombinator.com/item?id=42649340",
+    "comments": [
+      "That March 1977 map always brings back a flood of memories to this old-timer.Happy nights spent hacking in the Harvard graduate computer center next to the PDP-1/PDP-10 (Harv-1, Harv-10), getting calls on the IMP phone in the middle of the night from the BBN network operations asking me to reboot it manually as it had gotten wedged...And, next to me, Bill Gates writing his first assembler/linker/simulator for the Altair 8080... (I tried talking him out of this microcomputer distraction -- we have the whole world of mainframes at our fingertips! -- without success.)(Edit:) We also would play the game of telnet-till-you-die, going from machine to machine around the world (no passwords on guest accounts in the early days), until the connection died somewhere along the way.Plus, once the hackers came along, Geoff Steckel (systems guy on the PDP-10) wrote a little logger to record all incoming guests keystrokes on an old teletype, so we could watch them attempting to hack the system.\n \nreply",
+      "Dear Sir, could you just, you know, continue writing? I just love these stories, would love to hear more!\n \nreply",
+      "I worked for Peter Kirstein for many years - he always had wonderful stories to tell.In the article Peter talks about the temporary import license for the original ARPAnet equipment.  The delayed VAT and duty bill for this gear prevented anyone else taking over the UK internet in the early days because the bill would have then become due.  But he didn't mention that eventually if the original ARPAnet equipment was ever scrapped, the bill would also become due.When I was first at UCL in the mid 1980s until well into the 90s, all that equipment was stored disused in the mens toilets in the basement.  Eventually Peter decided someone had to do something about it, but he couldn't afford the budget to ship all this gear back to the US.  Peter always seemed to delight in finding loopholes, so he pulled some strings.  Peter was always very well connected - UCL even ran the .int and nato.int domains for a long time.  So, at some point someone from UCL drove a truck full of obsolete ARPAnet gear to some American Air Force base in East Anglia that was technically US territory.   Someone from the US air force gave them a receipt, and the gear was officially exported.  And there it was left, in the US Air Force garbage.  Shame it didn't end up in a museum, but that would have required paying the VAT bill.\n \nreply",
+      "The most hilari-depressing part of the story was the funding politics and grantwriting headaches that have never changed:\u2013 the NPL couldn't set up a British inter-network because of pressure from GPO;\u2013 they couldn't connect to ARPA via Norway because of the Foreign Office;\u2013 then, UCL couldn't get funding from SERC;\u2013 then, UCL couldn't get funding from DTI because it didn't have industrial interest (although, to be fair, it was the department of \"industry\")......and then nearly a decade later government bodies were trying to take it over.(It looks like the IMP/TIP was literally funded by petty-ish \u00a3\u00a3\u00a3 that the NPL superintendent could get his hands on without further approval. To be fair, GPO did fund the link to Oslo.)\n \nreply",
+      "Peter once told me that in 1973, the only two organizations permitted to do telecommunications were the Post Office and the Ministry of Defense.  So to legally connect UCL to the ARPAnet, he needed an exception clause.  Somehow he got both the Post Office and the Ministry of Defense to sign off that they were not interested in computer-to-computer communications, in perpetuity, so that UCL could do so instead.  He said he never tried to hold them to it later.\n \nreply",
+      "Spot on. Would be interesting to see what sort of hoops you'd have to jump through in an academic lab today to secure similar money.That 5k GPB in 1973 is 77k in today's pound, or about 95k USD at current exchange rates.\n \nreply",
+      "The trouble was that it was quite unclear to a researcher, even in one of the research council networking hubs, how to get access to the gateway, and it may have cost.  I gave up trying before going to work in Oak Ridge for the summer (where I was taken aback by the primitive computing, at least \"outside the fence\").  For some time (mid-80s to early 90s? I don't remember) we were generally dependent on the infamous BITNET email gateway to communicate with the rest of the world from the well-developed UK network.  It was \"interesting\" to deal with code in a Swedish 6-bit character set sent through the EBCDIC gateway to ISO 646-GB.  (The Fortran Hollerith formats were added interest...)\n \nreply",
+      "> The little black book of the internetThe article doesn't mention the Coloured Book protocols, but I'm pretty sure this phrasing isn't accidental: https://en.wikipedia.org/wiki/Coloured_Book_protocols\n \nreply",
+      "Red book was particularly interesting (modulo lack of security) long before \"the Grid\"; it worked between various computer centres.\n \nreply",
+      "So I was just reading through a 1988 Swedish popular book on \"data communications\". Not a single word on Arpanet/etc. Many other network technologies and attempts at global networks described.My point: \"Internet\" wasn't very well-known \"even\" in 1988 outside of well-connected places.Book: Scandinavian PC Systems, Valentino Berti: \"Introduktion till datakommunikation\"\n \nreply"
+    ],
+    "link": "https://theconversation.com/how-britain-got-its-first-internet-connection-by-the-late-pioneer-who-created-the-first-password-on-the-internet-45404",
+    "first_paragraph": "\n      Professor of Computer Communications Science, UCL\n    Peter T. Kirstein does not work for, consult, own shares in or receive funding from any company or organization that would benefit from this article, and has disclosed no relevant affiliations beyond their academic appointment.University College London provides funding as a founding partner of The Conversation UK.View all partnersBritish computer scientist and Internet Hall of Fame inductee Peter Kirstein died in January 2020 at the age of 86, after a nearly 50-year career at UCL. A few years before he died, he was commissioned by then Conversation technology editor Michael Parker (now director of operations) to write an in-depth piece originally intended as part of a special series on the internet. It wasn\u2019t published at the time, as the series was postponed, but now to mark Professor Kirsten\u2019s contributions we are delighted to be able to publish his reflections on the challenges he faced connecting the UK in the early 1970s"
+  },
+  {
+    "title": "We are teen hackers from around the world who code together (hackclub.com)",
+    "points": 168,
+    "submitter": "mooreds",
+    "submit_time": "2025-01-06T15:21:14 1736176874",
+    "num_comments": 36,
+    "comments_url": "https://news.ycombinator.com/item?id=42611282",
+    "comments": [
+      "I saw the Hack Club presentation at the Ubuntu Summit 2024 (\"How 30K teenagers build open source software\") and it was an unexpected highlight of the conference for me. I'd expected it to be a boring kids program, but Hack Club looks very cool! https://youtu.be/AdgU-_1vDco\n \nreply",
+      "Hackclub is currently running a program for high schoolers until January 31st where time spent working on hobby projects is rewarded with prizes. By my understanding the pay rate is about $2-5 dollars per hour, so no replacement for a full time job but if you have kids that code for fun something is better than nothing!\n \nreply",
+      "ArchiveBox uses HackClub Bank, their FSP platform (like Open Collective but better) and we love it. I enjoy using it more than any other billing/invoicing system I've used, and I'm constantly amazed at the quality of software they're able to put out with a team of teenagers!\n \nreply",
+      "Love to see these youths reclaim the word \"hacker.\"\n \nreply",
+      "And in such a positive light\n \nreply",
+      "which is the original meaning.\n \nreply",
+      "this is so cool. hats off to the creators. I bet it's a ton of logistics to manage. I surfed around the site but couldn't find any information re: volunteering with them? I wonder if they need them and what kind of commitment it would be? I'd be interested!\n \nreply",
+      "Does grey hair hacker club exists somewhere ? Need to join.\n \nreply",
+      "Hey! I work here. Happy to answer any questions!\n \nreply",
+      "We'd be happy to help some of these kids do Show HNs of their projects. Would that be of interest?\n \nreply"
+    ],
+    "link": "https://hackclub.com/",
+    "first_paragraph": "Build, Battle, Booty. Repeat. Get free Raspberry Pis, Framework Laptops, iPads, and more. Join High Seas! Oct 30 - Jan 31. highseas.hackclub.comWe are  teen hackersteen hackers from around the world who code togetherEvery day, thousands of Hack\u00a0Clubbers gather online and in-person to make things with code. Whether you\u2019re a beginner programmer or have years of experience, there\u2019s a place for you at Hack\u00a0Club. Read about our hacker ethic.Connect with other teenage codersHave a coding question? Looking for project feedback? You\u2019ll find hundreds of fabulous people to talk to in our global Slack (like Discord), active at all hours.Build open source learning toolsWe build large open source projects together (3k+\u00a0PRs a year) like this website, a game engine, daily streak system, and more!Gather IRL with other makersMeet other Hack\u00a0Clubbers in your community to build together at one of the 400+ Hack\u00a0Clubs and high school hackathons.We gather both online and in-person to share our love of code "
+  },
+  {
+    "title": "Shaping ligatures in monospace fonts (joshleeb.com)",
+    "points": 19,
+    "submitter": "todsacerdoti",
+    "submit_time": "2025-01-09T22:28:07 1736461687",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=42650501",
+    "comments": [
+      "I think the ligature from MonoLisa is a good example of how not to do ligatures. I can't tell whether it stands for \"#={\" or \"#{\". Ligatures can be nice, to each their own, but only if they don't introduce ambiguity.\n \nreply",
+      ">Since we are working with a monospace font, every glyph must have the same advanceJust pointing out that this is merely an expectation and not a rule. You can happily design a \"monospace\" font in any font publishing software that blatantly disrespects a single width. In fact, you can just manually make any letterform 2x width, and that is exactly what most monospace ligatures do! (except the bad ones, which combine e.g. \"fi\" ligature a single width letter)The ligature letters are just... 2x width. Believe it or not this is totally legal!https://www.hanselman.com/blog/monospaced-programming-fonts-...\n \nreply",
+      "Fonts are kind of dumb. There's usually nothing actually weird going on. Ligatures are simple character substitutions. What the LIGSPACE is, most likely, is a spacing character added by the designer to align the characters in the ligature correctly. So, the LIGSPACE is just a character like any other and is nothing special. For example, when you hit a space bar, you are inserting a character which doesn't render anything because the designer didn't draw anything there. There's no extra logic.\n \nreply"
+    ],
+    "link": "https://joshleeb.com/posts/monospace-ligatures.html",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Show HN: Factorio Blueprint Visualizer (github.com/piebro)",
+    "points": 362,
+    "submitter": "piebro",
+    "submit_time": "2025-01-09T11:23:03 1736421783",
+    "num_comments": 84,
+    "comments_url": "https://news.ycombinator.com/item?id=42644168",
+    "comments": [
+      "This is amazing.I did a similar thing for the game Highfleet, until I ran into roadblocks with the dev team.My ultimate goal was to have a \"print poster\" button that would generate the image and ship it off to one of those poster drop-shippers for a small fee. In that game, you can annotate the maps, and the world map with battle annotations is really special with lots of memories of victories and defeats. Alas, no dice.I suggest you do this for blueprints! The first thing I'm going to do is take my favorite space platforms and outposts and make posters - the colored block imagery is really artful.And, if you want a real challenge, you could parse the end-game uploads (galaxy) if available, or save files themselves.Or, slightly less ambitious - a game mod that generates links to this site directly.Very nicely done!\n \nreply",
+      "Had never heard of Highfleet but it looks pretty awesome!Plus, I grew up playing MicroProse games in the early to mid 1990s so wild to see that they are still around and making great content.I also loved this quote from the reviews:\"A typical Microprose game in that you need to a) immerse yourself in it and b) READ THE GOSH DANG MANUAL in order to have any hope of enjoying it.\" [0]0 - https://steamcommunity.com/profiles/76561197989787811/recomm...\n \nreply",
+      "Oh it's alarmingly fun.1. radio decryption and cyphers2. Complete flying fortress customization3. ancient tech-obsessed desert culture kinda like homeworld4. merchant raiding and resource constrained survivalIf you get deep into building customized ships, I have an automated optimizer for you to check your stats against :)\n \nreply",
+      "\"until I ran into roadblocks with the dev team.\" What kind of roadblocks?\n \nreply",
+      "There were a few things that were difficult to render properly that made the maps incorrect in ways that would really look bad to a veteran player. Like certain cities not having the right links via trade routes (which is a huge part of the game).I got radio silence from everyone when I tried to confirm the way to correctly determine links. So I moved on to an easier problem.\n \nreply",
+      "I actually printed a few designs and hung them up in frames in my home. Maybe I'll add the idea and some links to the readme. Can you recommend a printing service?I think it's not possible to access the actual file upload using the galaxy hall of fame (https://www.factorio.com/galaxy) or I just can't find them. Otherwise it would be pretty cool.Oh yeah, I like the mod idea. That should also be quite doable, thanks.\n \nreply",
+      "It's cool that you support plotters. I don't have a plotter, but I DO have a 3D printer, and those can also do some pretty cool 2D visualizations.There's a good ecosystem for Lithophanes [0][1] and maps [2][3]. This would be a cool addition to that.[0] https://all3dp.com/2/how-to-3d-print-your-own-lithophane/[1] https://www.youtube.com/channel/UCU13fzqAu4BTAhOSHJgHRqg[2] https://blog.prusa3d.com/how-to-print-maps-terrains-and-land...[3] https://map2stl.com/\n \nreply",
+      "Oh nice, I didn't know one could print Lithophanes. If you mount a pen in your 3D Printer and the right settings it should also work as a pen plotter. But I don't know how practical that is.The map2stl tool is also cool. I created a similar tool [0] for pen plotters using OpenStreetMap Data a while ago, which is fun to play around with.[0] https://piebro.github.io/plotting-maps\n \nreply",
+      "Plenty of people have taped a pen to their 3D printer. The main problem is the same issue for all plotters: they just aren't actually that useful. They're neat as hell for sure, they just don't solve a problem that most people have.\n \nreply",
+      "I wonder if you could add in the production / consumption rates of various machines into this and have the visualizer show bottlenecks and other data\n \nreply"
+    ],
+    "link": "https://github.com/piebro/factorio-blueprint-visualizer",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A python library to artfully visualize Factorio Blueprints and an interactive web demo for using it.\n      I love the game Factorio and I really like the look of factories after growing for many hours or blueprints after tweaking them for perfection. That's why I created a website to artfully visualize Factorio blueprints.\n\n\nWith the website you can import Factorio blueprints as text and visualize them. You can tweak the drawing settings or create random ones.All buildings and tiles with their bounding boxes and belt, pipe, rail, inserter, wire and electricity connections can be visualized. Everything is drawn in vector graphics (SVG) to be able to view it in any resolution.With the latest update, Blueprints from Factorio before version 2.0 might not work correctly. You can import older blueprints to factorio and export them again t"
+  },
+  {
+    "title": "Candy Crush, Tinder, MyFitnessPal: Apps hijacked to spy on location (wired.com)",
+    "points": 41,
+    "submitter": "gnabgib",
+    "submit_time": "2025-01-10T00:00:52 1736467252",
+    "num_comments": 10,
+    "comments_url": "https://news.ycombinator.com/item?id=42651115",
+    "comments": [
+      "Do I understand correctly that these apps are able to bypass OS permissions of whether to allow location data?\n \nreply",
+      "I wonder if apps are abusing background app refresh to do this on iOS.My understanding is that it isn't difficult to create a background task that can periodically make network requests. Just have a background task make a HTTP request including some unique identifier to some ad network server, then have the handle IP geolocation from the server's side.While the accuracy won't be great on a lot of mobile networks, you can get pretty granular on wifi as some ISPs have their IPs as granular as a neighborhood.\n \nreply",
+      "\"a significant amount of this geolocation dataset appears to be inferred by IP address to geolocation lookups, meaning the vendor or their source is deriving the user's geolocation by checking their IP address rather than by using GNSS [Global Navigation Satellite System]/GPS data. That would suggest that the data is not being sourced entirely from a location data SDK.\"Probably it would use the location if the permission was enabled, otherwise fall back to IP geolocationReal-time bidding is a privacy nightmare - basically spraying your actions in real-time to every ad provider, with a pinky promise that they won't abuse it.\n \nreply",
+      "https://web.archive.org/web/20250109211053/https://www.wired...https://archive.ph/Danyk\n \nreply",
+      "Related FTC takes action against Gravy Analytics, Venntel for selling location data (194 points, 158 comments) https://news.ycombinator.com/item?id=42309429\n \nreply",
+      "Advertising is a virus that will infect every ecosystem\n \nreply",
+      "> Candy Crush, Tinder, MyFitnessPal: See the Thousands of Apps Hijacked to Spy on Your LocationThis seems like a very misleading headline. These apps were (often for no user-beneficial reason) collecting location data. This code was put there deliberately by the app authors. The app authors are accomplices in leaking this data , they are not victims.\n \nreply",
+      "Actually, location tracking was added on purpose..It is capitalism that has been hacked.\n \nreply",
+      "Related:See the Thousands of Apps Hijacked to Spy on Your Location - https://news.ycombinator.com/item?id=42651087 - Jan 2025\n \nreply",
+      "We'll merge those comments hither. Thanks!\n \nreply"
+    ],
+    "link": "https://www.wired.com/story/gravy-location-data-app-leak-rtb/",
+    "first_paragraph": "Some of the world\u2019s most popular apps are likely being co-opted by rogue members of the advertising industry to harvest sensitive location data on a massive scale, with that data ending up with a location data company whose subsidiary has previously sold global location data to US law enforcement.The thousands of apps, included in hacked files from location data company Gravy Analytics, include everything from games like Candy Crush and dating apps like Tinder to pregnancy tracking and religious prayer apps across both Android and iOS. Because much of the collection is occurring through the advertising ecosystem\u2014not code developed by the app creators themselves\u2014this data collection is likely happening without users\u2019 or even app developers\u2019 knowledge.This article was created in partnership with 404 Media, a journalist-owned publication covering how technology impacts humans. For more stories like this, sign up here.\u201cFor the first time publicly, we seem to have proof that one of the larg"
+  },
+  {
+    "title": "\"Twelfth Night Till Candlemas\" \u2013 a 40-year book-quest and its remarkable ending (davidallengreen.com)",
+    "points": 115,
+    "submitter": "ColinWright",
+    "submit_time": "2025-01-09T17:07:40 1736442460",
+    "num_comments": 26,
+    "comments_url": "https://news.ycombinator.com/item?id=42647633",
+    "comments": [
+      "It's funny. As soon as he described his problem, I suspected ChatGPT would enter the picture. It's often significantly better than search engines for finding the name of even an obscure work from a description, so of course folks on book-finding subreddits would use it a lot.But the author's absolutely right to warn that it also regularly fails us, and the author's also right the celebrate the folks who are trained specifically in finding this sort of information in ways that the automated tools can't replicate yet.\n \nreply",
+      "I was sent a photo of a page from a book with a great piece of writing. He didn't know the book.  I ocr'd the page and pasted it into ChatGPT.  It lead me on a merry dance where it started unequivocally that it was a book it couldn't have been. It then started making up books from similar authors.  Every time I said, 'there is no such book', it appologised and then made up a new book.  It was like talking to a salesman, trying to bullshit it's way through a pitch.I put a short piece of it into Google books and it found it! I asked ChatGPT about the actual book and it claimed to know it!It was a book called Blood Knots by Luke Jennings. I bought it, and before I read it I saw the friend who sent me the excerpt, and gave it to him.  A year later I saw the same book, shelf soiled, in an independent store. It was worth the wait,  it was a great read.I also saw David Allen Green (author of the above) ask his question on Bluesky on my first day using it. Somehow I feel part of this story\n \nreply",
+      "They were also pointing out an interesting point that ChatGPT does.  It treats everything as relevant.  Whereas the librarian who found the book.  Systematically discarded possible 'facts' and substituted others (goblins->demons) to find out what was going on.  Not sure any AI does this currently.\n \nreply",
+      "ChatGPT does do that for me, when I'm using it for tasks like David Allen Green's book hunt.This has yet to help. If it can find it, it (so far) has not needed to change the details I provided; if it doesn't know, it will change them to something thematically similar but still not find what I wanted (and if I insist on requiring certain story elements that it had changed, it will say something along the lines of \"no results found\" but with more flowery language).\n \nreply",
+      "I suspect that, given a reasonable prompt, it would absolutely discard certain phrases or concepts for others. I think it may find it difficult to cross check and synthesize, but \"term families\" are sort of a core idea of using multi-dimensional embedding. Related terms have low square distances in embeddings. I'm not super well versed on LLMs but I do believe this would be represented in the models.\n \nreply",
+      "I think a more robust approach would be to restrict the generative AI to generating summaries of book texts. First summarize every book (this only has to be done once), and then use vector search to find the most similar summaries to the provided summary. Small mistakes will make little difference, e.g. \"goblin\" will have a similar embedding to \"demon\", and even entirely wrong information will only increase the number of books that have to be manually checked. Or better yet, develop an embedding model that can handle whole books at once and compare the vectors directly.Perhaps somebody with more compute than they know what to do with could try this with Project Gutenberg as a proof of concept.\n \nreply",
+      "It's also interesting that years of trying on Twitter and Reddit failed, but asking on Bluesky succeeded.  I'm certainly not claiming that Bluesky is some kind of great leap forward compared to Twitter.  But it could be that being a new service it just isn't as crowded with bots, spam, and BS -- thus allowing the signal to come through.\n \nreply",
+      "Sidenote: David Allen Green, the author of this blog,  is a brilliant writer on constitutional law in the UK. It is quite a subject since Britain doesn't have a written constitution. He was a wonderful guide through the Brexit chicanery.\n \nreply",
+      "For people like me wondering how it's possible not to have a written constitution:  https://en.wikipedia.org/wiki/Constitution_of_the_United_Kin...tldr:  it is actually (literally) \"written\", but not all in the same place.  It's scatterred throughout various places.\n \nreply",
+      "For anyone who has a similar quest (trying to find semi-remembered media from one\u2019s youth, based on vague details), r/tipofmytongue on Reddit is a great resource. People there often succeed where AIs fail.\n \nreply"
+    ],
+    "link": "https://davidallengreen.com/2024/12/twelfth-night-till-candlemas-the-story-of-a-forty-year-book-quest-and-of-its-remarkable-ending/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "MacBASIC (apple.fandom.com)",
+    "points": 13,
+    "submitter": "rbanffy",
+    "submit_time": "2025-01-06T16:39:57 1736181597",
+    "num_comments": 8,
+    "comments_url": "https://news.ycombinator.com/item?id=42612085",
+    "comments": [
+      "As a 128K Mac owner who bought Microsoft's BASIC for the Mac, this still makes me angry.Then Apple released HyperCard and that was nice, until they dropped it.Then Runtime Revolution was released, and I found it quite nice to use, then they opensourced it as Livecode and I pledged for that, then they quit supporting the Community Edition and closed the code again (anyone know if anyone is making progress on getting this to compile/work/install?).These days I just use Python, but I'd really like to see a nice option for GUI development.\n \nreply",
+      "I just discovered that the wxWidget library has Ruby (and python) bindings! wxRuby3. And it works on OSX, Windows and Linux.\n \nreply",
+      "I used to do a lot of Hypercard. Never tried Livecode. Just looking at their site and their pricing model, I'm curious, do you actually have to get their approval / notify them for every app you develop and where it gets released? I can't imagine spending the time to adopt a language that was controlled by one company that way. Learned my lesson with Flash AS3, but at least Adobe didn't care what you made with it or try to put their hand in your revenue stream.\n \nreply",
+      "No idea what it's like now.Maybe try HyperNext Studio?https://tigabyte.com/\n \nreply",
+      "Anybody got a sneaky copy of the 1.0 release kicking about?\n \nreply",
+      "It's on the Macintosh Garden: https://macintoshgarden.org/apps/macbasic-10\n \nreply",
+      "All this BASIC drama seems so silly now.\n \nreply",
+      "It could have saved the early Mac from being an application-driven appliance and allowing average users to create graphical applications --- instead, that had to wait until HyperCard was released.A notable example of that promise was an early game, _The Manhole_ (billed as \"Where Alice would have gone if Alice had had HyperCard\") --- the developers went on to make a little game on CD-ROM known as _Myst_.For an alternate spin on how a competitor was developed:https://yourstory.com/2017/06/techie-tuesdays-alan-cooper\n \nreply"
+    ],
+    "link": "https://apple.fandom.com/wiki/MacBASIC",
+    "first_paragraph": "Icon of version 1.0Macintosh BASIC, also called MacBASIC, is an implementation of BASIC developed at Apple Computer for the early Macintosh computers.\nAbout box of MacBASIC beta version 0.29In September 1981, Donn Denman joined the Macintosh team to begin work on a native BASIC interpreter for the new Mac platform. Denman had previously collaborated with Randy Wigginton to port Applesoft BASIC to the Apple III. In spring 1982, Bryan Stearns was brought in to assist Denman for about six months. As the the ship date for the Macintosh 128K approached, Denman also devoted time to writing desk accessories for it. After the Mac shipped in January 1984, Denman resumed work on what would become MacBASIC. He was assisted by Marianne Hsiung and Larry Kenyon at Apple. Scot Kamins from TTI assisted with the documentation and manuals.[1] Unlike other text-based implementations, MacBASIC provided access to Macintosh Toolbox routines, making it useful as a prototyping tool.[2]\nIcon of beta 0.335A bet"
+  },
+  {
+    "title": "Show HN: TabPFN v2 \u2013 A SOTA foundation model for small tabular data (nature.com)",
+    "points": 66,
+    "submitter": "onasta",
+    "submit_time": "2025-01-09T16:38:26 1736440706",
+    "num_comments": 12,
+    "comments_url": "https://news.ycombinator.com/item?id=42647343",
+    "comments": [
+      "Related: CARTE-AI, which can also deal with multiple tables.https://soda-inria.github.io/carte/\nhttps://arxiv.org/pdf/2402.16785The paper includes a comparison to TabPFN v1 (among others), noting the lack of categorical & missing values handling which v2 now seems to have. Would be curious to see an updated comparison.\n \nreply",
+      "TabPFN is better on numerical data since v1 (see figure 6 in the CARTE paper). CARTE's main strength in on text features, which are now also supported for TabPFN v2 API version (https://github.com/PriorLabs/tabpfn-client). We compared this to CARTE and found our model to be generally quite better, and much faster. CARTE multi-table approach is also very interesting, and we want to tackle this setting in the future.\n \nreply",
+      "How can you train a tabular foundation model when the tabular features themselves are inherently domain-specific?  Is there some kind of preprocessing step beforehand to match the inference time features with their closest analogues in the training set?\n \nreply",
+      "anyone tried this? is this actually overall better than xgboost/catboost?\n \nreply",
+      "Yes it actually is but the limitations of rows and features could be a hindrance.\n \nreply",
+      "Benchmark of tabpfn<2 compared to xgboost, lightgbm, and catboost: https://x.com/FrankRHutter/status/1583410845307977733 .. https://news.ycombinator.com/item?id=33486914\n \nreply",
+      "I tried this on a few CARTE datasets and it works surprisingly better!! Woahhh\n \nreply",
+      "looks amazing - finally, DL that beats a tuned catboost?\n \nreply",
+      "It's probably the same model with the same limitations, released nearly two years ago?https://arxiv.org/abs/2207.01848\n \nreply",
+      "There have been a ton of improvements! Much better performance overall, way larger data size limit (1K-->10K rows, 100-->500 features), regression support, native categorical data and missing values handling, much better support for uninformative or outlier features etc.\n \nreply"
+    ],
+    "link": "https://www.nature.com/articles/s41586-024-08328-6/link",
+    "first_paragraph": "Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain\n            the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in\n            Internet Explorer). In the meantime, to ensure continued support, we are displaying the site without styles\n            and JavaScript.Advertisement\nNature\nvolume\u00a0637,\u00a0pages 319\u2013326 (2025)Cite this article\n151 AltmetricMetrics detailsTabular data, spreadsheets organized in rows and columns, are ubiquitous across scientific fields, from biomedicine to particle physics to economics and climate science1,2. The fundamental prediction task of filling in missing values of a label column based on the rest of the columns is essential for various applications as diverse as biomedical risk models, drug discovery and materials science. Although deep learning has revolutionized learning from raw data and led to numerous high-profile success stories3,4,5, gradient-boos"
+  },
+  {
+    "title": "David Lodge, British novelist who satirized academic life, has died (nytimes.com)",
+    "points": 48,
+    "submitter": "lermontov",
+    "submit_time": "2025-01-07T19:42:24 1736278944",
+    "num_comments": 9,
+    "comments_url": "https://news.ycombinator.com/item?id=42626488",
+    "comments": [
+      "https://archive.today/cLcWHhttps://en.wikipedia.org/wiki/David_Lodge_(author)",
+      "As a younger me, I dug out his e-mail address for a high school project and sent him a message with questions about Changing Places.I still have the message I sent him in 2000 but can't find his reply, unfortunately, but I got to send two additional messages with questions. I was thrilled at the time to be able to contact a famous writer and tell my class afterwards about it.RIP.\n \nreply",
+      "I first encountered his novel \"Small World\" in graduate school, and immediately became a fan. (It was on the reading list for one of my girlfriend's courses.) Along with other novels like \"Lucky Jim\" and \"Straight Man\" (and the other two novels in Lodge's campus trilogy), it was a hilarious look at campus life. He will be missed.\n \nreply",
+      "His Campus trilogy is and probably will be forever in the list of books that I recommend reading [1]. I really enjoyed reading those a lot during my PhD.[1] https://pablo.rauzy.name/miscellaneous.html#books\n \nreply",
+      "\"Nice work\" was adapted for TV by the BBC in 1989 with Hayden Gwynne and Warren Clark beautifully cast in the leading roles.\n \nreply",
+      "I enjoyed the name Euphoria State University for his fictional model of UC Berkeley.To combine this news with the AI zeitgeist, consider reading his 2001 novel, Thinks\u2026.\n \nreply",
+      "Yes, and the nice touch of situating Euphoria State University in the city of Plotinus.\n \nreply",
+      "In this vein of work, I also heartily recommend Kingsley Amis' \"Lucky Jim\" (1954), which arguably began the \"campus novel\" genre.\n \nreply",
+      "Yes! Also Richard Russo's \"Straight Man\", which might be my favorite of all these novels about campus life.\n \nreply"
+    ],
+    "link": "https://www.nytimes.com/2025/01/03/books/david-lodge-dead.html",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Relax while watching bouncing particles making connections when they get closer (tiki.li)",
+    "points": 153,
+    "submitter": "tikili",
+    "submit_time": "2025-01-06T16:27:20 1736180840",
+    "num_comments": 53,
+    "comments_url": "https://news.ycombinator.com/item?id=42611919",
+    "comments": [
+      "Hello author here. I'm a little surprised to see this on the front page of Hacker News. This is just a simple demo for my educational programming language Easylang. You can easily edit the code and increase the particle count for example. In the IDE you can then create a link with the code embedded in the URL.https://tiki.li/run/#cod=dVLNbsIwDL7nKT5p0gRDdEGMA9PYM+yO0FT...\n \nreply",
+      "https://easylang.online\n \nreply",
+      "Well, that looks suspiciously like caustics in and around a swimming pool on a sunny day.\n \nreply",
+      "How hard would it be to push this into 3 dimensions instead of 2? It made me think of a starting point for a model of the universe and galaxy interactions.\n \nreply",
+      "I'd like to share mine as well. There's a bit of more interaction between particles but I don't remember the exact logic. Code should be easy to read:\n https://kaeruct.github.io/projects/short-experiments/dots/\n \nreply",
+      "I like how some of the particles get thrown out of the cluster on wider elliptical orbits, they look like comets.\n \nreply",
+      "Agglomerative clustering\n \nreply",
+      "I like this.\n \nreply",
+      "[flagged]",
+      "You alright there, buddy? I think some grass touching might be in order.\n \nreply"
+    ],
+    "link": "https://tiki.li/apps/particles.html?v=2501a",
+    "first_paragraph": "\n\n\n\n"
+  },
+  {
+    "title": "Writing as Transformation (newyorker.com)",
+    "points": 103,
+    "submitter": "lermontov",
+    "submit_time": "2025-01-05T06:15:14 1736057714",
+    "num_comments": 30,
+    "comments_url": "https://news.ycombinator.com/item?id=42600111",
+    "comments": [
+      "I find the process of writing standup comedy to be the purest form of writing and public speaking. There is a constant effort to adjust words around in order to get that extra laugh. How you write something has direct effect on how the joke is told. Specially sensitive subjects. If you ever want to expand your writing skills I suggest learning how to write a standup joke. It works really well. More so if you have a sense of humor.\n \nreply",
+      "There is always an origin to writing something (or aptly, a citation.)\"I cannot remember the books I\u2019ve read any more than the meals I have eaten; even so, they have made me.\"- Ralph Waldo Emerson\n \nreply",
+      "I get it but really, we eat food to retain its nutrients while we read books to retain knowledge(sometimes).\n \nreply",
+      "Do we? As examined in The Little Prince, people can get nutritions from pills and powders, factually humanity has made a culture out of food, much more than just getting nutritious\n \nreply",
+      "Thank God, i have company.\nI used to think I had early onset dementia.\n \nreply",
+      "> It seems to me that I have wanted to write for the whole of my life. The intensity of this insistence, despite its implausibility, suggests an emotional, rather than literal, accuracy. I think my life didn\u2019t seem my life until I startedYou\u2019ve read your last free article. Subscribe now to keep reading. If you're already a subscriber, sign in.What a terrible article. Honestly - I'm glad I won't be able to read another\n \nreply",
+      "> More and more, the sentences I had in my head were like the sentences I loved in books: they began in one place and ended somewhere you hadn\u2019t imagined them going, though, at each turn, idea seemed to follow idea perfectly naturally. The surprise at the end, as the thought completed itself, seemed wildly exciting: the whole sentence needed to be re\u00ebxperienced in this light; waves of unexpected revelations and insights resulted.Verlyn Klinkenborg, author of Several Short Sentences About Writing, calls these \u201cvolunteer sentences.\u201d You don\u2019t follow them, you tame them. Take control of your writing.\n \nreply",
+      "Love it. I also really enjoyed the book \"First You Write a Sentence\" by Joe Moranhttps://www.penguinrandomhouse.com/books/607260/first-you-wr...\n \nreply",
+      "Thanks for sharing. That was my favorite piece of reading in a while.\n \nreply",
+      "This is a common experience for writers, the sense of sentences appearing or almost completing themselves...it just occurred to me that reminds me of something that is asserted by Julian Jaynes in his controversial \"The Origin of Consciousness in the Breakdown of the Bicameral Mind.\" He claims that prior to the Bronze Age, human beings did not recognize their thoughts as belonging or originating with themselves; instead, they perceived thoughts as emanating externally, from Gods. I have no idea if there are merits to Jaynes theory, but it's fun to consider if the writer's inner voice, this sense of automaticity while writing, might recruit the same mechanisms of which Jaynes is speaking.\n \nreply"
+    ],
+    "link": "https://www.newyorker.com/culture/the-weekend-essay/writing-as-transformation-louise-gluck",
+    "first_paragraph": "It seems to me that I have wanted to write for the whole of my life. The intensity of this insistence, despite its implausibility, suggests an emotional, rather than literal, accuracy. I think my life didn\u2019t seem my life until I started to write.I came from a family of talkers. But talk, in my house, was not conversation. Talk was holding forth. Prevailing. Having the last word. Only one person could do it at a time, which meant that there was constant barging in and interruption, as impatience to speak grew more feverish and more relentless. Everybody wanted to talk. Nobody wanted to listen. In this, I was exactly like my mother and my father and my sister, though we had, each of us, a distinctive style.More and more, the sentences I had in my head were like the sentences I loved in books: they began in one place and ended somewhere you hadn\u2019t imagined them going, though, at each turn, idea seemed to follow idea perfectly naturally. The surprise at the end, as the thought completed it"
+  },
+  {
+    "title": "Ask HN: How do you backup your Android?",
+    "points": 52,
+    "submitter": "Openai2",
+    "submit_time": "2025-01-09T18:43:07 1736448187",
+    "num_comments": 68,
+    "comments_url": "https://news.ycombinator.com/item?id=42648597",
+    "comments": [
+      "The only data I care about on the phone already gets backed up by Google and is then exported regularly via Google Takeout.  I don't live on my phone so I tend not to generate much of any value on it other than random pictures of things.Prior to Google automatically backing up everything, I used Titanium Backup.\n \nreply",
+      "My device is rooted and I use NeoBackup to backup apps with all their data (including what the app developer marked as \"should not be backed up\", often data that they would like you to backup on their own cloud instead).Syncthing synchronises these backups to my home server automatically, as well as the phone's user data (photos, mainly).The photos are additionally sent to Photoprism.I avoid Google's cloud as much as I can.\n \nreply",
+      "My device is not rooted, but I use Syncthing as well. I mainly sync my photos and my TOTP tokens (Aegis). The rest I don't care about.I used Nextcloud sync in the past, but found it unreliable.\n \nreply",
+      "Synchthing on Android is End of life, alas https://forum.syncthing.net/t/discontinuing-syncthing-androi...\n \nreply",
+      "Yes, very sad.Two alternatives exist:1. Syncthing-Fork (https://github.com/Catfriend1/syncthing-android) - Works just like the official app. Install from F-Droid or GitHub. Single developer but active.2. Syncthing in Termux - Run the actual Syncthing program in Termux. Takes more setup but uses the standard version.The fork is easier to use, while Termux needs more setup but gives you the standard Syncthing experience.\n \nreply",
+      "Are there any issues or tricks for syncthing in termux, for e.g. always running in the background?",
+      "> I used Nextcloud sync in the past, but found it unreliable.What was wrong about nextcloud sync? I'm just about to set it up for myself.\n \nreply",
+      "The sync would stall and I'd have to go retry, or it would fail with no error clear message. In the end, I had no idea what had really synched correctly. The app was unhappy if I deleted a photo too quickly.With Syncthing, I sync to a directory that my Nextcloud user can access (a read-only mount), so I can still easily share photos using Nextcloud, for example.(although it's unfortunate that the Android syncthing app is being retired. h/t for the heads up and the recommended alternatives)\n \nreply",
+      "Would you trust a restore of those \u201cdo not back up\u201d data you have a copy of? Or is this for inspection only?\n \nreply",
+      "I just restored my backups a few weeks ago when I bought a new phone. It doesn't work for all apps (I knew it, it's far from the first time I do that) but I am satisfied with the results.It does help sometimes for retrieving some data manually by digging through the backup files (used it recently for retrieving all invoices from a service that were otherwise only available one by one through a painfully complicated process).\n \nreply"
+    ],
+    "link": "item?id=42648597",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Perpetual Movement: Francis Picabia's 391 Review (1917\u20131924) (publicdomainreview.org)",
+    "points": 18,
+    "submitter": "prismatic",
+    "submit_time": "2025-01-09T19:28:56 1736450936",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://publicdomainreview.org/collection/francis-picabia-391-review/",
+    "first_paragraph": "Search The Public Domain Review391, ed. Francis Picabia, vol. 1\u201319 (1917\u20131924).Francis Picabia, like his close friend and collaborator Marcel Duchamp, was a man of many names. While Duchamp famously went by his feminine alter ego Rrose S\u00e9lavy and signed his 1917 Fountain with the pseudonym R. Mutt, Picabia adopted numerous aliases across his literary and artistic practice. When he wasn\u2019t Pharamousse, he was Funny Guy. Picabia le Loustic (Picabia, the Prankster) in his lighter moments, and Francis le Rat\u00e9 (Francis the Failure) in his lower ones. Why have one name when he could have several? And what\u2019s in a name, if not a straitjacket, a rigid signifier assigned at birth, signalling the bearer\u2019s initiation into the tyrannical regime of language?Picabia\u2019s capricious approach to proper nouns extended to the many \u201c-isms\u201d that characterised the period in which he worked: no sooner had he hoisted the banner of one movement, than he had cast it off altogether, wriggling free before what we mig"
+  },
+  {
     "title": "NeuralSVG: An Implicit Representation for Text-to-Vector Generation (sagipolaczek.github.io)",
-    "points": 347,
+    "points": 718,
     "submitter": "lnyan",
     "submit_time": "2025-01-08T18:16:37 1736360197",
-    "num_comments": 38,
+    "num_comments": 68,
     "comments_url": "https://news.ycombinator.com/item?id=42636873",
     "comments": [
       "This is excellent!I think the utility of generating vectors is far, far greater than all the raster generation that's been a big focus thus far (DALL-E, Midjourney, etc). Those efforts have been incredibly impressive, of course, but raster outputs are so much more difficult to work with. You're forced to \"upscale\" or \"inpaint\" the rasters using subsequent generative AI calls to actually iterate towards something useful.By contrast, generated vectors are inherently scalable and easy to edit. These outputs in particular seem to be low-complexity, with each shape composed of as few points as possible. This is a boon for \"human-in-the-loop\" editing experiences.When it comes to generative visuals, creating simplified representations is much harder (and, IMO, more valuable) than creating highly intricate, messy representations.\n \nreply",
       "Have you looked at https://www.recraft.ai/ recently? The image quality of their vector outputs seems to have gotten quite good, although you obviously still wouldn't want to try to generate densely textured or photographic-like images like Midjourney excels at. (For https://gwern.net/dropcap last year or before, we had to settle for Midjourney and create a somewhat convoluted workflow through Recraft; but if I were making dropcaps now, I think the latest Recraft model would probably suffice.)\n \nreply",
+      "Link to their vector page, since the main page makes them look like yet another AI image generator:https://www.recraft.ai/ai-image-vectorizerThe quality does look quite amazing at first glance. How are the vectors to work with? Can you just open them in illustrator and start editing?\n \nreply",
+      "No, I actually was referring to their native vector AI image generator, not their vectorizer - although the vectorizer was better than any other we found, and that's why we were using it to convert the Midjourney PNG dropcaps into SVGs(The editing quality of the vectorized ones were not great, but it is hard to see how they could be good given their raster-style appearance. I can't speak to the editing quality of the native-generated ones, either in the old obsolete Recraft  models or the newer ones, because the old ones were too ugly to want to use, and I haven't done much with the new one yet.)\n \nreply",
+      "I was under the impression that their AI Vector generator generates a PNG and vectorizes under the hood.\n \nreply",
       "There is also the possibility for using these images as guidance for rasterization models.  Generate easily manipulatable and composible images as a first stage then add detail once the image composition is satisfactory.\n \nreply",
-      "My little project for the highly intricate, messy representation ;) https://github.com/KodeMunkie/shapesnap (it stands on the backs of giants, original was not mine). It's also available on npm.\n \nreply",
-      "Ah, we should be friends!I'm not sure what else to add, except that these are exactly the thoughts I think, and it used to feel lonely ;)\n \nreply",
-      "I am a huge fan of this type of incremental generative approach. Language isn\u2019t precise enough to describe a final product, so generating intermediate steps is very powerful.I\u2019d also like to see this in music generation. Tools like Suno are cool but I would much rather have something that generates MIDIs and instrument configurations instead.Maybe this is a good lesson for generative tools. It\u2019s possible to generate something that\u2019s a good starting point. But what people actually want is long tail, so including the capability of precision modification is the difference between a canned demo and a powerful tool.> Code coming soonThe examples are quite nice but I have no idea how reproducible they are.\n \nreply",
-      "I\u2019d also like to see this in music generation. Tools like Suno are cool but I would much rather have something that generates MIDIs and instrument configurations instead.Sounds like you're looking for something like https://www.aiva.ai\n \nreply",
-      "Honestly that site feels like they have a database of midis tagged by genre and pick them out randomly. It\u2019s totally different from their demo song.I guess I\u2019m hoping for something better. It\u2019s also closed source, the web ui doesn\u2019t have editing functionality, and the output is pretty disjointed. Maybe if I messed around with it enough the result would be decent.\n \nreply",
-      "MIDI isn't enough. I want MIDI + filters, plus separate voice and custom sounds tracks.\n \nreply",
-      "microtonal midi would be super awesome\n \nreply"
+      "Trivially possible with controlnets!\n \nreply",
+      "I couldn't agree more.  I feel that the block-coding and rasterized approaches that are ubiquitous in audio codecs (even the modern \"neural\" ones) are a dead-end for the fine-grained control that musicians will want.  They're just fine for text-to-music interfaces of course.I'm working on a sparse audio codec that's mostly focused on \"natural\" sounds at the moment, and uses some (very roughly) physics-based assumptions to promote a sparse representation.https://blog.cochlea.xyz/sparse-interpretable-audio-codec-pa...\n \nreply",
+      "itneresting. I'm approaching music generation from another perspective:https://github.com/chaosprint/RaveForceRaveForce - An OpenAI Gym style toolkit for music generation experiments.\n \nreply",
+      "I always imagine how useful Sora.ai could be if it would generate 3D models to render their animations from instead\n \nreply"
     ],
     "link": "https://sagipolaczek.github.io/NeuralSVG/",
     "first_paragraph": "\r\n                            Vector graphics are essential in design, providing artists with a versatile medium for creating resolution-independent\r\n                             and highly editable visual content. Recent advancements in vision-language and diffusion models have fueled interest \r\n                             in text-to-vector graphics generation. However, existing approaches often suffer from over-parameterized outputs or \r\n                             treat the layered structure --- a core feature of vector graphics --- as a secondary goal, diminishing their practical \r\n                             use. Recognizing the importance of layered SVG representations, we propose NeuralSVG, an implicit neural representation\r\n                              for generating vector graphics from text prompts. Inspired by Neural Radiance Fields (NeRFs), NeuralSVG encodes the \r\n                              entire scene into the weights of a small MLP network, optimized using Score D"
   },
   {
-    "title": "A Supermarket in California (1955) (poetryfoundation.org)",
-    "points": 24,
-    "submitter": "squircle",
-    "submit_time": "2025-01-08T23:29:06 1736378946",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=42639691",
+    "title": "MixRank (YC S11) Is Hiring Software Engineers Globally",
+    "points": 0,
+    "submitter": "",
+    "submit_time": "2025-01-09T17:15:11 1736442911",
+    "num_comments": 0,
+    "comments_url": "",
     "comments": [
-      "Apparently Mr Ginsberg was a friend to young men. And not in a good way:https://chroniclesmagazine.org/web/allen-ginsberg-pedophilia...\n \nreply",
-      "Wonderful. And another Ginsberg Berkeley poem, maybe my favorite:https://www.poetryfoundation.org/poems/49304/sunflower-sutra\n \nreply",
-      "Nice. I was vibing to this poem you shared earlier:\nhttps://news.ycombinator.com/item?id=42639593(I'm not familiar with Carl Sandburg and appreciate the introduction.)\n \nreply",
-      "Go Bears\n \nreply"
+      "xxx"
     ],
-    "link": "https://www.poetryfoundation.org/poems/47660/a-supermarket-in-california",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Salesforce will hire no more software engineers in 2025, says Marc Benioff (salesforceben.com)",
-    "points": 162,
-    "submitter": "lordswork",
-    "submit_time": "2025-01-08T22:56:27 1736376987",
-    "num_comments": 166,
-    "comments_url": "https://news.ycombinator.com/item?id=42639417",
-    "comments": [
-      "Current SFDC software engineer - this is just cover for a widespread engineering hiring freeze since the layoffs in January 2023. There's a ton of pressure to control costs after the near shareholder revolt that caused the layoffs.The public nature of the announcement is certainly marketing for our AI offerings as well, but at this point I think most engineers are just worried there will be additional layoffs, in the event management cannibalizes product for short term stock gains again.\n \nreply",
-      "Ah, the toxic env, I'm too familiar with it. Quarterly layoffs, perks gone, more RTO, but execs can still travel around lavishly.\n \nreply",
-      "Thanks for sharing some inside baseball.This definitely reads more like a \u201ceverything is going AWESOME ignore anything else you hear about us\u201d PR-ese.I read this as messaging to shareholders more than anyone else (and sure some word-spreading about the product).\n \nreply",
-      "2$ per interactions (negotiable to 1$) btw\n \nreply",
-      "I really don't care generally if a business feels the need to hype things like this - but these kinds of announcements have downstream effects on salaries and job availability far outside a company like this. Other management/C-suites are gonna hear \"we replaced all our engineers with AI!\" and similarly slow down hiring/etc. This is already being seen throughout the industry, I am aware, but such a visible player making an announcement like this, while it almost certainly is just marketing, drives me a little crazy because it indirectly affects a lot of people.\n \nreply",
-      "Well to the extent that this happens (I agree it probably has this effect) that would benefit them anyway and I suspect they know about it.\n \nreply",
-      "Sure, but it's either true or it's not.  If they fall for the hype, the company will pay the price for it eventually.(And it's not true - if you could \"replace engineers with AI\" we engineers would have already done it and be relaxing while AI does our work)\n \nreply",
-      "There is no company-wide hiring freeze, but there\u2019s teams/products/etc\u2026 who have them.There\u2019s other things going on though this will help spin.There\u2019s no way that productivity metric includes the last 2-4 months.\n \nreply",
-      "Looks like it. The only other explanation is they just stopped investing in other products and focused on Agents, thus no need for loads more of engineering.No way in the world they got 30% gains. 5 maybe realistically\n \nreply",
-      "Their ultimate agent product strategy feels like reducing cost of sales... by automating salespeople.I have doubts that will ever happen, but who knows?Sales folks are highly-compensated, so even making a few of them redundant (or making existing salespeople more efficient) would be a big win for companies (Salesforce's customers).\n \nreply"
-    ],
-    "link": "https://www.salesforceben.com/salesforce-will-hire-no-more-software-engineers-in-2025-says-marc-benioff/",
+    "link": "item?id=42647695",
     "first_paragraph": ""
   },
   {
     "title": "Cracking a 512-bit DKIM key for less than $8 in the cloud (dmarcchecker.app)",
-    "points": 570,
+    "points": 765,
     "submitter": "awulf",
     "submit_time": "2025-01-08T12:32:34 1736339554",
-    "num_comments": 295,
+    "num_comments": 368,
     "comments_url": "https://news.ycombinator.com/item?id=42633501",
     "comments": [
       "Me writing over 14 years ago: https://blog.jgc.org/2010/06/facebooks-dkim-rsa-key-should-b... This was doable 14 years ago for 512-bit keys.\n \nreply",
@@ -76,315 +400,9 @@
       "Counter-example example: I've been an expert witness in court to prove an email was a forgery; using DKIM.\n \nreply",
       "It'd be funny if we were working together and just telling the same story behind our aliases.\n \nreply",
       "My case was a family court dispute where one parent forged an email from the other parent about the child's care. It was a pretty wild case. After that, I was pretty convinced some people are just evil.\n \nreply",
-      "That would be a counter-counterexample, wouldn't it?\n \nreply"
+      "Yea, stuff with kids involved sometimes makes it SUPER unambiguous.  Some people are very clearly willing to do anything to anyone, and are doing so as much as possible.\n \nreply"
     ],
     "link": "https://dmarcchecker.app/articles/crack-512-bit-dkim-rsa-key",
     "first_paragraph": "In our study on the SPF, DKIM, and DMARC records of the top 1M websites, we were surprised to uncover more than 1,700 public DKIM keys that were shorter than 1,024 bits in length. This finding was unexpected, as RSA keys shorter than 1,024 bits are considered insecure, and their use in DKIM has been deprecated since the introduction of RFC 8301 in 2018.Driven by curiosity, we decided to explore whether we could crack one of these keys. Our goal was to extract the private key from a public RSA key, enabling us to sign emails as if we were the original sender. We were also curious to see whether emails signed with this compromised key would pass the DKIM verification checks of major email providers like Gmail, Outlook.com, and Yahoo Mail, or if they would outright refuse to verify a signature generated with such a short key.For our experiment, we chose redfin.com after discovering a 512-bit RSA public key at key1._domainkey.redfin.com (now no longer available):The public key, located in "
-  },
-  {
-    "title": "You don't have to pay the Microsoft 365 price increase (consumer.org.nz)",
-    "points": 11,
-    "submitter": "lancewiggs",
-    "submit_time": "2025-01-09T00:25:39 1736382339",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.consumer.org.nz/articles/you-don-t-have-to-pay-the-microsoft-365-price-increase",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Show HN: Atlas of Space (atlasof.space)",
-    "points": 347,
-    "submitter": "pieix",
-    "submit_time": "2025-01-08T14:47:34 1736347654",
-    "num_comments": 84,
-    "comments_url": "https://news.ycombinator.com/item?id=42634787",
-    "comments": [
-      "This is incredibly well done. Thank you!Love that it works so seamlessly on mobile. I clicked on it expecting it to be almost impossible to useInstead, I was able to easily navigate everything without getting lostAlso, the speeding up/down controls are excellent, very useful\n \nreply",
-      "Well done! I could spend a long time on this.One minor suggestion: you should make the labels clickable instead of just the planets/stars. I found it difficult to click on a tiny pixel on screen.\n \nreply",
-      "... also the orbits themselves ideally? Maybe I missed it but in looking at some of the larger orbits it was hard to zoom in and out to figure out what orbit went with what. It would have been nice to more easily click on the orbit.I really like it though.\n \nreply",
-      "After 90s of playing I came back to add the same comment :)\n \nreply",
-      "The project is amazing, thanks and congrats.A bit of an off-topic comment, I can't cease to be amazed by the quality of HTML apps we can build these days. I remember the days when rendering too many rows on a table could completely break the browser.\n \nreply",
-      "Thank you and not off topic at all, I was thinking this the whole time I was working on this project. The modern browser is magic.\n \nreply",
-      "This is very nice. I didn't know Pluto's orbit was more inclined than many of the others.It also gives me strong \"The Expanse\" vibes. Probably because there are so many orbital bodies shown that were mentioned in those books. I also learned that Pallas is an actual asteroid.\n \nreply",
-      "Appreciate the comment! The Expanse and Paul McAuley's Quiet War series both get a lot of inspiration credit for this project. I tried to include every body that has some \"brand recognition\", whether from fiction or from real spacecraft missions. There are actually quite a few asteroids and comets that have been visited in real life \u2014 NASA, ESA, and JAXA have been doing amazing things in the Asteroid Belt over the past few decades.\n \nreply",
-      "Where is the ring gate?\n \nreply",
-      "It doesn't seem it is showing the tilt for Earth correct. When I zoom in for around now, the North Pole is in full sun rather than mid Winter. (I'm in Australia so I don't know if it is somehow using my local timezone wrongly)\n \nreply"
-    ],
-    "link": "https://atlasof.space/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "I had to take down my course-swapping site or be expelled (linkedin.com)",
-    "points": 324,
-    "submitter": "jdkaim",
-    "submit_time": "2025-01-08T21:27:12 1736371632",
-    "num_comments": 170,
-    "comments_url": "https://news.ycombinator.com/item?id=42638626",
-    "comments": [
-      "Update: I immediately took down my class project site after receiving yesterday\u2019s ultimatum. I still don\u2019t think the simple demo site violated the letter or spirit of the registration rules, but I took it down because I always want to operate in good faith.They followed up today to thank me for doing it, but also indicated that they were putting a hold on my account anyway. As a result, I am not going to be able to register for my final quarter and have been de facto expelled at the end of this quarter.Unless, that is, I agree to work on a comparable solution for the university focused on solving the underlying problem I was building HuskySwap for. They would presumably own the IP and were clear that I wouldn\u2019t be compensated. But it was implied that they would then remove the hold, allowing me to graduate.I really love UW and have had a wonderful time here. But this is so demoralizing.Update #2:I appreciate you guys for all of your advice.This platform was never intended to be monetized, and I am not planning to get a lawyer involved as I have faith that UW leadership will make it right in the end.I'm not planning to pursue this project at this point. If they came up to me at first with the offer to work with them it might be different, but the way they handled it makes me just want to walk away.\n \nreply",
-      "> I am not planning to get a lawyer involved as I have faith that UW leadership will make it right in the end.All evidence so far indicates they will not make it right, but instead they may make it even worse. Your faith is wildly misplaced. Seriously, talk to a lawyer.Keep in mind, just because you seek advice from a lawyer doesn't mean you need to take legal action against the school. Talking to a lawyer is not an escalation; the school doesn't even need to know you consulted one. A lawyer will advise whether you should take legal action and any more amicable alternatives available before they do anything on your behalf.\n \nreply",
-      "Just piling on here because upvotes are not visible. The one thing you can guarantee is that your good faith is not reciprocated by the university. Get a lawyer.To make it easier: it sounds like you're still registered. University of Washington offers Student Legal Services ( https://depts.washington.edu/slsuw/ ). Set up a referral with one of them and talk to them. Even if they're employees of the university and don't want to work with you to sue the university itself they may be able to give you good advice about how to proceed.\n \nreply",
-      "It\u2019s a funny thought, but looks like a nonstarter:> SLS cannot represent a student when the opposing party is another UW-Seattle, Tacoma, or Bothell student or UW entity.\n \nreply",
-      "OP please consider listening to this reply. Do not rely on an unaccountable bureaucracy to \"do the right thing.\" They don't.\n \nreply",
-      "At least he'll learn this valuable lesson pretty young. It was fairly devastating to me by the time I learned it well into my 30's.\n \nreply",
-      "Having seen what some other university administrations have done to darling students and innovators even just around such things as lab space, parent comment is right on the money.\n \nreply",
-      "If you had managed to build this system during my time at UW, I know for a fact that I and dozens of other students would have happily paid hundreds of dollars to use your project. The class and reservation system there was (and presumably is?) incredibly broken.I remember literally the only way to get a spot reserved in some /mandatory/ courses was to find an upper classman with prioritized registration dates and a free schedule to hold the class for you. In you're in a frat, great. If you're a bit of an introvert that lives off campus, you're shit out of luck.I imagine UW is fully aware of this, I cant believe that it's still so much an issue that they felt the jeed to expell you for even having the gall to demo an idea. Absolutely appalling\n \nreply",
-      "You may want to consult with a lawyer. This is starting to sound like extortion.\n \nreply",
-      "100% this. You'd be surprised what kinds of problems go away when you mention your lawyer casually or you have a lawyer send a letter. Even if you don't get the right kind of lawyer right away, they might be able to recommend someone or tell you how to research the right kind of lawyer to get ahold of. Professionals are usually helpful about those kinds of things.Also get a second or third opinion. I've sometimes gotten different answers from different lawyers about our prospects of success on things we've called about.\n \nreply"
-    ],
-    "link": "https://www.linkedin.com/posts/jdkaim_github-jdkaimhuskyswap-huskyswap-project-activity-7282609173316415488-1jdb",
-    "first_paragraph": "\n              Agree & Join LinkedIn\n            \n      By clicking Continue to join or sign in, you agree to LinkedIn\u201a\u00c4\u00f4s User Agreement, Privacy Policy, and Cookie Policy.\n    \n                CS @ UW | Prev @ GitHub\n            Welp, looks I might be getting expelled from the University of Washington.\n\u00ac\u2020\nAs many of you know, last quarter I built an initial version of HuskySwap for a class project. It was a simple app designed to help students find partners to trade spots in critical classes after they filled up. I\u201a\u00c4\u00f4m sure other people have pursued this kind of thing before, but there\u201a\u00c4\u00f4s no go-to solution at UW and I wanted to contribute something cool for everyone.\n\u00ac\u2020\nAt first it was a fun project to catch up to the latest versions of .NET and Angular with some practice implementing features around database abstraction, real-time chat, and the full stack challenges associated with things like role-based permissions. I was probably going to build it anyway, so it was great that I c"
-  },
-  {
-    "title": "Fidget (mattkeeter.com)",
-    "points": 355,
-    "submitter": "todsacerdoti",
-    "submit_time": "2025-01-08T14:30:58 1736346658",
-    "num_comments": 41,
-    "comments_url": "https://news.ycombinator.com/item?id=42634624",
-    "comments": [
-      "Hi, this is my project :)I particularly love this corner of CS because there's something for everyone \u2013 data structures and algorithms, low-level performance work, compilers, rendering / computer graphics, UI/UX for design tools, GPGPU programming, and more!I'll be answering questions in the threads as I see them, but feel free to connect on social media (https://mattkeeter.com/links/) or follow my blog's RSS feed for further updates (https://mattkeeter.com/atom.xml)\n \nreply",
-      "Hi Matt,\nSince you're here I have a quick question. I did not do my homework so please excuse if that's too general or stupid.How does Fidget differ from libfive and Ao, functionality wise?Thanks in advance.\n \nreply",
-      "Here's a quick list, off the top of my head:\"Ao\" was an early codename for libfive, so those are the same thing (at different stages of development).Fidget is written in Rust, versus C/C++ for libfive.  This makes it easier to use as a dependency (in Rust projects) and cross-compile to WebAssembly.  Also, I don't have to debug segfaults anymore, except when touching the raw assembly in the JIT.They both implement a similar set of algorithms (meshing, 2D and 3D rasterization).Fidget has the potential to be faster due to its JIT, and is faster for 2D / 3D rasterization.  (I suspect that the non-JIT interpreter is also faster at rasterization, for architectural reasons)libfive has more effort put into its meshing algorithms, so it does a better job of handling edge cases (heh).  I've heard reports that libfive is faster than Fidget at meshing, but haven't done much investigation.Fidget is not limited to 2D and 3D functions: it can be used wherever you want to quickly evaluation graphs of math, with arbitrary numbers of inputs and outputs.  libfive, on the other hand, is specialized to functions of the form f(x, y, z, *vars) -> v.Extremely in the weeds: if you know what libfive's \"feature\"-flavored evaluator is, Fidget doesn't have it.\n \nreply",
-      "Neat!  I remember contributing the expression parser code for the Knoll et. al 2009 work that you cited in your SIGGRAPH paper.  That just rewrote a single user-friendly expression into nested function calls to our IA library in GLSL, without any sort of optimization.You've clearly taken things waaay farther.  Nicely done.\n \nreply",
-      "Coincidentally I was just reading this other wonderful post from the author https://www.mattkeeter.com/projects/constraints/\n \nreply",
-      "Hah, I actually wrote a similar constrain solver that uses Fidget's evaluation + differentiation!  This blog post was getting too long, so I'm going to write it up separately, but in the meantime:demo:\nhttps://mattkeeter.com/projects/fidget/constraintssource: https://github.com/mkeeter/fidget/blob/main/demos/constraint...docs on the solver: https://docs.rs/fidget/latest/fidget/solver/\n \nreply",
-      "You might be interested in http://omrelli.ug/g9/gallery/ too\n \nreply",
-      "Oh wow. This would have been incredibly useful to have found when I was writing my own implicit-surface drawer. My approach is similar in some ways (interval arithmetic), and different in others (not as optimized, I directly produce GLSL for a fragment shader).Honestly I'm tempted to just toss everything away and replace it with (a reimplementation of) this. Dunno if I should be happy or sad about that.\n \nreply",
-      "Happy! You work in a field where you can both make your own tools and use tools others have created. Maybe you can steal some of his ideas and use them, or use his stuff and contribute to the project. either way, rad.\n \nreply",
-      "> libfive is 40K lines of mostly C++, and is extremely challenging to hack on, even as the original author. It's also frustrating to touch: if it's been a few months since I last compiled it, it's inevitable that the build will have broken, and I'll have to mess with CMake for 10 minutes to unbreak it.I'm a bit shocked at this. Is build breakage that much of an issue? Is this \"we are merging in patches and then fixing them up later\"? Why would something not being touched break?\n \nreply"
-    ],
-    "link": "https://www.mattkeeter.com/projects/fidget/",
-    "first_paragraph": "Fidget is a library for representing,\ncompiling, and evaluating large-scale math expressions, i.e. hundreds or\nthousands of arithmetic clauses.  It's mainly designed as a backend for\nimplicit surfaces, but the\nlibrary is flexible enough for many different uses!\nTry the demo\nImplicit surfaces are expressions of the form\n$f(x, y, z) \\rightarrow d$\nreturning a single distance value $d$.\nIf that value is positive, then the point $(x, y, z)$ is outside the model;\nif it's negative, then the point is inside the model.For example, a sphere of radius 1 can be expressed\nas$$ f(x, y, z) = \\sqrt{x^2 + y^2 + z^2} - 1 $$By evaluating the expression at many points in space and checking its sign, we\ncan render this function into an image.  In this example, we'll render a\nheightmap, where filled-in voxels are colored based on their distance to the\ncamera:Fidget focuses on closed-form implicit surfaces, which build their\nexpressions out of basic arithmetic operations. This is in contrast with more\nflexi"
-  },
-  {
-    "title": "Operating System in 1,000 Lines \u2013 Intro (operating-system-in-1000-lines.vercel.ap...)",
-    "points": 760,
-    "submitter": "ingve",
-    "submit_time": "2025-01-08T07:18:50 1736320730",
-    "num_comments": 84,
-    "comments_url": "https://news.ycombinator.com/item?id=42631873",
-    "comments": [
-      "Author here.I wrote this book so you can spend a boring weekend writing an operating system from scratch. You don\u2019t have to write it in C - you can use your favorite programming language, like Rust or Zig.I intentionally made it not UNIX-like and kept only the essential parts. Thinking about how the OS differs from Linux or Windows can also be fun. Designing an OS is like creating your own world\u2014you can make it however you like!BTW, you might notice some paragraphs feel machine-translated because, to some extent, they are. If you have some time to spare, please send me a PR. The content is written in plain Markdown [1].Hope you enjoy :)[1] https://github.com/nuta/operating-system-in-1000-lines/tree/...\n \nreply",
-      "> Designing an OS is like creating your own worldOr like building your temple so you can talk to God directly\n \nreply",
-      "TempleOS: https://en.m.wikipedia.org/wiki/TempleOS\n \nreply",
-      "Great resource, thanks for sharing.I thought the written text was very high quality and didn't show many of the usual tells of a non-native writer. Could you share some details of how you used AI tools to help write it?\n \nreply",
-      "Are you planning to also provide an English translation of your microkernel book? That sounds very interesting...\n \nreply",
-      "How does your book compare with the classic \"Operating systems design and implementation\" by Andrew S. Tanenbaum and Albert S. Woodhull implementing MINIX?\n \nreply",
-      "Hi OP, this looks super cool. I remember hearing about this (https://www.linuxfromscratch.org/) many years ago but have never done it.Curious, what are the prerequisites for this? Do I have to know about how kernels work? How memory management, protection rings or processes are queued? Some I'd like to definitely learn about.\n \nreply",
-      "LFS is about building a Linux distribution from scratch (i.e. using the Linux kernel.)The book in question is about how to build your own operating system (i.e. a non-Linux) kernel from scratch.> We'll implement basic context switching, paging, user mode, a command-line shell, a disk device driver, and file read/write operations in C. Sounds like a lot, however, it's only 1,000 lines of code!\n \nreply",
-      "Did you post to OSDev?\n \nreply",
-      "This is fantastic. Thank you so much for writing this.\n \nreply"
-    ],
-    "link": "https://operating-system-in-1000-lines.vercel.app/en",
-    "first_paragraph": "Hey there! In this book, we're going to build a small operating system from scratch, step by step.You might get intimidated when you hear OS or kernel development, the basic functions of an OS (especially the kernel) are surprisingly simple. Even Linux, which is often cited as a huge open-source software, was only 8,413 lines in version 0.01. Today's Linux kernel is overwhelmingly large, but it started with a tiny codebase, just like your hobby project.We'll implement basic context switching, paging, user mode, a command-line shell, a disk device driver, and file read/write operations in C. Sounds like a lot, however, it's only 1,000 lines of code!One thing you should remember is, it's not as easy as it sounds. The tricky part of creating your own OS is debugging. You can't do printf debugging until you implement it. You'll need to learn different debugging techniques and skills you've never needed in application development. Especially when starting \"from scratch\", you'll encounter ch"
-  },
-  {
-    "title": "Steve Langasek, One of Ubuntu Linux's Leading Lights, Has Died (thenewstack.io)",
-    "points": 73,
-    "submitter": "CrankyBear",
-    "submit_time": "2025-01-08T23:13:08 1736377988",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=42639563",
-    "comments": [
-      "45 years :(The article says illness, but which illness?\n \nreply",
-      "https://discourse.ubuntu.com/t/remembering-and-thanking-stev...\n \nreply",
-      "So young.. It's sad\n \nreply",
-      "Sad news. He did a lot for Debian and Ubuntu.\n \nreply"
-    ],
-    "link": "https://thenewstack.io/steve-langasek-one-of-ubuntu-linuxs-leading-lights-has-died/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Bringing SerenityOS to real hardware, one driver at a time (sdomi.pl)",
-    "points": 182,
-    "submitter": "LorenDB",
-    "submit_time": "2025-01-08T16:54:39 1736355279",
-    "num_comments": 59,
-    "comments_url": "https://news.ycombinator.com/item?id=42636086",
-    "comments": [
-      "Read somewhere that it is relatively easy to adapt NetBSD's drivers into a custom kernel... maybe Serenity folks can go that way? Device drivers are huge obstacle for any fledgling OS.\n \nreply",
-      "One of Serenity's philosophical decisions is that as much as possible they build everything themselves from scratch. So even if NetBSD's drivers would be easy to adapt and have a compatible license they probably wouldn't go that route and would instead write their own drivers.\n \nreply",
-      "> Device drivers are a huge obstacle for any fledgling OS.I've wondered if new/hobby OSes would fare better by starting out targeting a popular single board computer like a raspberry pi? A mostly fixed set of hardware to make/get drivers for and test your system on.\n \nreply",
-      "I think the path Serenity took is the better one. Initially targeting QEMU as the single supported platform. You have the same advantage as far as targeting a single platform for drivers but contributors don't need to buy additional hardware, can develop using the platform/tools they are accustomed to, starting instances is faster than rebooting hardware and no need to deal with the issues of remotely debugging. Targeting a specific SBC as a 2nd platform after a certain level of stability is reached is probably a good idea.\n \nreply",
-      "That implies AArch64 support which many hobby OSes don't have, usually because the introductory osdev material is written largely for x86.But yes, raspi is a good platform if you are targeting arm.As I'm also designing an OS, my biggest piece of advice for anyone seriously considering it is to target two archs at once, in parallel. Then adding a third becomes much easier.\n \nreply",
-      "Raspberry Pi has a bizarre boot sequence and bringup process, much of it which is not open and not implemented in open source code.  I think it's probably not a great platform for this sort of thing, despite it being decently well-documented.(And even then, its USB controller, for example, has no publicly-available datasheet.  If you want to write your own driver for it, you have to read the Linux driver source and adapt it for your needs.)\n \nreply",
-      "QEMU is a fixed set of hardware. And far easier to target than a Pi.The founder of SerenityOS created it as therapy and a pure \u201chappiness\u201d project. I am not sure actually using it was a real goal. So, he did the stuff he found interesting. That led him to writing display servers and web engines and crypto libraries and away from \u201creal\u201d drivers. He wrote his own C/C++ standard libraries and userland utilities but only enough driver code to make QEMU happy. It only ever ran in a VM on his Linux desktop. In the end, he found the web browser more interesting than the OS it was created for.Very different project from Linux where what Linus wanted was an OS for his own computer. Linus was happy to leave the userland to others and still sticks to the kernel even now.\n \nreply",
-      "I've also argued in favor of that; I don't actually like Pis personally, but they're a super common, cheap enough, easy to acquire system and that's huge.\n \nreply",
-      "Raspberry Pi's are highly proprietary for hardware blobs...\n \nreply",
-      "Well unless they want to target PowerPC and make interested parties buy a Raptor Talos workstation what else is open enough for you? (Actually I would support this) Are there RISCV systems that are blobless?\n \nreply"
-    ],
-    "link": "https://sdomi.pl/weblog/23-serenityos-realhw/",
-    "first_paragraph": "Many moons ago, around the time when Andreas formally resigned from being Serenity's BDFL, I decided that I want to get involved in the project more seriously. Looking at it from a perspective of \"what do I not like about this (codebase)\", the first thing that came to mind was that it runs HERE points at QEMU and not THERE points at real hardware. Obvious oversight, let's fix it.First thing I looked at was UEFI support, but there's an ongoing effort by spholz which I didn't want to hijack. For my purposes, kernel from the master branch successfully boots from GRUB running on a TianoCore UEFI runtime, so this is fine.Debugging the OS on the same machine as your main isn't fun, and I wanted to focus my efforts on porting it to something I'd actually want to daily drive - which limited me to recent-ish hardware. I went onto Allegro (polish online auction site) and searched for the cheapest Chromebook I could find. After discarding the literal cheapest option (due to it being a fire hazard"
-  },
-  {
-    "title": "28h Days: year 1 update (sidhion.com)",
-    "points": 6,
-    "submitter": "HAMSHAMA",
-    "submit_time": "2025-01-08T23:37:54 1736379474",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://sidhion.com/blog/28h_days_update_1/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Multiplicative Infinitesimals (github.com/ericson2314)",
-    "points": 50,
-    "submitter": "Ericson2314",
-    "submit_time": "2025-01-08T19:58:22 1736366302",
-    "num_comments": 24,
-    "comments_url": "https://news.ycombinator.com/item?id=42637853",
-    "comments": [
-      "I find infinitesimals more intuitive than the formal 'limits-based' approach. I'm currently studying my old degree material but using a fairly interesting book:\"Full Frontal Calculus: An Infinitesimal Approach\" by Seth Braver.I like his readable style. His poetic intro finally gave me an intuition why infinitesimals might be useful, compared to the good old reals:\"Yet, by developing a \"calculus of infinitesimals\" (as it was known for two centuries), mathematicians got great insight into `real` functions, breaking through the static algebraic ice shelf to reach a flowing world of motion below, changing and evolving in time.\"\n \nreply",
-      "If you are going to use infinitesimals, though, it requires some additional doing for notation.  The standard notation for higher-order derivatives (and partial derivatives) needs to be modified in order for them to work (but they do work great once you do this).Instead of the second derivative being \"d^2y/dx^2\" it is \"(d^2y/dx^2) - (dy/dx)(d^2x/dx^2)\" and the differentials can be manipulated just like any other entity.  Additionally, you can infer this notation by simply applying the quotient rule to the first derivative (which is a quotient of infinitesimals).See more:\"Extending the Algebraic Manipulability of Differentials\" ( 10.48550/arXiv.1801.09553 )\"Total and Partial Differentials as Algebraically Manipulable Entities\" ( \n10.48550/arXiv.2210.07958 )\n \nreply",
-      "It's a tradeoff. You can have excluded middle in your logic or infinitestimals in your extended reals. For mathematicians dealing with all the wild stuff coming out of studying infinities in the calculus, getting rid of excluded middle was a non-starter, so the system based on limits was created. If non-constructible proofs via contradiction aren't useful to you, as in physics, then you can certainly use infinitesimals.\n \nreply",
-      "That's interesting - I read something similar in Bell's 'A primer of infinitesimal analysis' where he said the price for 'Smooth World' infinitestimals is giving up the Law of Excluded Middle (LEM).Don't really understand why (he said something about unconstrained use of LEM allows discontinuous functions...)Is there any link to Brouwer's Intuitionism where LEM is rejected too (?!)Ah it's all an interesting can of worms...\n \nreply",
-      "https://ncatlab.org/nlab/show/real+numbers+object you can definitely have real numbers without the infinitesimals in constructive math, however.\n \nreply",
-      "Side comment: anyone interested in calculus via infinitesimals may also be interested in taking a look at Radically Elementary Probability Theory by Ed Nelson: https://web.math.princeton.edu/~nelson/books/rept.pdf\n \nreply",
-      "My recollection from real analysis was that I liked sequential continuity a lot (https://en.wikipedia.org/wiki/Continuous_function#Sequences_...).Sequences form a nice beginner-friendly monad (`bind` is the diagonal nth from nth), and lifting a real function over a real sequence is just `fmap`! (This is the same notion of sequence that https://clash-lang.org/ uses for sequential circuits, but it skips the monad because circuits are first order.)Convergent sequences are like ordered binary tree sets, they do also form a monad, but one in a sub-category: sequentially continuous functions are precisely those that are in the domain of the underlying functor! :)\n \nreply",
-      "Nice, I didn't know about this book. Did you try the Keisler book too, \"Elementary Calculus: An Infinitesimal Approach\"? See https://people.math.wisc.edu/~hkeisler/calc.html\n \nreply",
-      "Thanks for the tip...  it seems to mention Robinson's 'hyperreals' too...!\n \nreply",
-      "I'm generally a little skeptical about approaches that treat infinitesimals in a symbolic computation. The approach typically is to solve traditional analysis problems but throw in some infinitesimals and show that you can get the same answers. But if you approach infinitesimals from first principles I feel like you run into a lot of problems.For example it is almost always the case that you can remove higher order infinitesimals, like (dx)^2, when computing things like derivatives. But this always necessitates a step where you translate from infinitesimals to \"standard\" reals, and then continue on your merry way. We happily round away the higher-order terms when we compute something like ((x + dx)^3 - x^3) / dx, but if we're continuing to do infinitesimal math they may become relevant again. Call that function, f_1(x) = 3x^2 + 3xdx + dx^2; we'll typically just call this f_2(x) = 3x^2, but these functions are not equivalent if we then proceed to compute (f(x) - 3x^2) / dx, which, presumably, we can just do because we've admitted this horror of a syntax into our formal language.I'm very skeptical of this being useful outside of being able to reason about trivial limits for this reason.\n \nreply"
-    ],
-    "link": "https://github.com/Ericson2314/baccumulation/blob/main/math/multiplicative-infinitesimals.md",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          This goes with Geometric Calculus, but where as that is mostly summarizing others work, this is original as far as I know, and so I split it out.Despite their lack of formal rigor (in conventional analysis), infinitesimals are liked in some settings, like informally solving differential equations, and other applied tasks.\nThey are, \"additive\", in a few key ways:They are near 0, which is the additive identity, and \"not a multiplicative number\"They correspond to subtraction inside limits.They thus suffice for regular additive calculus, but not the geometric calculus linked above.For the first, the intuition for a regular infinitesimal is that is a very small number, smaller than any non-zero real number.\nIf we multiply a real number by an infinitesimal, we always get another infinitesimal, never a real number, just like when we multiply any re"
-  },
-  {
-    "title": "How many real numbers exist? New proof moves closer to an answer (2021) (quantamagazine.org)",
-    "points": 16,
-    "submitter": "lisper",
-    "submit_time": "2025-01-07T20:47:38 1736282858",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.quantamagazine.org/how-many-numbers-exist-infinity-proof-moves-math-closer-to-an-answer-20210715/",
-    "first_paragraph": "\nAn editorially independent publication supported by the Simons Foundation.\n\nGet the latest news delivered to your inbox.\nCreate a reading list by clicking the Read Later icon next to the articles you wish to save.Type search term(s) and press enterPopular\n                                    SearchesJuly 15, 2021There are an infinite number of infinities. Which one corresponds to the real numbers? Olena Shmahalo/Quanta MagazineSenior EditorJuly 15, 2021In October 2018, David Asper\u00f3 was on holiday in Italy, gazing out a car window as his girlfriend drove them to their bed-and-breakfast, when it came to him: the missing step of what\u2019s now a landmark new proof about the sizes of infinity. \u201cIt was this flash experience,\u201d he said.Asper\u00f3, a mathematician at the University of East Anglia in the United Kingdom, contacted the collaborator with whom he\u2019d long pursued the proof, Ralf Schindler of the University of M\u00fcnster in Germany, and described his insight. \u201cIt was completely incomprehensible "
-  },
-  {
-    "title": "Ratchet effects determine engineer reputation at large companies \u2013 sean goedecke (seangoedecke.com)",
-    "points": 61,
-    "submitter": "rbanffy",
-    "submit_time": "2025-01-06T12:30:11 1736166611",
-    "num_comments": 26,
-    "comments_url": "https://news.ycombinator.com/item?id=42610021",
-    "comments": [
-      "I work at a \"large company\", and I don't agree with most of this. Your write-up is highly subjective, and fairly pessimistic.Some people hit the ground running, and teams/organizations/companies can thrive if they find ways to embrace that. Sometimes people get hired at the wrong level, and everyone benefits if some sort of work demonstrates that quickly. I have seen promotions happen based on prudent choices around one's individual strengths, simply by choosing to do a bit of the right work and getting eyes on your capabilities. There is no \"one size fits all\" prescription for what someone should work on.Having a \"shadow lead\" can be one of the best situations for your growth, too. Not only do you get the experience leading a thing (for most of what that means, anyway), you may end up with a very strong ally when you knock it out of the park. I had a version of this experience, and I've watched others have it as well.I'm guessing most of the negatives here are based on your personal experience, and for that I'm sorry. Hopefully you can encourage positive changes in your company's engineering culture.\n \nreply",
-      "> Having a \"shadow lead\" can be one of the best situations for your growth,In a successful company with high retention, many senior engineers who would fill these roles as shadow lead, often have their ego turned down, less to prove, and will encourage you to succeed. In companies with a lot of churn, or always on the brink of disaster, you don't get that support.overall though, I do agree with the article. orgs run on reputation, and it's slow to change, and snap judgements sadly matter.\n \nreply",
-      "> you may end up with a very strong ally when you knock it out of the parkI imagine this will be determined by the culture and the system of rewards which are out of your control. A shadow lead could be an ally, or they could pin any deficiencies on you. The author\u2019s comment is sound in my opinion: depending on altruistic behavior is a bad position to be in.\n \nreply",
-      "I\u2019m engineering adjacent (analytics / data sci) but my experience has been the best engineers pitch and pick their own projects rather than being assigned out weeks in advance.Just recently an engineering manager told me \u201cI trust [IC7 engineer] to go where he is most impactful\u201dSo this isn\u2019t the only model, and successfully identifying and pitching working on high impact projects is a seniority marker that will lead to rapid promotion. In any organization. The pitch may look different in different places but I promise you - if an engineer is successfully pitching and delivering high impact projects promotion WILL follow.Identifying and pitching high impact projects is a combo of technical and soft skills though, and the way this happens depends on the org.\n \nreply",
-      "This seems generally true in my experience.\nAnother aspect of this, from personal experience: while it may be easy to move around in a large organization, you risk losing reputational capital. I had a habit of building reputation in some team/platform, then after I no longer found it engaging or there was enough turnover/focus shift, I'd ask to transition to a wildly different team for a new challenge. \nIt _is_ fun, but if you opt to start as an IC and work your way up, you're sorta letting the ratchet slip, and if you do it every couple years you may have broad experience, but your reputation (and likely level) will be well below where it could be.Thus, unless you can ramp to expertise really quickly to leverage your skills developed elsewhere, I'd recommend (perhaps obviously) to try to move to peripheral teams where your skills and relationships transfer as much as possible.\n \nreply",
-      "There is a time honored tradition of blaming the last person for all of your problems, or at least any they had proximity to.Somewhat awkward if you later see them in a meeting.\n \nreply",
-      "Quite true! Having been fairly instrumental in a few areas that I'd eventually moved on from, it was always interesting to see some of my trademark accomplishments become The Old Thing We're Trying To Replace (or even just The Big Thing We Have To Maintain); gave me a lot of empathy for prior contributors of code I ended up inheriting. \nI tend to assume that the old thing seems dumb because of the constraints when it was written and changing requirements over time; if a tool made by one person in a few weeks seems hopelessly naive to the medium sized team investing a few quarters in replacing it a few years later, that seems to be a rousing success for the original author.\n \nreply",
-      "Problem for new hires is the onboarding process is very critical to determine if you'll be doing good work or not. Fighting against a code base all the time as you're left to your own devices is an uphill battle.\n \nreply",
-      "Problem for new hires is also whether your manager will support the onboarding. If you get throw n to the wolves with 1 month of \u201conboarding\u201d, you\u2019ll fail even with straightforward codebases. I\u2019ve seen managers who bring you in and ask you, what the you and the team should be doing. And that\u2019s never ended well.\n \nreply",
-      "A lot of places end up selecting for their own brand of crazy because of that.The people who think, \"this is fine\" tend to fit in better. From a team stability perspective that's fine? But echo chambers eventually eat themselves and new perspective can lead to new features or bug fixes.\n \nreply"
-    ],
-    "link": "https://www.seangoedecke.com/ratchet-effects/",
-    "first_paragraph": "How do engineers become higher-status or lower-status at large tech companies? In other words, what determines who gets promoted and who doesn\u2019t, or who gets assigned the exciting difficult work and who gets put on keep-the-lights-on maintenance duty?The naive answer is that strong engineers are recognized and rewarded for their talent. There\u2019s a grain of truth in this (talent does matter), but it\u2019s broadly false. Many technically strong engineers go unrecognized and many technically weak engineers succeed. The slightly-less naive answer is that engineers who can deliver value to shareholders (e.g. by shipping projects) are placed in positions where they can do that. This is closer to the truth, but it doesn\u2019t explain the mechanism. Nobody at a large tech company is sitting in a high tower assessing how much value you personally can deliver. They\u2019re all busy with their own jobs. How, then, do effective engineers get recognized?The answer is a natural ratchet effect. When an engineer jo"
-  },
-  {
-    "title": "Who killed the rave? (ft.com)",
-    "points": 247,
-    "submitter": "this_weekend",
-    "submit_time": "2025-01-06T00:29:35 1736123375",
-    "num_comments": 624,
-    "comments_url": "https://news.ycombinator.com/item?id=42606318",
-    "comments": [
-      "https://archive.is/ul4Ui",
-      "One big change is that they got better and much more organized. I go to an annual event with a few hundred of my friends and family. We rent a lodge in a national forest, set up an enormous sound system, and dance for 3 days around some very confused deer. There are food trucks and coffee bars and dozens of portapotties scattered around, plus daytime poolside sets while we swim around and listen to 100dB house.We grayvers still like to have fun, just more comfortably. We have work next week, you know.\n \nreply",
-      "I\u2019m confused. You say that you  \u201cgo to\u201d an annual event, but then you describe it at a massive private festival that you\u2019re self organizing. Which is it?\n \nreply",
-      "There are all sorts of volunteer roles someone needs to do, from directing parking, to helping in the kitchen, to roaming around at 3am to see if anyone needs help, to working the first aid stand, and a hundred other things. I always sign up for at least a couple of shifts doing something, so feel like part of the \"we\" helping to put it on, but it's still something I go to as a participant to have fun.\n \nreply",
-      "As someone who does something similar, it\u2019s easily both\n \nreply",
-      "Those two things are not mutually exclusive.\n \nreply",
-      "The best festivals are co-creative experiences.\n \nreply",
-      "I still remember the first one I was supposed to go to. They didn't tell you the location until the day of.It was a high school gymnasium.Didn't work out so well.\n \nreply",
-      "> One big change is that they got better and much more organized.If I'm thinking of the same groups you're mentioning, they were already super organized. Mostly because they've been going for decades now.\n \nreply",
-      "If you\u2019re thinking of groups, plural, then you probably know the ones I mean. And yeah, I wear the 20th anniversary tank top to the gym.\n \nreply"
-    ],
-    "link": "https://www.ft.com/content/2138e940-0c81-44b0-87a7-325f278413e1",
-    "first_paragraph": "Once registered, you can:\n\n\u2022 Read this article and many more, free for 30 days with no card details required\n\u2022 Enjoy 8 thought-provoking articles a day chosen for you by senior editors\n\u2022 Download the award-winning FT Edit app to access audio, saved articles and moreThen $75 per month. Complete digital access to quality FT journalism. Cancel anytime during your trial.Essential digital access to quality FT journalism on any device. Pay a year upfront and save 20%.Complete digital access to quality FT journalism with expert analysis from industry leaders. Pay a year upfront and save 20%.Terms & Conditions applySee why over a million readers pay to read the Financial Times."
-  },
-  {
-    "title": "Robotics 101 at UMich: Applied numerical linear algebra as intro linear algebra (umich.edu)",
-    "points": 182,
-    "submitter": "jamesliudotcc",
-    "submit_time": "2025-01-08T13:11:40 1736341900",
-    "num_comments": 43,
-    "comments_url": "https://news.ycombinator.com/item?id=42633805",
-    "comments": [
-      "I took this course 3 years ago. I found it fast-moving, and it focused a lot more on applications than fundamentals, which meant it was more wide than it was deep. This didn't turn out so well when I decided to study ML later and needed stronger linear algebra fundamentals, but it was a fun course. There were a couple interesting course projects, one of which was using linear algebra to balance a (simulated) 2D robot.\n \nreply",
-      "No one, and let me repeat that, no one \"gets\" linear algebra, differential equations, or frequency domain on the first pass. It takes years to absorb and multiple passes.See:Bruner / Spiral Curriculum.Ebbinghaus / Spacing effectHattie / Deep-surface-transfer learningChunking (\"How People Learn\" has a good copy on this)Etc.The way you do this is you take a course, and then you take more courses. After a few years, it all connects and makes sense. The first course, I find, is often best short, simplified, and applied. Once you get through that, you can go deeper.Different angles are nice too. For linear algebra:- Quantum computing- Statistics and probability- Machine learning- Control theory- Image processing- Abstract algebra / groups / etc.- Computer graphicsAll come to mind.On a mile-high level, this course seems ideal for a first pass. On a detailed level, I'm confused by some licensing issues.\n \nreply",
-      "Not with the way it is taught. But if the course structure is changed slightly to have reinforcement of early concepts woven through the course, people learn much better.At least that was my experience when I taught it. See https://bentilly.blogspot.com/2009/09/teaching-linear-algebr... for more detail on my experience.\n \nreply",
-      "Where do you feel the gaps were for what you needed for ML? Downthread, Jesse Grizzle notes they've added some stuff in 2023 (it's on Github I think?) to support an ML class.\n \nreply",
-      "What would you recommend for building a strong linear algebra foundation?\n \nreply",
-      "Also a big fan of Strang. \"Linear algebra and its applications\" has problem sets with solutions for odd number questions.Would highly recommend https://mathacademy.com/courses/linear-algebra or https://mathacademy.com/courses/mathematics-for-machine-lear...I originally spent time working through practice problems from one of Strang's books, now really appreciate how systematic math academy is in assessing, building a custom curriculum, then doing spaced repetition.\n \nreply",
-      "I took 18.085 (applied linear algebra) as a grad student at MIT. The best taught math course I've ever taken. Strang is a fantastic teacher.\n \nreply",
-      "After working with math academy, any form of video learning seems so inefficient. I think people lose a lot of time watching these videos thinking that they are learning  without applying anything by themselves.\n \nreply",
-      "UMich has a couple other linear algebra courses that might be better for that: MATH 214, MATH 217 are the numbers if I remember correctly. 217 is known for having a high workload and greater rigor, but some say it's worth it even for non-Math majors.\n \nreply",
-      "In terms of books, I would say Linear Algebra Done Right. The book requires some background to understand efficient. But, once you have some background, it is very good for having a systematic and rigorous understanding of Linear Algebra theory\n \nreply"
-    ],
-    "link": "https://robotics.umich.edu/academics/courses/course-offerings/rob101-fall-2020/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Brief Introduction to Fix and Fix JSON (fixparser.dev)",
-    "points": 4,
-    "submitter": "logotype",
-    "submit_time": "2025-01-05T15:33:47 1736091227",
-    "num_comments": 9,
-    "comments_url": "https://news.ycombinator.com/item?id=42602438",
-    "comments": [
-      "For anyone interested: it's an extraordinarily simple protocol (it predates complexity in protocols), consisting of key=value pairs, where the keys are all numbers (look up \"fix tag dictionary\" for 100 different decoder rings), everything's in text, and, IIRC, all the KVPs are separated by ASCII 01h (SOH), which by convention is written with the pipe filter. That's it, that's the protocol.A real-world FIX gateway will demand a BodyLength tag, so you have to compute your message length, and it'll want SenderCompID and TargetCompID (\"from\" and \"to\", respectively). So it's like, well, that much more complicated.The complexity in these systems will all be the semantics given to the messages and the zillion fields your vendor/partner supports.\n \nreply",
-      "If it meets the guidelines, this might make a good 'Show HN'. Show HN guidelines: https://news.ycombinator.com/showhn.html\n \nreply",
-      "Thanks! not sure if it meets the guidelines given that it is a paid product. cheers\n \nreply",
-      "Paid products are ok (so long as they are consistent with the rest of HN).If in doubt, you can ask the mods using the contract link.\n \nreply",
-      "HN people have to be able to use the thingy, and signup forms don't count (\"you have to have something more than a signup\", per 'dang).\n \nreply",
-      "Isnt xml preferred in fix and not json?\n \nreply",
-      "It's been like 10 years for me but all the systems I worked with just use the classic ASCII format; the last thing you'd want to do is inflate the messages with XML or JSON. Has that changed?\n \nreply",
-      "https://www.fixtrading.org/standards/json-online/#issues-for...\nI guess so.\n \nreply",
-      "Mine was actually a question as well. My thought was because of nano second accuracy, json won't be preferred. XML causes no issues here just the bloat.\n \nreply"
-    ],
-    "link": "https://fixparser.dev/what-is-fix",
-    "first_paragraph": "The FIX Protocol (Financial Information Exchange) is a standardized messaging system for real-time electronic communication of trade-related information in financial markets.Developed in the early 1990s, the FIX Protocol enables the seamless exchange of trade-related information, such as orders, executions, and market data, between trading institutions, brokers, exchanges, and other financial entities. It is highly valued for its speed, reliability, and real-time capabilities, which are essential for high-frequency trading and other time-sensitive financial activities. The protocol defines a comprehensive set of message types and field formats, making it adaptable for a variety of trading environments.A FIX tag value message is structured as a sequence of key-value pairs where each key (tag) is a numeric identifier representing a specific data field, and the value contains the associated data. FIX tagvalue encoding is standardised in ISO 3531-1:2022.8=FIXT.1.1|9=61|35=A|34=1|49=EXEC|52"
-  },
-  {
-    "title": "Did we miss P In CAP? Partial Progress Conjecture under Asynchrony (arxiv.org)",
-    "points": 14,
-    "submitter": "belter",
-    "submit_time": "2025-01-05T15:23:00 1736090580",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://arxiv.org/abs/2501.00021",
-    "first_paragraph": "Help | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n                    Get status notifications via\n                    email\n                    or slack\n"
-  },
-  {
-    "title": "A Pixel Parable (olano.dev)",
-    "points": 80,
-    "submitter": "facundo_olano",
-    "submit_time": "2025-01-06T00:48:58 1736124538",
-    "num_comments": 7,
-    "comments_url": "https://news.ycombinator.com/item?id=42606433",
-    "comments": [
-      "Beautifully written and worth the read. And the screensaver nerd snipe is epic.\n \nreply",
-      "That was a great read!The library at Skywalker Ranch looked like a wonderful place.\n \nreply",
-      "I\u2019ve heard him recount the story of how he ended up at LucasFilm Games before, so I could tell that \u201dMark\u201d refers to Mark Ferrari. But it certainly feels a little unusual to tell a story like this using only his first name.\n \nreply",
-      "It worked for me. It's intentionally written like a piece of fiction, you don't even have to know the characters are all real people to enjoy the story. Though I guess most readers at least know who \"Ron\" refers to.\n \nreply",
-      "Anyone have a link to \"Purcell\u2019s million-dollar animation\" of the grail scene? I'm really curious to see it now.\n \nreply",
-      "https://www.reddit.com/r/indianajones/comments/1hwce4a/india...\n \nreply",
-      "I started researching Skywalker Ranch recently and I've found it quite difficult to find floor plans or  pictures of the interior of the building.It's kind of odd.  I wonder what Disney has in store for that place.I hope that it is preserved due the historical role that it had in being the site of the genesis of so many of our cherished cultural artifacts.\n \nreply"
-    ],
-    "link": "https://olano.dev/blog/a-pixel-parable/",
-    "first_paragraph": "An imagined town is at least\nas real as an actual town.\nRichard Hugo\n\u201cHow would you like to work on video games?\u201d\nMark is holding his Best of the Show certificate in one hand and Gary\u2019s card in the other:Gary W.Art DirectorLucasFilm Games\nLucasFilm Games. As in George Lucas. As in Star Wars.\nThis is his second lucky break of the weekend. A friend recommended he go to this sci-fi convention; she said it would be good for networking. Mark wouldn\u2019t mind having one of his illustrations on a trading card, or a rule book, or, who knows, one of those fantasy novels he used to read in high school.\nSo he shows up to the convention on Friday. Someone notices his work\u2014his pencil landscapes that look hand-painted\u2014, they invite him to join in the art show, he does, two days later he wins first place. That\u2019s his first lucky break. The second is this guy, Gary, coming over to him, praising his work, asking him to \u2018audition\u2019 for a video game job.\n\u201cCould you come over to the Ranch for an interview?\u201d Ga"
   }
 ]
