@@ -1,405 +1,385 @@
 [
   {
-    "title": "OpenBSD Innovations (openbsd.org)",
-    "points": 157,
-    "submitter": "angristan",
-    "submit_time": "2025-02-22T22:08:42 1740262122",
-    "num_comments": 38,
-    "comments_url": "https://news.ycombinator.com/item?id=43143777",
-    "comments": [
-      "OpenBSD foundation raised around ~380 thousand IIRC.By creating OpenSSH and the fact all fortune 500 companies use it, I would say every year, the foundation should be bringing in around 1 or 2 million.  It is time these companies really give back.And while I am here, hardware vendors should open up their source, looking directly an Nvidia.\n \nreply",
-      "They could easily raise a few million if they bothered working on sales, but they don't.\n \nreply",
-      "Its not really a for profit project and I prefer it stays that way. Projects that raise money tend to get \"corrupted\" by the greed.Not that there is anything wrong with raising money, but the ideology behind openBSD don't really fit if they go for profit\n \nreply",
-      "a) they shouldn't have tob) part of what makes it great is that they don't\n \nreply",
-      "A phenomenal resource on the same subject:https://isopenbsdsecu.re/mitigations/\n \nreply",
-      "I like this -- despite the clown nose logo, it's actually fair to my eye and is respectful to parts of OpenBSD that are thoughtfully designed.\n \nreply",
-      "I assume you meant to write \"disrespectful\"?\n \nreply",
-      "> Random-data memory: the ability to specify that a variable should be initialized at load time with random byte values (placed into a new ELF .openbsd.randomdata section) was implemented in OpenBSD 5.3 by Matthew Dempsky.What's the use case for this?EDIT: further down is one example:> RETGUARD is a replacement for the stack-protector which uses a per-function random cookie (located in the read-only ELF .openbsd.randomdata section) to consistency-check the return address on the stack. Implemented for amd64 and arm64 by Todd Mortimer in OpenBSD 6.4, for mips64 in OpenBSD 6.7, and powerpc/powerpc64 in OpenBSD 6.9. amd64 system call stubs also protected in OpenBSD 7.3.\n \nreply",
-      "https://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/lib...Many things, retguard uses this for per-function random cookies, for instance.The bootloader uses this mechanism to pass data to the kernel.https://www.openbsd.org/papers/hackfest2014-arc4random/mgp00...\n \nreply",
-      "I suppose: Sometimes things work fine with the implicit default value that you end up with. So this will cause problems when you forget to initialize values to expected sane defaults.\n \nreply"
-    ],
-    "link": "https://www.openbsd.org/innovations.html",
-    "first_paragraph": "\n    This is a list of software and ideas developed or maintained by the OpenBSD\n    project, sorted in order of approximate introduction. Some of them are\n    explained in detail in our research papers.\n\nConcepts\n\nipsec(4):\n\tStarted by John Ioannidis, Angelos D. Keromytis, Niels Provos, and\n\tNiklas Hallqvist, imported February 20, 1997.  OpenBSD was the first\n\tfree operating system to provide an IPSec stack.\n    inet6(4):\n\tFirst complete integration and adoption of IPv6 led by\n\t\"Itojun\" (Dr. Junichiro Hagino) [WIDE/KAME], Craig Metz [NRL], and\n\tAngelos D. Keromytis starting Jan 6, 1999.\n\tAlmost fully operational Jun 6, 1999 during the\n\tfirst OpenBSD hackathon.\n\tOpenBSD 2.7.\n    Privilege separation:\n\tFirst implemented by\n\tNiels Provos\n\tand Markus Friedl in OpenSSH in March 2002, released with OpenBSD 3.2.\n\tThe concept is now used in many OpenBSD programs, for example\n\tbgpd(8),\n\tdhclient(8),\n\tdhcpd(8),\n\tdvmrpd(8),\n\teigrpd(8),\n\tfile(1),\n\thttpd(8),\n\tiked(8),\n\tldapd(8),\n\tldpd(8),\n\tmountd("
-  },
-  {
-    "title": "FFmpeg School of Assembly Language (github.com/ffmpeg)",
-    "points": 499,
-    "submitter": "davikr",
-    "submit_time": "2025-02-22T16:52:49 1740243169",
-    "num_comments": 121,
-    "comments_url": "https://news.ycombinator.com/item?id=43140614",
-    "comments": [
-      "Another resource on the same topic: https://blogs.gnome.org/rbultje/2017/07/14/writing-x86-simd-...As I'm seeing in the comments here, the usefulness of handwritten SIMD ranges from \"totally unclear\" to \"mission critical\". I'm seeing a lot on the \"totally unclear\" side, but not as much on the \"mission critical\", so I'll talk a bit about that.FFmpeg is a pretty clear use case because of how often it is used, but I think it is easier to quantify the impact of handwriting SIMD with something like dav1d, the universal production AV1 video decoder.dav1d is used pretty much everywhere, from major browsers to the Android operating system (superseding libgav1). A massive element of dav1d's success is its incredible speed, which is largely due to how much of the codebase is handwritten SIMD.While I think it is a good thing that languages like Zig have built-in SIMD support, there are some use cases where it becomes necessary to do things by hand because even a potential performance delta is important to investigate. There are lines of code in dav1d that will be run trillions of times in a single day, and they need to be as fast as possible. The difference between handwritten & compiler-generated SIMD can be up to 50% in some cases, so it is important.I happen to be somewhat involved in similar use cases, where things I write will run a lot of times. To make sure these skills stay alive, resources like the FFmpeg school of assembly language are pretty important, in my opinion.\n \nreply",
-      "So on point. We do _a lot_ of hand written SIMD on the other side (encoders) as well for similar reasons. In addition on the encoder side it's often necessary to \"structure\" the problem so you can perform things like early elimination of loops, and especially loads. Compilers simply can not generate autovectorized code that does those kinds of things.\n \nreply",
-      "I am the author of these lessons.Ask me anything.\n \nreply",
-      "Hi, thanks for your work!I have a question, as someone who can just about read assembly but still do not intuitively understand how to write or decompose ideas to utilise assembly, do you have any suggestions to learn / improve this?As in, at what point would someone realise this thing can be sped up by using assembly? If one found a function that would be really performant in assembly how do you go about writing it? Would you take the output from a compiler that's been converted to assembly or would you start from scratch? Does it even matter?\n \nreply",
-      "Hacker News is such a cool website.Hi thank you for writing this!\n \nreply",
-      "I'm kind of stunned we haven't gotten something better / more rust based than ffmpeg?Especially curious given the advent of apple metal etc.Does anyone have recommendations?\n \nreply",
-      "Why? It's a Herculean effort. It took it was 28 years between the creation of C and FFMPEG, so if there still is not a replacement by 2038, then your complaint is justified.\n \nreply",
-      "I personally don't think there's much value in writing assembly (vs using intrinsics), but it's been really helpful to read it. I have often used Compiler Explorer (https://godbolt.org/) to look at the assembly generated and understand optimizations that compilers perform when optimizing for performance.\n \nreply",
-      "I don\u2019t care about the split, just wanted to say that this guide is so good. I wish I had this back when I was interested in low-low-level.\n \nreply",
-      "I'm curious from anyone who has done it. Is there any \"pleasure\" to be had in learning or implementing assembly (like there is for LISP or RISC-V) or is it something you learn and implement because you want to do something else (like learning COBOL if you need to work with certain kinds of systems). It has always piqued my interest but I don't have a good reason in my day-to-day job to get into it. Wondering if it is worth committing some time to for the fun of it.\n \nreply"
-    ],
-    "link": "https://github.com/FFmpeg/asm-lessons/blob/main/lesson_01/index.md",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          FFmpeg Assembly Language Lesson OneIntroductionWelcome to the FFmpeg School of Assembly Language. You have taken the first step on the most interesting, challenging, and rewarding journey in programming. These lessons will give you a grounding in the way assembly language is written in FFmpeg and open your eyes to what's actually going on in your computer..Required KnowledgeWhat is assembly language?Assembly language is a programming language where you write code that directly corresponds to the instructions a CPU processes. Human readable assembly language is, as the name suggests, assembled into binary data, known as machine code, that the CPU can understand. You might see assembly language code referred to as \u201cassembly\u201d or \u201casm\u201d for short.The vast majority of assembly code in FFmpeg is what's known as SIMD, Single Instruction Multiple Dat"
-  },
-  {
-    "title": "In Defense of Text Labels (chrbutler.com)",
-    "points": 52,
-    "submitter": "delaugust",
-    "submit_time": "2025-02-22T20:40:26 1740256826",
-    "num_comments": 32,
-    "comments_url": "https://news.ycombinator.com/item?id=43142989",
-    "comments": [
-      "Balance is important. For example, having some icons in a menu provides anchor points and gives the menu a distinct \u201cshape\u201d: http://colfinder.net/materials/Supporting_Distance_Education...But when every menu item has an icon, it\u2019s all just a blur: https://us1.discourse-cdn.com/gitlab/original/3X/6/3/634da24...\n \nreply",
-      "Agreed, absolutely.The other thing is that full-color, textured icons help a great deal with immediate recognition as well. It's easy when the \"open\" icon is a yellow folder.Sadly, the move to flat design with monochrome icon outlines destroyed that entirely. I'm still waiting for full-color icons to come back in style again. They can still be flat, but being filled with color (not just colored outlines) helps immensely with fast recognition.\n \nreply",
-      "I am wondering why I agree with you!I think because the shape creates landmarks. This is why some cities are easier to navigate than others. You need some stuff to be different.\n \nreply",
-      "The icons are also used on the most commonly used items.\"Groups\" on that Git forge probably isn't used as often as \"issues\" but they both have vague little grey icons.\"Issues\" should just be an icon of a bug\n \nreply",
-      "Yes, it\u2019s the non-uniformity. The icons being colored and having high contrast also helps. They furthermore highlight the most important functions.\n \nreply",
-      "I prefer every item having both text and an icon. If I don't know what the icon mean, there's text there to explain it. If I do know what the icon means, i can scan just the icons and find what I need faster. In my opinion it's the best of both worlds. That being said, your first example might be even better, because a lot of those things like \"close\" or \"versions\" I'm not going to be clicking often, so if they had an icon I'd have to read the text to figure them out every time anyway\n \nreply",
-      "This reminds me of what I\u2019ve read about the Xerox Mesa/Cedar environment, which in turn influenced the look and feel of Wirth\u2019s Project Oberon and the acme text editor from Plan 9 from Bell Labs.  I also have a copy of Jef Raskin\u2019s The Humane Interface, and while I haven\u2019t fully read the book, I remember it advocating the use of text over the use of icons.\n \nreply",
-      "If I had a dollar for every time I had to teach someone how to share screen in Google Meets...In Google's defense, text labels are hard for i18n, but icons without text is low effort, bad UX too.\n \nreply",
-      "The meanings of icons can also be highly dependant on culture, we just tend to ignore those dependencies easier than with text.\n \nreply",
-      "I think this one form of a slightly more general issue which is the belief that good UX (or even \"good ways of doing things\" in some broader sense) should not require verbal explanation.  This is seen in various kinds of \"streamlined\" interfaces that attempt to make things \"obvious\" or \"intuitive\", but often this comes at the cost of functionality.  Icons are fine if you only have a few simple things you want to do, but when you have more potential actions and/or those actions are more complex, you start to need more explanation of what you're doing and how you're doing it, and for that you need words.\n \nreply"
-    ],
-    "link": "https://www.chrbutler.com/in-defense-of-text-labels",
-    "first_paragraph": "\nI\u2019m a firm believer in text labels.\n\nInterfaces are over-stuffed with icons. The more icons we have to scan over, the more brain power we put toward making sense of them rather than using the tools they represent. This slows us down, not just once, but over and over again.\n\nWhile it may feel duplicative to add a text label, the reality is that few icons are self-sufficient in communicating meaning.\n\n1. Few icons communicate a clear, singular meaning immediately\n\nIt\u2019s easy to say that a good icon will communicate meaning\u2009\u2014\u2009or that if an icon needs a text label, it\u2019s not doing its job. But that doesn\u2019t take into consideration the burden that icons\u2009\u2014\u2009good or bad\u2009\u2014\u2009put on people trying to navigate interfaces.\n\nEven the simplest icons can create ambiguity. While a trash can icon reliably communicates \u201cdelete,\u201d what about the common pencil icon. Does it mean create? Edit? Write? Draw? Context can help with disambiguation, but not always, and that contextual interpretation requires additiona"
-  },
-  {
-    "title": "Digital Services Playbook (usds.gov)",
-    "points": 10,
-    "submitter": "ronbenton",
-    "submit_time": "2025-02-23T00:54:58 1740272098",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://playbook.usds.gov/",
-    "first_paragraph": "The American people expect to interact with government through digital channels such as websites, email, and mobile applications. By building digital services that meet their needs, we can make the delivery of our policy and programs more effective.Today, too many of our digital services projects do not work well, are delivered late, or are over budget. To increase the success rate of these projects, the U.S. Government needs a new approach. We created a playbook of 13 key \u201cplays\u201d drawn from successful practices from the private sector and government that, if followed together, will help government build effective digital services.We must begin digital projects by exploring and pinpointing the needs of the people who will use the service, and the ways the service will fit into their lives. Whether the users are members of the public or government employees, policy makers must include real people in their design process from the beginning. The needs of people \u2014 not constraints of govern"
-  },
-  {
-    "title": "Vine: A programming language based on Interaction Nets (vine.dev)",
-    "points": 49,
-    "submitter": "todsacerdoti",
-    "submit_time": "2025-02-22T22:43:36 1740264216",
-    "num_comments": 13,
-    "comments_url": "https://news.ycombinator.com/item?id=43144040",
-    "comments": [
-      "It starts off looking like a slightly modified Rust until about half way through where it gets real weird. It\u2019s burying the lede\u2026 why not open with what interaction nets are and why you\u2019re building them into a programming language?Made my head hurt a bit, it\u2019s odd that it doesn\u2019t really attempt to contextualise if the weirdness is for its own sake or some greater practical purpose.Always fun to find a novel way to think about programming though.\n \nreply",
-      "\"This function calculates the minimum of a list of numbers, and subtracts every number in the list by that minimum. This function currently iterates over the list twice; once to calculate the minimum, and once to do the subtraction. At a first glance, it looks like there is no way to merge these two loops, because you need to calculate the minimum of all the numbers before you can subtract from any of them. As it turns out, this is possible, using the inverse operator.\"https://vine.dev/docs/features/inverseI was long curious about interaction nets. Can someone confirm if Vine will automagically derive an algorithm for doing this with a single pass or it will do one pass in \"forward mode\", but once the minimum is resolved, follow it up with a second implicit \"book keeping and variable re-resolution pass\" that will be equivalent to an actual full second pass you'd get in an imperative language?It is all very much reminiscent of programming in tensorflow 0.x.\n \nreply",
-      "> it will do one pass in \"forward mode\", but once the minimum is resolved, follow it up with a second implicit \"book keeping and variable re-resolution pass\" that will be equivalent to an actual full second pass you'd get in an imperative languageYes, this is correct. Though it's worth noting that this is not some transformation being done by the compiler, but an emergent property of the interaction net.\n \nreply",
-      "I first heard about interaction nets from HVM [1].   It sounds very interesting but I can't say I get it.[1] https://higherorderco.com/\n \nreply",
-      "> Think inets as like sort of lambda calculus runtime:\n> lambdas -> inets -> reduced inets -> lambdasa bit like Tree Calculus but with nets.\n \nreply",
-      "Author here, happy to answer any questions.\n \nreply",
-      "Constructive criticism, but I checked out the docs hoping for an up-front explanation of interaction nets and how they can improve a PL, what kinds of problems they are uniquely good for, etc.  Finding none, I read the interaction nets wiki page, but still wasn't sure why \"a PL based on Interaction Nets\" is something I'd want.  Of course, if the answer is \"why not\" in an esolang sense that's great, but I sensed there was something more and wanted to know what it was.  In short, why did you make this language.EDIT: btw, I knew I recognized your handle and it was from this amazing code golf answer:https://codegolf.stackexchange.com/questions/108170/totally-...\n \nreply",
-      "Yeah, that would be good to add to the docs.Interaction nets are an alternate model of computation (along the lines of the lambda calculus or Turing machines). It has several interesting properties, one of the most notable being that it is fundamentally parallel. https://en.wikipedia.org/wiki/Interaction_nets https://t6.fyi/guides/inetsI think there are many potential applications for interaction nets in parallel & distributed computing, among other fields; and such applications will need a language \u2013 hence Vine.(re your edit \u2013 that's fun lol; Totally Cubular is one of my favorite projects)\n \nreply",
-      "Do interaction nets have any interesting properties that make them useful for distributed computing? Think IoT, edge computing, embedded, that kind of thing?And synchronization primitives?I wanted to also say I loved reading the documentation. Your idea of places, spaces and values feels like a waaay more intuitive naming scheme for than what's common in CS.The time-travel example also felt oddly intuitive to me. I don't really care that it uses black magic underneath, it's quite elegant!\n \nreply",
-      "> Do interaction nets have any interesting properties that make them useful for distributed computing?Of course, the intrinsic parallelism is useful there (especially since it is emergent from the structure of the program, rather than needing to be explicitly written). In terms of other interesting properties: interaction nets don't rely on linear memory, instead being based on a graph, which can naturally be chunked and distributed across machines, with synchronization only being necessary when wires span different chunks.> And synchronization primitives?The initial answer to this question is: interaction nets don't need synchronization primitives, as all parallelism is emergent from the net structure.Now, in practice, one may want some additional synchronization-esque primitives. For example, a parallel shortcircuiting or is not expressible in vanilla interaction nets (as all computation is deterministic, and such an operation isn't deterministic). There are extensions to interaction nets for non-determinism, that allow some of these use-cases, which start to look more like synchronization primitives. Vine doesn't support any of these at the moment, but it may in the future.> I wanted to also say I loved reading the documentation. Your idea of places, spaces and values feels like a waaay more intuitive naming scheme for than what's common in CS.I'm glad to hear it! I spend a lot of time trying to come up with good names for things, so it's nice to know that that pays off. Though I suppose it's not too hard to improve on the status quo, when it's 'lvalue'/'rvalue', lol. (I did, however, steal 'place' and 'value' from Rust.)> The time-travel example also felt oddly intuitive to me. I don't really care that it uses black magic underneath, it's quite elegant!Yeah, the 'time-travel' stuff sounds wacky, but I do think it can be really intuitive if one is willing to accept it. I wrote a really cool algorithm a little while ago that really uses this 'time-travel' idea; I [wrote about it](https://discord.com/channels/1246152587883970662/12461564508...) on Discord. (I should really type that up into a blog post of sorts.\n \nreply"
-    ],
-    "link": "https://vine.dev/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "A map of torii around the world (google.com)",
-    "points": 63,
-    "submitter": "ilamont",
-    "submit_time": "2025-02-22T19:01:41 1740250901",
-    "num_comments": 28,
-    "comments_url": "https://news.ycombinator.com/item?id=43141966",
-    "comments": [
-      "Missing the small one in Porto Alegre, likely the the southernmost gate in Brazil: https://diariogaucho.clicrbs.com.br/dia-a-dia/noticia/2024/0...\n \nreply",
-      "Might want to click \"Contact\" on her site:https://ugoretzresearch.org/Don't know if she's the one who submitted it to HN.\n \nreply",
-      "The Japanese garden fixtures at Kidd Springs Park in Dallas have an interesting history documented in the article linked by clicking that icon.I believe that if I read it right the torii that had been in place burned or rotted decades ago. Many of the antique Japanese fixtures have been lost over time due to everything from theft to poor record-keeping to decay.Fortunately the parks department is working to restore as much of the garden as possible using the things that are still in place and with additional pieces donated or procured from other sources.Fort Worth's Japanese Garden at the Botanical Research Institute's Botanic Gardens is a nice place to visit and relax. The BRI has a dedicated staff to manage their operations and within the last 5-6 years they have changed from a free access to a paid entry to help generate the revenue needed to maintain parks like this. You can still visit without paying if you are part of a group I believe.Anyway, public sites like these are important today in our society that feels like it has become more insular in many ways in spite of the vast information available about other cultures.\n \nreply",
-      "Really cool map! I clicked this link on my phone, and now all the icons are permanently in my Google maps, without a straightforward way to \"unsubscribe\" from the list (can't see anything in the Lists section, on Android Mobile at least). If anyone knows how to remove these beautiful tori icons that'd be great\n \nreply",
-      "1. Switch bottom tab from Explore (map pin icon) to You (bookmark icon)2. Scroll down to the very very bottom, until a row of icons (Timeline, Following, Maps) appear3. Click the rightmost icon, Maps, and you will find a list of maps you have opened before4. Find the Torii map and click into it5. Click \"View map legend\" at bottom of screen6. Click \"Close\" in upper rightYep that's it, just so \"simple and straightforward\" as most Google products have evolved to be, what a pleasant user journey! Promo-oriented product design really hurts my eyes\n \nreply",
-      "Force closing Google Maps on iOS also does it for me.Which means you cannot trust the My Maps feature if you are traveling anywhere with poor cell service. That\u2019s how I know.\n \nreply",
-      "I had the same experience, go to layers and there you'll find it under a new section \"Explore\". Select it to deactivate it.\n \nreply",
-      "Thanks, this fixed it for me.\n \nreply",
-      "Have the same problem. Can\u2019t see any \u201cexplore\u201d section in the layers on iOS.\n \nreply",
-      "\u201cYou\u201d at the bottom, scroll down to Maps (icon to the right). Click the Tori list item, View Map Legend, Close.I had to quit the app and open it again so it shows in the Maps list.\n \nreply"
-    ],
-    "link": "https://www.google.com/maps/d/viewer?mid=1RNaaTlz7U2FgjlvFARZQWHsMeWsTc2S1&hl=en",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Kaneo \u00e2\u20ac\u201c An open source project management platform (kaneo.app)",
-    "points": 80,
-    "submitter": "saturn5k",
-    "submit_time": "2025-02-22T20:52:01 1740257521",
-    "num_comments": 33,
-    "comments_url": "https://news.ycombinator.com/item?id=43143097",
-    "comments": [
-      "Echoing others: screenshots, demo that doesn't require data harvesting (ahem, \"sign ups\").Personal feedback:* Docker Compose is sufficient for a Quick Start, but not production installation. Needs substantially more documentation about production-ready setups at the very least, especially security considerations.* Would also add additional Quick Start guides for Kubernetes.* Documentation should also cover rationale behind prerequisite choices. RabbitMQ is Broadcom's domain, and there's a lot of sour grapes out there who want to steer clear of them, MPL-licensed or not. If alternatives won't be suggested or offered, then at least explain why a given piece was chosen so other builders can explore contributing alternatives.All in all, the essentials seem to be coming along nicely. Just take the time to document, document, document now, so you're not treading technical debt later should its use take off.\n \nreply",
-      "Great points about the documentation! I totally agree that more detail on production setups and security is crucial. Docker Compose is fine for kicking the tires, but it quickly falls short in real-world scenarios.The Kubernetes suggestion is spot on too. It's almost a must-have these days for anything beyond a basic deployment.And the RabbitMQ rationale is super important. Transparency about those kinds of choices builds trust and encourages community contributions. Took me a while to figure out why some projects went with certain dependencies, and clear documentation would have saved me a lot of time.\n \nreply",
-      "You can enter any data in the \"register\" form as long as it validated (e.g. mail@made.up), it lets you in anyway without mail verification.\n \nreply",
-      "Then just give me a button to try anonymously\n \nreply",
-      "For anyone who wants my username and password, I tried the following for both username and password. Feel free to use this as your demo (remember your scout's promise though).billg@microsoft.comEdit: looks like I managed to break my instance without even trying. I can't edit my first task that I created.https://demo.kaneo.app/dashboard/workspace/nyxfpvfgkk412xg4n...Steps to reproduce:  1. Log in as billg@microsoft.com \n  2. Click on workspace Microsoft Blue \n  3. Click on project DataCenters \n  4. Click on the first task, DAT-1 Build data centers around the world \n  5. Observe the screen just says \"Task edit\" with nothing else there.\n \nreply",
-      "I didn't meant for anyone to post their credentials under a fake email, but thinks.It's the webpage that should be friendlier to people who just want to toy and explore their app before committing to get it running in production.\n \nreply",
-      "It's an internal tool. How much does your task manager really need to scale?\n \nreply",
-      "Yeah, was thinking that as well. IMHO, compose.yaml is the best balance of convenience and simplicity if you need one (or even \"several\") instances.  You should only get more fancy if you need to deploy `n` instances with auto provision/load-balancing/failover/etc.\n \nreply",
-      "I was super interested in this, but I bounced from your landing page after about 30 second. Echoing what everyone else says:- Put screenshots on the landing page- If I click \"Try Demo\" I just get sent to a log in page and I have no idea what to do next. I don't even want to try a demo, I just want to know what the damn product looks like. If I've got to create an account just to see your product, that's an instant bounce from me.Fixing both of those would be ideal, but fixing even one would be a massive help.\n \nreply",
-      "If a GRAPHICAL software project doesn't have screenshots I'm not even considering deploying it\n \nreply"
-    ],
-    "link": "https://kaneo.app/",
-    "first_paragraph": "\nAn open source project management platform focused on simplicity\n                and efficiency. Self-host it, customize it, make it yours.\n\nFree and open source forever\n\nFull control over your data\n\nBuild your own features\n\nPowerful features to help your team succeed\n Organize tasks with our intuitive kanban board interface.  Work together seamlessly with real-time updates and comments.  Track project progress with interactive timeline views.  Automate repetitive tasks and boost productivity.  Choose between our cloud service or self-host on your infrastructure.  Keep your data secure with end-to-end encryption. \nKaneo is free and open source. Join us in making project management\n        accessible to everyone.\n\nLicensed under MIT, you're free to use, modify, and distribute Kaneo\n            however you want.\n\nJoin our growing community of developers and contributors shaping\n            the future of Kaneo.\n\nConnect with other developers, share ideas, and help shape the future of\n   "
-  },
-  {
-    "title": "Amazon now discloses you're buying a license to view Kindle eBooks (the-ebook-reader.com)",
-    "points": 262,
-    "submitter": "DavideNL",
-    "submit_time": "2025-02-22T18:50:06 1740250206",
-    "num_comments": 181,
-    "comments_url": "https://news.ycombinator.com/item?id=43141825",
-    "comments": [
-      "I've only bought a few ebooks but even then, I've immediately went and pirated them too to feel like I have something, even though it's only a few hundred kilobytes. I know it's a digital book and I know someone worked really hard on it but when I buy an book from  Amazon or some other site which works this way, I feel like I'm buying... nothing. I sometimes buy physical books with the intention of keeping them for when I'm in the mood to read them, sometimes this might be months or even years. But with a digital book delivered with a licence I've always got a niggle in the back of my mind thinking about a digital collection dissappearing or the service becoming obsolete. In regards to non-drm ebooks, the lack of tangibility peeves me slightly but isn't so much an issue as I actually have something I can keep. But licenced ebooks are fugazi, ethereal nothingness existing on the whims of a mega corporation.\n \nreply",
-      "Ever since Amazon removed copies of Orwell's \"1984\" from people's Kindles after sale, it's served as a reminder that ownership is a fickle thing.\nhttps://gizmodo.com/amazon-secretly-removes-1984-from-the-ki...I buy some ebooks, always without DRM where possible, and promptly strip DRM and stash free copies for others (e.g. from Kobo).\n \nreply",
-      "That was very memorable. Of all the books it could happen to, it had to be that one.\n \nreply",
-      "After I downloaded Fahrenheit 451 my hard drive caught fire.\n \nreply",
-      "This seems like an isolated case where an illegitimate provider committed fraud in the early days of the program. Amazon refunded and surely readers were able to purchase a valid copy not much later.Are there any examples where legitimately purchased licenses were made unavailable?\n \nreply",
-      "> Are there any examples where legitimately purchased licenses were made unavailable?From customers point of view, these purchases were legitimate.But the important point is that they did it in the past and only the right balance between bad PR and expected profits will prevent them from doing again.\n \nreply",
-      "What profits are you referring to given that they refunded everyone?\n \nreply",
-      "Sony has recently been caught up in a few things like this. The Discovery shows being the biggest example I\u2019m aware of. It\u2019s definitively not an isolated thing.https://www.nytimes.com/2023/12/06/technology/sony-playstati...\n \nreply",
-      "I don't mind temporary license if I trust in the business stability. Meaning either I have a minimum period guaranteed by law or the business is not changing the TOS for no reasons. I bought software on Apple's App Store and games on PlayStation Store and I'm fine that I only have a license tied to the existence of my account. But I have limited trust (no real reason) in Amazon regarding to Kindle.\n \nreply",
-      "I also think temporary licenses if they are marketed appropriately. This disclosure is a small step in the right direction, but I don't think it's enough yet.Any words like \"Buy\", \"Purchase\", \"Own\", etc should be absolutely banned. They should be forced to to use verbs like \"Rent\". Saying you're purchasing a license is better than saying you're purchasing the book, but if it's not a perpetual license, they should be required to specify the duration (or, if indefinite but revocable, it should be so stated).Things like:- \"Rent for 1 week\"- \"$2.99 to borrow for a month\"- \"Rent for as long as we decide to allow\"I also think if the marketing materials explicitly disagree with the terms within a clickwrap license agreement, the marketing materials should be binding.\n \nreply"
-    ],
-    "link": "https://blog.the-ebook-reader.com/2025/02/22/amazon-now-openly-discloses-youre-buying-a-license-to-view-kindle-ebooks/",
-    "first_paragraph": "The eBook Reader BlogThe eBook Reader Blog keeps you updated on the latest ereader and tablet news, reviews, and tutorials.February 22, 2025 by Nathan 2 Comments Amazon recently changed the wording on their website when it comes to buying Kindle ebooks.As the screenshot above shows, they now have a disclaimer under the buy now button that says, \u201cBy placing your order, you\u2019re purchasing a license to the content and you agree to the Kindle Store Terms of Use\u201d.It also says that same thing when shopping for Kindle ebooks directly from the store on Kindle ereaders and Kindle apps.The funny thing is they only appear to be doing that in the US. I checked Amazon UK and Amazon CA and both show the old disclaimer that just says, \u201cBy clicking the above button, you agree to the Kindle Store Terms of Use\u201d.If you click the terms of use link you\u2019ll find a page full of legal disclaimers indicating you\u2019re buying a license to access Kindle content, but they don\u2019t openly disclose it on product pages unde"
-  },
-  {
-    "title": "Reliably Replicating Data Between PostgreSQL and ClickHouse (benjaminwootton.com)",
-    "points": 42,
-    "submitter": "saisrirampur",
-    "submit_time": "2025-02-20T04:59:17 1740027557",
-    "num_comments": 16,
-    "comments_url": "https://news.ycombinator.com/item?id=43111294",
-    "comments": [
-      "Not to sound too sales-y but if you are looking into clickhouse and are currently based on postgres, you might also want to check out timescale. Since we're just a postgres extension it's 100% compatible with existing systems but provides a lot of the same speed benefits as clickhouse for analytical queries.Don't be confused by the timeseries branding.\n \nreply",
-      "I've been very confused by the timeseries branding - I had always thought timescale was purely about adding time series features to PostgreSQL. I didn't know the extension had other applications.Looks like you've expanded into vector indexing - https://github.com/timescale/pgvectorscale - and an extension which bakes RAG patterns (including running prompts from SQL queries) into PostgreSQL: https://github.com/timescale/pgai\n \nreply",
-      "That's interesting. Our first extension (TimescaleDB) is great for time-series and real-time analytics.And yes you are correct, pgvectorscale scales pgvector for embeddings, and pgai includes dev experience niceties for AI (eg automatic embedding management).Would love to hear any suggestions on how we could make this less confusing. :-)\n \nreply",
-      "We use TSDB and are pretty happy with it.But it is much less performant than CH.\n \nreply",
-      "Timescale is a very nice product but not at all close to clickhouse in terms of speed based on my own tests on very large tables (billions of rows)\n \nreply",
-      "I didn't expect so many comments. I'm about to fly cross Atlantic and can't answer appropriately to everyone right now without internet but will try to do it justice once I'm home.\n \nreply",
-      "Could you go into the details of how one might go about replicating a PG db to a tsdb one? I assume application level would not be the most simple/reliable?\n \nreply",
-      "you don'tthe data stays in PGDB - TSDB is an extension installed onto the data base server\n \nreply",
-      "Exactly. You can have the best of both worlds with Timescale.\n \nreply",
-      "How does Timescale compare to other extensions like Citus and Hydra/DuckDB?\n \nreply"
-    ],
-    "link": "https://benjaminwootton.com/insights/clickhouse-peerdb-cdc/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "The Birth of Chipzilla (abortretry.fail)",
-    "points": 55,
-    "submitter": "rbanffy",
-    "submit_time": "2025-02-22T19:04:01 1740251041",
-    "num_comments": 5,
-    "comments_url": "https://news.ycombinator.com/item?id=43141993",
-    "comments": [
-      "Another very good history of early Intel is the Asianometry video and associated write-up: https://www.asianometry.com/p/intel-and-amd-the-first-30-yea...\n \nreply",
-      "This is the story of the birth of Intel, and with it so many of the firsts that laid the foundation for our current technology landscape: The first DRAM chip, the creation of the first microprocessor (the 4004), on through the release of the Intel 8080.\n \nreply",
-      "How did Intel lose dram to micron?!\n \nreply",
-      "Deliberate decision to focus on higher-margin products that aren't commodities (like memory). I believe similar logic was used to justify the sale of their flash business.\n \nreply",
-      "Micron itself was often touch and go until several competitors went bankrupt around 2010\n \nreply"
-    ],
-    "link": "https://www.abortretry.fail/p/the-birth-of-chipzilla",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Recovering priceless audio and lost languages from old decaying tapes (theconversation.com)",
-    "points": 72,
-    "submitter": "PaulHoule",
-    "submit_time": "2025-02-22T16:45:45 1740242745",
-    "num_comments": 9,
-    "comments_url": "https://news.ycombinator.com/item?id=43140547",
-    "comments": [
-      "This is wonderful and important work. Are there audio restoration gurus who make their services available to the average person? I've found many \"transfer your memories to DVD\"-type places, but I haven't been able to find people/companies that specialize in doing the best-possible digitization of formats like Yamaha 4-track cassettes and Super VHS HiFi Stereo tapes. (I'll be doing the audio restoration part.)[Edit: Oooh, I see that https://github.com/oyvindln/vhs-decode now supports HiFi audio decoding! Sadly for me, this appears to require some light VHS deck hacking.]\n \nreply",
-      "I'd love to learn about this too.I have some old family super-8 movies.  There are film scanners that can scan them in, but none of them decode or even acknowledge the magnetic soundtrack.\n \nreply",
-      "I'm sure the track could be captured more optimally, but I think still the cheapest way would be to find an old Super8 projector with sound. Even if the bulb is broken, you can still get the sound out. Then scan in a regular digital film scanner as you mentioned and merge with the sound in post-processing.\n \nreply",
-      "It's really pretty simple. If you can find an electronics repair shop, they should be able to do it for like the lowest rate they have, but it's pretty simple to do yourself in an hour even if you never soldered before.\n \nreply",
-      "It sounds like you're familiar with the process, so thanks for the reassurance! It would be neat to be able to do this for friends and family.\n \nreply",
-      "Any tips for models that can restore speech quality on aged cassette recordings (often the higher frequencies are partially lost)? There's different approaches to noise reduction, and also audio super-resolution, but I didn't find anything geared towards old tapes specifically.\n \nreply",
-      "First thing I think of when hearing about cassette tapes and preservation are deadheads.Well done guys, you have successfully invaded my mind.\n \nreply",
-      "Also priceless, in these times in particular, is hearing about people of good will doing their thing on behalf of humanity. Reading it brightened my day.\n \nreply",
-      "Such divisive sentiments. It's no wonder you got flagged.\n \nreply"
-    ],
-    "link": "https://theconversation.com/how-were-recovering-priceless-audio-and-lost-languages-from-old-decaying-tapes-248116",
-    "first_paragraph": "\n      Associate Professor in Linguistics and a Chief Investigator in the Centre of Excellence for the Dynamics of Language, The University of Melbourne\n    The Tape Restorator was funded by the School of Languages and Linguistics, University of Melbourne, and by a grant from the Australian Research Council (LE220100010)University of Melbourne provides funding as a founding partner of The Conversation AU.View all partnersRemember cassettes? If you\u2019re old enough, you might remember dropping one into a player, only to have it screech at you when you pressed \u201cplay\u201d. We\u2019ve fixed that problem. But why would we bother?Before the iPod came along, people recorded their favourite tunes straight from the radio. Some of us made home recordings with our sibling and grandparents \u2013 precious childhood snippets. And a few of us even have recordings from that time we travelled to a village in Vanuatu, some 40 years ago, and heard the locals performing in a language that no longer exists.In the field of"
-  },
-  {
-    "title": "Show HN: AI-native browser game that users can craft unlimited 3D items (0.space)",
-    "points": 4,
-    "submitter": "stevekwon211",
-    "submit_time": "2025-02-19T09:24:02 1739957042",
-    "num_comments": 6,
-    "comments_url": "https://news.ycombinator.com/item?id=43100260",
-    "comments": [
-      "Requires a login to test? Pass.\n \nreply",
-      "you can watch a demo video here instead of logging inhttps://www.youtube.com/watch?v=F_wDBGdr_jg\n \nreply",
-      "Yeah. Does this actually need an account? If the answer is anything but, \u201cit absolutely, positively, fundamentally doesn\u2019t work without an account\u201d then don\u2019t require one.\n \nreply",
-      "We thought account is essential because it is for your progress and creations are saved when you log back in.It's first to build game so I didn't thought people will ask \"why do we need an account?\"So we plan to make guest mode that people can play it without signin\n \nreply",
-      "Okay so you made something that combines a couple of items into a new item, cool. There's no gameplay here though.\n \nreply",
-      "I don't get it.\n \nreply"
-    ],
-    "link": "https://0.space/about",
-    "first_paragraph": "Explore worlds, collect items, craft yoursSpace Zero is a 3D world on the browser. Explore worlds, collect items, craft yours and share with friends.A public world, full of possibilities. Move around, explore, and see what's out there.Items appear randomly across the world. Pick them up. You never know what might be useful.Combine any items to create something new. No guides, no recipes\u2014just experiment and see what happens."
-  },
-  {
-    "title": "Exult: Recreating Ultima VII for modern operating systems (exult.sourceforge.io)",
-    "points": 53,
-    "submitter": "nateb2022",
-    "submit_time": "2025-02-22T16:56:09 1740243369",
-    "num_comments": 13,
-    "comments_url": "https://news.ycombinator.com/item?id=43140645",
-    "comments": [
-      "There is also Ultima VII: Revisited [1] project that reached 0.1.0 last month. It attempts to fix the weird U7 perspective by giving it a 3d engine.Between this and recent substantial progress in VCMI and HotA for HOMM3, it is an exciting time for retro PC fantasy gaming.[1] https://www.u7revisited.com/\n \nreply",
-      "Ultima 7 was for many, many years my fav game ever. Blew my mind as a kid!\n \nreply",
-      "Ultima VII (and its expansions) and Star Control 2 form a core part of my childhood computer experience.\n \nreply",
-      "I think I'd pay like 250 Eur for a massive Ultima game by Larian, in which they lean hard on the U8 style pentagram spells, you can at any point just become a baker or something, etc :D\n \nreply",
-      "I remember playing the original Ultima on an Apple ][ in high school.Something about Mondain?\n \nreply",
-      "And you drop a coin in the pool in one of the towns and you get a random weapon.  Blasters for all on first level!\n \nreply",
-      "This is probably just nostalgia, as I was the right age to sink hours into the golden age of Ultima IV-VII when I was younger, but I still think these are the best roleplaying games ever made, and by an absolutely gigantic mile. Every time I try a new RPG, I initially have this feeling like, will this be like Ultima, will this be like Ultima, but I always end up disappointed.The best way of describing what makes them so great is that they avoid everything feeling like one of those fake-cardboard-cutout Western movie sets. Every other RPG I've played feels like this, the infinity engine games like Baldur's Gate (I've only played 1, not 2) being the canonical example. Everytime I run into an NPC or situation in Baldur's Gate it just feels like the characters start talking through a script that was written just for me, the player, to setup some problem for I, the player, to solve. This is of course the very definition of immersion breaking, because this artificial setup draws attention to the fact that you're playing a game, you're not actually in a real believable world. Baldur's Gate has fantastic combat (an area Ultima VII is terrible), but I think the way that the story is setup and told is boring and uninspired. And that goes similar for literally every other RPGs I've played: Mass Effect (\"Hi I'm an alien from a new race you've never met, would you like me to tell you everything about how my race fits into the universe?\"), Skyrim (Besthesda, masters of the anonymous, faceless NPC), the Witcher/Cyberpunk (the CD Projekt Red games are actually masters of this style of game design, because they use it as scaffolding for easily the best writing ever in video games, but they're still hampered by inherent weakness of the format: That the world feels like a prop to setup quests for the player to knock down).In contrast, the Ultima games feel like they create the world first, so that feels alive and believable. And I don't mean by writing a bunch of lore (writing has it's format already, books, use game mechanics to tell your story), but I mean by creating a world piece by piece, character by character, city block by city block, room by room, each piece of furniture, individual dresser by individual dresser. Environmental story telling, game mechanic story telling, storytelling native to the format of of games. The tavern goes here, the barber lives here, these three friends meet at this pub, at this time every day, and discuss this. Ultima does this for every town and every character in the game, for even the most trivial NPC. There's no anonymous, faceless, story-less NPCs acting as walking props like in every other RPG. And once that world feels like a real believable place, one that you could just sit and watch at have it be interesting, like people watching through cafe window--existing through an intersection of mechanics (how NPCs move, day-night-cycles, how they interact with the environment, e.g., the classic \"using flour to bake bread\"). Only then are the player-driven interactions then built on top of this world, e.g., if you hear a rumor that the shopkeeper seems to disappear for a couple of hours after their shop closes each night, well you can wait till 5 PM and follow them and see what they're up to. Since everything is scripted to this degree, it doesn't feel like you've entered into a pre-programmed scenario for following just this one NPC, you can follow anyone in the game this way, it just so happens that some NPCs might do something interesting after you follow them, like maybe you see them hide a key under a plant and you can go investigate.This way of having the player-driven gameplay come directly from mechanics that existed first to make a believable world, just makes for more interesting games in my opinion than anything that has come after. A game that's just a series of scripted encounters for the player to knock down is just less interesting.\n \nreply",
-      "As a kid who wasted countless hours in Ultima V and VI, thank you: you explain very well what made those games so great and how disappointed I am every time I have been since then (though I gotta say Morrowind was fairly good at mimicking that recipe)\n \nreply",
-      "A video I watched not too long ago expressed something similar as \"in some RPGs, society exists for you\" (e.g. you, a random escaped prisoner, can just waltz up to the local lord in Skyrim and be taken at face value). \"In others, you exist in a society\" (and the guards will keep you from even entering the nobles' district unless you're in good standing, which takes a considerable amount of the game to get).It's not quite the same thing, because that example is about how other people treat you, not whether they've got lives of their own; but in a broader perspective, it's still about how much the game seems to be a prop for the player's enjoyment vs. being a proper world that doesn't fall apart five days after the player wins.\n \nreply",
-      "While I'm on a Ultima VII nostalgia kick, I love this YouTuber Noah Antwiler's videos on the Ultima series. This clip (at about 16m22s, the link should jump directly there) is a funny telling of how wild some of the quest design in Ultima VII is https://www.youtube.com/watch?v=7mRb36-uMrc&t=16m22s\n \nreply"
-    ],
-    "link": "https://exult.sourceforge.io/index.php",
-    "first_paragraph": "Exult releases version 1.10.1This is a bugfix release. Accidentally we've introduced crashes in our Windows \n\tversion by not allowing older CPUs. Also the Android launcher wouldn't install our \n\tmods.Our short list of fixes:You can find the Android, Windows and macOS releases on our\n\tdownload page.\n\tPlease play with it and tell us of any problem you encounter using the Github\n\tdiscussion page or\n\tbug tracker.Exult releases version 1.10We seem to be now in a roughly two year rhythm of releases, so here we go:\n\tA much needed update of Exult and Exult Studio.\n\tMuch needed as we fixed a crash when entering combat pretty soon after the 1.8\n\trelease and of course people encounter this again and again.But we fixed much more since the 1.8 release:You can find the Android, Windows and macOS releases on our\n\tdownload page.\n\tPlease play with it and tell us of any problem you encounter using the Github\n\tdiscussion page or\n\tbug tracker.Ultima VI remake modLast year the\n\tUltima VI Remake project\n\tfi"
-  },
-  {
-    "title": "Discover the IndieWeb, one blog post at a time (indieblog.page)",
-    "points": 208,
-    "submitter": "vinhnx",
-    "submit_time": "2025-02-22T15:42:40 1740238960",
-    "num_comments": 67,
-    "comments_url": "https://news.ycombinator.com/item?id=43139953",
-    "comments": [
-      "Neat. I maintain a blog myself[1] and prefer reading content written by actual human beings, not corporate shills or spammers masquerading on Medium and Dev.to.But I feel like the whole indie web thing hasn\u2019t taken off because of discoverability issues. RSS and Atom are nice, but they aren\u2019t mainstream enough. Also, adding support for them is difficult for non-technical or even semi-technical people.My blog does support RSS, and I use a reader to keep tabs on people I find interesting. But personally, I\u2019m not a great fan of the protocol itself. It\u2019s old, written in XML. There is JSON RSS, but that\u2019s not widely supported and is fragmented as hell. Also, most RSS readers are just firehose feeds and don\u2019t offer much in terms of organization.I\u2019m yet to find a solution for this that I genuinely like.[1]: https://rednafi.com/\n \nreply",
-      "Are we really abandoning established, stable protocols because we don't like the serialisation format they use? The practical difference here between XML and JSON is negligible, the value here comes from the ecosystem (which is extensive on the  RSS/atom side, and non-existent on the other). As a user, you'll never interact with the XML. As a developer, if you're interacting with the XML rather than using one of the many, MANY, libraries, you're doing something wrong.\n \nreply",
-      "Not saying we need to abandon it, but I\u2019m not a big fan of RSS itself.Yes, there\u2019s an ecosystem, but it\u2019s neither extensive nor mainstream. Feed readers are hit or miss, and I haven\u2019t found one I like. Subscribing to 50 people is enough to make the feed unusable since there\u2019s little to no organization.While this isn\u2019t entirely the protocol\u2019s fault, its poor state is largely due to its lack of mainstream adoption\u2014too few people care about it. The protocol itself might also be part of the problem.So discoverability is still a problem because not enough people care about the existing solutions.\n \nreply",
-      "Okay, I'll shill my feed reader since it's an example of one that lets you organize feeds and doesn't present a firehose:\nhttps://addons.mozilla.org/en-US/firefox/addon/brook-feed-re...It's only for Firefox though because I like my reader being integrated into my browser and Firefox was the only one that supported a sidebar at the time. Looks like Chrome supports sidebars to now. So mayhaps I'll update it.\n \nreply",
-      "Shilling is welcome as long as it\u2019s not corporate ;) Love FF, this looks promising.\n \nreply",
-      "> Subscribing to 50 people is enough to make the feed unusable since there\u2019s little to no organization.What kind of organization do you want? Every feed reader I've ever used let me categorize/organize feeds in whatever way I wanted, but it's a manual process.\n \nreply",
-      "Exactly this, but with some automatic content grouping. Also, the ability to read the whole content in the reader instead of having to go to the site. But that depends on how RSS/Atom exposes the content; this is why I am not a big fan of the protocol. Too much fragmentation: RSS, RSS2, Atom.\n \nreply",
-      "I'm not sure I understand what you mean by 'automatic content grouping'. Are you talking about somehow automatically grouping the posts from disparate sites into buckets based on some criteria? Newsboat, for example, lets you do this with tags and queries: https://newsboat.org/releases/2.19/docs/newsboat.html#_query...I'm also not sure what fragmentation has to do with anything. I don't think I've used a feed reader that didn't understand all current flavors of RSS and Atom, so it makes absolutely no difference what the webmaster decided to use, my news reader can figure it out.It is a little bit annoying when the webmaster doesn't put the full text of the article in the news feed, and instead wants you to actually visit their site to read their stuff. I'd guess that they do that to make sure that you actually visit the site once in a while and might accidentally view an ad so they can make a few cents or they hope that you might see something else on their site you might be interested in or whatever. It also saves some bandwidth by not downloading the full text of an article if it turns out that I wasn't interested in it.\n \nreply",
-      "> the ability to read the whole content in the reader instead of having to go to the site. But that depends on how RSS/Atom exposes the content;It rather depends on the amount of content the RSS _author_ includes in the RSS feed. There's nothing in the RSS/Atom protocol that prevents you from reading the entire article, but some website creators decide to truncate the feed content.My RSS reader of choice, InoReader, has the option to download the original website which solves the problem. However, I have over 200 feeds and it's rare to find one without the entire content being included.\n \nreply",
-      "A lot of services, (like Feedbin in my prior reply) and a lot of reader applications will permit different ways of viewing the data to get full content to appear even in truncated feeds. That said, non-full content feeds are pretty rare outside of corporate media.\n \nreply"
-    ],
-    "link": "https://indieblog.page",
-    "first_paragraph": "Discover the IndieWeb, one blog post at a time.\n        This website lets you randomly explore the IndieWeb. Simply click the button below and you\n        will be redirected to a random post from a personal blog.\n    \n\n\ud83c\udfb2 Open Random Blog Post\n\n\nHint: you can drag the button to your bookmarks and have it always available when you want to be\n        inspired.\n    \n        This is a personal project by Andreas Gohr.\n        It is free of any trackers or advertising. JavaScript and cookies are optional.\n        If you like what you see, you can\n        sponsor me on Github or\n        donate\n            via Paypal. \ud83d\udc96\ufe0f\nFollow on Mastodon for updates and daily links.\n    "
-  },
-  {
-    "title": "DOGE's only public ledger is riddled with mistakes (nytimes.com)",
-    "points": 509,
-    "submitter": "belter",
-    "submit_time": "2025-02-22T12:03:22 1740225802",
-    "num_comments": 636,
-    "comments_url": "https://news.ycombinator.com/item?id=43138238",
-    "comments": [
-      "https://archive.is/YSlkm",
-      "For those who want to have a substantive discussion on the federal budget and believe these cuts are justified, I have a few questions (putting aside questions of constitutionality for this thread):1. There are claims that federal spending is out of control. How do you square that with the fact that spending as a percentage of GDP is only slightly elevated compared to the historical average going back to at least the 1970s, with the main deviation in the past few years coming from the after-effects of the pandemic? [1]2. Federal spending largely falls into a few categories: taking care of the elderly (36%), defense and veterans (20%), taking care of the poor or disabled (22%), and interest on existing debt (13%). [2] This adds up to 91% of the budget. The US population is aging, which means that 36% slice is going to naturally grow. What do you think should be cut, and how?3. The US pays far more for health care (28% of the budget if you include Medicare) and with worse outcomes on average. Why shouldn't the health insurance industry be the first item on the chopping block?4. Corporate tax receipts have been steadily falling as a percentage of GDP. [3] Why shouldn't corporations (that benefit from a healthy and educated workforce, a safe and secure environment, a working transportation system, etc.) be paying their fair share to keep the national debt in check?[1] https://fred.stlouisfed.org/series/FYONGDA188S[2] https://fiscaldata.treasury.gov/americas-finance-guide/feder...[3] https://fred.stlouisfed.org/graph/?g=1DUdb\n \nreply",
-      "> How do you square that with the fact that spending as a percentage of GDP is only slightly elevated compared to the historical average...?Why should it scale linearly with GDP? I can see an argument that it should scale linearly with population (maybe), but if GDP per capita increases, you could also expect better tech/productivity to allow gov spending per capita to decrease.> What do you think should be cut, and how?Given the complexity in the details, I don't think a 'serious discussion' about this is even possible in this forum. But if the question is 'do you think an effort should be made to look for things to cut', I'd say 'yes, of course.'> Why shouldn't the health insurance industry be the first item on the chopping block?Absolutely, it should be looked at! I don't think it's a trivial problem to solve, but as RFK was confirmed as the secretary of HHS we should expect a lot of scrutiny on big pharma and insurers.> Why shouldn't corporations .. be paying their fair share to keep the national debt in check?By definition of 'fair', they should. But again, tax receipts falling as a % of GDP isn't evidence that they're not.\n \nreply",
-      "It scales linearly because the same ratio of services to people continues. There aren\u2019t suddenly less kids to educate, less elderly that need health care or less cases in federal court as the population grows.\u2014-\nAs someone that has been in healthcare for 12 years it\u2019s broken because of the corporate structure and administrative state of companies. The payors and providers share the same incentive to raise rates because they each collect a percentage of premiums. This is a solved problem in every OCED country in the world except here. RFK isn\u2019t going to fix this, he hasn\u2019t even labeled the problem correctly. He has some ok ideas around nutrition but the rest of his ideas range from futile to dangerous.\u2014- \nCorporate tax contributions aren\u2019t at fair levels the national debt is increasing even while spending isn\u2019t. They get access to markets created by society and government and yet as debts increase their ratio of tax payments is going down. The fair level would cover social service costs. I haven\u2019t even gotten to the companies that receive subsidies or pay workers so little that they are in social support.\n \nreply",
-      "> It scales linearly because the same ratio of services to people continuesThat would be scaling with population, not GDP.> The payors and providers share the same incentive to raise rates because they each collect a percentage of premiumsThis must be an oversimplification. Why would insurers ever reject a claim, or spend time negotiating lower rates, if they're only incentivized to see health costs increase?\n \nreply",
-      "No, because the level of services and cost to provide them scales also.Inflation.  What paying workers costs.  What is considered an \u201cacceptable\u201d level of poverty vs abject poverty as we get richer.  New, expensive medical procedures.  And as the world gets richer, defense gets more expensive.We can\u2019t pay 1930 salaries to workers, field a 1930s army, nor would we consider it humane for our elderly to end up with an impoverished 1930s standard of living with 1930s medical care.Inflation is misleading for these purposes, too, because it includes hedonic adjustments.Re: insurers\u2014 it is an oversimplification. Suffice it to say they are at scale where they have market power and thus don\u2019t price where mr=mc, and the regulatory pressures and price opacity push them further away from efficiency.  They are not completely insulated from costs or market pressures, but it\u2019s fairly close.\n \nreply",
-      "> Why should it scale linearly with GDP? IGDP per se, maybe not, however we should still expect it to scale with the costs of services and goods that are correlated.Ex: If the dollar price of rent doubles, then dollar expenditures to keep the elderly from dying in ditches will likewise double, even with no change in population.\n \nreply",
-      "GDP increases are generally measured in real (i.e. inflation adjusted) terms, so a doubling of rent costs don't imply a larger GDP. If we're talking nominal GDP, then I'd agree we should expect gov expense to increase as well.\n \nreply",
-      "> Why should it scale linearly with GDP?It doesn't have to. But GDP is a good proxy for the tax base. If the problem is deficits and spending isn't increasing linearly with GDP, that suggests the problem is with taxation. Not spending.\n \nreply",
-      "Another factor is cost of debt. In a decreasing interest rate environment it's possible to run with increasing deficits without any major issues, but once you bounce off zero, even if thos deficits are not currently a problem, projections show that they will be.\n \nreply"
-    ],
-    "link": "https://www.nytimes.com/2025/02/21/upshot/doge-musk-trump-errors.html",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Tetris in PostScript (github.com/nst)",
-    "points": 10,
-    "submitter": "beefburger",
-    "submit_time": "2025-02-19T08:27:50 1739953670",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://github.com/nst/PSTris",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A Tetris implementation in PostScript\n      A Tetris implementation in PostScriptSee also:Terminal window 1:Terminal window 2:Play with arrows and space bar in window 2.Some implementation details inspired from MeatFighter.Tested with GhostView on macOS.\n        A Tetris implementation in PostScript\n      "
-  },
-  {
-    "title": "These years in Common Lisp: 2023-2024 in review (lisp-journey.gitlab.io)",
-    "points": 166,
-    "submitter": "trocado",
-    "submit_time": "2025-02-18T13:48:25 1739886505",
-    "num_comments": 27,
-    "comments_url": "https://news.ycombinator.com/item?id=43089415",
-    "comments": [
-      "The most unexpected news to me was that Hacker News, apparently, runs on top of SBCL now, via a secret implementation of Arc in Common Lisp!\n \nreply",
-      "Ya, when are we going to hear about \"Clarc\"? Where's the source?\n \nreply",
-      "I've worked on PAIP, and I think the GitHub.com version - https://github.com/norvig/paip-lisp/ - gets more attention than the GitHub.io version linked here. The GitHub.io version automatically gets updates, I think, but I'm not verifying the Markdown works over there.\n \nreply",
-      "Hey, my little webassembly demo was linked, cool. Nice article!\n \nreply",
-      "so was mine!\n \nreply",
-      "Everybody forgets about SICL. It's one of the few new CL implementations that's not proprietary or copyleft.https://github.com/robert-strandh/SICL\n \nreply",
-      "A few cool thing happened! I might give the CLOS course a try! I\u2019m a functional guy but I feel CLOS isn\u2019t your typical object system.\n \nreply",
-      "Indeed, most successful FP languages have their OOP like approaches.Another thing all modern Lisps have since the 1980's, is all major data structures, not only lists as many think when discussing Lisp.\n \nreply",
-      "Having the data structures is nice and all, but using them is kind of painful. They are certainly second class.Having to use accessor functions or destructuring macros instead of just a period or -> is often annoying too. The lack of syntax has cons as well as pros.\n \nreply",
-      "CLOS is great, but CL also supports pure typed FP with https://coalton-lang.github.ioCoalton progress is discussed briefly in the OP: https://lisp-journey.gitlab.io/blog/these-years-in-common-li...\n \nreply"
-    ],
-    "link": "https://lisp-journey.gitlab.io/blog/these-years-in-common-lisp-2023-2024-in-review/",
-    "first_paragraph": "\n\n NEW: 9 videos (86min) about CLOS on my Common Lisp course.\nOut of 7h+ of content. Rated 4.7/5. Learn more and stay tuned.\n\n\n        \ud83c\udfa5\n\n        I also have cool Lisp showcases\n        \n           on Youtube\n        \n        . The last ones: how to build a web app in Common Lisp, part 1 and 2.\n      This is a personal pick of the most interesting projects, tools,\nlibraries and articles that popped-up in Common Lisp land in the last\ntwo years.Newcomers might not realize how the Common Lisp ecosystem, though\nstable in many ways, actually evolves, sharpens, tries new solutions,\nproposes new tools, ships new libraries, revives projects. And\neveryone might enjoy a refresher.Here\u2019s my previous overview for 2022.The same warnings hold: I picked the most important links, in my\nview, but this list is by no means a compilation of all new CL\nprojects or articles published on the topic. Look for yourself on Reddit,\nQuicklisp releases, GitHub, and use your favourite search engine.There are too man"
-  },
-  {
-    "title": "Penn to reduce graduate admissions, rescind acceptances amid research cuts (thedp.com)",
-    "points": 8,
-    "submitter": "strangeloops85",
-    "submit_time": "2025-02-23T00:37:57 1740271077",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.thedp.com/article/2025/02/penn-graduate-student-class-size-cut-trump-funding",
-    "first_paragraph": ""
-  },
-  {
-    "title": "1561 Celestial Phenomenon over Nuremberg (wikipedia.org)",
+    "title": "Partnering with the Shawnee Tribe for Civilization VII (2k.com)",
     "points": 58,
-    "submitter": "handfuloflight",
-    "submit_time": "2025-02-19T02:16:04 1739931364",
-    "num_comments": 12,
-    "comments_url": "https://news.ycombinator.com/item?id=43097799",
+    "submitter": "moelf",
+    "submit_time": "2025-02-23T22:06:09 1740348369",
+    "num_comments": 27,
+    "comments_url": "https://news.ycombinator.com/item?id=43153662",
     "comments": [
-      "What do they mean by \"fight\"? The original text is very vague about it. How did they fight? Is there any other independent record of such a large scale event? Any resulting discussion or acknowledgement from official authorities at the time?If not, then this is likely unreliable and likely as good as fiction.\n \nreply",
-      "The flyer is the only source on this specific event. (More realistically, it mixes descriptions of multiple events with religious and military themes of the time.) Such flyers about celestial phenomena and miracle signs were popular in that time period. The Wikipedia article links to two other similarly strange ones.Hardly anyone nowadays takes them at face value, but it\u2019s also not completely clear what exactly inspired them.\n \nreply",
-      "Same type of report from Basel in 1566:https://en.wikipedia.org/wiki/1566_celestial_phenomenon_over...\n \nreply",
-      "This is one of those classic UFO lore documents. The German Wikipage is much more expansive in context, here's a short translated part that should tell you all you need to know about this one:> Magin concludes by pointing out that reports of supposed \u201cbattles in the sky\u201d were already very popular in antiquity and especially in the Middle Ages and were written down in astonishingly large numbers and distributed on leaflets and woodcuts. At this time, the Christian religion had a great influence on the everyday lives and world view of ordinary people and interpreted celestial phenomena of all kinds as \u201cdivine miraculous signs\u201d or \u201cwarning signs from God\u201d. Accordingly, the illustrations are littered with Christian symbols. Pious people saw themselves \u201cadmonished by God\u201d through such leaflets and miracle reports to confess and remain faithful to him. A report such as Glaser's would therefore come as no surprise, as the people of his time would have known how to interpret the leaflet correctly.\n \nreply",
-      "I can't be the only one who immediately thought \"Star Destroyer\" regarding the \"black spear\".\n \nreply",
-      "May the Force be with you, someuser54541\n \nreply",
-      "Maybe it was a glitch in space-time and they were witnessing scenes from WW3.\n \nreply",
-      "Just a drone swarm ? ;-)\n \nreply",
-      "Something else, from Japan, 18xx: https://en.wikipedia.org/wiki/Utsuro-bune\n \nreply",
-      "That was just me, got lost a little due to hiccups in the neural interface of my temporal spacionics. Had to reboot in flight. With a hammer, against my helmet!Singing Ghost Riders in the Sky, Yippie, Yah, Haa...\n \nreply"
+      "I would have preferred they partner with some UI experts.\n \nreply",
+      "Definitely LOL'd watching the video when it opened up with the singing native American trope. Marketing content is torture. I'll die on this hill.\n \nreply",
+      "Given that the content described in the partnership here is part of a DLC, I wonder if the Tribe is party to any profit sharing agreement with the game company.\n \nreply",
+      "I've worked with the Shawnee Tribe, they don't do anything for free. In fact, when they owe you money, they will send you a letter notifying you of a generous contribution you made to their hospital. They are flat out thieves and you can't do anything about it. They are a sovereign nation.\n \nreply",
+      "couldn\u2019t you just ignore them?\n \nreply",
+      "How? If you enter into a contract with them, it has to be litigated in their tribal court. Who do you think is going to win? The chief sits on the court as the judge and jury.\n \nreply",
+      "[flagged]",
+      "So basically because someone did something bad to them, they have become unethical thieves? And you're fine with it?(I know nothing about them, but your description of them ... yikes. You are making them out to be pretty terrible people.)\n \nreply",
+      "It sucks that all the Civ competitors seemed to have failed so far.  The genre really needs some innovation.\n \nreply",
+      "Paradox Interactive is right there and thriving? They\u2019re like the next step into the 4x rabbit hole and their fanbase is pretty loyal.\n \nreply"
     ],
-    "link": "https://en.wikipedia.org/wiki/1561_celestial_phenomenon_over_Nuremberg",
-    "first_paragraph": "\nAn April 1561 broadsheet by Hans Glaser described a mass sighting of celestial phenomena or unidentified flying objects (UFO) above Nuremberg (then a Free Imperial City of the Holy Roman Empire). Ufologists have speculated that these phenomena may have been extraterrestrial spacecraft. Skeptics assert that the phenomenon was likely to have been another atmospheric phenomenon, such as a sun dog,[1] although the print doesn't fit the usual classic description of the phenomena.[2][3]\nA broadsheet news article printed in April 1561 describes a mass sighting of celestial phenomena. The broadsheet, illustrated with a woodcut and text by Hans Glaser, measures 26.2 centimetres (10.3\u00a0in) by 38.0 centimetres (15.0\u00a0in). The document is archived in the prints and drawings collection at the Zentralbibliothek Z\u00fcrich in Z\u00fcrich, Switzerland.[4]\nAccording to the broadsheet, around dawn on 14 April 1561, \"many men and women\" of Nuremberg saw what the broadsheet describes as an aerial battle \"out of the"
+    "link": "https://civilization.2k.com/civ-vii/news/civilization-vii-shawnee-tribe-partnership/",
+    "first_paragraph": "With each Civilization title, we take great care to thoughtfully and authentically portray every culture on our roster of civilizations and leaders. During the development of Civilization VII, Firaxis Games reached out to Ben Barnes, chief of the Shawnee Tribe, to discuss the possibility of incorporating Shawnee history into the game. By chance, Chief Barnes is a longtime fan of strategy games, including the Civilization series, and these conversations eventually blossomed into an ongoing relationship of shared knowledge and resources which not only led to more accurate and meaningful in-game depictions, but also real gains in preserving Shawnee language and culture for future generations.In 2021, the team at Firaxis began working with the Tribe to make sure the in-game Shawnee civilization* and the visionary leader Tecumseh*\u2014who is included in Civ VII's expansive roster of playable leaders, voiced by Shawnee actor Dillon Dean\u2014were respectfully represented. In addition to faithfully in"
   },
   {
-    "title": "One Head, Two Brains: The origins of split-brain research (2015) (theatlantic.com)",
-    "points": 70,
-    "submitter": "shry4ns",
-    "submit_time": "2025-02-19T19:22:01 1739992921",
-    "num_comments": 66,
-    "comments_url": "https://news.ycombinator.com/item?id=43106245",
+    "title": "Show HN: Jq-Like Tool for Markdown (github.com/yshavit)",
+    "points": 149,
+    "submitter": "yshavit",
+    "submit_time": "2025-02-23T20:05:49 1740341149",
+    "num_comments": 32,
+    "comments_url": "https://news.ycombinator.com/item?id=43152704",
     "comments": [
-      "https://web.archive.org/web/20241228215151/https://www.theat...https://archive.ph/gJ32A",
-      "The confabulation to justify picking out related images that the left brain never observed (chicken and snow shovel in the article) reminds me profoundly of the confident slop produced by LLMs. Make you wonder if llms might be one half of the \"brain\" of a true AGI\n \nreply",
-      "That's a theme in the novel \"Neuromancer\".\n \nreply",
-      "It certainly looks like what LLMs are doing is one aspect of what a brain is doing.\n \nreply",
-      "Key point here is \"looks like\" I suggest if you want to argue this further to invest the time asking Brain Scientists what they think. Not AI scientists but people who actually work in cognition.(Not a brain scientist btw)\n \nreply",
-      "along those lines, maybe dreaming is piecing together new adventures imagined from snippets of reality.\n \nreply",
-      "Those videos about ai making up a game after having watched countless hours of streaming is fucked up. It looks completely how dreams do\n \nreply",
-      "confident slop.\n \nreply",
-      "The confidence seems to be an artifact of fine tuning.   The first instruction trained models were given data sets with answers to questions but generally omitted non answers to things the model didn't know.Later research showed that models know that they don't know certain pieces of information, but the fine tuning constraint of providing answers did not give them the ability to express that they didn't know.Asking the model questions against known information can produce a correct/incorrect map detailing a sample of facts that the model knows and does not know.  Fine tuning a model to say \"I don't know\" in response to the those questions where it was incorrect can allow it to generalise the concept to its internal concept of unknown.It is good to keep in mind that the models we have been playing with are just the first ones to appear.   GPT 3.5 is like the Atari 2600.  You can get it provide a limited experience for what you want and its cool that you can do it at all, but it is fundamentally limited and far from an ideal solution.   I see the current proliferation of models to be like the Cambrian explosion of early 8 bit home computers. Exciting and interesting technology which can be used for real world purposes, but you still have to operate with the knowledge of the limitations forefront in your mind and tailor tasks to allow them to perform the bits they are good at.  I have no-idea of the timeframe,  but there is plenty more to come.  There have been a lot of advances revealed in papers.  A huge number of those advances have not yet coalesced into shipping models.   When models cost millions to train you want to be using a set of enhancements that play nicely together.  Some features will be mutually exclusive.  By the time you have analysed the options to find an optimal combination, a whole lot of new papers will be suggesting more options.We have not yet got the thing for AI that Unix was for computers.  We are just  now exposing people to the problems that drives the need to create such a thing.\n \nreply",
-      "I believe most confident statements  people make, are established the same way. There are some anchor points (inputs and vivid memories) and some part of the brain in some stochastic way dreams up connections. Then we convince ourselves that the connections are correct, just because they match some earlier seen pattern or way of reasoning.\n \nreply"
+      "> GitHub PRs are Markdown documents, and some organizations have specific templates with checklists for all reviewers to complete. Enforcing these often requires ugly regexes that are a pain to write and worse to debugThis is because GitHub is not building the features we need, instead they are putting their energy towards the AI land grab. Bitbucket, by contrast, has a feature where you can block PRs using a checkbox list outside of the description box. There are better ways to solve this first example from OP readme. Cool project, I write mainly MDX these days, would be cool to see support for that dialect\n \nreply",
+      "Not only is GitHub focused on AI, but they\u2019re also making their UI slower and jankier by rewriting it in React.I feel like a \u201cLinear for GitHub\u201d is due.\n \nreply",
+      "https://pierre.co/\n \nreply",
+      "Is it true that it is React\u2019s fault? Is there any other replacement for heavy user interaction, that is clearly more performative? You cannot do that on server side.\n \nreply",
+      "GitHub worked great for 15+ years without React everywhere. I'm finding interacting with issues to be a whole lot jankier over the past few months.\n \nreply",
+      "> Is there any other replacement for heavy user interaction, that is clearly more performative?Well-written React?\n \nreply",
+      "SolidJS\n \nreply",
+      "Vue, Svelte, Solid.\n \nreply",
+      "Linear? That website makes my laptop heat up like nuts.\n \nreply",
+      "If also hijacks standard browser shortcuts: I try to open the file menu with alt-f, but instead it (un-) marks the issue as \"Favorite\".\n \nreply"
     ],
-    "link": "https://www.theatlantic.com/health/archive/2015/07/split-brain-research-sperry-gazzaniga/399290/",
-    "first_paragraph": "How a radical epilepsy treatment in the early 20th century paved the way for modern-day understandings of perception, consciousness, and the selfIn 1939, a group of 10 people between the ages of 10 and 43, all with epilepsy, traveled to the University of Rochester Medical Center, where they would become the first people to undergo a radical new surgery.The patients were there because they all struggled with violent and uncontrollable seizures. The procedure they were about to have was untested on humans, but they were desperate\u2014none of the standard drug therapies for seizures had worked.Between February and May of 1939, their surgeon William Van Wagenen, Rochester\u2019s chief of neurosurgery, opened up each patient\u2019s skull and cut through the corpus callosum, the part of the brain that connects the left hemisphere to the right and is responsible for the transfer of information between them. It was a dramatic move: By slicing through the bundle of neurons connecting the two hemispheres, Van"
+    "link": "https://github.com/yshavit/mdq",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        like jq but for Markdown: find specific elements in a md doc\n      \n\n\nmdq aims to do for Markdown what jq does for JSON: provide an easy way to zero in on specific parts of a document.For example, GitHub PRs are Markdown documents, and some organizations have specific templates with checklists for all\nreviewers to complete. Enforcing these often requires ugly regexes that are a pain to write and worse to debug. Instead,\nyou can (for example) ask mdq for all uncompleted tasks:mdq is available under the Apache 2.0 or MIT licenses, at your option. I am open to other permissive licenses, if you\nhave one you prefer.Any of these will work:Simple example to select sections containing \"usage\":Use pipe (|) to chain filters together. For example, to select sections containing \"usage\", and within those find\nall unordered list items:The filter "
+  },
+  {
+    "title": "Making any integer with four 2s (thegreenplace.net)",
+    "points": 78,
+    "submitter": "LorenDB",
+    "submit_time": "2025-02-23T02:25:51 1740277551",
+    "num_comments": 91,
+    "comments_url": "https://news.ycombinator.com/item?id=43145753",
+    "comments": [
+      "I think my preference is more towards conciseness.I made a stack machine with single character instructions and needed to solve a variation of this problem.   I had just the digits 0 through 9.  The characters '23' would be push 2 followed by push 3.  To actually represent the number 23 you would use    45*3+\n or something similar.\n\nThat left me with the problem of how to encode each integer in the fewest characters.Tools at hand.        The digits 0 through 9\n        'P':  Pi\n        '*':  (a * b),\n        '/':  (a / b),\n        '-':  (a - b),\n        '+':  (a + b),\n        's':  sin(a),\n        'c':  cos(a),\n        'q':  sqrt(a),\n        'l':  log(a),\n        '~':  abs(a),\n        '#':  round(a),\n        '$':  Math.floor(a),\n        'C':  clamp(a),\n      \n        '<': min(a, b),\n        '>': max(a, b),\n        '^':  pow(a, b),\n        'a': atan2(a, b),\n        '%': positiveMod(a, b),\n        '!': (1 - a),\n        '?': (a <= 0 ? 0 : 1)\n        'o':   a xor b scaled by c;   ((a*c) xor (b*c))/c\n\n        'd':  duplicate the top stack entry\n        ':':  swap the top two stack entries\n        ';':  swap the top and third stack entries\n\nI have wondered about revisiting the stack machine with a complex number stack to see what I can come up with.(Next time I post something like this I am not going to use my phone)\n \nreply",
+      "What about making each digit be the instruction \"times 10 plus digit\", with a different instruction to push a 0, like a space?  Then you can represent 23 with \" 23\".\n \nreply",
+      "The answer in general may be uncomputable.https://en.wikipedia.org/wiki/Kolmogorov_complexity\n \nreply",
+      "Kolmogorov complexity is uncomputable because it admits Turing complete languages, and reduces to the halting problem. If the language you admit isn't Turing complete, then the Kolmogorov complexity of the thing is computable.It looks like OP's language is not Turing complete. It always terminates. You can just do a breadth first search on the program space. The first program you get that outputs the number you want is the shortest program.If it were Turing complete, you can't do this, because eventually you'll find a program that just keeps running for like a really long time. Is it running because the program never halts? Or is will it halt eventually and output the number you want? You can't know for sure.\n \nreply",
+      "AHH but in practice you are limited to 50 characters.https://c50.fingswotidun.com/Which gives you a finite problem.  The VM cannot loop or define functions (yet, anyway) so it doesn't go all busy beaver on you.\n \nreply",
+      "I suspect a whole lot of numbers are going to get encoded in base 9 or 10 as mostly repetitions of digit + * digit + * or equivalent.\n \nreply",
+      "Reminds me of https://www.hacker.org/hvm/ (2008)\n \nreply",
+      "I feel like the second you allow functions you've thrown the spirit of the game.Ex, the gamma function is (n-1)! So now you're making 7 with four twos and a one.  You've broken the spirit.If I can hide numbers in a function call... It's trivially easy to always succeed.\n \nreply",
+      "> I feel like the second you allow functions you've thrown the spirit of the game.+, - (both binary and unary), \u00d7, \u00f7 are functions, as is raising to a power. Why would you allow them?As always in this kind of things, one can disagree about what constitutes an elementary function, but I don\u2019t think taking square roots should be disqualified in this puzzle.> Ex, the gamma function is (n-1)!And 2 is just S(S(0)) (https://en.wikipedia.org/wiki/Peano_axioms)> If I can hide numbers in a function call... It's trivially easy to always succeed.I wouldn\u2019t call the construction given by Paul Dirac trivial. Do you think it is, or do you know of a simpler one?\n \nreply",
+      "> And 2 is just S(S(0))This is a good example of why you need rules on which functions are allowed. Repeated application of the successor function makes the entire exercise trivial\n \nreply"
+    ],
+    "link": "https://eli.thegreenplace.net/2025/making-any-integer-with-four-2s/",
+    "first_paragraph": "There's a cute math puzzle that can be interesting to folks on very\ndifferent levels:Some examples can be done by elementary school kids:In middle school, kids learn about exponents, factorials, etc. which expands the\nrange considerably:Then come the tricks; for example, the number 22 (twenty two) can be seen as\na valid use of two 2s, and so on; so we can have:Getting to 7 is notoriously difficult, but if you allow even more mathematical\ntools like the Gamma function,\nit becomes easy:The more math skill people have, the more numbers they can make. See\nthis thread\nfor some fun concoctions using integrals, repeating fractions and combinatorial\noperators. One of my favorite examples involves complex numbers:So the fun doesn't end even after one graduates from university! In fact, this\nseems to have been a favorite pastime for mathematicians in the 1920s. Until\nPaul Dirac ruined it for everyone\nby finding a general solution for every number.It's all about nested square roots:If the square "
+  },
+  {
+    "title": "Defragging my old Dell's UEFI NVRAM (artemis.sh)",
+    "points": 29,
+    "submitter": "todsacerdoti",
+    "submit_time": "2025-02-23T23:23:04 1740352984",
+    "num_comments": 6,
+    "comments_url": "https://news.ycombinator.com/item?id=43154218",
+    "comments": [
+      "Very interesting. I wonder if this a result of some \"swiss cheese\" effect due to constraints around UEFI and NVRAM themselves, when updating EFI variables.NVRAM must maintain atomicity of memory transactions for power failures. Its whole purpose is to store data when you turn your computer off. As a result, when deleteing an EFI variable, you can't manage the individual bytes - you have to delete a whole entry (which can be rather large - based on the EFI specification and the code used for edk2, e.g. https://github.com/tianocore/edk2/blob/83a86f465ccb1a792f5c5...). Deleting these entries might become a problem when you start running against memory constraints and what slots in memory are actually available; hence a possible fragmentation issue.Additionally, I appreciated how short and specific this blog post was. I enjoy this style of post of someone encountering a problem and solving it.\n \nreply",
+      "I imagine it's not fragmentation in the strictest sense. It's more than likely it's just the result of a bug. Perhaps garbage collection wasn't being triggered and space wasn't getting freed up. It could be that the author caused the problem themselves by how they were managing their nvram.\n \nreply",
+      "There's also the fact that an NVRAM variable is never overwritten inplace; the new value is written elsewhere, and the pointer is updated to use the address of the new value. This is probably mainly for wear-leveling, but I guess it could also introduce fragmentation?Just an observation from when I was debugging a board that selfdestructed when booting a particular efi-file so I had to dig into the flash contents to figure out why, but I think this particular code was straight from tianocore.\n \nreply",
+      "True, I was trying to find the variable storage requirements in the UEFI specification but couldn't (is it Section 3? 8?), so I resorted to linking to the struct definition in the EFI shell package that the author used.\n \nreply",
+      "I believe it was in the mid-2000s that BIOSes started storing configuration data in the same SPI flash they occupied, and UEFI just continued that trend and expanded on it. That removing the CMOS battery no longer clears it automatically is both a good and bad thing, and another problem it's created is that flash has a limited number of write cycles - and every time the system is booted, and possibly even while running, writes occur.\n \nreply",
+      "A safer alternative could be to reset BIOS settings to factory defaults - that should reset NVRAM as well.\n \nreply"
+    ],
+    "link": "https://artemis.sh/2025/02/22/uefi-nvram-defrag.html",
+    "first_paragraph": "I\u2019m setting up an old Dell box (2011-era tech). I was migrating to some new boot\ndrives and setting up grub on them again. Got to the point of deleting the old\nboot entries and adding new ones, and got an error like Could not prepare boot\nvariable: No space left on device. Weird, because there weren\u2019t that many EFI\nvariables, but df -h also reported that efivars was full:funky.It wasn\u2019t due to a glut of boot entries either; I\u2019m pretty keen on keeping the\nold ones cleared out, so we only had a few on here.Well, I thought maybe there was a lot of dead space in the nvram that wasn\u2019t in\nuse but also couldn\u2019t be allocated. So I booted an EFI\nshell, and did this:Please be careful with these commands, it worked for me but for all I know it\nmight brick your setup. Check help dmpstore first.What this does is:After doing this, I rebooted, and had plenty of space:And all my UEFI configuration seems to be right as I left it before doing this.\nSo I think this confirms my suspicions."
+  },
+  {
+    "title": "European word translator: an interactive map showing words in over 30 languages (ukdataexplorer.com)",
+    "points": 101,
+    "submitter": "gnabgib",
+    "submit_time": "2025-02-23T19:53:03 1740340383",
+    "num_comments": 30,
+    "comments_url": "https://news.ycombinator.com/item?id=43152587",
+    "comments": [
+      "Wiktionary has dialect maps for common Chinese vocabulary that showcases the differences in terminology across various regions of Chinese, rather than their similarities. Example: sleep -> https://en.wiktionary.org/wiki/Template:zh-dial-map/%E7%9D%A... , hide-and-seek -> https://en.wiktionary.org/wiki/Template:zh-dial-map/%E6%8D%8...p.s. I'm saying this because most of these terms that has a dial-map are common in daily conversation. The differences in written Chinese vocabulary aren't as significant; how scientific and technical terms are expressed is largely determined by your administrative region.\n \nreply",
+      "Ukrainian and russian words often use the same letters but are pronounced very differently due to distinct phonetics. On the other hand, some Polish and Czech words sound the same or very similar to Ukrainian but look quite different because of their different alphabets. Therefore, phonetic transcription would be a valuable improvement.\n \nreply",
+      "I can mostly speak for German. It seems to mix them all into one general language. But there are a lot of local differences between north and south of Germany, Switzerland and Austria. And it\u2019s not just dialect, but really different words that might not be understood everywhere. \nIf you look at the english part it has at least three different words. Similar in Spanish.\n \nreply",
+      "Same for Belgium, Google/Apple translate has never been able to correctly translate French and Dutch for us while our vocabulary choices are drastically different from neighbouring France and The Netherlands.\n \nreply",
+      "My best guess:- Swiss German and Austrian German didn't make the cut because Switzerland and Austria are on good terms with Germany and don't mind if we call their languages a dialect of German. Not only is that justification to exclude them, they are also not in Google translate for this reason (which this map uses)- Luxembourg did mind and went to great lengths to get their German dialect recognized as a separate language, is in Google translate, but Wikipedia lists them as only 300k speakers- Frisian is seen as a distinct language because of how different it is, is in Google translate, but has about 200k speakers- Similarly, Scottish Garlic is in Google translate has only 70k-200k speakersThe map is consistent if you set the goal of only considering languages that are in Google translate and have at least 500k speakers.I do think these rules detract from the map. Frisian and Luxembourgish are interesting as \"in-between\" languages (Luxemburgish has a lot of French influence, Frisian is closer related to English). And Swiss German has many distinct words that are very different from their German counterparts, so for the purposes of this map it really should be a language.\n \nreply",
+      "IIUC, the Swiss German can't make a cut as there's no standard written form (and with it, not much resources), and the variations between the cities are pretty significant.\n \nreply",
+      "There really isn't a single \"Swiss German\" dialect. It is rather a family of dialects, and this family is again part of the larger family of \"Alemannic German\" dialects, which are spoken in most of southwestern Germany, Switzerland and western parts of Austria [0]. It is really very hard to clearly demarcate \"Swiss German\" from dialects spoken for example in the Black Forest, around the city of Freiburg im Breisgau, in Vorarlberg or even (historically) in Alsace. My own dialect is Swabian (also Alemannic), and I never had trouble understanding the local dialects around Basel, Berne or Zurich. It is easier for me to understand these Swiss German dialects than, for example, Bavarian dialects.[0] https://en.wikipedia.org/wiki/Alemannic_German#/media/File:A...\n \nreply",
+      "> And it\u2019s not just dialect, but really different words that might not be understood everywhere. If you look at the english part it has at least three different words. Similar in Spanish.I think you cannot really compare the minuscule differences between \"Standard German\", \"Austrian Standard German\", and \"Swiss Standard German\" to the differences between English, Irish and Welsh, which are not even from the same language family. Also, the tool is based on Google Translate, and AFAIK Google Translate doesn't differentiate between them.Comparing the tool to this map [0], it seems to do a pretty good job in capturing all major languages in Europe, while ignoring their dialects.But I agree that I would be great if you could zoom into the map and also show differences in local dialects. ChatGPT seems to be pretty good at translating to different variants of standard German, or German dialects [1][0] https://en.wikipedia.org/wiki/Languages_of_Europe#/media/Fil...[1] https://chatgpt.com/share/67bba4db-9458-800c-b5f8-fd3fa196d4...\n \nreply",
+      "For an example take a look at this map of the different words used in German for \"meatballs\":https://www.atlas-alltagssprache.de/runde-7/f01f/\n \nreply",
+      "This is very cool. Also, it seems like Romanian is the only language where the word for turtle translates literally to \"shelled frog\".\n \nreply"
+    ],
+    "link": "https://ukdataexplorer.com/european-translator/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Tokio and Prctl = Nasty Bug (kobzol.github.io)",
+    "points": 24,
+    "submitter": "ingve",
+    "submit_time": "2025-02-23T22:37:57 1740350277",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://kobzol.github.io/rust/2025/02/23/tokio-plus-prctl-equals-nasty-bug.html",
+    "first_paragraph": "\n        Feb 23, 2025\n      |Reddit discussionRecently I encountered a bug so cute that I immediately knew that I will want to share it on my blog. It was one of those bugs that even Rust can\u2019t save you from. It occurred in HyperQueue (HQ), a distributed task scheduler written in Rust that I work on.Despite the fact that HyperQueue is a pretty non-trivial distributed application, and it has long been developed mostly only by two people that only have a limited time available for it, it has so far been very reliable, which always fascinates me1. But since we have released version 0.21.0, we have received several issue reports about a major problem, where tasks spawned by HyperQueue were getting terminated after a few seconds, apparently without any obvious reason. One reported issue was even weirder, as tasks were executing normally, but the very last executed task was always failing, no matter what task it was. This was quite unusual to us, as HQ usually works pretty well, and our CI t"
+  },
+  {
+    "title": "Sublinear Time Algorithms (csail.mit.edu)",
+    "points": 12,
+    "submitter": "gone35",
+    "submit_time": "2025-02-23T23:42:33 1740354153",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://people.csail.mit.edu/ronitt/sublinear.html",
+    "first_paragraph": "\n\nSublinear time is a daunting goal since it allows one to read only\na miniscule fraction of the input.   There are problems for\nwhich deterministic exact sublinear time\nalgorithms are known.  However, for most natural problems the\nalgorithm must use randomization and must give an answer which is in\nsome sense approximate.\nThere is a growing body of work aimed at finding sublinear\ntime algorithms for various problems.\nRecent results have shown that there are classical\noptimization problems whose values can be approximated in\nsublinear time.  In addition,  property testing , an alternative\nnotion of approximation for decision problems, has been\napplied to give sublinear algorithms for a wide variety of\nproblems.\nOne can also\ntest various properties of distributions, where access to the distribution\nis given through samples generated according to the distribution, in\ntime sublinear in the size of the support of the distribution.\n\n\nMany examples of problems that can be solved in sublinear"
+  },
+  {
+    "title": "Orchid's nutrient theft from fungi shows photosynthesis-parasitism continuum (phys.org)",
+    "points": 26,
+    "submitter": "wglb",
+    "submit_time": "2025-02-22T00:03:58 1740182638",
+    "num_comments": 2,
+    "comments_url": "https://news.ycombinator.com/item?id=43134673",
+    "comments": [
+      "Paper: https://dx.doi.org/10.1111/tpj.70045\n \nreply",
+      "Sounds more symbiotic than parasitic.\n \nreply"
+    ],
+    "link": "https://phys.org/news/2025-02-orchid-nutrient-theft-fungi-photosynthesis.html",
+    "first_paragraph": ""
+  },
+  {
+    "title": "WhiteSur: macOS-like theme for GTK desktops (github.com/vinceliuice)",
+    "points": 191,
+    "submitter": "nateb2022",
+    "submit_time": "2025-02-23T17:43:34 1740332614",
+    "num_comments": 115,
+    "comments_url": "https://news.ycombinator.com/item?id=43151294",
+    "comments": [
+      "I'll be honest my experiences with themes for Linux have been quite poor. Even with good ones it works for some apps but not others and you end up spending all your time fixing edge cases or just dealing with some windows not looking right.My solution has been to just use the default Ubuntu theme that ships with Gnome. I find that theme just seems to work the best across most of my apps with a few small exceptions, compare this to other themes I've tried where only like half of the windows look right.I'm sure there are better themes out there and I could achieve perfect consistency if I dug deep enough and tweaked enough things. But at least in my case I already spend many hours on my computer coding and something like desktop theming is super low on my list, it's one of those things I just need to work because I don't have time to be focusing on that crap.The same goes for my desktop environment. I am well aware that Gnome is not the best and if I put it enough effort I could have a dream setup with XFCE or one of the many tiling window managers. But for me it just goes back to not having time, the thing I love about Gnome is that even though it may be more of a resource hog, it just f*king works.\n \nreply",
+      "I\u2019ve not actually built any themes so take these thoughts with a grain of salt, but my impression is that with GTK at least, most of the problems come down to CSS conflicts and libadwaita doing its own thing separate from GTK proper. It seems like a lot of GTK apps hardcode colors, fonts, etc instead of parameterizing too, which means they aren\u2019t going to respond to theme changes correctly. All together these combine to produce a pretty spotty theming experience.Things seem a bit better on the Qt side of things, but it suffers resolution scaling issues. Most KDE/Qt themes I\u2019ve tried can\u2019t draw correctly at non-integer scales.Personally I think that CSS is actually pretty badly suited for the use case of desktop UI toolkit theming. It\u2019s fine for one-off apps but quickly becomes a mess when it needs to be part of a larger more flexible system.\n \nreply",
+      "Its just an impossible problem.Apps like to make very custom interfaces. All of CSS is great.Platforms like consistency, so they maintain their own complex CSS.Users like to customize everything, so CSS is powerful but will always break as its fighting the others.\n \nreply",
+      "personally I don't get it. If I wanted a macbook, I'd get a macbook. These things are cute and fun, ok, but do people actually want to use it?\n \nreply",
+      "Desktop environments are inherently very personal things and so what one person might find great, someone else might consider unusable. Themes are a good way to add room for user preference without forcing the user to change desktop environments entirely.For example, before libadwaita screwed it all up I used to like to apply a custom theme to GNOME to cut down on the egregious padding everywhere, making the UI a much better fit for non-touch desktop OS use on a small laptop screen. There were several themes that accomplished that very well.\n \nreply",
+      "I think it made substantially more sense in the 1990s.For one, Gtk+ used to be advertised as a multi platform toolkit, with a port of GDK to Win32. Making Gtk+ widgets look like Win32 made sense for that.Secondly, there were two groups of people using Linux and X11 in that era: one group who were exiles from commercial Unix, and another, faster growing group coming from Windows. For the former group, it was reasonable to want widgets to look more like Motif or Athena. The latter group wanted a more modern look, which could depart from old school Unix workstations.\n \nreply",
+      "In fact, the only change from your characterisation is that the toolkit has been renamed from Gtk+ to GTK. Here is an example of a current claim: \"GTK is a library for creating graphical user interfaces. It works on many UNIX-like platforms, Windows, and macOS.\" https://docs.gtk.org/gtk4/overview.htmlI think what has changed is user expecations; in the the 1990s, there was an expectation that programs should look like the native toolkit; whereas by now, it's even questionable whether there is a native toolkit on Windows (due to the range of choice, each of which a noticeably different in look and feel) and program-specific appearance is the norm on mobile and web applications. Nowadays, you could probably write a slightly customised Adwaita app for Windows and you'd get by more satisfactorily than if you wrote a plain GTK app and tried to theme it to modern Win32.\n \nreply",
+      "I just like how the cursor looks. I'd never buy a mac but I can admit the icons and design look nice.\n \nreply",
+      "Maybe Posy cursor would be a good substitute for you: https://michieldb.nl/other/cursors/\n \nreply",
+      "there's cursor themes on linux and although you have to apply them in the usual wonky linux way, it's totally possible and it is independent of the window manager.Of course some applications do their own cursor management so if you do it poorly your cursor hops around themes as you drag it over various windows based on the toolkit they use but then again, that's what we all signed up for.\n \nreply"
+    ],
+    "link": "https://github.com/vinceliuice/WhiteSur-gtk-theme",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        MacOS like theme for all gtk based desktops\n          A macOS like theme for Linux GTK Desktops  If you like my project, you can buy me a coffee, many thanks \u2764\ufe0f !Don't worry, WhiteSur installer already provides all of those dependencies.Run git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1Run ./install.sh to install the default WhiteSur GTK theme pack.Usage:  ./install.sh [OPTIONS...]Since the release of Gnome 43.0, more and more built-in apps use libadwaita now, and libadwaita does not support custom themes, which means we cannot change the appearance of app using libadwaita through gnome-tweaks or dconf-editor. For users who love custom themes, it\u2019s really sucks!Anyway if anybody who still want to custom themes we can only do this way:that is to use the theme file to overwrite the gtk-4.0 configuration file"
+  },
+  {
+    "title": "Vietnamese Graphic Design (vietgd.com)",
+    "points": 213,
+    "submitter": "keiferski",
+    "submit_time": "2025-02-23T14:00:25 1740319225",
+    "num_comments": 29,
+    "comments_url": "https://news.ycombinator.com/item?id=43149266",
+    "comments": [
+      "One of the things my wife had when we met was a large collection of Vietnamese posters like these, which she framed and hung around the perimeter of our powder room. It\u2019s so cool to see more of it.I love some of the colour palettes. In particular, the green/orange or green/pink ones. They aren\u2019t entirely unique on their own, but combined with the art style it feels very distinct.My favourite is one of a woman with a basket of watermelons on her back. The colours are like an intense fiery orange with deep greens and almost blue tones on the melons. I really need to translate the messages on them.\n \nreply",
+      "Wow, this is terrific. I love it. Lots of art online is curated with \"traditional\" art. This takes cultural movements and finds art associated with those moments. So fascinating!\n \nreply",
+      "I love these types of posters. A couple months ago someone posted prints from Canada's Department of Agriculture. Lots of fun ones there too. Anyone have other examples?https://www.fifteen.ca/collections/agricultural-arts\n \nreply",
+      "Three collections of propaganda posters:Soviet posters: https://www.sovietposters.com/Chinese posters: https://chineseposters.net/Vietnamese posters: https://vietnampropaganda.com/\n \nreply",
+      "This is such a great collection!However, many of the translations are incorrect. For example:This text:> D\u01b0\u1edbi ng\u1ecdn c\u1edd quang vinh c\u1ee7a \u0111\u1ea3ng, nh\u00e2n d\u00e2n Ngh\u1ec7-An X\u00f4 Vi\u1ebft anh h\u00f9ngIs incorrectly translated as:> Under the glorious flag of the Vietnamese Communist Party, the people of Nghe An will crush their American enemies.But it should be:> Under the glorious flag of the [Vietnamese Communist] Party, the people of Nghe An are Soviet heroes.There was no mention of \"crush their American enemies\" at all.I would exercise caution and encourage the readers to double check the translation.Edit: after reading more of the page, I changed my post from \"some incorrect\" to \"many incorrect\"\n \nreply",
+      "Hi there! Thank you for expressing your concerns, I will make it more clear when people visit the site to be cautious about the translations, next time I am able to update the website.I unfortunately do not speak Vietnamese (am of Viet heritage) so the \"translations\" usually come from the articles where I found the poster since I am not able to translate it myself: https://saigoneer.com/saigon-music-art/4360-vietnamese-women...\n \nreply",
+      "No worries at all! If the site is open sourced, I can help update the translation text.Thanks for the site, and keep up the great work!\n \nreply",
+      "The anti-Nixon one, where his face is plastered on a falling bombshell and he's shooting lightning bolts out of his eyes at women and children, I think that's my favorite.\n \nreply",
+      "Hi everyone! Thank you for posting this site. I started this project while I was (and still am) a full-time student.As another user mentioned, please be take EXTRA CAUTION when it comes to the translations! The \"translations\" typically come from the website where I found the artwork from, since I do not speak Vietnamese (am of Vietnamese heritage). The source of each image can be found with the source button. I try my best to fact-check, but since there aren't as many resources for Vietnamese design, I may unknowingly post inaccurate information. I will be more cautious in the future and next time I can update the website. I will double check the translations as well, if possible. I am really sorry in advance for spreading any misinformation.I hope to dedicate more time to this project in the future. Currently, I am a full-time student and work part-time outside of school as well, so it's become challenging to keep it updated and do thorough research.\n \nreply",
+      "Great work OP, love this site\n \nreply"
+    ],
+    "link": "https://vietgd.com/",
+    "first_paragraph": "FiltersMediumYear"
+  },
+  {
+    "title": "But good sir, what is electricity? (lcamtuf.substack.com)",
+    "points": 279,
+    "submitter": "rapawel",
+    "submit_time": "2025-02-23T11:03:37 1740308617",
+    "num_comments": 143,
+    "comments_url": "https://news.ycombinator.com/item?id=43148438",
+    "comments": [
+      "A point not mentioned by the article: the electrons in a metal at room temperature are already moving very quickly due to their thermal energy (at the order of 100km/s) \u2014 much faster than the speeds quoted in the article, which is what's called the \"drift velocity\".This thermal motion is essentially random, and the electrons constantly scatter off the nuclei every which way, so it cancels out and doesn't create a net current.So, it's less than the electrons gently move under the influence of an electric field, and more that it introduced a slight bias in the existing thermal motion.E: To clarify in case it may have been unclear, this is unrelated to the speed of propagation of the electric field, which as the article says is the speed of light.\n \nreply",
+      "It probably should be noted that the reason the drift velocity is so much lower than velocity due to thermal motion is that electrons cannot move very far before they collide with an atom which changes their direction.The mean distance they move in a copper wire between collisions is about 0.00000004 meters. At 100 km/s it would take 0.4 picoseconds to travel that distance.\n \nreply",
+      "That reminds me of something interesting about biological cells. The molecules in that thick stew might be bouncing around at 20-250 miles per hour, depending on their size.\n \nreply",
+      "More importantly, this means that any given molecule will, in a very short time, bump into almost every other molecule in the cell. Thus, the answer to the question, how does protein X find fuel, or resource Y, or a protein Z it needs? Simple: it doesn't - it eventually just bumps into it. Similarly, in simple cells, there may be no need to transport stuff from place to place - chemical diffusion is fast enough!\n \nreply",
+      "What\u2019s really mind blowing is how fast the gluons inside the protons inside those molecules are moving.\n \nreply",
+      "How fast are those moving?\n \nreply",
+      "Speed of light.\n \nreply",
+      "> electrons cannot move very far before they collide with an atom which changes their directionAnd yet we know it\u2019s mostly just empty space. I\u2019m assuming it\u2019s more because of the electromagnic force being particularly strong at those scales rather than a straight up \u201ccollision\u201d right?\n \nreply",
+      "Isn't a straight up physical \"collision\" just a strong interaction between the electromagnetic field of multiple particles?\n \nreply",
+      "I believe particle colliders really overcome the forces and have the particles touch and annihilate. But sure, at our level it\u2019s all normal low energy electromagnetic stuff and nothing every really touches anything else.\n \nreply"
+    ],
+    "link": "https://lcamtuf.substack.com/p/but-good-sir-what-is-electricity",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Half-Life (filfre.net)",
+    "points": 433,
+    "submitter": "dmazin",
+    "submit_time": "2025-02-23T08:18:15 1740298695",
+    "num_comments": 190,
+    "comments_url": "https://news.ycombinator.com/item?id=43147698",
+    "comments": [
+      "Nice writeup. FWIW, I never saw Michael Abrash wear a tie. :)We were very into 3D cards back then. We had a lot of ties to that part of the world. I had been doing video drivers for OS/2 and NT. I got to know Abrash from his writing on the VGA, 8514, and, of course, asm. At Valve, we hired a couple of great guys from 3dfx. I still have a 3dfx hat somewhere that I bust out on special occasions. The killer setup back then was hooking up two 3dfx cards (SLI). But I usually played on a standard card because I wanted/needed to see it run like most people would experience it.We had a deal with one of the companies, maybe 3dfx, but I forget who, to include the first three levels of HL with their card. Even though the game wasn't anywhere near finished, we sent off a disk to the company with our first three finished levels so we could get paid. Somehow, it leaked. We were pissed at first, but then it took off. People loved it. It really gave us the confidence that we were on the right track. It was our first game. The validation was just what we needed.Fun times.\n \nreply",
+      "I bought a 3dfx just to play Half Life, 3dfx because of that association between your game and their tech, figured it was the obvious choice, likewise so did most of my gamer mates.So hope you had shares in them :D\n \nreply",
+      "It was called Half Life Day One, and I remember seeing it as a bundle with some hardware, not sure which one.\n \nreply",
+      "This is how I was introduced to Half-Life - I got it with my GPU and played Day One.Unfortunately I also don't recall which it was. I do recall I had a Voodoo, then moved to a TNT2 and then later a GeForce 2. The TNT2 came out well after Half-Life, so it must have been 3dfx at least.\n \nreply",
+      "Thank you (and the whole team of course) for creating something so amazing\n \nreply",
+      "I was wondering which Mike this was - Mike Harrington I see!Thanks - Half-Life is a great legacy.\n \nreply",
+      "What was the other fish?\n \nreply",
+      "Perhaps https://en.m.wikipedia.org/wiki/Picnik\n \nreply",
+      "Tried it when it was release, then bought it myself in 1999, after I finally had managed to purchase a new PC - can't remember if it was a Nvidia TNT2 or 3dfx Voodoo 3 card I bought with it. But it was the first time I could play the game without it being sluggish and looking like crap. We had bought a family PC 4 years earlier, which had cost a fortune  - but by 1998/1999 it was woefully outdated. Also, a thought: Imagine purchasing a PC today for $5k, and it being unusable for games in 3-4 years.One thing I (in general) miss from those days, was how easy it was to get into modding. Whether that be to make your own maps, or more involved game mods. The modding community really was something, and kept the game somewhat fresh for years. I also vividly remember downloading all the new iterations of counter-strike, which really took off - until settling on 1.6On a side not, it's a bit tough to think that all this was 25 years ago now, but I still remember all this quite well - having only been a teenager back then, and in 25 years I'll be this old man. Wonder if all the memories from LAN-parties etc. will be as fresh in 25 years, as they are now.\n \nreply",
+      "> On a side note, it's a bit tough to think that all this was 25 years ago now, but I still remember all this quite wellI also remember it like it was yesterday when, after school on a hot summer's day, a friend showed me this \"cool new mod\" he recently downloaded for Half-Life. It was an early version of Counterstrike. It took him an entire night to download the mod, and it only ran on his machine with a 320x240 resolution. It looked like crap and was basically unplayable. 6 months and a hardware upgrade later, we all played it for hours each day, and often non-stop for 12 hours on LAN parties. I also remember that you could contact the internet provider (Telekom) by mail, and after a few weeks they would activate something called \"Fast-Track\" for your connection, which would drop the latency from around 110ms to only 35ms, a huge advantage for MP games... it really blows my mind that all of this was 25 years ago.In the early 2000s, CS was arguably better known than the original HL. I had some friends who probably played CS for thousands of hours, but never even touched the original HL.\n \nreply"
+    ],
+    "link": "https://www.filfre.net/2024/12/half-life/",
+    "first_paragraph": "Around twenty years ago, people would have laughed if you told them that videogames would end up at the Smithsonian, but the Half-Life team really did want to make games that were more than just throwaway toys. The rule against cinematics \u2014 which made our jobs much harder and also ended up leaving a lot of my favorite work out of the game \u2014 was a kind of ideological stake in the ground: we really did want the game and the story to be the same thing. It was far from flawless, but it was really trying to push the boundaries of a young medium.\u2014 Valve artist Steve TheodoreBy 1998, the first-person shooter was nearing its pinnacle of popularity. In June of that year, Computer Gaming World magazine could list fourteen reasonably big-budget, high-profile FPS\u2019s earmarked for release in the next six months alone. And yet the FPS seemed rather to be running to stand still. Almost all of the innovation taking place in the space was in the realm of technology rather than design.To be sure, progres"
+  },
+  {
+    "title": "Adding Mastodon Comments to Your Blog (beej.us)",
+    "points": 45,
+    "submitter": "ingve",
+    "submit_time": "2025-02-23T23:12:46 1740352366",
+    "num_comments": 6,
+    "comments_url": "https://news.ycombinator.com/item?id=43154148",
+    "comments": [
+      "After spending far too much time integrating third-party comment systems into my website, I finally decided to roll my own in Common Lisp [1].I\u2019m quite happy with the result.  It\u2019s simple, minimal, and fast.  It does exactly what I need and no more.Plus, everything is held for my review before being published, so I don\u2019t have to worry about spam, cross-site scripting, or off-topic comments. It\u2019s been a satisfying solution.[1] https://github.com/susam/susam.net/blob/main/form.lisp\n \nreply",
+      "This is a nice idea!I ended up doing something similar, but statically, and searching for discussions dynamically rather than using a single hardcoded thread. Essentially it's a script that searches for recent posts linking to my domain name on Reddit, HN, etc, and then updates a file with the URL of that post and some information about when it was made and how many posts there are. Then there's a Hugo template that converts the data in this file to HTML.The script runs every few hours using free GitHub runner time, and if it makes a change, it commits it and creates a pull request with the contents so that I can review it. (I could automatically commit straight to the main branch but I like having the manual review just in case.)I couldn't get it to work for Mastodon because there's not really a public search for Mastodon (for all sorts of reasons), although at some point I want to get it working for Bluesky. I did try hooking it up with Twitter for a while, but that required all sorts of API keys and things that I didn't want to deal with so I gave up. You also need API keys for Reddit, but that was easier to get hold of and manage.I wrote a post about how I implemented it here: https://jonathan-frere.com/posts/adding-discussions/\n \nreply",
+      "Nice write-up! That the \u201cView comments\u201d simply redirects to the source post when JavaScript isn\u2019t available \u2014 it feels very natural, more than I\u2019d have expected!I wanted to do something similar a while back, but while avoiding JavaScript; so I wrote a shell script that outputs fedi/Mastodon threads as HTML. It\u2019s almost certainly less stable than your approach, but it works well enough for my use-case: https://hak.xwx.moe/jadedctrl/fedi2html\nIn action: https://jaded.xwx.moe/lib/haiku-k-esperanto.html?en\n \nreply",
+      "Great read. I posted some thoughts on the pros and cons of using Mastodon for comments. Overall, it's been a positive experience for my blog.https://jszym.com/blog/mastodon_blog_comments/\n \nreply",
+      "mastodon is a fediverse client\n \nreply",
+      "I can't think of something more hostile than requiring an account on a 3rd party, totally unrelated, platform to post a comment on a blog.I'll literally take ads and tracking over it.\n \nreply"
+    ],
+    "link": "https://beej.us/blog/data/mastodon-comments/",
+    "first_paragraph": "2025-02-21 Comments powered by Mastodon!I hate ads. I also hate tracking and bloat. But I didn't actually hate\nthe latter quite enough to get rid of Disqus for\ncomments. It was a free, good service, and you could turn off ads for\nthe users (which I did).But recently they sent out a mail saying they were not longer offering a\nfree ad-free option, and it's not worth paying for at my usage levels,\nso they got the boot.What to replace them with? The ultimate would be some kind of home-grown\nthing, which I could do with the hosting I have. But it's more than I\nwant to take on right now.So that leaves \"Comments in Mastodon\" as the winner. There's significant\noverlap between Mastodon users and my meager collection of blog readers,\nso that's not too bad.The only thing that remains is either grabbing someone else's code to do\nthe work, or doing it myself. Doing it myself is more fun. Let's figure\nit out!I assumed correctly there was probably an API that would return JSON\ndata for public comment"
+  },
+  {
+    "title": "Why Clojure? (gaiwan.co)",
+    "points": 134,
+    "submitter": "jgrodziski",
+    "submit_time": "2025-02-22T09:44:29 1740217469",
+    "num_comments": 75,
+    "comments_url": "https://news.ycombinator.com/item?id=43137586",
+    "comments": [
+      "It\u2019s great, and I learned a ton from Rich Hickey, despite not fully grokking Clojure or FP in general. I briefly worked at a small Clojure shop with an extremely talented crew. People were excited about FP and writing real business logic with it. My stack was different there.The problem started when the honeymoon phase ended, and the codebase grew as the business gained traction. Dynamic typing became a burden, and once the key people moved on, they struggled to hire developers who wanted to write Clojure.Also, JVM juju shooed many away. After I left, a coworker told me they had started rewriting part of it in Go, and that was going alright. Now, their stack mostly consists of Python for LLM stuff and Go for the main backend. There\u2019s still some Clojure running legacy systems that haven\u2019t yet been migrated over.\n \nreply",
+      "I\u2019ve been having a lot of fun messing with clojure, but the dynamic typing really grates on me.At your clojure job, we\u2019re y\u2019all using spec? I haven\u2019t looked into it yet, and I\u2019m wondering how much it mitigates the annoyances of dynamic types\n \nreply",
+      "I don't think spec with solve issues you are having about dynamic types.Spec is about asserting structure at domain boundaries; once you're inside a context, it will not do anything.i.e. If you're connecting stuff together and you want to make sure the state is correct as you pass between contexts -> great!If you're writing stuff and internally you miss having a strong type system... uh... I don't think it's really going to help you.\n \nreply",
+      "It was in alpha stage and changing rapidly when they were considering it. But it\u2019s similar to Python\u2019s type hints and isn\u2019t enforced by the compiler. However, that\u2019s better than nothing.\n \nreply",
+      "In what way is clojure.spec similar to python's type hints? O_o\n \nreply",
+      "I run a multi-million dollar business which I started with common lisp. I since moved away to go and then rust but I've been looking at clojure again lately.For a team that needs to get s** done and has more per employee productivity than Faang combined it's hard to beat the speed with which you can build things when you have the repl and interactive programming.The jvm while doesn't have great error messages is a fantastic runtime.\n \nreply",
+      "I feel like there\u2019s a minimum developer quality that\u2019s needed when using a language like Clojure, without static typing, and with a wealth of idioms and best practices that need to be followed and libraries that need to be known.Without it it\u2019s a matter of time before the codebase can\u2019t be developed anymore and the software doesn\u2019t work as intended.\n \nreply",
+      "I would love to see how Clojure's \"wealth of idioms and best practices that need to be followed and libraries that need to be known\" compare to almost any other popular language. Clojure is by far the simplest most straightforward language I've ever used with very few details and gotcha's that need to be memorized.\n \nreply",
+      "I can appreciate that. I'm on a journey this last year or so with Elixir, which also has an elevator pitch of \"consistency\" and \"simplicity\", true to a couple of defining principles, rather than hodge podge of committee like language initiatives.But does it really matter now days? If you're doing anything web oriented, you don't get to abstract the hot mess that is web programming away. You still have to learn a ton of nuanced stacks, many couched in idioms that were established decades ago, and perservere today, wrapped in layers of whatever.\n \nreply",
+      "You could replace Clojure with Python or Perl, and this \nWould honestly be even more true.\n \nreply"
+    ],
+    "link": "https://gaiwan.co/blog/why-clojure/",
+    "first_paragraph": "This is about a 17 minute read. Feel free to pause and come back to it later.Clojure is not one of the handful of \"big\" mainstream languages. This means that sometimes people are surprised that we are all in on Clojure. Why go against the grain? Why make it harder for yourself by building on niche technology?Gaiwan is mostly known as a Clojure consultancy, but we don't consider ourselves as being defined by Clojure. Rather, we are group of experienced technologists (10+ years of industry experience on average) who are deliberate and intentional about the technologies we build upon. Rather than choosing tech that is fashionable, or that has the biggest marketing budget, we choose tech that gives us the highest leverage. Tech that allows a small team like ours to be maximally productive, to maintain velocity as systems grow, and that allows us to keep overall complexity low. Right now, that tech is Clojure.In this article I want cover some of the reasons of why that is. In the first plac"
+  },
+  {
+    "title": "Show HN: Benchmarking VLMs vs. Traditional OCR (getomni.ai)",
+    "points": 48,
+    "submitter": "themanmaran",
+    "submit_time": "2025-02-20T18:49:29 1740077369",
+    "num_comments": 9,
+    "comments_url": "https://news.ycombinator.com/item?id=43118514",
+    "comments": [
+      "The benchmark I most want to see around OCR is one that covers risks from accidental (or deliberate) prompt injection - I want to know how likely it is that a model might OCR a page and then accidentally act on instructions in that content rather than straight transcribing it as text.I'm interested in the same thing for audio transcription too, for models like Gemini or GPT-4o audio accepting audio input.\n \nreply",
+      "A big takeaway for me is that Gemini Flash 2.0 is a great solution to OCR, considering accessibility, cost, accuracy, and speed.It also has a 1M token context window, though from personal experience it seems to work better the smaller the context window is.Seems like Google models have been slowly improving. It wasn't so long ago I completely dismissed them.\n \nreply",
+      "And from my personal experience with Gemini 2.0 flash Vs 2.0 pro is not even closeI had gemini 2.0 pro read my entire hand written, stain covered, half English, half french family cookbook perfectly first timeIt's _crazy_ good. I had it output the whole thing in latex format to generate a printable document immediately too\n \nreply",
+      "How does this compare to Marker https://github.com/VikParuchuri/marker?\n \nreply",
+      "What is the privacy of the documents for the cloud service? There\u2019s nothing in the privacy policy about data sent over the api.\n \nreply",
+      "OCR seems to be mostly solved for 'normal' text laid out according to Latin alphabet norms (left to right, normal spacing etc.), but would love to see more adversarial examples. We've seen lots of regressions around faxed or scanned documents where the text boxes may be slightly rotated (e.g. https://www.cad-notes.com/autocad-tip-rotate-multiple-texts-...) not to mention handwriting and poorly scanned docs. Then there's contextually dependent information like X-axis labels that are implicit from a legend somewhere, so its not clear even with the bounding boxes what the numbers refer to. This is where VLMs really shine: they can extract text then use similar examples from the page to map them into their output values when the bounding box doesn't provide this for free.\n \nreply",
+      "That's a great point about the limitations of traditional OCR with rotated or poorly scanned documents. I agree that VLMs really shine when it comes to understanding context and extracting information beyond just the text itself. It's pretty cool how they can map implicit relationships, like those X-axis labels you mentioned.\n \nreply",
+      "Thank you for sharing this. Some of the other public models that we can host ourselves may perform in practice better than the models listed - e.g. Qwen 2.5 VL https://github.com/QwenLM/Qwen2.5-VL?tab=readme-ov-file\n \nreply",
+      "What VLMs do you use when you're listing OmniAI - is this mostly wrapping the model providers like your zerox repo?\n \nreply"
+    ],
+    "link": "https://getomni.ai/ocr-benchmark",
+    "first_paragraph": "PricingLog inGet accessPublished Feb 20, 2025Are LLMs a total replacement for traditional OCR models? It's been an increasingly hot topic, especially with models like Gemini 2.0 becoming cost competitive with traditional OCR.To answer this, we run a benchmark evaluating OCR accuracy between traditional OCR providers and Vision Language Models. This is run with a wide variety of real world documents. Including all the complex, messy, low quality scans you might expect to see in the wild.The evaluation dataset and methodologies are entirely Open Source. You can run the benchmark yourself using the benchmark repository on Github. You can also view the raw data from the benchmark in the Hugging Face repository. The following results evaluate the top VLMs and OCR providers on 1,000 documents. We measure accuracy, cost, and latency for each provider.We evaluated two categories of OCR providers: Traditional OCR and Multimodal Language Models.Traditional OCR providers (Azure, AWS Textract, Goo"
+  },
+  {
+    "title": "Ultima VII: Revisited (u7revisited.com)",
+    "points": 131,
+    "submitter": "ibobev",
+    "submit_time": "2025-02-23T16:03:13 1740326593",
+    "num_comments": 32,
+    "comments_url": "https://news.ycombinator.com/item?id=43150217",
+    "comments": [
+      "If you like the project please consider donating...the developer has a gofundme to help support his recent family move.https://www.gofundme.com/f/help-us-move-to-our-hopefully-for...He's already moved but uses the money to help with the cost of having moved.\n \nreply",
+      "Reminds me a little of the Ultima V - Lazarus[1] project, where volunteers re-implemented the entire game in the Dungeon Siege 3D engine. They also added tons of new characters and dialog, side quests, a richer plot, and new artwork and music. They did all this and managed to keep the major plot and game elements the same. They actually managed to greatly improve on what is unarguably :) the best Ultima of the series.1: https://www.u5lazarus.com\n \nreply",
+      "How do they handle hidden dialogue options? One of the most amazing things about the series before 3d was  you just talked to people about things and often they had something to say about the topic. Like you can ask just about anyone about the avatar or blackthorn. There\u2019s a donkey that figures out he\u2019s inside a video game, etc.\n \nreply",
+      "I think Lazarus is one of the greatest game mods ever made.  They even added the option to become an evil Avatar and side with Blackthorn.\n \nreply",
+      "And if anybody's looking for a new game with the Ultima vibe, I highly recommend Moonring, a free indie game from one of the creators of Fable: https://store.steampowered.com/app/2373630/Moonring/\n \nreply",
+      "Wow. Thanks. \nIt\u2019s amazing that games like these exist for years on Steam and never surface when I search for new games with those tags.\n \nreply",
+      "Ultima VII ran in real mode and it wanted every single kilobyte of memory that it could steal away from DOS.They had some fancy optimized version of HIMEM that worked a little bit better than the stock DOS one and people started using it on all of their boot disks not just the one for Ultima VII.\n \nreply",
+      "Ultima VII doesn't run in Real Mode, it runs in Unreal Mode.https://wiki.ultimacodex.com/wiki/Voodoo_Memory_Manager\n \nreply",
+      "https://en.m.wikipedia.org/wiki/Unreal_modeStill real mode, just a variant.\n \nreply",
+      "Thank you for this rabbit hole. I don't remember why, specifically, but I do remember there being a rather annoying sequence I needed to go through in order to \"boot\" to U7. Just to hopefully be greeted by that weirdo in red.\n \nreply"
+    ],
+    "link": "https://www.u7revisited.com/",
+    "first_paragraph": "(TL;DR:  Ultima VII: Revisited is a replacement engine for Ultima VII that presents the game in 3D and fixes various issue with the game.  Go to the Downloads tab to find out how to get it.)Preview of coming attractions.My name is Anthony Salter and I love Ultima.The Ultima Series of classic RPGs was created by Richard Garriott (also known as Lord British) along with a bunch of his friends.  It represents, in my opinion, the epitome of the ingenuity, beauty and superb design of DOS games.Ultima games were designed in a unique way.  Garriott would build an RPG world, filling it with merchants, monsters and dungeons\u2026but no characters or plot.  That would only come after the world had been fully created.And the worlds he created were as real as he could make them. Day/night cycles, phases of the moon, names and schedules for every character, and a complex dialogue system that required players to actually find keywords in the world to ask characters about. Many fans, myself included, consi"
+  },
+  {
+    "title": "Bitwarden Authenticator (bitwarden.com)",
+    "points": 121,
+    "submitter": "pil0u",
+    "submit_time": "2025-02-23T21:11:44 1740345104",
+    "num_comments": 101,
+    "comments_url": "https://news.ycombinator.com/item?id=43153262",
+    "comments": [
+      "I have been using Aegis [1], a FOSS (GPLv3) TOTP authenticator app, for the past years.It supports:- Local encrypted backups. You can sync these to where ever you like on your own terms. I automated uploading mine to my local NextCloud instance.- Importing from other authenticator apps, so you can easily migrate.- Exporting entries so that you are not vendor locked (cough cough Authy).- Customization.- No mandatory cloud bs, LLM integration, tracking, ...[1] https://github.com/beemdevelopment/Aegis\n \nreply",
+      "I have used Bitwarden for a few years happily, but have been really annoyed at the UI changes in the chrome extensionNot only does it unnecessarily jar me out of my memorized places to click, but it also just takes 2 clicks to copy a password instead of 1. Seems like a small deal but it is genuinely a bad UI.\n \nreply",
+      "If you go to Settings -> Appearance and enable show quick actions, you can reenable the 1 click copy password again. Enabling compact mode and disabling animations also helps a lot.\n \nreply",
+      "Yes, but then you have to click the little \"Fill\" button. And if you enable \"Click items to enable autofill on Vault view\", you have to Rightclick -> View to edit stuff.\n \nreply",
+      "cmd+shift+l, or ctrl+shift+l (lower case L)should just autofill even the totp fields (notably and annoyingly not totp for microsoft auth though)\n \nreply",
+      "https://bitwarden.com/blog/bringing-intuitive-workflows-and-...\n \nreply",
+      "It doesn\u2019t support syncing between devices.An alternative is Ente Auth: https://news.ycombinator.com/item?id=40883839Edit: Since there seems to be some confusion, this submission is about Bitwarden Authenticator, a free mobile app for TOTP, not about the Bitwarden password manager, which does support syncing, and which in the paid Premium plan also includes an authenticator.\n \nreply",
+      "I've been using Authy for TOTP in conjunction with Bitwarden Premium for passwords.I considered using Bitwarden Premium for TOTP, but dislike having passwords and TOTP codes in a single-point-of-failure backup location.I looked into Bitwarden Authenticator, but it didn't seem to support sync between devices, as you've now corroborated.  This is the reason I gave up on Google Authenticator and switched to Authy \u2014 I don't want to have to deal with trying to get all my accounts unlocked if my phone gets lost, broken, or stolen.I've set up Authy with a backup password so that I can recover it if necessary.  I understand that this is less secure, and Twilio (the company behind Authy) seems to have a mixed reputation.  However my reasoning is that maintaining two layers which are separate (Authy on phone and tablet, Bitwarden on laptop) is consistent with defense-in-depth theory \u2014 even if the layers have some weaknesses.Maybe it's time to switch to Yubikey, because TOTP apps that don't sync between devices are too high of a risk for losing access, and TOTP apps that sync aren't quite \"something you have\".  How do people prepare for the potential loss of Yubikeys?  Is it reasonable to get a spare[1] and keep it in a safety deposit box?[1] https://www.yubico.com/products/spare/\n \nreply",
+      "Just beware of the lock-in with Authy because they make it impossible to export your TOTP secrets for \"security\" reasons. There was a method to do it by running some code but they patched up those API endpoints recently.\n \nreply",
+      "*sigh*I've done another round of research into Authy and I see what you mean.  I was aware that some people don't like Authy because they object in principle to multi-device sync altogether, which I understand but am not willing to live with; I also knew that Twilio had been hacked before.  But I hadn't thought so much about the lock-in and the elevated risk for getting locked out if Twilio goes kaput.So, features that I want in a TOTP app:* Backup to cloud.  If all my devices are lost/destroyed at the same time, I want recovery to be possible using information I store offsite.* Backups not stored to my own iCloud or Google Drive, which are frequently accessed from my own devices.* Export of codes possible from the installed app so that if the vendor goes away I can migrate.* Not published by Bitwarden.  I'm happy with Bitwarden, but I would prefer that the vendor I use for TOTP be distinct from my password manager vendor.\n \nreply"
+    ],
+    "link": "https://bitwarden.com/products/authenticator/",
+    "first_paragraph": "Millions of users choose Bitwarden to protect themselves and their familiesCountless businesses and enterprises choose Bitwarden to secure their interestsEnd-to-end encrypted secrets management for development, DevOps, and IT teams.Unlock passkey features and more with just a few lines of codeUse Bitwarden Authenticator to add an extra layer of protection to all your online accounts and applicationsGenerate verification codes to ensure your identity is verified, keeping your sensitive data out of reach of imposters.A simple, intuitive design and straightforward interface makes it easy to start incorporating authentication into your digital life.Bitwarden Authenticator is a standalone app that is available for everyone, even those who don\u2019t use Bitwarden Password Manager.\u00a0\u00a0In its current release, Bitwarden Authenticator generates time-based one-time passwords (TOTP) for users who want to add an extra layer of authentication to their logins.Integrated TOTP authentication is a premium fea"
+  },
+  {
+    "title": "It is not a compiler error. It is never a compiler error (2017) (plover.com)",
+    "points": 4,
+    "submitter": "misonic",
+    "submit_time": "2025-02-20T07:58:47 1740038327",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://blog.plover.com/2017/11/12/",
+    "first_paragraph": "\n\n   Mark Dominus (\u9676\u654f\u4fee)\nmjd@pobox.com \n\n\n\nAbout me\n\nRSS\nAtom 12 recent entries\n\nLeopards, faces, etc.\nThink speak, now speak!\nDavid McShane's mural with 18 Franks, revealed\nDavid McShane's mural with 18 Franks\nGenealogy of the House of Reuss\nSurnames from nicknames nobody has any more\nJust give the man the fish!\nClaude helps me find more presidential emoji\nPolish Spam\nJust ANSWER THE QUESTION\nA complex bug with a \u2e22simple\u2e23 fix\nAnother corner of Pennsylvania\n\nArchive:\n2025:\n    JF\n2024:\n    JFMAMJ\n\u00a0JASOND\n2023:\n    JFMAMJ\n\u00a0JASOND\n2022:\n    JFMAMJ\n\u00a0JASOND\n2021:\n    JFMAMJ\n\u00a0JASOND\n2020:\n    JFMAMJ\n\u00a0JASOND\n2019:\nJFMAMJ\n\u00a0JASOND\n2018:\nJFMAMJ\n\u00a0JASOND\n2017:\nJFMAMJ\n\u00a0JASOND\n2016:\nJFMAMJ\n\u00a0JASOND\n2015:\nJFMAMJ\u00a0JASOND\n2014:\nJFMAMJ\u00a0JASOND\n2013:\nJFMAMJ\u00a0JASOND\n2012:\nJFMAMJ\n\u00a0JASOND\n2011:\nJFMAMJ\n\u00a0JASOND\n2010:\nJFMAMJ\n\u00a0JASOND\n2009:\nJFMAMJ\n\u00a0JASOND\n2008:\nJFMAMJ\n\u00a0JASOND\n2007:\nJFMAMJ\n\u00a0JASOND\n2006:\nJFMAMJ\n\u00a0 JASOND\n2005: OND\n\n\nMathematics242\nProgramming99\nLanguage95\nMiscellaneous72\nBook50\nTech49\nEtymology35\nHaske"
+  },
+  {
+    "title": "'Indiana Jones' jailbreak approach highlights vulnerabilities of existing LLMs (techxplore.com)",
+    "points": 14,
+    "submitter": "pseudolus",
+    "submit_time": "2025-02-21T07:12:17 1740121937",
+    "num_comments": 6,
+    "comments_url": "https://news.ycombinator.com/item?id=43124902",
+    "comments": [
+      "> Li and his colleagues hope their study will inspire the development of new measures to strengthen the security and safety of LLMs.> \"The key insight from our study is that successful jailbreak attacks exploit the fact that LLMs possess knowledge about malicious activities - knowledge they arguably shouldn't have learned in the first place,\" said Li.Why shouldn't they have learned it? Knowledge isn't harmful in itself.\n \nreply",
+      "> Why shouldn't they have learned it? Knowledge isn't harmful in itself.The objective is to have the LLM not share this knowledge, because none of the AI companies want to be associated with a terrorist attack or whatever. Currently, the only way to guarantee an LLM doesn't share knowledge is if it doesn't have it. Assuming this question is genuine.\n \nreply",
+      "This is the most boring possible conversation to have about LLM security. Just take it as a computer science stunt goal, and then think about whether it's achievable given the technology. If you don't care about the goal, there's not much to talk about.None of this is to stick up for the paper itself, which seems light to me.\n \nreply",
+      "If you don't want to have the conversation, don't reply.\n \nreply",
+      "This reads like a highschooler going \"hey, hey did you know? You can, okay don't tell anyone, you can just look up books on military arms in the library!! Black hat life hack O_O!!!\".What is the point of this? Getting an LLM to give you information you can already trivially find if you, I don't know, don't use an LLM and just search the web? Sure, you're \"tricking the LLM\" but you're wasting time and effort on tricking an LLM into making it tell you something you could have just looked up already.\n \nreply",
+      "\"LLM security\" is more about making sure corporate chatbots don't say things that would embarrass their owners if screenshotted and posted on social media.\n \nreply"
+    ],
+    "link": "https://techxplore.com/news/2025-02-indiana-jones-jailbreak-approach-highlights.html",
+    "first_paragraph": ""
+  },
+  {
+    "title": "PropRise (YC S23) Is Hiring Engineer #1 (ycombinator.com)",
+    "points": 0,
+    "submitter": "",
+    "submit_time": "2025-02-23T17:00:51 1740330051",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.ycombinator.com/companies/proprise/jobs/ppipLUK-founding-engineer",
+    "first_paragraph": "AI Investment Analyst for Commercial Real EstateAs our Founding Engineer, you'll own and build the systems that power our rapidly growing platform. We're at an inflection point where customer demand is outpacing our engineering capacity, and we need someone hungry, autonomous, and gritty\u2014someone who can ship code fast while handling both front- and backend challenges.Tech Stack: Typescript, Next.js, React, Postgres, GCPMust-Haves:Nice-to-Haves:Intro Call with CEO (30 minutes)A high-level conversation about your background, career goals, and our vision for PropRise to see if we are a good match.Technical/Architectural chat with CTO. (We don\u2019t believe in leetcode style questions, thank you @Stripe)(Paid) In-Person Working Sessions with TeamFinal DecisionPropRise is an AI-powered deal sourcing platform for commercial real estate. We help developers, acquisition specialists, and brokers find and analyze deals faster and smarter than ever before.Self-storage is our starting niche, and our g"
   }
 ]
