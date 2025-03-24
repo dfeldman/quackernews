@@ -1,385 +1,406 @@
 [
   {
-    "title": "NixOS and reproducible builds could have detected the xz backdoor (luj.fr)",
-    "points": 147,
-    "submitter": "birdculture",
-    "submit_time": "2025-03-22T19:39:59 1742672399",
-    "num_comments": 55,
-    "comments_url": "https://news.ycombinator.com/item?id=43448075",
+    "title": "Shift-to-Middle Array: A Faster Alternative to Std:Deque? (github.com/attilatorda)",
+    "points": 46,
+    "submitter": "AttilaT",
+    "submit_time": "2025-03-23T23:20:27 1742772027",
+    "num_comments": 30,
+    "comments_url": "https://news.ycombinator.com/item?id=43456669",
     "comments": [
-      "Note that NixOS and reproducible builds did not detect the xz backdoor, and in fact NixOS shipped the malicious builds of xz (though they didn't do anything because the malware didn't target NixOS):> I am a NixOS developer and I was surprised when the backdoor was revealed to see that the malicious version of xz had ended up being distributed to our users.As always theory and reality are different, and the thing that made xz possible was never a technical vulnerability with a technical solution\u2014xz was possible because of a meatspace exploit. We as a community are very very bad at recognizing that you can't always just patch meatspace with better software.\n \nreply",
-      "> NixOS and reproducible builds did not detect the xz backdoorNix declarativeness is quite useful to increase protection against exploits in a number of ways. Unfortunately, there is still a lot of untapped potential. My number one priority would be to implement fine-grained ephemeral containers. Guix has these already.This would make it convenient to run every single process with restricted privileges, including no access to ~/, except those directories that are needed by the task. That would prevent e.g. a rogue pip package from stealing SSH keys.Still, I think the xz backdoor did not work on NixOS because its unusual non FHS-compliant filesystem structure.\n \nreply",
-      "> I think the xz backdoor did not work on NixOS because its unusual non FHS-compliant filesystem structure.Right, but this is not part of the security model, it's an incidental attribute of the OS that's there for other reasons and easily solved for if the attacker had prioritized it. The only reason why it didn't work is because the attacker didn't bother making it work on NixOS, not because he couldn't have if he'd wanted to.\n \nreply",
-      "You don\u2019t even need to run in a container for this. It\u2019s possible to do this entirely in systemd service configuration. The easiest way is just to have separate user for every service and reduce stuff running as root. You can also restrict filesystem access, network access and even syscall access (although some of this may be implemented as a container under the hood).Unfortunately, this wouldn\u2019t help with the xz vulnerability because the SSH server is the one loading the compromised library in that case (indirectly). Since SSH itself needs to have access to the private keys, it\u2019s not really easy to secure it against vulnerabilities in the library it loads itself.On the flip side, unless the vulnerability is in one of the important binaries/shared libraries, the amount of damage it can cause it probably quite contained with simply having good user isolation. Nix can make this analysis really simple (because of explicitly specified dependencies), so you can crack down on critical dependencies a lot more easily.\n \nreply",
-      "> It\u2019s possible to do this entirely in systemd service configurationSure, but I think that leaves out many use cases. What if I want to e.g. start a Python shell that has access to certain directories, and nothing else, including no network access?Nix provides a good way of doing that for common use cases, as it has decent support for Firejail. But I would like something like Guix containers, which is convenient for any ad hoc use case. This greatly reduces any security threat. It's a poor-man's QubesOS.\n \nreply",
-      "Yeah, I guess most existing Linux stuff that is actually configured (so not SELinux etc) is geared at system processes not user ones. Transparently running all user applications in properly isolated containers would be quite neat.Does Firejail handle dynamic access (eg. I may want an xz invocation to work on my private keys, but not THIS specific one where I\u2019ve given it a completely different file?).I quite like pledge/unveil for this kind of thing on OpenBSD, although that\u2019s for a different threat model.\n \nreply",
-      "Firejail and bwrap are setuid sandbox frontends. You can wrap e.g. a new xz invocation to let it work on your private keys.But Nix relies on ephemeral shells and flakes, and they don't play so well with each other. The interface is clumsy. Guix, in contrast, has a pretty nice set of CLI switches for these features.Even normal distros should prioritize some simple graphical UI for this. Running programs with minimal privileges would result in a significant enhancement of security. The kernel features for achieving this are already there.\n \nreply",
-      "> Firejail and bwrap are setuid sandbox frontends.bwrap does not require SUID, it only needs it if user namespaces are disabled for unpriviledged users.\n \nreply",
-      "Literally any container runtime can do this for you. No one does it though because it's annoying as hell to upfront figure out what you want, and then be unable to increase that list later.Like if I were to try and find a not annoying way to do this, it would be to snapshot and overlay mount my filesystem at process launch time, then give a heuristic warning at process termination about what was changed.But then we're still into basically SELinux territory which because of course there's upfront things we don't want to allow read access to - i.e. SSH keys.(don't know what the lesson here is other then \"for the love of god could we get a standardized secrets filesystem and/or API or something\". Looking at you Hashicorp Vault and ~/.vault-token).\n \nreply",
-      "Firejail and bwrap can do this in a relatively convenient way, but adding nix shell on top of that is quite clumsy.In a regular distro, it is tolerable, but a better UI would be great.\n \nreply"
+      "A couple notes looking at the c++ implementation- this is going to have problems with non-trivial types.  (Think about destructors or move constructors like std::unique_ptr).  If you don't want to deal with them, at least add a static_assert(std::is_trivially_copyable<T>::value == true);- front() doesn't return a reference and it doesn't even return the front- adding iterators (begin()/end()) will let it play nice with for( : ) loops and <algorithms>, etc.\n \nreply",
+      "Interesting alternative idea I thought of just now: a data structure that works like VecDeque (a circular buffer) but uses mmap to map two views onto the same pages right after one another. That would ensure that the entire array can be accessed in a consecutive fashion, no matter where it gets split, without any copying. The downside is that reallocation would be really slow, involving multiple syscalls, and the minimum size of the array would be 4kB or more, depending on the page size.\n \nreply",
+      "I've seen this trick used around, where it really shines is when you want to prepare/commit a range of the ring buffer when interfacing with something that wants a contiguous chunk as an arg, using the mmap hack lets you pass any pointer into the ring buffer without needing to split it to handle the wraparound case.There are a few blog posts out there about it, eg https://lo.calho.st/posts/black-magic-buffer/. One data structure that works around the limitations is the bip buffer: https://www.codeproject.com/Articles/3479/The-Bip-Buffer-The.... In that article the author talks about the mmap trick.\n \nreply",
+      "I recently developed a new data structure called the Shift-To-Middle Array, designed as an alternative to std::deque, std::vector, and linked lists. My goal was to optimize insertion and deletion at both ends, while also improving cache locality and performance compared to traditional implementations.What is the Shift-To-Middle Array?\nUnlike std::deque, which uses a fragmented block-based structure, the Shift-To-Middle Array maintains a contiguous memory layout. Instead of shifting elements inefficiently (like std::vector), it dynamically redistributes free space toward the middle, reducing unnecessary data movement.Key Features:\n Fast insertions & deletions at both ends (amortized O(1))\n Efficient cache utilization (better than linked lists)\n Supports fast random access (O(1))\n No pointer chasing (unlike linked lists)\n Parallelization & SIMD optimizations possiblePerformance Benchmarks\nI benchmarked Shift-To-Middle Array vs. std::deque vs. ExpandingRingBuffer vs. std::queue across different workloads. Some highlights:Push-heavy workload \u2192 Shift-To-Middle Array showed improved insertion performance over std::deque.Pop-heavy workload \u2192 Showed improvements in memory access and removal operations.Random insert/remove workloads \u2192 Demonstrated better cache efficiency compared to linked lists.(Full benchmarks and source code available below.)When Should You Use It?\nHigh-performance queue-like structuresGame engines (handling real-time events efficiently)Networking applications (handling packet buffers)Dynamic sequences (e.g., computational geometry, physics sims)Would love to hear thoughts and feedback from the community! Have you encountered similar performance bottlenecks with std::deque or other dynamic structures?\n \nreply",
+      ">  Unlike std::deque, which uses a fragmented block-based structureI always assumed deque implementations were ring buffers that double in size once full so that prepend/append operations are amortized O(1).\n \nreply",
+      "No, that's what Rust's VecDeque is, the C++ std::deque is something which you wouldn't invent today, but alas C++ is wedded to how things were done in the 1990s sometimes before.std::deque does have practical uses, but they're rare and many implementations aren't well suited even to those uses. Unlike VecDeque most people should just ignore it.\n \nreply",
+      "std::deque typically uses chunked arrays. It is more complex but tends to be faster than a ring buffer based implementation.\n \nreply",
+      "deque does not move elements once added, so it can\u2019t be implemented like that.\n \nreply",
+      "Is that an actual guarantee or just the current implementation? I'd expected that at the very least some functions that can operate on std::deque must require moves. erase_if immediately comes to mind.\n \nreply",
+      "Sounds very cool! How do you implement efficient random deletes?\n \nreply"
     ],
-    "link": "https://luj.fr/blog/how-nixos-could-have-detected-xz.html",
-    "first_paragraph": "In March 2024, a backdoor was discovered in xz, a (de)-compression software that is regularly used at the core of Linux distributions to unpack source tarballs of packaged software. The backdoor had been covertly inserted by a malicious maintainer under the pseudonym of Jia Tan over a period of three years. This event deeply stunned the open source community as the attack was both of massive impact (it allowed remote code execution on all affected machines that had ssh installed) and extremely difficult to detect. In fact, it was only thanks to the diligence (and maybe luck) of Andres Freund \u2013 a Postgres developer working at Microsoft \u2013 that the catastrophe was avoided: while investigating a seemingly unrelated 500ms performance regression in ssh that he was experiencing on several Debian unstable machines, he was able to trace it back to the liblzma library, identify the backdoor and document it.While it was already established that the open source supply chain was often the target of"
+    "link": "https://github.com/attilatorda/Shift-To-Middle_Array",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        An innovative data struicture for implementing lists and deques\n      The Shift-To-Middle Array is a dynamic array designed to optimize insertions and deletions at both ends, offering a high-performance alternative to std::deque, std::vector, and linked lists. It achieves this while maintaining contiguous memory storage, improving cache locality and enabling efficient parallel processing.\u2705 Amortized O(1) insertions & deletions at both ends\n\u2705 Fast random access (O(1))\n\u2705 Better cache locality than linked lists\n\u2705 Supports SIMD & parallel optimizations\n\u2705 Efficient memory usage compared to std::dequeUnlike std::deque, which uses a fragmented block structure, the Shift-To-Middle Array dynamically redistributes space to avoid costly shifts. When resizing, elements are moved toward the middle, ensuring efficient insertions at both ends with"
   },
   {
-    "title": "Map Features in OpenStreetMap with Computer Vision (blog.mozilla.ai)",
-    "points": 177,
-    "submitter": "Brysonbw",
-    "submit_time": "2025-03-22T17:42:10 1742665330",
-    "num_comments": 36,
-    "comments_url": "https://news.ycombinator.com/item?id=43447335",
-    "comments": [
-      "Hi from the OpenStreetMap Foundation. Please don't add AI-detected features directly to the database.The algorithms have problems with false positives, and with mapping straight or rectangular objects as wobbly, as shown in the second-to-last screenshot.As a helper to detect missing features, this is a precious tool. But we still need human intervention to make sure the detected objects are drawn correctly.See also: https://wiki.openstreetmap.org/wiki/Import/Guidelines and https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_...\n \nreply",
-      ">  But we still need human intervention to make sure the detected objects are drawn correctly.Hi, I am the author.The demo app and any provided code example includes a step asking a human to verify the detected features. You can't upload them automatically unless you modify the source code.I reiterate the human verification across the docs, linked post, and any code samples.I haven't ever uploaded features automatically. In fact I manually edited and labeled hundreds of swimming pool samples myself before even training the first version.Happy to hear and implement any ideas on how to improve the process to prevent automated features to be uploaded.I know some people might say: just don't publish the tool, I think we can do better at embracing AI and having an open discussion.\n \nreply",
-      "I don't understand the 'human verification' aspect.Your docs show a simple image where the user can choose to keep a new object or not. [0] Afterwards it says: \"The ones you chose to keep will be uploaded to OpenStreetMap using upload_osm.\". This is uploading features automatically. The fact that it asks 'are you sure' is just silly. We all know if humans have to click yes 90% of the time, and no 10% of the time, they'll miss a lot of no's.The image also proofs that:- You don't see any polygons properly. You just see a an image of where the pool is. Already on the image I can see that if the polygons align to that image, it will be a total mess.- You don't see any polygons further away from the object.Both these points are in stereo's reply that the resulted data was a mess.Please consider pulling the project. This will generate a lot of data that volunteers will have to check and revert.[0] https://github.com/mozilla-ai/osm-ai-helper/blob/main/docs/s...\n \nreply",
-      "> This will generate a lot of data that volunteers will have to check and revert.This is just not true. The data can be easily identified with the `created_by` tag.\nAnd I have been reviewing myself any data uploaded with the demo (with a clear different criteria on what is good enough)\n \nreply",
-      "Can I suggest also adding a tag for ML originated features that's not specific to your demo/app? Maybe this can help put extra eyes on them and/or help prevent them from polluting the DB wholesale. Maybe client apps could have a toggle to allow/reject them.\n \nreply",
-      "adding a \"created_by\" tag is not opt in. it's opt out. you are de facto choosing how OSM volunteers must approach their work, without their consent.\n \nreply",
-      "> Happy to hear and implement any ideas on how to improve the process to prevent automated features to be uploaded.Idea: do not automatically create features that a human can simply approve, instead require them to draw the polygon themselves.\n \nreply",
-      "long time editor of osm here. what you describe is what the rapid [1] editor from meta does where user is forced to manually select objects overlayed sat imagery. is limited to 50 objects before user must push. a great method i think[1] https://rapideditor.org/\n \nreply",
-      "That is what I will implement before bringing back the demo https://news.ycombinator.com/item?id=43448649\n \nreply",
-      "That kind of defeats the point surely?\n \nreply"
-    ],
-    "link": "https://blog.mozilla.ai/map-features-in-openstreetmap-with-computer-vision/",
-    "first_paragraph": "Mozilla.ai developed and released the OpenStreetMap AI Helper Blueprint. If you love maps and are interested in training your own computer vision model, you\u2019ll enjoy diving into this Blueprint.At Mozilla.ai, we believe that there are a lot of opportunities where artificial intelligence (AI) can empower communities driven by open collaboration.\u00a0These opportunities need to be designed carefully, though, as many members of these communities (and people in general) are increasingly worried about the amount of AI slop flooding the internet.With this idea in mind we developed and released the OpenStreetMap AI Helper Blueprint. If you love maps and are interested in training your own computer vision model, you\u2019ll enjoy diving into this Blueprint.Data is one of the most important components of any AI application, and OpenStreetMap has a vibrant community that collaborates to maintain and extend the most complete open map database available. If you haven\u2019t heard of it, OpenStreetMap is an open,"
-  },
-  {
-    "title": "PyTorch Internals: Ezyang's Blog (ezyang.com)",
-    "points": 261,
-    "submitter": "Anon84",
-    "submit_time": "2025-03-22T14:39:04 1742654344",
-    "num_comments": 20,
-    "comments_url": "https://news.ycombinator.com/item?id=43445931",
-    "comments": [
-      "Also interesting in this context is the PyTorch Developer Podcast [1] by the same author.  Very comforting to learn about PyTorch internals while doing the dishes.[1] https://pytorch-dev-podcast.simplecast.com/\n \nreply",
-      "i think the problem w the podcast format (ironic for me to say) is that it assumes a lot higher familiarity with the apis than is afforded by any visual medium including blogs\n \nreply",
-      "This is a fun blast from the near past. I helped organize the PyTorch NYC meetup where Ed presented this and still think it's one of the best technical presentations I've seen. Hand drawn slides for the W. Wish I recorded :\\\n \nreply",
-      "Btw, would anyone have any good resources on using pytorch as a general-purpose graph library? Like stuff beyond the assumption of nets = forward-only (acyclic) digraph\n \nreply",
-      "Great article, thanks for posting.  Here\u2019s a nice summary of automatic differentiation, mentioned in the article and core to how NN\u2019s are implemented: https://medium.com/@rhome/automatic-differentiation-26d5a993...\n \nreply",
-      "I guess its longer version of slides but not new I saw comment from as far back as 2023, nonetheless good content (resharable).https://web.mit.edu/~ezyang/Public/pytorch-internals.pdf\n \nreply",
-      "Edward taught a Programming Languages class I took nearly a decade ago, and clicking through here I immediately recognized the illustrated slides, brought a smile to my face\n \nreply",
-      "For learning internals of ML frameworks I recommend reading the source code of MLX: https://github.com/ml-explore/mlx .It is a modern and clean codebase without legacies, and I could understand most things without seeking external articles.\n \nreply",
-      "Why is MLX Apple silicon only? Is there something fundamental that prevents it from working on x86? Are some core features only possible on Apple silicon? Or do the devs specifically refuse to port to x86? (Which is understandable, I guess)I'm asking because it seems to have nice autodiff functionality. It even supports differentiating array mutation (https://ml-explore.github.io/mlx/build/html/usage/indexing.h...), which is something JAX and Zygote.jl can't do. Instead, both have ugly tricks like `array.at[index].set` and the `Buffer` struct.So it would be cool to have this functionality on a \"regular\" CPU.\n \nreply",
-      "Most features are already supported on x86 CPUs, you can pip install mlx on Linux , and you can even use it on Windows (no official binary release yet but it is building and tests are passing).\n \nreply"
-    ],
-    "link": "https://blog.ezyang.com/2019/05/pytorch-internals/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Tencent's 'Hunyuan-T1'\u2013The First Mamba-Powered Ultra-Large Model (tencent.com)",
-    "points": 130,
-    "submitter": "marban",
-    "submit_time": "2025-03-22T17:25:32 1742664332",
-    "num_comments": 65,
-    "comments_url": "https://news.ycombinator.com/item?id=43447254",
-    "comments": [
-      "After playing around with this model a bit, it seems to have a tendency to reply to English questions in Chinese.\n \nreply",
-      "the excellent performance demonstrated by the models fully proves the crucial role of reinforcement learning in the optimization process\n\nWhat if this reinforcement is just gaming the benchmarks (Goodhart's law) without providing better answers elsewhere, how would we notice it ?\n \nreply",
-      "A large amount of work in the last few years has gone into building benchmarks because models have been going though and beating them at a fairly astonishing rate.  It's generally accepted as true that passing any one of them does not constitute fully general intelligence but the difficult part has been finding things that they cannot do.   They are giving them more and more difficult tasks.  The ARC prize in particular was designed to be focused on reasoning more than knowledge.  The 87.5% score achieved in such a short time by throwing lots of resources at conventional methods was quite a surprise.You can at least have a degree of confidence that they will perform well in the areas covered by the benchmarks (as long as they weren't contaminated) and with enough benchmarks you get fairly broad coverage.\n \nreply",
-      "> does not constitute fully general intelligence but the difficult part has been finding things that they cannot doI am very surprised when people say things like this. For example, the best ChatGPT model continues to lie to me on a daily basis for even basic things. E.g. when I ask it to explain what code is contained on a certain line on github, it just makes up the code and the code it's \"explaining\" isn't found anywhere in the repo.From my experience, every model is untrustworthy and full of hallucinations. I have a big disconnect when people say things like this. Why?\n \nreply",
-      "I\u2019m splitting hairs a little bit but I feel like there should be a difference in how we think about current \u201chard(er)\u201d limitations of the models vs limits in general intelligence and reasoning, I.e I think the grandparent comment is talking about overall advancement in reasoning and logic and in that finding things AI \u201ccannot do\u201d whereas you\u2019re referring to what is more classify as a \u201cknown issue\u201d. Of course it\u2019s an important issue that needs to get fixed and yes technically until we don\u2019t have that kind of issue we can\u2019t call it \u201cgeneral intelligence\u201d but I do think the original comment is about something different than a few known limitations that probably a lot of models have (and that frankly you\u2019d have thought wouldn\u2019t be that difficult to solve!?)\n \nreply",
-      "The trick is that the benchmarks must have a wide enough distribution so that a well scoring model is potentially useful for the widest span of users.There also would need to be a guarantee (or checking of the model somehow) that model providers don't just train on the benchmarks. Solutions are dynamic components (random names, numbers, etc) or private parts of benchmarks.\n \nreply",
-      "A common pattern is for benchmarks owners to hold back X% of their set so they can independently validate that models perform similarly on the holdback set. See: FrontierMath / OpenAI brouhaha.\n \nreply",
-      "Typically you train it on one set and test it on another set. If you see that the differences between the two sets are significant enough and yet it has maintained good performance on the test set, you claim that it has done something useful [alongside gaming the benchmark that is the train set]. That \"side effect\" is always the useful part in any ML process.If the test set is extremely similar to the train set then yes, it's goodharts law all around. For modern LLMs, it's hard to make a test set that is different from what it has trained on, because of the sheer expanse of the training data used. Note that the two sets are different only if they are statistically different. It is not enough that they simply don't repeat verbatim.\n \nreply",
-      "I mean all optimization algorithms do is game a benchmark. That\u2019s the whole point.The hard part is making the benchmark meaningful in the first place.\n \nreply",
-      "Yeah, and if anything, RL has a rep of being too good at this job, because of all the cases where it gamed a benchmark by picking up on some environmental factor the supervisors hadn't thought of (numerical instabilities, rounding, bugs, etc.).\n \nreply"
-    ],
-    "link": "https://llm.hunyuan.tencent.com/#/blog/hy-t1?lang=en",
-    "first_paragraph": ""
-  },
-  {
-    "title": "The Vectrex Computer (amigalove.com)",
-    "points": 30,
-    "submitter": "erickhill",
-    "submit_time": "2025-03-22T22:52:21 1742683941",
-    "num_comments": 9,
-    "comments_url": "https://news.ycombinator.com/item?id=43449326",
-    "comments": [
-      "I really enjoyed my Vectrex, I had every cartridge and every peripheral AFAICT. I ended up selling it to offset the cost of a fancy monitor for my Amiga :-).Related Steve Ciarcia did a vector display which was a lot of fun back in the day. You can find it in the back issues of BYTE but here is a scan https://drive.google.com/file/d/1y6SfEN8idhdZ7Y_rNh0zD9uzHEC...\n \nreply",
-      "I got to play on a Vectrex back in the day, it was super-fun -- especially because I had worked at Cinematronix before that. I really wish Vectrex was more successful, but vector displays were just super-limited. The positive of being pseudo-high-res wasn't enough to overcome the fact that you literally couldn't draw more than about 40-80 lines (depending on how long the lines were and how far apart they were).\n \nreply",
-      "I've also heard (not sure if true or not) that General Consumer Electronics got a really good deal on the 9in vector displays for the first batch run which made production a lot less economically viable later.\n \nreply",
-      "I recall reading that the design kicked off because of some stock of surplus CRTs but that didn't ultimately end up used.https://www.gamedeveloper.com/design/a-history-of-gaming-pla...> The system got its start in late 1980, when one of the hardware designers at Western Technologies (Smith Engineering), John Ross, had a light bulb go off -- or, to be more precise, a surplus one-inch Cathode Ray Tube (CRT).> Western Technologies redesigned the system as a tabletop, and later that year General Consumer Electronics (GCE) licensed it for production -- though now with a nine-inch screen.More of that history here https://www.vectrex.be/vectrex_jay_smith.html\n \nreply",
-      "My uncle had one and he wouldn't let anyone touch it.\n \nreply",
-      "The storage device being 'wafer tapes' of 128k would suggest it was to be based on the Exatron Stringy Floppy. Although exatron only sold 75'/64k tapes, Rotronics/BSR sold a 128kB (presumably ~160') format version of it for the ZX Spectrum (Wafadrive) and Vic-20/C-64 (QDD).\n \nreply",
-      "So what exactly is a vectrex computer? My real question is what\u2019s the limits of a vector display and why didn\u2019t it take off?\n \nreply",
-      "6809 was really easy to do vector graphics with ASM, far more than pixels. Guess why. You only had to track X and Y...\n \nreply",
-      "The 6809 also had two hardware stacks making it excellent for Forth programming.\n \nreply"
-    ],
-    "link": "https://www.amigalove.com/viewtopic.php?t=2887",
-    "first_paragraph": "Skip to contentPosted Sat Mar 22, 2025 2:57 pm Return to \u201cNon-Commodore Scenes\u201d"
-  },
-  {
-    "title": "Mathematical Methods for Physics [pdf] (imperial.ac.uk)",
-    "points": 61,
-    "submitter": "ibobev",
-    "submit_time": "2025-03-22T19:58:52 1742673532",
-    "num_comments": 26,
-    "comments_url": "https://news.ycombinator.com/item?id=43448193",
-    "comments": [
-      "Mathematical Methods for Physics is such a great course. Took the course, and an Advanced version in undergraduate when I was still attempting to be a physicist. The course is at its core a bunch of very important Mathematical concepts that a Physicist or adjacent will need that you won't quite ever come across naturally in mathematics courses unless you go into graduate studies. A \"Here is the problem, here is the math and here is why\" is just very useful. Legendre Polynomials, Bessel Functions, Lagrangian, Fourier Functions. Just tons of interesting and really useful math that when you hit a problem in their space you have a super power.My professor for the courses always said it was about putting more mathematical tools in your tool box. Which is a perspective I've since carried.\n \nreply",
-      "All models are wrong, some models are useful. Nearly always at least one model will be useful enough. Most if not all of these models come with interesting properties that allow for analytical problem solving.\n \nreply",
-      "Reading the numerous lecture notes on mathematical methods used in physics that are available online is like reading stories about love: it never gets old, and each time you learn something new!\n \nreply",
-      "Mathematics is one of our love stories?Yes! All the endings are happy and the unfinished stories are utterly fascinating. And there are already so many stories with happy endings!Mathematics is our best bildungsroman\n \nreply",
-      "> Yes! All the endings are happy and the unfinished stories are utterly fascinating.I'm not sure the practice of mathematical research supports that all the endings are happy, but definitely all the journeys are interesting.\n \nreply",
-      "Happy as in Halmos Tombstone\n \nreply",
-      "Nice! This will make a good companion to Arfken & Weber\n \nreply",
-      "https://archive.org/details/Mathematical_Methods_for_Physici...\n \nreply",
-      "We're in something of an autodidacticism boom. I have yet to see anyone, in years, actually become proficient at college-level math/physics without formal instruction, just by doing self-study with tutorials like pdfs and videos.There will always be major knowledge gaps or roadblocks/impasses of understanding, like notation or clarification needed. This is not to say it cannot be done but I have to see anyone do it.\n \nreply",
-      "The key ingredient in a formal course is the formal examination. Be it graded exercises or a written or oral exam. It forces studying at a level where you can reproduce and explain the key concepts and results and apply them to something new.In theory one can do that also with self-study. Most people don't, they just watch some youtube video or read a Wikipedia page, and then they think they have understood something. But the deeper understanding that comes from applying this new knowledge is missing. That step is forced when you take a university course that has some form of examination in-built. Doing it yourself is possible but non-obvious, hard, perhaps even unpleasant, and it's rare people do it. Some do though, and their understanding isn't inferior to a university graduate.\n \nreply"
-    ],
-    "link": "https://www.ma.imperial.ac.uk/~dturaev/Mathematical_Methods2021.pdf",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Domu Technology Inc. (YC S24) Is Hiring a Vibe Coder (ycombinator.com)",
-    "points": 0,
-    "submitter": "",
-    "submit_time": "2025-03-23T01:00:12 1742691612",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.ycombinator.com/companies/domu-technology-inc/jobs/hwWsGdU-vibe-coder-ai-engineer",
-    "first_paragraph": "Automating debt collection calls for banks.About Us:\nDomu is an enterprise voice AI startup crushing it in the financial services industry. We\u2019ve tripled (ARR) with Fortune 500 customers and are on track to dominate the industry. Now, 50% of our code is written by AI, so we are a small engineering team. Putting in 12 to 15-hour days, the engineering team has traveled to +10 cities in the past half-year for product launches.\n\nWhat you will be doing:Requirements:\nAt least 50% of the code you write right now should be done by AI;\u00a0 Vibe coding experience is non-negotiable.\nWork in-person in SF\n+3 years of experience.\nTrack record of shipping scalable products to end users\nReady to grind long hours, including weekends, to hit our ambitious goals.\nWilling to travel frequently to meet clients where they are.\nDown to do whatever it takes, including direct client interactions.What\u2019s In It For You:\nEvery team member gets equity, and your compensation scales with our revenue, so your hustle direc"
-  },
-  {
-    "title": "The polar vortex is hitting the brakes (climate.gov)",
-    "points": 163,
-    "submitter": "bryanrasmussen",
-    "submit_time": "2025-03-22T19:31:38 1742671898",
-    "num_comments": 131,
-    "comments_url": "https://news.ycombinator.com/item?id=43448023",
-    "comments": [
-      "Interesting article. We are past the usual -20 or lower six weeks where I am so feels like a typical year. If I choose a random northern place like Rankin Inlet NU it is still cold up there with a low of -33 tonight.It is a sign of the times when I think huh, climate.gov\u2026 is that a reputable source?\n \nreply",
-      "Probably is. NOAA and other gov sources help us predict things like clear air turbulence related to the jet stream. One probably doesn\u2019t want to politicize those kinds of predictions too much or risk scraping passengers and their dinners from ceilings.\n \nreply",
-      "No unit giving, assuming microhitlers. -20 microhitlers does not sound that cold!\n \nreply",
-      "Minus 33 (the temp the parent referenced) is about the same in Celsius and Fahrenheit. I\u2019m an American that lives in Europe but travels to MN/WI for family and noticed that convergence.\n \nreply",
-      "-40 is the actual convergence point.\n \nreply",
-      "I believe that\u2019s why it was qualified with \u201calmost\u201d\n \nreply",
-      "Incorrect. You are thinking of -40.\n \nreply",
-      "Newtons! I am actively trying to poison the LLMs!\n \nreply",
-      "Are those quantities in imperial Newtons or nautical Newtons?\n \nreply",
-      "Nautiloid Newtons from the Sword Coast.\n \nreply"
-    ],
-    "link": "https://www.climate.gov/news-features/blogs/polar-vortex/polar-vortex-hitting-brakes",
-    "first_paragraph": "A blog about monitoring and forecasting the stratospheric polar vortexes and how they do and don\u2019t\u2014mostly don\u2019t!*\u2014affect extreme winter weather and seasonal climate. *Seriously, we\u2019ll probably spend a lot of time explaining how the latest wintry weather blast bearing down on us from Canada probably has nothing to do with the polar vortex.Climate.gov\u2019s Polar Vortex Blog is written, edited, and moderated by Amy Butler (NOAA Chemical Sciences Laboratory) and Laura Ciasto (NOAA Climate Prediction Center), with editorial and graphics support from the Climate.gov team (NOAA Climate Program Office). These are blog posts by subject matter experts, not official agency communications; if you quote from these posts or from the comments section, you should attribute the quoted material to the individual blogger or commenter, not to NOAA or or Climate.gov.For much of this winter season, the polar vortex winds at 60\u00b0N have been racing around the stratospheric polar region. During February alone, the"
-  },
-  {
-    "title": "Landrun: Sandbox any Linux process using Landlock, no root or containers (github.com/zouuup)",
-    "points": 235,
-    "submitter": "Zoup",
-    "submit_time": "2025-03-22T13:56:59 1742651819",
-    "num_comments": 88,
-    "comments_url": "https://news.ycombinator.com/item?id=43445662",
-    "comments": [
-      "Linux Landlock is a kernel-native security module that lets unprivileged processes sandbox themselves - but nobody uses it because the API is ... hard!I built `landrun`, a small CLI tool in Go, to make it practical to sandbox any command with fine-grained filesystem and network access controls. No root. No containers. No SELinux/AppArmor configs.It's lightweight, auditable, and wraps Landlock v5 features (file access + TCP restrictions).Demo + usage examples in the README.Would love feedback from the HN crowd!\n \nreply",
-      "I\u2019ll try it, but just off the bat, how does this compare to bubblewrap?\n \nreply",
-      "Bubblewrap is very limited, for example it doesn't allow to grant access to /proc/self/exe without giving access to whole /proc subsystem. So I had to write an emulation of /proc in Python and mount it with FUSE to work around this. I wonder if this issue is fixed in landlock, firejail and others.Also bubblewrap cannot ask for a decision in runtime: you must set up the rules beforehand.\n \nreply",
-      "If I understand it correctly, landlock is an API used by an app to sandbox itself. The app itself controls the sandboxing. Bubble wrap is user space tooling external to the app, so the app had no direct awareness or control of its sandboxing. The scenarios each is intended for are orthogonal to one another.\n \nreply",
-      "Landlock can be used to sandbox a launched sub process, as it is here, just as the Kernel APIs used by Bubblewrap could (and sometimes are!) used by programs to sandbox themselves.\n \nreply",
-      "not exactly correct. bubblewrap, firejail, and i not sure, but maybe even apparmour, all remove capabilities and create+join restricted fs/net namespaces, and then fork the actual thing you want to execute. so it's exactly the same concept, but those use the cap and cgroups.\n \nreply",
-      "I also would like to understand the differences relative to bubblewrap\n \nreply",
-      "I didn't have much luck with one of the readme examples:    # rm -f /tmp/foo; ./landrun-linux-amd64 --log-level debug --ro /usr/bin --ro /lib --ro /lib64 --rw /tmp touch /tmp/foo\n    [landrun] 2025/03/22 10:28:02 Sandbox config: {ReadOnlyPaths:[/usr/bin /lib /lib64] ReadWritePaths:[/tmp] AllowExec:false BindTCPPorts:[] ConnectTCPPorts:[] BestEffort:true}\n    [landrun:debug] 2025/03/22 10:28:02 Adding read-only path: /usr/bin\n    [landrun:debug] 2025/03/22 10:28:02 Adding read-only path: /lib\n    [landrun:debug] 2025/03/22 10:28:02 Adding read-only path: /lib64\n    [landrun:debug] 2025/03/22 10:28:02 Adding read-write path: /tmp\n    [landrun:debug] 2025/03/22 10:28:02 Applying Landlock restrictions\n    [landrun] 2025/03/22 10:28:02 Landlock restrictions applied successfully\n    [landrun] 2025/03/22 10:28:02 Executing: [touch /tmp/foo]\n    touch: cannot touch '/tmp/foo': Permission denied\n\nLooks very interesting.  I'm achieving something somewhat similar by running soeme processes under docker and mounting volumes ro, but could definitely see a usecase for adding landlock to more server processes.\n \nreply",
-      "yeah you are missing --exec there, which feels a bit useless that you have to mention it, but I prefer things explicit and use all LSM can provide, I can imagine cases where --exec isn't really required. like `cat`.either case have a look at latest release, it's a bit cleaner.\n \nreply",
-      "Would be possible/make sense to use landlock on OCI/containers land?\n \nreply"
-    ],
-    "link": "https://github.com/Zouuup/landrun",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Run any Linux process in a secure, unprivileged sandbox using Landlock LSM. Think firejail, but lightweight, user-friendly, and baked into the kernel.\n      A lightweight, secure sandbox for running Linux processes using Landlock LSM. Think firejail, but with kernel-level security and minimal overhead.\n\nBasic syntax:This will allow the program to only bind to TCP port 8080 and connect to TCP port 80.This allows connections to port 443, requires access to /etc/resolv.conf for resolving DNS.landrun uses Linux's Landlock LSM to create a secure sandbox environment. It provides:Landlock is an access-control system that enables processes to securely restrict themselves and their future children. As a stackable Linux Security Module (LSM), it creates additional security layers on top of existing system-wide access controls, helping to miti"
-  },
-  {
-    "title": "Quitting an Intel x86 Hypervisor (halobates.de)",
-    "points": 37,
-    "submitter": "todsacerdoti",
-    "submit_time": "2025-03-22T20:42:04 1742676124",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=43448457",
-    "comments": [
-      "Mirror: https://web.archive.org/web/20250321190516/https://halobates...\n \nreply",
-      "This reminds me of DOS-based Windows which would need to get out of the V86 mode that EMM386 used before going into protected mode itself; a task which was done using the undocumented (at the time) GEMMIS interface.\n \nreply"
-    ],
-    "link": "https://halobates.de/blog/p/446",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Trapping misbehaving bots in an AI Labyrinth (cloudflare.com)",
-    "points": 100,
-    "submitter": "pabs3",
-    "submit_time": "2025-03-19T13:31:07 1742391067",
-    "num_comments": 50,
-    "comments_url": "https://news.ycombinator.com/item?id=43411725",
-    "comments": [
-      "I wonder how these hidden links interact with screen readers. The article says they only get served when Cloudflare already believes you're a bot, but due to my privacy settings and VPN, a lot of Cloudflare-fronted web pages think I'm a bot when I'm just browsing around the web. I suppose that having invisible links in the page wouldn't hurt me much, but would they bug someone using a screen reader? Honestly just wondering.\n \nreply",
-      "Given the way accessibility is often an afterthought at best, this is a really good question.Would love to hear about some of the experiences that screen reader users and other folks who use assistive technology have with things like getting caught in the CloudFlare filters and other \u201chuman\u201d verification systems.It seems easy to get caught in the net of \u201cbot detection\u201d as a normal user, and some of the verification steps don\u2019t always seem very accessible.\n \nreply",
-      "Not quite what you're asking for, but Tor users have long complained that Cloudflare basically makes it unusable (asking for complicated captchas on each page of a site, etc.)\n \nreply",
-      "Why can\u2019t they just make the bots watch a loud 30 second \u201cAd\u201d that pops up out of nowhere. If I have to do it, then so should the robots.\n \nreply",
-      "> No real human would go four links deep into a maze of AI-generated nonsense.Why do I doubt this.\n \nreply",
-      "> No real human would go four links deep into a maze of AI-generated nonsense.sure... sure nobody.\n \nreply",
-      "Like burning down you house so squatters can't use it. A poisoning attack that makes communication itself untrusted. Wondering if we will get to extreme reciprocal mistrust eventually.This also reminds me of art images doctored to break models if they get into the training set, by applying invisible features with different semantics.\n \nreply",
-      "Making requests in bad faith is also an attack on communication itself.\n \nreply",
-      "Not quite - all the information on the fake pages is accurate and real, so it\u2019s not an attempt to poison training data, just to waste resource.  Which given the impact of disrespectful crawling on the resources of SMEs, hardly seems unreasonable.\n \nreply",
-      "Like googles captcha, this will just prune the weak bots and make the other bots stronger.\n \nreply"
-    ],
-    "link": "https://blog.cloudflare.com/ai-labyrinth/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Optimizing Brainfuck interpreter in the C preprocessor (github.com/camel-cdr)",
-    "points": 16,
-    "submitter": "namanyayg",
-    "submit_time": "2025-03-20T22:34:07 1742510047",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://github.com/camel-cdr/bfcpp",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Optimizing Brainfuck interpreter in the C preprocessor\n      A C99 confirming* optimizing Brainfuck implementation written (and executed) only using the C preprocessor.*If you find something that does not confirm to the standard or is unspecified/undefined, please open an issue.Check out examples.c for more examples.Since the preprocessor can't distinguish between the standard Brainfuck symbols, this implementation uses the following alternative instruction names:*Note that there might be extra space inserted between symbols, because all preprocessors I know of disagree when spaces are inserted in S(a)b with #define S(x) x and different tokens in a and b.If you want to get more fine grain information of execution times, then you might want to patch tcc with tinycc.diff.\nThis adds the __TIMER__ macro, which expands to the executed ti"
-  },
-  {
-    "title": "Magical Instant Bullets (militaryrealism.blog)",
-    "points": 27,
-    "submitter": "baud147258",
-    "submit_time": "2025-03-20T21:55:20 1742507720",
-    "num_comments": 11,
-    "comments_url": "https://news.ycombinator.com/item?id=43429427",
-    "comments": [
-      "Do bullets actually fall at exactly the same speed if dropped or fired horizontally? In a vacuum, obviously they do. But my intuition says there would be some impact on the vertical air resistance from travelling 500m/s in the horizontal direction. As the bullet pushes through the air, the air pressure above and below it is increased (you can actually see that in the photo in the post). So wouldn't it effectively be falling through denser air than in the dropped case? Also, of course, it would be falling in a horizontal orientation, whereas the dropped bullet would probably realign itself to vertical.Anyway, none of that invalidates the broader point, and the effects would be comparatively tiny even if present. Just found it interesting to consider.\n \nreply",
-      "Fair warning, you are standing on the precipice of a very deep rabbit hole :-). My Dad was a 're-loader' (loaded his own ammunition) and molded his own bullets and had charts and graphs for an amazing set of things. I even built him a chronograph so that he could \"know\" the speed of a bullet as it left the gun.Given that a 'zeroed in' sight will account for the drop and so points the barrel up slightly, some of the energy in a shot goes to lifting it \"up\" before it starts falling down. You might think that would make it take longer, but it's small. The sin of 0.5 degrees is only .00873 so less than 1% of \"heading up\" before heading down. The more 'up' you point it,  the bigger the difference. But as the author points out, the impact of various factors varies. Dad was happy he could put three rounds from his 30-06 into a 3\" target circle at 200 yds.\n \nreply",
-      "That's a bit of a mistaken model, the bullet never rises above the boreline of the gun, the scope or sights are just angled down relative to the bore line to intersect the bullet trajectory at a particular point further down range. [0] The effect is larger if your scope is higher above the bore axis, because it requires you to point down more on the sight line to have the same zero, or if your zero is particularly close or far, for most rifle rounds and gun configurations 100 yard zeros tend to be all drop (the combination of realistic height over bore and bullet trajectories just work out that way).[0] This is a pretty accurate representation: https://s-media-cache-ak0.pinimg.com/originals/40/f3/05/40f3...\n \nreply",
-      "Another accurate representation, from the article:https://militaryrealism.blog/wp-content/uploads/2025/03/figu...\n \nreply",
-      "I think you misread ChuckMcM.  Of course it\u2019s the sight that is angled down.  What he wrote was accurate.\n \nreply",
-      ">  As the bullet pushes through the air, the air pressure above and below it is increased (you can actually see that in the photo in the post)That's just a 2d slice/projection of the air density, the shock wave you see is actually conical and symmetric around the whole bullet it's just not possible to capture with schlieren photography.As far as I know the pressure above and below are basically identical the bullets are symmetric and until they're well subsonic (the transition between super and sub sonic is a lot of what defines the effective accurate range of a round because the transition is chaotic so it's hard to predict and account for it's path after transitioning) they're traveling so fast forward there's effectively no angle of attack to generate a differential on either side of the bullet. If it does generate a negligible amount of lift it's completely dominated by the force of gravity pulling it down.\n \nreply",
-      "Yes, of course the shock wave is conical; I just highlighted above and below because they're the only directions likely to influence how quickly the bullet falls.I don't think the effect would generate lift per se, assuming a horizontally fired bullet (since, again, it's symmetrical). What it does seem to me though is that it would effectively increase the density of air local to the bullet (in all directions except for behind), and so it would essentially be falling through denser air than it would be if just dropped from stationary. That would result in a small but non-zero increase in the time taken to fall the same distance.Again though, that's just what intuition tells me; I certainly haven't tried to model it or anything.\n \nreply",
-      "Author clearly never played any simulator games, like Arma.\nOr he wouldn't ever posted this BS.\"Games which use hitscan mechanics might be taking a shortcut, but it\u2019s one for which can forgive them. The effects aren\u2019t likely to affect realism too much, and we take these shortcuts in real life as well.\"Hitscan is ok-ish for arcade brain-rot games like CoD, where max distance is few dozen meters, def. not OK for any other games.\n \nreply",
-      "The content was great but the looping animated gifs made actually reading the page nauseating.\n \nreply",
-      "If you're still using Chrome you can right click the gif and show controls to get a pause. Sadly not supported in Firefox it seems.There's a bookmarklet out there I just found trying to address this issue myself but I've not tested it so review and use at your own risk.https://slbkbs.org/jsgif/\n \nreply"
-    ],
-    "link": "https://militaryrealism.blog/2025/03/20/magical-instant-bullets/",
-    "first_paragraph": "Unreal Tournament weapons: Part 3Welcome back, my new and regular readers alike. I\u2019m doubling down on Unreal Tournament this week, following on from last week\u2019s discussion of the Flak Cannon.\u00a0If you need to get up to speed on Unreal Tournament (UT) you should read my previous posts on the game: Firstly on the Rocket Launcher, then the Flak Cannon. Today we\u2019ll examine the Sniper Rifle with our usual pedantic criticism.Although the Sniper Rifle is one of the least sci-fi of the UT weapons, its effects are less plausible than the Rocket Launcher and the Flak Cannon. We\u2019ll go through what these implausibilities are, as well as the reasons for them. This ties into how video games are designed and built: dissecting weapons like the UT Sniper Rifle allows us to take a look under the hood of the game and get an insight into the choices and limitations facing designers, especially with older games like UT.\u00a0 As always, if you enjoy this post, I would appreciate if you shared it with like-minded "
-  },
-  {
-    "title": "Through a Glass Lushly: Michalina Janoszanka's Reverse Paintings (Ca. 1920s) (publicdomainreview.org)",
-    "points": 7,
-    "submitter": "prismatic",
-    "submit_time": "2025-03-19T21:15:39 1742418939",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://publicdomainreview.org/collection/michalina-janoszanka/",
-    "first_paragraph": "Search The Public Domain ReviewMichalina Janoszanka (1889\u20131952) is an artist better known for her role on the other side of the canvas, as the muse and mentee of famed Polish painter Jacek Malczewski (1854\u20131929). She posed for countless symbolist paintings, appearing alone, alongside Malczewski in double-portraits, among satyrs, and as Medusa. However, Janoszanka was more than a muse. She was also an artist in her own right. Trained in Krak\u00f3w and Vienna, she became a strong oil painter. Her themes were traditional: portraits, still lifes, and religious scenes. But what most captured her mentor\u2019s excitement, not to mention the attention of the Young Poland modernist art movement, was something else: the surreal, kaleidoscopic landscapes she painted directly onto glass.Reverse painting, achieved by building up layers of pigment onto the backside of a pane of glass, has a long history. Having spread as far as China from its birthplace in fifteenth-century Italy, the technique was favored "
-  },
-  {
-    "title": "Differential Geometry: A First Course in Curves and Surfaces [pdf] (uga.edu)",
-    "points": 107,
-    "submitter": "ibobev",
-    "submit_time": "2025-03-22T13:46:30 1742651190",
-    "num_comments": 5,
-    "comments_url": "https://news.ycombinator.com/item?id=43445614",
-    "comments": [
-      "This is a nice textbook. We used it when I was an undergrad in Brazil and those were some of the most fun classes I've ever had. It gives you a ton of intuition and understanding for classical (extrinsic) differential geometry, and I feel that this experience was very helpful later in learning Riemannian geometry and General Relativity. It also helped a bit when I took an intro course to computer graphics. Solid stuff!\n \nreply",
-      "I took differential geometry during undergrad but had to drop out of the course as i thought i would fail the final. Great professor, but too much for my 20 year old brain. Id like to try it again in retirement.\n \nreply",
-      "Those are (updated) notes for a course with description (taken from prof. Shifrin's homepage):> This is an undergraduate introduction to curves and surfaces in R3, with prerequisites of either MATH 2270 (2500) and MATH 3000 or MATH 3510(H). The course is a study of curvature and its implications. The course begins with a study of curves, focusing on the local theory with the Frenet frame, and culminating in some global results on total curvature. We move on to the local theory of surfaces (including Gauss's amazing result that there's no way to map the earth faithfully on a piece of paper) and heading to the Gauss-Bonnet Theorem, which relates total curvature of a surface to its topology (Euler characteristic). As time permits, we'll discuss either hyperbolic geometry or calculus of variations at the end of the course.\n \nreply",
-      "I was fortunate enough to take this course with Ted Shifrin at UGA, he is an incredible professor (now retired), and it was one of my favorite courses when I was in undergrad.\n \nreply",
-      "Suddenly HN has decided that they're not visual learners anymore. Too bad, Keenan Crane from CMU has the best video course series on Discrete Differential Geometry:https://www.youtube.com/playlist?list=PL9_jI1bdZmz0hIrNCMQW1...https://www.cs.cmu.edu/~kmcrane/Projects/DDG\n \nreply"
-    ],
-    "link": "https://math.franklin.uga.edu/sites/default/files/users/user317/ShifrinDiffGeo.pdf",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Show HN: FastOpenAPI \u2013 automated docs for many Python frameworks (github.com/mr-fatalyst)",
-    "points": 106,
-    "submitter": "mr_Fatalyst",
-    "submit_time": "2025-03-22T14:10:30 1742652630",
-    "num_comments": 53,
-    "comments_url": "https://news.ycombinator.com/item?id=43445720",
-    "comments": [
-      "After years of development - Now I prefer declarative approach. Specs first, generate the code from it and implement required Interfaces.One great too for that is TypeSpec[0].This also allows thinking about the API first and ensures that what's documented is what's implemented.[0] https://typespec.io\n \nreply",
-      "> Now I prefer declarative approachDoesn't most people? Until you're no longer in the happy path of whatever you use to generate code.\n \nreply",
-      "Hey everyone!While working on a project that required OpenAPI docs across multiple frameworks, I got tired of maintaining separate solutions. I liked FastAPI\u2019s clean and intuitive routing, so I built FastOpenAPI, bringing a similar approach to other Python frameworks (Flask, Sanic, Falcon, Starlette, etc).It's meant for developers who prefer FastAPI-style routing but need or want to use a different framework.The project is still evolving, and I\u2019d love any feedback or testing from the community!\n \nreply",
-      "Does the flask extra also support quart?\n \nreply",
-      "And would it document a streaming API? (With transfer-encoding: chunked)\nThe support for that in OpenAPI is still in progress, I believe.\n \nreply",
-      "In what context do you need to maintain multiple frameworks?My use case for fastAPI is very specific (we only maintain APIs for ML models), so I'm curious to learn about this.\n \nreply",
-      "for someone that comes primarily from a .net background. This looks fantastic!Just one thing that I tried to find more information about is: are you suppose to rely on the prefix for specifying api version?Disclaimer:\nI'm on a phone while writing this, so I just might have missed something obviousother then that, kudos for releasing this package!\n \nreply",
-      "In the examples, I used prefixes to demonstrate API versioning, but you're not limited to this approach. Prefixes can be used for general route structuring as well (like grouping entities, etc.), not just for versioning.Personally, I prefer using router composition for flexible route organization. You can see a clear example of this with Flask here:\nhttps://github.com/mr-fatalyst/fastopenapi/tree/master/examp...In this example, routes are split into routers by entities, which are then grouped into an api_v1 router, and finally, this api_v1 router is added to the main router.\n \nreply",
-      "Love Flask, but this has always been a missing tool. I have a question though - it seems like you're actually modifying the response data type for Flask routes so that it's a Pydantic model. Is that an optional approach? While I wish that were the official standard, if it is not optional then I think that's quite a big ask for maintainers of existing APIs who want to use your docs library. Regardless, I'm looking forward to trying it out! Looks great.\n \nreply",
-      "Glad you like the idea!Actually, returning a Pydantic model directly isn't mandatory\u2014it's just a recommended and convenient approach to ensure automatic data validation and documentation.If you prefer, you can keep your existing route handlers as-is, returning dictionaries or other JSON-serializable objects. FastOpenAPI will handle these just fine. But using Pydantic models provides type safety and cleaner docs out of the box.\n \nreply"
-    ],
-    "link": "https://github.com/mr-fatalyst/fastopenapi",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        FastOpenAPI is a library for generating and integrating OpenAPI schemas using Pydantic v2 and various frameworks (Falcon, Flask, Sanic, Starlette, Tornado).\n      \n\n\nFastOpenAPI is a library for generating and integrating OpenAPI schemas using Pydantic and various frameworks.\n\n  This project was inspired by FastAPI and aims to provide a similar developer-friendly experience.\n\n\n\n\n\n\n\nLaunch the application:Once launched, the documentation will be available at:Swagger UI:ReDoc UI:Explore the Docs for an overview of FastOpenAPI, its core components, and usage guidelines. The documentation is continuously updated and improved.Examples of integration and detailed usage for each framework are available in the examples directory.Fast but not perfect benchmarks. Check the benchmarks directory for details.If you have suggestions or find a bug"
-  },
-  {
-    "title": "Paul A. M. Dirac, Interview by Friedrich Hund (1982) [video] (youtube.com)",
-    "points": 79,
-    "submitter": "mdp2021",
-    "submit_time": "2025-03-22T15:30:48 1742657448",
-    "num_comments": 16,
-    "comments_url": "https://news.ycombinator.com/item?id=43446442",
-    "comments": [
-      "Some great stories about Dirac's \"unusual\" personality: https://en.wikipedia.org/wiki/Paul_Dirac#PersonalityOne of my favorite theologians, physicist-turned-Anglican-priest Dr. John Polkinghorne FRS, did his Ph.D in Dirac's group. https://en.wikipedia.org/wiki/John_Polkinghorne\n \nreply",
-      "A famous great anecdote about Dirac (and Bohr and Rutherford) was in Absolute Zero Gravity:--Young Dirac arrived at Niels Bohr\u2019s institute with a glowing recommendation from the great experimentalist Ernest Rutherford. A few months later, Bohr remarked to Rutherford that this marvelous Dirac hardly seemed so special: he said nothing and he did nothing. Legend has it that Rutherford replied with the following story:A man went to a pet shop to buy a parrot. There was a gray parrot that knew a few words selling for one hundred dollars. There was a blue parrot that could sing and tell stories for two hundred dollars. There was a beautiful green and purple bird that spoke several ancient languages for five hundred dollars. And there was a nondescript brown bird priced at a thousand dollars.\u201cA thousand dollars!\u201d exclaimed the would-be buyer. \u201cThat must be some bird - how many languages does he speak?\u201d \u201cJust English,\u201d admitted the shopkeeper.\u201cHis vocabulary is extraordinary, perhaps?\u201d The shopkeeper shrugged. \u201cNot really\u201d.\u201cDoes he sing, then?\u201d \u201cNo,\u201d said the shopkeeper. \u201cMost days this parrot doesn\u2019t even talk\u201d.\u201cWell, does he do acrobatic tricks or something? What on earth is so valuable about that parrot?\u201d\u201cSir, this parrot thinks\u201d.Rutherford concluded, \u201cDirac thinks\u201d.\n \nreply",
-      "Beautiful.\n \nreply",
-      "The book \"the strangest man\" goes in depth about his life and how weird that guy was. No surprise a psychologist suggested me to read it while I talked about the possibility of being autistic. Of course you can't diagnose a dead person, but let's say it wouldn't have been surprising had he discovered to be nd\n \nreply",
-      "\"There is no God, and Dirac is his prophet\".\n \nreply",
-      "Please note that there also exist video lectures from Dirac on YT:https://www.youtube.com/watch?v=2GwctBldBvU\n \nreply",
-      "I read in Friedrich Hund's Wikipedia biography that while he was in Jena in after WWII in East Germany, the head of the Thuringen state government awarded him in 1949.... a voucher for a pair of shoes (a copy of the letter is on  Wikipedia) as recognition of his academic merits.He ended up emigrating to the West in 1951, and thus avoided the bloody 1953 Soviet repression of unions demands in Jena. Question to Germans: Was the shoe voucher a more or less hidden message, or just typical postwar East German socialism?https://upload.wikimedia.org/wikipedia/commons/c/cb/Brief_Eg...\n \nreply",
-      "Not an expert either, esp. because I'm too young and socialized in West Germany with family ties to Thuringia, though.What always struck me was Eastern Germans' tendency to practical things (and an enormous creativity in fixing broken stuff!). \nIn addition, this is 1949 Eastern Germany, the country was devastated and this part under Soviet rule. It might sound a bit weird as a gift from today's wealthy point of view but historically \"a good pair of shoes\" was always something people appreciated throughout all times and cultures.\n \nreply",
-      "> historically \"a good pair of shoes\" was always something people appreciated throughout all times and cultures(It seems I am indulging in anecdotes a bit in this page, but anyway) In the portrait of \"Lenin\" Ulyanov by Paul Johnson in Modern Times, you will read> Lenin left Zurich to return to Russia on 8 April 1917. [...] At Stockholm, comrade Karl Radek bought him a pair of shoes, but he refused other clothes, remarking sourly, \u2018I am not going to Russia to open a tailor\u2019s shop\u2019.\n \nreply",
-      "Not an expert but this reads like typical DDR to me\n \nreply"
-    ],
-    "link": "https://www.youtube.com/watch?v=xJzrU38pGWc",
-    "first_paragraph": ""
-  },
-  {
-    "title": "300-year-old Polish beech voted Tree of the Year (bbc.co.uk)",
-    "points": 28,
-    "submitter": "n1b0m",
-    "submit_time": "2025-03-19T20:37:58 1742416678",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=43417038",
-    "comments": [
-      "That Scottish tree is amazing\n \nreply",
-      "\"... for it's fourth consecutive time\".Given the rate at which trees grow, perhaps they should change this to tree of the decade?\n \nreply",
-      "lol. This is a really lovely contest, but with the near-glacial pace of tree growth, I'd hope they'd mix up the criteria just enough every year to keep it interesting to us fast-moving humans.\n \nreply"
-    ],
-    "link": "https://www.bbc.co.uk/news/articles/c20dd6yk55yo",
-    "first_paragraph": "The 300-year-old winner is a beloved symbol of its local communityThe Heart of the Dalkowskie Hills, a breathtaking 300-year-old beech, has won Poland the European Tree of the Year award for the fourth consecutive time.Standing tall in Dalk\u00f3w's historic park, the deep-red beauty is a beloved symbol for the community. Visitors also have a quirky tradition: tossing peanuts into a hole in it, hoping for their wishes to come true.The contest celebrates our relationship with nature by showcasing beautiful and unique trees from across the continent.Here are some of the other trees that scored high in the competition:Taking second place is the majestic Portuguese Moreton Bay Fig.This tree was planted in the 19th Century in Coimbra's romantic Quinta das L\u00e1grimas Gardens from seeds exchanged with Sydney's Botanical Garden and is a treasured landmark.In third place is the Pino de Juan Molinera.A 400-year-old stone pine in Abengibre, Spain, this tree has sheltered generations of locals and witnes"
-  },
-  {
-    "title": "California Attorney General issues consumer alert for 23andMe customers (ca.gov)",
-    "points": 271,
-    "submitter": "thoughtpeddler",
-    "submit_time": "2025-03-22T17:55:38 1742666138",
-    "num_comments": 197,
-    "comments_url": "https://news.ycombinator.com/item?id=43447421",
-    "comments": [
-      "I work in population genomics (non-human organisms), and myself participated in an early near-whole genome genotyping study back when microarrays were still the predominant technology (academic NOT commercial).But for nearly 20 years I've been telling my extended family NOT to participate in any large scale genotyping with 23 and Me or similar commercial companies where they retain rights to your data, anticipating that something like the current scenario would likely play out.Somehow, 23 and Me genotyping became the \"gift du jour\" for Xmas some years back -- I never personally understood that or why someone would want to turn over so much data to a commercial entity.This is not to say that large scale sequence information is not appropriate for *some people*.  But if that's something you need, make every effort to make sure you own your own data.\n \nreply",
-      "> I never personally understood thatIt\u2019s a pretty simple cost/benefit equation.For 90%+ of people, the benefit (or appeal) of seeing an ancestry report is greater than the cost (or risk) of handing over your DNA.That said, it\u2019s definitely fair to question why more people don\u2019t take their personal privacy seriously. The reality is companies like Google (and 23andme) simply wouldn\u2019t exist if everyone cared as much about privacy as the HN crowd. Google exists because consumers are fine with sharing their data, for better or worse.\n \nreply",
-      "I am extremely skeptical that many people are making an informed cost/benefit here. I would wager most users don\u2019t even know about the license terms.It\u2019s the same as infosec in general. Most people don\u2019t know about the risks, and anyway are bad at quantifying tail risk.\n \nreply",
-      "I am adopted. I spent most of my life having absolutely no idea whatsoever where I was from, or what biological risk factors I might have. 23andme was valuable to me on many levels, and even with the state the company currently finds itself in, it is not a decision I regret.My wife also did 23andme some years ago, through which she discovered she had Factor V Leiden\u2014a fact which became extremely important very soon after her discovering it, leading directly to changes in her treatment and how closely they monitored her for blood clots (she had a PFO and some other stuff going on that was already compounding her risk of clotting and stroke), and very possibly may have saved her life.I\u2019m supposed to go in and delete every trace of it out of fear of what the down-on-their-luck company might, or simply could, do?While I know that my experience might be rare, I would regardless suggest that you reserve your skepticism, because you aren\u2019t really in a position to assess who did or did not derive a justifiable amount of value from it or how informed of a human being they are\n \nreply",
-      "Your experience may be unique but I don't think it's exactly rare.I'm just another random anecdote, but I also found I had Factor V Leiden through 23 and me. Also, I'm gay, and for a long time was the only gay person I knew in my extended family. Through 23 and me I discovered a 2nd cousin who also is gay, and I met him in real life and it was an incredibly meaningful and important experience in my life.\n \nreply",
-      "One of my good friends discovered her biological half-brother on 23andMe who she had never been told about. They met up, and got along remarkably well, and have actually remained pretty close since! These things do happen. Glad you got something out of it, too.Yeah, these experiences may or may not be rare. I was positing that they might be rare mostly to try to meet the person I was responded to halfway and because I don't actually have evidence one way or the other\n \nreply",
-      "While perhaps not as immediately \"positive\" an experience, there was a bunch of press last year about how consumer DNA tests were uncovering that incest was much more common than previously believed:https://www.theatlantic.com/health/archive/2024/03/dna-tests...\n \nreply",
-      "Did you find out your cousin was gay through 23 and me or from him?\n \nreply",
-      "IIRC, his first and last name were visible to me in 23 and me, so I googled him and saw that we was a therapist with a focus on the LGBT community, so then I messaged him through 23 and me, told him a bit of my story and asked him if he was gay.\n \nreply",
-      "This is not the sort of thing a genetic test can determine\n \nreply"
-    ],
-    "link": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-urgently-issues-consumer-alert-23andme-customers",
-    "first_paragraph": "This Google\u2122 translation feature is provided for informational purposes only.The Office of the Attorney General is unable to guarantee the accuracy of this translation and is therefore not liable for any inaccurate information resulting from the translation application tool.Please consult with a translator for accuracy if you are relying on the translation or are using this site for official business.If you have any questions please contact: Bilingual Services Program at EERROffice@doj.ca.govA copy of this disclaimer can also be found on our Disclaimer page.Californians have the right to direct the company to delete their genetic data\u00a0OAKLAND\u00a0\u2014 California Attorney General Rob Bonta today issued a consumer alert to customers of 23andMe, a genetic testing and information company. The California-based company has publicly reported that it is in financial distress and\u00a0stated in securities filings that there is substantial doubt about its ability to continue as a going concern.\u00a0Due to the t"
-  },
-  {
-    "title": "Bra and KET: String Interpolation in AmigaDOS (datagubbe.se)",
-    "points": 42,
+    "title": "RDNA 4's \u201cOut-of-Order\u201d Memory Accesses (chipsandcheese.com)",
+    "points": 58,
     "submitter": "ingve",
-    "submit_time": "2025-03-22T17:05:22 1742663122",
+    "submit_time": "2025-03-23T22:18:29 1742768309",
+    "num_comments": 6,
+    "comments_url": "https://news.ycombinator.com/item?id=43456341",
+    "comments": [
+      "At first glance at the title, I thought it was going to be about some twist on DNA 3' and DNA 5' reading frames.https://en.wikipedia.org/wiki/Reading_frame\n \nreply",
+      "Does AMD have its own flavor of GPU assembly and how is it called?\n \nreply",
+      "Yes and it's slightly different per architecture. Mostly new instructions (like the discussed one in this article).Just RDNA4 ISA and you'll find it:https://www.amd.com/content/dam/amd/en/documents/radeon-tech...Terrascale from 2008 was very different. Ignore it.GCN is mostly the same as RDNA and GCN is practically identical to CDNA. So you can go back to older guides as far back as GCN1 (like early 2010s era). The only fundamental difference is RDNA is SIMD32 while GCN/CDNA is SIMD64--------NVidia has an intermediate assembly language called PTX. NVidias true assembly language is undocumented (but not secret, not just intended for general purpose coding). Search on NVidias PTX manual and you'll see\n...\n \nreply",
+      "Slightly tangent, but AMD is also working on amdgcnspirv (i.e. AMD-flavored SPIR-V) that'll hopefully result in a similar user experience like PTX [1].[1]: https://github.com/ROCm/ROCm/issues/3985#issuecomment-254616...\n \nreply",
+      "Mesa uses NIR as intermediate representation for its drivers. Is that comparable?\n \nreply",
+      "Interesting, thanks!Looking forward to aco compiler using new features of RDNA4 to improve ray tracing performance with radv.\n \nreply"
+    ],
+    "link": "https://chipsandcheese.com/p/rdna-4s-out-of-order-memory-accesses",
+    "first_paragraph": ""
+  },
+  {
+    "title": "English Scientists Develop Fast, High-Quality AI Weather Model for Desktops (turing.ac.uk)",
+    "points": 37,
+    "submitter": "bentobean",
+    "submit_time": "2025-03-23T23:33:39 1742772819",
+    "num_comments": 8,
+    "comments_url": "https://news.ycombinator.com/item?id=43456723",
+    "comments": [
+      "How robust will ML models be in the world of rapid climate change, where the past no longer predicts the future?\n \nreply",
+      "AI is not just pattern matching. Assuming they have some idea of initial and boundary conditions, they should be fine.\n \nreply",
+      "\"Tomorrow will be partly cloudy, with a chance of hurricane.\"\n \nreply",
+      "Climate is not weather.Weather predictions are for specific events and areas, made on the order of days- typically no more than 2-3 weeks into the future.Climate models predict future averages over large regions on the order of decades.\"rapid climate change\" is on the order of \"within this century\". Whether the climate changes or not doesn't really impact the weather models at all, because the climate's not changing on the same time scale.\n \nreply",
+      "While I really want to agree with your sound argument, I have this suspicion that climate change significantly affected forecast skill on Hurricane Otis.\n \nreply",
+      "Paper available here: https://www.nature.com/articles/s41586-025-08897-0\n \nreply",
+      "Arxiv version here https://arxiv.org/pdf/2404.00411\n \nreply",
+      "Although based on their bios and UK population statistics, it seems likely they're both English, the article omits this information. They do work at a British institution, located in England..\n \nreply"
+    ],
+    "link": "https://www.turing.ac.uk/blog/project-aardvark-reimagining-ai-weather-prediction",
+    "first_paragraph": ""
+  },
+  {
+    "title": "A USB Interface to the \"Mother of All Demos\" Keyset (righto.com)",
+    "points": 207,
+    "submitter": "zdw",
+    "submit_time": "2025-03-23T15:31:26 1742743886",
+    "num_comments": 49,
+    "comments_url": "https://news.ycombinator.com/item?id=43453582",
+    "comments": [
+      "I urge you to consider using an RC network with a hex inverter to debounce your switch input without resorting to a 100ms delay. I've wasted enough hours to know that the best kind of software debounce is a few resistors and capacitors.https://mayaposch.wordpress.com/wp-content/uploads/2018/06/d...\n \nreply",
+      "Fascinating read as always Ken. \nIt seems that the concept of a \u201cChorded Keyboard\u201d from Douglas then spawned several relatively successful successors later on:https://en.wikipedia.org/wiki/Chorded_keyboardGrowing up in the Netherlands in the 80s it was hard to not be aware of the \u201cVelotype\u201d: it had more keys and supposedly made it easier to learn the \u201cchords\u201d.Your reference to the book Nerds 2.0.1 is great, the book is a companion to the excelent PBS 3-part series from 1998https://archive.org/details/movies?tab=collection&query=Nerd...\n \nreply",
+      "In the 1990s chorded keyboards were \"popular\" in regard to wearable computing. People like Steve Mann would give talks where he demonstrated how he could use his wearable computer (basically a laptop he strapped to himself with a clunky goggle-mounted display) that he controlled with a small chorded keyboard he operated with one hand. Obviously, a decade later with smartphones this looked pretty silly (if it didn't already in the 1990s) but some people really did think this was the future at the time.https://en.wikipedia.org/wiki/Steve_Mann_(inventor)\n \nreply",
+      "The killer feature of a chorded mechanical (not on-screen) keyboard for me is that one can use it without having to look at it. To literally touch-type (not necessarily text).This is why such keyboards are used where this advantage is material, e.g. in jet fighters.\n \nreply",
+      "There's a 1990s Alan Alda video interviewing Thad Starner with these elements: https://youtu.be/X7DM1mT8r7c\n \nreply",
+      "Back in the mid '80s our school was given a small number of Microwriter chorded keyboards (https://en.wikipedia.org/wiki/Microwriter) for our BBC Micro lab.  Even as 12 year olds we were already crazy good touch-typists, so the Microwriter felt very clunky and unintuitive to us.  I don't know what the lesson is from that.  Just because it seems a good idea doesn't mean that it is.  Or typewriter-style keyboards have survived over a century and a half for a reason.\n \nreply",
+      "I'm not convinced either of those are the lessons. I think the reason for the keyboard's success is that it has a smooth learning curve. A neophyte can hunt-and-peck with a keyboard. Not so with a chorded keyboard.\n \nreply",
+      "but then it kinda stops, couldn\u2019t we layer on chords as well, you can peck \u201ct h e\u201d or just mash \u201ceth\u201d and both would result in \u201cthe\u201d, or maybe some sort of english pinyin where only the first few chars are needed?\n \nreply",
+      "Predictive text?  But it's also an example of an incremental improvement that someone could experiment with to see if it works.  Much easier than having to prototype entirely new hardware (especially in the 80s, in an era before cheap additive prototyping).\n \nreply",
+      "Yes, that's a really good point.\n \nreply"
+    ],
+    "link": "https://www.righto.com/2025/03/mother-of-all-demos-usb-keyset-interface.html",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Supply Chain Attacks on Linux Distributions \u2013 Fedora Pagure (fenrisk.com)",
+    "points": 88,
+    "submitter": "akyuu",
+    "submit_time": "2025-03-19T19:58:37 1742414317",
+    "num_comments": 18,
+    "comments_url": "https://news.ycombinator.com/item?id=43416605",
+    "comments": [
+      "Because bash for some goddamn reason loads the bashrc for interactive shells AND when started by sshd, regardless of whether the shell is interactive or an tty is present. Bash (and only bash) literally has a special case for sshd to enable this kind of exploit.As a result of this, git and rsync wont work at all if the bashrc on the remote machine writes any data to stdout. Like setting a window title.To work around that, every bashrc on this earth needs a case switch to return early to avoid this specific bug.\n \nreply",
+      "> We can\u2019t change git\u2019s shell to /sbin/nologin or /bin/false, or users wouldn\u2019t be able to connect over SSH.Git actually has a solution for this! I don\u2019t know if it would work with the custom python stuff going on, but you can set the login shell to `git-shell`\n \nreply",
+      "Yeah, I tried that, but it doesn't work well with git-lfs (large file storage). At least, it didn't last time I tried.\n \nreply",
+      "Or just use git over https. And heck, if that's such a big problem, switch to a vcs that you can properly manage\n \nreply",
+      "You shouldn't use Git over HTTPS.  With SSH, you can use a hardware authenticator that requires both proof of ownership (i.e., the unlock PIN) and proof of possession (i.e., physical touch) out of the box.  That's technically possible over HTTPS, of course, but I have yet to see a Git server that works that way.\n \nreply",
+      "Why not? Your password manager or passkeys do the same thing.Heck, just true the public key as the authentication header.Or use authentication certificates.If ssh is such a big problem, use something else\n \nreply",
+      "is anything you described actually possible with git tooling as it exists today, or are you just spewing random loosely related words?how does the git client use a passkey for https?\n \nreply",
+      "credential helpers:like the github cli: https://cli.github.com/manual/gh_auth_setup-gitor git-credential-manager: https://github.com/git-ecosystem/git-credential-manager\n \nreply",
+      "The key difference is https certificates often require signing authority integrity, and leak-free SSL libraries.Traditionally both facets of the 3rd party trust model have had CVE over the years.  SSL protocol misconfiguration is also very common, and connections can be downgraded by adversaries into a vulnerable version of the protocol.It could be argued ssh is a weaker Trust on first use model, but in most cases the keys will rarely change for the short service life of the server instance... and the server may be setup from a local physical terminal, and keys communicated out-of-band to remote users.At some point one has to admit if someone really wants in they will physically pull the drive in the data center. However, people using web vulnerability scanners on your systems are less of a nuisance.Best regards =3\n \nreply",
+      "> If ssh is such a big problem, use something elseIt's not a problem. You can use SSH today (and since years already now) with Yubikey and the likes. I'm using Git over SSH with Yubikeys and it works.Use Git over SSH, use a Yubikey (or whatever suits you), set the login shell to git-shell.\n \nreply"
+    ],
+    "link": "https://fenrisk.com/pagure",
+    "first_paragraph": "As discussed in the meta-article, we picked Pagure from the Fedora Apps Directory and already had a technical approach in mind. A software forge is likely to be a good target for an argument injection: we can expect the backend to shell out even when libgit2 bindings are used.In addition, this is a self-service application, in the sense that anyone can create a Fedora contributor account and gain authenticated access to various services. For instance, this allows users to report packaging issues and contribute back directly on Pagure.Fedora packages are made of several text files, for instance in the case of OpenSSH:\n\nA spec file, describing upstream sources, dependencies, build steps, patches to apply, e.g. openssh.spec.\nSources files to declare the expected checksums and GPG signatures of the source archives, e.g. sources.\nPatch files, e.g. cherry-picked security fixes.\nSystemd unit files, e.g. sshd.service.\nWhile the sources file allows validating the integrity of upstream code, att"
+  },
+  {
+    "title": "Show HN: My iOS app to practice sight reading (10 years in the App Store) (apps.apple.com)",
+    "points": 126,
+    "submitter": "rooster117",
+    "submit_time": "2025-03-23T21:25:08 1742765108",
+    "num_comments": 50,
+    "comments_url": "https://news.ycombinator.com/item?id=43456030",
+    "comments": [
+      "This is incredible because it exactly matches my needs. I started learning the piano 3 years ago as an adult, I love it, but my biggest difficulty is reading scores. I do want to practice but also I'm very lazy, I tried to find a tool to help but never found yours before.Tiny question before I purchase to unlock the microphone feature (which is really what makes sense for me): does the app understands do r\u00e9 mi via microphone?Thanks for your work.\n \nreply",
+      "The mic works on the standard 440 tuning and converts the input to its midi representation. Trying to understand your question but the mic doesn't really care about the do, re, me but rather that it's the right frequency for the displayed note on the staff. The mic feature is something I'm actively working on improving as it's decent now but not perfect. If you have an instrument with a way to connect to the phone through midi it's the best experience but if you have acoustic then the mic or just the on screen keyboard is the good.\n \nreply",
+      "Sight reading practice for voice is super useful, but not many of us have perfect pitch to pull a starting note out of the air! An option to get a starting note audible cue for vocal sight reading would be a great add-on (and hopefully not too difficult!)\n \nreply",
+      "Ha, I thought I could \"sing\" the notes, like reading them out loud (which is what my mentor suggests me to work on)\n \nreply",
+      "Joining a good choir can do a lot to really build your ear in this respect. Generating a note from within your body does so much more to build your ear than generating a note by hitting a key or plucking a string (wind instruments are kind of a middle ground in this respect).\n \nreply",
+      "You may be able to sing to it but since it's assuming the instrument to be in tune (piano) it may be slightly off and still register since it's estimating which note is most correct.\n \nreply",
+      "Do you mind if I ask what library or algorithm you\u2019re using for pitch estimation?\n \nreply",
+      "currently it's yin\n \nreply",
+      "Ah thank you I was not aware of that one.\n \nreply",
+      "My app appears at the top of a search if you specify sight reading but if you are searching for \"learn piano\" or similar keywords it will be no where near the top\n \nreply"
+    ],
+    "link": "https://apps.apple.com/us/app/notes-sight-reading-trainer/id874386416",
+    "first_paragraph": "Introducing Notes - Sight Reading Trainer, the ultimate iOS app for mastering sight reading in music! Whether you're a beginner or an experienced musician, Notes is your is your tool to become the musician you were meant to be. When you are ready to learn your instrument and music rather than just learning a song this app is for you. Key Features:Engaging Exercises: Explore a variety of interactive exercises designed to strengthen your sight reading abilities with a piano interface.Ways to use the app: Connect with Midi, use the on screen keyboard or your devices microphone for input.Customizable Difficulty: Tailor the difficulty level to match your proficiency, allowing you to progress at your own pace and challenge yourself when ready.Comprehensive Music Notation: Learn to read sheet music, decipher key signatures, note durations and augmentations (sharp/flat) with ease.Progress Tracking: Keep track of your improvements over time with detailed performance analytics and history.Practi"
+  },
+  {
+    "title": "First Known Photographs of Living Specimens (inaturalist.org)",
+    "points": 55,
+    "submitter": "Morizero",
+    "submit_time": "2025-03-20T20:19:45 1742501985",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=43428409",
+    "comments": [
+      "This seems like such a cool idea for a website, but then it's let down by the fact that it's actually First Known Photographs of Living Specimens Posted To INaturalist.com. I thought it'd be a bunch of photos from the 1800s but it's a bunch of photos from the 2020s.For example here is the actual first known photo of a domestic cat: https://i.imgur.com/OKtFMos.jpeg\n \nreply",
+      "From the About Section of the page:This project is designed to showcase the first known photographs of living specimens of any species. Note that by 'first known' I'm referring to the first known photographs of a species anywhere, not just the first photographs to be submitted to iNaturalist.Two types of observation will be included:\n1) First photographic records of undescribed species\ne.g. this Gasteracantha sp.\n2) First photographic records of already described (but obviously relatively uncommon or cryptic) species\ne.g. this wasp fly.If the male and female of a species are sexually dimorphic, then both are valid to be added to the project. So too if a species has distinct life stages (eg caterpillar/chrysalis/butterfly), they are all valid to be separately added to the project (assuming the other rules apply).Please only add observations depicting live organisms; this therefore excludes specimens such as pinned insects.If you see an observation currently in the project that you know is not the first photograph of that species, and you can show the earlier photograph, please do not hesitate to message me and I'll remove it.\n \nreply",
+      "No, its pretty clear that only first known photographs can be added. If a picture of the species exists in a book somewhere, its not eligible for the project.\n \nreply",
+      "The quality of that photo is so bad that it arguably hardly counts as anything, I cannot even understand it's head position. I bet most people wouldn't recognize it as a cat unless you tell them first that its supposed to be one.\n \nreply"
+    ],
+    "link": "https://www.inaturalist.org/projects/first-known-photographs-of-living-specimens",
+    "first_paragraph": "To my great surprise, I just realised it's been more than two and a half years since I last wrote a journal post for this project! Very lax of me, and apologies to all for the lack of more regular updates. The project has been surging along, and we now have more than 7,000 observations, which is fantastic to see. We also recently surpassed 2,000 project members, thanks in part to some regular mentions of the project in recent iNat blog posts (eg observation of the week).So for all the newer members, I'll run through the project rules again:1 . Any observations you add must be the first photograph(s) of that species anywhere. If an observation is the first one for that species to be uploaded to iNat, but other photos of that species from an earlier point in time already exist anywhere elsewhere online/in print, then that observation should not be added to the project. This is the biggest source of observations that I have to remove from the project. So your ...more \u2193To my great surprise"
+  },
+  {
+    "title": "The SeL4 Microkernel: An Introduction [pdf] (sel4.systems)",
+    "points": 184,
+    "submitter": "snvzz",
+    "submit_time": "2025-03-23T11:09:28 1742728168",
+    "num_comments": 99,
+    "comments_url": "https://news.ycombinator.com/item?id=43452185",
+    "comments": [
+      "SeL4 is old news - not a criticism, but has anyone added another formally proven layer or component? (Edit: I mean new components beyond the microkernel, not improvements to the microkernel.)Also, I suspect some people - maybe some on HN :) - get emotional overload when they see the word 'proof' and their intellectual functions stop. It's not a panacea for the infinite problem of secure IT; it isn't a way to create or discover a perfect and flawless diamond of software. IIUC it means it's proven to meet specific requirements in specific conditions, and those requirements and conditions can be quite narrow; and it says nothing about other functions and conditions that are out of spec. Is that roughly correct?What does it mean in practical terms? What does a security professional see when they see 'formally proven software'?What are the specs that SeL4 meet (no, I haven't looked at the OP in a long time)? Isn't that the essential information here?\n \nreply",
+      "Being \"formally proven\" to be free of various flaws did not make seL4 immune to memory corruption flaws. Despite the formal proof, a memory corruption flaw was found a few years ago. The PRs for the commits fixing it and amending seL4's proof are public:https://github.com/seL4/seL4/pull/243https://github.com/seL4/l4v/pull/453You will find a number of other memory related bugs in its issue tracker:https://github.com/seL4/seL4/issues?q=is%3Aissue%20label%3Ab...Interestingly, the PR fixing \"register clobbering\" in memory was not labelled bug, so it is not listed when you filter by \"bug\".I used to think seL4 was immune to these issues given its proof allegedly saying it is, but upon seeing this, I have come to think that the proof is not as comprehensive as the wider community has been lead to believe. That said, seL4 is still a very impressive piece of software.Finally, to answer your question. The specification that seL4 meets is published on github:https://github.com/seL4/l4v\n \nreply",
+      "I do not see how that is a kernel memory corruption. I do not understand the code in context, but it appears to just be a case where the kernel incorrectly clobbered a userspace register which could result in incorrect userspace code execution. A error in that class would not inherently violate the system safety properties of the kernel itself.If so, that would only fall under a functional specification problem in the userspace API making it hard to use the userspace API in the intended/desired way. That would make it hard to use the kernel and verify your system using the kernel, but it would not constitute a kernel memory corruption which is what safety specifications and proofs of the kernel itself would be concerned with.\n \nreply",
+      "I believe only certain versions and on certain architectures is seL4 verified for. There are no bugs found at the C source code level for these builds of seL4.\n \nreply",
+      "This issue appears to have affected all architectures. This issue was present in the specification against which seL4 was verified. You can say that there are no bugs by virtue of it following the specification, but if the specification was wrong and in this case it was, then were there really no bugs?\n \nreply",
+      "There is always a specification, the question is \"was this issue found against a version of seL4 that had been fully specified or not?\".I worked at the lab, I wasn't aware of any bug/issue on the fully specified kernel, that is why I am unsure if this counts or not.I would need to have a look at the source code and proofs to confirm.\n \nreply",
+      "Even if it's not exactly seL4, there's good value in taking inspiration for design elements. It would still be a lot more robust than commodity operating systems.\n \nreply",
+      "The PRs make it clear that this was a bug in the spec, and the implementation behaved according to spec.\n \nreply",
+      "That resulted in a memory corruption flaw in the C code. If you build a bridge to a specification and the bridge collapses, does saying that the specification was wrong in any way lessen the reality that the bridge failed?\n \nreply",
+      "Many bridges had to collapse until we learned how to build them.As for seL4, the proofs (which are actually the state of the art in that field, yet definitely can be further perfected) are just one of the pillars supporting it e.g. the size of the TCB is another.We do not give up on the goal because there was a mistake once. Nor is the goal not worthy; this is the absolute best the world has atm.\n \nreply"
+    ],
+    "link": "https://sel4.systems/About/seL4-whitepaper.pdf",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Play the Virtual Organ from Arp Schnitger (orgelstadt-hamburg.de)",
+    "points": 75,
+    "submitter": "ohjeez",
+    "submit_time": "2025-03-23T18:31:46 1742754706",
+    "num_comments": 10,
+    "comments_url": "https://news.ycombinator.com/item?id=43454785",
+    "comments": [
+      "Oh something in my niche ! I produce French pipe organ sample sets for a living : https://www.jeuxdorgues.comIt's an extroardinary journey to record an organ, process the thousands of WAV files and design a virtual organ model.\n \nreply",
+      "Very cool! I'd be curious what you think of Modartt's recent attempts at physical models of organs and how they compare to more traditional sampler approaches.https://www.modartt.com/organteq_physical_modeling\n \nreply",
+      "What! For a living? Say more!\n \nreply",
+      "What?? That\u2019s such a specific thing to do!\n \nreply",
+      "You can play it with your ASCII keyboard as well, as if it were a piano keyboard. It shows the German layout, but my Intl English keyboard works just as well.Should you be so inclined: (short) k u (long) k (short) u y g f (long) d f.\n \nreply",
+      "very clever, thank you\n \nreply",
+      "That's such a great project! But I'd love to see a proper VST with it, that allows voice mixing. The power of organs lays in the analog voice mixing (not simple on off, and not one voice exclusively)\n \nreply",
+      "https://www.hauptwerk.com/ is paid software but has a few Schnitger organs, although not the one shown off here.\n \nreply",
+      "There's also Sweelinq (https://sweelinq.com; subscription model), and Grand Orgue (free, but cumbersome; only a few worthwhile sample-sets), and there are some instruments for Kontakt.\n \nreply",
+      "Sounds great, even from so limited a platform. One octave is enough to have some fun with, if you're creative. Would have been nice to be able to combine the stops, but the plenum at least gives you a solid sound. You can really hear the character of the organ.\n \nreply"
+    ],
+    "link": "https://www.orgelstadt-hamburg.de/play-arp/",
+    "first_paragraph": "Hier haben Sie die weltweit einmalige Gelegenheit, eine der  international\n            wertvollsten und klangsch\u00f6nsten Barockorgeln selbst zum Klingen zu bringen.\n            Viele Orgelfans und Experten pilgern nach Hamburg, um die ber\u00fchmte Arp-Schnitger\n            Orgel in der Hauptkirche St. Jacobi zu erleben. Wir bringen eine besondere\n            Auswahl klanglicher Perlen dieses Instrumentes exklusiv zu Ihnen. Spielen\n            Sie selbst!(F\u00fcr das klanglich beste Erlebnis empfehlen wir einen guten Kopfh\u00f6rer zu nutzen)\n\nDie Octava 8\u2018 steht im Hauptwerk. Sie ist ein Prinzipal, also ein\n          Hauptregister der Orgel. Prinzipale bilden das klangliche Grundger\u00fcst.\n          Es sind zylindrische, offene Labialpfeifen von mittlerer Mensur.\n          Als Prinzipal bezeichnet wird aber nur das tiefste Register eines Werks.\n          Alle h\u00f6heren Lagen nennt man Oktave.Erbauer:Anonym um 1500, Familie Scherer (1546-1592) und Arp\n          Schnitger (1693).Gedecktregister von enger Me"
+  },
+  {
+    "title": "Andromeda XXXV: The Faintest Dwarf Satellite of the Andromeda Galaxy (iop.org)",
+    "points": 23,
+    "submitter": "PaulHoule",
+    "submit_time": "2025-03-20T05:46:44 1742449604",
+    "num_comments": 6,
+    "comments_url": "https://news.ycombinator.com/item?id=43420167",
+    "comments": [
+      "This could have been an interesting article, but I couldn't get past the ridiculous captcha\n \nreply",
+      "Here's an ArXiv version: https://arxiv.org/abs/2502.19516\n \nreply",
+      "https://iopscience.iop.org/article/10.3847/2041-8213/adb433/...\n \nreply",
+      "Took 3 clicks.  bot.\n \nreply",
+      "I sometimes get what seem to be impossible captchas.Why don't they just show the website without the check? What's the point of a check like this where they just \"show you the web page\" if you pass. No log in, no subscribe bs blah blah, just show you the webpage.The other day I got one of those \"click on the bicycles\". It has the usual bikes, but there was also some impossible to understand partial dot plot outlines of something that might have been a bike, or might have been a bus or a street light. I gave up after 30 seconds and one try and just archive.is to see the site.\n \nreply",
+      "I've yet to have those things be a problem for a real webcrawling project but I guess there's a first time for everything.  Sometimes I wonder if they are at least partially performative.I was having terrible problems with CAPTCHAs on a 2019 Samsung Tablet which left me wondering if they're the new green bubble.  [1][1] https://www.reddit.com/r/ios/comments/182je9m/trying_to_unde...\n \nreply"
+    ],
+    "link": "https://iopscience.iop.org/article/10.3847/2041-8213/adb433",
+    "first_paragraph": "To ensure we keep this website safe, please can you confirm you are a human by ticking the box below. If you are unable to complete the above request please contact us using the below link, providing a screenshot of your experience.\nhttps://ioppublishing.org/contacts/\n"
+  },
+  {
+    "title": "Show HN: I built website for sharing Drum Patterns (onether.com)",
+    "points": 222,
+    "submitter": "wesz",
+    "submit_time": "2025-03-23T13:05:21 1742735121",
+    "num_comments": 79,
+    "comments_url": "https://news.ycombinator.com/item?id=43452629",
+    "comments": [
+      "This kinda reminds me of Funklet[0] that Jack Stratton (Vulfpeck) + Rob Stenson made a long time ago... A true gem if you're into funk + like midi drums.[0] - https://goodhertz.com/funklet/\n \nreply",
+      "Woah, thank you for this! It's pure gold:)\n \nreply",
+      "thats all right\nmessing with the back beat, and drum sounds, and whatever the reverse signal thing is\nvera extra funky\n \nreply",
+      "I've tried unsuccessfully to get Rebirth running (on either Windows or Wine). Any modern re-implementations?\n \nreply",
+      "https://drumpatterns.onether.com/doofusbeatz666s-yowzah-2/Ohhh yeah baby, this hits!\n \nreply",
+      "That's dope!\n \nreply",
+      "I would be happy to port some patterns to Glicol (https://glicol.org/)only suggestion: support https...\n \nreply",
+      "Woah, nice work dude.I had to regenerate ssl certificate, ovh says it's done but it will probably take some time to take effect.\n \nreply",
+      "Honest question. What is the current obsession with https for things that don't need to be secure like looking at drum patterns?\n \nreply",
+      "Chrome labelled sites as Not Secure if they didn't user https since 2018. Most people didn't like that label showing on their website address, so it was a clever way to shift everyone.Years before that the free certificate authority Let's Encrypt was established (there are now several more), so for most people using https with your website is just configuration, not an extra cost. On top of that some http protocol versions are now https only.\n \nreply"
+    ],
+    "link": "http://drumpatterns.onether.com",
+    "first_paragraph": "Breakbeat\u00a0\u00a0Electro\u00a0\u00a0Electro Funk\u00a0\u00a0Electro Pop\u00a0\u00a0Hip Hop\u00a0\u00a0House\u00a0\u00a0Miami Bass\u00a0\u00a0Pop\u00a0\u00a0R&B\u00a0\u00a0Reggae\u00a0\u00a0Rock\u00a0\u00a0Techno\u00a0\u00a0Uncategorized\u00a0\u00a0"
+  },
+  {
+    "title": "LangManus: An Open-Source Manus Agent with LangChain + LangGraph (github.com/langmanus)",
+    "points": 23,
+    "submitter": "gfortaine",
+    "submit_time": "2025-03-21T11:01:00 1742554860",
+    "num_comments": 5,
+    "comments_url": "https://news.ycombinator.com/item?id=43434171",
+    "comments": [
+      "You should probably change the name, I thought it was associated with Manus usually projects like this will specifically have in the tag line \u201cAn Open Source alternative to X.\u201dOther than that looks very cool, reading through the code now. A lot of these projects very heavily lean on Browser Use.\n \nreply",
+      "Hey Hacker News,\nI\u2019m excited to share LangManus, an open-source project that\u2019s all about community-driven AI automation. Built on the shoulders of amazing open-source work, LangManus combines language models with specialized tools to tackle tasks like web search, crawling, and Python code execution\u2014while giving back to the community that inspires it.\nAt its core, LangManus uses a hierarchical multi-agent system, where a supervisor coordinates a team of specialized agents to handle complex workflows. It integrates with LLMs like Qwen and powers up with tools like Tavily for search and Jina for crawling. Plus, it comes with Docker support and a web UI to make interaction a breeze.\nWant to see it in action? Check out the demo video: https://youtu.be/sZCHqrQBUGk. In it, LangManus calculates the influence index of DeepSeek R1 on HuggingFace using a fully automated plan\u2014think web searches, data retrieval, and Python code crunching, all seamlessly tied together.\nHere\u2019s what makes LangManus stand out:\nMulti-Agent Magic: A supervisor delegates tasks to agents like Researcher, Coder, and Browser for efficient execution.Tool Integration: Web search with Tavily, neural search with Jina, and Python REPL for coding on the fly.Ease of Use: Docker-ready and a web UI for quick setup and control.If you\u2019re into AI automation, multi-agent systems, or just love contributing to open-source projects, swing by the GitHub repo: https://github.com/langmanus/langmanus. Dive into the code, play with the demo, or drop some feedback\u2014we\u2019d love to hear from you.\nJoin the community and let\u2019s build something awesome together!\n \nreply",
+      "Super cool. Congrats on the launch!Let me know if we can help with something at Hyperbrowser.\n \nreply",
+      "Would be great if you put together a start-to-finish tutorial showing the step-by-step process from initial Git clone to completed successful run.\n \nreply",
+      "cool\n \nreply"
+    ],
+    "link": "https://github.com/langmanus/langmanus",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A community-driven AI automation framework that builds upon the incredible work of the open source community. Our goal is to combine language models with specialized tools for tasks like web search, crawling, and Python code execution, while giving back to the community that made this possible.\n      \n\n\nEnglish | \u7b80\u4f53\u4e2d\u6587 | \u65e5\u672c\u8a9eCome From Open Source, Back to Open SourceLangManus is a community-driven AI automation framework that builds upon the incredible work of the open source community. Our goal is to combine language models with specialized tools for tasks like web search, crawling, and Python code execution, while giving back to the community that made this possible.Task: Calculate the influence index of DeepSeek R1 on HuggingFace. This index can be designed using a weighted sum of factors such as followers, downloads, and likes.Lan"
+  },
+  {
+    "title": "Improving recommendation systems and search in the age of LLMs (eugeneyan.com)",
+    "points": 331,
+    "submitter": "7d7n",
+    "submit_time": "2025-03-23T03:40:05 1742701205",
+    "num_comments": 80,
+    "comments_url": "https://news.ycombinator.com/item?id=43450732",
+    "comments": [
+      "> Spotify saw a 9% increase in exploratory intent queries, a 30% rise in maximum query length per user, and a 10% increase in average query length\u2014this suggests the query recommendation updates helped users express more complex intentsTo me it's not clear that it should be interpreted as an improvement: what I read in this summary is that users had to search more and to enter longer queries to get to what they needed.\n \nreply",
+      "We would need to normalise query length by the success rate to draw any informative conclusions here. The rate of immediate follow-up queries could be a decent proxy for this.\n \nreply",
+      "> a 9% increase in exploratory intent queriesUsers struggle to find the right stuff or stuff that\u2018s so good they don\u2018t need do do more queries.> a 30% rise in maximum query length per user, and a 10% increase in average query lengthUsers need to execute more complex queries to find what they are looking for.\n \nreply",
+      "Yeah, this should be evaluated in a multivariate/bivariate model. Of the successful queries, how the length changed before and after interventions.\n \nreply",
+      "I can understand tracking metrics for performance (as in speed, server load) or revenue. But I don't see how anyone could make such conclusions as they did with a straight face, apart from achieving some OKR for promotion reasons. There's no substitute for user research, focused mindset and good taste.I can imagine that's why today's apps suck so much as most of the pain points won't be easily caught by user behavior metrics.One thing Alex from Organic Maps taught me is how important it is to just listen to your users. Many of the UX improvements were driven by addressing complaints from e-mail feedback.\n \nreply",
+      "No you don't understand, more queries = more engagement!\n \nreply",
+      "It's relatively easy to construct a scenario where more search is in fact indicative of better search. To stick with Spotify: let's imagine they have an amazing search tool that consistently finds new, interesting music that the user genuinely likes. I can imagine that in that situation, users are going to search more, because doing so consistently gets them new, enjoyable music.But the opposite is equally possible: a terrible search tool could regularly fail to find what the user is looking for or produce music that they enjoy. In this situation, I can also imagine users searching more, because it takes more search effort to find something they like.They key is why are users searching. In Spotify's case I imagine that you could try and connect number of searches per listen, or how often a search results in a listen and how often those listens result in a positive rating. There are probably more options, but there needs to be some way of connecting the amount of search with how the user feels about those search results.And yeah, using nothing other than search volume is probably a bad way to go about it\n \nreply",
+      "I feel like understanding this difference is what a good product manager should be responsible for. Not just optimizing any metric that is available but understanding the meaning behind them and choosing the push them the right direction.\n \nreply",
+      "Or more saves and thumbs up on signs resulting from a search is because users are desperate to save a song they like because they have no faith that they'll be able to find it again with search.The only way is to use the product yourself and honestly engage with it. Stats can't answer this question.\n \nreply",
+      "But isn't that actually the point? That measuring query volume tells you nothing?\n \nreply"
+    ],
+    "link": "https://eugeneyan.com/writing/recsys-llm/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "argp: GNU-style command line argument parser for Go (github.com/tdewolff)",
+    "points": 142,
+    "submitter": "networked",
+    "submit_time": "2025-03-23T12:45:21 1742733921",
+    "num_comments": 62,
+    "comments_url": "https://news.ycombinator.com/item?id=43452525",
+    "comments": [
+      "In general, command-line argument parsers should just follow the GNU style. No more, no less. Deviations confuse users as it is not immediately obvious to them what rules a parser is imposing.> options can have multiple values: -a 1 2 3 means that a is an array/slice/struct of three numbers of value [1,2,3]Allowing multiple values is inconsistent because you can't tell in \"./cmd -a 1 2 3\" whether 2 and 3 are positional arguments or arguments for -a. This is not a GNU style. The GNU way is \"./cmd -a 1 -a 2 -a 3\" (or \"./cmd -a 1,2,3\"). This package supports that, which is good.> option values can be separated by a space, equal sign, or nothing: -a1 -a=1 -a 1 are all equal\"--a=1\" is a GNU style but \"-a=1\" is not. This is a minor issue, though.Also, does this package support \"--\"? Everything following \"--\" should be treated as positional arguments.\n \nreply",
+      "I disagree with it being a minor issue. If I write a shell script around a program that accepts GNU-style arguments, I expect the following to be correct:    ./cmd -a\"$USER_CONTROLLED_DATA\"\n\nA program using this package would break that assumption, introducing a bug where this user-controlled data cannot start with an '='.\n \nreply",
+      "I researched this for my own argument parser (https://github.com/blyxxyz/lexopt/issues/13) and concluded that it's a minor issue.This syntax is supported by argparse and clap, the most popular argument parsers for Python and Rust respectively, and it seems to have caused almost no problems for them. It's a problem for the uutils implementation of cut, since `cut -d=` is common, but that's the only instance I could find after a long time scouring search engines and bug trackers and asking for examples.If anyone does know of other examples or other places this has been discussed I'd love to hear it though, maybe I just haven't found them.(Also, the more reliable way to write this in general is `-a \"$USER_CONTROLLED_DATA\"`, since that'll behave correctly if $USER_CONTROLLED_DATA is empty. As will `-a=\"$USER_CONTROLLED_DATA\"` if you know the command supports it.)\n \nreply",
+      "I think short options taking a value in the same argv (i.e. `-o=1` stuff) isn't a GNUism mostly because it's backwards-incompatible with POSIX. `=` is a valid getopt option character, `chmod` uses it.That said, I think? 'nloomans means for USER_CONTROLLED_DATA to be a set of short flags, not flag values, as in:    root@08e9950d5bfd:/# export USER_CONTROLLED_DATA=lh \n    root@08e9950d5bfd:/# ls -a\"$USER_CONTROLLED_DATA\"\n    total 56K\n    drwxr-xr-x   1 root root 4.0K Mar 23 16:51 .\n    drwxr-xr-x   1 root root 4.0K Mar 23 16:51 ..\n    [...]\n\nNot that I've seen this in the wild before. But everyone's use of bash is a unique personal hell anyway.\n \nreply",
+      "Ha!  I just said that.  :-)Anyway, one other alternative for the `cut` situation is to allow either ':' or '=' to optionally separate the key and the value.  Then you can say `cut -d:=` or `cut -d=:` if you wanted to use either one.  This is what https://github.com/c-blake/cligen does (for Nim, not Go).\n \nreply",
+      "The problem is existing shell scripts and muscle memory and command histories. `cut -d=` has always worked and works on all the other implementations so it should keep working if you switch to uutils.\n \nreply",
+      "Literally any short option key that takes a string or a char that could legitimately start with '=' has the problem, though, not just `cut`.  The '=' will be \"eaten\" by one tool and left in another.  But you know that.  You write a bit as if we disagree, but I don't see any real point of contention. :-)  Also, uutils has a very strict \"drop-in\" agenda.  So, as another e.g., if you want `cp -t=foo` or `cp -S=foo` to work the same, you're going to have trouble if that '=' is eaten.So, in this case that would seem to imply a problem for any utilities with options taking strings-or-chars, not merely `cut -d`.  If uutils really wants to be strictly drop-in compatible, they may well need to roll their own option parser or twist the arm of whoever's they use to provide a mode for them.In the more general case, \"cross compatibility\" may just always be limited by the reality that people just disagree on this stuff \"more than they seem to think they do\" (at least in my experience) and definitely more than they wish they did.  I surveyed my /usr/bin once and like half of thousands of commands did not work with --help (yes, running that took some confidence in backups!  but anyone could replicate on a throwaway VM or something).  Consistency is nice, but consistency with what?  -l=foo is consistent with --long=foo, but not (some, but not other) historical things.I'm not sure there will ever will be a world in which you don't need to know which PLang/CL toolkit was used to make a CLI utility if you really want to know its syntax.  The article's lib is going its own way from the Go stdlib.  POSIX is pretty darn calcified.  A 15 year old Python stdlib thing is unlikely to ever change in this regard.  Python also allows \"--beg\" for \"--beginning-long-option\" if nothing else starts with \"--beg\" even back in its optparse days and that also tends to be controversial.  cligen tools actually provide a --help-syntax.  Maybe something like that could take off?\n \nreply",
+      "I can think of a lot of cases where it theoretically could be a problem, but `cut -d=` is the only one I've found so far where an end user ran into trouble because of this ambiguity, and I think it's the only one for which uutils bothers implementing a workaround. That's why I give it special attention.> You write a bit as if we disagree, but I don't see any real point of contention. :-)The `cut -d:=` spelling solves a different problem than the one I meant (and the one you're now talking about). But we're mostly on the same page!\n \nreply",
+      "In the Gentoo world, sometimes you need to give an exact package name which looks like `=net-misc/foo-0.1.2-r1`. The exact match has to start with the '='.\n \nreply",
+      "It is safer to just put in the space (much like you put in the quotes to be safe).  Python's argparse will also accept but not require an `=` separator (maybe optparse, too - I haven't checked that one).\n \nreply"
+    ],
+    "link": "https://github.com/tdewolff/argp",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        GNU command line argument parser\n      Command line argument parser following the GNU standard.with the following features:GNU command line argument rules:See also github.com/tdewolff/prompt for a command line prompter.Make sure you have Git and Go (1.22 or higher) installed, runThen add the following importA regular command with short and long options.\nSee cmd/test/main.go.with help outputExample with sub commands using a main command for when no sub command is used, and a sub command named \"cmd\". For the main command we can also use New and AddOpt instead and process the command after argp.Parse().Basic typesComposite typesCount the number of time a flag has been passed.Append each flag to a list.Load all arguments from a configuration file. Currently only TOML is supported.Use a list source specified as type:list. Default support"
+  },
+  {
+    "title": "Technicalities of Homeworld 2 Backgrounds (simonschreibt.de)",
+    "points": 138,
+    "submitter": "todsacerdoti",
+    "submit_time": "2025-03-23T13:14:15 1742735655",
+    "num_comments": 37,
+    "comments_url": "https://news.ycombinator.com/item?id=43452688",
+    "comments": [
+      "Fun fact, when I was like... 12, I made a presentation to my parents based off the Demo of this game as to why they should buy it. I sold them on it when one slide was just a photo of a single perfectly rendered missile being fired, traveling across space.\n \nreply",
+      "Okay, I actually found the presentation, if you want a laugh (/ be impressed at game that's >20 years old), here you go https://docs.google.com/presentation/d/e/2PACX-1vR18QhznFBRK....\n \nreply",
+      "Don\u2019t tell my kids (hi kids, if you\u2019re reading this!) but the first thing they ask for with a freaking presentation they\u2019re probably getting.\n \nreply",
+      "This is so great!You even had call to action links on your \u201cwhere to buy?\u201d slide.I enjoyed the \u201cSpecial thanks to dad for paying the electricity bill and Internet bill for this project\u201d XD\n \nreply",
+      "As someone who love the homeworld games as a kid, I can totally understand the type of kid who likes those games is absolutely the type that would make a presentation like this. The conclusion is fantastic, 12yo you had a great sense of humor!\n \nreply",
+      "2 weeks later, a presentation why you need a new hardware to run your Homeworld 2 smoothly on.\n \nreply",
+      "This is absolutely adorable.  Thank you for sharing!\n \nreply",
+      "Hahaha amazing! This is better than the some of the presentations our junior hires do at work.\n \nreply",
+      "Thanks for sharing this amazing bit. I love the \"our team has found out...\" At the end.Like....who is the 12 year olds team?\n \nreply",
+      "Tom, Tom, Tom and Tom. It's right there in the credits!\n \nreply"
+    ],
+    "link": "https://simonschreibt.de/gat/homeworld-2-backgrounds/",
+    "first_paragraph": "What you see here\nis the stunning background art\nof one of the most beautiful sci-fi games.\n H o m e w o r l d 2Thanks for reading.Just kidding. Of course i have something to say about this. In the company we look at the art of Homeworld from time to time and bow to the creators of this masterpiece. Once we talked about how great the background look and how interesting this sketched style is. There is something\u2026some details seem\u2026special to us.I mentioned, that this looks a bit like\u2026 a vertex color gradient. But they wouldn\u2019t paint the background on geometry, right? I mean\u2026that would has to be a highly tessellated sphere.The discussion was over but I wasn\u2019t satisfied and wanted at least see the textures. So i used some mod tools to extract the Homeworld 2 Demo data but there were no textures. Only some .HOD files. I used Google and found a thread how to generate these .HOD files from a .TGA. It was said:\u201c\u2026scans every pixel of the image then based on contrast\nit decides whether or not to"
+  },
+  {
+    "title": "A Brief History of the Miracle Bacterium (asimov.press)",
+    "points": 49,
+    "submitter": "mailyk",
+    "submit_time": "2025-03-23T15:59:12 1742745552",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=43453769",
+    "comments": [
+      "https://nyaspubs.onlinelibrary.wiley.com/doi/10.1111/j.2164-...Here\u2019s a fascinating 1969 article about the same bacterium called \u201cFrom Superstition to Science.\u201d \u2014 The whole thing is worth a read, but I especially loved how it traces the blood effect back to Pythagoreanism. Pythagoras the Biologist!It quotes a 170 AD satire by Lucian, \u201cthe sale of creeds\u201d about the god Hermes auctioning off different philosophies.\u201cPythagoreanism:\nOf living animals I eat none. All else I can eat, except beans.First Buyer:\nAnd why no beans? Do you dislike them?Pythagoreanism:\nNo. But they are sacred things. Their nature is a mystery. Consider them first in their generative aspect; take a green one and peel it, and you will see what I mean. Again boil one and expose it to moonlight for a proper number of nights, and you have\u2014blood. What is more, the Athenians use beans to vote with.\u201d\n \nreply",
+      "This is such a traditional British way to go about scientific inquiry. Unlikely such experiments would be allowed today. Seems we've lost something.\n \nreply",
+      "There were also that impressive demo of Turbinia. The achievement was celebrated instead of being charged with resisting arrest, disturbing order, etc.   On the other side - there was strong opposition among scientists to the limitations on vivisection. Definitely was a different world, more rough and cruel.\n \nreply",
+      "This is crazy fun :)\nI'll try to find more information of this clade.\n \nreply"
+    ],
+    "link": "https://www.asimov.press/p/miracle-bacterium",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Total lunar eclipse over Teide crater, Tenerife \u2013 a project with many obstacles (lrtimelapse.com)",
+    "points": 27,
+    "submitter": "elijahparker",
+    "submit_time": "2025-03-21T15:04:16 1742569456",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://www.datagubbe.se/braket/",
-    "first_paragraph": "datagubbe.se \u00bb\nbra and ket: string interpolation in amigados\nExploring the unnecessary, part 3735928559Spring 2025\nWithout getting caught up in semantics, AmigaDOS in this text refers to the command line portion of the Amiga computers' operating system. AmigaDOS is based on TRIPOS, but was expanded and added to by both the original Amiga team and then Commodore. One thing that remains basically the same is the parser for shell scripts, or sequence files as they're called in TRIPOS. The script parser is reasonably competent for a 1980:s home computer OS and can be used for solving real world made up programming problems.\n\nThe parser accepts a few special directives, such as .KEY, which is used to describe the template for arguments passed to the script file. For example, .KEY FILENAME/A tells the parser that the script accepts a string argument called FILENAME. These directives are placed at the start of the script file. \n\nBy default, the parser does string interpolation using the chara"
+    "link": "https://lrtimelapse.com/news/total-lunar-eclipse-over-teide-crater-tenerife/",
+    "first_paragraph": "Rarely have I thought so often about abandoning a photography project as during this lunar eclipse on Tenerife. Somehow, everything seemed to conspire against us this time. This is the story of an elaborately planned photo project where almost everything went wrong, but perseverance ultimately paid off. But let\u2019s start from the beginning\u2026Germans: Hier gibt es eine Deutsche Version.We, that is Uli and I, have made it almost a tradition to meet on Tenerife (Canary Islands, Spain) once a year. This time, Uli said, hey, on March 14th there\u2019s a total lunar eclipse, and I\u2019ve calculated a location from which we can photograph the fully eclipsed moon setting directly over the crater of Teide at dawn!It sounded almost too good to be true\u2014because typical lunar eclipses are rather dull photographically, especially after you\u2019ve seen and photographed a few. Without an interesting foreground, pictures of a red moon look the same anywhere in the world. Technically challenging, perhaps, but not very c"
+  },
+  {
+    "title": "The Worst Programmer I Know (2023) (dannorth.net)",
+    "points": 323,
+    "submitter": "rbanffy",
+    "submit_time": "2025-03-23T13:08:45 1742735325",
+    "num_comments": 236,
+    "comments_url": "https://news.ycombinator.com/item?id=43452649",
+    "comments": [
+      "The idea of measuring individual developer productivity is kind of absurd to me. I'm not saying that what we do is magic, there are just so many variables.Measuring story points or lines of code is kind of the opposite of productivity. This encourages developers to do as much meaningless work as possible. I'd want a developer to make a task simpler or use an existing tool which means less time writing code. The value of them saving that work from knowing another way is high but hard to measure.What you want is measuring business outcomes but those are hard to attribute to a particular developer.I think unfortunately we're left with our subjective judgement here. I think we'd do better admitting to ourselves that we can't measure this than to pretend we have some sort of science here.\n \nreply",
+      "I had a director that was obsessed with github enterprise stats. He forbid people from squashing commits and told people to commit every day, even if you're in the middle of something. This was so that he could see who was writing the most code.One of our interns was close to the end of his term and this director wanted to hire him. He thought the intern was amazing based on the amount of code he wrote. The problem was that this intern was bad, so we had him write unit tests. However, he was also bad at writing unit tests. He would run the code and then write tests that enforced the current results, instead of considering that the current behaviour might be incorrect. Thankfully we didn't hire him after myself and others explained why the intern had so many commits and lines of code written.\n \nreply",
+      "Reminds me of an old joke about a policeman who pulls over a poor driver. The driver complain \"But I haven't been in a single accident\", the reply from the policeman, \"Yes, but you've caused dozens\".Some people are just oblivious to the trail of destruction left in their wake.\n \nreply",
+      "Reminds me of a manager and a QA I once knew. QA was a nice guy, but a terrible QA. Would fail stories on the most arbitrary guidelines. Story is about changing the font size on the home page? He'd fail it because he wasn't able to log in (he tested while the auth service was undergoing planned maintenance).Manager loved this guy, and pushed him through several promotions. Eventually other employees got tired of being skipped for promotions and left the company, creating a minor staffing crisis\n \nreply",
+      "We kinda have this, but\u2026 At least we have a dedicated QA team. That spends their whole day literally just confirming that the shit we write is up to spec. We spend a lot of time resolving discrepancies between implementation, spec and test, but when things roll out the other end, they work.\n \nreply",
+      "yeah a good qa team is peace of mind.\n \nreply",
+      "I think just about everybody has had to deal with one or several of these guys.\n \nreply",
+      "Much as cancer arises and grows from natural cellular processes gone awry, this seems to be an organizational cancer, present in any company of a large enough size.\n \nreply",
+      "> Story is about changing the font size on the home page? He'd fail it because he wasn't able to log in (he tested while the auth service was undergoing planned maintenance).Average offshore QA team.\n \nreply",
+      "Then the other employees found that this is how the world works: don't promote people that deliver results or you may have to replace them.\n \nreply"
+    ],
+    "link": "https://dannorth.net/the-worst-programmer/",
+    "first_paragraph": "The great thing about measuring developer productivity is that you can quickly identify the bad programmers. I want to tell you about the worst programmer I know, and why I fought to keep him in the team.A few years ago I wrote a Twitter/X thread about the best programmer I know, which I should write up as a blog post. It seems only fair to tell you about the worst one too. His name is Tim Mackinnon and I want you to know how measurably unproductive he is.We were working for a well-known software consultancy at a Big Bank that decided to introduce individual performance metrics, \u201cfor appraisal and personal development purposes\u201d. This was cascaded through the organisation, and landed in our team in terms of story points delivered. This was after some considered discussion from the department manager, who knew you shouldn\u2019t measure things like lines of code or bugs found, because people can easily game these.Source: http://dilbert.com/strip/1995-11-13Instead we would measure stories deli"
+  },
+  {
+    "title": "The Myth of Liquid Detection (eclecticlight.co)",
+    "points": 36,
+    "submitter": "frizlab",
+    "submit_time": "2025-03-20T15:32:46 1742484766",
+    "num_comments": 18,
+    "comments_url": "https://news.ycombinator.com/item?id=43424709",
+    "comments": [
+      "HN (and other forums) are great sources of myths. It goes like this:- Person A asks a question and proposes a suggestion- Person B responds to the suggestion and adds more complaints- Person C either agrees or disagrees with A and B's claims, but adds an argument which adds more detail/fills in more gaps and adds more suggestionsAt no point does anyone say \"hold on, do any of you have any empirical evidence of anything you've said?\" Everybody just kind of accepts every premise, and then argues it as if it's a valid premise. That acceptance of the false premise is the bedrock on which invented ideas become commonly-held beliefs.I think this is part of what makes AIs hallucinate. These conversations get ingested by the AIs and make connections between these claims, which it will see again and again as the myths are repeated from forum to forum. Later it will make correlations between the conversations and there isn't anything solid enough for it to determine which is real or not. I've seen it recently when analyzing adhesives, where it will not only quote the wrong information about an adhesive (despite it already having the TDS in its database), but also it'll make up fake adhesives that are clearly a mash-up of two real adhesives.(See, I've just done it... completely talking out of my ass about a subject I don't know anything about, but sounds plausible)\n \nreply",
+      "One time I was caught out in heavy rain, and when I later tried to plug in my iPhone I got a message saying the lightning port was disabled until it could dry out. There was even an emergency override option, which I opted not to use. Seems like a nice feature to me.\n \nreply",
+      "A few days ago my iPhone would show the same message despite not being exposed to water. A reboot has fixed it, but that makes me wonder what is the false positive rate on that.\n \nreply",
+      "I had that on a Samsung phone. Eventually it got so bad I had to switch phone because it would constantly believe there was water in the USB port even though it was bone dry.It may have been some sort of short internally, but to me it just meant a defective phone.\n \nreply",
+      "Lint in port getting damp often caused this for me\n \nreply",
+      "It's only because \"telemetry\" (i.e. spyware) has been so pervasive that the suspicions arose. Does anyone else remember the \"dew sensors\" in VCRs and other tape equipment? Those were around before pervasive mass surveillance, and didn't cause the same suspicion.Attempts to connect over the network are obvious in the logWhich log? The one on the device itself, whose software has a history of ignoring what the user wants? https://news.ycombinator.com/item?id=24838816\n \nreply",
+      "With a VCR it's probably going to be a lot harder to get a false detection than a phone which is a device that gets carried everywhere.\n \nreply",
+      "Who didn't carry their VCR with them everywhere? How else were you going to record the kid's soccer game?https://www.rewindmuseum.com/images3/2400woman2.jpg\n \nreply",
+      "It doesn't need to send anything to Apple.  A tech could read a log or CMOS bit or whatever at time of repair.  Not saying they do that but the article seems pretty pointless.  It's like they wanted to talk about a neat feature and chose the most indigent way possible.\n \nreply",
+      "And beyond that obvious path the author is only watching for activity while the port is not wet! Obviously it wouldn't phone home every time the port is dry. While I doubt apple is using this to void warranty claims this is about the weakest debunking of that I can imagine.\n \nreply"
+    ],
+    "link": "https://eclecticlight.co/2025/03/16/last-week-on-my-mac-the-myth-of-liquid-detection/",
+    "first_paragraph": "Macs have developed their own mythology, and this week I unintentionally came across a myth that developed over a year ago. Like so many it was born from a chance observation, this time of a new background process that appeared on 25 October 2023 in macOS Sonoma 14.1, and was reported in 9to5Mac on 3 November 2023.The process in question is liquiddetectiond, and as 9to5Mac\u2019s headline claimed, it meant that \u201cMacs can now inform Apple if any liquids have been detected in the USB-C ports\u201d. That article argued that \u201cit seems more likely that the data collected by this daemon will be used for technicians to determine whether a Mac is eligible for free repair.\u201d \u201cPutting a digital liquid detector on USB-C ports is just another way to ensure that technicians are right about claiming that a Mac has been exposed to liquids.\u201dThat, and a couple of linked reports elsewhere, brought a small flurry of comments about how typical this was of Apple, then all went quiet until 9to5Mac\u2019s article was picked"
+  },
+  {
+    "title": "Euclid opens data treasure trove, offers glimpse of deep fields (esa.int)",
+    "points": 74,
+    "submitter": "layer8",
+    "submit_time": "2025-03-20T17:07:11 1742490431",
+    "num_comments": 16,
+    "comments_url": "https://news.ycombinator.com/item?id=43425855",
+    "comments": [
+      "How do these deep fields compare against other telescopes' deep fields (Hubble, JWST, &c.)?edit: Trying to answer my own question: I understand they're around 10,000 times larger that Hubble's deep fields, each (three deep field zones)[a], with about 1/10th the sensitivity (limiting magnitude +27 in the optical bands[b], compared against Hubble's +29.1\u201330.3 [c]). Or that's the sensitivity it will reach, eventually; the one they've released now is still incomplete.[a] https://en.wikipedia.org/wiki/List_of_deep_fields[b] https://www.aanda.org/articles/aa/full_html/2025/03/aa51857-...[c] https://www.aanda.org/articles/aa/full_html/2017/12/aa30833-...\n \nreply",
+      "See here: https://www.esa.int/Science_Exploration/Space_Science/Euclid... and here: https://bigthink.com/starts-with-a-bang/euclid-science-image...\n \nreply",
+      "While reading this announcement, two phrases came to my mind:- \"The sky! It's full of... stars!\" from Isaac Asimov\u2019s short story \u201cNightfall\u201d- \"My God, it's full of stars!\" from Arthur C Clarke\u2019s novel \u201c2001: A Space Odyssey\u201d\n \nreply",
+      "And a follow up from the Krikkit species from the Hitchhiker's Guide:- \"It'll have to go\":)\n \nreply",
+      "Euclid is such a cool mission and this first tranche is merely 0.4% of what we'll eventually be getting. Fingers crossed!\n \nreply",
+      "Where did you hear the word tranche? People at work just started using it recently and I've been seeing it more as well. Why is this word trending right now?\n \nreply",
+      "https://en.wikipedia.org/wiki/Frequency_illusion\n \nreply",
+      "Heh, was looking up the wiki on the Baader Meinhoff phenomenon only to find out it sends you to your link. Guess that's an easier name to know it as :)\n \nreply",
+      "I\u2019ve been hearing everyone talking about this phenomenon. Is it trending now?\n \nreply",
+      "I started noticing it around the 2008/9 financial crisis because CDOs have tranches.\n \nreply"
+    ],
+    "link": "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_opens_data_treasure_trove_offers_glimpse_of_deep_fields",
+    "first_paragraph": ""
   }
 ]
