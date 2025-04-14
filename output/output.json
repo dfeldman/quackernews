@@ -1,402 +1,361 @@
 [
   {
-    "title": "Experimental release of GrapheneOS for Pixel 9a (grapheneos.social)",
-    "points": 50,
-    "submitter": "moelf",
-    "submit_time": "2025-04-13T01:05:31 1744506331",
+    "title": "Open guide to equity compensation (github.com/jlevy)",
+    "points": 253,
+    "submitter": "mooreds",
+    "submit_time": "2025-04-13T19:13:37 1744571617",
+    "num_comments": 107,
+    "comments_url": "https://news.ycombinator.com/item?id=43675126",
+    "comments": [
+      "As our 30 person startup has grown, I made a conscious decision to stop pitching stock options as a primary component of compensation.Which means the job offer still includes stock options, but during the job offer call we don\u2019t talk up the future value of the stock options. We don\u2019t create any expectation that the options will be worth anything.Upside from a founder perspective is we end up giving away less equity than we otherwise might. Downside from a founder perspective is you need up increase cash compensation to close the gap in some cases, where you might otherwise talk up the value of options.Main upside for the employee is they don\u2019t need to worry too much about stock options intricacies because they don\u2019t view them as a primary aspect of their compensation.In my experience, almost everyone prefers cash over startup stock options. And from an employee perspective, it\u2019s almost always the right decision to place very little value ($0) on the stock option component of your offer. The vast majority of cases stock options end up worthless.\n \nreply",
+      "Even if the company has a successful exit lots of times the founders have different stock class than employees which allows them to cook the books in creative ways where employee stocks are devalued without affecting founder stocks.I personally went through a successful exit of a company where I was one of the early engineers and was privy to orchestrating the sale (working with potential buyers and consultants) and saw this happen.I now am granted stocks which are traded on the NYSE so nobody can cook the books without commiting securities fraud.\n \nreply",
+      "One other trick I learned about and should warn others about - getting an offer for shares (an employee level %) where there is in fact no options pool and existing shares will be diluted for every new employee who joins the team. I got such an offer, and not only was this information not given to me until I asked about any events aside from funding rounds that would be dilutive, but it was presented as standard operating procedure.\n \nreply",
+      ">getting an offer for shares (an employee level %) where there is in fact no options pool and existing shares will be diluted for every new employee who joins the teamHow's this different than if an option pool exists? The more people have options, the further the pie will be split up. Having an option pool or not doesn't change this.\n \nreply",
+      "First, dilution should only be happening at funding events, not every time a new senior staff person is hired, and second the dilution should affect everyone equally\u2014 founders, execs, angels, VCs.It's super unfair to give an employee \"x shares\" that turn out on exit to be shares of a fixed pie that is different from the one the investors have their shares in.\n \nreply",
+      "\"Cooking the books\" could mean many things but most people would interpret this as fraud. There are many exit scenarios that aren't fraud but rather stacks of preferential stock that get paid before common, who usually get paid last.What happened in your exit scenario?\n \nreply",
+      "There's also just the case that a buyer is happy buying say 88% of the company and  having 12% (usually non-voting) shares lie with employees/former employees. Stock options are only really, truly worth anything if they IPO.\n \nreply",
+      "Not since... I'm not sure the regulatory change, but if employees are able to sell back to the company or to private investors, resulting in cold hard cash in employee bank accounts, without the company going public, I'd say they are worth something. We can argue about how, without an IPO, the price isn't fairly decided upon, but having cold hard cash in the bank is nonetheless real.\n \nreply",
+      "See my comment further down. Im not going to go into any more details than that as the details of the sale are not public.\n \nreply",
+      "My read is that the poster felt that the accounting practices, which were likely legal and commonplace, violated implied contractual obligations.\n \nreply"
+    ],
+    "link": "https://github.com/jlevy/og-equity-compensation",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Stock options, RSUs, taxes \u2014 read the latest edition: www.holloway.com/ec\n\u2747\ufe0f This guide is now published on Holloway.\nRead it there for search, booksmarks/highlights, expert commentary, and PDF/EPUB download.Equity compensation is the practice of granting partial ownership in a company in\nexchange for work.\nIn its ideal form, equity compensation aligns the interests of individual employees with\nthe goals of the company they work for, which can yield dramatic results in team building,\ninnovation, and longevity of employment.\nEach of these contributes to the creation of value\u2014for a\ncompany, for its users and customers, and for the individuals who work to make it a\nsuccess.The ways equity can be granted as compensation\u2014including restricted\nstock, stock options, and restricted stock units\u2014are notoriously complex. Equity\ncompensation inv"
+  },
+  {
+    "title": "Everything Wrong with MCP (sshh.io)",
+    "points": 37,
+    "submitter": "sshh12",
+    "submit_time": "2025-04-13T23:53:35 1744588415",
     "num_comments": 14,
-    "comments_url": "https://news.ycombinator.com/item?id=43669185",
+    "comments_url": "https://news.ycombinator.com/item?id=43676771",
     "comments": [
-      "I was bit confused why this was notable, but the Pixel 9a just released Thursday. So this is an incredibly fast turnaround for a community OS.\n \nreply",
-      "Incredibly fast.While the 9a and 9 pro are very similar, for comunity based development this is substantial.I am often very critial, but I must give props to the grapeneos team.\n \nreply",
-      "They are starting from an OS that is made to work on these devices.\n \nreply",
-      "?As in the OS in question is GrapheneOS itself?\n \nreply",
-      "I installed GrapheneOS on my Pixel 4a after Google deleted the battery life[0], and while the initial move was frustrating with things not working, I've adapted and have a nice feeling of security while using my device again. It feels like it's mine, and I don't have to worry about who will spy on me or rug-pull me next.[0] https://grapheneos.social/@GrapheneOS/113917226566692707\n \nreply",
-      "> deleted the battery life[0]Such a bizarre phenomenon to me that people are still griping about a software update that stops a 4-year-old battery from detonating when the same company will also fix the phone for free or just hand you $50 if you prefer that.\n \nreply",
-      "The fixing offer is only valid in some locations, would require you to be without your phone for some time, and since Android still doesn't have anything that would be considered working backup and restore, I can't imagine many people being comfortable mailing their phone out for a replacement.The $50 \"cash\" offer came with so many downsides that just ignoring it would be the smarter choice for anyone who values their time (someone already provided a link).\n \nreply",
-      "> or just hand you $50 if you prefer that.Not really just handing it to you https://arstechnica.com/gadgets/2025/03/how-google-nerfed-my...\n \nreply",
-      "I don't have any idea what the situation is here and whether it's as black and white as you paint it, but regardless, surely something as significant as this should be presented to the user as an option rather than the manufacturer deciding for you that your phone that you own and paid for should now be unusable?\n \nreply",
-      "They pushed an update that by GrapheneOS's estimation was most likely for a critical safety issue. For devices that are affected, they're also offering to replace the battery for free to restore functionality back to the way it was.Assuming there was in fact a critical safety issue with these old batteries, that seems like the best possible course of action they could have taken: no one's house burns down or whatever and everyone gets the chance to get a free battery replacement on a 5-year-old phone that was likely down to fractional capacity already anyway. What's not to like?\n \nreply"
+      "I have read 30 MCP articles now and I still don\u2019t understand why we not just use API?\n \nreply",
+      "I played around with MCP this weekend and I agree.  I just want to get a users X and then send X to my endpoint so I can do something with it.  I don't need any higher level abstraction than that.\n \nreply",
+      "MCP is a dead end for chatbots. Building valuable workflows requires more than tool calling, most importantly, understanding the context of a conversation to adjust the tools dynamically.\n \nreply",
+      "What does that have to do with MCP? Those sound like things you would build on a separate layer from MCP.\n \nreply",
+      "Yeah, I don't feel comfortable downloading tiny server programs from random devs on the internet to give my LLM client apps extra \"tools\". I can LuLu or LittleSnitch regular apps but not these ones.\n \nreply",
+      "isnt langchain doing the exact same thing? (sorry ai noob here)\n \nreply",
+      "Langchain is one of many frameworks that implement the \"tool calling\" pattern, where LLM applications can request that a tool is run (eg \"search the web for X\" or \"execute this Python code\") and see the result of that.MCP is a standard for describing and exposing tools to LLM applications.So they're not the same category of thing. Langchain could implement aspects of the MCP specification, in fact it looks like they're doing that already: https://github.com/langchain-ai/langchain-mcp-adapters\n \nreply",
+      "It's a common question!Related:\n> Tool-Calling - If you\u2019re like me, when you first saw MCP you were wondering \u201cisn\u2019t that just tool-calling?\u201d...Not everyone uses langchain nor does langchain cover some of the lower level aspects of actually connecting things up. MCP just helps standardize some of those details so any assistant/integration combo is compatible.Edit: +1 simonw above\n \nreply",
+      "\"Authentication is tricky and so it was very fair that the designers chose not to include it in the first version of the protocol.\"No, it's not fair at all.\nYou can't add security afterwards like spreading icing on baked cake.\nIf you forgot to add sugar to the cake batter,\nthere's not enough buttercream in the world to fix it.\n \nreply",
+      "I made a MCP server to access remote storage using any kind of protocols (S3, SFTP, FTP, .... ), and authentication was not a problem, you can check by yourself by pointing the mcp inspector to \"https://demo.filestash.app/sse\" and play around\n \nreply"
     ],
-    "link": "https://grapheneos.social/@GrapheneOS/114327666433966529",
+    "link": "https://blog.sshh.io/p/everything-wrong-with-mcp",
     "first_paragraph": ""
   },
   {
-    "title": "BPS is a GPS alternative that nobody's heard of (jeffgeerling.com)",
-    "points": 36,
-    "submitter": "sksxihve",
-    "submit_time": "2025-04-13T01:31:38 1744507898",
-    "num_comments": 6,
-    "comments_url": "https://news.ycombinator.com/item?id=43669308",
+    "title": "NoProp: Training Neural Networks without Back-propagation or Forward-propagation (arxiv.org)",
+    "points": 20,
+    "submitter": "belleville",
+    "submit_time": "2025-04-14T00:03:51 1744589031",
+    "num_comments": 0,
+    "comments_url": "",
     "comments": [
-      "Note that this blog post (and the associated video) were a quick off-the-cuff thing while I was on the NAB show floor\u2014I have been talking to a few of those involved in the testing at NIST, Sinclair, and Avateq (among others), and will hopefully have a lot more in a follow-up.Right now it's in the experimental stage, with only 6 towers total deployed (only 5 were operational during NAB, and only one in Nevada... so timing, not navigation yet).The ultimate plan\u2014which is probably dependent on how well ATSC 3.0 rolls out (which has plenty of hurdles[1])\u2014is to encourage broadcasters to add on the necessary timing equipment to their transmitter sites, to build a mesh network for timing.That would allow the system to be 100% independent of GPS (time transfer could be done via dark fiber and/or ground-satellite-ground directly to some 'master' sites).The advantages for BPS are coverage (somewhat) inside buildings, the ability to have line of sight nearly everywhere in populated areas, and resilience to jamming you can't get with GPS (a 100 kW transmitter signal 10 miles away is a lot harder to defeat than a weak GPS signal hundreds of miles away in the sky).The demo on the show floor was also using eLoran to distribute time from a site in Nevada to the transmitter facility on Black Mountain outside Vegas, showing a way to be fully GPS-independent (though the current eLoran timing was sourced from GPS).[1] ATSC 3.0, as it is being rolled out in the US, doesn't even add on 4K (just 1080p HDR), and tacks on 'features' like 'show replay' (where you tap a button and an app can stream a show you're watching on OTA TV through the Internet... amazing! /s), DRM (at stations' discretion, ugh), and 'personalized ad injection' (no doubt requiring you to connect your TV to the Internet so advertisers can get your precise location too...). Because ATSC 3.0 requires new hardware, consumers have to be motivated to buy new TVs or converter boxes\u2014I don't see anything that motivates me to do so. I feel like it may be a lot like the (forever ongoing) HD Radio rollout.\n \nreply",
-      "Slide deck of BPS (Broadcast Postioning System)\nhttps://www.gps.gov/governance/advisory/meetings/2022-11/mat...\n \nreply",
-      ">an oscilloscope that costs 3x the value of your car on a trade show floorTypical high end microwave measurement system cost as much as a Ferrari car.Good cable and connectors can set you back by several thousand dollars.It's a very good business space prime for disruption (hint SDR - or software-defined radio).Fun facts, the grand daddy of Silicon Valley start-up is HP (then Agilent, and now Keysight) selling function signal generator.\n \nreply",
-      "I've got a rack of equipment that sometimes requires a special calibration where I need to lug over a signal generator. Of course the only ones we have available that go to the necessary frequency weigh like 50lbs. I've recently been eyeing a little gadget that costs about 1/10 or 1/20 the cost of the Keysight units, interfaces using USB oe Ethernet, and is about the size of a deck of cards. The accuracy isn't perfect on its own but that's what a 10MHz ref clock is for. It's amazing how far tech has come and it's amazing how much we are still paying for these dinosaur pieces of test equipment.\n \nreply",
-      "Good cable and connectors can set you back by several thousand dollars.Another domain where that is true involves logic analyzers. A few years ago, on a bit of a lark, I bought a (used) fairly high-end Keysight logic analyzer. The kind of thing that cost like $20,000 or more when it was brand new. But I got a sweet deal on it, so I bought it. Only... it came with no test leads. And then I started shopping for the leads.Yikes.I forget the exact numbers now, but as best as I can recall, the leads came in 64pin sets, where the device supported up to 4 test lead sets, for 256 total channels. And just one of the 64pin test lead sets cost something like $1500. So a full set would cost another $6000 on top of the device itself. I think that was about what I paid for the analyzer itself in the first place!Now I don't regret buying it and in truth I never needed to use 256 channels anyway, so I only bought 1 of the test lead sets so far. But yeah... test leads / cables /etc. for high bandwidth / low latency / high frequency applications get pretty damn expensive.\n \nreply",
-      "Interesting. Though he didn't say what kind of car he drives, it could be a real shitter\n \nreply",
-      "A alternative, but only for timing and as GPS supplement. Unless you\u2019re in a place where you can pick up 4 ATSC transmitters at different locations you won\u2019t get position or navigation with it.\n \nreply"
+      "xxx"
     ],
-    "link": "https://www.jeffgeerling.com/blog/2025/bps-gps-alternative-nobodys-heard",
+    "link": "https://arxiv.org/abs/2503.24322",
+    "first_paragraph": "Help | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n                    Get status notifications via\n                    email\n                    or slack\n"
+  },
+  {
+    "title": "Quick Primer on MCP Using Ollama and LangChain (polarsparc.com)",
+    "points": 47,
+    "submitter": "bswamina",
+    "submit_time": "2025-04-13T21:43:36 1744580616",
+    "num_comments": 7,
+    "comments_url": "https://news.ycombinator.com/item?id=43676084",
+    "comments": [
+      "In the case of MCPs, this post is indeed a quick primer. But from a coding standpoint, and despite the marketing that Agent/MCP development simplifies generative LLM workflows, it\u2019s a long coding mess that is hard to tell if it\u2019s even worth it. It\u2019s still the ReAct paradigm at a low level and if you couldn\u2019t find a case for tools then, nothing has changed other than the Agent/MCP hype making things more confusing and giving more ammunition to AI detractors.\n \nreply",
+      "If you need to define and write the functions to calculate interest\u2026 what exactly is the llm bringing to the table here? I feel like I\u2019m missing something.\n \nreply",
+      "The LLM is what decides which endpoint/tool to call (or none at all) in response to the user input.The original 2022 ReACT paper is still best explainer: https://arxiv.org/abs/2210.03629\n \nreply",
+      "maybe some of these could be fit? https://python.langchain.com/docs/tutorials/\n \nreply",
+      "MCP is great for when you\u2019re integrating tools locally into IDEs and such. It\u2019s a terrible standard for building more robust applications with multi-user support. Security and authentication are completely lacking.99% of people wouldn\u2019t be able to find the API keys you need to feed into most MCP servers.\n \nreply",
+      "You are correct ... it is still early days IMHO ... will have to see how this evolves\n \nreply",
+      "What, according to you, are some alternatives that exist or are in development that fill these gaps?\n \nreply"
+    ],
+    "link": "https://www.polarsparc.com/xhtml/MCP.html",
     "first_paragraph": ""
   },
   {
-    "title": "Nice Things with SVG (fuma-nama.vercel.app)",
-    "points": 328,
-    "submitter": "fmerian",
-    "submit_time": "2025-04-12T17:40:09 1744479609",
-    "num_comments": 51,
-    "comments_url": "https://news.ycombinator.com/item?id=43666439",
-    "comments": [
-      "Even tho it's 8y old, Sarah Drasner's famous \"SVG Can Do That?\" talk is still eye-opening for many. CSS has matured a ton since then (I'm less sure about SVG per se)... in any case it's HIGHLY recommended.Slides: https://slides.com/sdrasner/svg-can-do-thatVideo: \nhttps://youtu.be/ADXX4fmWHbo?si=6YPZkopyEDc8PSte\n \nreply",
-      "Big fan of her book as well though I don\u2019t know if the recommended tools are still relevant.\n \nreply",
-      "Which book are you referring to?\n \nreply",
-      "Probably \u201cSVG Animations\u201d available through O\u2019Reilly. It is from 2017. While many of the frameworks used have come and gone; there are a few stable concepts. If you can get it on sale, I\u2019d recommend. Full price is a hard sell.\n \nreply",
-      "Two other useful SVG books.SVG Essentials: https://www.oreilly.com/library/view/svg-essentials-2nd/9781...SVG Text Layout: https://www.oreilly.com/library/view/svg-text-layout/9781491...The fact there\u2019s a book on just text layout helped me learn how much depth there is in SVG.\n \nreply",
-      "One fun thing that can be done with SVG files: you can use entities in an inline DTD to define constants to be shared across different places in the file. You can see some great examples of this in the SVGs in David Ellsworth's \"Squares in Squares\" page [0].The major browsers have no issues with this, though note that some tools like Inkscape won't parse the DTD nor expand the entities.[0] https://kingbird.myphotos.cc/packing/squares_in_squares.html\n \nreply",
-      "It might work in browsers but a lot of SVG tooling will ignore DTD because it\u2019s a DOS risk.E.g. Billion laughs attack\nhttps://en.wikipedia.org/wiki/Billion_laughs_attack\n \nreply",
-      "That page took a good five seconds to render on my 2022 iPhone se\n \nreply",
-      "You can also extract different parts of an existing svg and use (clone) them elsewhere on the page.https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/E...\n \nreply",
-      "I've used this to succinctly define a Sierpinski carpet on Wikimedia Commons a while ago: https://commons.wikimedia.org/wiki/File:Sierpinski_carpet_6....That file was able to lock up or crash most SVG renderers back then.\n \nreply"
-    ],
-    "link": "https://fuma-nama.vercel.app/blog/svg-art",
-    "first_paragraph": "More about SVG.\nNote that the example code is written in JSX (or React), not ordinary HTML.Make the line, using line or path.Make it a mask.Add animation.Make styles.Most of these similar things are using the same technique.\nMask out an animated block, putting some animations and probably designed some parts in Figma or other SVG editors.Unkey's landing page is a nice example.I made a clerk-like style Table Of Contents (TOC) on Fumadocs, you can try it out and play with the nice TOC.To implement it, we have to render the TOC outline on server, without client-side JavaScript to make it compatible with SSR.Since we're on server, we don't know the exact positions of elements.\nMy approach is to use absolute positions, render the outline as different \"components\", and snitch them together.This isn't hard, but we also want to render a highlighted part of outline where the items are active, or their corresponding heading is visible in the viewport.Like:I'll call it the thumb. It has to be ani"
-  },
-  {
-    "title": "Anubis Works (xeiaso.net)",
-    "points": 123,
-    "submitter": "evacchi",
-    "submit_time": "2025-04-12T22:32:19 1744497139",
-    "num_comments": 63,
-    "comments_url": "https://news.ycombinator.com/item?id=43668433",
-    "comments": [
-      "It's amusing that Xe managed to turn what was historically mostly a joke/shitpost into an actually useful product. They did always say timing was everything.I am kind of surprised how many sites seem to want/need this. I get the slow git pages problem for some of the git servers that are super deep, lack caches, serve off slow disks, etc.Unesco surprised me some, the sub-site in question is pretty big, it has thousands of documents of content, but the content is static - this should be trivial to serve, so what's going on? Well it looks like it's a poorly deployed Wordpress on top of Apache, with no caching enabled, no content compression, no HTTP 2/3. It would likely be fairly easy to get this serving super cheap on a very small machine, but of course doing so requires some expertise, and expertise still isn't cheap.Sure you could ask an LLM, but they still aren't good at helping when you have no clue what to ask - if you don't even really know the site is slower than it should be, why would you even ask? You'd just hear about things getting crushed and reach for the furry defender.\n \nreply",
-      "My site that I\u2019d like this for has a lot of posts, but there are links to a faceted search system based on tags that produces an infinite number of possible combinations and pages for each one. There is no way to cache this, and the bots don\u2019t respect the robots file, so they just constantly request URLs, getting the posts over and over in different numbers and combinations. It\u2019s a pain.\n \nreply",
-      "If you\u2019re confused about what this is - it\u2019s to prevent AI scraping.> Anubis uses a proof-of-work challenge to ensure that clients are using a modern browser and are able to calculate SHA-256 checksumshttps://anubis.techaro.lol/docs/design/how-anubis-worksThis is pretty cool, I have a project or two that might benefit from it.\n \nreply",
-      "I\u2019ve been wondering to myself for many years now whether the web is for humans or machines. I personally can\u2019t think of a good reason to specifically try to gate bots when it comes to serving content. Trying to post content or trigger actions could obviously be problematic under many circumstances.But I find that when it comes to simple serving of content, human vs. bot is not usually what you\u2019re trying to filter or block on. As long as a given client is not abusing your systems, then why do you care if the client is a human?\n \nreply",
-      "> As long as a given client is not abusing your systems, then why do you care if the client is a human?Well, that's the rub. The bots are abusing the systems. The bots are accessing the contents at rates thousands of times faster and more often than humans. The bots also have access patterns unlike your expected human audience (downloading gigabytes or terabytes of data multiples times, over and over).And these bots aren't some being with rights. They're tools unleashed by humans. It's humans abusing the systems. These are anti-abuse measures.\n \nreply",
-      "The issue is not whether it\u2019s a human or a bot. The issue is whether you\u2019re sending thousands of requests per second for hours, effectively DDOSing the site, or if you\u2019re behaving like a normal user.\n \nreply",
-      "> I personally can\u2019t think of a good reason to specifically try to gate botsThere's been numerous posts on HN about people getting slammed, to the tune of many, many dollars and terabytes of data from bots, especially LLM scrapers, burning bandwidth and increasing server-running costs.\n \nreply",
-      "I'm genuinely skeptical that those are all real LLM scrapers. For one, a lot of content is in CommonCrawl and AI companies don't want to redo all that work when they can get some WARC files from AWS.I'm largely suspecting that these are mostly other bots pretending to be LLM scrapers. Does anyone even check if the bots' IP ranges belong to the AI companies?\n \nreply",
-      "No matter the source, the result is the same, and these proof of work systems may be something that can help \"the little guy\" with their hosting bill\n \nreply",
-      "I am currently building a prototype of what I call the \"enigma webfont\" where I want to implement user sessions with custom seeds / rotations for a served and cached webfont.The goal is to make web scraping unfeasible because of computational costs for OCR. It's a cat and mouse game right now and I want to change the odds a little. The HTML source would be effectively void without the user session, meaning an OTP like behavior could also make web pages unreadable once the assets go uncached.This would allow to effectively create a captcha that would modify the local seed window until the user can read a specified word. \"Move the slider until you can read the word Foxtrott\", for example.I sure would love to hear your input, Xe. Maybe we can combine our efforts?My tech stack is go, though, because it was the only language where I could easily change the webfont files directly without issues.\n \nreply"
-    ],
-    "link": "https://xeiaso.net/notes/2025/anubis-works/",
-    "first_paragraph": "\n        Published on 04/12/2025, 441 words, 2 minutes to read\n    That meme is not an understatement, Anubis has been deployed by the United Nations.For your amusement, here is how the inner monologue of me finding out about this went:What. You can't be serious, can you?It's real.No, that can't be a real domain of the United Nations, can it?Wikipedia lists unesco.org as the\nofficial domain of the United Nations Educational, Scientific and Cultural\nOrganization. I'm pretty sure it's real.No way. No fucking way. What the heck, how is this real. What is YOUR\nLIFE??? God I got the worst 2025 bingo card this year.I hate to shake my can and ask for donations, but if you are using Anubis and it helps, please donate on Patreon. I would really love to not have to work in generative AI anymore because the doublethink is starting to wear at my soul.Also, do I happen to know anyone at UNESCO? I would love to get in touch with their systems administrator team and see if they had any trouble with s"
-  },
-  {
-    "title": "YAML: The Norway Problem (2022) (bram.us)",
-    "points": 60,
-    "submitter": "carlos-menezes",
-    "submit_time": "2025-04-12T22:10:35 1744495835",
-    "num_comments": 21,
-    "comments_url": "https://news.ycombinator.com/item?id=43668290",
-    "comments": [
-      "RelatedThe YAML document from hell (566 points, 2023, 353 comments) https://news.ycombinator.com/item?id=34351503That's a Lot of YAML (429 points, 2023, 478 comments) https://news.ycombinator.com/item?id=37687060No YAML (Same as above) (152 points, 2021, 149 comments) https://news.ycombinator.com/item?id=29019361\n \nreply",
-      "We had this issue many years ago when people from Norway couldn't sign up. Took us a while to figure out\n \nreply",
-      "Or were they from Noway ...\n \nreply",
-      "I reckon if this is really a big concern for anybody, then they are probably writing way too much YAML to begin with. If you're being caught out by things like this and need to debug it, then it maps very cleanly to types in most high level languages and you can generate your YAML from that instead.\n \nreply",
-      "Sadly you usually realize you've been writing too much YAML way past the turning point, and it will be a pain to move a single file to JSON for instance when you have a whole process and system that otherwise ingest YAML, including keeping track of why this specific part of JSON and not YAML.So people work around the little paper cuts, while still hitting the traps from time to time as they forget them.> generate YAMLI've a hard time finding a situation where I'd want to do that. Usually YAML is chosen for human readability, but here we're already in a higher level language first. JSON sounds a more appropriate target most of the time ?\n \nreply",
-      "Isn\u2019t yaml a strict superset of JSON? Any compliant YAML parser should be able to ingest a JSON document.\n \nreply",
-      "Yes. Rewriting a YAML file into strict JSON won't have any impact on the ingestion or the processing of it.\n \nreply",
-      "Are there no cases where well-formed JSON could be subject to the problems covered in the article, when parsed by a compliant YAML parser? I'm asking because I know nothing about YAML and not much more about JSON.\n \nreply",
-      "Not that I know. JSON requires strings to be quoted which is basically the problem here. Of course it\u2019s not a great human writable configuration format (no comments being a huge problem).I\u2019m just pointing out that it should be very simple to swap a YAML file for a JSON file in any system that accepts YAML\n \nreply",
-      "JSON is stricter than YAML so that class of issues is avoided.\n \nreply"
-    ],
-    "link": "https://www.bram.us/2022/01/11/yaml-the-norway-problem/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "WebTUI \u00e2\u20ac\u201c A CSS Library That Brings the Beauty of Terminal UIs to the Browser (ironclad.sh)",
-    "points": 36,
-    "submitter": "IroncladDev",
-    "submit_time": "2025-04-12T22:02:58 1744495378",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=43668250",
-    "comments": [
-      "I'm not seeing any icons (on ios, tried a few browsers). Is the font (or svgs? Not at a computer to check how it's built) being served?\n \nreply",
-      "Hi again. I have the same issue in my browser, and locally in nvim.NerdFonts (and the right terminal emulator) were needed, and enough, there. Playing with AstroNvim, and blocked by use of yakuake.Hoping that I can hot load something from https://www.nerdfonts.com/font-downloads, I'm not sure what from https://fonts.google.com/ has the needed ligatures or symbols.\n \nreply",
-      "This looks amazing! Good job. I don't know that I'd ever use it because there's never enough time for all the things, but thanks for the few minutes of aesthetic satisfaction that brought.\n \nreply",
-      "Icons not loading for me.\n \nreply"
-    ],
-    "link": "https://webtui.ironclad.sh",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Emacs Lisp Elements (protesilaos.com)",
-    "points": 195,
-    "submitter": "robenkleene",
-    "submit_time": "2025-04-12T15:09:14 1744470554",
-    "num_comments": 24,
-    "comments_url": "https://news.ycombinator.com/item?id=43665046",
-    "comments": [
-      "Prot - the author - is a pretty incredible guy.\nHe maintains a bunch of nice Emacs packages and themes.But maybe even more remarkable: he got kicked out of his flat in Greece, couldn't afford a new place, bought a small plot of land in the mountains and started building a hut from materials he was able to afford or from things neighbours gave him. Really the bare minimum (he often sat in his hut with a jacket in winter cause it wasn't well isolated/heated)Absolutely inspiration, all documented on his YouTube channel https://youtube.com/@protesilaos?si=MnjV7MhKtsT5RDSM\n \nreply",
-      "My Emacs wouldn\u2019t be the same without Prots modus themes[1], which I found to be a great foundation to build my own theme on top of. I am grateful for all the work he did for the Emacs community.I also enjoy watching his videos where he talks about various philosophical topics from a very clear, pragmatic and down-to-earth perspective. My impression is that he is a really kind and humble person and that he lives by his philosophical insights, without bragging about his lifestyle or judging about how other people live their lifes.[1]: https://protesilaos.com/emacs/modus-themes\n \nreply",
-      "He also offers 20EUR/hr eMacs coaching. For those jumping in or graduating to a new level.https://protesilaos.com/coach/\n \nreply",
-      "\"emacs\". It is called \"emacs\"\n \nreply",
-      "This happens with iOS autocorrect \u2192 https://en.wikipedia.org/wiki/EMac\n \nreply",
-      "Its page calls it Emacs: https://www.gnu.org/software/emacs/\n \nreply",
-      "A digital rishi.\n \nreply",
-      "A video of the inside of the hut: https://www.youtube.com/watch?v=W2T_lihBs9I\n \nreply",
-      "One of the good things to happen in emacs was the inclusion of `seq.el`. It makes easy functional operation over sequences, so no longer need `dash.el` or `cl-lib.el`. (dash still has many more functions inspired by clojure which is awesome when you need them)But I still wish the emacs community could adopt a modern data structure library. It's difficult to consolidate usage of sequences (lists/vectors) with alists and plists. This would make it so much more accessible.\n \nreply",
-      "Thanks for the tip. I'd managed to miss the addition of these. I had somehow noticed the addition of the newer string- functions though, and immediately found them a huge improvement over the mishmash of randomly-named crap that was there before, so I expect seq- to be similarly transformative.I immediately notice there's seq-filter, which can kill off one of my helper routines. And then (now I'm looking...) I've discovered this was always equivalent to cl-remove-if-not. But I never realised, because of the mystery meat naming conventions.\n \nreply"
-    ],
-    "link": "https://protesilaos.com/emacs/emacs-lisp-elements",
-    "first_paragraph": "\n          \ud83c\udfc6 I provide private lessons on Emacs, Linux, and Life in general: https://protesilaos.com/coach/. Prices are affordable.\n        \nThis book, written by Protesilaos Stavrou, also known as \u201cProt\u201d, provides a big picture view of the Emacs Lisp programming language.\n\nThe information furnished herein corresponds to stable version 1.0.0, released on 2025-04-12.\n\nThe purpose of this book is to provide you with a big picture view of Emacs Lisp, also known as \u201cElisp\u201d. This is the programming language you use to extend Emacs. Emacs is a programmable text editor: it interprets Emacs Lisp and behaves accordingly. You can use Emacs without ever writing a single line of code: it already has lots of features. Though you can, at any time, program it to do exactly what you want by evaluating some Elisp that either you wrote yourself or got from another person, such as in the form of a package.\n\nProgramming your own text editor is both useful and fun. You can, for example, streamline a sequen"
-  },
-  {
-    "title": "Show HN: memEx, a personal knowledge base inspired by zettlekasten and org-mode (bubbletea.dev)",
-    "points": 102,
-    "submitter": "shibaobun",
-    "submit_time": "2025-04-12T19:02:26 1744484546",
-    "num_comments": 12,
-    "comments_url": "https://news.ycombinator.com/item?id=43667061",
-    "comments": [
-      "Would be interested to know how this compares to logseq etc\n \nreply",
-      "Found some documentation & sample website that answers a few of my questions, but I\u2019d love to know more about pipelines and how they work with your notes. https://memex.bubbletea.dev/faq\n \nreply",
-      "I still feel like Roam Research did it best. Conor was truly a pioneer in the digital note taking field. I still miss the times when all of it was new, it was so exciting and everything felt revolutionary. A lot of Roam users are still using it even though the pricing hasn't changed a bit and neither has the design, but I don't think there's anything better even now. Zettelkasten is severely underrated and misunderstood. Notion and Evernote are disgusting, and PARA is a nonsensical grift. If you need more context regarding that, I recommend reading Conor's Twitter threads and watching interviews and livestreams featuring him.\n \nreply",
-      "What ended up happening with that weird Roam cult stuff? Did Conor finally go fully off the deep end or something?Tried to figure it out a few months ago and it seems like they just disappeared.\n \nreply",
-      "I would be more inclined to use it if there was offline support and it wasn't so expensive. I used (and really really like) Logseq for awhile but have since moved to Obsidian. I'd switch if there was a strong reason to.\n \nreply",
-      "Was excited to click on it to begin with, but nearly jumped out of my seat when I saw that it was Elixir and LiveView.\n \nreply",
-      "This looks potentially interesting.How does it scale?  Would 200.000 notes be a problem?\nDoes it handle pdf, epub or enex?and most importantlySearch, what does it have and how good is it?\n(Is it better than evernote)?\n \nreply",
-      "How does it compare to org-roam?\nSeems like colab and web-serving is the main diff?\n \nreply",
-      "I assume the name is based on Vannevar Bush's Memex\u00b9?\u00b9https://en.wikipedia.org/wiki/Memex\n \nreply",
-      "The ex suffix could also come from Elixir (its a common pattern in many libraries)\n \nreply"
-    ],
-    "link": "https://gitea.bubbletea.dev/shibao/memex",
-    "first_paragraph": "A structured personal knowledge base, inspired by zettlekasten and org-mode.The first created user will be created as an admin.You can use the following environment variables to configure memEx in\ndocker-compose.yml.Contributions are greatly appreciated, no ability to code needed! You can browse\nthe Contribution\nGuide\nto learn more.I can be contacted at shibao@bubbletea.dev, or on\nthe fediverse at\n@shibao@misskey.bubbletea.dev. Thank\nyou!memEx is licensed under AGPLv3 or later. A copy of the latest version of the\nlicense can be found at\nlicense.md.\n"
-  },
-  {
-    "title": "Open source and self hostable/private file converter (vert.sh)",
-    "points": 449,
-    "submitter": "sandybonks",
-    "submit_time": "2025-04-12T12:40:13 1744461613",
-    "num_comments": 86,
-    "comments_url": "https://news.ycombinator.com/item?id=43663865",
-    "comments": [
-      "It's ffmpeg all the way down. I can't imagine what the internet would be if there weren't such a marvelous piece of software.\n \nreply",
-      "I get to be one of the lucky few to learn today that ffmpeg was ported (well, transpiled) to WASM. This is more specifically built on that port: https://github.com/ffmpegwasm/ffmpeg.wasmThat project has an interactive playground that essentially describes and demonstrates how it works: https://ffmpegwasm.netlify.app/playgroundThis also means that despite being a locally hosted ffmpeg frontend, it's still slower than native ffmpeg and bound to WASM limits like file size (still a generous 2GB for images and audio, but not as viable for big video conversions).Still weird that this project doesn't seem to acknowledge that anywhere.\n \nreply",
-      "Kinda remind me of this:https://newbeelearn.com/tools/videoeditor/and this one also outputs ffmpeg command as well.\n \nreply",
-      "That's a whole true, creator Mr Fabrice Bellard, a 1000x developer, also create Qemu, another essential gem of software.\n \nreply",
-      "It really is crazy how true the 1000x statement is.We use QuickJS (the JavaScript runtime he authored) in Minecraft (Bedrock) where even more developers use it to mod Minecraft.  It's a huge pyramid of developers!Checking out Bellard's website is a great high level list of works: https://bellard.org/\n \nreply",
-      "WHAT!? Unbelievable productivity. I'm in awe (and a renewed impostor syndrome).\n \nreply",
-      "That's kinda like being into sports (maybe even professionally) and comparing oneself to an Olympic champion. It's great to be inspired by them, but it's very important not to be discouraged by what they achieved. We are all standing on the shoulders of giants.\n \nreply",
-      "Seems strange to me to feel imposter syndrome for not matching up to an elite talent\u2026 did you feel prior to this that you were the best in the world at programming, and now realize you aren\u2019t? Is everyone who isn\u2019t the very top of the top an imposter?\n \nreply",
-      "People use that term casually, don't read too much into the implications.\n \nreply",
-      "And TinyC, and the Bellard formula for calculating pi.\n \nreply"
-    ],
-    "link": "https://vert.sh",
-    "first_paragraph": "UploadConvertSettingsAboutAll image and audio processing is done on your device.\n\t\t\t\t\tVideos are converted on our lightning-fast servers. No file\n\t\t\t\t\tsize limit, no ads, and completely open source. Fully supportedStatus: not readySupported formats: .png, .jpeg, .jpg, .webp, .gif, .hdr, .jpe, .mat, .pbm, .pfm, .pgm, .pnm, .ppm, .raw, .tif, .tiff, .jfif Fully supportedStatus: not readySupported formats: .mp3, .wav, .flac, .ogg, .aac, .m4a, .wma, .amr, .ac3, .alac, .aiff Fully supportedStatus: not readySupported formats: .docx, .doc, .md, .html, .rtf, .csv, .tsv, .json, .rst, .epub, .odt, .docbookVideo uploads to a server for processing by\n\t\t\t\t\t\t\t\tdefault, learn how to set it up locally here.Status: readySupported formats: .mkv, .mp4, .webm, .avi, .wmv, .mov, .gif, .mts\u00a9 2025 VERT.\u2022\u2022UploadConvertSettingsAbout"
-  },
-  {
-    "title": "CERN releases report on the feasibility of a possible Future Circular Collider (home.cern)",
-    "points": 68,
-    "submitter": "gmays",
-    "submit_time": "2025-04-09T14:52:46 1744210366",
-    "num_comments": 45,
-    "comments_url": "https://news.ycombinator.com/item?id=43632828",
-    "comments": [
-      "Before discussions go into some generic direction about the field. This is a huge feasibility study contain different aspects done by hundreds of people. People who are mostly interested about the physics case of FCC should read/skim at least through the first volume [1], second chapter (Specificities of the FCC physics case) the first four sections. This is about 35 pages with somehow accessible language to people with some physics knowledge.Personally I'm interested in their proposal about how they are going to approach software (Section 8). They plan to provide experiment agnostic and unified framework that is actually unified and user accessible. The field really need something like that, it is usually the pain point of most junior graduate student. The field suck at documentation and keep coherent software and write code in a bad way most of the time. I think they can have much better framework than Fermilab's art [2].[1] https://cds.cern.ch/record/2928193[2] https://art.fnal.gov/\n \nreply",
-      "Sabine is skeptical [0]. Is it really true that there a no theories that are proven or dicarded with this experiment, and that the Chinese have plans to do it much faster? Her video is pretty damning.[0] https://backreaction.blogspot.com/2025/04/why-cerns-new-coll...\n \nreply",
-      "She seems to base her content on how good of a Mr-beast-style thumbnail she can make to get clicks.\n \nreply",
-      "I have repeatedly heard from people who work in physics research that she's optimized her content for maximum rage/anger/emotional response rather than accuracy, particularly as of late. The tidbits of truth and warranted skepticism lend the rest of it undue credibility. Sadly, good science reporting doesn't get the advertising revenue that manufactured-scandal tabloid-style reporting does. I think her critical perspective can be useful, but it's important to keep in mind while considering it that you're being presented a warped telling of reality.\n \nreply",
-      "> her content for maximum rage/anger/emotional response rather than accuracyYes. The content mirrors the thumbnail style.\n \nreply",
-      "The utter lack of significant discoveries at the LHC after the Higgs (2012!) is a pretty telling sign. Any bigger collider is riding purely on the hope that something will make the effort worth while.\n \nreply",
-      "Negative results are valuable results.SUSY is excluded. Like completely at these scales.Extra dimensions the same.\n \nreply",
-      "There's been plenty of significant discoveries, many, many. (O(10)s hadrons, consistent standard model discrepancies are really big news, those weren't expected)There hasn't been a significant new particle discovery, but none was expected other than Higgs, as far back as 2006 when I was still screwing around in graduate physics.I honestly can't remember the last time a new particle was randomly discovered by experiment that wasn't already proposed and agreed to as sound-in-theory. It's much cheaper and faster to do theory, then built what you need to verify, than to crank up energy as high as you can and hope for the best (I'd hazard a guess this ran out of steam by the 50s/60s at the latest)\n \nreply",
-      "> There hasn't been a significant new particle discovery, but none was expected other than HiggsThe word \"expected\" is doing a lot of work in that sentence.At least one kind of Higgs had to be found unless the mass generation mechanism of the Standard Model and all its proposed extensions (MSSM etc) was categorically wrong; the LHC was designed to cover the entire mass range where it had to be. In that sense, the Higgs was strictly expected.But if you had asked a bunch of phenomenologists \"What new thing do you expect to be found first at the LHC?\", most would have gone for one or more superpartners. The Higgs' hierarchy problem [1] was believed to require electroweak-scale SUSY, which in turn implied the existence of electroweak-scale supersymmetric partners to the known SM particles. Those would have been easier to find than the Higgs, so they would have shown up earlier in the data, before there was enough of it to also discern a Higgs bump.You could argue that superpartners were not expected with the same degree of certainty as some kind of Higgs, but the absence of any sign of SUSY was a big disappointment, and the beginning of the end for what had become the dominating scenario for Beyond Standard Model physics.[1] https://en.wikipedia.org/wiki/Hierarchy_problem#Supersymmetr...\n \nreply",
-      "I'm not much of a particles guy but isn't the lack of \"expected\" discoveries itself a discovery?\n \nreply"
-    ],
-    "link": "https://home.cern/news/news/accelerators/cern-releases-report-feasibility-possible-future-circular-collider",
-    "first_paragraph": "At CERN, we probe the fundamental structure of particles that make up everything around us. We do so using the world's largest and most complex scientific instruments.Know more\nWho we are\n\nOur Mission\n\nOur Governance\n\nOur Member States\n\nOur History\n\nOur People\n\nWhat we do\n\nFundamental research\n\nContribute to society\n\nEnvironmentally responsible research\n\nBring nations together\n\nInspire and educate\n\nFast facts and FAQs\n\nKey Achievements\nKey achievements submenuThe Higgs BosonThe W bosonThe Z bosonThe Large Hadron ColliderThe Birth of the webAntimatterLatest news\nNews\n\nAccelerators\n\nAt CERN\n\nComputing\n\nEngineering\n\nExperiments\n\nKnowledge sharing\n\nPhysics\n\nEvents\n\nCERN Community\n\nNews and announcements\n\nOfficial communications\n\nEvents\n\nScientists\n\nNews\n\nPress Room\nPress Room submenuMedia NewsResourcesContactThe research programme at CERN covers topics from kaons to cosmic rays, and from the Standard Model to supersymmetryKnow more\nPhysics\n\nAntimatter\n\nDark matter\n\nThe early universe\n\nThe "
-  },
-  {
-    "title": "Why is there a \"small house\" in IBM's Code page 437? (glyphdrawing.club)",
-    "points": 77,
-    "submitter": "m_walden",
-    "submit_time": "2025-04-12T18:55:17 1744484117",
-    "num_comments": 23,
-    "comments_url": "https://news.ycombinator.com/item?id=43667010",
-    "comments": [
-      "My first association for this symbol isn\u201a\u00c4\u00f4t a house, but an indent marker, like here (\u201a\u00c4\u00faRight Indent Box\u201a\u00c4\u00f9 in particular): https://www.atlantiswordprocessor.com/en/help/images/ruler.p...Or here as a tab stop in GeoWrite (in the top left, below the \u201a\u00c4\u00fafile\u201a\u00c4\u00f9 menu): https://static.wikia.nocookie.net/commodore64/images/6/68/Ge...Some mechanical typewriters had physical markers/stops that looked similar. The best I could find in a hurry: https://www.mrmrsvintagetypewriters.com/cdn/shop/files/DSC_7...\n \nreply",
-      "Linked in this article is VileR's excellent website <https://int10h.org/>.  In fact, it is linked 8 times in this article.  If this kind of thing interests you, I highly recommend following those links.  VileR's site is probably the best resource we have today that preserves the various PC OEM fonts from a bygone technological era -- an era that lives on in the memories of those of us who first encountered these machines early in life.I'm genuinely in awe of the time and effort VileR has poured into recovering each font, and their countless variants, from a wide range of ROMs.  The site not only archives them all with incredible attention to detail, but also offers live previews, aspect ratio correction, and other thoughtful features that make exploring it a joy.  I've spent countless hours there comparing different OEM fonts, and hunting down the best ones to use in my own work!\n \nreply",
-      "There\u201a\u00c4\u00f4s a certain amount of \u201a\u00c4\u00fait just is\u201a\u00c4\u00f9 when it comes to non-textual characters. I remember being interviewed by a reporter from The Wall Street Journal about the claim that Wingdings had an antisemitic message secretly encoded in it because NYC output as the sequence skull and crossbones-star of David-thumbs up, but the choice of where those characters were encoded is purely a consequence of grouping similarly themed characters together (so, e.g., the star of David comes in the midst of a sequence of religious symbols).\n \nreply",
-      "In a future font (Webdings?) Microsoft deliberately set the letters NYC to be an eye, a heart, and a city skyline, in response to this kerfuffle.\n \nreply",
-      "Wow, it really goes in depth on the topic, in the beginning I was like \"wtf am I even reading this\" and after a while I was hooked by the writing style, the depth of the research and also the design of the website. Really, really cool.\n \nreply",
-      "That immediately brings back memories (or more feelings) of playing [0]. It was, for a while, the only game my father had installed on his luggable, so I played it a lot as a small kid. I also think a did learn a lot of English from it.[0] https://en.wikipedia.org/wiki/Castle_Adventure\n \nreply",
-      "I seem to recall whether 0xE1 in codepage 437 is supposed to be a Greek lowercase beta (\u0152\u2264) or a German sharp s (\u00b7\u222b\u00fb) is intentionally a bit fuzzy, so its perhaps they intended it to be both a delta and a dingbat.I'm not really sure if a house fits it that much, wouldn't a generic \"house\" symbol have a chimney (although obviously, it's hard to fit one in with such a low resolution).\n \nreply",
-      "It's most likely meant to be Delta, as used in mathematics and science (which is typically smaller than the Greek letter). Not only is the Delta in the Greek character similarly shaped, but Lambda is similarly distorted in the greek character set. Likewise, A, N, V, Y, K (arguably), and W (arguably) are distorted.\n \nreply",
-      "Although originally the character \u0152\u00ee began life as \uf8ff\u00ea\u00a7\u00c9 (named dalet, meaning door) so it should be a door, not a house (he says with a wink) and that \u0152\u2264 should be the house (from \uf8ff\u00ea\u00a7\u00c5\u201a\u00c4\u00e9, bet, meaning house).\n \nreply",
-      "The line drawing characters were serious business.  Because I love mazes.  Though they were most often mis-used as menu borders.  Novell achieved world domination with line drawing characters.\n \nreply"
-    ],
-    "link": "https://blog.glyphdrawing.club/why-is-there-a-small-house-in-ibm-s-code-page-437/",
-    "first_paragraph": "This post is a companion piece to my article The origins of DEL (0x7F) and its Legacy in Amiga ASCII art. That article is all about the character DEL, what it is, how it was used, and why it even has a visual representation, but with a focus on Commodore's Amiga computers. Whereas AmigaOS's Topaz font renders DEL with diagonal lines, IBM's PC renders it... as a house. This bonus article is about that.This article wouldn't have happened without the great help and insights of Michael Walden and VileR, thank you!If you want to comment on something (minor or major), please send me an email at hlotvonen@gmail.com. I would greatly appreciate it, and if something needs fixing I would gladly update the article with proper credit.There's a small house ( \u2302 ) in the middle of IBM's infamous character set Code Page 437. \"Small house\"\u2014that's the official IBM name given to the glyph at code position 0x7F, where a control character for \"Delete\" (DEL) should logically exist. It's cute, but a little st"
-  },
-  {
-    "title": "Tunarr: Create and configure live TV channels from media on your servers (tunarr.com)",
-    "points": 156,
-    "submitter": "Larrikin",
-    "submit_time": "2025-04-12T15:26:25 1744471585",
-    "num_comments": 39,
-    "comments_url": "https://news.ycombinator.com/item?id=43665201",
-    "comments": [
-      "I tried this for a while with ErsatzTV and really loved it. I don\u2019t have cable anymore but I remember fond memories of cycling through channels as a child.I set up a food channel that would cycle through Masterchef and a few travel cooking shows, one for anime and one for Bollywood movies.It was incredibly enjoyable. I could just put on a channel after work without having to consciously make a decision on what to watch. Just watch whatever\u2019s on the channel and switch over to something else if it didn\u2019t click!Definitely going to try this out on my NAS.\n \nreply",
-      "That sounds fun, is it computationally expensive? Is it, like, actually processing the stuff even if nobody's watching? I'm not gonna try it on my current NAS, because it's all HDDs and I can hear it in the room, so I mostly use it as \"cold\" storage, but your post really made me want to try it. Also, now that I'm thinking of it, must be pretty hard for HDDs too, if you don't use some dedicated all-SSD NAS specifically for that...\n \nreply",
-      "No, unless somebody starts a stream there's no computation. If nobody is watching, it's idle.If somebody tunes in, the server figures out where to start the stream and begins streaming.\n \nreply",
-      "/r/homelab and /r/homedatacenter called. We love computationally expensive.\n \nreply",
-      "> fond memories of cycling through channels as a childOne thing that\u2019s missing is the low-latency old analog systems had changing channels. Has anyone figured out a way to achieve this in the digital era?\n \nreply",
-      "I worked on a DVB-H receiver back in the day and we tried to speed it up by having a complete second tuner in hardware and starting the acquisition on the next stream while decoding the first one.\n \nreply",
-      "That\u2019s fun. I suppose flipping up channels is far more common than down, but presumably one direction would be faster with this solution.\n \nreply",
-      "Not really. the definition of what the 'next' stream is could easily change depending on what the last button you pressed, with the assumption that you would continue pressing that button:  * up - next stream is one more channel up\n  * down - next stream is one more channel down\n  * last/prev - next stream is the previous channel.\n \nreply",
-      "I tried ErsatzTV, but didn't manage to get it actually up and running. This was a few years ago though, guess I'll try again!\n \nreply",
-      "I\u2019ve done it a few months ago and it was super smooth. Sounds like the process got better.\n \nreply"
-    ],
-    "link": "https://tunarr.com/",
-    "first_paragraph": "Create live TV channels from media on your Plex/Jellyfin servers, and more!Configure your channels, programs, commercials, and settings using the Tunarr web UI.Watch your channels by adding the spoofed Tunarr HDHomerun tuner to Plex, Jellyfin, or Emby. Or utilize generated M3U files with any 3rd party IPTV player app.Tunarr was originally a fork of dizqueTV (which in itself was a fork of other projects!) which evolved into a near-complete rewrite. This project was born out of both a love for TV and an appreciation for the work put into dizqueTV and its predecessors.Tunarr has the following goals:"
-  },
-  {
-    "title": "Ambient music on iOS 18.4 and the return to the Apple's Music app (manualdousuario.net)",
-    "points": 8,
-    "submitter": "rpgbr",
-    "submit_time": "2025-04-10T12:26:05 1744287965",
+    "title": "Writing Cursor rules with a Cursor rule (adithyan.io)",
+    "points": 29,
+    "submitter": "adithyan_win",
+    "submit_time": "2025-04-11T21:40:43 1744407643",
     "num_comments": 5,
-    "comments_url": "https://news.ycombinator.com/item?id=43643120",
+    "comments_url": "https://news.ycombinator.com/item?id=43658923",
     "comments": [
-      "It's not explicitly called out anywhere, but you can have this and the 'background noise' running at the same time.  This 'chill' music with some dark noise mixed in is great.\n \nreply",
-      "Anyone know if there is something like this for Linux? I like the idea, but don't use a Mac. Sure, I can collect ambient music and loop them in Rhythmbox bt I love the idea of a background music utility to enhance work.\n \nreply",
-      "This is for iPhone. But there are many YouTube channels, things like Poolsuite FM, or endless internet radio stations (di.fm, zen radio).If it's less about music sources and more about a headless/minimal Linux app then I'm not helping much. :)\n \nreply",
-      "I\u2019m probably in the minority but I really don\u2019t enjoy the track selections in this feature and it\u2019s pretty much just easier and better to pin some Spotify playlists and use those.\n \nreply",
-      "it seems to be the case that it downloads some of these and can play offline.  i know spotify can run offline as well, but this is a bit more convenient.  doesn't quite replace spotify or apple music, but is faster to jump to.  spotify app just continually gets slower for me.EDIT: nm - I misread that I was still online.  It did download some, and I'm now running offline, but I can't switch to a different style (chill, sleep, etc) once I go offline.\n \nreply"
+      "I have found Cursor to be frustrating and exhausting to work with, even with my rules file. When it works, it\u2019s like magic. But most of the time, it feels like working with a Jr. dev who has a bit of a concussion. Code review is wearying work, and using Cursor means you\u2019re doing a lot of code review. I have never once gotten into a flow state with it.That was a long preamble to this question: any senior devs out there (20+ years) who enjoy using Cursor? What\u2019s the trick?\n \nreply",
+      "The trick I\u2019ve been using is to copy the entire codebase into a text prompt with Repo Prompt and feed that into Grok with a specific request on what feature / change I want. Paste that output into Cursor with Claude 3.7 and have it do the changes and compile/fix errors along the way.\n \nreply",
+      "How long until such \"rules\" also become standardized (like we saw with MCP)? It feels redundant to have rules.cursorrules and rules.aiderrules where the rules content is the same. I predict companies will not only publish coding guidelines for their programmers, they'll publish these tiny coding rules for LLMs used in the company as well, so all code follows the same standards/idioms.\n \nreply",
+      "I\u2019ve been using more and more AI tools in my development and getting a lot of mileage. Cursor is the latest one I\u2019ve adopted and it\u2019s impressive even without rules.I\u2019ll give this a try soon. Thanks for sharing!\n \nreply",
+      "Does anyone have a variant on this meta rule file that isn't React specific?\n \nreply"
     ],
-    "link": "https://manualdousuario.net/en/ambient-music-ios-18-4/",
-    "first_paragraph": ""
+    "link": "https://www.adithyan.io/blog/writing-cursor-rules-with-a-cursor-rule",
+    "first_paragraph": "Apr 10, 2025I spend most of my coding time in Cursor. It's a fantastic tool for LLM assisted coding.But coding with LLMs has a specific quirk: they possess strong contextual memory but lack episodic memory.In simpler words, they recall information within a single conversation but forget everything once a new chat session begins. No learnings from previous chats on how you like things. No accumulation of instituation quirks and knowledge.Think of it like working with a brilliant assistant who has amnesia. Every day, you repeat the same instructions:If you use Cursor often, this should sound familiar. You constantly nudge the AI back toward your project's standards and personal preferences.\nIf you're already nodding in agreement and (from the title) understand where I'm going with this, you probably just want the meta cursor rule template that I use. In that case, you can jump straight to The Plug-and-Play Meta-Cursor Rule.If you're still unsure what I'm talking about, I'll explain in mo"
   },
   {
-    "title": "ArkType: Ergonomic TS validator 100x faster than Zod (arktype.io)",
-    "points": 115,
-    "submitter": "nathan_phoenix",
-    "submit_time": "2025-04-12T16:01:34 1744473694",
-    "num_comments": 40,
-    "comments_url": "https://news.ycombinator.com/item?id=43665540",
+    "title": "Docker Model Runner (docker.com)",
+    "points": 16,
+    "submitter": "kordlessagain",
+    "submit_time": "2025-04-10T14:10:28 1744294228",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=43643944",
     "comments": [
-      "ArkType is a really interesting library that has a difficult time marketing itself. More than being a schema validator, it brings TS types into the runtime, so you can programmatically work with types as data with (near?) full fidelity.I've been evaluating schema libraries for a better-than-Zod source of truth, and ArkType is where I've been focused. Zod v4 just entered beta[1], and it improves many of my problems with it. For such a mature library to improve like this, v4 is treat and speaks volumes to the quality of engineering. But ArkType has a much larger scope, and feels to me more like a data modeling language than a library. Something I definitely want as a dev!The main downside I see is that its runtime code size footprint is much larger than Zod. For some frontends this may be acceptable, but it's a real cost that isn't wise to pay in many cases. The good news is with precompilation[2] I think ArkType will come into its own and look more like a language with a compiler, and be suitable for lightweight frontends too.[1] https://v4.zod.dev/v4[2] https://github.com/arktypeio/arktype/issues/810\n \nreply",
-      "I recently went down this same rabbit hole for backend and stumbled on Typia[0] and  Nestia[1] from the same developer.  The DX with this is fantastic, especially when combined with Kysely[2] because now it's pure TypeScript end-to-end (no runtime schema artifacts and validations get AOT inlined).I was so shocked by how good this is that I ended up writing up a small deck (haven't had time to write this into a doc yet): https://docs.google.com/presentation/d/1fToIKvR7dyvQS1AAtp4Y...Shockingly good (for backend)[0] Typia: https://typia.io/[1] Nestia: https://nestia.io/[2] https://kysely.dev/\n \nreply",
-      "Thanks for sharing the deck! I had no idea Typia existed and it looks absolutely amazing. I guess I'll be trying it out this weekend or next :)\n \nreply",
-      "I was going to ask about how pure types would fill the gap for other validations in Zod like number min/max ranges, but seeing the tags feature use intersection types for that is really neat. I tried assigning a `string & tags.MinLength<4>` to a `string & tags.MinLength<2>` and it's interesting that it threw an error saying they were incompatible.\n \nreply",
-      "Definitely check out Valibot as well, it may be the smaller footprint zod you\u2019re looking for: https://valibot.dev\n \nreply",
-      "There's also zod mini now too https://v4.zod.dev/packages/mini\n \nreply",
-      ">  it brings TS types into the runtimeSo...it's a parser. Like Zod or effect schema.https://effect.website/docs/schema/introduction/\n \nreply",
-      "No, it's more like a type reflection system, at least as I understand it. You can use it to parse types, but you can also do a lot more than that.\n \nreply",
-      "Could you give an example or two of \u201cmore than that\u201d?\n \nreply",
-      "Yeah, you can walk the AST of your types at runtime and do arbitrary things with it. For example, we're using ArkTypes as our single source of truth for our data and deriving database schemas from them.This becomes very nice because ArkType's data model is close to an enriched version of TypeScript's own data model. So it's like having your TypeScript types introspectable and transformable at runtime.\n \nreply"
+      "Looks exactly like ollama but built into Docker desktop? Anyone know of any differences?\n \nreply",
+      "Aren't some of the ollama guys ex-Docker guys?\n \nreply",
+      "They imply it should be somehow optimized for apple silicon, but, yeah, I don't understand what this is. If docker can use GPU, well, it should be able to use GPU in any container that makes use of it properly. If (say) ollama as an app doesn't use it properly, but they figured a way to do it better, it would make more sense to fix ollama. I have no idea why this should be a different app than, well, the very docker daemon itself.\n \nreply"
     ],
-    "link": "https://arktype.io/",
-    "first_paragraph": "TypeScript's 1:1 validator, optimized from editor to runtimeLoading playground...Type-level feedback with each keystroke- no plugins or build steps required.Everything you need to know from installation to integration"
+    "link": "https://www.docker.com/blog/introducing-docker-model-runner/",
+    "first_paragraph": "ProductsMORE resources for developersDocker Desktop v4.40DevelopersMORE resources for developersIntroducing Docker Model RunnerDeliver Quickly. Build Securely. Stay Competitive.CompanyCompanyDocker Announces SOC 2 Type 2 Attestation & ISO 27001 CertificationProductsMORE resources for developersDocker Desktop v4.40DevelopersMORE resources for developersIntroducing Docker Model RunnerDeliver Quickly. Build Securely. Stay Competitive.CompanyCompanyDocker Announces SOC 2 Type 2 Attestation & ISO 27001 CertificationDeanna SparksGenerative AI is transforming software development, but building and running AI models locally is still harder than it should be. Today\u2019s developers face fragmented tooling, hardware compatibility headaches, and disconnected application development workflows, all of which hinder iteration and slow down progress.\u00a0\u00a0That\u2019s why we\u2019re launching Docker Model Runner \u2014 a faster, simpler way to run and test AI models locally, right from your existing workflow. Whether you\u2019re "
+  },
+  {
+    "title": "Math 13 \u2013 An Introduction to Abstract Mathematics [pdf] (uci.edu)",
+    "points": 88,
+    "submitter": "ibobev",
+    "submit_time": "2025-04-13T19:43:11 1744573391",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=43675310",
+    "comments": [
+      "Math 13 was created by the late Howard Tucker as a traditional discrete mathematics course (the number was a deliberate joke).I took the course under Howard G. Tucker and I did have the impression this was a course not worth taking due to the low number. Turned out to be one of the most memorable classes. We went beyond the curricula in this document and had some fun exploring Hilbert Infinite Hotel and Peanos Axioms. Howard G. Tucker was probably the most memorable professor I had as he was veering in his 90s at the time he taught the course and was just so passionate about teaching.\n \nreply",
+      "> and serving as the key prerequisite for upper-division courses such as abstract algebra, analysis, linear algebra & number theory.I was slightly taken aback by this phrasing in the preface as I was under the impression that undergrad math programs introduce foundations ASAP and typically start proof-based classes around end of freshman/start of sophomore.\n \nreply",
+      "In the US, the standard course sequence (e.g. at a good state university) is two years of calculus, diffeqs, and linear algebra (all taught as on-paper computation) concurrently with a course in discrete mathematics. The discrete mathematics course often doubles as an introduction to proof (as is apparently the case at UCI). Year 3 typically covers proof-based analysis, algebra, and linear algebra and some electives. Year 4 is typically electives.At a fancy school, you can often take proof-based honors versions of Year 1-2 courses but you still may not get to skip over all of Year 3. Think: calculus using Spivak and real analysis using Rudin.At Harvard, you can take Math 55, which is essentially Year 3 above (plus complex analysis) in Year 1.\n \nreply",
+      "Isn't that exactly what the sentence after the one you quoted encourages?\n \nreply"
+    ],
+    "link": "https://www.math.uci.edu/~ndonalds/math13/notes.pdf",
+    "first_paragraph": ""
   },
   {
     "title": "Shadertoys Ported to Rust GPU (rust-gpu.github.io)",
-    "points": 50,
-    "submitter": "efnx",
-    "submit_time": "2025-04-12T20:27:28 1744489648",
-    "num_comments": 17,
-    "comments_url": "https://news.ycombinator.com/item?id=43667693",
+    "points": 18,
+    "submitter": "todsacerdoti",
+    "submit_time": "2025-04-12T09:01:29 1744448489",
+    "num_comments": 0,
+    "comments_url": "",
     "comments": [
-      "I've spent a little time in this space, and I'm not sure it's a good idea to write shaders in Rust, although it's probably better than GLSL or WGSL.Let me start with the pros:1. Don't have to learn 2 different languages2. Modules, crates, and the easier ability to share code3. Easier sharing between rust structs and shader code.Now the cons, in comparison to Slang [1]1. No autodiff mode\n2. Strictly outputs SPIR-V, while Slang can do CPU, CUDA, Pytorch, Optix, and all the major graphics APIs3. Less support - Slang is supported by the Khronos group, and Slang gets use at Nvidia, EA, and Valve.4. Safety isn't very valuable, most GPU code does not use pointers (it's so rare it's considered a feature by Slang!)5. slangc probably runs a lot faster than rustc (although I would like to see a benchmark.)6. Worse debugging experience, slang has better interop with things like NSight Graphics, and their Shader Debugger. Slang recently got support in NSight graphics for shader profiling, for example.7. Slang has support for reflection, and has a C++ api to directly output a JSON file that contains all the reflected aspects.This makes handling the movement between rust <-> gpu much easier. Also, the example shown on the website uses `bytemuck`, but `bytemuck` won't take into consideration the struct alignment rules[2] when using WebGPU. Instead, you have to use a crate like `encase`[3] to handle that. I'm not sure given the example on the website how it would work with WebGPU.8. If you have pre-existing shaders in GLSL or HLSL, you can use slangc directly on them. No need to rewrite.9. In reality, you may not have to learn 2 languages but you have to learn 2 different compute models (CPU vs GPU). This is actually a much harder issue, and AFAICT it is impossible to overcome with a different language. The problem is the programmer needs to understand how the platforms are different.[1] https://shader-slang.org/\n[2] https://webgpufundamentals.org/webgpu/lessons/resources/wgsl... WGSL struct alignment widget\n[3] https://github.com/teoxoy/encase\n \nreply",
-      "Had not heard of Slang, thanks for sharing.It's interesting that Slang looks more like Rust than WGSL does, despite WGSL kind of being de facto \"owned by\" the Rust community.\n \nreply",
-      "Anyone have recommendations for resources for learning to write shaders?\n \nreply",
-      "I've always enjoyed watching The Art of Code[1], Freya[2] also has a good number of videos on it.But that is just vertex shaders for things like Shadertoys.There is much more to computer graphics or GPGPU than this though, Im still learning about that myself X).[1] https://www.youtube.com/watch?v=eKtsY7hYTPg\n[2]https://www.youtube.com/watch?v=kfM-yu0iQBk\n \nreply",
-      "If you want to make nice looking materials and effects, you need a combination of good lighting (comes from the rendering engine, not the material), and artistic capabilities/talent. Art is a lot harder to teach than programming I feel, or at least I don't know how to teach it.Programming the shaders themselves are pretty simple imo, they're just pure functions that return color data or triangle positions. The syntax might be a little different than you're used to depending on the shader language, but it should be easy enough to pick up in a day.If you want to write compute shaders for computation, then it gets a lot more tricky and you need to spend some time learning about memory accesses, the underlying hardware, and profiling.\n \nreply",
-      "https://www.scratchapixel.comhttps://www.youtube.com/c/acerola_thttps://www.shadertoy.comhttps://google.github.io/tour-of-wgsl/\n \nreply",
-      "This is big news. Shaders have been a pain to develop for in Unity. If I can program them in Rust, leveraging Rust's tooling and ecosystem, that would be huge.\n \nreply",
-      "Very exciting project! Does this work on M-series macs? I've had trouble running some shaders on my laptop before.\n \nreply",
-      "I understand the sentiment but to be very pedantic most GPUs do not understand SPIRV, it\u2019s the drivers that do.\n \nreply",
-      "> While over-all better alternatives to both languages exist, none of them are in a place to replace *HLSL* or *GLSL*. Either because they are vendor locked, or because they don't support the traditional graphics pipeline. Examples of this include *CUDA* and *OpenCL*.Are CUDA and OpenCL really \"better alternatives\" to HLSL and GLSL?CUDA and OpenCL are compute languages; HLSL and GLSL and shader languages. And while one can theoretically do compute in a shader (and we used to!) or shaders in a compute language, I think it's dishonest to claim that CUDA is intended as an updated alternative to GLSL. It's simply apples and oranges.\n \nreply"
+      "xxx"
     ],
     "link": "https://rust-gpu.github.io/blog/2025/04/10/shadertoys/",
     "first_paragraph": "We ported a few popular Shadertoy shaders over to Rust\nusing Rust GPU. The process was straightforward\nand we want to share some highlights.The code is available on GitHub.Rust GPU is a project that allows you to write code for\nGPUs using the Rust programming language. GPUs are typically programmed using\nspecialized languages like WGSL,\nGLSL,\nMSL,\nor\nHLSL.\nRust GPU changes this by letting you use Rust to write GPU programs (often called\n\"shaders\" or \"kernels\").These Rust GPU programs are then compiled into SPIR-V,\na low-level format that most GPUs understand. Since\nSPIR-V is the format Vulkan uses, Rust GPU makes it possible\nto integrate Rust-based GPU programs into any Vulkan-compatible workflow.For more details, check out the Rust GPU website or the\nGitHub repository.Sharing data between the CPU and GPU is common in shader programming. This often\nrequires special tooling or manual effort. Using Rust on both sides made this seamless:Note that on both the CPU and the GPU we are using t"
   },
   {
-    "title": "Show HN: AI quiz generator from any topic or book in seconds (wiyomi.com)",
-    "points": 8,
-    "submitter": "hakimihsan_",
-    "submit_time": "2025-04-10T05:27:52 1744262872",
+    "title": "I Bought a Mac (loganius.org)",
+    "points": 3,
+    "submitter": "todsacerdoti",
+    "submit_time": "2025-04-14T01:11:19 1744593079",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://loganius.org/2025/04/i-bought-a-mac/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Writing my own dithering algorithm in Racket (amanvir.com)",
+    "points": 117,
+    "submitter": "venusgirdle",
+    "submit_time": "2025-04-13T19:43:03 1744573383",
+    "num_comments": 26,
+    "comments_url": "https://news.ycombinator.com/item?id=43675309",
+    "comments": [
+      "The square artifacts in the dithered image are caused by the distribution not doing second passes over the pixels already with error distributed, this is a byproduct of the \"custom\" approach the OP uses, they've traded off (greater) individual colour error for general picture cohesion.Me, I adjusted Atkinson a few years ago as I prefer the \"blown out\" effect: https://github.com/KodeMunkie/imagetozxspec/blob/master/src/...A similar custom approach to prevent second pass diffusion is in the code too; it is slightly different implementation - processes the image in 8x8 pixel \"attribute\" blocks, where the error does not go out of these bounds. The same artifacts occur there too but are more distinct as a consequence.\nhttps://github.com/KodeMunkie/imagetozxspec/blob/3d41a99aa04...Nb. 8x8 is not arbitrary, the ZX Spectrum computer this is used for only allowed 2 colours in every 8x8 block so this seeing the artifact on a real machine is less important as the whole image potentially had 8x8 artifacts anyway.\n \nreply",
+      "The dithered images have the wrong brightness mapping.The reason is that the described approach will estimate the error correction term wrong as the input RGB value is non-linear sRGB.The article doesn't mention anything about this so I assume the author is oblivious to what color spaces are and that an 8bit/channel RGB value will most likely not represent linear color.This is not bashing the article; most people who start doing anything with color in CG w/o reading up on the resp. theory first get this wrong.And coming up with your own dither is always cool.See e.g. [1] for an in-depth explanation why the linearization stuff matters.[1] http://www.thetenthplanet.de/archives/5367\n \nreply",
+      "Hi, OP here!Thank you so much for pointing this out! Just read the post you linked and did some of my own research on the non-linearity of sRGB - really fascinating stuff :)For now, I've acknowledged this limitation of my implementation so that any new readers are aware of it: https://amanvir.com/blog/writing-my-own-dithering-algorithm-...But I'll definitely revisit the article to add proper linearization to my implementation when I have the time. Thanks again for mentioning this!\n \nreply",
+      "To some extent I think this comes down to a preference, like many things in dithering. If the black and white results look good, that may be the right answer!I've played with dithering tools that provide both options, and I prefer the output of the simple version..\n \nreply",
+      "Haha, yeah I was kind of thinking that as well! Like with different error-diffusion patterns, one method may be more visually appealing than the other.Although, with either approach, I definitely feel that the fact that sRGB is non-linear should be acknowledged, and that\u2019s something I was completely unaware of. So, I\u2019m happy I learned something new today :)\n \nreply",
+      "You're already 99% of the way there, you're just have the order of operations wrong.What you're doing is sRGB -> linear perceived luminance space -> sRGB (greyscale, where R=G=B) -> ditheringWhen you should be applying dithering in the linear perceived luminance space,  then covering the dithered image back into sRGB space.\n \nreply",
+      "Are dithering patterns proportional in perceived brightness to a uniform grey for any percentage of set pixels?I can see them not being linearly proportional to a smooth perceptual grey gradient as the ratio of black to white changes, but I suspect it might change also with the clustering of light and dark at the same ratio.\n \nreply",
+      "I did the same like 2 weeks ago. In Rust. ^^I'm still trying to improve it a little.  \nhttps://git.ache.one/dither/tree/?h=%f0%9f%aa%b5I didn't published it because it's hard to actually put dithered images on the web, you can't resize a dithered image. So on the web, you have to dither it on the fly. It's why, in the article, there is some artifacts in the images.\nI still need to learn about dithering.Reference: https://sheep.horse/2022/12/pixel_accurate_atkinson_ditherin...Cool links about dithering:\n - https://beyondloom.com/blog/dither.html  \n - https://blog.maximeheckel.com/posts/the-art-of-dithering-and...\n \nreply",
+      "Why can't you resize it? Because of the filtering? You can turn that off in css, right?\n \nreply",
+      "I am the author of the sheep.horse link above, although here[0] is an updated link.Even with filtering turned off you get slightly incorrect results, especially if you are resizing down where aliasing might completely ruin your image. Harsh black-and-white dithering is very susceptible to scaling artifacts.If you want pixel perfect dithering for the screen you are viewing the page on, you need to do it client side. Whether or not this is worth the bother is up to you.[0] https://sheep.horse/2023/1/improved_web_component_for_pixel-...\n \nreply"
+    ],
+    "link": "https://amanvir.com/blog/writing-my-own-dithering-algorithm-in-racket",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Implementing DeepSeek R1's GRPO algorithm from scratch (github.com/policy-gradient)",
+    "points": 67,
+    "submitter": "xcodevn",
+    "submit_time": "2025-04-13T18:33:05 1744569185",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://github.com/policy-gradient/GRPO-Zero",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          GRPO training with minimal dependencies. We implement almost everything from scratch and only depend on tokenizers for tokenization and pytorch for training.Group Relative Policy Optimization (GRPO) is an algorithm proposed by Deepseek for training large language models with reinforcement learning. The idea is simple: for each question, we randomly sample multiple answers. The advantage of an answer is then defined as the normalized reward. This gets rid of the value estimation network. In particular, we implement the following algorithm:$$\n\\begin{aligned}\n\\mu_i &\\leftarrow \\text{mean}(r_{i,1}, r_{i,2}, \\cdots, r_{i,M}) \\\\\n\\sigma_i &\\leftarrow \\text{std}(r_{i,1}, r_{i,2}, \\cdots, r_{i,M})\n\\end{aligned}\n$$$$A_{i,j}[t] \\leftarrow \\frac{r_{i,j} - \\mu_i}{\\sigma_i}$$$$\n\\nabla_\\theta \\log \\pi_\\theta(a_{i,j}[t]) \\cdot A_{i,j}[t]\n$$We are going to t"
+  },
+  {
+    "title": "Show HN: I made a free tool that analyzes SEC filings and posts detailed reports (signalbloom.ai)",
+    "points": 17,
+    "submitter": "GodelNumbering",
+    "submit_time": "2025-04-13T19:33:24 1744572804",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=43675248",
+    "comments": [
+      "You might like edgartools by Dwight Gunning\n \nreply",
+      "(Side note: would you mind emailing hn@ycombinator.com so I can explain how and why I edited your text here?)\n \nreply",
+      "Done. Thank you!\n \nreply",
+      "I was thinking of building exactly this type of thing here. This is great and I love the simple/minimalistic styled pages.Things I was also contemplating to implement you can freely steal:1. Giving a list of potential interesting investments - these could also be behind paywall.2. Summarize based on sectors to see where there's downturns coming - again maybe paywall this3. Connect with news-sites or twitter etc.. to see what is happening and what is the sentiment. This is a lot harder as you'll need to either scrape or pay to get that info.Best of luck\n \nreply"
+    ],
+    "link": "https://www.signalbloom.ai/news/",
+    "first_paragraph": "Updated within minutes of release.Wilson Bank Holding Company (WBHC) announced robust first-quarter 2025 results, highlighted by significant year-over-year earnings per share growth and continued expansion of its balance sheet and ...Bruker Corporation (BRKR) reported preliminary first-quarter 2025 revenue that surpassed both internal expectations and market consensus, driven significantly by recent acquisitions while underlyin...Morgan Stanley reported exceptionally strong first-quarter 2025 results, driven by record performance in its Institutional Securities division, significantly outpacing analyst expectations and demo...Fastenal Company reported first-quarter 2025 results that met earnings expectations while slightly exceeding revenue consensus, driven primarily by growth in its contract customer segment amidst on...JPMorgan Chase & Co. reported first-quarter 2025 earnings that surpassed analyst expectations, buoyed by robust performance in its Commercial & Investment Bank and fa"
+  },
+  {
+    "title": "Why Fennel? (fennel-lang.org)",
+    "points": 188,
+    "submitter": "behnamoh",
+    "submit_time": "2025-04-13T15:37:05 1744558625",
+    "num_comments": 77,
+    "comments_url": "https://news.ycombinator.com/item?id=43673551",
+    "comments": [
+      "I do not understand the appeal of LISPy languages. I get that the parser is simple and elegant, but I believe the developer (of the compiler in this case) should serve the convenience of the user, not the other way around.Writing code like this is cumbersome and unnecessarily symbol heavy, and reading it isn't really nice as well.I'd rather have the language add that extra complexity into the parser than have me stare down these endless paretheses. Parsing something C-like is not that, hard, trust me, I've done it\n \nreply",
+      "I do not understand the appeal of non-LISPy languages. I get that most people are used to reading it and that they are efficent, but I believe the developer (of the compiler in this case) should serve the convenience of the user, not the other way around.Writing code like this is combersome and unnecessarily symbol heavy, and reading it isn't really nice as well.I'd rather have the language add those extra parens into the parser than have me stare down these endless semi-colon, linebreaks or indentation. Parsing something Lisp-like is not that, hard, trust me, I've done it.\n \nreply",
+      "This doesn't really resonate with people though, as most people are more familiar with C-style notation. Also:>Writing code like this is combersome and unnecessarily symbol heavyDoes not make sense in this context, as it mainly applies to Lisp-like languages that uses  parentheses heavily.\n \nreply",
+      "Yeah was going to change that part too for something like \"Writing code like this is verbose and spans too many lines\", but then I just thought it'd be better if it sounded more like the parent comment.And I understand it doesn't resonate with most, I just wanted to highlight how the initial parent comment was very subjective and not very substantive, some people didn't take the joke so well, I guess it could've sounded a bit passive aggressive. I personally enjoy both C-like and Lisp-like syntaxes and languages, I do have a sweet spot for Forth tho.But back on topic, Fennel is a great language, working with Love and Fennel is really nice. And if the parentheses can seem off-putting for some, I'd highly encourage to give it a shot as you can quickly get past it and see how comfy it feels to have your statements properly demarkated.S-expr shine the most when working with XML-like structure. Spinneret[1] was the most fun I ever had working with HTML, every other templating engine feels subpar now that I have tasted that sweet nectar..[1] https://github.com/ruricolist/spinneret\n \nreply",
+      "It's your comment that seems to add the least, because the majority agree with the OP. The point is that ergonomics is not as good, of course there are contrary opinions. The existence of a contrary and minority opinion doesn't detract from the point.\n \nreply",
+      ">Does not make sense in this context, as it mainly applies to Lisp-like languages that uses parentheses heavily.I had read, some years back, that someone did an actual calculation / demonstration that showed that the number of symbol / punctuation characters in Lisp is actually less than in C-based languages, for a block of code with equal functionality in both languages.I don't have the reference handy. Someone here may know of it, and post it.\n \nreply",
+      "I never got people\u2019s objections to the parentheses when the bottom of most js/ts files is a soup of three different flavors of closing bracket.  Even more \u201cfun\u201d in languages like PHP that make you sprinkle ceremonial semicolons into some parts to satisfy the compiler.  Hunting for the right brace is tedious, whereas in a lisp I just bounce on close paren til the open paren highlight is where I want it.\n \nreply",
+      "It's obvious to anyone who is familiar with both.    (f x y)\n\nvs    f(x, y);\n\nNote the extra comma and semicolon. The only place this breaks down is for simple arithmetic expressions like (+ a b) vs a + b, which is trivial enough to ignore (and also goes back in favor of Lisp when you start having more operands).\n \nreply",
+      "Let's be real in most situations it doesn't matter. One \"statement\" per line is bog standard. Whether that statement is surrounded by parens or ended in a semicolon isn't impactful for reading.LISP is only better when you add source code transformation (which is way easier with its source code looking like the transformed code). But then you introduce \"everyone can write their own syntax\" which is good and bad given the history of DSLs...\n \nreply",
+      "<3\n \nreply"
+    ],
+    "link": "https://fennel-lang.org/rationale",
+    "first_paragraph": "Fennel is a programming language that runs on the Lua runtime.The Lua programming language is an excellent and very underrated\ntool. Is it remarkably powerful yet keeps a very small footprint both\nconceptually as a language and in terms of the size of its\nimplementation. (The reference implementation consists of about nineteen\nthousand lines of C and compiles to 278kb.) Partly because it is so\nsimple, Lua is also extremely fast. But the most important thing about\nLua is that it's specifically designed to be put in other programs to\nmake them reprogrammable by the end user.The conceptual simplicity of Lua stands in stark contrast to other\n\"easy to learn\" languages like JavaScript or Python--Lua contains very\nclose to the minimum number of ideas needed to get the job done; only\nForth and Scheme offer a comparable simplicity. When you combine this\nmeticulous simplicity with the emphasis on making programs\nreprogrammable, the result is a powerful antidote to prevailing trends\nin technology"
+  },
+  {
+    "title": "The dark side of the Moomins (newstatesman.com)",
+    "points": 253,
+    "submitter": "SebaSeba",
+    "submit_time": "2025-04-13T13:15:57 1744550157",
+    "num_comments": 71,
+    "comments_url": "https://news.ycombinator.com/item?id=43672593",
+    "comments": [
+      "I'm not sure how tongue in cheek this was, but I assume it's serious. Either way, it's a fun and smart read.The article spots well the dark side of the moomins, but in my opinion goes too deep into it. My disagreements boil down to this: \"One of the oddest aspects of the Moomin phenomenon is how these complex tales of apocalypse, breakdown and disfunction have been consistently misread as cutesy celebrations of domestic life.\" Yes, all these things exist, but the point to me has always been that they are cutesy despite that! The stories paint a very typical family dynamic (at least of the time, at least in a Finnish swedish speaking family like Tove's), throws it into weirdest situations, and they all survive together thanks to, and despite, their dysfunctions. And Moominmamma is the most wholesome character ever, period.\n \nreply",
+      "I've been listening to Moomin audiobooks and reading some of the books to my wife in recent years, and I started to spot some of the more adult/darker subtext in it (I'm still processing the one where the Moominpappa makes the entire family move to a lighthouse, and Moominmamma is desperately trying to cope with growing depression). Still, I have an answer for the author's conundrum, that's accurate for a significant fraction of the readerbase:> \"One of the oddest aspects of the Moomin phenomenon is how these complex tales of apocalypse, breakdown and disfunction have been consistently misread as cutesy celebrations of domestic life.\"It's actually really simple. Here in Poland, myself and my entire generation grew up watching the children cartoon adaptation of the Moomins. It was cute, it was happy, it had nice art and music, it was suitable for small children but engaging even to older ones, and it was aired when all kids would be watching[0]. This was our generation's intro to the Moomins, and it colored how we read the books.I imagine the case is similar all across Europe. A whole generation primed to read these stories as positive and light-hearted, because of a TV adaptation.--[0] - https://en.wikipedia.org/wiki/Wieczorynka - public TV (TVP1), every day at 19:00, just before the evening news slot. In times I grew up, watching this was pretty much a national tradition for any family with children.\n \nreply",
+      "Light hearted? Suitable for small children? Are you kidding me.I'm in my mid-30's and still remember nightmares those stupid series gave me when I was in kindergarten. It was X-Files-tier scary (\"The X Files\" being other show aired by polish TV around same time), masquarading behind cute animations. How can anyone in their right mind call the episode where the Moomintroll swaps bodies with Stinky lighthearted and positive? What about the collection of monsters like Groke or Hattifnats? On some occasion I remember my parents would call me to get out from my room to watch the \"wieczorynka\" and I would pretend I can't hear and come out only as I hear the outro song starting, just to avoid whatever insane plot the Moomins would bring on me that time. I hate Moomins so much and wish could erase it from existence. Calling it \"cute and happy\" is like saying candybar with razorblade inside is delicious; technically true but not exactly an accurate description.\n \nreply",
+      "i wonder what you'd think about Brothers Grimm's tales :) And in general children folk tales in many countries do contain strong violence, cruelty, torture, etc. if you'd focus on those details.\n \nreply",
+      "> It was cute, it was happyMany episodes had darker undertones as well, especially those with the Groke[1] or hattifatteners. Tvtropes has a list[2].> The Groke was so horrifying in fact, that in Poland it caused a nation-wide fear in almost all children, some of which were even left traumatised for years, leading to some parents forbidding their children from watching Moomins, and some using the Groke as a Bogeyman to scare their children into good behavior. Any 90s or 2000s Polish kid will know how it felt.[1]: https://en.m.wikipedia.org/wiki/The_Groke[2]: https://tvtropes.org/pmwiki/pmwiki.php/NightmareFuel/TheMoom...\n \nreply",
+      "I love the books, I have read them all to my kids, and I agree that I think the article takes its thesis too far.The books are strange tales. They have dark undertones. And sometimes the adults take actions that only someone with life experience would really understand (e.g. Moominpappa wanting to suddenly upend everything in the families life and move to an isolated island). But, my kids mostly pick up on the adventure and the friendships.I feel that the Moomins are like most media that is enjoyable by both children and parents in this way (e.g. Bluey, Pixar films, etc.).\n \nreply",
+      "Based on your experience, what age do you think is ideal for introducing the books to kids?\n \nreply",
+      "I started reading the novel stories when the kids were 3yo and 6yo. Both love them. My 3yo for the drawings mostly.There are a number of excellent picture book adaptations of stories that have been published too. But, we read those afterwards and obviously they aren\u2019t as enjoyable to me.Because this is HN: My tradition is to use my Inkpalm 5 and read them with the lights out at bedtime- we pass the reader around to look at pictures.\n \nreply",
+      "Not the previous poster, but based on my own experience as a kid and also my kids I'd say age 5 is perfectly good age to introduce the books.As an adult you pick up on some the more serious themes but as a kid you just enjoy the story and the bit of danger and overcoming and the overall wholesomeness.\n \nreply",
+      "While all the books have both humour and darkness, the early books are more whimsical and playful while the later books are more about loneliness, alienation, and loss.\n \nreply"
+    ],
+    "link": "https://www.newstatesman.com/culture/books/2025/04/dark-side-of-the-moomins-tove-jansson",
+    "first_paragraph": "New Times, New Thinking.Tove Jansson\u2019s beloved stories, which turn 80 this year, are not cute: they are angry tales of apocalypse and breakdown.By\n                    Frances Wilson \u201cI could vomit over Moomintroll,\u201d Tove Jansson confided in her notebook in the late 1950s. A decade after the hippo-like creature with low self-esteem made his debut appearance in 1945, Scandinavian homes had become versions of Moominvalley, with Moomin-themed aprons, curtains, wallpaper and crockery, while department stores stocked Moomins modelled in marzipan, ceramic and white leather (Jansson drew the line at Moomin sanitary towels). This world of whimsy bore little relation to the Finnish artist\u2019s initial conception of the Moomintrolls.The Moomins and the Great Flood, the 60-page picture book not translated into English until 2005 and now celebrating its 80th anniversary, was written during the Winter War in 1939, when Russia\u2019s invasion of Finland left 300,000 Finns homeless. (The Moomin estate is mark"
+  },
+  {
+    "title": "GeoDeep's AI Detection on Maxar's Satellite Imagery (marksblogg.com)",
+    "points": 23,
+    "submitter": "marklit",
+    "submit_time": "2025-04-11T12:34:31 1744374871",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://tech.marksblogg.com/geodeep-maxar-ai-detection.html",
+    "first_paragraph": "I have 15 years of consulting & hands-on build experience with clients in the UK, USA, Sweden, Ireland & Germany. Past clients include Bank of America Merrill Lynch, Blackberry, Bloomberg, British Telecom, Ford, Google, ITV, LeoVegas, News UK, Pizza Hut, Royal Mail, T-Mobile, Williams Formula 1, Wise & UBS. I hold both a Canadian and a British passport. My CV, Twitter & LinkedIn.\n      \nHome\n        | Benchmarks\n\n        | Categories\n\n            | Atom Feed\nPosted on Thu 10 April 2025  under Artificial IntelligenceGeoDeep is a Python package that can detect objects in satellite imagery. It's made up of 1,026 lines of Python and uses ONNX Runtime and Rasterio extensively.GeoDeep was written by Piero Toffanin, who is based in Florida and is the co-founder of OpenDroneMap. He also wrote LibreTranslate which I covered in a post a while back.Maxar is a satellite manufacturer and constellation operator. They run an open data programme and they often releases imagery from areas before and af"
+  },
+  {
+    "title": "Exwm: Emacs X Window Manager (github.com/emacs-exwm)",
+    "points": 77,
+    "submitter": "tosh",
+    "submit_time": "2025-04-13T17:08:49 1744564129",
+    "num_comments": 18,
+    "comments_url": "https://news.ycombinator.com/item?id=43674233",
+    "comments": [
+      "I created this custom keymap that goes well with EXWM: https://codeberg.org/hermitsings/Kmonad_ISO_keymap_for_minim...This is to reduce lateral wrist movement (to protect from Carpal Tunnel) and general finger movement. Just posting here if folks wanna check it out.\n \nreply",
+      "I had a fun fling with EXWM, but having your window manager sharing its single-thread with emacs just doesn't really make any sense.\n \nreply",
+      "If it seems interesting to you or you're experimenting with keyboard-driven tiling WMs, though, I would highly recommend this particular fling.\n \nreply",
+      "Been using it for a couple of years, and in practice it does not cause me much trouble, at least not for me.\n \nreply",
+      "The commonly accepted solution, if this is an issue for you, is to run two instances of Emacs: one to edit in, and one to run EXWM. The days of \"Eight Megs And Constantly Swapping\" are well behind us; one can easily afford to run two (or many more) emacsen. And it can't be that much more bloated than, say, kwin...\n \nreply",
+      "I\u2019m surprised there aren\u2019t Emacs packages for the X server itself and a bootloader\u2026\n \nreply",
+      "I played with this decades ago (maybe another Emacs based WM?).  It was fun for a while but I moved on.  I thought it was abandoned.I will need to give it another go and glad to see it back among the living :)\n \nreply",
+      "Really enjoyed my time using EXWM. Had to move to Wayland for a number of reasons, and really miss it. KDE Plasma has been fantastic, but I do miss the integrated scripting environment. Ironically I now use a heavily frames-based Emacs set up, and eschew most of Emacs internal window management capabilities.\n \nreply",
+      "Obligatory System Crafter videos:- https://www.youtube.com/watch?v=f7xB2fFk1tQ- https://www.youtube.com/watch?v=9gfKrrTtyOk\n \nreply",
+      "Packaged as a Spacemacs layer => https://www.spacemacs.org/layers/LAYERS.html#exwm\n \nreply"
+    ],
+    "link": "https://github.com/emacs-exwm/exwm",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Emacs X Window Manager\n      EXWM (Emacs X Window Manager) is a full-featured tiling X window manager\nfor Emacs built on top of XELB.It features:Optional features:Please check out the\nscreenshots\nto get an overview of what EXWM is capable of, and the\nuser guide\nfor installation instructions and a detailed explanation of its usage.\n        Emacs X Window Manager\n      "
+  },
+  {
+    "title": "How much oranger do red orange bags make oranges look? (alexanderell.is)",
+    "points": 72,
+    "submitter": "otras",
+    "submit_time": "2025-04-13T16:02:28 1744560148",
+    "num_comments": 46,
+    "comments_url": "https://news.ycombinator.com/item?id=43673761",
+    "comments": [
+      ">First, the average pixel is not what I would expect it to be at allIt looks like the averaging was done in default sRGB color space, with:magick \"$f\" -resize 1x1 txt:-Downscaling should instead be done in a linear colorspace. Human vision is non-linear, but the filtering required for downscaling is equivalent to blurring, which is linear because it's done optically not within the retina or brain. Using ImageMagick:magick \"$f\" -colorspace RGB -resize 1x1 -colorspace sRGB txt:-Additionally, JPEG supports chroma subsampling, which is usually enabled by default. I don't know what sips does, but with these small files you might as well use PNG and avoid the risk of losing color information this way.This should produce results closer to human perception.\n \nreply",
+      "Warning, always convert your colors to from sRGB to Linear RGB before doing any math on them, then convert them back to sRGB afterwards for displaying them.sRGB is the familiar color space you all know and love, it's what your display uses, and it's what has those RGB numbers between 0 and 255.  But it's not a linear color space.First think of values as being between 0 and 1 instead of 0 and 255.  To change sRGB to Linear, do X^2.2 (close to squaring the value).  To change Linear back to sRGB, do X^(1/2.2) (close to a square root).In Linear RGB, a value of 0.5 is halfway between black and white.  You can put a stripe or checkerboard pattern next to the color value, and it will appear to be the same brightness.  But in sRGB, a value of 0.5 is much darker.  Linear RGB of 0.5 is roughly equivalent to sRGB of 0.73.The actual method of conversion involves a complicated curve that isn't continuous, using X^2.2 is still an approximation.\n \nreply",
+      "Even better, convert to HSL or CieLAB. RGB is not at all how our eyes see things.\n \nreply",
+      ">The average pixel was not what I expected.The average pixel doesn't look correct because human vision does not interepret shadowed colors as different colors. We first guess at the shadows, and then do some kind of inverse mapping from the shaded color space to the illuminated one before we \"perceive a color\". This is why the black,blue/white,gold dress illusion exists.\n \nreply",
+      "They really don\u2019t look all that different to my untrained eye - in fact I think it looks \u201cbetter\u201d without the bag. Maybe I\u2019m loco.\n \nreply",
+      "I'm in the same camp. It definitely doesn't look more orange to me. If anything, it looks more brown.The unbagged oranges are more appealing.\n \nreply",
+      "Taking another look, I think you're right! Particularly since the first orange is pretty orange already. I think the first example would have been better served with a yellower, less ripe orange to highlight the difference and the pull in the redder, riper direction from the bag.\n \nreply",
+      "It makes sense that adding red adds red (in addition to the avocado sacks you mention, I think of lemons\u2019 yellow bags, limes\u2019 green bags, and the red packaging/shelf lining and pink-tinged light in the butcher\u2019s case)\u2014but those images really do look strangely exposed to me.Did you do exercise any specific control over the phone\u2019s camera?I wonder if the ring light might use the sort of general-market LEDs that underperform specifically at illuminating saturated reds and oranges in this range\u2026 see for examplehttps://www.canada.ca/en/conservation-institute/services/con...andhttps://indiecinemaacademy.com/are-leds-ruining-your-project...\n \nreply",
+      "This was my immediate thought when I saw the ring light. Very very likely a CRI of 90 or below, which doesn\u2019t even weight much in red shades. Not uncommon to see 92 CRI with a R9 (red) score below 50% of sunlight or tungsten illumination.\n \nreply",
+      "That's a good question, and I could easily see the camera settings (and the light) being a source of error here. Naively, I used the default iPhone camera with the same exposure for each one, then ended up manually removing some of the HDR settings from each one when they were showing up as way overexposed on my computer. Not exactly an advanced, scientific technique, and there was also a bright source of soft white light from the window next to the setup, which could have thrown off the automatic exposure.Another comment mentioned it, but I wonder if the overall effect would be more visible with yellower baseline oranges (or, as you mention, pale lemons and limes). Really interesting about the LEDs underperforming as well!\n \nreply"
+    ],
+    "link": "https://alexanderell.is/posts/orange/",
+    "first_paragraph": "Look at this orange:Now look at this orange:It\u2019s the same orange.But, look how much more orange it looks with the red mesh on top of it:If you buy bags of oranges (at least at many places in the US), they frequently come in this red mesh bag. This bag\nmakes the\noranges look more orange. Oranger.Here\u2019s what that looks like at a local grocery store1:Ripe oranges are usually oranger, so this bag makes the oranges look better than they may actually be. Maybe the secret\nis to never buy bagged fruit, since it\u2019s harder to evaluate the quality of each orange.2This made me wonder \u2014 how does the bag change how we perceive the color?I thought this difference would be visible if we did some quick and tricky digital math: what if we had a picture of the\norange with and without the bag under the same light and camera conditions, then checked the average pixel?Here are the results from 11 different orange photos, with and without the mesh:There are a few interesting things here. First, the average pi"
+  },
+  {
+    "title": "Lotka\u2013Volterra Equations (wikipedia.org)",
+    "points": 35,
+    "submitter": "ustad",
+    "submit_time": "2025-04-10T19:28:05 1744313285",
     "num_comments": 7,
-    "comments_url": "https://news.ycombinator.com/item?id=43640924",
+    "comments_url": "https://news.ycombinator.com/item?id=43647275",
     "comments": [
-      "I like to throw sports trivia at AI systems to see how well they do on something that's low-stakes and very well-documented. Here's one question Wiyomi generated for me just now about college football:> What coaching change occurred at USC during the 2010-2011 offseason?> A. Lane Kiffin left for the Oakland Raiders, and Steve Sarkisian took over> B. Pete Caroll left for the Seattle Seahawks, and Lane Kiffin took over> C. Steve Sarkisian left for Washington, and Lane Kiffin took over> D. Lane Kiffin was fired, and Steve Sarkisian took overI chose B because I knew that to be true: https://en.wikipedia.org/wiki/Lane_Kiffin#USC_TrojansWiyomi said I was wrong, and that D is the correct answer:> Lane Kiffin was fired as USC's head coach after the 2010 season, and Steve Sarkisian, who had been the offensive coordinator, took over as the interim head coach before being officially named head coach.Lane Kiffin's tenure at USC lasted from 2010 to 2013. If I can't rely on these AI systems for the simplest low-stakes tasks, what good are they for?\n \nreply",
-      "They're good for making CEOs rich(er)?(Not trying to be sarcastic, this is genuinely the best reason I can think of)Edit: made a change for completeness.\n \nreply",
-      "I gave this a tough test, specifically generating a quiz about the video game football manager, and it failed quite badly.It would either give 3 absurd/joke answers and one good correct one. Or give 3/4 correct answers and then insist that only one of them was correct and the others were wrong.It's probably only accurate to specific topics and still requires alot of human validation and input. To me that makes it not that better than asking an AI for suggestions conversationally. Probably worse since you can make more progress and adjustments conversationally.\n \nreply",
-      "No demo without signup? No video either \u2026\n \nreply",
-      "We built Wiyomi after struggling to stay consistent with language learning apps. Most tools felt either too gamified or too generic. So we made something simple: type a topic (or paste a book\u2019s table of contents), and get AI-generated quizzes instantly.You can track progress, set reminders, and actually build a habit.We\u2019d love your feedback, try it out at wiyomi.com!\n \nreply",
-      "Have you published your methodology? From what sources are the quizzes based? How do you ensure correctness? Etc\n \nreply",
-      "seems pretty useless to try to learn from a quiz written by a bullshit generator that has no idea (or care) about whether it's got anything right?\n \nreply"
+      "Lotka\u2013Volterra equations -> Logistic function -> Logistic map -> Mandelbrot set for an interesting connection that might not be immediately apparent. The concepts all turn up around the same time once the line of inquiry becomes chaotic recursive systems.\n \nreply",
+      "Volterra also contributed to materials science, more precisely with dislocations in crystals. Always amaze me how people in the past could make huge impact in totally different fields.\n \nreply",
+      "A lot of people don't get further than Malthus, and don't realize that he was just the first pioneer. They think \"Malthus was wrong\", and don't realize the rabbit hole that opens up once you start treating population dynamics mathematically.\n \nreply",
+      "For me, r/k selection applied to human behavior broke my mind.Once you see it, you can't unsee it. Be it dating or comparing cultural approaches to relationships, etc.\n \nreply",
+      "Speaking of treating population dynamics mathematically\u2026 compartmental models are still some of my favorites https://pypi.org/project/epidemik\n \nreply",
+      "on the one hand, yes ecology and math bio is cool. On the other, the demographic transition does not fall out of these models whatsoever. Humans decided to do something very weird for whatever reason.\n \nreply",
+      "The actual population size during demographic transition looks very logistic-y. You'd be forgiven for thinking Verhulst applies. (though K is very much an empirical constant in that case, since you can't easily predict it from anything I don't think.)\n \nreply"
     ],
-    "link": "https://www.wiyomi.com",
-    "first_paragraph": "\u00a9 2025 Wiyomi. All rights reserved."
+    "link": "https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations",
+    "first_paragraph": "The Lotka\u2013Volterra equations, also known as the Lotka\u2013Volterra predator\u2013prey model, are a pair of first-order nonlinear differential equations, frequently used to describe the dynamics of biological systems in which two species interact, one as a predator and the other as prey. The populations change through time according to the pair of equations:\n\n\n\n\n\n\n\n\n\n\n\nd\nx\n\n\nd\nt\n\n\n\n\n\n\n=\n\u03b1\nx\n\u2212\n\u03b2\nx\ny\n,\n\n\n\n\n\n\n\nd\ny\n\n\nd\nt\n\n\n\n\n\n\n=\n\u2212\n\u03b3\ny\n+\n\u03b4\nx\ny\n,\n\n\n\n\n\n\n{\\displaystyle {\\begin{aligned}{\\frac {dx}{dt}}&=\\alpha x-\\beta xy,\\\\{\\frac {dy}{dt}}&=-\\gamma y+\\delta xy,\\end{aligned}}}\n\n\nwhere\nThe solution of the differential equations is deterministic and continuous. This, in turn, implies that the generations of both the predator and prey are continually overlapping.[1]\nThe Lotka\u2013Volterra system of equations is an example of a Kolmogorov population model (not to be confused with the better known Kolmogorov equations),[2][3][4] which is a more general framework that can model the dynamics of ecological systems wi"
   },
   {
-    "title": "How to Structure a B2B Marketplace Venture (sloanreview.mit.edu)",
-    "points": 7,
-    "submitter": "gnabgib",
-    "submit_time": "2025-04-12T23:51:41 1744501901",
-    "num_comments": 0,
-    "comments_url": "",
+    "title": "Unlocking Sudoku's Secrets (chalkdustmagazine.com)",
+    "points": 17,
+    "submitter": "amichail",
+    "submit_time": "2025-04-11T16:06:55 1744387615",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=43655409",
     "comments": [
-      "xxx"
+      "I like Norvig's approach, I'm in the process of porting it to my Lisp.https://norvig.com/sudoku.htmlhttps://github.com/codr7/eli-java/blob/main/examples/sudoku....\n \nreply",
+      "I\u2019ve implemented Norvig for a couple languages as a learning tool.One thing I do that he didn\u2019t before dropping to brute force though is the m squares with m possibilities check. If two squares in a row, column or group only have two possible values, then you can eliminate those possibilities from all of their siblings. Same for 3:3, 4:4 and 5:5.\n \nreply",
+      "So the first solution seems like an obvious brute-force approach that definitely does not require any fancy graph theory. I have thought of this but never used it because it seems so tedious and like it defeats the point of the game.\n \nreply",
+      "As someone who has played Sudoku every day for years, I find it fascinating that there\u2019s no need to unlock any secret. The beauty of Sudoku lies in exploring its simple rules, not in solving some hidden mystery.\n \nreply"
     ],
-    "link": "https://sloanreview.mit.edu/article/how-to-structure-a-b2b-marketplace-venture/",
-    "first_paragraph": ""
+    "link": "https://chalkdustmagazine.com/features/unlocking-sudokus-secrets/",
+    "first_paragraph": "Sara Logsdon looks to graph theory and abstract algebra for help on the puzzle page17 March 2025Sudoku has long captivated puzzle enthusiasts worldwide with its logical challenges and addictive nature. While it may seem like a simple game of numbers, beneath the surface lies a fascinating connection to the realm of mathematics. Graph theory and abstract algebra both play a crucial role in unravelling the intricacies of sudoku. Sudoku puzzles consist of a $9 \\times 9$ grid, divided into nine $3 \\times 3$ sub-grids called regions. The objective is to fill the grid with numbers from 1 to 9, ensuring that each row, column, and region contains every digit exactly once.In graph theory, a graph is a mathematical structure that comprises a set of vertices, or nodes, connected by edges. An area rich in mathematical questions, graph theory has a long history of famous thought-provoking problems. One of the most well-known of these problems is the vertex colouring problem: Given an undirected gra"
   },
   {
-    "title": "Mammoth genetic diversity throughout the last million years (sciencedaily.com)",
-    "points": 14,
-    "submitter": "docmechanic",
-    "submit_time": "2025-04-09T23:15:34 1744240534",
-    "num_comments": 0,
-    "comments_url": "",
+    "title": "Wasting Inferences with Aider (worksonmymachine.substack.com)",
+    "points": 107,
+    "submitter": "Stwerner",
+    "submit_time": "2025-04-13T13:36:17 1744551377",
+    "num_comments": 87,
+    "comments_url": "https://news.ycombinator.com/item?id=43672712",
     "comments": [
-      "xxx"
+      "For me, a team of junior developers that refuse to learn from their mistakes is the fuel of nightmares. I'm stuck in a loop where every day I need to explain to a new hire why they made the exact same beginner's mistake as the last person on the last day. Eventually, I'd rather spend half an hour of my own time than to explain the problem once more...Why anyone thinks having 3 different PRs for each jira ticket might boost productivity, is beyond me.Related anime: I May Be a Guild Receptionist, But I'll Solo Any Boss to Clock Out on Time\n \nreply",
+      "One of the (many) differences between junior developers and LLM assistance is that humans can learn from their mistakes, whereas with LLMs it's up to you as the prompter to learn from their mistakes.If an LLM screws something up you can often adjust their prompt to avoid that particular problem in the future.\n \nreply",
+      "It may not be as stupid as it sounds.Randomising LLM outputs (temperature) results is outputs that will always have some degree of hallucination.That\u2019s just math. You can\u2019t mix a random factor in and magically expect it to not exist. There will always be p(generates random crap) > 0.However, in any probabilistic system, you can run a function k times and you\u2019ll get an output distribution that is meaningful if k is high enough.3 is not high enough.At 3, this is stupid; all you\u2019re observing is random variance.\u2026but, in general, running the same prompt multiple times and taking some kind of general solution from the distribution isn\u2019t totally meaningless, I guess.The thing with LLMs is they scale in a way that actually allows this to be possible, in a way that scaling with humans can\u2019t.\u2026 like the monkeys and Shakespeare, there probably a limit to the value it can offer; but it\u2019s not totally meaningless to try it.\n \nreply",
+      "> It may not be as stupid as it sounds.It is.> However, in any probabilistic system, you can run a function k times and you\u2019ll get an output distribution that is meaningful if k is high enough.This is the underlying flaw in this approach.  Attempting to use probabilistic algorithms to produce a singular verifiably correct result requires an external agent to select what is correct in the output of \"k times\" invocations.  This is a person capable of making said determination.> The thing with LLMs is they scale in a way that actually allows this to be possible, in a way that scaling with humans can\u2019t.For the \"k times\" generation of text part, sure.  Not for the determination of which one within k, if any, are acceptable for the problem at hand.EDIT: clarified \"produce a verifiably correct result\" to be \"produce a singular verifiably correct result\"\n \nreply",
+      "I think this is an interesting idea, but I also somewhat suspect you've replaced a tedious problem with a harder, more tedious problem.Take your idea further. Now I've got 100 agents, and 100 PRs, and some small percentage of them are decent. The task went from \"implement a feature\" to \"review 100 PRs and select the best one\".Even assuming you can ditch 50 percent right off the bat as trash... Reviewing 50 potentially buggy implementations of a feature and selecting the best genuinely sounds worse than just writing the solution.Worse... If you haven't solved the problem before anyways, you're woefully unqualified as a reviewer.\n \nreply",
+      "The linked article from Steve Yegge (https://sourcegraph.com/blog/revenge-of-the-junior-developer) provides a 'solution', which he thinks is also imminent - supervisor AI agents, where you might have 100+ coding agents creating PRs, but then a layer of supervisors that are specialized on evaluating quality, and the only PRs that a human being would see would be the 'best', as determined by the supervisor agent layer.From my experience with AI agents, this feels intuitively possible - current agents seem to be ok (thought not yet 'great') at critiquing solutions, and such supervisor agents could help keep the broader system in alignment.\n \nreply",
+      ">but then a layer of supervisors that are specialized on evaluating qualityWhy would supervisor agents be any better than the original LLMs? Aren't they still prone to hallucinations and subject to the same limitations imposed by training data and model architecture?It feels like it just adds another layer of complexity and says, \"TODO: make this new supervisor layer magically solve the issue.\" But how, exactly? If we already know the secret sauce, why not bake it into the first layer from the start?\n \nreply",
+      "Similar to how human brains behave, it is easier to train a model to select a better solution between many choices than to check an individual solution for correctness [1], which is in turn an easier task to learn than writing a correct single solution in the first place.[1] the diffs in logic can suggest good ideas that may have been missed in subsets of solutions.",
+      "Just add a CxO layer that monitors the supervisors! And the board of directors watches the CEO and the shareholders monitor the board of directors. It's agents all the way up!\n \nreply",
+      "This reads like it could result in \"the blind, leading the blind\". Unless the Supervisor AI agents are deterministic, it can still be a crapshoot. Given the resources that SourceGraph has, I'm still surprised they missed the most obvious thing, which is \"context is king\" and we need tooling that can make adding context to LLMs dead simple. Basically, we should be optimizing for the humans in the loop.Agents have their place for trivial and non-critical fixes/features, but the reality is, unless the agents can act in a deterministic manner across LLMs, you really are coding with a loaded gun.  The worst is, agents can really dull your senses over time.I do believe in a future where we can trust agents 99% of the time, but the reality is, we are not training on the thought process, for this to become a reality.  That is, we are not focused on the conversation to code training data. I would say 98% of my code is AI generated, and it is certainly not vibe coding. I don't have a term for it, but I am literally dictating to the LLM what I want done and have it fill in the pieces. Sometimes it misses the mark, sometimes it aligns and sometimes it introduces whole new ideas that I have never thought of, which will lead to a better solution.  The instructions that I provide is based on my domain knowledge and I think people are missing the mark when they talk about vibe coding, in a professional context.Full Disclosure: I'm working on improving the \"conversation to code\" process, so my opinions are obviously biased, but I strongly believe we need to first focus on better capturing our thought process.\n \nreply"
     ],
-    "link": "https://www.sciencedaily.com/releases/2025/04/250409114704.htm",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Zod v4 Beta (zod.dev)",
-    "points": 125,
-    "submitter": "mycroft_4221",
-    "submit_time": "2025-04-12T21:03:17 1744491797",
-    "num_comments": 27,
-    "comments_url": "https://news.ycombinator.com/item?id=43667925",
-    "comments": [
-      "We stuck with Yup and ignored Joi, Zod and god knows what else has come down the pipeline since. Rather than wasting time upgrading, we've instead built useful features.That said, we are slowly phasing out our React frontend for one of our apps page by page and replacing it with what we use over the rest of apps: Phoenix + Liveview. The changeset system for validations has proven itself time and time again to both be fast but also to handle many of the curly validation problems we might have. It also has barely changed since its release.If you have a disciplined frontend team then you might be able to make it work. They have to be able to ignore the latest shiny thing that has come along, but if you don't then you'll have a team that is busy constantly upgrading to the latest shiny library rather than getting anything done.\n \nreply",
-      "We\u2019ve been using LiveView for years now and I still really miss the ergonomics that you get with typescript.A lot of that is going away with better LSP support and better LLM suggestions.But elixir and LiveView are generally great (I LOVE ecto), but building component frameworks and component communication still feels a bit janky.\n \nreply",
-      "I've used LiveView a little in the past, and besides the lack of static typing (at the time, I think Elixir has gotten some type annotations since), I really liked it and found it easy to work with.Ecto though, I could never figure out how to use. If I could just make SQL queries in an ORM-style I would understand it, but the repositories and auto generated relations and such I couldn't figure out. Do you have any good resources for learning ecto? I didn't find the official docs helpful.\n \nreply",
-      "I only use Zod in a single library, so my experience with it is pretty minimal. One thing I have really enjoyed with it is the low maintenance.So, when I saw this post and read the first few paragraphs, I was filled with dread for having to do yet another major dependency update. Reading of all the improvements- surly the \u2018breaking changes\u2019 list must be massive.Having read the full article, it seems like the breaking changes have been kept within reason. One major improvement that stands out to me is the improved Recursive types support, but there is certainly any number of improvements for others to be excited about.The thing I enjoyed most is that excitement of the Arthur really shines throughout the whole article. I\u2019m so thankful this library exists and is being lovingly maintained by someone who is genuinely interested in it.\n \nreply",
-      "Zod is installed in nearly every project I use. It\u2019s an essential part of my toolkit. I adore this library. It near perfect as-is and these additions make it even better. Thanks for all the hard work.\n \nreply",
-      "I used to use Zod until I realised it\u2019s rather big (for many projects this isn\u2019t an issue at all, but for some it is). Now I use Valibot which is basically the same thing but nice and small. I do slightly prefer Zod\u2019s API and documentation, though.Edit to add: aha, now I read further in the announcement, looks like @zod/mini may catch up with valibot -- it uses the same function-based design at least, so unused code can be stripped out.\n \nreply",
-      "Surprised not to see more people ask about performance profile of v4.Zod is great in terms of API, but a no-go in terms of performance.We ended up writing babel plugins (https://github.com/gajus/babel-plugin-zod/) and using it along with zod-accelerator, which improves performance, but breaks in various edge-cases.\n \nreply",
-      "I guess people are not asking because the article contains benchmarks\n \nreply",
-      "I've created some crazy types with zod since v3 released, these look like really interesting changes for v4.I've been bit by performance issues, and even a few issues where I just couldn't infer types, with some of the more complex schemas I tried to define, especially with multiple .extend() and .omit() calls.The zod-mini library looks particularly interesting. I don't mind the more functional approach with nested functions rather than chaining. Reminds me of ramda, that library is pretty massive but still easy to tree shake since everything is functional.\n \nreply",
-      "My team has been building a greenfield SaaS app for the past ~9 months and when we started, we went all in on Zod and so far the experience has been pretty fantastic. Zod is very intuitive to use and being able to generate typescript types off the schemas is very useful. Though with that said if you're already using Yup or Joi I don't recommend switching as there's just not enough of a reason to switch over.\n \nreply"
-    ],
-    "link": "https://v4.zod.dev/v4",
-    "first_paragraph": "BetaIntroducing Zod 4 betaMigration guideDocumentationIntroBasic usageDefining schemasCustomizing errorsFormatting errorsMetadata and registriesNewJSON SchemaNewEcosystemPackageszod@zod/miniNew@zod/coreNewRefer to the Changelog for a complete list of breaking changes.Zod 4 is now in beta after over a year of active development. It's faster, slimmer, more tsc-efficient, and implements some long-requested features.To install the beta:Development will continue on the v4 branch over a 4-6 week beta period as I work with libraries to ensure day-one compatibility with the first stable release.Huge thanks to Clerk, who supported my work on Zod 4 through their extremely generous OSS Fellowship. They were an amazing partner throughout the (much longer than anticipated!) development process.Zod v3.0 was released in May 2021 (!). Back then Zod had 2700 stars on GitHub and 600k weekly downloads. Today it has 36.5k stars and 23M weekly downloads. After 24 minor versions, the Zod 3 codebase has hit "
-  },
-  {
-    "title": "Hunger shifts attention towards less healthy food options, study finds (medicalxpress.com)",
-    "points": 25,
-    "submitter": "PaulHoule",
-    "submit_time": "2025-04-13T00:33:47 1744504427",
-    "num_comments": 5,
-    "comments_url": "https://news.ycombinator.com/item?id=43669065",
-    "comments": [
-      "What this makes me wonder is whether hunger would also affect other \"gut\" decisions by biasing towards direct sensory perceptual features and away from \"cognitive\" features.  This would be sort of like the stuff about how judges allegedly handed down harsher sentences just before lunch.  But you could imagine similar stuff on other judgment tasks where bias of various kinds can exist, like \"how friendly is this person\" or \"which of these places would you like to go to?\"Looking at food and evaluating it for how good it is to eat is something we humans have evolved to do over thousands of years.  Things like \"NutriScores\" have only existed for a few decades, and the details of them continue to vary from place to place and on a small timescale, so even people who are exposed to them can't always interpret them.  This study can be interpreted as saying that we're more likely to use \"primal\" means to solve \"primal\" needs (e.g., use visual attributes of food to solve a need for food), and de-emphasize complex, culturally-derived tools like writing and numbers.  It would be interesting to know how general that tendency is.I also enjoyed that the photo is of a person eating a hamburger and the study was done on students at the University of Hamburg.\n \nreply",
-      "> What this makes me wonder is whether hunger would also affect other \"gut\" decisions by biasing towards direct sensory perceptual features and away from \"cognitive\" features. This would be sort of like the stuff about how judges allegedly handed down harsher sentences just before lunch. But you could imagine similar stuff on other judgment tasks where bias of various kinds can exist, like \"how friendly is this person\" or \"which of these places would you like to go to?\"Intuitively, it makes sense to me that it would. I definitely lose some impulse control and my pattern of thinking changes the hungrier I am. Someone that I know with both diabetes and anxiety has also spoken previously about how when their blood sugar levels get lower, certain aspects of their anxiety are also reduced, such as the decision paralysis or over-analyzing of choices that they are otherwise prone to.It would be interesting to see a study of how other primal needs affect food choices and more general decision making as well, and whether it's the same mechanism as with hunger. For example, sleep deprivation.> I also enjoyed that the photo is of a person eating a hamburger and the study was done on students at the University of Hamburg.This was pretty cute. A nice little bit of whimsy.\n \nreply",
-      "Fortunately the same cannot be said for romantic relationships\n \nreply",
-      "I thought we knew this already. The age old advice is to not grocery shop while hungry because you'll buy junk food. It's also why free lunch in schools correlates with better grades because kids can't focus properly when hungry.\n \nreply",
-      "yeah, no shit\n \nreply"
-    ],
-    "link": "https://medicalxpress.com/news/2025-03-hunger-shifts-attention-healthy-food.html",
+    "link": "https://worksonmymachine.substack.com/p/wasting-inferences-with-aider",
     "first_paragraph": ""
   }
 ]
