@@ -1,375 +1,403 @@
 [
   {
-    "title": "ProofOfThought: LLM-based reasoning using Z3 theorem proving (github.com/debarghag)",
-    "points": 188,
-    "submitter": "barthelomew",
-    "submit_time": "2025-10-04T18:34:23 1759602863",
-    "num_comments": 96,
-    "comments_url": "https://news.ycombinator.com/item?id=45475529",
+    "title": "Fire destroys S. Korean government's cloud storage system, no backups available (joins.com)",
+    "points": 920,
+    "submitter": "ksec",
+    "submit_time": "2025-10-05T17:20:39 1759684839",
+    "num_comments": 431,
+    "comments_url": "https://news.ycombinator.com/item?id=45483386",
     "comments": [
-      "I had a surprising interaction with Gemini 2.5 Pro that this project reminds me of. I was asking the LLM for help using an online CAS system to solve a system of equations, and the CAS system wasn't working as I expected. After a couple back and forths with Gemini about the CAS system, Gemini just gave me the solution. I was surprised because it's the kind of thing I don't expect LLMs to be good at. It said it used Python's sympy symbolic computation package to arrive at the solution. So, yes, the marriage of fuzzy LLMs with more rigorous tools can have powerful effects.reply",
-      "Just like humans... we are not so good at hard number crunching, but we can invent computers that are amazing at it. And with a lot of effort we can make a program that uses a whole lot of number crunching to be ok at predicting text but kind of bad at crunching hard numbers. And then that program can predict how to create and use programs which are good at number crunching.reply",
-      "Maybe the number crunching program the text generation program creates will, with enough effort become good at generating text, an will in turn make another number crunching computer and then\u2026reply",
-      "Watch the movie \u201cThe Thirteenth Floor\u201dreply",
-      "I love this kind of thought. Thanks.reply",
-      "Parent post is talking about symbolic manipulation, not rote number crunching, which is exactly what we're supposed to be good at and machines are supposed to be bad at.reply",
-      "We do plenty of number crunching all the time, just not consciously.Like the inverse kinematics required for your arm and fingers to move.reply",
-      "I\u2019d argue we aren\u2019t solving those inverse kinematics / kinetics via \u201cnumber crunching\u201d - but rather that our neuromuscular systems are analog. Which I don\u2019t usually call that \u201cnumber crunching\u201d in the sense current computers \u2026 compute.reply",
-      "As a psychologist, I completely agree. It absolutely is NOT number crunching. Analog computation is primary and dominant in animals. It has to be, for so many reasons. I continue to be amazed at how much IT people do NOT grasp human and animal IT. And that, I would argue, is why so many IT folks keep talking about our supposedly approaching human intelligence in technology. If they really understood human intelligence the absurdity of that statement would keep them quiet. An elegant, artful puppet is still a puppet, and without the personal history context and consciousness we possess, not to mention a vast complex of analogue computation functionality we rely upon, that puppet will only ever be a clever number-cruncher. We are so much more.reply",
-      "Neurons aren't crunching numbers for inverse kinematics.reply"
+      "At the very bottom of the article, I see this notice:    > This article was originally written in Korean and translated by a bilingual reporter with the help of generative AI tools. It was then edited by a native English-speaking editor. All AI-assisted translations are reviewed and refined by our newsroom.\n\nI like that.  It is direct and honest.  I'm fine with people using LLMs for natural language related work, as long as they are transparent about it.reply",
+      "Especially since LLM tech was originally developed for translation. That\u2019s the original reason so much work was done to create a model that could handle context and it turned out that was helpful in more areas than just translation.While LLM usage is just spinning up in other areas, for translation they have been doing this job well for over 5 years now.reply",
+      "That footnote does make me question the bilingual reporter's skills in both languages though. If the reporter needs an LLM to help translate they could easily be missing subtle mistranslations.The final note that all AI-assisted translations are reviewed by the newsroom is also interesting. If they are going to take the time to review it and have enough experience in both languages to verify the translation, why use the LLM for it at all?reply",
+      "> That footnote does make me question the bilingual reporter's skills in both languages though. If the reporter needs an LLM to help translate they could easily be missing subtle mistranslations.I've done my fair share of translating as a bilingual person and having an LLM to do a first pass at translation saves TON of time. I don't \"need\" LLM, but it's definitely a helpful tool.reply",
+      "> If they are going to take the time to review it and have enough experience in both languages to verify the translation, why use the LLM for it at all?People generally read (and make minor edits if necessary) much faster than they can write.reply",
+      "The reporter does not need the LLM, but it's often faster to review/edit a machine translation than doing the whole translation by yourselfreply",
+      "This is how I\u2019ve done translation for a number of years, even pre-LLM, between the languages I speak natively - machine translation is good enough that it\u2019s faster for me to fix its problems than for me to do it from scratch.(Whether machine translation uses LLMs or not doesn\u2019t seem especially relevant to the workflow.)reply",
+      "So just a blanket message at the bottom of the page \"anything and everyone you read here might be total bullshit\"reply",
+      "FWIW that happens sometimes with traditional reporting to. At the end of the day, it's just a matter of degree, and to be truly informed you need to need to be willing to question the accuracy of your sources. As the parent comment said, at least they're being transparent, which isn't even always the case for traditional reportingreply",
+      "It's still worse than useless :https://www.bloodinthemachine.com/p/ai-killed-my-job-transla...reply"
     ],
-    "link": "https://github.com/DebarghaG/proofofthought",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        \"Proof of thought: Neurosymbolic program synthesis allows robust and interpretable reasoning\" published Sys2Reasoning Workshop NeurIPS 2024\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.LLM-based reasoning using Z3 theorem proving.The system has two layers:Most users should use the high-level API.See examples/ directory for complete examples including Azure OpenAI support.\n        \"Proof of thought: Neurosymbolic program synthesis allows robust and interpretable reasoning\" published Sys2Reasoning Workshop NeurIPS 2024\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page."
+    "link": "https://koreajoongangdaily.joins.com/news/2025-10-01/national/socialAffairs/NIRS-fire-destroys-governments-cloud-storage-system-no-backups-available/2412936",
+    "first_paragraph": ""
   },
   {
-    "title": "A comparison of Ada and Rust, using solutions to the Advent of Code (github.com/johnperry-math)",
-    "points": 198,
-    "submitter": "andsoitis",
-    "submit_time": "2025-10-04T15:10:49 1759590649",
-    "num_comments": 128,
-    "comments_url": "https://news.ycombinator.com/item?id=45473861",
+    "title": "Germany outfitted half a million balconies with solar panels (grist.org)",
+    "points": 81,
+    "submitter": "bilsbie",
+    "submit_time": "2025-10-05T22:18:31 1759702711",
+    "num_comments": 54,
+    "comments_url": "https://news.ycombinator.com/item?id=45485806",
     "comments": [
-      "Ada has some really good ideas which its a shame never took off or got used outside of the safety critical community that mostly used it. The ability to make number types that were limited in their range is really useful for certain classes of bugs. Spark Ada was a relatively easy substandard to learn and apply to start to develop software that was SIL 4 compliant.I can't help but feel that we just went through a huge period of growth at all costs and now there is a desire to return, after 30-years of anything goes, to trying to make software that is safer again. Would be nice to start to build languages based on all the safety learnings over the decades to build some better languages, the good ideas keep getting lost in obscure languages and forgotten about.reply",
-      "Nim was inspired by Ada & Modula, and has subranges [1]:  type\n    Age = range[0..200]\n\n  let ageWorks = 200.Age\n  let ageFails = 201.Age\n\nThen at compile time:  $ nim c main.nim\n  Error: 201 can't be converted to Age\n\n[1] https://nim-lang.org/docs/tut1.html#advanced-types-subrangesreply",
-      "I know quite some people in the safety/aviation domain that kind of dislike the subranges, as it inserts run-time checks that are not easily traceable to source code, thus escaping the trifecta of requirements/tests/source-code (which all must be traceable/covered by each other).Weirdly, when going through the higher assurance levels in aviation, defensive programming becomes more costly, because it complicates the satisfaction of assurance objectives. SQLite (whiches test suite reaches MC/DC coverage which is the most rigorous coverage criterion asked in aviation) has a nice paragraph on the friction between MC/DC and defensive programming:https://www.sqlite.org/testing.html#tension_between_fuzz_tes...reply",
-      "Ideally, a compiler can statically prove that values stay within the range; it's no different than proving that values of an enumeration type are valid. The only places where a check is needed are conversions from other types, which are explicit and traceable.reply",
-      "If you have    let a: u8 is 0..100 = 1;\n    let b: u8 is 0..100 = 2;\n    let c = a + b;\n\nThe type of c could be u8 in 0..200. If you have holes in the middle, same applies. Which means that if you want to make c u8 between 0..100 you'd have to explicitly clamp/convert/request that, which would have to be a runtime check.reply",
-      "In your example we have enough information to know that the addition is safe. In SPARK, if that were a function with a and b as arguments, for instance, and you don't know what's being passed in you make it a pre-condition. Then it moves the burden of proof to the caller to ensure that the call is safe.reply",
-      "But obviously the result of a + b is [0..200], so an explicit cast, or an assertion, or a call to clamp() is needed if we want to put it back into a [0..100].Comptime constant expression evaluation, as in your example, may suffice for the compiler to be able to prove that the result lies in the bounds of the type.reply",
-      "How does this work for dynamic casting? Say like if an age was submitted from a form?I assume it\u2019s a runtime error or does the compiler force you to handle this?reply",
-      "If you're using SPARK, it'll catch at compile time if there's ever a possibility that it would fit within that condition. Otherwise it'll throw an exception (constraint_error) during runtime for you to catch.reply",
-      "What happens when you add 200+1 in a situation where the compiler cannot statically prove that this is 201?reply"
+      "Great idea!  Want to learn more on the safety though...> Once in place, people simply plug a micro-inverter into an available wall outlet.later>Gr\u00fcndinger and experts at the German Solar Industry Association noted that the devices don\u2019t generate enough power to strain the grid, and their standardized design and safety features allow them to integrate into balconies smoothly and easily.This seem to talk to the safety of the grid and the balcony.  What is done when electricians power down the apartment or worse, the building to work on something?  The wires remain energized despite proper distribution panel shut down.  Do these setups have auto shut off if they see no other power on the plug they are on?  what if it is the building, wouldn't other panels still energize the wires, so they would not shut down?   Just asking, as my personal experience is quite hair raising and crispy when it comes to inappropriately de-energized circuits. ;)reply",
+      "Anti\u2011islanding detects the power frequency and constantly tries to shift it. If the grid is on, its frequency won't budge, so the anti\u2011islanding doesn't trip. If the grid is off, the frequency shifts and it shuts off. A second one would just make it shut off faster.reply",
+      "> Do these setups have auto shut off if they see no other power on the plug they are on?Yes. This is Germany we are talking here. I doubt any other country has higher (and more annoying) safety standards.reply",
+      "Micro inverters pretty much all have automatic shutdowns in these situations. They can \u2018boost\u2019 the phase/voltage, but won\u2019t replace it if it is missing.reply",
+      "These microinverters do not output anything if they do not detect the grid.reply",
+      "I'd much rather get the sun on my balcony.reply",
+      "The solar panels are on the sides of the balcony, where the safety barriers are usually opaque /solid.reply",
+      "Why not. Your decision.reply",
+      "Some people laugh at the 800W output.\nHowever, in Indonesia, roughly half of the 300 million people live in homes with an electricity capacity of 900W or less.Wish these kind of panels were available at that price here. We have pretty much 12 hours of sunlight every single day but household solar panel is discouraged by the state owned utilities.reply",
+      "To be sure, when talking about solar panels, 800W is the nominal/nameplate capacity. That's how much it generates when conditions are perfect and the sun is shining straight down on them. Most of the time an 800W installation will produce rather less than that.You'd need rather more panels (and/or some combination with batteries) to hit 900W output constantly. (on the other hand, do you need 900W constantly, or is that peak usage? A battery might be able to handle that.)  That said, solar panels are probably a lot more efficient in Indonesia than they are in Germany.  Since you're in/near the tropics, perhaps 1500-2000W nameplate capacity could cover your 900W? See if you can get a local expert do the maths for you.reply"
     ],
-    "link": "https://github.com/johnperry-math/AoC2023/blob/master/More_Detailed_Comparison.md",
+    "link": "https://grist.org/buildings/how-germany-outfitted-half-a-million-balconies-with-solar-panels/",
+    "first_paragraph": "\u0394A nonprofit, independent media organization dedicated to telling stories of climate solutions and a just future.\u0394Matthias Weyland loves having people ask about his balcony. A pair of solar panels hang from the railing, casting a sheen of dark blue against the red brick of his apartment building. They\u2019re connected to a microinverter plugged into a wall outlet and feed electricity directly into his home. On a sunny day, he\u2019ll produce enough power to supply up to half of his family\u2019s daily needs.Weyland is one of hundreds of thousands of people across Germany who have embraced balkonkraftwerk, or balcony solar. Unlike rooftop photovoltaics, the technology doesn\u2019t require users to own their home, and anyone capable of plugging in an appliance can set it up. Most people buy the simple hardware online or at the supermarket for about $550 (500 euros.)The ease of installation and a potent mix of government policies to encourage adoption has made the wee arrays hugely popular. More than 550,00"
+  },
+  {
+    "title": "Ken Parker, famed luthier, has died (kenparkerarchtops.com)",
+    "points": 57,
+    "submitter": "dagmx",
+    "submit_time": "2025-10-05T22:10:15 1759702215",
+    "num_comments": 17,
+    "comments_url": "https://news.ycombinator.com/item?id=45485736",
+    "comments": [
+      "Years ago, a friend introduced me to the world of boutique luthiery. It\u2019s a fascinating art and for steel string acoustic guitars, it\u2019s been undergoing a kind of renaissance throughout the past 20 years. I was lucky enough to play some very fine instruments; it\u2019s incredible how good they sound.reply",
+      "I loved that note.He had a great attitude, and I loved him \u201cpassing the torch,\u201d in that manner.Maybe the attention the post gets, will help his family to recoup some of their medical costs. Kinda sucks, that they need to do it, though.reply",
+      "Shame, I'm a huge fan of the Parker Fly.They're arguably the biggest step forward in electric guitar since the 50s. Lots of new stuff there for the time, some of which became standard years after: stainless steel frets, piezo+magnetic pickups, carbon fiber reinforcement, adjustable vibrato, possibly the most seamless/flattest neck joint ever... not to mention the whole design is amazing.This video from this guy dropped just two days ago, and explains a lot about the features and constructions: https://www.youtube.com/watch?v=1S6Cni3nkwsIt's a shame they stopped manufacturing after the company was sold. I had one and regret selling, as prices haven't really come down!Rest in peace and thanks for everything, Mr Parker!reply",
+      "I had my Parker Fly with me at a gig in NYC, when back stage I met Les Paul.  He had never seen one, and he admired its radical choices.So we found a nice big permanent sharpie, and Les Paul signed my Parker Fly.reply",
+      "That is an absolutely amazing story, thank you for sharing it!reply",
+      "Just a note that he continued on his path of innovation w/ Ken Parker Archtops, which he was still involved in building until just before the end. These are $20k+ custom orders so there aren't too many in the wild.The neck 'join' in particular is wicked: https://kenparkerarchtops.com/guitars2reply",
+      "Similarly, my dad was a luthier for 15 years before passing away to cancer in 2022.\nIn the 5th grade, I wanted to learn guitar, so being the engineer he was, he built one. But needed machines first, and wood, and the garage.Being an engineer instead of a business-minded operator prevented his work from becoming too well known but the instrument and what he accomplished was special.I know own the shop, guitars, and everything after his passing - a couple years ago I made a reddit thread asking for help - it blew up and is an interesting read - https://www.reddit.com/r/guitars/comments/1f07f1s/my_dad_lef...I like to take pictures of products and build websites, unfortunately we just ran out of time.https://sgg2.webflow.io/reply",
+      "Is the business still operating?reply",
+      "I'm a bassist, and was aware that Parker made basses, one of them for the legendary electric bassist Steve Swallow.https://www.talkbass.com/threads/what-happened-to-parker-gui...reply",
+      "https://en.wikipedia.org/wiki/Ken_Parker_(guitar_maker)reply"
+    ],
+    "link": "https://kenparkerarchtops.com",
+    "first_paragraph": "Ken Parker, age 73, passed away peacefully at his home in Gloucester, MA on October 5, 2025, with Susan Kolwicz by his side. From Ken, October 3rd, 2025:Photograph by Bob PalmieriHello Everybody,Well, they say that nothing lasts forever and they\u2019re right about that. My time here is about to close down and I won\u2019t be part of the show anymore. What I have done with all my heart and soul is to put together a situation where my work can continue unabated and begin to bring some serious fruit to the things that I\u2019ve been working on for the last 50 years.My deepest and most heartfelt thanks to all of you. It\u2019s been the experience of my lifetime being able to share my life\u2019s work and knowledge with each of you through my instruments and via Archtoppery, and see that you get it. My hope is that you all build on what I\u2019ve learned and shared, and take everything to the next level.\u00a0Sam Krimmel will be doing just that, and I encourage you to support Sam as he ventures forth.\u00a0Sam is a natural co-co"
+  },
+  {
+    "title": "The G in GPU is for Graphics damnit (ut21.github.io)",
+    "points": 51,
+    "submitter": "sebg",
+    "submit_time": "2025-10-02T11:46:27 1759405587",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://ut21.github.io/blog/triton.html",
+    "first_paragraph": "As is true for everything, a lot of things need to happen for anything to happen, and so it\u2019s true for this blogpost as well. Out of all of these everything that needed to happen, 3 are these:The first professor I worked with was a graphics researcher who in our first meeting started out with a short rant about how his GPUs are being hogged for ML workloads, how students don\u2019t approach him for graphics research anymore and that \u201cThe G in GPU is for Graphics\u201d. I then had to tell him that I also approached him for an ML project. The happy compromise between our interests was to work on NeRFs. A fun piece of trivia is that the vision and graphics lab I worked in for this project is funded by the only BITSian to recieve an Oscars award.In my first year, I developed a short-term obsession and a long-term admiration for \u201ccode art\u201d and found some beautiful work like these: fronkonstin, Sage Jenson, MoMA\u2019s Code and Art exhibition, Casey Reas, Zachary Lieberman, etc. I wish I had archived these"
+  },
+  {
+    "title": "What GPT-OSS leaks about OpenAI's training data (fi-le.net)",
+    "points": 160,
+    "submitter": "fi-le",
+    "submit_time": "2025-10-05T18:28:16 1759688896",
+    "num_comments": 41,
+    "comments_url": "https://news.ycombinator.com/item?id=45483924",
+    "comments": [
+      "This article says that \"GPT-5 was trained on phrases from adult websites\". However, this is misleading as the only thing that was shown is that GPT-5 was trained on phrases that also occur on adult websites, with some speculation of the source of the training data container such adult phrases being GitHub.reply",
+      "This is addressed at the end of the blogpostreply",
+      "> There are about 936 tokens with very low L2 norm, centered at about 2. This likely means that they did not occur in the training process of GPT-oss and were thus depressed by some form of weight decay.Afaik embedding and norm params are excluded from weight decay as standard practice. Is this no longer true?E.g., they exclude them in minGPT: https://github.com/karpathy/minGPT/blob/37baab71b9abea1b76ab...reply",
+      "Could it instead be the case that these tokens were initialized at some mean value across the dataset (plus a little noise), and then never changed because they were never seen in training? Not sure if that is state of the art anymore but e.g. in Karpathy's videos he uses a trick like this to avoid the \"sharp hockey stick\" drop in loss in the early gradient descent steps, which can result in undesirably big weight updates.reply",
+      "Unfortunately the article glances over some of practices of uncovering such patterns in the training data. It goes very straitghfully to the point, no lube needed. It didn't land well for me.reply",
+      "Is there any work on reverse engineering LLMs, especially the closed source API ones? For example, how can we learn about the data used in Claude Sonnet 4.5 training?And more tricky but as important, is there any work on extrapolating the pretrained model AFTER it's RLHF'd? For example, what kinds of biases did exist in gpt-4o before it was unbiased?Do biases go away completely or they just get suppressed down deep in the model's \"mind\"?reply",
+      "Yes.https://arxiv.org/abs/2403.06634https://arxiv.org/abs/2311.17035(I just have these ones off the top of my head because I'm a Nicholas Carlini fan and we interviewed him about these attacks.)reply",
+      "Thanks for these, I'll have a look!reply",
+      "> Do biases go away completely or they just get suppressed down deep in the model's \"mind\"?Bias is a human term, and couching the conversation in that context does nothing to address the issue here, because it gets into the quagmire of social context.Let's say LLM's had taken off 15 years ago at the point system d launched. All the answers given are going to weight toward the old init system simply because there is a lack of information.LLM's are only repeating the data they are given, and it's cheaper to remove the data after the fact than it is to try to scrub it out of the training data.reply",
+      "\"only\" and \"repeating\" aren't accurate here. There's a lot of steps between the pretraining tokens and the LLM. I mean, you can pretty much do whatever you want in the process of making one or running it.For instance you could use pretraining/SFT to steer something away from a document instead of towards it and that wouldn't be \"only repeating\" it. Though I don't know if that's actually possible, and afaik it is true RL reweights existing data instead of learning new things.reply"
+    ],
+    "link": "https://fi-le.net/oss/",
+    "first_paragraph": "19th of September 2025OpenAI recently released their open-weights model. Here we'll discuss how that inevitably leaks some information about their model training stack, and, on the way, show that GPT-5 was trained on phrases from adult websites.What data does OpenAI train their models on? That is a well-protected trade secret of course, one with vested interest for the answer. While GPT-oss's weights are openly available, the sources of training data are not clearly described in the model card. It is stated that the model was trained on a \"text-only dataset with trillions of tokens, with a focus on STEM, coding, and general knowledge\". However, as we will see, the model parameters can tell us more than that.A demonstration to start with: \n                        Let's have OpenAI's GPT-5We use version GPT-5-2025-08-07 for these experiments. Here is a link to the completion.\n                        do the simplest kind of task possible for a language model, repeating a string of Unicode"
+  },
+  {
+    "title": "Generative AI's Energy Needs Are Reshaping Our World (ieee.org)",
+    "points": 19,
+    "submitter": "pseudolus",
+    "submit_time": "2025-10-05T23:00:23 1759705223",
+    "num_comments": 8,
+    "comments_url": "https://news.ycombinator.com/item?id=45486031",
+    "comments": [
+      "If I'm interpreting this right it's estimating that ChatGPT's daily energy usage is enough to charge just 14,000 electric vehicles - and that's to serve in the order of ~100 million daily users.reply",
+      "> We used the figure of 0.34 watt-hours that OpenAI\u2019s Sam Altman stated in a blog post without supporting evidence.what do you think the odds of this being accurate are?zero?reply",
+      "Hard to say. Sam wrote that on June 10th this year: https://blog.samaltman.com/the-gentle-singularityGPT-5 came out on 7th August.Assuming the 0.34 value was accurate in the GPT-4o era, is the number today still in the same ballpark or is it wildly different?reply",
+      "the \"AI\" industry have identified that energy usage is going to be used as a stick to beat them withif I was altman then I'd release a few small numbers to try and get influencers talking about \"how little energy chatgpt uses\"and he can never be accused of lying, as without any methodology as to how it was calculated it's unverifiable and completely meaninglesswin-win!reply",
+      "I was about to post this exact thing, simon.Seems ... low? And it will only get more efficient going forward.I don't get why this is supposed to be a big deal for infrastructure since there's definitely way more than 14,000 EVs out there and we are doing well.reply",
+      "the infrastructure needs to go somewhere. And that somewhere needs to have access to abundant water and electricity. It just so happens those are things humans need too.Before GenAI we were on our way to optimizing this, at least to the level where the general public can turn a blind eye. It was to the point where the companies would brag about how much efficient they are. Now all that progress is gone, and we're accelerating backwards. Maybe that was all a lie too. But then who's to say the current numbers are a lie too to make the pill easier to swallow.reply",
+      "This doesn't include the energy for mining and chip production either. Can you imagine if it did?Then when you take into account the amount of water used to cool the data centers as well as part o extraction and production process? Things get insane then https://www.forbes.com/sites/cindygordon/2024/02/25/ai-is-ac...reply"
+    ],
+    "link": "https://spectrum.ieee.org/ai-energy-use",
+    "first_paragraph": "The October issue of IEEE Spectrum is here!Billions of daily queries are reshaping energy and infrastructureWhat happens when you say \u201cHello\u201d to ChatGPT?Such a simple query might seem trivial, but making it possible across billions of sessions requires immense scale. While OpenAI reveals little information about its operations, we\u2019ve used the scraps we do have to estimate the impact of ChatGPT\u2014and of the generative AI industry in general.This article is part of The Scale Issue.OpenAI\u2019s actions also provide hints. As part of the United States\u2019 Stargate Project, OpenAI will collaborate with other AI titans to build the largest data centers yet. And AI companies expect to need dozens of \u201cStargate-class\u201d data centers to meet user demand.Estimates of ChatGPT\u2019s per-query energy consumption vary wildly. We used the figure of 0.34 watt-hours that OpenAI\u2019s Sam Altman stated in a blog post without supporting evidence. It\u2019s worth noting that some researchers say the smartest models can consume ov"
+  },
+  {
+    "title": "The QNX Operating System (abortretry.fail)",
+    "points": 165,
+    "submitter": "BirAdam",
+    "submit_time": "2025-10-05T14:47:13 1759675633",
+    "num_comments": 43,
+    "comments_url": "https://news.ycombinator.com/item?id=45481892",
+    "comments": [
+      "I had some fun history with this OS.First, we had ICON computers in my elementary school, we'd all try to spin the trackball as quickly as it would go. Not sure if we ever broke one.The second is when I worked at BlackBerry. I was building a feature that allowed you to use your QNX BlackBerry as a Bluetooth HID device. You could connect it to any device and use the trackpad + physical keyboard to remotely control a computer. It was fantastic. You could hook your laptop up to a project and control slides from your BlackBerry.Then some product manager with questionable decision making told me to lock it down so it would only work with Blackberry Playbooks for \"business purposes\", rendering it effectively useless (since Playbooks are all ewaste). I distinctly remember that meeting where Dan Dodge argued that since it's a standard, it should not be locked down.I respect Dan Dodge for that, I don't think I'd work with that PM again.reply",
+      "I really liked the QNX Photon aesthetic, for a long time I maintained an absurdly complex FVWM configuration designed to look like it.This was a screenshot of my Gentoo desktop around 2004!https://lock.cmpxchg8b.com/img/fvwm_desktop.jpgreply",
+      "That looks great even now! Do you still have your dotfiles somewhere?reply",
+      "I loved the idea of QNX. Got way excited about it. We were moving our optical food processor from dedicated DSPs to general purpose hardware, using 1394 (FireWire). The process isolation was awesome. The overhead of moving data through messages, not so much. In the end, we paid someone $2K to contribute isochronous mode/dma to the Linux 1394 driver and went our way with RT extensions.It was a powerful lesson (amongst others) in what I came to call \u201cthe Law of Conservation of Ugly\u201d. In many software problems, there\u2019s a part that just is never going to feel elegant. You can make one part of the system elegant, which often causes the inelegance surface elsewhere in the system.reply",
+      "> what I came to call \u201cthe Law of Conservation of Ugly\u201d. In many software problems, there\u2019s a part that just is never going to feel elegantThis may be an instance of the Waterbed Principle: in any sufficiently-complex system, suppressing or refactoring some undesirable characteristic in one area inevitably causes an undesirability to pop up somewhere else. Like there is some minimum amount of complexity/ugliness/etc that it is possible for the entire system to contain while still carrying out its essential functions, and it must leak out somewhere.https://en.wikipedia.org/wiki/Waterbed_theoryreply",
+      "I have a really neat idea to improve the message passing speed in QNX: you simply use the paging mechanism to send the message. That means there is no copying of the data at all, just a couple of page table updates. You still have the double TSS load overhead (vs 1 TSS load in a macro kernel), but that is pretty quick.But you are right that there is a price for elegance. It becomes an easier choice to make when you factor in things like latency and long term reliability / stability / correctness. Those can weigh much heavier than mere throughput.reply",
+      "> Don't misunderstand us.  We at Quantum have a great deal of respect for Unix.  It was a major force in moving operating systems out of the 60's and into the 70's.  QNX however, was designed in the 80's and will be a driving force of the 90's.  Over 20,000 systems have been sold since 1982.Things they weren't anticipating included GNU, the internet, Microsoft Windows, third-party development, the Windows applications barrier to entry, the World-Wide Web, shareware, BBSes, VARs, and the free-software movement.  But it was 01986, so who could blame them?  Their 01987 ad does try to reach out to VARs.Still, they were certainly aware of Unix, and you'd think that would mean they were aware of uucp.  They just didn't anticipate its significance.They also don't seem to have appreciated the importance of GUIs until version 2.0 in 01987, despite the popularity of the Macintosh, the \"Jackintosh\" Atari ST, and GEOS on the C64.  The article says that the \"Photon\" GUI everyone remembers wasn't until QNX 4.1 in 01994.reply",
+      "Probably about 1996(?) remember getting this on a floppy disk, full RTOS GUI with a networking stack, wondering how they could do that with such a small footprint. For reference I recall having to write stacks of disk set floppies for Slackware basic install, let alone Windows 95 :)reply",
+      "I remember that. It even included a web browser. There's a copy here:https://winworldpc.com/product/qnx/144mb-demoreply",
+      "That was for show purposes. It was certainly intended to display OS capabilities while impressing people at the same time. Linux eventually came to dominate the live-cd scene in the early 2000's but, to this day, people still cute this demo as specially incredible. Actually, there was Linux with X11 and a functional browser that run from a floppy. And that is something that is really impressive: https://news.ycombinator.com/item?id=28515025reply"
+    ],
+    "link": "https://www.abortretry.fail/p/the-qnx-operating-system",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Toybox: All-in-one Linux command line (github.com/landley)",
+    "points": 46,
+    "submitter": "welovebunnies",
+    "submit_time": "2025-10-05T19:09:35 1759691375",
+    "num_comments": 15,
+    "comments_url": "https://news.ycombinator.com/item?id=45484284",
+    "comments": [
+      "IIRC this was made to solve a licensing issue with busybox (toybox being more permissive) and be included with Android. As a fan of copyleft, initially the idea annoyed me, but I eventually came to the conclusion that if it was the only way to include better tools in a particular OS out of the box, it was probably fine.I recall busybox being often used for gpl enforcement, so I wonder now how widespread toybox is by various companies hoping to avoid that. Do modern Smart TVs and such use it?reply",
+      "The license page and linked blog posts mentions this: https://landley.net/toybox/license.htmlI like the 0BSD license (see my https://xn--gba.st), AWS also uses the semantically equivalent MIT-0 license for code samples, etc.reply",
+      "I believe most smart TVs use Android as the base, so I would think yes.reply",
+      "I think Samsung still use Tizen (still Linux, seems to use Toybox) and LG uses WebOS (Linux again, not sure if it uses Toybox).reply",
+      "Just looked through my TV, webOS uses Busybox.reply",
+      "BusyBox got its name from a collection of toys in one assembly/container:https://www.google.com/search?udm=2&q=fisher+price+busy+boxreply",
+      "I wonder if Toybox got its name from the Soundgarden song of the same name or if it was chosen due to the similarity of Busybox's collection of toys.reply",
+      "I really appreciate Toybox for its clean codebase and permissive license, hopefully it reaches feature parity with Busybox in the future. Version 0.8.13 is long overdue.reply",
+      "But what IS it?reply",
+      "Toybox is a clone of Busybox with a less restrictive license.Toybox is used on Android to implement a number of POSIX.2 utilities.https://en.wikipedia.org/wiki/BusyBox#Controversy_over_Toybo...reply"
+    ],
+    "link": "https://github.com/landley/toybox",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        toybox\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.\n        toybox\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page. There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page."
+  },
+  {
+    "title": "NFS at 40 \u2013 Remembering the Sun Microsystems Network File System (nfs40.online)",
+    "points": 77,
+    "submitter": "signa11",
+    "submit_time": "2025-10-05T15:49:58 1759679398",
+    "num_comments": 63,
+    "comments_url": "https://news.ycombinator.com/item?id=45482467",
+    "comments": [
+      "My NFS story:  In my first job, we used NFS to maintain the developer desktops.  They were all FreeBSD and remote mounted /usr/local.  This worked great!  Everyone worked in the office with fast local internet, and it made it easy for us to add or update apps and have everyone magically get it.  And when the NFS server had a glitch, our devs could usually just reboot and fix it, or wait a bit.  Since they were all systems developers they all understood the problems with NFS and the workarounds.What I learned though was that NFS was great until it wasn't.  If the server hung, all work stopped.When I got to reddit, solving code distribution was one of the first tasks I had to take care of.  Steve wanted to use NFS to distribute the app code.    He wanted to have all the app servers mount an NFS mount, and then just update the code there and have them all automatically pick up the changes.This sounded great in theory, but I told him about all the gotchas.  He didn't believe me, so I pulled up a bunch of papers and blog posts, and actually set up a small cluster to show him what happens when the server goes offline, and how none of the app servers could keep running as soon as they had to get anything off disk.To his great credit, he trusted me after that when I said something was a bad idea based on my experience.  It was an important lesson for me that even with experience, trust must be earned when you work with a new team.I set up a system where app servers would pull fresh code on boot and we could also remotely trigger a pull or just push to them, and that system was reddit's deployment tool for about a decade (and it was written in Perl!)reply",
+      "I was at Apple around 15 years ago working as a sysadmin in their hardware engineering org, and everything - and I mean everything - was stored on NFS. We ran a ton of hardware simulation, all the tools and code were on NFS as well as the actual designs and results.At some point a new system came around that was able to make really good use of the hardware we had, and it didn\u2019t use NFS at all. It was more \u201cdocker\u201d like, where jobs ran in containers and had to pre-download all the tools they needed before running. It was surprisingly robust, and worked really well.The designers wanted to support all of our use cases in the new system, and came to us about how to mount our NFS clusters within their containers. My answer was basically: let\u2019s not. Our way was the old way, and their way was the new way, and we shouldn\u2019t \u201cinfect\u201d their system with our legacy NFS baggage. If engineers wanted to use their system they should reformulate their jobs to declare their dependencies up front and use a local cache, and all the other reasonable constraints their system had. They were surprised by my answer but I think it worked out in the end: it was the impetus for things to finally move off the legacy infrastructure, and it worked out well in the end.reply",
+      "I remember that era of NFS.NFS volumes (for home dirs, SCM repos, tools, and data) were a godsend for workstations with not enough disk, and when not everyone had a dedicated workstation (e.g., university), and for diskless workstations (which we used to call something rude, and now call \"thin clients\"), and for (an ISV) facilitating work on porting systems.But even when when you needed a volume only very infrequently, if there was a server or network problem, then even doing an `ls -l` in the directory where the volume's mount point was would hang the kernel.Now that we often have 1TB+ of storage locally on a laptop workstation (compare to the 100MB default of an early SPARCstation), I don't currently need NFS for anything.  But NFS is still a nice tool to have in your toolbox, for some surprise use case.> To his great credit, he trusted me after that when I said something was a bad idea based on my experience. It was an important lesson for me that even with experience, trust must be earned when you work with a new team.True, though, on a risky moving-fast architectural decision, even with two very experienced people, it might be reasonable to get a bit more evidence.And in that particular case, it might be that one or both of you were fairly early in your career, and couldn't just tell that they could bet on the other person's assessment.Though there are limits to needing to re-earn trust from scratch with a new team.  For example, the standard FAANG-bro interview of everyone having to start from scratch for credibility, like they are fresh out of school with zero track record, and zero better ways to assess, is ridiculous.  The only thing more ridiculous is when companies that pay vastly less try to mimic that interview style.  Every time I see that, I think that this company apparently doesn't have experienced engineers on staff who can get a better idea just by talking with someone, rather than fratbro hazing ritual.reply",
+      "Don't know about FreeBSD but hard hanging on a mounted filesystem is configurable (if it's essential configure it that way, otherwise don't). To this day I see plenty of code written that hangs forever if a remote resource is unavailable.reply",
+      "Hi, could you give some pointers about this? Thanks!reply",
+      "It's down to the mount options, use 'soft' and the program trying to access the (inaccessible) server gets an error return after a while, or 'intr' if you want to be able to kill the hung process.The caveat is a lot of software is written to assume things like fread(), fopen() etc will either quickly fail or work. However, if the file is over a network obviously things can go wrong  so the common default behaviour is to wait for the server to come back online. Same issue applies to any other network filesystem, different OS's (and even the same OS with different configs) handle the situation differently.reply",
+      "> What I learned though was that NFS was great until it wasn't. If the server hung, all work stopped.Sheds a tear for AFS (Andrew File System).We had a nice, distributed file system that even had solid security and didn't fail in these silly ways--everybody ignored it.reply",
+      "AFS implements weak consistency, which may be a bit surprising. It also seems to share objects, not block devices. Judging by its features, it seems to make most sense when there is a cluster of servers. It looks cool though, a bit more like S3 than like NFS.reply",
+      "Looks like these guys are still truckin' along?https://www.openafs.org/reply",
+      "I find it fascinating that the fact that NFS mounts hang the process when they don't work is due to the broken I/O model Unix historically employed.See, unlike some other more advanced, contemporary operating systems like VMS, Unix (and early versions of POSIX) did not support async I/O; only nonblocking I/O. Furthermore, it assumed that disk-based I/O was \"fast\" (I/O operations could always be completed, or fail, in a reasonably brief period of time, because if the disks weren't connected and working you had much bigger problems than the failure of one process) and network-based or piped I/O was \"slow\" (operations could take arbitrarily long or even fail completely altogether after a long wait); so nonblocking I/O was not supported for file system access in the general case. Well, when you mount your file system over a network, you get the characteristics of \"slow\" I/O with the lack of nonblocking support of \"fast\" I/O.A sibling comment mentions that FreeBSD has some clever workarounds for this. And of course it's largely not a concern for modern software because Linux has io_uring and even the POSIX standard library has async I/O primitives (which few seem to use) these days.And this is one of those things that VMS (and Windows NT) got right, right from the jump, with I/O completion ports,But issues like this, and the unfortunate proliferation of the C programming language, underscore the price we've paid as a result of the Unix developers' decision to build an OS that was easy and fun to hack, rather than one that encouraged correctness of the solutions built on top of it.reply"
+    ],
+    "link": "https://nfs40.online/",
+    "first_paragraph": "This website gathers material related to the Sun Microsystems Network File System, a project that began in 1983 and remains a fundamental technology for today\u2019s distributed computer systems.The occasion which prompted this project was the ~40th anniversary of NFS, celebrated in September 2025 at the MSST Conference in Santa Clara, CA. The core of the collection is design documents, white papers, engineering specifications, conference and journal papers, and standards material. However it also covers marketing materials, trade press, advertising, books, \u201cswag\u201d, and personal ephemera. We\u2019re always looking for new contributions.We\u2019ve organized the material in four sections:Unless otherwise noted, everything is downloadable from this site. A full list of the Internet RFCs related to NFS can be found here.There is also a site, nfsv4bat.org, which seems to include a variety of materials related to NFS after 1995, especially Connectathons. However, be careful: the site is insecure, load times"
+  },
+  {
+    "title": "Explainer: Inodes and Inode Numbers (eclecticlight.co)",
+    "points": 14,
+    "submitter": "ingve",
+    "submit_time": "2025-10-04T14:22:04 1759587724",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://eclecticlight.co/2025/10/04/explainer-inodes-and-inode-numbers/",
+    "first_paragraph": "Every self-respecting file system identifies files and directories using numbered data structures. In most modern file systems, those data structures are known as inodes, and their numbers are inode numbers, sometimes shortened to inodes. The term is thought to be a contraction of index node, which certainly makes sense, but is lost in the mists of time.In any file system, for example an individual APFS volume, the inode numbers uniquely identify each inode, and each object within that file system has its own inode. Whatever else the file system might do, the inode number identifies one and only one object within it. Thus one invariant way of identifying any file is by referencing the file system containing it, and its inode number.The Mac\u2019s original native file systems, ending most recently in Mac OS Extended File System, or HFS+ from its origins in the Hierarchical File System, don\u2019t use inodes as such, and don\u2019t strictly speaking have inode numbers. Instead, the data structures for "
+  },
+  {
+    "title": "The death of industrial design and the era of dull electronics (hackaday.com)",
+    "points": 80,
+    "submitter": "CharlesW",
+    "submit_time": "2025-10-05T20:55:26 1759697726",
+    "num_comments": 31,
+    "comments_url": "https://news.ycombinator.com/item?id=45485175",
+    "comments": [
+      "I think this article really misses the root cause. Take cellphones, for example. In the early 2000s there was a \"Cambrian explosion\" of cellphone designs as makers tried to figure out what would work best. It's easy to wax nostalgic for all the various flip phones/slide-out phones/\"twist\" phones, etc., but the fact is the \"glass slab\" really ended up working best - it has a lot fewer components to wear, and the lack of physical controls means that apps have lots of freedom to make full use of the screen. The glass slab design won out over all the others.If anything, so much design (and not just industrial) seems boring today because everything seems to converge to the \"optimal\" design much faster. Cars had all these wacky designs in the 50s and 60s because we hadn't yet optimized for things like aerodynamics. When I first saw the \"modern farmhouse\" housing design in my city, I thought \"that looks nice\" - now it makes me gag because I see them everywhere, with insane prices to boot.The Internet has caused, in many ways, a reduction of individual markets and \"winner take all\" economics, and that includes design. Much has already been written about how many logos all look the same now, e.g. https://www.sublimio.com/why-are-all-fashion-logos-becoming-...reply",
+      "With cell phones it is also about moving the physical device out of your consciousness so you can better utilize the actual application. And because each app does a different and unknown thing, you can\u2019t design your hardware around your software.However, with cars I think that doesn\u2019t hold. Cars don't need to disappears into the background. Yet every car is converging on an unholy child of a minivan and a small crossover SUV. They are all the same and they are all equally ugly. Sacrificing a bit of aerodynamics for any level of personality would be a welcome shakeup.reply",
+      "So Cybertruck.reply",
+      "The general term for what you're describing here is a Dominant Design, and it has a lot of the characteristics of what you intuited.\nhttps://en.wikipedia.org/wiki/Dominant_designreply",
+      "It's easy to romanticize a past where electronics were designed to be statements in your home or office, but I think that the reduction of glamour is more so a dialogue on the utility of these devices in a modern world.Previously, personal computers in the home were something of a novelty that didn't necessarily have a ton of value or that value was still being discovered. And now we see that the content that is displayed on the digital screen is most of the value, and so akin to many Hollywood sci-fi takes, where the screen becomes just a piece of glass, modern technology is moving in that direction.The device itself is not the point, but the content that the device enables access to is.reply",
+      "Part of me agrees with the design takeaways here, and part of me admittedly prefers when my devices are as slim and unobtrusive as possible (no amount of lost desk space is worth the aesthetics of a zany computer monitor for me), but either way I'm always a little wary of these \"remember the good old days of tech?\" comparisons. Sometimes it feels like they're creating a false dichotomy where yesterday's devices were more pleasant to look at because they weren't tainted by corporate greed, and that today's devices are somehow uglier because all companies care about now is profit.But these have always been mass-produced consumer devices. Even if you prefer the aesthetics of the original iMac to today's iMac, and even to the extent that corporate greed has arguably gotten worse, your relationship to Apple is the same either way--when you buy their products, you make them a lot of money.reply",
+      "> your relationship to Apple is the same either way--when you buy their products, you make them a lot of money.I don\u2019t object to making companies a lot of money, so long as what I get is worthwhile.reply",
+      "I'm really torn by this.As a hardware founder, who takes great pride in our industrial design and how we've made the thinnest, and most sleek EEG ever, we wanted the device to basically disappear. Nobody wants to wear an EEG headband, it isn't what they are buying. They are buying the neurostimulation that provides better sleep.On the other hand, our industrial engineer wanted our headband to look just like a headband. It would be completely enclosed in fabric.I wanted it to be appealing visually, not look \"weird\" but also, remind the user that there was magic inside. This is one of the reasons we left a bit of the electronics poking out the back and that element has a bit of ornamentation to it. (https://affectablesleep.com).I have a folding phone. It isn't devoid of design. The design makes it function.I think the article is confusing ornamentation with industrial design.My laptop (Asus something) has a ceramic something finish with some etching on it. That's ornamentation. It's feel. Same with the speaker grill holes, they have some design to them.Is it dull? It certainly isn't ground breaking. But it's pleasing, and it gets out of the way. But how much ornamentation do I want?Most people just want the apple logo to show status. I want the non-Apple logo.The TV example in the post doesn't really explain that we needed to have these plastic gray cases for TVs with speakers and buttons. But why was that a better look than just a screen?To my eyes, those old TVs are ugly. But I remember when Sony brought out an interface where the channel showed up on the screen and had faded away after displaying the number, and I was blown away at how beautiful the interface was.Additionally, my Kindle Scribe is a pretty boring slab, but I've tried buying nice pens to go with it. I don't think the Lamy (which I currently have) is a beautiful design, but it is better than the pen that comes with the device, which is devoid of any emotion.As we move to glasses interfaces, I think we'll see a new heyday of electronics design.reply",
+      "> Most people just want the apple logo to show status. I want the non-Apple logo.Everyone up and down the socioeconomic ladder in the US uses Apple devices, and you can buy them at Walmart and Costco for less than $1,000.  If someone is assuming \u201cstatus\u201d from seeing an Apple product, that seems to be a mistake by the observer.reply",
+      "I think you're making the assumption that socio-economic status is the only variable.There is also the \"I have Apple, I'm creative\". \"I have Apple, I'm cooler than Android\".I don't know if the blue/green bubble thing is about socioeconomic differences, or if it's just about \"you're not as good as I am\".If you're so sure Apple doesn't have a status feature, then what's the whole green/blue bubble about?reply"
+    ],
+    "link": "https://hackaday.com/2025/07/23/the-death-of-industrial-design-and-the-era-of-dull-electronics/",
+    "first_paragraph": "It\u2019s often said that what\u2019s inside matters more than one\u2019s looks, but it\u2019s hard to argue that a product\u2019s looks and its physical user experience are what makes it instantly recognizable. When you think of something like a Walkman, an iPod music player, a desktop computer, a car or a TV, the first thing that comes to mind is the way\u00a0 that it looks along with its user interface. This is the domain of industrial design, where circuit boards, mechanisms, displays and buttons are put into a shell that ultimately defines what users see and experience.Thus industrial design is perhaps the most important aspect of product development as far as the user is concerned, right along with the feature list. It\u2019s also no secret that marketing departments love to lean into the styling and ergonomics of a product. In light of this it is very disconcerting that the past years industrial design for consumer electronics in particular seems to have wilted and is now practically on the verge of death.Devices"
+  },
+  {
+    "title": "Social Cooling (2017) (socialcooling.com)",
+    "points": 375,
+    "submitter": "laurex",
+    "submit_time": "2025-10-05T06:01:24 1759644084",
+    "num_comments": 193,
+    "comments_url": "https://news.ycombinator.com/item?id=45479165",
+    "comments": [
+      "This site makes the wrong conclusion.People game their social scores by being provocative edgelords. There\u2019s almost no incentive on social media to conform. And every incentive to stand out.Just look around at our political situation, you see far less conformity, and extremes in political expression. We even elected President Edgelord.reply",
+      "Most people don't want to get harassed and attacked at the level Trump gets so there are strong incentives to not do what he did. Saying there are no reasons not to do it is just ignorant, most people prefer peace and quiet over drama.reply",
+      "Joining the crowd to express approval for extremism (or equally extreme disapproval) has a much lower bar than making the \"top-level\" statements you refer to, though. Inflammatory content is constantly rewarded with a firehose of such \"engagement\", and it's coming from the vast populace that's supposedly averse to drama.reply",
+      "Suppose there is an arsonist setting fire to random houses. They come by and throw a Molotov cocktail through your window.We then observe that you immediately drop everything to deal with the fire. Should the conclusion be that you love arson and enjoy spending time on it? More importantly, do we like a system where the arsonist is rewarded for getting you to spend time on something?reply",
+      "Are you making an analogy of having a moral obligation to engage in a flame war online?reply",
+      "Suppose this is inherent in human nature:https://xkcd.com/386/Now decide if you would like something that works differently than Facebook to replace it.reply",
+      "> People game their social scores by being provocative edgelords.Sure, some people are shooting that moon, but that's a tiny fraction of the rest\u2014let alone the lurkers\u2014who are keen on maintaining employment and wedding invitations.reply",
+      "This page dates from 2017. See also earlier submissions:https://news.ycombinator.com/item?id=24627363 (2692 upvotes, 1099 comments)https://news.ycombinator.com/item?id=14585882 (389 upvotes, 190 comments)reply",
+      "Thanks! Macroexpanded:Like Oil Leads to Global Warming, Data Leads to Social Cooling - https://news.ycombinator.com/item?id=38482582 - Dec 2023 (15 comments)The reputation economy is turning us into conformists (2017) [video] - https://news.ycombinator.com/item?id=28744471 - Oct 2021 (204 comments)What Is Social Cooling? - https://news.ycombinator.com/item?id=25746131 - Jan 2021 (246 comments)Social Cooling (2017) - https://news.ycombinator.com/item?id=24627363 - Sept 2020 (1058 comments)Social Cooling \u2013 How big data is increasing pressure to conform - https://news.ycombinator.com/item?id=14585882 - June 2017 (185 comments)reply",
+      "This was an interesting time. In some ways I felt like the internet was even more bifurcated then than now, between US political parties. This is when primitive chatbots, before GPT LLMs, could have mostly only been used by large nation states. This is when concerns about significant numbers of bot accounts on reddit became plausible. It felt like a time when the internet was being manipulated in a more subtle way than it is now.reply"
+    ],
+    "link": "https://www.socialcooling.com/",
+    "first_paragraph": "This is how it works:There are stars behind the cloud:Databrokers compare your data to the data of people they know more about. By comparing the patterns they try to guess the likelihood of thousands of details that you may never have disclosed. These are actual examples:(And that these algorithms are often biased, and built on bad data.)This has good and bad sides.Have you ever hesitated to click\u00a0on a link because you thought your visit might be logged, and it could look bad?More and more people feel this pressure, and they are starting to apply self-censorship.\n\t\t\t\t\t\tSourceWhen doctors in New York were given scores this had unexpected results.\n\n\t\t\t\t\t\t\tDoctors that tried to help advanced cancer patients had a higher mortality rate, which translated into a lower score.Doctors that didn't try to help were rewarded with high scores, even though their patients died prematurely.Rating systems can create unwanted incentives, and increase pressure to conform to a bureaucratic average.SourceD"
+  },
+  {
+    "title": "Intro to BirdNET-Pi: Eavesdropping on my feathered friends (hannahilea.com)",
+    "points": 65,
+    "submitter": "zdw",
+    "submit_time": "2025-10-02T14:49:12 1759416552",
+    "num_comments": 13,
+    "comments_url": "https://news.ycombinator.com/item?id=45450392",
+    "comments": [
+      "I have a UniFi doorbell that I chose because it's self hosted and the video stays in my home. It also easily lets you get an RTSP stream of the camera feed.Earlier this spring we put a bird feeder outside the front door and it dawned on me I could be piping the doorbell cam into BirdNET to classify the bird calls. With an RTSP stream there's no need to mount a microphone anywhere, that comes for free from the doorbell.My wife is the bird person in the house more so than I am, but it was still really fun to set up and watch the identifications come across.reply",
+      "RTSP listening instructions for anyone curious:https://github.com/mcguirepr89/BirdNET-Pi/wiki/Using-an-inte...I need to try this with my Reolinkreply",
+      "There\u2019s also BirdNET-Go https://github.com/tphakala/birdnet-goIt\u2019s under active development and uses the same data models.reply",
+      "This post references Logan Williams\u2019 BirdNET experiments, he did a really fantastic talk on that project at WHY2025 (the Dutch hacker camp) recently: https://media.ccc.de/v/why2025-240-is-ai-for-the-birds-the-b...reply",
+      "Thanks for sharing, thoroughly enjoyed it!reply",
+      "Long time BirdNET fan, but I used the Merlin app for the first time yesterday and found it much more useful [0] It\u2019ll display multiple bird species at the same time, and highlight which song belongs to which species in real-time. Recommend giving it a shot if you haven\u2019t![0] https://merlin.allaboutbirds.org/reply",
+      "Just to clarify - the article describes BirdNET-Pi, not the mobile app Birdnet. In the mobile app we have to record and manually select a fragment to analyze, here it's a continuous monitoring where detections are visible in real time and can be replayed.reply",
+      "OP explains all that admirably in the section entitled: \"Terminology: BirdNET vs BirdNET-Pi\"I use both.  I have a BNPi at home in our summerhouse with a mic on the outside.  We live next to a park and the bird song can be deafening in summer!I have the Birdnet app on my mobile and its ideal when out walking to do a quick survey or identify a song I don't recognise.Whilst I'm commenting here, I'll drop a shout out for the \"Flora Incognita\" app for plant identification.reply",
+      "This is so cool. I'm using BirdNET on Android for a long time and that is awesome, but running continuous monitoring on a Pi is really interesting. I saw there was also a Home Assistant integration for it.reply",
+      "yes! Home Assistant integration with BirdNET will take the audio streams from your cameras; no immediate need for the BirdNET-Pi.  Since cameras are often outside, there is better chance to capture some interesting bird audio.reply"
+    ],
+    "link": "https://hannahilea.com/blog/birdnet-intro/",
+    "first_paragraph": "\n        It\u2019s autumn here in the greater Boston area, and my bird neighbors have finally calmed down from all their summer yelling. Yours too? Sounds like the perfect time for any good birb creeper citizen scientist to set up a\n        spy ring for snooping on birbs passive acoustic monitoring station!\n      \n        It is easier than ever to become the bird voyeur you were born to be, thanks to the BirdNET model trained and released by the\n        Cornell Lab of Ornithology and the\n        BirdNET-Pi application built on top of it by an open-source community. I\u2019ve set up several of these now, for both myself and my\n        parents; our BirdNET-Pi\u2019s have been both an ongoing source of joy and a connection point with folks around us.\n      For example, here\u2019s what I measured on May 6, from the microphone just outside my window in a semi-urban neighborhood:\n        We can see that the House Sparrows (Passer domesticus) chorp from dawn to dusk, 5am-6pm; that a Blue Jay (Cyanocitta cristat"
+  },
+  {
+    "title": "Show HN: ASCII Drawing Board (delopsu.com)",
+    "points": 66,
+    "submitter": "delopsu",
+    "submit_time": "2025-10-05T15:36:21 1759678581",
+    "num_comments": 32,
+    "comments_url": "https://news.ycombinator.com/item?id=45482333",
+    "comments": [
+      "Really fun. Perfect HN post.reply",
+      "Thank you!reply",
+      "It appears a little buggy handling fixed width improperly, noticeably when using a mouse to write out a word, with uneven drawing, the fixed width spacing does not consistently properly match the cursor movement for some lines.reply",
+      "Could you please share the brush that you used?Some characters squize/expand line because of the font. E.g. emojis.Thank you giving it a try and for the feedback!reply",
+      "Nice one, thanks for sharing! Love these simple tools that LLMs can help us ship them in no time.reply",
+      "Yes, exactly! There might so many unexplored and/or abandoned ideas.Thank you for checking it out!reply",
+      "It's always nice to see new tools editing ASCII; especially when working with markdown documentation.For those who like those types of tools, but for diagrams, there's asciiflow.com.Good job!reply",
+      "Yes! Thank you for sharing it.And it feels like ASCII art is going through a renaissance. Maybe I'm biased and watched it a lot recently.Let me also share a few cool ASCII tools I came across while working on this one:- animation studio: https://ascii-motion.app/- image to ASCII converter: https://www.tooooools.app/effects/asciireply",
+      "It could work on mobile if you work a little bit on it. Right now touch is dragging the screenreply",
+      "Oh, yes, forgot about it. On tablet it could be pretty convenient to use, if it works. Thank you!reply"
+    ],
+    "link": "https://www.delopsu.com/draw.html",
+    "first_paragraph": "\n        Use the List of Unicode characters as a source of characters for your brush \u2726 \u25d2 \u259c \u2588\u2593\u2592\u2591 Unfortunately not all of them will work due to font limitations.\n      delopsu, 2025 \u2022 I would appreciate any feedback: @delopsu_com"
+  },
+  {
+    "title": "Show HN: ut \u2013 Rust based CLI utilities for devs and IT (github.com/ksdme)",
+    "points": 106,
+    "submitter": "ksdme9",
+    "submit_time": "2025-10-05T17:36:20 1759685780",
+    "num_comments": 30,
+    "comments_url": "https://news.ycombinator.com/item?id=45483531",
+    "comments": [
+      "Slightly odd suggestion: package it up as both a Python and an NPM module - both just thin wrappers around the combined binary - and then people within those ecosystems will be able to run:  uvx ut md5 ...\n\nOr:  npx ut md5 ...\n\nTo execute it without having to figure out cargo or how to add a Rust binary to their path.I've seen a few tools do things like this recently, it's a pretty interesting pattern. I believe there's tooling in the Python/Rust world that makes compiling the different binary wheels relatively easy using GitHub Actions.reply",
+      "If you know you will use it often, uv has `uv tool install ...`.  So, after the first `uv tool install ut` you can just run `ut md5 ...` or whatever.  Don't need to keep using uvx.uv also has a couple commands I throw in a systemd unit[1] to keep these tools updated:  uv self update\n  uv tool upgrade --all\n\n1: https://github.com/level12/coppy/blob/main/systemd/mise-uv-u...reply",
+      "Interesting perspective. I mean the issue exists with any ecosystem. See nix who has to wrap down to the lib level everything under the sun to make their package system usable for all kinds of use cases. But they need to do this because of the deterministic nature of the system. Brew on the other hand discouraged packaging tools that are available from other package managers. Don\u2019t know if this is still the case. I feel a bit uncertain about this. It would mean that a tool should not only strive to be included in all major repositories of Linux distributions along with winget, brew and Mac ports etc (which is a tough ask). Now they should also publish to npm, pypy, ruby gems etc as well? I feel something is taking a wrong turn here.reply",
+      "cargo-dist will get you the npm one for free. They've got pypi support planned as well but don't have it yet, though they can also generate standard curl | sh installers and all too.reply",
+      "This looks cool, thanks!reply",
+      "Very neat.Although philosophically I prefer the unix approach of \"do one thing and do it well\", I really admire this tool. I think it might be the fact that the one thing this does well is curating a set of functions for a particular profile of developer. My story is someone doing web focused full stack development?It might be worth doing a survey of your users to see what they use ut for and what areas you should focus on next.reply",
+      "I think for packaging it's okay to \"have\" lots of things that individually \"do\" one thing.The important part is that the user controls the entry points. It's more Unixy to allow someone to decode audio from one pipe to another than to only allow them to play a file to a speaker.Consider that Debian \"does\" lots of things because it has a kernel, hardware abstractions, a userland, a package manager, and often a GUI and web browser. But it also \"does\" none of those because it's just a convenient and useful wrapper to publish all the other tools, which you can still call upon individuallyreply",
+      "I can understand why people would find `ut` convenient. That said, I would caution against trying to include too much functionality. What is too much? I don't have a clear idea on this yet.But I would probably argue that including HTTP functionality is going too far. Why? Because there are already amazing tools dedicated to this already. On the client side, see `xh` [1]. On the server side, see `miniserve` [2]. Both have approximately 7K stars on GitHub.It seems wiser to let specialized projects focus on a particular functional area; this is better for users and less work for maintainers.[1]: https://github.com/ducaale/xh[2]: https://github.com/svenstaro/miniservereply",
+      "Would be cool if this also had a `retry` sub-command, for running any commands with an exponential backoff retry logic. Similar to these Rust tools:https://github.com/demoray/retry-clihttps://github.com/rye/ebreply",
+      "On what basis are new features included?Has the creator thought about the definition of \"done\"? Will it grow indefinitely like a katamari ball?[1]: https://en.wikipedia.org/wiki/Katamarireply"
+    ],
+    "link": "https://github.com/ksdme/ut",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A Rust based utilty toolbox for developers. Inspired from https://it-tools.tech\n There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.A fast, lightweight CLI utility toolkit for developers and IT professionals. ut provides a comprehensive set of commonly-used tools in a single binary, eliminating the need to install and remember multiple utilities or search for random websites to perform simple tasks.Run ut --help to see all available tools, or ut <TOOL> --help for specific tool documentation.Encode and decode data using Base64 encoding.URL encode and decode text.Generate cryptographic hash digests using various algorithms.Generate UUIDs in various versions.Generate cryptographically secure random tokens.Generate lorem ipsum placeholder text.Generate random numbers with"
+  },
+  {
+    "title": "Callbacks in C++ using template functors (1994) (tutok.sk)",
+    "points": 39,
+    "submitter": "zengid",
+    "submit_time": "2025-10-05T17:50:17 1759686617",
+    "num_comments": 28,
+    "comments_url": "https://news.ycombinator.com/item?id=45483651",
+    "comments": [
+      "Red flags for me when I see nonstandard functors in a c++ codebase (esp if the \"glue\" is in a setup function independent of the objects):(i) Have they thought about the relative lifetimes of the sender and receiver?(ii) Is the callback a \"critical section\" where certain side-effects have undefined behavior?(iii) Does the functors store debugging info that .natvis can use?(iv) Is it reeeeeeeally that bad to just implement an interface?reply",
+      "> Red flags for me when I see nonstandard functors in a c++ codebaseEven if it's 1994???reply",
+      "Yes in 1994 I had these exact judgements, at age 11 :Preply",
+      "Can you elaborate on your third point?  What would a class need to do to affect debugging info?Regarding your fourth point, sometimes an architecture can be vastly simplified if the source of information can abstracted away.  For example, invoking a callback from a TCP client, batch replay service, unit test, etc.  Sometimes object oriented design gets in the way.To your first point, I think RAII and architecture primarily address this.  I'm not sure that I see callback implementation driving this.  Although I have seen cancellable callbacks, allowing the receiver to safely cancel a callback when it goes away.reply",
+      ">> Can you elaborate on your third point? What would a class need to do to affect debugging info?Common implementations are a function pointer + void* pair, which in most debuggers just show you two opaque addresses. Better to include a info block -- at least in debug builds -- with polymorphic type pointers that can actually deduce the type and show you all the fields of the receiver.>> sometimes an architecture can be vastly simplified if the source of information can abstracted away.\"sometimes\" is doing a lot of heavy lifting here. That's my whole point -- more often than not I see some type of homespun functor used in cases that are _not_ simplified, but actually complicated by the unnecessary \"plumbing.\">> RAII and architecture primarily address thisIf the receiver uses RAII to clean up the callback, then you've reintroduced the \"type-intrusiveness\" that functors are meant to avoid...?reply",
+      "> most debuggers just show you two opaque addressesThis has not been my experience.  But I haven't needed to deal with RTTI disabled.By RAII, I mean using destructors to unregister a callback.  This covers 99.9% of use cases.  Generally callback registration is not where you really want type erasure anyways.reply",
+      ">> By RAII, I mean using destructors to unregister a callback._Whose_ destructor, if not the receiving-type? Is there a third \"binding\" object, because then you have three potentially-unrelated lifetimes.>>  Generally callback registration is not where you really want type erasure anyways.I'm responding to the article: \"Some mechanisms for doing callbacks require a modification to, or derivation of, the caller or callee types. The fact that an object is connected to another object in a particular application often has nothing to do with its type. As we'll see below, mechanisms that are type intrusive can reduce the flexibility and increase the complexity of application code. \"reply",
+      "> Whose_ destructor, if not the receiving-typeThe receiving type should control the lifetime of any callbacks to itself that it gives away.  The destructor is the best place to ensure this gets properly cleaned up.Like anything, custom\ncallbacks can be used well or misused.  Design is a matter of expertise and taste bordering on an art form.  Connecting framework implementation and business logic can be done cleanly or clumsily.  I am skeptical of an argument that callbacks have a code smell prima facie.reply",
+      "I don't disagree, but the article does. RH describes an architecture where setup functions create callbacks, independent of the receiving type. If I were to steelman him, it would be something like this: \"in a pedantic MVC system, model objects don't depend on view objects by design, and therefore should not be aware that their methods are used as 'click callbacks'\"reply",
+      "Related. Others?Callbacks in C++ using template functors (1994) - https://news.ycombinator.com/item?id=18650902 - Dec 2018 (50 comments)Callbacks in C++ using template functors \u2013 Rich Hickey (1994) - https://news.ycombinator.com/item?id=12401400 - Aug 2016 (1 comment)Callbacks in C++ using template functors (1994) - https://news.ycombinator.com/item?id=10410864 - Oct 2015 (2 comments)reply"
+    ],
+    "link": "http://www.tutok.sk/fastgl/callback.html",
+    "first_paragraph": "Copyright 1994 Rich HickeyINTRODUCTIONOne of the many promises of Object-Oriented programming is that it\r\nwill allow for plug-and-play software design with re-usable components.\r\nDesigners will pull objects from their library 'shelves' and hook them\r\ntogether to make software.  In C++, this hooking together of components\r\ncan be tricky, particulary if they are separately designed.  We are\r\nstill a long way from interoperable libraries and application\r\ncomponents.  Callbacks provide a mechanism whereby independently\r\ndeveloped objects may be connected together.  They are vital for plug\r\nand play programming, since the likelihood of Vendor A implementing\r\ntheir library in terms of Vendor B's classes, or your home-brewed\r\nclasses, is nil.\r\nCallbacks are in wide use, however current implementations\r\ndiffer and most suffer from shortcomings, not the least of which is\r\ntheir lack of generality.  This article describes what callbacks are,\r\nhow they are used, and the criteria for a good callba"
+  },
+  {
+    "title": "Self hosting 10TB in S3 on a framework laptop and disks (jamesoclaire.com)",
+    "points": 186,
+    "submitter": "ddxv",
+    "submit_time": "2025-10-05T09:51:26 1759657886",
+    "num_comments": 85,
+    "comments_url": "https://news.ycombinator.com/item?id=45480317",
+    "comments": [
+      "If it's just the mainboard and no screen, OP could put it in a dedicated case like the CoolerMaster one:https://www.coolermaster.com/en-global/products/framework/reply",
+      "Those are pretty cool. I meant to highlight more, that the laptop has done super well. I can't even tell it's on as I hear no fan / no heat. I guess laptops are pretty good for this as they are great at sipping power when there is a low load.reply",
+      "Back in 2012 or so, I reused an old netbook (an Asus Eee PC) with an Atom CPU & 1GB of RAM, installed Ubuntu Server, and used it as a home server. It handled the printer, DNS-VPN proxying for streaming, and a few other things admirably for years. (And ironically was resilient to Spectre because its Atom CPU was before Intel added speculative execution)Eventually, the thing that kicked the bucket was actually the keyboard (and later the fan started making \"my car won't start\" noises occasionally). Even the horribly-slow HDD (that handled Ubuntu Server surprisingly well) hadn't died yet.reply",
+      "Here's a link to the case on the Framework marketplace:https://frame.work/ca/en/products/cooler-master-mainboard-ca...I put my original mainboard in one of these when I upgraded. It's fantastic. I had it VESA-mounted to the back of a monitor for a while which made a great desktop PC. Now I use it as an HTPC.reply",
+      "I'd like more ellaboration on the technical side. Not literally how to do the same and what commands to use, but more in the line of how are the ZFS pools configured, or if Garage is opinionated and configures it all by itself. Are there mirrors in there? Or it's just individual pools that sync from some disks to others?I have 2 USB disks and want to make a cheapo NAS but I always doubt between making a ZFS mirror, making 2 independent pools and use one to backup the other, or just go the alternate route and use SnapRAID and then be able to mix more older HDDs for maximum usage of the hardware I already own.reply",
+      "My understanding is that Garage is not opinionated and could easily have worked without ZFS. I installed ZFS in Ubuntu, and then later installed Garage.As for the ZFS setup, I kept it simple and did RAID5/raidz1. I'm no expert in that, and have been starting to think about it again as the pool approaches 33% full.I saw this comment in another thread here that sounded interesting as well by magicalhippo:\n\"I've been using ZFS for quite a while, and I had a realization some time ago that for a lot of data, I could tolerate a few hours worth of loss. So instead of a mirror, I've set up two separate one-disk pools, with automatic snapshots of the primary pool every few hours, which are then zfs send/recv to the other pool.\"This caught my attention as it matches my usecase well. My original idea was that RAID5 would be good incase a HD fails, and that I would replicate the setup at another location, but the overall costs (~$1k USD) are enough that I haven't done that yet.reply",
+      "If you know where to look/are a little lucky, you can get an adequate RAID5 going for like $500-800 depending on the storage you need. I grabbed a QNAP 4 bay (no SSD caching) and 4x refurbished enterprise HDD's (14tb/ea) for just under $700 all-in last november if memory serves. Pretty reasonable for a 42tb RAID5 IMO.reply",
+      "I\u2019ve not heard of garage before but it looks quite interesting. I use s3 a lot for work but for homelab backups I\u2019ve always just used borg on borgbase. Now I\u2019m wondering whether I could use garage to pair a local node and AWS glacier for cheap redundancy of a large media library (I\u2019m assuming that ~all of the reading is automatically done from the local node). TFA doesn\u2019t really talk much about the actual experience of using garage - would love to hear more opinions from those who use it for self-hosting.Edit: Realised you can\u2019t use glacier since storage has to be mounted to the ec2 compute running the garage binary as a filesystem. So doesn\u2019t really make sense as media library backup over just scheduling a periodic borg / restic backup to glacier directly.reply",
+      "Another alternative is ZeroFS[1], just store your stuff directly to S3.[1] https://github.com/Barre/ZeroFSreply",
+      "That looks very interesting - will look into it, thanks.reply"
+    ],
+    "link": "https://jamesoclaire.com/2025/10/05/self-hosting-10tb-in-s3-on-a-framework-laptop-disks/",
+    "first_paragraph": "James O'ClaireMy personal siteAbout 5 months ago I made the decision to start self hosting my own S3. I was working on AppGoblin\u2019s SDK tracking of the top 100k Android and iOS apps so was wanting a lot of space, but for cheap. I got really lucky with getting a second hand Framework laptop. The laptop was missing it\u2019s screen, and was one of the older ones, so it was perfect for a home server. In addition I bought a \u201cjust a bunch of disks\u201d JBOD. The framework laptop is running ZFS + garage S3. I\u2019ve been away, I\u2019ve been working, I\u2019ve been busy, and I\u2019ve definitely been using my S3. But I hadn\u2019t thought about the laptop in 4 months. When I finally logged in, I saw I\u2019ve used 10TB of space and it was patiently waiting for a restart for some upgrades.  I nervously restarted, and was so relieved to see everything come right back up.I also saw a pending upgrade for garage v1 to v2. This went along without a hitch too. Feels like it\u2019s been a good weekend.Just so you know, I understand my use cas"
+  },
+  {
+    "title": "86 GB/s bitpacking with ARM SIMD (single thread) (github.com/ashtonsix)",
+    "points": 98,
+    "submitter": "ashtonsix",
+    "submit_time": "2025-10-05T12:27:11 1759667231",
+    "num_comments": 24,
+    "comments_url": "https://news.ycombinator.com/item?id=45481008",
+    "comments": [
+      "I tried to run the benchmark on my M1 Pro macbook, but the \"baseline\" is written with x86 intrinsics and won't compile.Are the benchmark results in the README real? (The README itself feels very AI-generated)Looking at the makefile, it tries to link the x86 SSE \"baseline\" implementation and the NEON version into the same binary. A real headscratcher!Edit: The SSE impl gets shimmed via simd-everywhere, and the benchmark results do seem legit (aside from being slightly apples-to-oranges, but that's unavoidable)reply",
+      "Thank you so much for attempting a reproduction! (I posted this on Reddit and most commenters didn't even click the link)For the baseline you need SIMDe headers: https://github.com/simd-everywhere/simde/tree/master/simde. These alias x86 intrinsics to ARM intrinsics. The baseline is based on the previous State-of-The-Art (https://arxiv.org/abs/1209.2137) which happens to be x86-based; using SIMDe to compile was the highest-integrity way I could think of to compare with the previous SOTA.Note: M1 chips specifically have notoriously bad small-shift performance, so the benchmark results will be very bad on your machine. M3 partially fixed this, M4 fixed completely. My primary target is server-class rather than consumer-class hardware so I'm not too worried about this.The benchmark results were cpy-pasted from the terminal. The README prose was AI generated from my rough notes (I'm confident when communicating with other experts/researchers, but less-so with communication to a general audience).reply",
+      "Here is a repro using GCE's C4A Axion instances (c4A-highcpu-72). Seems to beat Graviton? Maybe the title of the thread can be updated to a larger number :) ?  I used the largest instance to avoid noisy neighbor issues.  $ ./out/bytepack_eval\n  Bytepack Bench \u2014 16 KiB, reps=20000 (pinned if available)\n  Throughput GB/s\n\n  K  NEON pack   NEON unpack  Baseline pack   Baseline unpack\n  1  94.77       84.05        45.01           63.12          \n  2  123.63      94.74        52.70           66.63          \n  3  94.62       83.89        45.32           68.43          \n  4  112.68      77.91        58.10           78.20          \n  5  86.96       80.02        44.32           60.77          \n  6  93.50       92.08        51.22           67.20          \n  7  87.10       79.53        43.94           57.95          \n  8  90.49       92.36        68.99           83.88reply",
+      "Super cool!Pretty sure anyone going into this kind of post about simd would prefer your writing to llmreply",
+      "Maybe this could help you: https://github.com/simd-everywhere/simde/issues/1099reply",
+      "But this project isn't using simd-everywhere. I'd like to reproduce the results as documented in the READMEreply",
+      "Look at the parent dir. I agree it is a bit confusingreply",
+      "Ah! Yup, that works, I can compile the binary. I get an \"Illegal instruction\" error when I run it but that's probably just because M1 doesn't support some of the NEON instructions. I retract my implicit AI-slop accusations.reply",
+      "Results from M1 Pro (after setting CPU=native in the makefile): https://gist.github.com/DavidBuchanan314/e3cde76e4dab2758ec4...reply",
+      "Great work!Popular narrative that NEON does not have a move mask alternative. Some time ago I published an article to simulate popular bit packing use cases with NEON with 1-2 instructions. This does not include unpacking cases but can be great for real world applications like compare+find, compare+iterate, compare+test.https://community.arm.com/arm-community-blogs/b/servers-and-...reply"
+    ],
+    "link": "https://github.com/ashtonsix/perf-portfolio/tree/main/bytepack",
     "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n           There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page."
   },
   {
-    "title": "Newton: physics simulation engine built upon NVIDIA Warp (github.com/newton-physics)",
-    "points": 46,
-    "submitter": "skilled",
-    "submit_time": "2025-10-01T16:57:11 1759337831",
-    "num_comments": 6,
-    "comments_url": "https://news.ycombinator.com/item?id=45440071",
-    "comments": [
-      "Is this related to the Newton Dynamics physics engine? https://newtondynamics.com/reply",
-      "Heh, that was my first thought too and it doesn't look like it's related.? The nvidia dudes could have done some minimal amount of googling to pick a name that causes less confusion.reply",
-      "No> Newton extends and generalizes Warp's (deprecated) warp.sim module, and integrates MuJoCo Warp as its primary backend.It\u2019s MuJoco GPU Edition. Nothing new or improved.reply",
-      "I think this is a step in the right direction, but I really dislike the Pythonification of everything. After using IsaacSim/IsaacLab for work, I'm convinced that Python is not the right tool for the job.Developers inevitably write slow, error filled code when dealing with Python and working with the type annotations can be a pain.Happy there's something to replace PhysX for robotics, and I do really like MuJoCo's API, but really wish we could get some good C/C++ APIs.Apart from the language, NVIDIA doesn't seem to be great when dealing with software. IsaacSim and IsaacLab have so many bugs, are incredibly slow, and hard to debug. We spend so many hours on my team findings bugs for IsaacSim, it's just a pain. On version 5.0 and still feels like beta software.Also IsaacSim's relience on USD to hold the scene structure and update prims makes it so hard to program for. USD isn't really performant when trying to generate a large amount of scenes. And the USD interface stops working completly when simulation starts on IsaacLab. I hope Newton goes a different route, and has less of a reliacne on USD. IMO USD should just be used as an interchange format, rather than how you actually represent the scene and properties internally. I much prefer that approach, which Unreal Engine seems to support.Lastly, my god the names in this field are terrible. USD (Googling becomes a pain sometimes), Newton (Already another engine), Warp (literally the name of the architecture and a way to write Python GPU kernels, wtf).reply",
-      "Years ago there was PhysX... how does this compare?reply",
-      "This will eventually replace PhysX, some of its developers are working on Newton Physics. Newton Physics has multiple solvers, including MuJoCo-Warp and is easier to customize and extend.reply"
-    ],
-    "link": "https://github.com/newton-physics/newton",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        An open-source, GPU-accelerated physics simulation engine built upon NVIDIA Warp, specifically targeting roboticists and simulation researchers.\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.\n\n\nThis project is in active beta development. This means the API is unstable, features may be added or removed, and breaking changes are likely to occur frequently and without notice as the design is refined.Newton is a GPU-accelerated physics simulation engine built upon NVIDIA Warp, specifically targeting roboticists and simulation researchers.Newton extends and generalizes Warp's (deprecated) warp.sim module, and integrates\nMuJoCo Warp as its primary backend. Newton emphasizes GPU-based computation, OpenUSD support, differentiability, and user-defined extensibility"
-  },
-  {
-    "title": "Blog Feeds (blogfeeds.net)",
-    "points": 91,
-    "submitter": "stevedsimkins",
-    "submit_time": "2025-10-04T19:08:46 1759604926",
-    "num_comments": 40,
-    "comments_url": "https://news.ycombinator.com/item?id=45475808",
-    "comments": [
-      "> The idea is to create another page on your blog that has all the RSS feeds you're subscribed to. By keeping this public and always up to date, someone can visit your page, find someone new and follow them. Perhaps that person also has a feeds page, and the cycle continues until there is a natural and organic network of people all sharing with each other. So if you have a blog, consider making a feeds page and sharing it! If your RSS reader supports OPML file exports and imports, perhaps you can share that file as well to make it easier to share your feeds.This is usually called a \"blogroll\", which has the advantage of being much less ambiguous/overloaded than \"feeds\".reply",
-      "I had a very similar idea. I\u2019m glad someone implemented it.reply",
-      "I thought about a similar problems because I always find really interesting blogs (mostly on HN) but I don't have a real place to store them, so they get lost when I close the tab. I can save them in the favorites but I'm not used to check favorites regularly.Feeds are a tangent solution because they give you only the new stuff. Feeds transform blogs into social media platforms where what matter is the new fresh content, ready to \"feed\" the algorithm. But blogs and personal sites are different. High quality content is usually written in a single article, maybe in the past, and it will not be shown on your feed.Actually I judge a blog on what's already written in there, so I want to read more articles but maybe just not right now. If I add the blog to my RSS reader I would only read future content.Another patch to this problem is Instapaper. I can save there the most interesting articles and read them later, but the entire-blog view is missing.I would like to have a way (platform) where I can save a blog and read all/some articles, with a standard formatting (custom blogs are nice but not always comfortable to read) and not having a default sorting for recent articles.reply",
-      "I've tried a few solutions and have landed on just storing them in an unordered list in a markdown filereply",
-      "I sometimes use reeder but its UI isn\u2019t quite right for me. But there\u2019a a fair amount of options out there.reply",
-      "> If I add the blog to my RSS reader I would only read future content.Why? All the old articles are there as well.reply",
-      "Instapaper and Feedly work for me. Instapaper is the main thing and Feedly a thing I check occasionally for the blogs I love.reply",
-      "i\u2019ve tried a paid Instapaper plan a few times but always end up leaving because their reader view very regularly misses entire sections of articlesreply",
-      "I write on my blog, but I am not sure who I am writing for. Which is fine, because in the end I write for myself. Years ago you would get comments, posts would get linked (remember pingbacks?). Maybe as time progressed I started writing more niche things that reach nobody, or maybe that web started disintegrating. Hope it comes back, but I will not hold my breath. I will keep posting though.reply",
-      "Some people have been following my blog for over 10 years. The only reason I know is because someone decided to email me on a random Tuesday. You'd be surprised what you find when you look through your logs.reply"
-    ],
-    "link": "https://blogfeeds.net",
-    "first_paragraph": "Tired of social media?Keep doom scrolling through addicting feeds?Miss the days when the web was just about connecting with people and their thoughts or ideas?We believe there's an answer to that problem, and it's calledNo this isn't another platform.\n            You don't sign up here.\n          You just write what's on your mind, respond to an idea, post a recipe, or share a photo. It's blogs, but perhaps not in the way you would normally think of blogs.It just takes three things to participate:Starting a blog is actually a lot simpler than what you're probably thinking. This doesn't have to be some well polished highly viewed monetization machine, or even something professional or formal. It's just a simple website where you can casually talk about whatever you want to talk about! It can be long, short, a list of small things, or just a quote. It should be how you talk with other people in your own life, or how you communicate with the outside world. It should be you on a page. Here"
-  },
-  {
-    "title": "XiangShan Vector Floating-Point Unit Design (xiangshan.cc)",
-    "points": 25,
-    "submitter": "camel-cdr",
-    "submit_time": "2025-10-04T22:02:28 1759615348",
+    "title": "Sonic Robo Blast 2: 25 year old continuously developed DOOM engine-based fangame (srb2.org)",
+    "points": 3,
+    "submitter": "__grob",
+    "submit_time": "2025-10-02T07:50:36 1759391436",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://docs.xiangshan.cc/projects/design/en/latest/backend/VFPU/",
+    "link": "https://www.srb2.org/",
     "first_paragraph": ""
   },
   {
-    "title": "Space Mission Options for Reconnaissance and Mitigation of Asteroid 2024 YR4 (arxiv.org)",
-    "points": 10,
-    "submitter": "bookofjoe",
-    "submit_time": "2025-10-04T23:42:55 1759621375",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://arxiv.org/abs/2509.12351",
-    "first_paragraph": "Help | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n                    Get status notifications via\n                    email\n                    or slack\n"
-  },
-  {
-    "title": "Matrix Core Programming on AMD GPUs (salykova.github.io)",
-    "points": 29,
-    "submitter": "skidrow",
-    "submit_time": "2025-10-04T21:22:11 1759612931",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://salykova.github.io/matrix-cores-cdna",
-    "first_paragraph": "\nSep 30, 2025\n      \u2022 Amanzhol Salykov, Andy Luo, Carlus Huang, Peng SunTL;DR In this blog post, we walk through how to use Matrix Cores in HIP kernels, with a focus on low-precision data types such as FP16, FP8, and FP4, as well as the new family of Matrix Core instructions with exponent block scaling introduced in the AMD CDNA\u21224 architecture. Through code examples and illustrations, we provide the necessary knowledge to start programming Matrix Cores, covering modern low-precision floating-point types, the Matrix Core compiler intrinsics, and the data layouts required by the Matrix Core instructions. The blog post is also available on ROCm Blogs.Matrix multiplication is an essential part of AI and HPC workloads. The AMD CDNA\u2122 architecture features special-purpose hardware, the Matrix Cores, to accelerate matrix fused-multiply-add (MFMA) operations defined as D:=A*B+C. Please note that MFMA instructions are often used to update a matrix in-place (=accumulation) so that D=C and C:=A*B+"
-  },
-  {
-    "title": "Probiotics Finder (probioticfinder.org)",
-    "points": 14,
-    "submitter": "cubefox",
-    "submit_time": "2025-10-04T23:34:13 1759620853",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.probioticfinder.org/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Show HN: Run \u2013 a CLI universal code runner I built while learning Rust (github.com/esubaalew)",
-    "points": 58,
-    "submitter": "esubaalew",
-    "submit_time": "2025-10-04T18:34:13 1759602853",
-    "num_comments": 21,
-    "comments_url": "https://news.ycombinator.com/item?id=45475528",
-    "comments": [
-      "If someone is interested in pursuing this approach further, there exist a polyglot task runner named 'just' [1].[1] https://github.com/casey/just?tab=readme-ov-file#shebang-rec...reply",
-      "I am very intrested why you choose to write such a tool. i normaly have a hand full of shell scripts doing the work, but surly i have to know the used language befor i call the script. Can you explain the motivation?reply",
-      "The idea is similar to IPython, which provides an interactive interface for programming languages. The motivation isn't about building a massive CLI tool\u2014it's about questioning why we need a separate REPL for each language when we could use a single command-line interface that lets us switch between languages on the fly.reply",
-      "Isn't the whole point of a shebang line that scripts can identify for themselves what language/runner they want to be executed via?reply",
-      "Yeah, this seems to me to be comparable to something like `/usr/bin/env` or even agnostic language package managers like asdf in terms of trying to provide an abstraction over having to manually define where to find the toolchain to use for a given script. There's a pretty well-established pattern at this point of alternate takes for common CLI tools being written in Rust that bring something interesting to the table at the cost of compatibility with the older existing tool, so even if this one might or might not pan out into being useful for enough people, I think it's totally reasonable to try to come up with a new way of doing things.It's also not incredibly uncommon for people to run scripts that they haven't written themselves (like via the almost universally reviled but still somewhat common `curl <...> | bash` installation pattern). It probably would be better if things didn't get installed like this, but if it's going to happen, it might be nice to have the scripts written in something less annoying than shell so that the authors could at least use the same language for the installation script that they do for writing the software itself.reply",
-      "Yes, that's exactly the point. What I'm trying to do is:  \n1. Use Rust because it's fast.  \n2. Make REPLs universal, so we don't need separate REPLs for different languages.  \n3. And third\u2014though not a new idea\u2014is to create better abstractions, like allowing print statements without requiring a main function, and accessing variables without explicitly printing them.reply",
-      "How much time are you saving for each invocation? My 10 year old laptop invokes /usr/bin/env in less time than an HTTPS handshake.reply",
-      "> exposes a unified REPL experience with commands like :help, :lang, and :quit.Those sound similar to \"magic commands\" in IPython and Jupyter?There is not yet a \nJupyter-xeus Rust kernel which would make it really easy to support Rust in JupyterLite in WASM on an .edu Chromebook and in JupyterLab: https://news.ycombinator.com/item?id=43354177> jupyter_console is the IPython REPL for non-ipykernel jupyter kernels. [like evcxr]> This magic command logs IPython REPL input and output to a file:  %logstart -o example.log.py\n\nhttps://news.ycombinator.com/item?id=25923123 ,Here's how to support something  like _repr_html_() and IPython.display.display() with evcxr_jupyter: https://github.com/evcxr/evcxr/blob/main/evcxr_jupyter/READM...I'm not sure what the pros and cons of evcxr_repr, jupyter_console + evcxr_jupyter, and Run are?reply",
-      "As a small note, Swift is a compiled language. It uses LLVM as a backend, same as Rust and Clang (C/C++/ObjC). It's currently listed under \"Web & typed scripting\".reply",
-      "You're right\u2014and the same applies to Kotlin. Swift is more like Rust, C, and C++ in that it compiles directly to machine code. So yes, Swift is currently listed under the wrong category.As for Kotlin, it could reasonably be placed under either \"Web & scripting\" or \"Compiled,\" depending on how it's used. Since Kotlin can also compile to JavaScript, its classification depends on the context. If we're talking about Android development, then Kotlin is clearly a compiled systems language.To clarify: Swift is a compiled, statically typed systems language, much like Rust, C++, or Go. Its core toolchain (swiftc) compiles code into native binaries.reply"
-    ],
-    "link": "https://github.com/Esubaalew/run",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Universal multi-language runner and smart REPL written in Rust.\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.\nPolyglot command runner & smart REPL that lets you script, compile, and iterate in 25+ languages without touching another CLI.\n\n\n\n\n\n\nBuilt in Rust for developers who live in multiple runtimes. run gives you a consistent CLI, persistent REPLs, and batteries-included examples for your favorite languages.All release assets are published on the GitHub Releases page, including macOS builds for both Apple Silicon (arm64) and Intel (x86_64). Pick the method that fits your platform:Installs the run binary from the run-kit crate. Updating? Run cargo install run-kit --force.This formula is published as a standalone file on each release; it isn\u2019t part of the"
-  },
-  {
-    "title": "How to inject knowledge efficiently? Knowledge infusion scaling law for LLMs (arxiv.org)",
-    "points": 65,
-    "submitter": "PaulHoule",
-    "submit_time": "2025-10-04T17:18:07 1759598287",
-    "num_comments": 16,
-    "comments_url": "https://news.ycombinator.com/item?id=45474900",
-    "comments": [
-      "Interesting work, but I think the interpretation may be a bit overstated. The authors claim that injecting too much factual \"knowledge\" during pretraining causes models to collapse \u2014 performance drops below the baseline once knowledge frequency crosses a threshold.The problem is how they inject it. Their \u201cknowledge\u201d isn\u2019t natural language; it\u2019s templated Wikidata triples like \"X is the capital of Y.\" That\u2019s a super low-entropy, highly repetitive distribution. When you cram enough of that into a fixed token budget, you\u2019re not really teaching the model more facts \u2014 you\u2019re just destroying linguistic diversity and skewing the token statistics.In real pretraining or domain adaptation scenarios, \u201cknowledge\u201d tends to appear in richer, more varied contexts. The practical takeaway isn\u2019t \"don\u2019t add too much domain data,\" but rather \"don\u2019t overrepresent any single format or narrow syntactic pattern\" The issue seems more about representation homogeneity than about factual density itself.reply",
-      "I'm sure there's other work, I came across this in the Physics of Language Model paper[1] on knowledge extraction.Essentially they found that by presenting the knowledge in a single, fixed way, the model is trained to reproduce that exact sequence of tokens, rather than \"internalizing\" the knowledge.By varying the sentences, the model instead manages to separate out the knowledge, so to speak. This in turn drastically improves how well they can extract that knowledge later.[1]: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5250633reply",
-      "Doesn't this then support the claim that LLMs aren't building world models - where even linguistically simple factual statements should help expand and refine that model - and reenforce the idea that they are still just next token predictors?reply",
-      "There's no inductive bias for a world model in multiheaded attention. LLMs are incentivized to learn the most straightforward interpretation/representation of the data you present.If the data you present is low entropy, it'll memorize. You need to make the task sufficiently complex so that memorisation stops being the easiest solution.reply",
-      "My read is that token prediction requires a more general model to predict more varied tokens, which makes it something closer to a world model. After all, in principle, there's a point where the optimal \"token predictor\" really is backed by a world model. (Now is that model feasible to find? unclear!)reply",
-      "I wish the authors calculated a plot of model size (number of params) vs number of triples it can hold before the memory collapse happens.It's hard to map the frequency of knowledge injection to a real world understanding of \"how much knowledge\" can a 4B param model hold?reply",
-      "There is a study that gives a rule of thumb of ~2 bits per param for a model's memorization capacity: https://arxiv.org/abs/2404.05405reply",
-      "Seems they have replicated Gardner's work, without mentioning it, \"Maximum Storage Capacity in Neural Networks\" (1987), which established that the storage capacity of a neural network is about 2N (2 bits per parameter)reply",
-      "I had no idea about this. Thanks for sharingreply",
-      "Elizabeth Gardner for those looking.reply"
-    ],
-    "link": "https://arxiv.org/abs/2509.19371",
-    "first_paragraph": "Help | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n                    Get status notifications via\n                    email\n                    or slack\n"
-  },
-  {
-    "title": "Self-hosting email like it's 1984 (maxadamski.com)",
-    "points": 173,
-    "submitter": "xmx98",
-    "submit_time": "2025-10-04T14:53:32 1759589612",
-    "num_comments": 111,
-    "comments_url": "https://news.ycombinator.com/item?id=45473730",
-    "comments": [
-      "(had to dug my comment from under a flagged parent)I self-hosted for well over 20 years, I did not throw the towel and I do not plan to. Self-hosting is a sign of pride. Neither my government nor my Prime Minister nor even my Ministry of Interior or Foreign Ministry can host their own email.Last time I checked, only State Security self-hosted.I was probably lucky, but I rarely had delivery problems. The last one was a couple years ago with Microsoft swallowing my emails and it was due to the combination of a fairly old exim and a TLS certificate verification quirk at *.protection.outlook.com. I found a fix in the form of a configuration option somewhere on SO.In all fairness, there is very little maintenance involved, and whenever I have to do maintenance work, I take the opportunity to learn something new. Like this year, I decided to finally replace my aging Debian jessie setup by Arch Linux, and I rewrote all cron jobs as systemd timers.I must admit that when I send a really important email, I check the mail server log if it went off without errors, but this does not bother me as checking logs manually once in a while is a good thing anyway.Lastly, a piece of advice: treat self-hosting like a hobby and learn to enjoy it.Oh and the very last thing: the person who designed Exim configuration for Debian deserves a special place in hell for all the hours wasted. If you set up Exim on Debian, just figure out how to use the upstream exim config and adapt it to your needs.reply",
-      "My first email usage was at University, pre-WWW. After that I briefly used some ISP email service, but that was on a time of very limited storage and POP only accounts, so I started hosting my own email even before having an always-on internet connection, using a relay and dynamic DNS to receive email when online. Now a days, I use a small VPS to route and receive email, but final destination and storage is on my home server. Over the years, I had, like others here, to ask Outlook and other providers to unblock my IP or domain, but it has been rare.I really don\u2019t want to live in a world where only two or three companies run email for the entire world, and this is my little act of resistance.reply",
-      "outlook.com keeps sending me dmarc reports with failed dkim... while every single other provider gives pass to all domains. at this point I don't even care anymore.why Microsoft is so crappy?reply",
-      "They want you to use outlook.reply",
-      ">  I decided to finally replace my aging Debian jessie setup by Arch Linux, and I rewrote all cron jobs as systemd timers.Man, I wish I had 1% of the motivation I had 20 years ago to do something like this, before all the full time job, wife and child.reply",
-      "Stuff to keep you busy is always there, you can control what you spend the rest of the time on.reply",
-      "> treat self-hosting like a hobby and learn to enjoy it.This is why I have stepped away from a lot of my self hosting.  I have turned my attention/time elsewhere.  Apparently though the time/money balance is shifting a bit again, so it may be worth it to go back.My biggest hesitance to self hosting email specifically is dealing with spam.  What does that look like these days and do you have any pointers to share?reply",
-      "I use a combination of DNSBL and SpamAssassin. Nowadays Rspamd is supposed to be better than SpamAssassin, but SpamAssassin has served me well enough so far, and I haven't gotten around to trying out Rspamd. When a spam email gets past SpamAssassin, I copy it to a special folder, which gets processed by a cron job to train SpamAssassin on it (sa-learn).Overall the mail server is very low maintenance. I had to add SPF and DMARC a couple years ago (DKIM isn't necessary) and integrate TLS with letsencrypt (just a few lines in a config file), and sometimes a Debian upgrade requires reviewing the configuration (several years apart as well). There's really not that much to do.reply",
-      "rspamd is my go to solution.  Out of the box you get a lot of protection.  I use Exim as my MTA but I suggest you use Postfix if you are starting from scratch, only because you will find a lot more write ups on it.The biggest issue is getting an IP address which is not in the banned lists.  IP reputation is key along with SPF and do not send spam!In the UK a \"business\" static IP address is sometimes/usually/probably/might be OK.  If you are unfortunate then it is already in the lists and you can check that out at point of sign up.You might look into IPv6 too.  I managed to do the Hurricane Electric IPv6 email thing on my home connection for a laugh.  That was a few years ago.  It seems I need to do something more to get to Guru status.reply",
-      "I\u2019m not sure that there is any pre made product for this, but I\u2019ve been playing around with LLMs to identify spam, or just generally sorting emails for you. And even the self hosted models seem to be pretty good at classifying emails even without external information like spam blacklists or IP reputation.reply"
-    ],
-    "link": "https://maxadamski.com/blog/2025/10/email.html",
-    "first_paragraph": "\nSelf-hosting an email server is useful for automating tasks like mailing lists, newsletters, or email verification APIs.\n\nThe elephant in the room is real-world deliverability. With self-hosting you risk not receiving mail or someone missing your mail. I accept this for my personal projects, but you may not. Keep this in mind.\n\nFor me the selling point of self-hosting is that it\u2019s practically free. If you\u2019re already self-hosting a website, installing some extra packages on your server and just a bit of your time is all that\u2019s required. Mail takes very little storage and the software is light, so you\u2019re unlikely to significantly change energy consumption or disk usage.\n\nFor the longest time, I perceived self-hosting email as too difficult, but after doing it for one of my projects, I can say it\u2019s not much harder or more time-consuming than configuring some email SaaS.\n\nI changed my goals a bit to make the setup easier though. Self-hosting a multi-user webmail looks heavy and is more in"
-  },
-  {
-    "title": "Clavier: An FPGA-based mechanical keyboard with USB hub and comms interfaces (github.com/lsartory)",
-    "points": 60,
-    "submitter": "zdw",
-    "submit_time": "2025-10-01T17:05:38 1759338338",
-    "num_comments": 12,
-    "comments_url": "https://news.ycombinator.com/item?id=45440180",
-    "comments": [
-      "As somebody who regularly tinkers, debugs, and programs microcontrollers at my desk. I just realized how handy having UART/SPI/I2C headers right there would be. Obviously I already have them like right there but to have them right there there would be great.reply",
-      "After a few dumb accidents involving header pins, I've come to the conclusion that exposed male header pins on my desk are a hazard.reply",
-      "How about the risk of frying the MCU?reply",
-      "Is the benefit of the FPGA here that you can program the whole stack? Like a kind of super-charged QMK based board?reply",
-      "Because you can? It looks like a great project for getting started with nontrivial FPGA design.Programming-wise I'd say full FPGA is less useful than QMK. Doing a direct 1:1 mapping from key inputs to USB HID report isn't too bad to do in an FPGA, but dynamic behavior like macros, layers, leader keys, mod tap, auto shift, and so on are significantly easier to implement in a regular programming language. If you want flexibility you're basically forced to have your FPGA run a soft core, so at that point why not go for a regular MCU?In theory you could make an argument for lower latency, but that doesn't really apply when you're limited by USB 2's 1000Hz polling rate while some off-the-shelf MCU-based keyboards use USB 3 for 8000Hz polling.reply",
-      "Well the project description seems to hint at to their motivation:> 1000 Hz polling rate> No multiplexing, no ghosting> FPGA-based, VHDL only, no ALUIt looks like a pure HW 'described' keyboard with no running software meaning it is fully parallel (plus some serialization when reaching the USB device/interface).So arguably on top of true parallelism the only ceiling for the latency of the whole thing will be the clock period configured in the design and the physics and electrical behaviour of the switches themselves + circuitry.Probably someone who enjoys working close to hardware and wants to optimize performance.reply",
-      "The FPGA is a Lattice LFE5U-25F, about $20https://www.digikey.com/en/products/detail/lattice-semicondu...reply",
-      "Or about $5 on LCSC.reply",
-      "I'm curious as to why it doesn't have USB 3.0 ports. Do they take too much power? Too much space?reply",
-      "USB 3 is significantly more complicated to implement, and the hub chips are quite a bit more expensive. Hardware-wise it would've become by far the hardest part of this board.USB 2, on the other hand, is fairly trivial. You almost have to try to get it wrong - especially when you are not concerned about certification.reply"
-    ],
-    "link": "https://github.com/lsartory/Clavier",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        An FPGA-based mechanical keyboard with an integrated USB hub and communication interfaces\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.Clavier (French for \u2018keyboard\u2019) is an FPGA-based mechanical keyboard with an integrated USB hub, and numerous communication interfaces (JTAG, SPI, I\u00b2C, UART).It's the coffee key.\nUse it to lock your computer and go have a break.It can also be long-pressed for 5 seconds to reset the FPGA.The PCB has 4 layers and requires no unusual capabilities to produce.\nIt is however not easy to assemble by hand mostly due to 0402 passives and the FPGA in BGA packaging.A PDF version of the schematics is available here, for convenience: PCB/doc/clavier.pdf.An OpenSCAD version of the housing was created first and is fine for 3D printing.\nT"
-  },
-  {
-    "title": "Borehole Oscillators (gregegan.net)",
+    "title": "AMD's EPYC 9355P: Inside a 32 Core Zen 5 Server Chip (chipsandcheese.com)",
     "points": 9,
-    "submitter": "sohkamyung",
-    "submit_time": "2025-10-04T23:02:32 1759618952",
+    "submitter": "rbanffy",
+    "submit_time": "2025-10-02T11:07:16 1759403236",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://www.gregegan.net/SCIENCE/Borehole/Borehole.html",
-    "first_paragraph": "There is a simple thought experiment in Newtonian gravity:  drill a thin radial borehole all\nthe way through a solid ball of uniform density, and drop a test particle into the hole,\nstarting from rest at the very top.  What happens?The result is that the particle (blue, in the image on the left) falls all the way\nthrough the borehole, comes to a halt at the opposite end, then falls back,\nundergoing \nsimple harmonic motion (the same kind of motion as an idealised\nversion of a weight bouncing on the end of a spring) with exactly the same period as another\ntest particle (red) orbiting the ball in a circular orbit that grazes the surface.On this page, we will start by proving that result, but then we will also look\nat radial motion in the vacuum around the ball in Newtonian gravity, and examine how\nthese systems work in General Relativity \u2014 featuring the famous Schwarzschild\nsolution, but starring its much less famous cousin, the second Schwarzschild\nsolution!A solid ball of radius r and u"
-  },
-  {
-    "title": "Mathematical Models/Algorithms for Optimization of Lego Construction Problems [pdf] (dtu.dk)",
-    "points": 6,
-    "submitter": "felineflock",
-    "submit_time": "2025-10-01T15:16:44 1759331804",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/236623063/PhD_Thesis_Torkil_Kollsker.pdf",
+    "link": "https://chipsandcheese.com/p/amds-epyc-9355p-inside-a-32-core",
     "first_paragraph": ""
-  },
-  {
-    "title": "Earth was born dry until a cosmic collision made it a blue planet (sciencedaily.com)",
-    "points": 200,
-    "submitter": "amichail",
-    "submit_time": "2025-09-30T16:54:43 1759251283",
-    "num_comments": 179,
-    "comments_url": "https://news.ycombinator.com/item?id=45427972",
-    "comments": [
-      "This could mean in the Drake equation ne -number of planets capable of life- is very small.  A planet has to be hit with a comet big enough to deliver a large amount of water but not so big or fast to destroy it.  And be in the Goldilocks zone of the star.  Also the mass of the planet would play a part - gravity of more massive ones would be more likely to capture a comet.  But again, too massive and I could see that hampering life.reply",
-      "The Drake Equation is filled with assumptions, like life must appear on a planet in the Goldilocks zone of a star. The whole equation has only one datapoint to extrapolate from. Tweak the equation's parameters and it will predict universes that only have one civilization per galaxy or worse! We have no way of knowing what those parameters are because we haven't seen other examples.A major reason we are interested in Europa is because it might have underground oceans. Hypothetically, through tidal forces with Jupiter, the moon's core is hot enough to create oceans under the ice crust. Combined with hydrothermal vents you have the possibility for deep sea life similar to our own deep oceans. The Drake Equation does not predict this possibility.reply",
-      "The Goldilocks zone doesn't enter the Drake equation at all.As a reminder, this is the equation: https://en.wikipedia.org/wiki/Drake_equation#EquationIt makes very few assumptions.reply",
-      "The equation itself makes no assumptions. But anyone trying to calculate something with it must.The last five factors in the equation will be filled in by assumptions based entirely on one data point, life on Earth. From your link:  ne = the average number of planets that can potentially support life per star that has planets.\n  fl = the fraction of planets that could support life that actually develop life at some point.\n  fi = the fraction of planets with life that go on to develop intelligent life (civilizations).\n  fc = the fraction of civilizations that develop a technology that releases detectable signs of their existence into space.\n  L = the length of time for which such civilizations release detectable signals into space.\n\nCan you define any one of those without assumptions, in a scientifically proven way?reply",
-      "One approach is to give each variable a probability distribution. The greater our uncertainty about possible values, the wider the bell curve.Drexler and colleagues did that, and found \"a substantial probability that we are alone in our galaxy, and perhaps even in our observable universe (53%\u201399.6% and 39%\u201385% respectively). \u2019Where are they?\u2019 \u2014 probably extremely far away, and quite possibly beyond the cosmological horizon and forever unreachable.\"https://arxiv.org/abs/1806.02404reply",
-      "A probability distribution describes how likely different outcomes are.\nIt requires multiple observations or an assumed model that can represent variability.",
-      "It actually adds excessive structure.The underlying model is just:N*fHow many planets are there, and what proportion of them have detectable life?The f does not have to be structured as fl->fi->fc, although we can see why you'd assume that kind of structure. It's simple to calculate the PI(series) when the model is just a funnel. Like the Million Dollar Money Drop gameshow.But you could imagine a more complex model of probabilities that branches and merges. There could be events on the bayesian tree that amplify downstream events. For instance, suppose there is some pathway that if reached will leave certain minerals that future civilizations could use. This has happened already on earth at least once: lignin bearing plants could not be easily digested for a long time, and that led to coal formation during the carboniferous period.You could imagine many such potential trees, but we only have one iteration.reply",
-      "It does assume that life must be associatable with a planet. It's a plausible assumption, but you could also hypothetically have life develop on a star itself or its remnants, comets, clouds of interstellar gas. Maybe even something more exotic than that (dark matter? some weird correlated statistical properties of the quantum foam?)reply",
-      "About forty years ago I read a terrific book about life forms that live on a star. Maybe Starquake was it called? Did to the abundance of energy on the surface of a star, they live their lives a million times faster than humans. Thus for both them and the humans who discover them, communication is difficult. I think the humans push these life forms to develop civilization, which from the human's perspective had them go from primitive animals into sophisticated beings of technology past their own in something like a day.reply",
-      "That's \"Dragon's Egg\" by Robert L. Forward, a classic Sci-fi story:https://annas-archive.org/md5/4c381ac344506d10037fc8e7747098...The cheela lived on the surface of a neutron star, and they lived faster because the nuclear physics that powered their metabolism are far faster than the chemical and mechanical physics that power our own.reply"
-    ],
-    "link": "https://www.sciencedaily.com/releases/2025/09/250928095654.htm",
-    "first_paragraph": "After the formation of the Solar System, it took a maximum of three million years for the chemical composition of the Earth's precursor to be completed. This is shown by a new study by the Institute of Geological Sciences at the University of Bern. At this time, however, there were hardly any elements necessary for life such as water or carbon compounds on the young planet. Only a later planetary collision probably brought water to Earth, paving the way for life.Earth is so far the only known planet on which life exists -- with liquid water and a stable atmosphere. However, the conditions were not conducive to life when it formed. The gas-dust cloud from which all the planets in the Solar System formed was rich in volatile elements essential for life, such as hydrogen, carbon and sulphur. However, in the inner Solar System -- the part closest to the Sun, where the four rocky planets Mercury, Venus, Earth and Mars and the asteroid belt are located today -- these volatile elements could "
-  },
-  {
-    "title": "Microsoft 365 Copilot is a commercial failure (perspectives.plus)",
-    "points": 23,
-    "submitter": "jukkan",
-    "submit_time": "2025-10-04T19:39:00 1759606740",
-    "num_comments": 15,
-    "comments_url": "https://news.ycombinator.com/item?id=45476045",
-    "comments": [
-      "I still think there's a potential niche for 365 Copilot in its boringness.At work (not a tech company), there's an ongoing, slow, 365 rollout. The people who participate in the rollout are not technical in any way, but they all love it because they're not regular ChatGPT/Claude users, either. In a way, the restricted feature-set of Copilot compared to ChatGPT helps them, they're overwhelmed enough by Copilot. \nIT loves 365 because it's so risk-averse. No big jumps, no surprises, clearly defined data and risk policies.I think if they drill down into the boring, slow, predictable, they will capture the market of risk-averse non-tech companies, not people.I've tried building agents using 365 for our internal documents and they're OK for basic stuff (what's in what document where - max 20 documents only!!), but langchain/RAG/whatever are a million times more powerful.reply",
-      "We use it in finance for the reasons above. Microsoft actually just added GPT 5 to Copilot so it\u2019s much better than it used to be. I\u2019ve used it to help write scripts in VBA and it\u2019s really good for my use cases. Before GPT 5 it was worse than useless.reply",
-      "Boring doesn\u2019t bring in the billions and billions in stock thoughreply",
-      "Oh that's true. If AI is a bubble, and if it implodes, then MS might be the only AI place left standing if it can get its product into all of the non-tech companies in the world.reply",
-      "0% chance.  The MIT 95% study showed that the tools are good, integration and process is the problem.  There's a ton of work for people that can come into a company and set up a bespoke AI control plane/orchestration, the tooling needs to evolve a little bit so this can be a sane, repeatable business though.reply",
-      "Unsurprising. I tried it probably a year ago. I asked it what meetings were in my calendar for the day and it couldn\u2019t even tell me that. To add insult to injury, they wanted an annual commitment with up front payment at the time.reply",
-      "Many other recent Microsoft products are below average. I'm thinking Teams, Outlook, Windows 11. Azure and Office are better.I guess they spend their money on sales and licensing and not on developing good products now?reply",
-      "well also it's all tied together. no shuffling contracts for slack, email, etc.reply",
-      "8 million active users after almost 2 years from making the $30pupm license available. Less than 2% of Microsoft 365 paying customers choosing to pay extra for Copilot. It's not difficult to see why Microsoft themselves have stopped reporting on AI revenue, as well as not disclosing any official numbers on M365 Copilot sales. Luckily, a source leaked these figures for Ed Zitron to report in his newsletter.reply",
-      "Part of the reason is Microsoft's borgy/corpo-confusing service levels.I have a paid 365 account and couldn't determine from logging in or account info screens if I was on paid or just the freemium version with my 365 planIn testing out what I did have access to with Copilot, it was incredibly bad compared to ChatGPT or Claude, so I decided not to pay for Copilot whenever I see an ad for it.reply"
-    ],
-    "link": "https://www.perspectives.plus/p/microsoft-365-copilot-commercial-failure",
-    "first_paragraph": ""
-  },
-  {
-    "title": "OpenAI's hunger for computing power has Sam Altman dashing around the globe (wsj.com)",
-    "points": 45,
-    "submitter": "doener",
-    "submit_time": "2025-10-04T22:14:29 1759616069",
-    "num_comments": 28,
-    "comments_url": "https://news.ycombinator.com/item?id=45477192",
-    "comments": [
-      "https://archive.md/OnsLK",
-      "Too big to fail is the goal. If the world is powered by openai but it aint making a profit in 2028 they can just put their \"were a utility like water\" facemask on and get bailed out.reply",
-      "At least in the USA, I think if consumers realized their power bills going up every year are tied to these new data centers, there would be more opposition to data centers going up politically.\nhttps://apnews.com/article/electricity-prices-data-centers-a...\nI don't know if the electricity markets work differently in other countries.reply",
-      "Taxpayers subsidize data centers in many other ways. These are prestige projects for politicians, so they often get long-term tax breaks and other preferential treatment.I think it's part vanity, part a misunderstanding about the economic benefits of a datacenter (which are nearly nil, as they employ very few people and produce nothing for the local market), and part just a desire to score brownie points with wealthy corporations, which might mean donations, campaign support, or other perks for the politician who makes it happen.reply",
-      "That\u2019s a fun trope but it\u2019s a terrible outcome for shareholders.reply",
-      "Which means it will be made into a terrible outcome for everyone.reply",
-      "shareholders like a business that can never fail...reply",
-      "Good.reply",
-      "What is their angle with this?Surely SamA doesn\u2019t actually think that they\u2019ll more than 20x their compute in a few years? I\u2019m sure the researchers there would love to do more research, with more compute, faster, but 20+x growth is not a practical expectation.Is the goal here to create a mad rush to build data centers, which should decrease their costs with more supply? Do they just want governments to step in and to help somehow? Is it part of marketing/hype? Is this trying to project confidence to investors on future revenue expectations?reply",
-      "Surely SamA doesn\u2019t actually think that they\u2019ll more than 20x their compute in a few years?If their goal is to train say, a 100T model on the whole youtube dataset they will need 20000x more compute. And that would be my goal if I were him.reply"
-    ],
-    "link": "https://www.wsj.com/tech/ai/openai-sam-altman-asia-middle-east-7b660809",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Unchecked and Unaccountable: How DOGE Jeopardizes Americans' Data (senate.gov)",
-    "points": 19,
-    "submitter": "defrost",
-    "submit_time": "2025-10-04T23:30:16 1759620616",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.hsgac.senate.gov/media/dems/peters-report-finds-that-doge-continues-to-operate-unchecked-likely-violating-federal-privacy-and-security-laws-and-putting-the-safety-of-americans-personal-information-in-danger/",
-    "first_paragraph": "WASHINGTON, D.C. \u2013\u00a0U.S. Senator Gary Peters (D-MI), Ranking Member of the Homeland Security and Governmental Affairs Committee, released a report revealing that the Trump Administration\u2019s Department of Government Efficiency (DOGE) is operating outside federal law, with unchecked access to Americans\u2019 personal data. Staff investigations and whistleblower accounts show how DOGE personnel at the Social Security Administration (SSA), the General Services Administration (GSA), and the Office of Personnel Management (OPM) are working without any accountability to agency leadership, Congressional oversight, or the public.\u00a0Peters\u2019 report includes multiple whistleblower disclosures that DOGE staff have copied Americans\u2019 sensitive Social Security and employment data into a cloud database without any verified security controls, likely a serious violation of cybersecurity and privacy laws that puts the information at risk of being stolen by cybercriminals. One individual\u2014previously fired from a pri"
-  },
-  {
-    "title": "Paged Out Issue #7 [pdf] (pagedout.institute)",
-    "points": 227,
-    "submitter": "todsacerdoti",
-    "submit_time": "2025-10-04T10:38:06 1759574286",
-    "num_comments": 19,
-    "comments_url": "https://news.ycombinator.com/item?id=45472319",
-    "comments": [
-      "Reminds me of PoC||GTFO.Loads of fun in this and in that. And does indeed make me sometimes question if I know anything about programming (in a good way:)reply",
-      "This was a joy to read on a lovely Saturday morning. The Sound hacking  one was incredibly interesting. I\u2019d love to hear the waveform! Also, note to self, don\u2019t use shit chinese cameras\u2026reply",
-      "Page 55 is particularly brilliant, where the author roots a camera just by playing a carefully crafted sound at it.Reminds me of when we used to load programs off of audio cassette tapes back in the day. Also it, somewhat obliquely, reminds me of BLIT by David Langford.reply",
-      "My first computer was a Tandy CoCo TRS-80 with an audio cassette tape. Just yesterday I was using AI to formulate a plan to create graphics for a BASIC program.I don\u2019t know if I\u2019ll build something, because there might not be much point, but I sure have a lot of nostalgia for these old systems.reply",
-      "Page 58*reply",
-      "This is brilliant idea, well executed, and god darn it's using some pretty art. It's a shame reading it from a pdf though, and the print on demand options are quite pricey. I'd gladly subscribe to get this kind of thing in the mail though.reply",
-      "> shame reading it from a pdf though,What makes it such a shame? It's full color, properly formatted, and nothing is missing. Looks beautiful on my color e-ink device.reply",
-      "Mailed printed subscriptions for a decent price are somewhere on our TODO list. First we want to make it available for free on more events (like conferences, demoparties, etc).reply",
-      "You can subscribe https://groups.google.com/forum/#!forum/pagedout-notificatio... (link from the bottom of the page https://pagedout.institute/)reply",
-      "I think gp meant a physical/print copy in the snail mailreply"
-    ],
-    "link": "https://pagedout.institute/download/PagedOut_007.pdf",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Thunderscan: A clever device transforms a printer into a scanner (2004) (folklore.org)",
-    "points": 135,
-    "submitter": "dtgriscom",
-    "submit_time": "2025-10-04T12:16:37 1759580197",
-    "num_comments": 23,
-    "comments_url": "https://news.ycombinator.com/item?id=45472765",
-    "comments": [
-      "I stumbled across the article about the ThunderScan in about 2012 when looking for info about ImageWriter II upgrades, and have been slightly obsessed ever since. It's such a brilliant idea - a higher resolution scanner, that was far lower in cost than its competitors, achieved by reusing the paper transport that most customers already had.I'm lucky enough to own two working ThunderScans now (and one third one that I needed the software driver from). They work exactly as advertised, and it's a joy to see them zip across the page, digitising line by line.The software by Hertzfeld is another joy to use. The scrolling, which Hertzfeld calls \"inertial scrolling\" in that article, is now familiar to us all who have used touchscreen devices. It's funny to think that the feature that wowed so many at the 2007 iPhone launch actually existed all the way back in 1984, designed by one of the key creators of the Macintosh.I wish there were more creative hacks like this - I just know that if a company tried to do something similar today, the printer manufacturer would instantly roll out an update to break this functionality.reply",
-      "I wonder why the system didn't caught on and why it's not used today by manufacturers of multi-functional printers. Seems like a huge opportunity to use the existing paper handling mechanism - with an autofeeder, a feature most flatbeds lack! - and get a  more compact device.The entire device consists of a single, cheap CMOS image sensor, a lens focused at a fixed distance and a RGB led. Everything else, stitching the resulting scanbands, correcting for mechanical and optical distortions, etc. is all in software. The native optical resolution you could expect from, say, a 1080x720 px sensor would be something like 2400 DPI.The only downside i can think is that you can't scan IDs, passports etc. and the location near the inkjet head tends to get dirty.reply",
-      "Canon tried with some Bubblejet printers, like BJC4300. It needed three passes per line (R,G,B) slow and lower quality.I think also it was expensive, since I wanted to get it, but failed to find it.OTOH, a 10 year old HP multifunction can scan things at 600DPI in acceptable quality and detail, in a very reasonable amount of time.If you want to go compact, but fast, there's Kodak Alaris' \"i\" series scanners which can scan both sides at the same time. Scan time is ~4 seconds per double sided A5 page at 600DPI, and less than a second for ~200 DPI.That thing zips, but is not cheap.reply",
-      "You can get cheap, compact scanners that just feed the paper through instead of laying it on a flat pane of glass. Almost the same thing except not multifunctional and with a page width sensor instead of one that would scan back and forth.reply",
-      "100,000 units sold, software royalty of $7.50 a unit -- I make that a little over $2M in today's money. Not bad for what seems to have been about two months work.reply",
-      "When I first saw the $7.50 royalty, I was thinking he\u2019d make a decent payday as long as they sell 10K-20K of the things. Very surprised they sold 100K seems like a lot for the mid-80s for a relatively niche Mac accessory.reply",
-      "Everyone with a Mac had an ImageWriter\n printer; the scanner attachment was, by far, the cheapest way to add scanning capability. Many people bought them to add the capability, not because they needed them already.A little later, the LaserWriter printer became the first generally affordable laser printer. But it was affordable only if you were rich or had a business case for it. The sub-thousand dollar laser printer took quite a few more years.reply",
-      "That really is the dream, isn\u2019t it. To find work that is interesting, impactful, that you are uniquely qualified to do, and to be compensated handsomely for it.It was probably easier to come by in 1987. Nowadays if you have a unique idea in computing, there\u2019s 40 years\u2019 worth of computing professionals around to step in and take the job.reply",
-      "IIRC, one of the 8-bit Atari magazines had an article describing a similar setup back in the mid/later 80s.  Basically, put a photoresistor in a shroud (I used the cap from a Bic pen and some electrical tape), attach it to the dot matrix print head and wire it to the Atari joystick port's analog/paddle input.  Place a bright light over the printer.  Then the software told the printer to move the print head back and forth while it read the port value.  The image quality was terrible but it was a fun project.reply",
-      "Neat! I remember this thing from when I was a kid. We didn't have an Imagewriter printer so it wasn't an option for me. Having a scanner back in those days would have been amazing.There is a nice reverse engineering of the Thunderscan here: https://beefchicken.com/retro/thunderscan/reply"
-    ],
-    "link": "https://www.folklore.org/Thunderscan.html",
-    "first_paragraph": "The first project that I worked on for Apple after starting in August 1979 was writing low level software for the Silentype printer (see What Hath Woz Wrought), a cute, inexpensive thermal printer for the Apple II, that was based on technology licensed from a local company named Trendcom.  In typical Apple fashion, we improved on Trendcom's design by replacing their relatively expensive controller board with a much simpler one that relied on the microprocessor in the Apple II to do most of the dirty work."
   }
 ]
