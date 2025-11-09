@@ -1,382 +1,358 @@
 [
   {
-    "title": "Why is Zig so Cool? (nilostolte.github.io)",
-    "points": 111,
+    "title": "Ironclad \u2013 formally verified, real-time capable, Unix-like OS kernel (ironclad-os.org)",
+    "points": 92,
     "submitter": "vitalnodo",
-    "submit_time": "2025-11-07T23:04:39 1762556679",
-    "num_comments": 33,
-    "comments_url": "https://news.ycombinator.com/item?id=45852328",
+    "submit_time": "2025-11-08T23:03:10 1762642990",
+    "num_comments": 12,
+    "comments_url": "https://news.ycombinator.com/item?id=45860843",
     "comments": [
-      "A neat little thing I like about Zig is one of the options for installing it is via PyPI like this: https://pypi.org/project/ziglang/  pip install ziglang\n\nWhich means you don't even have to install it separately to try it out via uvx. If you have uv installed already try this:  cd /tmp\n  echo '#include <stdio.h>                     \n  \n  int main() {\n      printf(\"Hello, World!\");\n      return 0;\n  }' > hello.c\n\n  uvx --from ziglang python-zig cc /tmp/hello.c\n  ./a.outreply",
-      "That's really cool actually. Now that AI is a little more commonly available for developer tooling I feel like its easier than ever to learn any programming language since you can braindrain the model.reply",
-      "The standard models are pretty bad a zig right now since the language is so new and changes so fast. The entire language spec is available in one html file though so you can have a little better success feeding that for context.reply",
-      "I totally vibe with the intro but then the rest of the article goes on to be a showcase bits of zig.I feel what is missing is how each feature is so cool compared to other languages.As a language nerd zig syntax is just so cool. It doesn\u2019t feel the need to adhere to any conventions and seems to solve the problems in the most direct and simple way.An example of this declaring a label and referring to a label. By moving the colon to either end it makes labels instantly understood which form it is.And then there is the runtime promises such as no hidden control flow. There are no magical @decorators or destructors. Instead we have explicit control flow like defer.Finally there is comptime. No need to learn another macro syntax. It\u2019s just more zig during compilationreply",
-      "I was also curious what direction the article was going to take. The showcase is cool, and the features you mentioned are cool. But for me, Zig is cool is because all the pieces simply fit together with essentially no redundancy or overloading. You learn the constructs and they just compose as you expect. There's one feature I'd personally like added, but there's nothing actually _missing_. Coding in it quickly felt like using a tool I'd used for years, and that's special.Zig's big feature imo is just the relative absence of warts in the core language. I really don't know how to communicate that in an article. You kind of just have to build something in it.reply",
-      "Yeah, the real strength of Zig isn't what's there, but what isn't.reply",
-      "out of curiosity, what feature do you want?reply",
-      "matklad did it justice in his post here, in my opinionhttps://matklad.github.io/2025/08/09/zigs-lovely-syntax.htmlreply",
-      "I've tried writing a similar post, but I think it's a bit difficult to sound convincing when talking about why Zig is so pleasant. it's really not any one thing. it's a culmination of a lot of well made, pragmatic decisions that don't sound significant on their own. they just culminate in a development experience that feels pleasantly unique.a few of those decisions seem radical, and I often disagreed with them.. but quite reliably, as I learned more about the decision making, and got deeper into the language, I found myself agreeing with them afterall. I had many moments of enlightenment as I dug deeper.so anyways, if you're curious, give it an honest chance. I think it's a language and community that rewards curiosity. if you find it fits for you, awesome! luckily, if it doesn't, there's plenty of options these days (I still would like to spend some quality time with Odin)reply",
-      "I think what sums up Zig for me, is that it's a low level language with a (relatively) limited featureset, but there are a lot of well-designed features that make it feel much higher level at times.For example, there is no language-level support for iterators. But with optionals, and in particular while loop optional unwrapping, it feels quite similar to other languages that do:  var iter = std.mem.splitScalar(u8, \"apple;orange;banana\", ';');\n  \n  while (iter.next()) |fruit| {\n    ... \n  }reply"
+      "Interesting project. I'm curious about the limits of formal verification of worst case execution time. There are other formally verified kernels like seL4 and atmosphere, as well as layers you can stack on top to get a mostly compatible posix-ish layer like genode. You can also go out and find completely compatible kernels with enough maturity that (full) formal verification isn't a major value-add, like QNX or VxWorks.I'm not aware of much that combines WCET + formal verification + POSIX compatibility though. The verification page here is mostly at stone level, which from my understanding of SPARK terminology just means it passes validation, but might have runtime errors where most of Ada's WCET nondeterminism comes from. I'm skeptical that this is actually production usable for the hard real-time use cases all over their documentation at the current stage, but nothing on the website gives any clue as to the actual maturity short of reading the code myself.reply",
+      "Any government can get RCE on any OS with the change in their couch.  Formal verification of process isolation is REALLY important when lives depend on it.  That's a huge value add!My main concern is speed and the lack of capability based security.  seL4 is faster than Linux by a mile and I'm guessing that this is much slower.  You can put a POSIX layer on seL4 but POSIX is inherently flawed too.  MAC separates privileges from code and is too clunky to use in practice (see seLinux).reply",
+      "It does not have to remain at stone level, and it can get legit certifications, too.Looking forward to it. A formally verified OS is a great step towards better security.reply",
+      "There is an NDA related company called ironclad as well. Beware the trademark/copyright terrorists.That said, I am huge fan of works like this. But in practice, the security layer that betrays all of this tends to be the firmware layer.My dream is to have something like the Framework computer use verifiably secure EFI firmware, as well as similarly verified and audited firmware for every hardware component.reply",
+      "You might want to check out MNT Research if you haven\u2019t yet. They make repairable laptops, too, but they also release their work as free software and open hardware.https://mnt.re/reply",
+      "You need a different kernel for firmware verification.  But it should be regulated at this point.reply",
+      "Is there a technical reason it only supports x86_64, riscv64, and not arm64?reply",
+      "Building new operating systems seems so ambitious to me. Radiant Computer (https://radiant.computer/) was also recently posted.What other exciting projects like these exist?reply",
+      "https://asterinas.github.io/ (Linux compatible Kernel) and https://redox-os.org/ are two promising ones.reply",
+      "https://serenityos.org/reply"
     ],
-    "link": "https://nilostolte.github.io/tech/articles/ZigCool.html",
-    "first_paragraph": "I can\u2019t think of any other language in my 45 years long career that\r\nsurprised more than Zig. I can easily say that Zig is\r\nnot only a new programming language, but it\u2019s a totally new way to write\r\nprograms, in my opinion. To say it\u2019s merely a language to replace C or\r\nC++, it\u2019s a huge understatement.In this article, I will present the features that I found to be most\r\nseductive in the language, and I will also present a brief overview\r\nabout it. The goal is to present simple features for\r\nprogrammers to quick start in the language. Be aware, though, that many\r\nmore features are affecting its acceptability in the industry.Probably the most incredible virtue of Zig compiler is its ability to\r\ncompile C code. This associated with the ability to cross-compile code\r\nto be run in another architecture, different than the machine where it\r\nis was originally compiled, is already something quite different and\r\nunique. These features alone, completely\r\nout-of-the-box, are causing an incredible i"
+    "link": "https://ironclad-os.org/",
+    "first_paragraph": "\n            Ironclad is a formally verified, real-time capable, UNIX-like\n            operating system kernel for general-purpose and embedded uses. It is written in\n            SPARK and\n            Ada, and\n            is comprised of 100% free software.\n          \n            Ironclad features a familiar POSIX-compatible interface, true\n            simultaneous preemptive multitasking, Mandatory Access Control (MAC),\n            and support for hard real-time scheduling.\n          \n              Ironclad is fully open source and distributed under the GPLv3, ensuring\n              it remains free. No firmware blobs are needed or shipped with the\n              kernel. Every piece of the stack is open source.\n            \nSPARK's state of the art formal verification is employed for ensuring\n              absence of errors and correctness of huge swathes of Ironclad, like\n              cryptography, MAC, and user-facing facilities.\n            \n              Ported to several platforms"
   },
   {
-    "title": "Becoming a Compiler Engineer (rona.substack.com)",
-    "points": 86,
-    "submitter": "lalitkale",
-    "submit_time": "2025-11-07T21:45:03 1762551903",
-    "num_comments": 30,
-    "comments_url": "https://news.ycombinator.com/item?id=45851495",
+    "title": "Marko \u2013 A declarative, HTML\u2011based language (markojs.com)",
+    "points": 189,
+    "submitter": "ulrischa",
+    "submit_time": "2025-11-08T18:43:55 1762627435",
+    "num_comments": 96,
+    "comments_url": "https://news.ycombinator.com/item?id=45858905",
     "comments": [
-      "This is a personal puff piece. Her accomplishments are impressive and well deserved, but she needn't use the title of 'Becoming a Compiler Engineer' as an attack vector to get people interested in understanding how to write a compiler to read her greatest hits of her early to mid 20s.The way to become a compiler engineer by definition is to try and write a compiler , for which the best course of action is to focus on learning how tokenizing, ast building, typechecking, and various intermediate representations work.I don't pretend to know what's the best tutorial for this, but I think this is a fairly good one:https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index...This is for LLVM, but I think doing basic codegen from generic SSA is not a huge leap from this point if one wants to build an entire compiler from scratch.You do not need to be 'goes to MIT' level of smart, but you do have to understand the basic concepts, which I think is an absolutely manageable amount - about a scope of a couple hundred page paperback or a single challenging CS course worth of info to get started.reply",
-      "LLVM is certainly not a recommended way to start. That would be to start with a small lisp or ocaml compiler. There you have all the batteries included and the project would still be small enough.reply",
-      "Tangential but since she mentions her book, \"You Had Me At Hello World\", is the cutest title for a nerd romance novel that I can imagine.reply",
-      "I'm thinking \"et tu btrfs?\"reply",
-      "> I was seriously considering starting a compilers YouTube channel even though I\u2019m awkward in front of the camera.Doesn\u2019t need to be a YT channel, a blog where you talk about this very complex and niche stuff would be awesome for many.reply",
-      "Interesting article to get a bit more knowledge about the field. I went quickly trough some of the books cited and I have the same feeling that they\u2019re not very practical. Also I didn\u2019t find many practical books about LLVM either.I would like to read in the future about what is the usual day of a compiler engineer, what you usually do, what are the most enjoyable and annoying tasks.reply",
-      "Very interesting and informative!I'm a bit shocked that it would take significant effort/creativity for an MIT grad with relevant course/project work to get a job in the nicheI would have thought the recruiting pipeline is kinda smoothAlthough maybe it's a smaller niche than I think -- I imagine compiler engineers skew more senior.  Maybe it's not a common first or second jobI graduated at the bottom of bear market (2001), and it was hard to get a job.  But this seems a bit differentreply",
-      "It's definitely a pretty small world, and to make things worse there are sub-niches -- between which there's certainly cross-pollination, but that's still a barrier to people looking to change jobs. Frontend language semantics (where most PL papers focus) vs. middle-and-back end optimization and hardware support; AoT compilers vs. JITs; CPU targets vs. a blossoming array of accelerators, etc.Beyond that, I've definitely interviewed people who seemed like they could have been smart + capable but who couldn't cut it when it came to systems programming questions. Even senior developers often struggle with things like memory layouts and hardware behavior.reply",
-      "> I'm a bit shocked that it would take significant effort/creativity for an MIT grad with relevant course/project work to get a job in the nicheThat bit was heartbreaking to me too. I knew the economy was bad for new grads but if a double major from MIT in SF is struggling, then the economy is cooked.reply",
-      "I'm almost more interested in how a 20-something with no apparent prior pedigree lands a Simon and Schuster debut novel contract!reply"
+      "It looks interesting and in a past life I probably would have tried it out but do you know why I like React? Because it's just JavaScript.This `<let/variable=...>` and `<for ...>` syntax is awful.reply",
+      "I mostly agree with you but React isn\u2019t just JavaScript. JSX is not JavaScript. It\u2019s just that we\u2019re so used to it we don\u2019t consider it notable any more. Worth keeping in mind when you\u2019re looking at a brand new framework.reply",
+      "I mean, you\u2019re technically correct. But you\u2019re also not understanding the point.What people mean when they say \u201cReact is just JavaScript\u201d is\u20261) JSX, more than any other templating system, is just HTML interleaved with JavaScript. It\u2019s HTML, and anything between { and } is evaluated as JavaScript.2) Inserting a React component\u2019s \u201cHTML tag\u201d in your JSX is _actually_ the same as calling the JavaScript function. The HTML attributes are the function arguments. Yes, inside your function there can be state, and there can be contexts, and there are refs. But you get at all of those things by calling JavaScript functions.Like,      <b><MyComponent attr=\u201cyes\u201d /></b>\n\nis literally identical to:      <b>{MyComponent({ attr: \u201cyes\u201d })}</b>\n\nIt\u2019s the tiniest bit of syntactic sugar.I feel like too many people think \u201cReact is Just JavaScript\u201d is some kind of lie people tell to make React sound cool.It\u2019s not a lie. There\u2019s a _small_ amount of hand waving around the word \u201cjust\u201d but the point is, it\u2019s WAY smaller than what you need to explain the ways Svelte or Vue or Angular diverge from plain JavaScript.reply",
+      "> JSX, more than any other templating system, is just HTML interleaved with JavaScript. It\u2019s HTML, and anything between { and } is evaluated as JavaScript.That\u2019s not true though and IMO is one of the weaknesses of JSX: it looks like something it is not. Having to use className instead of class is one of the most obvious tells. But in theory if it was just HTML with {}s I should be able to do:- `<{tagName} />`\n- `<span {someTextContent} />and many other things I\u2019m actually not able to do.",
+      "I don't think the syntactic sugar works how you describe. JSX components actually desugar to something like:   <b>{jsx(MyComponent, { attr: \"yes\" })</b>\n\n(Previously this function was called \"React.createElement\",  but these days they have special functions that only the JSX compiler is allowed to use.) The extra layer of indirection is needed to do things like support hooks being called inside of MyComponent's function body, keep track of `key` props, and so on.reply",
+      "And this is one of the disadvantages of JSX. The snippets you posted are NOT identical.JSX (react flavor) is lazy. <My component> is not rendered/evaluated until it's needed.You can't just call a react component. It's not a regular function call.reply",
+      "It's further than that even. JSX has the semantics of (modulo a couple of optimisations there and there) a bunch of nested function calls returning normal JavaScript objects. That means you can, in your head, very easily convert between the JSX representation of an expression and the equivalent transpiled JavaScript code.This is unlike a lot of other templating languages where, even if the expression part of the language is pure JavaScript (or PHP or Python or whatever), it's still interleaved with arbitrary text which will get printed out according to its own rules. This makes the whole thing much harder to reason about (leading to the philosophy that you should put as little logic as possible in your templates because it makes them harder to understand, _even when that logic is directly related to the templating process_.A good example is for-loops. In a lot of templating languages, you start in text-land, then you enter expression-land to write the opening {% for (const X of ...) %} line, then you're back in text-land again. You sprinkle in a couple of expressions, and then at the end you go back to expression-land to close the loop. You're jumping backwards and forwards between the two worlds, but there's no real syntactical or structural support for mixing them.Meanwhile, in JSX, you start in text-land, then you open up an expression between two curly braces, and in that expression you write the entirety of your loop. If you need to go back to text-land within that loop, you can create a _new_ set of text nodes, but you're not interleaving expressions and text in the same way.The result of this is that, once you understand how your JSX will get compiled, it's very easy to read it as if it were the JavaScript that it will get compiled to, rather than as a separate templating language. Which in turn makes it very easy to think of it as \"just JavaScript\", even if it's technically a syntax extension.reply",
+      "It\u2019s not JavaScript if you can\u2019t make an html page locally and open it in your browser without things like an http server or need to transpile.reply",
+      "There are a lot of things people might mean by claiming that something \"is just JavaScript,\" but one possible meaning is that the source code you write can run in the browser without any build whatsoever. For React, that's true with the exception of JSX, which is a very simple and optional syntax transform. (Of course in practice you'll probably want to do module bundling too, but browsers could technically load your ES modules directly from static file storage.For Marko, that doesn't seem to be the case, but it also doesn't really make sense given the problems that Marko is trying to solve.Another thing people might mean by \"it's just JavaScript\" is a much more subjective notion about how similar the overal syntax, control flow, etc. feels to whatever previous JavaScript experience the person has. This meaning is a lot harder to pin down, and in most cases reasonable people could disagree on what is and isn't \"just JavaScript\" according to this meaning. That said, I would tend to agree that React's templating uses normal JavaScript control flow and composition primitives more so than Marko.reply",
+      "That's true, sure. My response to that is in React you have JavaScript & JSX and there are clear boundaries. It's not mixed. I don't write<for ...>In JSX I write JavaScript that returns JSX:{data.map(node => <Element {...node} />)}^ ----- JS ----^ ^ ------ JSX -------^orconst elements = data.map(node => <Element {...node} />)\n...\n<div>{elements}</div>Really the most obscure syntax there is the splatting but it makes sense to you when you realize that JSX is just syntactic sugar for JS:data.map(node => React.createElement(Element, { ...node }))reply"
     ],
-    "link": "https://rona.substack.com/p/becoming-a-compiler-engineer",
+    "link": "https://markojs.com/",
+    "first_paragraph": "Powering high-traffic, production-grade websites like eBay.comIf you know HTML, CSS, and JavaScript, you know MarkoStreaming, resumable, optimizing compiler, and a tiny runtimeFrom simple HTML templates to powerful components as neededMarko is HTML re\u2011imagined as a language for building dynamic and reactive user interfaces.Just about any valid HTML is valid Marko, but Marko extends the HTML language to allow building modern applications in a declarative way.Marko streams content to your users as soon as it's ready. No waiting for client side JavaScript bundles or data requests to start rendering.HTML, assets, and images are loaded as soon as possible with asynchronous content loading in as it completes.Why ship entire Islands for a few grains of sand? Marko ships only what's needed, skipping hydration and stripping unused code at the sub-template level.Lean by default. Fast by design. Unrivaled performance on any device or network.Browsers and servers are built differently, shouldn't y"
+  },
+  {
+    "title": "Largest cargo sailboat completes first Atlantic crossing (marineinsight.com)",
+    "points": 94,
+    "submitter": "defrost",
+    "submit_time": "2025-11-08T19:57:52 1762631872",
+    "num_comments": 42,
+    "comments_url": "https://news.ycombinator.com/item?id=45859471",
+    "comments": [
+      "I love that they're trying this. It appears the more practical goal might be retrofitting existing vessels with large sails to augment the motors, but making a point with a fully wind-powered vessel is a good show. Well, it would have been fully wind powered if not for the damaged sail. Good on them for sticking with the journey, though. I hope they keep running the vessel and get a few more fully wind powered journeys.reply",
+      "I have a dim recollection of exactly this as a VC proposal likely put to YC in the past 24 months or so.I think the notion was to fit masts to existing container ship and stacks, and I gsve it scant attention as my intuition (I once studied actual civil/mech engineering prior to jumping ship for applied math) suggested masts are better as integral parts of ships rather than bolt on after thoughts.EDIT: Wingsails to reduce cargo ship fuel consumption (April 2023)https://news.ycombinator.com/item?id=35426482  I\u2019m Joseph, and along with Arpan and Bailey we are the founders of OutSail Shipping. We\u2019re building a sail the size of a 747 that rolls up into a shipping container.\n\nhttps://outsailshipping.com/ https://www.linkedin.com/company/OutSail-Shipping/  When deployed, it will generate thrust from the wind to reduce the fuel consumption of a cargo ship. An array of these devices will reduce fuel consumption on ships by up to 20%. These sails are easily stowed and removed to cause no interference with cargo operations.\n\n  Here\u2019s a short video showing our prototype:\n\nhttps://www.youtube.com/watch?v=VUpVqzpym54Not quite as I remembered .. kite sails, et al. are a good idea, I'm still a bit torn by the physics of a container deployed boom extension sail and the thrust transmission to the ship. Still, I haven't modeled it, so take my thoughts with a grain of salt.EDIT2: Both links appear dead, so I guess that was a swing and a miss. Still, good to see such ideas pursued.EDIT3: Also related350 tons of of chocolate and wine arrive on world\u2019s largest cargo sailboat (April 2024)https://news.ycombinator.com/item?id=40022801reply",
+      "\"suggested masts are better as integral parts of ships rather than bolt on after thoughts.\"It seems quite mad that we even need to debate this.  Wind is free power and we have at least 2000 years of engineering to draw on how to use it.Any propulsion unit needs to be effectively attached to a ship.  Screws are attached longitudinally, low down and push.  Sails are a bit more tricksy.  A triangular sail mounted along the long axis will generally work best because it can handle more wind angles but a square sail mounted across the long axis will provide more power on a \"reach\" to a \"run\" (the wind is mostly from behind, so pushing).The cutting edge of sailing ships that carried stuff are the tea clippers.  Think \"Cutty Sark\" which is now a visitor attraction in London, Greenwich.  Note the stay sails - the triangular sails at the front.  Then note the three masts.  Each mast has several main sails that are huge rectangles for \"reaches\" and additional extensions.  There are even more triangular infill sails above the main sails.It's quite hard to explain how wind and sails work but you need to understand that a sailing ship can sail \"into the wind\".  Those triangles are better at it than those rectangles but those rectangles can get more power by being bigger.  Even better, you can use the front triangular sails (stay sails) to moderate the wind to feed the other sails with less turbulent wind.Wind is free power and it is so well understood.  How on earth is this news?reply",
+      "This is an area I have some peripheral involvement with. For retrofitted sails on bulkers, the figure of 10% saving in fuel is the usual one mentioned rather than 20%. However given the long life of ships, there is much more interest in retrofit than in new build.You mention container ships. I haven't seen anything explicit on these, and I think the reason is probably that they cruise much faster than bulkers and tankers, which means the potential savings from sail is smaller. I would have thought 20% optimistic even for a new-build.reply",
+      "Retro fit is clearly a preferred path for a new approach given ship life spans and size of existing global transport fleet.My gut objection to the container approach taken above in the first link was existing container locking mechanisms for ships can struggle in severe weather to keep the boxes on the boat .. additional forces from a sail (in good weather) might well mimic the forces that break stacks in bad weather.Your point is well taken, I might suggest that container ships could be segregated into fast and slow cargo and that might help somewhat with total fleet fuel consumption. (pure spitball notion).reply",
+      "Wasn't the main issue with this that fuel is paid for by cargo ship customers (the container owners), not the shipping company? So the shipping company doesn't want to spend a ton of capital to get a 10% discount to all their customers, and there was no way for thousands of random customers to exert pressure on the shipping company to do so. Basically the economics didn't make sense.reply",
+      "Thought I may go see it in person but looks like it\u2019s about half way home already.https://www.marinetraffic.com/en/ais/details/ships/shipid:96...reply",
+      "\"World\u2019s Largest Cargo Sailboat Completes Historic First Atlantic Crossing Using Auxillary Engine\"Fixed it.I am pretty sure there is a reason why the very fast Clippers were replaced by steam engines 150 years ago. I guess we can learn why again.reply",
+      "This seems to be a tiny vessel ... just 5000 tons of cargo.  Most container ships carry more like 200,000 tons of cargo.  Can sails scale to carry that much cargo?  If not, I fear the economics will not work out for sails alone.  Perhaps sails plus something else makes more sense?reply",
+      "Sails scale.  You can make them out of steel if necessary - the wind does not care what it pushes.reply"
+    ],
+    "link": "https://www.marineinsight.com/shipping-news/worlds-largest-cargo-sailboat-completes-historic-first-atlantic-crossing/",
     "first_paragraph": ""
   },
   {
-    "title": "Analysis of Hedy Lamarr's Contribution to Spread-Spectrum Communication (researchers.one)",
-    "points": 22,
-    "submitter": "drmpeg",
-    "submit_time": "2025-11-07T23:42:01 1762558921",
-    "num_comments": 11,
-    "comments_url": "https://news.ycombinator.com/item?id=45852642",
+    "title": "Study identifies weaknesses in how AI systems are evaluated (ox.ac.uk)",
+    "points": 292,
+    "submitter": "pseudolus",
+    "submit_time": "2025-11-08T14:18:22 1762611502",
+    "num_comments": 153,
+    "comments_url": "https://news.ycombinator.com/item?id=45856804",
     "comments": [
-      "The stories of Hedy Lamarr and the computer women at NASA get repeated endlessly as if they're the only contributions women have ever made to CS, which must be absolutely discouraging to the young girls who are interested enough to dig deeper and find out that Hedy's contribution was essentially negligible.It'd be much better to talk about Liskov, Goldberg, the women at Bluetooth SIG, or the countless other examples available.reply",
-      "It's HEDLEY!reply",
-      "Quote is from Blazing Saddles.1:28https://youtu.be/g2Bp8SqYrnEHe says it many times in the film.reply",
-      "The name \"Hedley Lamarr\" was, obviously, a play on Hedy Lamarr, who sued the filmmakers for using her name.reply",
-      "Mel Brooks did not even try to defend against this. He is a huge admirer of her. He thought it was appropriate to pay her and apologise for any offence she may have taken from the gag.\nhttps://www.instagram.com/reel/DQef9PqjKbG/",
-      "No it\u2019s not? Her Wikipedia page says \u201cHedy\u201dreply",
-      "It\u2019s a quote from a running joke in the film Blazing Saddlesreply",
-      "It's a reference to a famous Mel Brooks cowboy comedy (Unforgiven, 1992)reply",
-      "Which itself was a sequel to Brooks's first and underappreciated Western, The Wild Bunch (1969)reply",
-      "[dead]"
+      "I work on LLM benchmarks and human evals for a living in a research lab (as opposed to product). I can say: it\u2019s pretty much the Wild West and a total disaster. No one really has a good solution, and researchers are also in a huge rush and don\u2019t want to end up making their whole job benchmarking. Even if you could, and even if you have the right background you can do benchmarks full time and they still would be a mess.Product testing (with traditional A/B tests) are kind of the best bet since you can measure what you care about _directly_ and at scale.I would say there is of course \u201cbenchmarketing\u201d but generally people do sincerely want to make good benchmarks it\u2019s just hard or impossible. For many of these problems we\u2019re hitting capabilities where we don\u2019t even have a decent paradigm to use,reply",
+      "For what it's worth, I work on platforms infra at a hyperscaler and benchmarks are a complete fucking joke in my field too lol.Ultimately we are measuring extremely measurable things that have an objective ground truth. And yet:- we completely fail at statistics (the MAJORITY of analysis is literally just \"here's the delta in the mean of these two samples\". If I ever do see people gesturing at actual proper analysis, if prompted they'll always admit \"yeah, well, we do come up with a p-value or a confidence interval, but we're pretty sure the way we calculate it is bullshit\")- the benchmarks are almost never predictive of the performance of real world workloads anyway- we can obviously always just experiment in prod but then the noise levels are so high that you can entirely miss million-dollar losses. And by the time you get prod data you've already invested at best several engineer-weeks of effort.AND this is a field where the economic incentives for accurate predictions are enormous.In AI, you are measuring weird and fuzzy stuff, and you kinda have an incentive to just measure some noise that looks good for your stock price anyway. AND then there's contamination.Looking at it this way, it would be very surprising if the world of LLM benchmarks was anything but a complete and utter shitshow!reply",
+      "> we completely fail at statistics (the MAJORITY of analysis is literally just \"here's the delta in the mean of these two samples\". If I ever do see people gesturing at actual proper analysis, if prompted they'll always admit \"yeah, well, we do come up with a p-value or a confidence interval, but we're pretty sure the way we calculate it is bullshit\")Sort of tangential, but as someone currently taking an intro statistics course and wondering why it's all not really clicking given how easy the material is, this for some reason makes me feel a lot better.reply",
+      "\u201cHere\u2019s the throughout at  sustained 100% load with the same ten sample queries repeated over and over.\u201d\u201cThe customers want lower latency at 30% load for unique queries.\u201d\u201cErr\u2026 we can scale up for more throughput!\u201d\u0ca0_\u0ca0reply",
+      "Id say your experience is being more monetized for growth for growth sake.reply",
+      "In AI though, you also have the world trying to compete with you, so even if you do totally cheat and put the benchmark answers in your training set and over fit, if it turns out that you model sucks, it doesn't matter how much your marketing department tells everyone you scored 110% on SWE bench, if it doesn't work out that well in production, your announcement's going to flow as users discover it doesn't work that well on their personal/internal secret benchmarks and tell /r/localLLAMA it isn't worth the download.Whatever happened with Llama 4?reply",
+      "Even a p-value is insufficient. Maybe can use some of this stuff https://web.stanford.edu/~swager/causal_inf_book.pdfreply",
+      "I have actually been thinking of hiring some training contractors to come in and teach people the basics of applied statistical inference. I think with a bit of internal selling, engineers would generally be interested enough to show up and pay attention. And I don't think we need very deep expertise, just a moderate bump in the ambient level of statistical awareness would probably go a long way.It's not like there's a shortage of skills in this area, it seems like our one specific industry just has a weird blindspot.reply",
+      "Don\u2019t most computer science programs require this? Mine had a statistics requirementreply",
+      "I don't know how it is in the US and other countries, but in my country I would say statistics is typically not taught well, at least in CS degrees. I was a very good student, always had good understanding at the subjects at university, but in the case of statistics they just taught us formulae and techniques as dogmas without much explanation of where they came from, why, and when to use them. It didn't help either that the exercises we did always applied them to things outside CS (clinical testing, people's heights and things like that) with no application we could directly relate to. As a result, when I finished the degree I had forgotten most of it, and when I started working I was surprised that it was actually useful.When I talk about this with other CS people in my own country (Spain) they tend to refer similar experiences.reply"
     ],
-    "link": "https://researchers.one/articles/24.01.00001v4",
-    "first_paragraph": ""
+    "link": "https://www.oii.ox.ac.uk/news-events/study-identifies-weaknesses-in-how-ai-systems-are-evaluated/",
+    "first_paragraph": "A new study led by the Oxford Internet Institute (OII) at the University of Oxford and involving a team of 42 researchers from leading global institutions including EPFL, Stanford University, the Technical University of Munich, UC Berkeley, the UK AI Security Institute, the Weizenbaum Institute, and Yale University, has found that many of the tests used to measure the capabilities and safety of large language models (LLMs) lack scientific rigour. \u00a0In Measuring What Matters: Construct Validity in Large Language Model Benchmarks, accepted for publication in the upcoming NeurIPS conference proceedings, researchers review 445 AI benchmarks \u2013 the standardised evaluations used to compare and rank AI systems.\u00a0\u00a0The researchers found that many of these benchmarks are built on unclear definitions or weak analytical methods, making it difficult to draw reliable conclusions about AI progress, capabilities or safety.\u00a0\u201cBenchmarks underpin nearly all claims about advances in AI,\u201d says Andrew Bean, le"
   },
   {
-    "title": "Myna: Monospace typeface designed for symbol-heavy programming languages (github.com/sayyadirfanali)",
-    "points": 194,
-    "submitter": "birdculture",
-    "submit_time": "2025-11-07T18:27:36 1762540056",
-    "num_comments": 75,
-    "comments_url": "https://news.ycombinator.com/item?id=45849342",
-    "comments": [
-      "Very nice and condensed.  The same reason I switched to Iosevka (Joseph), recently:https://github.com/be5invis/IosevkaThe fun thing with Iosevka is that one stands a reasonable chance of reading the source code (as opposed to just random numbers in SplineSets etc.)reply",
-      "Beside being a neat font in its own right, Iosevka allows for custom builds with different settings, selection from a bunch glyph variants, and custom ligature choices.  It's pretty incredible.reply",
-      "My favorite monospaced font, on Windows and Mac.reply",
-      "I switched to codenewroman mono with a nerd font.Makes my terminal look amazing as well.Especially since I've been working on a color scripts compilation that relies heavily on font being accuratereply",
-      "Not trying to be negative, just confused: I don't really see how this font is \"designed for symbol-heavy languages\".  The symbols look normal to me.  Maybe the letters are a little more spaced?  I'd love to be enlightened.reply",
-      ">Near-Perfect Alignment: multi-character symbols like ->, >>=, =~, :: align seamlesslyThe GitHub page has a list with 5 items of what was the focus, this is the first (and I think the most easily noticeable) areareply",
-      "I wonder why only near-perfect.reply",
-      "there are bounds to be many many operators and glyph combinations where things don't match properly. an example is the variable declaration and initialisation symbol in Go which combines colon and equal sign. if you use Myna and come across any such examples, please raise a feature request. i only focused on glyphs for languages i use personally. but if there is interest i am open to adding contextual alternates to give some alignment in cases where changing one glyph would disturb other combinations. of course you can always point out any rendering or design issues with singular glyphs too.reply",
-      "designer here. by symbol-heavy languages i mean languages like Perl and Haskell which make heavy use of symbols (sigils in Perl and operators in Haskell). Myna was designed after my frustration with other monospace fonts combined with my (self-imposed) inability to use ligatures.reply",
-      "I think it might be useful to put some screenshots of other fonts on your page, to show what symbol or alignment problems yours corrects. Because I've studied a lot of typeface design, and I can't really figure out what you're doing, what pain points you're trying to address.Because when you say \"and $, @, % seem ever mismatched?\", I don't have the slightest idea what you're talking about. I certainly am curious though, since you went to all the work of building a new typeface!And when you talk about fixing alignment, like all of these seem correctly vertically aligned with each other here on HN at least in monospace mode:  <->=+-~\n\nSo if you could demonstrate what it is fixing with reference to the most common monospace system/coding fonts, I think that would help a ton.reply"
-    ],
-    "link": "https://github.com/sayyadirfanali/Myna",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        monospace typeface designed for symbol-rich programming\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.\n\nDo you ever feel like your font treats symbols as second-class glyphs? Are you frustrated that -> looks nothing like an arrow, and $, @, % seem ever mismatched?Want to experience the beauty of ligatures without losing the simplicity of ASCII?Myna (Gracula religiosa \ud83d\udc26\u200d\u2b1b) is a monospace font which aims to bring harmony to your editor by treating symbols as first-class glyphs alongside alphanumeric characters.Myna was borne out of a need to scratch a persistent typographical itch. While I've tried many otherwise well-crafted monospace fonts, I always found myself wanting to tweak a glyph here or adjust a shape there. After developing Myna and using it almos"
-  },
-  {
-    "title": "Immutable Software Deploys Using ZFS Jails on FreeBSD (conradresearch.com)",
+    "title": "Characterizing the American Upper Paleolithic (science.org)",
     "points": 12,
-    "submitter": "vermaden",
-    "submit_time": "2025-11-08T00:21:45 1762561305",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=45852895",
-    "comments": [
-      "For those unfamiliar with FreeBSD, this is using base OS tools to manually create this type of immutable jail/container. This can be done with 'less effort' by using a jail manager.reply",
-      "Isn't this just docker with extra steps?reply",
-      "No.ZFS has been stable in FreeBSD for something like 17 years, and FreeBSD jails have been around for something like 25 years.By the time Docker hit 1.0 (about 11 years ago), snapshots and jails had been normal parts of life in the FreeBSD space for over half of a decade.reply"
-    ],
-    "link": "https://conradresearch.com/articles/immutable-software-deploy-zfs-jails",
-    "first_paragraph": "FreeBSD\u2019s native support for ZFS snapshots and jails provides a powerful foundation for immutable deployments. By creating a new jail from a ZFS snapshot for every release, we get instant roll\u2011backs, zero\u2011downtime upgrades, and a clean, reproducible environment. This article walks through the (very opinionated) flow that we use. From jails setup through running Caddy as a health\u2011checked reverse proxy in front of the jails.FreeBSD 14+ (or the latest stable release) offers the necessary ZFS and jail primitives. Enabling ZFS with a zpool installed allows cheap, instant cloning. The Caddy v2 binary handles TLS, reverse-proxying, and health checks.Create a new loopback network interface for the jails. We'll use 172.16.0.0/12 which means jails can use any IP address within the range 172.16.0.1 \u2013 172.31.255.254. Then create a new service to manage the loopback interface via a file at '/usr/local/etc/rc.d/lo1' with the following content:Then make the service start at boot and enable it:Now we "
-  },
-  {
-    "title": "How did I get here? (how-did-i-get-here.net)",
-    "points": 110,
-    "submitter": "zachlatta",
-    "submit_time": "2025-11-07T20:01:09 1762545669",
-    "num_comments": 33,
-    "comments_url": "https://news.ycombinator.com/item?id=45850382",
-    "comments": [
-      "> This reverse traceroute is still helpful. The paths will be roughly the same, likely differing only in terms of which specific routers see your packet.This is categorically incorrect. While the AS path is often the same, the actual peering points are almost always quite different. Most ASes use hot-potato routing - getting packets to the next AS at the closest peering point to the source of the traffic. (And even if cold-potato routing is used, that's still asymmetric). In addition if there are two options with the same AS-path-length hot-potato routing can lead to different AS paths.  This can happen if there's two mutual transit providers between source and destination and various other situations.(EDIT: fixed hot/cold mixup)reply",
-      "Dealt with something similar 25 years ago as a new guy at a large bank.They had a DS3 to AT&T for Internet and a T1 to Sprint for 'back-up' in case the primary went down.  Same AS, but 75% of the Internet traffic perferred the Sprint return route.Our 'network guy' couldn't figure out why everyone in this company (100k employees) was experiencing worse than dial-up performance at their desks.  Took about 10 minutes to see what the issue was (using reverse traceroute from a looking glass server out there somewhere).As soon as we fixed that, ran into the next problem. Dude built a caching proxy server on a Sun e4500 with ONE disk.Got to be a hero for a little bit lol.reply",
-      "Anecdotally, I've run a bunch of traceroutes and reverse traceroutes to different locations and they tend to follow the same AS paths \u2014 although sometimes the traceroute will surface more routing through your ISP (especially from college networks). In general you are correct, though, and I would love to explain more about hot-potato vs. cold-potato (and other interesting routing decisions) in the future. Either way, the results the reverse traceroute provides are good enough for the purposes of explaining the internet, IMO!reply",
-      "FYI what you described is hot-potato routing: each AS gets rid of it as soon as possible.You may think this is unfair, and yes, it is, but it's also quite logical when you consider you don't know where the packet is going in the destination AS. If you have a network spanning Berlin and Hamburg and the packet is going to a different network that also spans Berlin and Hamburg, and you interconnect at both points, and you don't know which city it's actually going to, handing it off at the closest interconnect doesn't risk round-tripping it for no good reason.reply",
-      "ha yes thank you. I worked for a AS that mostly did cold-potato routing so grabbed the wrong term trying to describe the common case.reply",
-      "> \"You may have noticed that the traceroute progressively loads in lines above the bottom line. Web pages can only load forward. Since I didn\u2019t want to use any JavaScript, I did the hackiest thing possible: every time I update the traceroute display, I embed a CSS block that hides the previous iteration! Since browsers render CSS as the page is loading, this made it look like the traceroute was being edited over time.\"Love thisreply",
-      "You can also do out-of-order HTML streaming without JavaScript using declarative shadow DOM. For example:https://lamplightdev.com/blog/2024/01/10/streaming-html-out-...reply",
-      "oh yeah i saw this! newer than the website though :)reply",
-      "This is not my beautiful website.reply",
-      "This is not my beautiful home-page.reply"
-    ],
-    "link": "https://how-did-i-get-here.net/",
-    "first_paragraph": "Seems like this hit the Hacker News front page again, and my server's having some trouble serving all of you. I made some hotfixes and the traceroutes seem to be working again, but you might need to be a bit patient :)- Lexi, Nov 7, 4:19 PM PSTThis part of the page is still loading while I wait for the above traceroute to load.To reach this website, your computer sent some packets across the Internet. If we\u2019re curious what that path was, we can run a tool to generate a traceroute \u2014 a rough list of every server your packets touched to reach their destination. To build this website (source code on GitHub), I wrote my own traceroute program called ktr (also open source) that can stream results in real time while concurrently looking up interesting information about each hop.How does ktr work? Let\u2019s start with a simplified explanation of Internet routing.Starting with the source device, each computer that handles a packet has to choose the best device to forward it to \u2014 I will explain how "
-  },
-  {
-    "title": "Ruby Solved My Problem (masilotti.com)",
-    "points": 160,
-    "submitter": "joemasilotti",
-    "submit_time": "2025-11-07T18:45:35 1762541135",
-    "num_comments": 62,
-    "comments_url": "https://news.ycombinator.com/item?id=45849528",
-    "comments": [
-      "Unrelated side note, but I haven't written any Ruby in maybe 15 years or so and dammn I forgot how elegant the language is at its core. The author's AppVersion class is so nicely done, it's nuts how succinct eg the compare implementation is.Having done mostly TypeScript and Elixir lately, I had forgotten things could be so succinct yet so clear. The combo of modern (to me) Ruby's lambda syntax (in the .map call), parentheses-less function calls, the fact that arrays implement <=> by comparing each item in order, that there's an overloadable compare operator at all, having multiple value assignments in one go...  It all really adds up!In any other language I can think of real quick (TS, Elixir, C#, Python, PHP, Go) a fair number of these parts would be substantially more wordy or syntaxy at little immediately obvious benefit. Like, this class is super concise but it doesn't trade away any readability at all.Having learned Ruby before Rails became commonplace, with its love for things that automagically work (until they don't), I had kinda grown to dislike it. But had forgotten how core Ruby is just an excellent programming language, regardless of what I think of the Rails ecosystem.reply",
-      "It allocates 2 collections for every compare call and obfuscates the comparison logic. Personally I find that extremely inelegant. Different strokes I suppose.reply",
-      "Yes, the version in Java is clearly less elegant.\nJava has map+lambda and compareTo (<=>) but no tuple assignemnt and no splat.    record AppVersion(int major, int minor, int patch) implements Comparable<AppVersion> {\n      public static AppVersion of(String version) {\n        var array = Arrays.copyOf(Arrays.stream(version.split(\"\\\\.\")).mapToInt(Integer::parseInt).toArray(), 3);\n        return new AppVersion(array[0], array[1], array[2]);\n      }\n\n      public int compareTo(AppVersion other) {\n        return Comparator.comparingInt(AppVersion::major)\n            .thenComparingInt(AppVersion::minor)\n            .thenComparingInt(AppVersion::patch)\n            .compare(this, other);\n      }\n\n      public String toString() {\n        return \"%d.%d.%d\".formatted(major, minor, patch);\n      }\n    }reply",
-      "Also the copyOf isn't really the same as being able to || things since it just happens both copyOf default is 0 and in this case it is also 0 (i.e. what if it was -1 to indicate there was no version).reply",
-      "Ruby trades away quite a few things for readability. It's beautiful but a lot is being hidden.Some of those languages would have you deal with the problem of allocating multiple arrays in the heap just to compare three numbers. Or give you tools to outlaw passing invalid strings to AppVersion.new (quick: what is the comparison between AppVersions \"foo\" and \"bar\"?).Plus you have very few tools to ensure code remains beautiful. I've worked with Ruby for close to two decades, almost nothing in the real world looks that clean. Take a look at the Gem::Version#<=> implementation that the article talks about: https://github.com/ruby/ruby/blob/master/lib/rubygems/versio...reply",
-      "Wow I wonder why it's so verbose.  Performance optimizations?  Seems like this wouldn't be called often enough to show up in any performance profiling exercise.reply",
-      "Ruby is very slow so you gotta squeeze everything you can everywhere. Even a seemingly simple method will have to be scrutinized so that overall performance isn't impacted. It's death by a thousand cuts.See the commit that made it complex: https://github.com/ruby/ruby/commit/9b49ba5a68486e42afd83db4...It claims 20-50% speedups in some cases.There's churn that comes with that. Ruby will have code that is ever changing to gain 5%, 10% performance every now and then. You gotta put that on balance: in a language like Go this method would've been ugly from the start but no one would've needed to touch it in 100 years.reply",
-      "You never gotta squeeze everything you can everywhere!Regardless of how slow the language is, the 90/10 rule applies: 90% of the time is spent in 10% of the code. Optimize that 10%! Making the rest of the code faster isn't worth the code quality cost.reply",
-      "There are plenty of businesses that have under 10k users and can live perfectly well with http requests around 500-1000 ms. When there are performance issues, 95% of the times they come from the database, not the language.reply",
-      "I somewhat agree. In general most apps are small where the language choice doesn\u2019t really matter.Caching is also vastly underutilized, most apps are read-heavy and could serve a significant portion of their requests from some form of caching.> When there are performance issues, 95% of the times they come from the database, not the language.Eh, statements like these are always too hand wavy. Resource usage has to do with performance, the DB has no fault in it but the runtime does.Having worked with Rails a ton there\u2019s a very large overhead. Most apps would see a significant speed up if rewritten in a faster language and framework, with no changes to the DB whatsoever. The amount of memory and CPU expended to the app servers is always significant, often outweighing the DB.reply"
-    ],
-    "link": "https://newsletter.masilotti.com/p/ruby-already-solved-my-problem",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Snapchat open-sources Valdi a cross-platform UI framework (github.com/snapchat)",
-    "points": 20,
-    "submitter": "yehiaabdelm",
-    "submit_time": "2025-11-08T00:14:50 1762560890",
+    "submitter": "bikenaga",
+    "submit_time": "2025-11-09T00:14:50 1762647290",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
+    ],
+    "link": "https://www.science.org/doi/10.1126/sciadv.ady9545",
+    "first_paragraph": ""
+  },
+  {
+    "title": "WriterdeckOS (writerdeckos.com)",
+    "points": 115,
+    "submitter": "surprisetalk",
+    "submit_time": "2025-11-08T18:49:47 1762627787",
+    "num_comments": 57,
+    "comments_url": "https://news.ycombinator.com/item?id=45858945",
+    "comments": [
+      "The idea of a low-distraction laptop OS is a good one, but I'm not sure that this is necessarily the best approach.If I mentally model such a thing myself, I end up with something that looks a lot like Classic (pre-OS-X) Mac OS. It's simplified and has just enough presence to properly host graphical applications. No taskbar, no notifications (or associated drawer), no self-populated launcher menu. File manager is spatial so it doesn't need a sidebar or navigation chrome. Multitasking is technically possible, but high-friction since the only way to switch between running apps is the little app switcher menu in the top right corner and becomes more cumbersome the more apps/windows you open. Included browser does not support tabs, only windows. Shortcuts to frequently used apps must be added intentionally (to your desktop as aliases/shortcuts or to the launcher menu).This design strongly encourages singular focus without forcing it. If you want to have music playing in the background or need to open a browser window for research you can, but gravity is constantly pulling you back towards your task since the machine isn't pleasant to use for goofing off.reply",
+      "This is intended for people who want to use a laptop as a single use device for the purpose of writing. So basic file management and a word processor is all that is needed.WriterdeckOS is not meant to be an OS for general computing.Purppose built writerdecks are quite expensive. WriterdeckOS is a practical, inexpensive and resourceful alternative to a purpose build device.For more information on writerdecks check out:https://www.reddit.com/r/writerDeck/reply",
+      "Uxn from hundred rabbits comes to mind.https://100r.careply",
+      "Not exactly this but found a similar experience recently by throwing Linux lite on an 15-year-old thinkpad with a physical wifi switch.Was for my kid in this case. Loaded a few education-friendly games and then disabled the wifi. Now it\u2019s a simple, focused, and relatively safe box.Could easily do the same for writing or any other activity.reply",
+      "The idea is fine, though the execution seems obnoxious for getting your writing out of your system. The trouble is, depending on what you\u2019re writing, Tilde might be a massive downgrade. For novels, I find something like Scrivener essential.I\u2019ve looked into a few options like this over the years (e.g. the Freewrite, or even an old Alphasmart), but always came to the conclusion they added more friction to my writing process, not less.reply",
+      "While I don't have a use for this, I do like the idea of purposeful modes in computing. Obviously there is a lot you can do with shortcuts and preferences, but its nice to have a limited to base to start with.I think this is even more important with a mobile platform since for one, battery and processing power is at a premium, and two anything with notifications could take you out of your desired \"mode\" if you don't wrangle them properly.Something I've always wanted in a smartphone is to be able to boot into a \"camera only\" mode. There have been many times where all I need my phone for is as a camera, and I don't want it wasting resources/battery doing anything else. If this mode were light enough, it could boot up in the same amount of time as a normal digital camera, allowing your the phone to be truly off while you're not taking pictures. I do often take a digital camera with me, but sometimes I don't want the bulk or maybe I didn't initially plan to take a lot of pictures.reply",
+      "Closing your laptop can also provide a clean, portable writing platform.reply",
+      "No autosaving. That's the wrong way to try to be minimalist.reply",
+      "Yea, that\u2019s something that stuck out to me as well. Seems like auto save and version control could be done in a minimalist manner whist improving QOLreply",
+      "I really enjoyed using CherryTree on top of Git with automatic commit and sync. Getting readable diffs (via using XML as an output format) is meaningful.reply"
+    ],
+    "link": "https://writerdeckos.com",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Control structures in programming languages: from goto to algebraic effects (xavierleroy.org)",
+    "points": 89,
+    "submitter": "SchwKatze",
+    "submit_time": "2025-11-03T11:47:19 1762170439",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=45798068",
+    "comments": [
+      "It's a pity that the section on exceptions didn't do a more detailed analysis on the criticism of exceptions; in my personal view I haven't liked exceptions, in a similar vein to how I'm not a huge fan of the implementation of POSIX signals or setjmp / longjmp.Although I very much see the reason why it was developed, in effect it comes closer to a glorified form of \"come from\" (and people thought that goto was considered harmful).reply",
+      "Although INTERCAL's \"come from\" provided the opportunity to implement a gloriously concise multi-threading syntax/mechanism [1]![1] https://esolangs.org/wiki/Threaded_INTERCALreply",
+      "For French speaking people, Mr. Leroy gave a complete lecture at Coll\u00e8ge de France. Available on Youtube.reply"
+    ],
+    "link": "http://xavierleroy.org/control-structures/",
+    "first_paragraph": "This book is a journey through the design space and history of programming languages from the perspective of control structures: the language mechanisms that enable programs to control their execution flows.  Starting with the \u201cgoto\u201d jumps of early programming languages and the emergence of structured programming in the 1960s, the book explores advanced control structures for imperative languages such as generators and coroutines, then develops alternate views of control in functional languages, first as continuations and their control operators, then as algebraic effects and effect handlers.  Blending history, code examples, and theory, the book offers an original, comparative perspective on programming languages, as well as an extensive introduction to algebraic effects and other contemporary research topics in P.L.To be published by Cambridge University Press.This is an HTML preview of the book, generated with Hevea.  License: CC-BY-NC-ND 4.0.Part I: Control structures for imperativ"
+  },
+  {
+    "title": "Debugging BeagleBoard USB boot with a sniffer: fixing omap_loader on modern PCs (downtowndougbrown.com)",
+    "points": 20,
+    "submitter": "todsacerdoti",
+    "submit_time": "2025-11-08T22:30:58 1762641058",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.downtowndougbrown.com/2025/11/debugging-beagleboard-usb-boot-with-a-sniffer-fixing-omap_loader-on-modern-pcs/",
+    "first_paragraph": "This post is about the original OMAP3530 BeagleBoard from 2008. Yes, the one so old that it doesn\u2019t even show up in the board list on BeagleBoard.org anymore. The BeagleBoard, not the BeagleBone. During my Chumby 8 kernel escapades, at one point I ran into a UART bug that affected multiple drivers, including the omap-serial driver. This led me to buy a BeagleBoard so I could verify the omap-serial bug on hardware.After I figured out the bug with the UART driver, I realized that the OMAP3530 has support for booting from USB, so I decided to go off on a random tangent to get USB boot working. There was no problem I was trying to solve or anything like that. I just thought it would be a fun experiment (am I a masochist?). Little did I know, I would be getting myself into some tricky USB packet analysis.I struggled to find info about this process because of how old the OMAP is today. The main utility I found was a program called omap_loader by Grant Hernandez, which is a newer rewrite of M"
+  },
+  {
+    "title": "Judge says Education Dept partisan out-of-office emails violated First Amendment (npr.org)",
+    "points": 19,
+    "submitter": "toomanyrichies",
+    "submit_time": "2025-11-09T01:03:20 1762650200",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=45861897",
+    "comments": [
+      "Is a judgement worth the paper it\u2019s written on when it\u2019s ignored with zero consequences?reply",
+      "The woman in charge of the Department of Education is so woefully unqualified for the position as to require a new frame of reference. If I were to place a pile of feces into her position, it would by default, do a better job than her. She is the wife of the jackass who runs wrestling. The idea that she'd be in charge of our country's educational system is absolutely galling, and we should not be putting up with it. Trump's previous Dept. of Ed director was the largest private student loan owner in the country. That at least made sense. It was corrupt and evil, but it made sense.The current director could only be in her current position if the plan was to make everyone in the US into violent idiots who hit each other with folding chairs. I guess that's the plan.reply",
+      "She is doing a fine job, being greatly assisted by A1.A1 also assists the flavor of steaks and burgers.reply"
+    ],
+    "link": "https://www.npr.org/2025/11/08/nx-s1-5602859/education-department-out-of-office-emails-ruling",
+    "first_paragraph": "\n\n      Cory Turner\n    \n\n                The Washington headquarters of the Department of Education on March 12. A federal judge ruled that the Trump administration violated the First Amendment rights of Education Department employees when it replaced their personalized out-of-office notifications with partisan language.\n                \n                    \n                    Win McNamee/Getty Images\n                    \n                \nhide caption\nA federal judge ruled that the Trump administration violated the First Amendment rights of Education Department employees when it replaced their personalized out-of-office e-mail notifications with partisan language blaming Democrats for the government shutdown.\"When government employees enter public service, they do not sign away their First Amendment rights,\" U.S. District Judge Christopher Cooper wrote in his decision on Friday, \"and they certainly do not sign up to be a billboard for any given administration's partisan views.\"The la"
+  },
+  {
+    "title": "Aver\u00eda: The Average Font (2011) (iotic.com)",
+    "points": 115,
+    "submitter": "JoshTriplett",
+    "submit_time": "2025-11-08T19:29:44 1762630184",
+    "num_comments": 25,
+    "comments_url": "https://news.ycombinator.com/item?id=45859243",
+    "comments": [
+      "I've used Averia (Serif Libre, specifically) for at least a decade as my primary font for email, web pages in 'reader' mode, writing long-form text, etc. I find it extremely legible, and even calming.Ironically, I've been a typographer for decades, both for print and online. Averia might seem an odd choice for someone  intimately familiar with typographic theory/history and the vast catalog of possible fonts. But there's a certain pleasure and comfort in a font that is not trying to stand out or do anything particularly special.reply",
+      "It's kind of like how if you take the average of enough male or female human faces, the result is a very pleasing, attractive face.reply",
+      "Same with music, a large group of people singing slightly off-key (each in their own way) tends to sound pretty good in aggregatereply",
+      "This is an experiment from 2011 in which the author produced a font by averaging all the fonts on their system.I'm reposting it here because I noticed that this looks a lot like the uncanny valley produced when an image AI tries to make text, which makes perfect sense: it's a statistical average of fonts.reply",
+      "It also reminds me a bit of what text looks like after multiple rounds of photocopying. Like the handouts we'd get in grade school.reply",
+      "I don\u2019t get uncanny valley feel from this one. It feels kind of great for me as a font.reply",
+      "Same. It looks like the print you see in old books. Very pleasing to the eye. The lower case 'm' sticks out to me though, the second hump is raised a little too high.reply",
+      "Interestingly it evokes Open Dyslexic.reply",
+      "Yes, I saw the exact same thing when you posted it - \"oh, AI text looks like an averaging of fonts\".reply",
+      "Interesting how modern designers think readable fonts (with serifs, so people can reliably distinguish between Al and AI, for example) are \"uncanny\" because they don't follow the latest trends in ultra-minimalist \"design\" and other fashions.reply"
+    ],
+    "link": "http://iotic.com/averia/",
+    "first_paragraph": "am not a type designer. This is the story of the creation of a new font,\nAver\u00eda: the average of all the fonts on my computer. The field of typography\nhas long fascinated me, and I love playing with creative programming\nideas, so it was perhaps inevitable that the idea came to me one day of\n\u201cgenerative typography\u201d. A Google on the subject brought up little, and I \nput the idea to the back of my mind until it occurred to me that perhaps the process of\naveraging, or interpolating, existing fonts might bring up interesting results. Luckily at this\npoint I didn't do any more web searching \u2013 instead I grabbed\nmy laptop and came up with an initial idea for finding what the average of all\nmy fonts might look like \u2013 by overlaying each letter at low opacity. The results\ncan be seen in the below image.\n\n\nThis was done by printing each letter of each font, at the same point size,\nto lots of separate images, and then averaging them \u2013 using ImageMagick and PHP.\nThe letters were\naligned to the same c"
+  },
+  {
+    "title": "Open-source communications by bouncing signals off the Moon (open.space)",
+    "points": 46,
+    "submitter": "fortran77",
+    "submit_time": "2025-11-02T14:44:02 1762094642",
+    "num_comments": 13,
+    "comments_url": "https://news.ycombinator.com/item?id=45790672",
+    "comments": [
+      "KA1GT recently found a $100 \u201csolar cooker\u201d dish on AliExpress. Also available on Amazon. It was tested back in August.Announced on the EME Facebook Group: https://www.facebook.com/share/p/19zLsGZiE7/?mibextid=wwXIfrOutput power was 500wreply",
+      "I started reading thinking it was impossible but it has been done with other devices https://en.wikipedia.org/wiki/Earth%E2%80%93Moon%E2%80%93Ear...reply",
+      "Not impossible, just extremely difficult. I'm a ham and getting some contacts over moonbounce is a personal goal of mine. Historically this kind of thing has required some pretty large antenna arrays and very high power though:https://hamradio.engineering/eme-moonbounce-bouncing-signals...http://www.g4ztr.co.uk/app/download/13284489/RaCcom_Feb14+EM...http://www.g4ztr.co.uk/app/download/13300096/Radcom_Mar144+E...reply",
+      "Isn't there a moon bounce mode in WSJT (or one of those digital modes) that provides enough coding gain that 100W and a single large Yagi is enough?  I seem to recall hearing something like that... but, yeah, on CW a monster antenna and the legal limit of 1500W seems to be the median system.A long time ago I started collecting parts for a 432MHz EME system.  Life got in the way and I never built it out.  Good luck with your endeavor!reply",
+      "Expected array gain: ~39.3 dBi / EIRP: ~63.1 dBWTx power: 1 W per antennaYeah... so free space path loss at legal frequencies for hams this thing can transmit on is ~283dB. Neat idea but consider me skeptical. Having said that I can see some interesting applications for this kind of gear, EME seems overly optimistic though.reply",
+      "At those power levels they would have to use some kind of highly error-corrected modulation and coding scheme to provide enough coding gain to overcome the path loss.  I agree they are pretty optimistic, but until they detail their modulation scheme, it's hard to tell.A few years ago I was experimenting with 900 MHz LoRa for a work project -- we had need to communicate a very small data payload from inside elevator cabs, with forgiving latency requirements.  So we took a LoRa board to a hotel building 2 city blocks away from our lab and cranked the coding gain up to the max, which gave us about a 1 byte payload every second.  Perfectly sufficient for our application.  Astoundingly, we had great copy in our lab even when the doors of the elevator cab were closed, inside a building 2 blocks away.  I can't remember the power level, 500mW I think, but I may be wrong.reply",
+      "People use WSJTX software and Q65 modereply",
+      "It's 1 watt per antenna. They have 240, or 53.8 dbm. So assuming 39.3 and your 283 (which seems to be around what I'm seeing online) that's -283+(39.3*2)+53.8=-150.6 dbm receive power. That should be plenty.reply",
+      "It's theoretically possible.63.1 dbW = 93.1 dBm (240 watts + 39.3 dB gain)path loss at 5760 MHz = 283.2 dB (at perigee)RX gain = 39.3 dB93.1 - 283.2 + 39.3 = -150.8 dBmNoise floor at 1.2 dB noise figure and 500 Hz bandwidth = -151.9 dBmSNR = +1.1 dB (easily detectable by ear with CW).reply",
+      "A few hundred Watt at a minimum would be my first guess.reply"
+    ],
+    "link": "https://open.space/",
+    "first_paragraph": "An open-source communications hardware & software initiative empowering the public to connect across the world by bouncing signals off the Moon\u2014and more!Be the first to find out when our hardware launches!Bouncing signals off the Moon\u2014known as Earth-Moon-Earth (EME) communication\u2014has long been the ultimate challenge for radio amateurs. It required large antennas, expensive equipment, and accurate manual pointing and tracking. We try to bring this down to Earth, providing all the tools needed to experience the thrill of space communication, with an open source software-defined phased array.Expected to ship: March 2026.Our first kit is a low-cost digital phased array, with high transmit power and excellent receive sensitivity.\n      It supports flexible transmission modes across any 40 MHz bandwidth in the C-band (4.9\u20136 GHz).With a scalable architecture, you can pick an array size and grow later.\n            This 4-antenna SDR tile designed for arraying. Drop-in compatible with\n         "
+  },
+  {
+    "title": "Cloudflare scrubs Aisuru botnet from top domains list (krebsonsecurity.com)",
+    "points": 115,
+    "submitter": "jtbayly",
+    "submit_time": "2025-11-08T16:25:41 1762619141",
+    "num_comments": 26,
+    "comments_url": "https://news.ycombinator.com/item?id=45857836",
+    "comments": [
+      "If an automated service is pulling the top 100 domains from CF and naively trusting them, why can't it also pull the categorization information that's right there and make sure none of the categories are \"Malware\"??? Who would write something like that? It's absolutely believable that the top 100 domains could contain malware domains...because of the nature of botnets and malware.That's PEBCAK.reply",
+      "People make mistakes. Security engineers need to understand what sort of mistakes people are making and mitigate that risk. Brushing it under the rug as silly users making mistakes doesn't protect anyone.reply",
+      "The automated services using this for security-related purposes are presumably built by \"security engineers\", if they're making mistakes like this they're obviously woefully underqualified.reply",
+      "Almost nothing is built by security engineers, including security features of security products at security companies.reply",
+      "I'm a security engineer, I have built things like this, and I made the original comment. A lot of my job revolves around developing automation for security needs.Also, many of the top 100 domains serve user-generated content (like AWS/S3). Blindly trusting anything from them just because they are big is so woefully misguided it boggles my mind; I seriously doubt that anyone is actually doing what is described in the article.reply",
+      "True masters of security realize all software is flawed, and therefore write none.reply",
+      "Many people are woefully under qualified, we need to have a working society anyway.reply",
+      "Why not include them? What's wrong with have the most resolved domain being the top domain. I think it's interesting to know the actual most resolved domain, than the top of some editorialized list.reply",
+      "As discussed in the article, threat actors are using a botnet to game the system by repeatedly issuing queries for the domains; the list is intended to represent the top 100 domains resolved by legitimate users (and legitimate bots, I assume), not just \"who can make the most queries to CloudFlare for a domain\".reply",
+      "> We should have two rankings: one representing trust and real human use, and another derived from raw DNS volume.Isn't identifying real humans an unsolved problem? I'm not sure efforts to hide the truth that these domain are actually the most requested domains does anyone any favors. Is there something using these rankings as an authoritative list or are they just vanity metrics similar to the Alexa Top Site rankings of yore? If they are authoritative, then Cloudflare defining \"trusted\" is going to be problematic as I would expect them to hide that logic to avoid gaming.reply"
+    ],
+    "link": "https://krebsonsecurity.com/2025/11/cloudflare-scrubs-aisuru-botnet-from-top-domains-list/",
+    "first_paragraph": "For the past week, domains associated with the massive Aisuru botnet have repeatedly usurped Amazon, Apple, Google and Microsoft in Cloudflare\u2019s public ranking of the most frequently requested websites. Cloudflare responded by redacting Aisuru domain names from their top websites list. The chief executive at Cloudflare says Aisuru\u2019s overlords are using the botnet to boost their malicious domain rankings, while simultaneously attacking the company\u2019s domain name system (DNS) service.The #1 and #3 positions in this chart are Aisuru botnet controllers with their full domain names redacted. Source: radar.cloudflare.com.Aisuru is a rapidly growing botnet comprising hundreds of thousands of hacked Internet of Things (IoT) devices, such as poorly secured Internet routers and security cameras. The botnet has increased in size and firepower significantly since its debut in 2024, demonstrating the ability to launch record distributed denial-of-service (DDoS) attacks nearing 30 terabits of data pe"
+  },
+  {
+    "title": "My first fifteen compilers (2019) (sigplan.org)",
+    "points": 42,
+    "submitter": "azhenley",
+    "submit_time": "2025-10-31T20:30:10 1761942610",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=45776368",
+    "comments": [
+      "Every browser can smooth scroll, please stop doing this in JS, manually.I turn mine off, then you force it on me, and CTRL+F4 is an immediate reflex.reply",
+      "You should report it to sigplan.org. Complaining about it here won't make any difference.There's also https://news.ycombinator.com/newsguidelines.html -> Please don't complain about tangential annoyances\u2014e.g. article or website formats, name collisions, or back-button breakage. They're too common to be interesting.reply",
+      "(2017)At the time (387 points, 76 comments) https://news.ycombinator.com/item?id=15153956 https://archive.is/gUVNw2019 edit (388 points, 78 comments) https://news.ycombinator.com/item?id=20408011reply"
+    ],
+    "link": "https://blog.sigplan.org/2019/07/09/my-first-fifteen-compilers/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Court Judge Rules Flock Safety camera data is not exempt from PRA [WA State] (goskagit.com)",
+    "points": 14,
+    "submitter": "p_ing",
+    "submit_time": "2025-11-09T00:53:07 1762649587",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.goskagit.com/news/local_news/court-denies-request-that-it-find-flock-safety-camera-data-is-exempt-from-public-records/article_f1edd028-d242-479c-ada8-f2dfca73a1b1.html",
+    "first_paragraph": "This photo provided by Flock Safety shows what the company\u2019s cameras look like.The cities of Sedro-Woolley and Stanwood were denied Thursday their request for a declaratory judgment that the data and images from Flock Safety cameras are not public records.The ruling was made by Skagit County Superior Court Judge Elizabeth Neidzwski.Flock Safety cameras are used by many law enforcement agencies, including the Sedro-Woolley and Stanwood police departments.The cameras record images of passing cars, and using artificial intelligence the system is able to identify cars\u2019 makes, models, colors and license plates. Flock said it deletes the data after 30 days.The cities of Sedro-Woolley and Stanwood filed a motion for a declaratory judgment after receiving public records requests for images recorded by Flock Safety cameras.The requests were made by the same man \u2014 Jose Rodriguez. He requested images from Stanwood\u2019s cameras from 5 to 6 p.m. on March 30, and from Sedro-Woolley\u2019s cameras from 5 to "
+  },
+  {
+    "title": "Humanity's Endgame (noemamag.com)",
+    "points": 9,
+    "submitter": "marojejian",
+    "submit_time": "2025-11-08T23:58:08 1762646288",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.noemamag.com/humanitys-endgame/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Otto Nemenz, Supplier and Designer of Cameras and Lenses for Hollywood, Dies (hollywoodreporter.com)",
+    "points": 11,
+    "submitter": "Marshferm",
+    "submit_time": "2025-11-04T03:14:02 1762226042",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.hollywoodreporter.com/movies/movie-news/otto-nemenz-dead-cameras-lenses-hollywood-1236417089/",
+    "first_paragraph": "Subscribe for full access to The Hollywood ReporterSubscribe for full access to The Hollywood ReporterThe onetime cinematographer and camera operator built specialized equipment for \u2018Grand Prix\u2019 and worked with famed D.P.s Haskell Wexler and Roger Deakins.\n\t\t\t\t\t\t\tBy \n\n\tMike Barnes\nSenior Editor\n\tOtto Nemenz, the Austrian cinematographer and camera operator whose namesake company designed and supplied cutting-edge cameras and lenses to film and television productions for more than four decades, has died. He was 83.\n\tNemenz died Saturday at his Kaanapali home on the Hawaiian island of Maui, a spokesperson for Otto Nemenz International told The Hollywood Reporter.\n\n\n\tNemenz founded his company in 1979 in a small storefront off Sunset Boulevard, and by 1982, he had built a new Hollywood headquarters on Vine Street. In 2020, he celebrated the grand opening of a 38,000-square-foot facility in Culver City. (The company also has an office in Atlanta.)\n\n\t\n\n\n\n\n\n\n\n\n\n\n\n\t\n\t\n\t\t\n\t\t\t\t\tRelated Stories\t"
+  },
+  {
+    "title": "He Chunhui's Tiny386 Turns an ESP32-S3 into a Fully-Functional 386-Powered PC (hackster.io)",
+    "points": 10,
+    "submitter": "HardwareLust",
+    "submit_time": "2025-11-09T01:08:50 1762650530",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.hackster.io/news/he-chunhui-s-tiny386-turns-the-humble-esp32-s3-into-a-fully-functional-386-powered-desktop-pc-5454cf6e36a1",
+    "first_paragraph": "Please ensure that JavaScript is enabled in your browser to view this page.Developer He Chunhui has turned the humble Espressif ESP32 microcontroller into a fully-fledged '90s personal computer with Tiny386 \u2014 a resource-efficient emulator capable of running Microsoft Windows 95 and a range of 16- and 32-bit software packages on the low-cost chip.\"Tiny386 is a x86 PC emulator written in C99,\" Chunhui explains of the project. \"The highlight of the project is its portability. It now boots Windows 9x/NT on MCU [Microcontroller Units] such as [the Espressif] ESP32-S3. The core of the project is a built-from-scratch, simple and stupid [Intel] i386 CPU emulator. Some features are missing, e.g. debugging, hardware tasking, and some permission checks, but it should be able to run most 16/32-bit software.\"The 80386, more commonly known as the 386 and later rebadged as the i386, was released in 1985 as the successor to the best-selling 80286, expanding the nascent x86 architecture's capabilities "
+  },
+  {
+    "title": "Valdi \u2013 A cross-platform UI framework that delivers native performance (github.com/snapchat)",
+    "points": 457,
+    "submitter": "yehiaabdelm",
+    "submit_time": "2025-11-08T00:14:50 1762560890",
+    "num_comments": 186,
+    "comments_url": "https://news.ycombinator.com/item?id=45852854",
+    "comments": [
+      "Working at a company that uses react-native I wish nothing more than for the end of app stores and differing platform languages.We're heavily considering just having a website next year with a mobile app using webview, and then native code for the native notifications, GPS and healthkit / health connect.I feel like AI is changing the equation, its nearly better to write your business UI 3 times one for each platform.reply",
+      "I did this and never looked back.It\u2019s called a \u201cWebView app\u201d and you can get a really good experience on all platforms using them. Just:- don\u2019t make any crazy decisions on your fundamental UI components, like breadcrumbs, select dropdowns, etc- add a few platform-specific specialisations to those same components, to make them feel a bit more familiar, such as button styling, or using a self-simplifying back-stack on Android- test to make sure your webview matches the native browser\u2019s behaviour where it matters. For example, sliding up the view when the keyboard is opened on mobile, navigating back & forth with edge-swipes on iOS, etcI also went the extra step and got service workers working, for a basic offline experience, and added a native auto network diagnostic tool that runs on app startup and checks \u201cCan reach local network\u201d \u201cCan reach internet (1.1.1.1)\u201d \u201cCan resolve our app\u2019s domain\u201d etc etc, so users can share where it failed to get quicker support. But this is an app for small-to-medium businesses, not consumer-facing, and the HTML5 part is served from the server and cached. I haven\u2019t thought much about what you might need to do additionally for a consumer app, or a local-first app.reply",
+      "I have never once experienced a WebView app that I would say had \u201ca really good experience.\u201dreply",
+      "It\u2019s because if a webview app experience is good, you don\u2019t notice it, you only notice if it\u2019s bad.A while ago saw a blog link on HN that explained how Apple uses it everywhere and we never notice it because they are done well. Of course I can\u2019t find that link now, I summon the HN gods\u2026reply",
+      "Maybe this https://blog.jim-nielsen.com/2022/inspecting-web-views-in-ma... and https://news.ycombinator.com/item?id=30648424?On mobile the webview app experience is crap and it's immediately obvious that an app is not native. Simply nobody asks customers how they like it. The management assumes that as long as nobody complains and the users don't leave in droves, the experience must be impeccable.reply",
+      "It's often easy to tell, but my concern has shifted from \"Why isn't this native? It's ugly/slow\" to \"Why isn't this a goddamn webpage? It can't justify neither its permissions nor its space\".reply",
+      "It is immediately obvious when you are using a web view app, as it uses browser layout and non-native controls. And  I have never found one to be as intuitive or nice an experience as native controls.reply",
+      "> It\u2019s because if a webview app experience is good, you don\u2019t notice it, you only notice if it\u2019s bad.Aside from Apple\u2019s apps (which imo are noticeably worse than the old ones, but that\u2019s beside the point), what are some good WebView apps on iOS right now?reply",
+      "Somebody scraped the play store and checked the framework, so a list for Android WebView apps, built with capacitor, is here: https://capgo.app/top_capacitor_app/ Maybe an equivalent is there on iOS for the same app...reply",
+      "lichess is really good. Thanks for the info, I'm not surprised to learn it's a webview app, but it is really good.It doesn't look native but who even cares. I think when a UI sucks or is unintuitive or buggy then \"it's not native\" is a sort of catchall easy complaint. Native is a crutch. Sometimes it's a good crutch (accessibility etc). But that's more about developer efficiency and bare minimums of polish.reply"
     ],
     "link": "https://github.com/Snapchat/Valdi",
     "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Valdi is a cross-platform UI framework that delivers native performance without sacrificing developer velocity.\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.\n\n\n\n\n\nNoteBeta Status: Valdi has been widely used in Snap's production apps for the last 8 years. We're calling this a beta because our tools and documentation need more battle testing in the open source world. Valdi will exit beta when we're happy with the developer experience.Valdi is a cross-platform UI framework that delivers native performance without sacrificing developer velocity. Write your UI once in declarative TypeScript, and it compiles directly to native views on iOS, Android, and macOS\u2014no web views, no JavaScript bridges.A basic Valdi component:\n\nValdi is a cross-platform UI framework de"
   },
   {
-    "title": "How a devboard works (and how to make your own) (kaipereira.com)",
-    "points": 33,
-    "submitter": "kaipereira",
-    "submit_time": "2025-11-07T22:35:28 1762554928",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=45852029",
-    "comments": [
-      "Honestly my problem is that all my designs turn into devboards since I always have a kind of \"FOMO\" of not breaking something out and then needing it later to bodge things... and then I'm left with a crowded board where I don't even use two thirds of things...reply",
-      "I\u2018m sure you've already considered that, but what about iterating your design, e.g. redesigning the board if you need more outputs?reply"
-    ],
-    "link": "https://kaipereira.com/journal/build-a-devboard",
-    "first_paragraph": "Today, we're going to be designing our own dev board, using one of the most popular and beginner friendly SoC's, the RP2040. This guide doesn't serve as just a tutorial, but also as an opportunity to learn what everything on the PCB fundamentally does, and what every single component on your PCB is actually for!All the source files for this tutorial can be found here, so if you need any help, feel free to resort to the repository!Now let's start off with the basic question, what's an SoC! An SoC or system on chip, basically has all the basic components like SRAM, processors, USB controllers, and other peripherals you'll break out onto your board. The RP2040 is a good SoC to start with, because the datasheets are simple, it's low-cost, has good on-chip memory and is really flexible with plenty of IO's.Now let's get right into it, we'll be using KiCad for this tutorial, and I would suggest completing the hackpad tutorial and maybe a keyboard before trying to make your own devboard, not b"
-  },
-  {
-    "title": "YouTube Removes Windows 11 Bypass Tutorials, Claims 'Risk of Physical Harm' (itsfoss.com)",
-    "points": 360,
-    "submitter": "WaitWaitWha",
-    "submit_time": "2025-11-07T20:50:40 1762548640",
-    "num_comments": 131,
-    "comments_url": "https://news.ycombinator.com/item?id=45850963",
-    "comments": [
-      "Google censors the world, together with Microsoft.Well - it is time that the rest of the world censors these two corporation. I don't want them to restrict information.People will find workarounds by the way. This is now a Streisand effect - as people see that Google and Microsoft try to hide information from them, they will now look at this much more closely than before, with more attention.(Having said that, my bypass strategy is to not use Windows 11 altogether. I don't depend on it, having used Linux since 21 years now, but my machine to the left is actually using Win10, for various reasons, such as that I can fix problems of elderly relatives still using Windows. But I won't use Win11 ever with its recall-spy software. I also don't care that it can be disabled - any corporation that tries to sniff-invade on me, is evil and must be banned.)Edit: Ok so the video was restored. That was good, but still, we need an alternative here. Google holds WAY too much power via youtube.reply",
-      "> This is now a Streisand effect - as people see that Google and Microsoft try to hide information from themThis comment section is wild.The videos are up. Microsoft and Google weren't meeting in secret backrooms to censor this one channel. The most likely explanation is that a competing channel was trying to move their own videos up in the rankings by mass-reporting other videos on the topic.It's a growing problem on social media platforms: Cutthroat channels or influencers will use alt accounts or even paid services to report their competition. They know that with enough reports in a short period of time they can get the content removed for a while, which creates a window for their own content to get more views.The clue is the \"risk of physical harm\". People who abuse the report function know that the report options involving physical harm, violence, or suicide are the quickest way to get content taken down.reply",
-      "> They know that with enough reports in a short period of time they can get the content removed for a whileThis can be accomplished with bogus dmca notices too.  Since google gets such a high volume of notices the default action is just to shoot first and ask questions later.  Alarmingly, there are 0 consequences (financial or legal) for sending bogus dmca noticesreply",
-      "A tale as old as time.  A long time ago I worked in DDoS prevention and the bulk of our first customers were competing gambling sites and online eyeglass retailers.Why?  Because they were all paying people to DDoS each other.  Kinda silly, but good for business.reply",
-      "Stop making so much sensereply",
-      "The problem here is that companies seems to not be the wiser to such tactics and creators are left holding the bag by such aggression.reply",
-      "Content hosts are damned if they do and damned if they don't. If they take their time and are cautious with reports, people end up swamped with garbage that people complain about. If they try to be quick to clean up the garbage, some clean stuff get caught and people complain.The only frequent obvious problem I see is Youtube not telling people why their videos get hidden or taken down or down ranked. Long time creators get left in the dark from random big changes to the platform that could be solved with an email.reply",
-      "In the olden days this would simply be solved by... having customer support befitting the size of the company. Of course nowadays that's \"inneficient\".We have companies with billions of customers but smaller customer service than a mid-sized retailer from the 90s. Something is not right.reply",
-      "They are absolutely aware of these sorts of abuses. I'll bet my spleen that it shows up as a line item in the roadmapping docs of their content integrity/T&S teams.The root problem is twofold: the inability to reliably automate distinguishing \"good actor\" and \"bad actor\", and a lack of will to throw serious resources at solving the problem via manual, high precision moderation.reply",
-      "The law doesn\u2019t allow companies to do anything other than what they are doing.reply"
-    ],
-    "link": "https://news.itsfoss.com/youtube-removes-windows-11-bypass-tutorials/",
-    "first_paragraph": "When will these Big Tech platforms learn?We are no strangers to Big Tech platforms occasionally reprimanding us for posting Linux and homelab content. YouTube and Facebook have done it. The pattern is familiar. Content gets flagged or removed. Platforms offer little explanation.And when that happens, there is rarely any recourse for creators.Now, a popular tech YouTuber, CyberCPU Tech, has faced the same treatment. This time, their entire channel was at risk.Two weeks ago, Rich had posted a video on installing Windows 11 25H2 with a local account. YouTube removed it, saying that it was \"encouraging dangerous or illegal activities that risk serious physical harm or death.\"Days later, Rich posted another video showing how to bypass Windows 11's hardware requirements to install the OS on unsupported systems. YouTube took that down too.Both videos received community guidelines strikes. Rich appealed both immediately. The first appeal was denied in 45 minutes. The second in just five.Rich i"
-  },
-  {
-    "title": "Transducer: Composition, Abstraction, Performance (funktionale-programmierung.de)",
-    "points": 69,
-    "submitter": "defmarco",
-    "submit_time": "2025-11-04T10:32:26 1762252346",
+    "title": "When a \"feature\" is worse than a bug (Hello,Sketchfab) (medium.com/egorich42)",
+    "points": 3,
+    "submitter": "Egorich42",
+    "submit_time": "2025-11-04T16:32:36 1762273956",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://funktionale-programmierung.de/en/2018/03/22/transducer.html",
-    "first_paragraph": "Higher-order functions like map, fold, filter are indispensable in any\nfunctional program. With their flexibility, they are the tool of choice for\noperations on collections of all kinds. However, their scope of application is\nnot limited to classic lists or vectors. In this article, we examine more\nfundamental properties of these operations and take a particular look at\nso-called transducers in the Clojure programming language.Additionally, we will see how we can achieve not only very good reusability but\nalso higher performance with the help of meaningful abstraction.Those who have engaged with functional programming in the past may already be\nfamiliar with this statement. If you haven\u2018t had the opportunity yet (or want to\nrefresh your memory), let\u2018s first look at a variant of the usual definitions of\nmap and filter. (Note: All examples are written in Clojure, so from this\npoint on we\u2018ll call fold by its Clojure name reduce):Many definitions can be found like this in various standard "
-  },
-  {
-    "title": "Venn Diagram for 7 Sets (moebio.com)",
-    "points": 90,
-    "submitter": "bramadityaw",
-    "submit_time": "2025-11-04T09:27:57 1762248477",
-    "num_comments": 15,
-    "comments_url": "https://news.ycombinator.com/item?id=45809007",
-    "comments": [
-      "Related: the 6-set banana Venn diagram \u2013 https://www.nature.com/articles/nature11241/figures/4reply",
-      "Still my favorite Venn.I was in a genetics graduate program when this was published, and this spread like wildfire.reply",
-      "Really nice theoretical exercise!\nFor practical visualization, an UpSet plot is a great option: https://upset.app/reply",
-      "Required attribution notice too big. Can\u2019t see myself using it.reply",
-      "I\u2019m wondering what\u2019s the proper way to draw Venn diagrams.\nI\u2019ve seen that Graphviz has a \u201cnice to have\u201d mention about them, and there are a few simple JS libraries - mostly for two sets. Here\u2019s also my own attempt using an LLM [1].But maybe someone knows a more general or robust solution - or a better way to achieve this?\nIn the future, I\u2019d like to be able, for example, to find the intersection between two Venn diagrams of three sets each etc.[1] https://vitalnodo.github.io/FSLE/reply",
-      "the comments here https://news.ycombinator.com/item?id=45742907 have some discussion about projects that take a \"focused algorithm for various different diagram types\" approach vs graphviz's one size fits all approach. worth checking to see if any of them do venn diagrams.reply",
-      "Please don\u2019t actually use these 5,6,7-way Venn diagrams for anything practical, they\u2019re virtually useless and communicate nothing.reply",
-      "Technically a Venn diagram's entire point is to visualize all possible set relations between N sets. Their \"practical\" use is explicitly visualizing this.In popular terminology they are very often confused with Euler Diagrams [0] which represent meaningful relations in sets but not all possible. You shouldn't create Euler Diagrams this complex, but the raison d'etre of Venn diagrams is to visualize the complex nature of set relations.0. https://en.wikipedia.org/wiki/Euler_diagramreply",
-      "Thanks, I was just about to do that!reply",
-      "Beautiful! I want to get this on a t-shirt!reply"
-    ],
-    "link": "https://moebio.com/research/sevensets/",
+    "link": "https://medium.com/@egorich42/when-a-feature-is-worse-than-a-bug-hello-sketchfab-b88a10d52511",
     "first_paragraph": ""
   },
   {
-    "title": "Ribir: Non-intrusive GUI framework for Rust/WASM (github.com/ribirx)",
-    "points": 43,
-    "submitter": "adamnemecek",
-    "submit_time": "2025-11-07T20:26:26 1762547186",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=45850671",
+    "title": "An Algebraic Language for the Manipulation of Symbolic Expressions (1958) [pdf] (computerhistory.org)",
+    "points": 79,
+    "submitter": "swatson741",
+    "submit_time": "2025-11-08T14:58:03 1762613883",
+    "num_comments": 10,
+    "comments_url": "https://news.ycombinator.com/item?id=45857045",
     "comments": [
-      "> Unlike common object-oriented GUI frameworks, Ribir widgets do not need to inherit a base class or hold a base object. It is a pure composition modelI'm really not sure how this \"composition\" is any different to the usual inheritance you see in frameworks like QML *in practice*.This in Ribir:```Column {        align_items: Align::Center,\n\n        item_gap: 12.,\n\n        @H1 { text: \"Todo\" }\n}```Would be this in QML:```ColumnLayout {        spacing: 12\n\n        Text {\n                Layout.alignment: Qt.AlignHCenter\n\n                text: \"Todo\"\n\n                font.pointSize: 17\n        }\n\n}```reply",
-      "Generally, many forms of inheritance do not compose, but I'm not sure that makes these primitives composable.reply",
-      "How does this compare to EGUI, GPUI, and Slint?I like the idea of using macros to clean syntax; am writing some for EGUI right now to make colored text easier.reply",
-      "This may not be what you're after, but note that egui and Slint have accessibility support (at differing levels of completeness), e.g. for blind people using screen readers, while Ribir and GPUI do not.reply"
+      "Besides this first report (AIM-001), some of the reports following it in the next months are at least as important, by introducing other essential features of LISP and of many later languages:1958-10: AIM-003 (the special form \"maplist\", i.e. a kind of \"forall\" iteration)1958-10: AIM-004 (anonymous function definitions using \"lambda\"; the special form \"select\", which already at that early date had better syntax and semantics than the \"switch\" or \"case\" statements of later languages; the special form \"search\")1959-03-13: AIM-008 (the special form \"quote\"; the special form \"label\", for defining anonymous recursive functions; also the special forms \"and\" and \"or\", a.k.a. McCarthy AND and McCarthy OR, inherited by many languages, including C)reply",
+      "Does anybody attempt to re-implment each variant of pre-LISP described in these reports? Even if it just for educational/historical purposes?reply",
+      "https://t3x.org/lispxv/index.htmlreply",
+      "If you ever wondered why Lisp has CAR and CDR, this explains it.reply",
+      "It doesn't fully explain it, but drops some hints:\"The other main advantage of the algebraic notation for list structure processing was first noticed by Gelernter.\"That's one of the authors of the Fortran-compiled List-processing Language (FLPL) in which thef unctions XCARF and XCDRF were introduced.MacCarthy drops a hint that he actually had something to do with Gelernter's work and his choices:\"Algebraic notation for list processing is not used by\nNet'Jell, Simon and Shaw, pelhaps beaause to do so is most\nconvenient when a compiler is available, but is used by\nGelernter in the geometry program. This was accomplished\n(on the advice of the present author) by using the Fortran\ncompiler together with a set of machine language coded\nfunctions for handling the primitive list processes that\ngo from one element of a list to the next\"reply",
+      "I think the main reason is car/cdr permits elegant recursive solutions to problems.reply",
+      "more the names then the functions themselvesreply",
+      "Reposting my now very old comment https://news.ycombinator.com/item?id=10502434 :> Herbert Stoyan's historical work on early Lisp http://www.mcjones.org/dustydecks/archives/2010/07/29/185/ https://web.archive.org/web/20050617031004/http://www8.infor... is probably worth reading if one is seriously interested. (I haven't read much of it myself yet.) McCarthy praised Stoyan's work as better than his own 1979 HOPL paper ( http://www-formal.stanford.edu/jmc/history/lisp/lisp.html ): \"Stoyan's reading of the early LISP documents gives a more accurate picture than my own memories turned out to have given.\" http://www-formal.stanford.edu/jmc/history/> (As a side-note, I'm pretty sure that the broken, Wayback-beating link to \"Lisp references according to Miller\" on McCarthy's page is to this http://www.ai.sri.com/~delacaze/alu-site/alu/table/Lisp-Hist... document by Kent Pitman and Brad Miller (see http://www.ai.sri.com/~delacaze/alu-site/alu/table/history.h... ).)From 2015-2018, \"The Mysteries of Lisp -- I: The Way to S-expression Lisp\" by Hong-Yi Dai https://arxiv.org/abs/1505.07375 ( https://news.ycombinator.com/item?id=31153702 )>     Despite its old age, Lisp remains mysterious to many of its admirers. The mysteries on one hand fascinate the language, on the other hand also obscure it. Following Stoyan but paying attention to what he has neglected or omitted, in this first essay of a series intended to unravel these mysteries, we trace the development of Lisp back to its origin, revealing how the language has evolved into its nowadays look and feel. The insights thus gained will not only enhance existent understanding of the language but also inspires further improvement of it.reply",
+      "I like how the McCarthy's paper maps the fundamental operations to machine instructions and memory model.  It's like something you can actually implement.reply",
+      "Subset of Lisp 1.5 https://t3x.org/lispxv/index.htmlreply"
     ],
-    "link": "https://github.com/RibirX/Ribir",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Non-intrusive GUI framework for Rust/WASM\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.\n\n\nUse Rust to build multi-platform applications from a single codebase.\n\n\n\n\n\nWebsite | Documents | \u4e2d\u6587\u6587\u6863 | Web Demo| Examples | Changelog | Releases | RoadmapRibir is a Rust GUI framework that helps you build beautiful and native multi-platform applications from a single codebase.Experience a novel approach to UI development that's directly based on your data structure APIs. Any data mutation will trigger a precise UI update. Your focus should be on designing your data structure and its APIs. Then, you can describe your data's UI without intruding on its logic.A simple example of a counter:To use Ribir without DSL:More ExamplesRibir is actively being developed and teste"
-  },
-  {
-    "title": "FAA restricts commercial rocket launches indefinitely due to air traffic risks (space.com)",
-    "points": 67,
-    "submitter": "bookmtn",
-    "submit_time": "2025-11-07T22:59:04 1762556344",
-    "num_comments": 18,
-    "comments_url": "https://news.ycombinator.com/item?id=45852275",
-    "comments": [
-      "The actual order is here: https://www.faa.gov/newsroom/FAA-Emergency-Order-11-6-25.pdfUnfortunately, the article title is somewhat incomplete, as the restriction on commercial rocket launches is only for certain hours (for now, at least):> Accordingly, with respect to commercial space launches and reentries, under the\nauthority provided to the FAA Administrator by 49 U.S.C. \u00a7\u00a7 40103, 40113, and 46105(c), and\nauthority delegated to the FAA Administrator under 51 U.S.C. \u00a7 50909(a), it is hereby ordered that, beginning at 6:00 a.m. EST on November 10, 2025, and until this Order is cancelled, Commercial space launches and reentries will only be permitted between 10:00 p.m. and 6:00 a.m. local time.reply",
-      "The article mentions the hours...> Beginning 6 a.m. EST (1100 GMT) on Nov. 10, commercial launches to space can only take place between the hours of 10 p.m. EST (0300 GMT) and 6 a.m. EST (1100 GMT), according to the FAA order.reply",
-      "Right, hence \"the article title is somewhat incomplete\".I just wanted to make that clear since not everyone reads the article before hopping into the comments and the title could be easily interpreted to prohibit all rocket launches.reply",
-      "These orders, while written like they're orders, seem to be suggestions? They first ordered 20% flight reductions at major hubs, and 10% at minor hubs. Now the airlines have cancelled low single digit percentages. This is easily viewable at flightaware. https://www.flightaware.com/live/cancelled/todayreply",
-      "I really want this to be the thing that pushes the industry into automated air traffic control.It's not even technically difficult - we only allow error-prone humans to do the job because of inertia.Build the system now, and then next time there is a government shutdown or shortage of air traffic controllers, we can say 'only planes equipped  with an ipad with automatic air traffic control are allowed to fly'.   Within 24h every plane in the nation will be equipped.reply",
-      "We can\u2019t trust general use self driving cars yet. Air traffic control is a bit riskier than thatreply",
-      "There\u2019s a lot of automation that can be done to reduce the workload of controllers.Making an autopilot for airplanes is significantly easier than cars.reply",
-      "The announcement say 4% Friday increase to 10% next week gradual rampreply",
-      "I thought they were currently addressing any risks by restricting air traffic?reply",
-      "> commercial launches to space can only take place between the hours of 10 p.m. EST (0300 GMT) and 6 a.m. EST (1100 GMT),That's going to really piss off everyone around Ventura, CA (they get the sonic-boom when landing a booster on a barge for most launch trajectories from Vandenberg).reply"
-    ],
-    "link": "https://www.space.com/space-exploration/launches-spacecraft/faa-restricts-commercial-rocket-launches-indefinitely-due-to-air-traffic-risks-from-government-shutdown",
-    "first_paragraph": "Restrictions begin just after NASA's upcoming mission to Mars.\nWhen you purchase through links on our site, we may earn an affiliate commission. Here\u2019s how it works.\nBeginning next week, daytime rocket launches are all officially scrubbed thanks to the government shutdown.As the record-long shutdown of the U.S. federal government stretches into its second month, commercial air travelers are beginning to feel the impacts at the nation's airports. To help ease the strain, the Federal Aviation Administration (FAA) has issued an emergency order to limit who can access navigable airspace, which includes restricted hours on commercial rocket launches.Beginning 6 a.m. EST (1100 GMT) on Nov. 10, commercial launches to space can only take place between the hours of 10 p.m. EST (0300 GMT) and 6 a.m. EST (1100 GMT), according to the FAA order. This will help keep airspace restrictions in Florida, near NASA's Kennedy Space Center and Cape Canaveral Space Force Station, as well as Vandenberg Space "
-  },
-  {
-    "title": "FSF40 Hackathon (fsf.org)",
-    "points": 42,
-    "submitter": "salutis",
-    "submit_time": "2025-11-03T07:11:14 1762153874",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.fsf.org/events/fsf40-hackathon",
-    "first_paragraph": "Skip to content, sitemap or skip to search.When we first announced plans to celebrate the Free Software Foundation's (FSF) fortieth anniversary, we promised to do so in the spirit of bringing the international free software community together. On November 21--23, we invite you to participate in a global, online hackathon to help improve important libre software projects. It's at the core of the FSF's mission to foster free software development. With this hackathon, we want to spotlight the indispensable and hard work free software hackers are carrying out in the background, often without being seen and valued enough.Register now to participate in the FSF40 hackathon. Here is the list of projects so far that have declared that they will \nparticipate in the FSF40 hackathon:You don't need to be a developer to participate in the FSF40 hackathon. There will be tasks for all kinds of interests and every experience level. \nIn addition to advancing the \nparticipating projects, the goal of this"
-  },
-  {
-    "title": "Using the Web Monetization API for fun and profit (tomayac.com)",
-    "points": 21,
-    "submitter": "tomayac",
-    "submit_time": "2025-11-07T22:13:37 1762553617",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=45851786",
-    "comments": [
-      "This is the first time I've heard of this standard and it looks interesting, but it doesn't seem like the payment processing is well standardized. I see in the W3C draft that the \"Interledger Protocol\" should be utilized, but looking at the wallet limitations (https://webmonetization.org/wallets/#limitations) it seems like there are no wallets that allow cross-wallet payments. Is that something thats planned in the future, or will wallets be allowed to lock down who can pay who?reply",
-      "> You can adjust how much you want to pay the site per hour and also send one-time payments. The money is \"streamed\" every minute, which you can observe in DevTools.I guess the era of being able to leave a tab open without worrying about it is long over. Now you'll need to be careful to close every tab the moment you're done with it - perhaps after taking a screenshot of the page so you can read it more cheaply.reply",
-      "still, the problem is people have to implement it and people have to assign wallets and the like. wrong idea for the problem at hand.reply"
-    ],
-    "link": "https://blog.tomayac.com/2025/11/07/using-the-web-monetization-api-for-fun-and-profit/",
-    "first_paragraph": "I #StandWithUkraine \ud83c\uddfa\ud83c\udde6.By Thomas Steiner. Written on Fri Nov 07 2025. TechnicalI recently spoke at JSConf Mexico, where spent a lot of time with the Interledger Foundation folks in the hallway track and at the after party events, namely with Ioana (Eningeering Manager) and Marian (DevRel) to talk about Web Monetization.Web Monetization gives publishers more revenue options and audiences more ways to sustain the content they love. Support can take many forms: from a one-time contribution to a continuous, pay-as-you-browse model. It all flows seamlessly while people engage with the content they love. Publishers earn the moment someone engages, while audiences contribute in real time, using a balance they control.I encourage you all to give it a try! Install the extension that polyfills the proposed Web standard, get a wallet (I went with GateHub, which works in US Dollars and Euros), and then connect it to the extension.You need to have funds in EUR (\u20ac) or USD ($). If you have crypto, it"
-  },
-  {
-    "title": "I Love OCaml (mccd.space)",
-    "points": 292,
-    "submitter": "art-w",
-    "submit_time": "2025-11-07T14:05:49 1762524349",
-    "num_comments": 196,
-    "comments_url": "https://news.ycombinator.com/item?id=45846517",
-    "comments": [
-      "> why isn\u2019t OCaml more popularI've used OCaml a bit and found various issues with it:* Terrible Windows support. With OCaml 5 it's upgraded to \"pretty bad\".* The syntax is hard to parse for humans. Often it turns into a word soup, without any helpful punctuation to tell you what things are. It's like reading a book with no paragraphs, capitalisation or punctuation.* The syntax isn't recoverable. Sometimes you can add a single character and the error message is essentially \"syntax error in these 1000 lines\".* Ocamlfmt is pretty bad. It thinks it is writing prose. It will even put complex `match`es on one line if they fit. Really hurts readability.* The documentation is super terse. Very few examples.* OPAM. In theory... I feel like it should be great. But in practice I find it to be incomprehensible, full of surprising behaviours, and also surprisingly buggy. I still can't believe the bug where it can't find `curl` if you're in more than 32 Unix groups.* Optional type annotation for function signatures throws away a significant benefit of static typing - documentation/understanding and nice error messages.* Tiny ecosystem. Rust gets flak for its small standard library, but OCaml doesn't even have a built in function to copy files.* Like all FP languages it has a weird obsession with singly linked lists, which are actually a pretty awful data structure.It's not all bad though, and I'd definitely take it over C and Python. Definitely wouldn't pick it over Rust though, unless I was really worried about compile times.reply",
-      "I would suggest that people interested in using OCaml on Windows (or indeed, OCaml at all) try F# instead. It is still an ML-family language. Incidentally, by targeting the CLR, F# is considerably more deployable (both to users and to developers) than OCaml is. Plus, any old NuGet library written in C# or VB.NET can be used almost trivially in F#. This also solves the problem OP listed about a tiny ecosystem, because the C#/.NET ecosystem is massive.I couldn't agree more with the parent commenter about OCaml documentation. Functional programmers appear to love terseness to an almost extreme degree. Things like `first` are abbreviated to `fst`, which is just odd. Especially now that good IntelliSense means there is no real functional (heh) difference between typing `.fi` and pressing Tab, and typing `.fs` and pressing Tab.The F# documentation is comparatively very spiffy and detailed, with plenty of examples[1][2][3].[1]: https://learn.microsoft.com/en-gb/dotnet/fsharp/language-ref...[2]: https://fsharp.github.io/fsharp-core-docs/[3]: https://fsprojects.github.io/fsharp-cheatsheet/fsharp-cheats...reply",
-      "I find F# nowhere near as good as OCaml and think this comparison is ugly, but if I was forced to use a .NET platform I would almost certainly use F#reply",
-      "> nowhere near as good as OCamlI'd really like to hear more about this. From what I've used of F# and OCaml, both languages are around 95% the same.reply",
-      "I'll give you my top 3.F# is worse because the type inferencing isn't as good. You need to type annotate in more places. It's a drag, because it feels like a missed opportunity to let the machine do work for you.Additionally, one of the most pleasant and unique features of OCaml, strong named arguments, doesn't exist in F# (except in methods or whatever). Most programming languages don't have this (or it's hamfisted like in more dynamic languages) so it doesn't seem like a loss, unless you are very cozy with them in OCaml.(I'm bitter about this one because named arguments give safety and convenience. But when you combine them with currying it's like 4 or 5 design patterns that are elegantly provided for you. You just do it implicitly, without ever having to study a book about using them.)Finally, F# brings back the NULL problem that OCaml worked so hard to eradicate.reply",
-      "If you are interested, I think I adress this here https://xvw.lol/en/articles/why-ocaml.html#ocaml-and-freply",
-      "Thanks, this is a very nice article.reply",
-      "F# is indeed an ML-family language, but at this point it doesn't have all that much in common with OCaml specifically: it doesn't have the latter's structurally typed object model with inferred row-polymorphic types, nor its extremely powerful module system, not even many convenience features like open variants.reply",
-      "A lot of these are learning curve issues, but once you scale them you still permanently suffer with a very deficient, fragmented ecosystem. Until you have built up your own curated set of dependencies for your business stack, anyway.> * Ocamlfmt is pretty bad. It thinks it is writing prose. It will even put complex `match`es on one line if they fit. Really hurts readability.I suggest configuring ocamlformat to use the janestreet profile for better defaults.> * Optional type annotation for function signatures throws away a significant benefit of static typing - documentation/understanding and nice error messages.People should be providing .mli files, but don't. That said, an IDE with type hints helps this enormously. The VS Code plugin for OCaml is the best experience for noobs, hands down.> OPAMyesreply",
-      "> * OPAM. In theory... I feel like it should be great. But in practice I find it to be incomprehensible, full of surprising behaviours, and also surprisingly buggy. I still can't believe the bug where it can't find `curl` if you're in more than 32 Unix groups.I couldn\u2019t believe this was an actual bug in opam, and I found it: https://github.com/ocaml/opam/issues/5373I don\u2019t think that\u2019s an opam bug, it\u2019s an issue with musl, and they just happened to build their binaries with it.reply"
-    ],
-    "link": "https://mccd.space/posts/ocaml-the-worlds-best/",
-    "first_paragraph": "pub\u2002\u2002\u2002rsa4096 2023-09-22 [SC]uid \u2002 \u2002 \u2002 \u2002 \u2002 \u2002 \u2002Marc \u2002Coquand \u2002<marc@mccd.space>Every morning, I wake up and ask myself: why isn\u2019t OCaml more\npopular? I mean, the language is not perfect, but the more I use it the\nmore I feel like this old language had it all figured out, somehow. I\nmean, not in the literal sense: you write String.of_X\ninstead of String.from_X because the language has French\norigins. But it is perfect in the sense that it has everything that is\nimportant to me, except popular adoption. OCaml has its quirks, its old\nage, but at the same time there is so much I appreciate about it.I have some experience building amateur and professional software, in\nmany different languages, and as a result I have collected a list of\ncharacteristics that I\u2019ve come to appreciate over time. I think my\njourney into programming is different from many. I learned and adored\nfunctional programming before working in the industry, and while not my\nvery first language, Haskell was important to me ea"
-  },
-  {
-    "title": "VLC's Jean-Baptiste Kempf Receives the European SFS Award 2025 (fsfe.org)",
-    "points": 226,
-    "submitter": "kirschner",
-    "submit_time": "2025-11-07T20:31:36 1762547496",
-    "num_comments": 38,
-    "comments_url": "https://news.ycombinator.com/item?id=45850751",
-    "comments": [
-      "So many hours of fun watching videos over the years, without the constant fear that some odd codec would make the experience impossible. Thanks, VLC!reply",
-      "\u201cIf you insert a slice of bologna into the disc tray, VLC will play it.\u201dreply",
-      "Public service announcement: VLC is on iPhone in the App Store, too.  (Some people don't know this.)reply",
-      "I\u2019ve been using it to listen to actual MP3s of the music I have. I can\u2019t find any decent MP3 player on iOS (incredibly ironic given the iPod was one of the 3 devices the iPhone was supposed to be when Steve Jobs first introduced it) and VLC is pretty good.reply",
-      "I\u2019m using VLC because it\u2019s the only one that I know that can play opus. I chose the latter for lossy encoding because I have a few albums that are gapless and it\u2019s hackish to get mp3 to support those (other than single mp3 file and cue file).reply",
-      "Foobar2000 is my go to on iOS. Works well just like the PCs version.reply",
-      "I find it handy for streaming videos from my Jellyfin server with good subtitling support, then casting to a TV!reply",
-      "How do you manage this? Just copy the stream URL from Jellyfin Web or\u2026?reply",
-      "I have benefited so much from the versatility and reliability of VLC over the years. Congratulations, a very well deserved award!reply",
-      "I remember using VLC and figuring out how to download subtitles and use them within it.I suddenly became the computer person of my family at 11 because of thatreply"
-    ],
-    "link": "https://fsfe.org/news/2025/news-20251107-01.en.html",
-    "first_paragraph": "Go to:Apple: a horde of lawyers. The FSFE: ONE lawyer. We still landed a knockout! Support us today to keep standing up to Apple and defending our user rights!NewsThe FSFE and LUGBZ have recognized VLC\npresident and core developer with this European award for his long-term\ndedication to the project. What began as a student initiative has,\nthrough his continuous effort, evolved into one of the most widely used\nmedia players, with billion of users worldwide.The Free Software Foundation Europe (FSFE), together with the Linux\nUser Group Bolzano\u2011Bozen (LUGBZ), is proud to recognize Jean-Baptiste\nKempf with the European SFS Award 2025, in recognition of his\noutstanding and lasting contributions to the Free Software movement and\nhis long-term dedication to the VLC project.Born as a student project in 1996, this software has evolved into an\nessential, all-in-one media player that plays almost anything\neffortlessly. Originally a simple network streaming client, it has grown\ninto a powerful univ"
-  },
-  {
-    "title": "James Watson has died (nytimes.com)",
-    "points": 224,
-    "submitter": "granzymes",
-    "submit_time": "2025-11-07T19:30:18 1762543818",
-    "num_comments": 119,
-    "comments_url": "https://news.ycombinator.com/item?id=45850069",
-    "comments": [
-      "I want to use this opportunity to shill possibly the best history of science ever written: The Eighth Day of Creation [1], which describes the history of structural biology, including Watson\u2019s various contributions. He comes across as a precocious asshole, not without talent but with a stronger eye towards self-advancement.[1] https://www.cshlpress.com/default.tpl?cart=17625586661954464...reply",
-      "Just found this app:\nhttps://www.roma1.infn.it/~dileorob/content/apps/photo51.phpI've always wanted to see how the structure maps to x-ray diffraction pattern in Photograph 51.  Pretty neat!reply",
-      "Wasn't his partner Crick high on LSD when he discovered the double-helix structure of DNA?reply",
-      "There wasn't ever a \"moment\" when they \"discovered\" the structure of DNA.The closest thing is Franklin's Photograph 51 which took about 100 hours to compile and then took another year to do all the calculations to confirm the position of each atom.Watson and Crick (without the consent of Franklin) saw this Photograph, did some quick analysis, and came up with a couple of models that could match Franklin's photograph. Watson and Crick were already at work trying to crack the model of DNA, but once they got access to Franklin's work, it became the entire basis of their modeling. After about 2 months of this they finally found the double helix structure that matched Franklin's findings.I doubt Crick was on LSD for an entire 2 months. Perhaps he was tripping when he first viewed the photograph?reply",
-      "Last time I checked, this was basically folklore. There were some allusions to Francis Crick experimenting with LSD, but their DNA work predates that.Psychedelic proponents like to claim that LSD helped Francis Crick discover the double helix, but every time I go looking for a source it's a circular web of references and articles that cite each other or, at best, claim that Crick mentioned to a friend that LSD helped him.reply",
-      "You might be thinking of Kary Mullis, who supposedly came up with PCR while riding his motorcycle on LSD.reply",
-      "https://maps.org/2004/08/08/nobel-prize-genius-crick-was-hig...But alsohttps://skeptics.stackexchange.com/questions/6835/was-franci...reply",
-      "Maybe thinking of August Kekul\u00e9 and the carbon ring [1]? I have read elsewhere it was a \"pipe dream\".[1] https://en.wikipedia.org/wiki/August_Kekul\u00e9#Kekul\u00e9's_dreamreply",
-      "I am not sure. What I do know is that they used to go to pubs, so they probably used to drink pints.reply",
-      "Specifically The Eagle in Cambridge. Close to Kings College, and a cosy and storied pub it is. The back bar has photos and soot-signatures of air crews from all over the world, a tradition that started during WWII.reply"
-    ],
-    "link": "https://www.nytimes.com/2025/11/07/science/james-watson-dead.html",
+    "link": "https://softwarepreservation.computerhistory.org/LISP/MIT/AIM-001.pdf",
     "first_paragraph": ""
-  },
-  {
-    "title": "Objective-C for Windows, including UIKit (public archive). From Microsoft (github.com/microsoft)",
-    "points": 23,
-    "submitter": "zerr",
-    "submit_time": "2025-11-02T16:47:55 1762102075",
-    "num_comments": 5,
-    "comments_url": "https://news.ycombinator.com/item?id=45791596",
-    "comments": [
-      "I miss Objective-C, it\u2019s just so darn readable (once you know what @ and [] do)reply",
-      "I wholeheartedly agree. I had a great time in Objective-C.reply",
-      "Missing reference to 2015/2016.reply",
-      "Interesting, I never knew about this. I do remember that NeXT ported OPENSTEP to Windows NT as OPENSTEP Enterprise.reply",
-      "I still have WebObjects 4.5.2, but could not get hands on the YellowBoxreply"
-    ],
-    "link": "https://github.com/microsoft/WinObjC",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Objective-C for Windows\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.The Windows Bridge for iOS (also referred to as WinObjC) is a Microsoft open-source project that provides an Objective-C development environment for Visual Studio and support for iOS APIs. The bridge allows you to create Universal Windows Platform (UWP) apps that will run on many Windows devices by re-using your Objective-C code and iOS APIs alongside Windows 10 features like Cortana and Windows Notifications.To use the bridge you'll need:Windows 10, build 10586 or higher. Validate your version number here.Visual Studio 2017 with Windows developer tools. Visual Studio 2017 Community is available for free here.Ensure the following individual components are selected during installation. Se"
   }
 ]
