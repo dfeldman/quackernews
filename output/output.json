@@ -1,358 +1,395 @@
 [
   {
-    "title": "Ironclad \u2013 formally verified, real-time capable, Unix-like OS kernel (ironclad-os.org)",
-    "points": 92,
-    "submitter": "vitalnodo",
-    "submit_time": "2025-11-08T23:03:10 1762642990",
-    "num_comments": 12,
-    "comments_url": "https://news.ycombinator.com/item?id=45860843",
+    "title": "Work After Work: Notes from an Unemployed New Grad Watching the Job Market Break (urlahmed.com)",
+    "points": 105,
+    "submitter": "linkregister",
+    "submit_time": "2025-11-10T00:43:59 1762735439",
+    "num_comments": 44,
+    "comments_url": "https://news.ycombinator.com/item?id=45870863",
     "comments": [
-      "Interesting project. I'm curious about the limits of formal verification of worst case execution time. There are other formally verified kernels like seL4 and atmosphere, as well as layers you can stack on top to get a mostly compatible posix-ish layer like genode. You can also go out and find completely compatible kernels with enough maturity that (full) formal verification isn't a major value-add, like QNX or VxWorks.I'm not aware of much that combines WCET + formal verification + POSIX compatibility though. The verification page here is mostly at stone level, which from my understanding of SPARK terminology just means it passes validation, but might have runtime errors where most of Ada's WCET nondeterminism comes from. I'm skeptical that this is actually production usable for the hard real-time use cases all over their documentation at the current stage, but nothing on the website gives any clue as to the actual maturity short of reading the code myself.reply",
-      "Any government can get RCE on any OS with the change in their couch.  Formal verification of process isolation is REALLY important when lives depend on it.  That's a huge value add!My main concern is speed and the lack of capability based security.  seL4 is faster than Linux by a mile and I'm guessing that this is much slower.  You can put a POSIX layer on seL4 but POSIX is inherently flawed too.  MAC separates privileges from code and is too clunky to use in practice (see seLinux).reply",
-      "It does not have to remain at stone level, and it can get legit certifications, too.Looking forward to it. A formally verified OS is a great step towards better security.reply",
-      "There is an NDA related company called ironclad as well. Beware the trademark/copyright terrorists.That said, I am huge fan of works like this. But in practice, the security layer that betrays all of this tends to be the firmware layer.My dream is to have something like the Framework computer use verifiably secure EFI firmware, as well as similarly verified and audited firmware for every hardware component.reply",
-      "You might want to check out MNT Research if you haven\u2019t yet. They make repairable laptops, too, but they also release their work as free software and open hardware.https://mnt.re/reply",
-      "You need a different kernel for firmware verification.  But it should be regulated at this point.reply",
-      "Is there a technical reason it only supports x86_64, riscv64, and not arm64?reply",
-      "Building new operating systems seems so ambitious to me. Radiant Computer (https://radiant.computer/) was also recently posted.What other exciting projects like these exist?reply",
-      "https://asterinas.github.io/ (Linux compatible Kernel) and https://redox-os.org/ are two promising ones.reply",
-      "https://serenityos.org/reply"
+      "To the people at the top, the job market is a statistic. They can't feel empathy on an issue they're so disconnected from, so they just think it's not their problem, or there isn't much they can do about it. Technological innovation is supposed to mean society can produce more with less work, so in theory everyone's lives could end up better off over time where we could all work less and get more, but in practice, I see more meaningless work created and wealth continues to consolidate at the top.reply",
+      "First, I'm sorry you're having problems finding a job -- that sucks.Second: consider that sometimes, the cost-benefit of automation depends on perspective. An example that I like to give is Ocado's automated grocery warehouses in the UK: impressive technology, very efficient, but during the COVID-19 pandemic - when everybody wanted online groceries - Ocado had to stop accepting new customers. They didn't have the capacity, and adding a new warehouse took years. The regular supermarkets hired people and bought vans, they were able to scale up.Automation is great, but it can't help businesses adapt to novel situations. Corporate life is about cycles: the pendulum swings one way, then the other - we've just swung hard over to the automation side for now. The best strategy: know the limits of AI tools, prove your agility and ability to do the things the tools cannot do.reply",
+      "The most baffling thing is that even now the H1Bs, etc. are still pouring in. How can you say there is a shortage of IT talent and you need to import them where most grads can't find any work?reply",
+      "My company had an onshore hiring freeze, while still hiring offshore. C-suite had the nerve in an all hands to say they were expanding offshore because there was a \"local talent shortage\", all while an onshore hiring freeze was still in effect.This wasn't even a secret; in our stand ups our immediate manager said that they were blocked from hiring onshore and only had offshore quota available if they wanted any more team members.C-suite seem to think they can lie straight to our faces and know they'll get away it.reply",
+      "They can. What are you going to do? Quit? That's exactly what they would want. Much cheaper to increase the squeeze than pay redundancies.By the way, it's very similar here in Australia. I don't think there's anything an individual can do in this case. This needs regulation. Even with better workplace protections, the forums are full of people describing what you described and worse.reply",
+      "Same thing at my co! The kicker is that our team is down two people with the expectation of increased productivity because of AI. But no filling in those spots, because only offshore, and offshore can't even join our team because of colocation policies.reply",
+      "> C-suite seem to think they can lie straight to our faces and know they'll get away it.Hate to say that they're probably right? At least for the moment, tech workers have almost none of the organization or radicalization that would be required to push back against this.reply",
+      "If they can get away with it, it\u2019s because they have a product where quality doesn\u2019t matter. If you want to see everything outsourced, \u201c organization or radicalization that would be required to push back against this\u201d seems like the way to go.reply",
+      "Because they can't push their finger down a new grads throat if they push back.Someone who's families very presence in this country depends on their employer will rarely find a reason to complain about being overworked to the bone or told to do questionable things.H1B and other programs have a noble purpose that is often (but not always) abused to create loyal servants.reply",
+      "The allure for companies of exploiting H1Bs for cheaper and more effective labor I understand. But it is not companies who (at least officially) set the rules and laws regarding immigration.So the questions is why the government is not turning off the outside supply when there is an internal oversupply.reply"
     ],
-    "link": "https://ironclad-os.org/",
-    "first_paragraph": "\n            Ironclad is a formally verified, real-time capable, UNIX-like\n            operating system kernel for general-purpose and embedded uses. It is written in\n            SPARK and\n            Ada, and\n            is comprised of 100% free software.\n          \n            Ironclad features a familiar POSIX-compatible interface, true\n            simultaneous preemptive multitasking, Mandatory Access Control (MAC),\n            and support for hard real-time scheduling.\n          \n              Ironclad is fully open source and distributed under the GPLv3, ensuring\n              it remains free. No firmware blobs are needed or shipped with the\n              kernel. Every piece of the stack is open source.\n            \nSPARK's state of the art formal verification is employed for ensuring\n              absence of errors and correctness of huge swathes of Ironclad, like\n              cryptography, MAC, and user-facing facilities.\n            \n              Ported to several platforms"
+    "link": "https://urlahmed.com/2025/11/05/work-after-work-notes-from-an-unemployed-new-grad-watching-the-job-market-break/",
+    "first_paragraph": "November 05, 2025 \u2022 work, economics, automationI have been putting off writing this for a month, mostly because I did everything I was supposed to do and it still feels like I have no idea what game I am actually playing.I went to university. I got good grades. I did three internships. I ran a tiny consultancy for a while, building things for people and sending invoices that were actually paid. I studied computer science. I have done the very normal, very legible technical work you put on a CV: I learned the tools I was told to learn. I watched the right talks. I followed the right people. I can point at a neat little row of experiences and say: I played by the rules you told me about.I am unemployed anyway.I have been applying around as a new grad, sending out the same careful batch of CVs and cover letters that older friends used a few years ago to land solid jobs. What I meet instead is a job market that people now casually call broken. The phrase \u201cwhite collar recession\u201d has escape"
   },
   {
-    "title": "Marko \u2013 A declarative, HTML\u2011based language (markojs.com)",
-    "points": 189,
-    "submitter": "ulrischa",
-    "submit_time": "2025-11-08T18:43:55 1762627435",
-    "num_comments": 96,
-    "comments_url": "https://news.ycombinator.com/item?id=45858905",
-    "comments": [
-      "It looks interesting and in a past life I probably would have tried it out but do you know why I like React? Because it's just JavaScript.This `<let/variable=...>` and `<for ...>` syntax is awful.reply",
-      "I mostly agree with you but React isn\u2019t just JavaScript. JSX is not JavaScript. It\u2019s just that we\u2019re so used to it we don\u2019t consider it notable any more. Worth keeping in mind when you\u2019re looking at a brand new framework.reply",
-      "I mean, you\u2019re technically correct. But you\u2019re also not understanding the point.What people mean when they say \u201cReact is just JavaScript\u201d is\u20261) JSX, more than any other templating system, is just HTML interleaved with JavaScript. It\u2019s HTML, and anything between { and } is evaluated as JavaScript.2) Inserting a React component\u2019s \u201cHTML tag\u201d in your JSX is _actually_ the same as calling the JavaScript function. The HTML attributes are the function arguments. Yes, inside your function there can be state, and there can be contexts, and there are refs. But you get at all of those things by calling JavaScript functions.Like,      <b><MyComponent attr=\u201cyes\u201d /></b>\n\nis literally identical to:      <b>{MyComponent({ attr: \u201cyes\u201d })}</b>\n\nIt\u2019s the tiniest bit of syntactic sugar.I feel like too many people think \u201cReact is Just JavaScript\u201d is some kind of lie people tell to make React sound cool.It\u2019s not a lie. There\u2019s a _small_ amount of hand waving around the word \u201cjust\u201d but the point is, it\u2019s WAY smaller than what you need to explain the ways Svelte or Vue or Angular diverge from plain JavaScript.reply",
-      "> JSX, more than any other templating system, is just HTML interleaved with JavaScript. It\u2019s HTML, and anything between { and } is evaluated as JavaScript.That\u2019s not true though and IMO is one of the weaknesses of JSX: it looks like something it is not. Having to use className instead of class is one of the most obvious tells. But in theory if it was just HTML with {}s I should be able to do:- `<{tagName} />`\n- `<span {someTextContent} />and many other things I\u2019m actually not able to do.",
-      "I don't think the syntactic sugar works how you describe. JSX components actually desugar to something like:   <b>{jsx(MyComponent, { attr: \"yes\" })</b>\n\n(Previously this function was called \"React.createElement\",  but these days they have special functions that only the JSX compiler is allowed to use.) The extra layer of indirection is needed to do things like support hooks being called inside of MyComponent's function body, keep track of `key` props, and so on.reply",
-      "And this is one of the disadvantages of JSX. The snippets you posted are NOT identical.JSX (react flavor) is lazy. <My component> is not rendered/evaluated until it's needed.You can't just call a react component. It's not a regular function call.reply",
-      "It's further than that even. JSX has the semantics of (modulo a couple of optimisations there and there) a bunch of nested function calls returning normal JavaScript objects. That means you can, in your head, very easily convert between the JSX representation of an expression and the equivalent transpiled JavaScript code.This is unlike a lot of other templating languages where, even if the expression part of the language is pure JavaScript (or PHP or Python or whatever), it's still interleaved with arbitrary text which will get printed out according to its own rules. This makes the whole thing much harder to reason about (leading to the philosophy that you should put as little logic as possible in your templates because it makes them harder to understand, _even when that logic is directly related to the templating process_.A good example is for-loops. In a lot of templating languages, you start in text-land, then you enter expression-land to write the opening {% for (const X of ...) %} line, then you're back in text-land again. You sprinkle in a couple of expressions, and then at the end you go back to expression-land to close the loop. You're jumping backwards and forwards between the two worlds, but there's no real syntactical or structural support for mixing them.Meanwhile, in JSX, you start in text-land, then you open up an expression between two curly braces, and in that expression you write the entirety of your loop. If you need to go back to text-land within that loop, you can create a _new_ set of text nodes, but you're not interleaving expressions and text in the same way.The result of this is that, once you understand how your JSX will get compiled, it's very easy to read it as if it were the JavaScript that it will get compiled to, rather than as a separate templating language. Which in turn makes it very easy to think of it as \"just JavaScript\", even if it's technically a syntax extension.reply",
-      "It\u2019s not JavaScript if you can\u2019t make an html page locally and open it in your browser without things like an http server or need to transpile.reply",
-      "There are a lot of things people might mean by claiming that something \"is just JavaScript,\" but one possible meaning is that the source code you write can run in the browser without any build whatsoever. For React, that's true with the exception of JSX, which is a very simple and optional syntax transform. (Of course in practice you'll probably want to do module bundling too, but browsers could technically load your ES modules directly from static file storage.For Marko, that doesn't seem to be the case, but it also doesn't really make sense given the problems that Marko is trying to solve.Another thing people might mean by \"it's just JavaScript\" is a much more subjective notion about how similar the overal syntax, control flow, etc. feels to whatever previous JavaScript experience the person has. This meaning is a lot harder to pin down, and in most cases reasonable people could disagree on what is and isn't \"just JavaScript\" according to this meaning. That said, I would tend to agree that React's templating uses normal JavaScript control flow and composition primitives more so than Marko.reply",
-      "That's true, sure. My response to that is in React you have JavaScript & JSX and there are clear boundaries. It's not mixed. I don't write<for ...>In JSX I write JavaScript that returns JSX:{data.map(node => <Element {...node} />)}^ ----- JS ----^ ^ ------ JSX -------^orconst elements = data.map(node => <Element {...node} />)\n...\n<div>{elements}</div>Really the most obscure syntax there is the splatting but it makes sense to you when you realize that JSX is just syntactic sugar for JS:data.map(node => React.createElement(Element, { ...node }))reply"
-    ],
-    "link": "https://markojs.com/",
-    "first_paragraph": "Powering high-traffic, production-grade websites like eBay.comIf you know HTML, CSS, and JavaScript, you know MarkoStreaming, resumable, optimizing compiler, and a tiny runtimeFrom simple HTML templates to powerful components as neededMarko is HTML re\u2011imagined as a language for building dynamic and reactive user interfaces.Just about any valid HTML is valid Marko, but Marko extends the HTML language to allow building modern applications in a declarative way.Marko streams content to your users as soon as it's ready. No waiting for client side JavaScript bundles or data requests to start rendering.HTML, assets, and images are loaded as soon as possible with asynchronous content loading in as it completes.Why ship entire Islands for a few grains of sand? Marko ships only what's needed, skipping hydration and stripping unused code at the sub-template level.Lean by default. Fast by design. Unrivaled performance on any device or network.Browsers and servers are built differently, shouldn't y"
-  },
-  {
-    "title": "Largest cargo sailboat completes first Atlantic crossing (marineinsight.com)",
-    "points": 94,
-    "submitter": "defrost",
-    "submit_time": "2025-11-08T19:57:52 1762631872",
-    "num_comments": 42,
-    "comments_url": "https://news.ycombinator.com/item?id=45859471",
-    "comments": [
-      "I love that they're trying this. It appears the more practical goal might be retrofitting existing vessels with large sails to augment the motors, but making a point with a fully wind-powered vessel is a good show. Well, it would have been fully wind powered if not for the damaged sail. Good on them for sticking with the journey, though. I hope they keep running the vessel and get a few more fully wind powered journeys.reply",
-      "I have a dim recollection of exactly this as a VC proposal likely put to YC in the past 24 months or so.I think the notion was to fit masts to existing container ship and stacks, and I gsve it scant attention as my intuition (I once studied actual civil/mech engineering prior to jumping ship for applied math) suggested masts are better as integral parts of ships rather than bolt on after thoughts.EDIT: Wingsails to reduce cargo ship fuel consumption (April 2023)https://news.ycombinator.com/item?id=35426482  I\u2019m Joseph, and along with Arpan and Bailey we are the founders of OutSail Shipping. We\u2019re building a sail the size of a 747 that rolls up into a shipping container.\n\nhttps://outsailshipping.com/ https://www.linkedin.com/company/OutSail-Shipping/  When deployed, it will generate thrust from the wind to reduce the fuel consumption of a cargo ship. An array of these devices will reduce fuel consumption on ships by up to 20%. These sails are easily stowed and removed to cause no interference with cargo operations.\n\n  Here\u2019s a short video showing our prototype:\n\nhttps://www.youtube.com/watch?v=VUpVqzpym54Not quite as I remembered .. kite sails, et al. are a good idea, I'm still a bit torn by the physics of a container deployed boom extension sail and the thrust transmission to the ship. Still, I haven't modeled it, so take my thoughts with a grain of salt.EDIT2: Both links appear dead, so I guess that was a swing and a miss. Still, good to see such ideas pursued.EDIT3: Also related350 tons of of chocolate and wine arrive on world\u2019s largest cargo sailboat (April 2024)https://news.ycombinator.com/item?id=40022801reply",
-      "\"suggested masts are better as integral parts of ships rather than bolt on after thoughts.\"It seems quite mad that we even need to debate this.  Wind is free power and we have at least 2000 years of engineering to draw on how to use it.Any propulsion unit needs to be effectively attached to a ship.  Screws are attached longitudinally, low down and push.  Sails are a bit more tricksy.  A triangular sail mounted along the long axis will generally work best because it can handle more wind angles but a square sail mounted across the long axis will provide more power on a \"reach\" to a \"run\" (the wind is mostly from behind, so pushing).The cutting edge of sailing ships that carried stuff are the tea clippers.  Think \"Cutty Sark\" which is now a visitor attraction in London, Greenwich.  Note the stay sails - the triangular sails at the front.  Then note the three masts.  Each mast has several main sails that are huge rectangles for \"reaches\" and additional extensions.  There are even more triangular infill sails above the main sails.It's quite hard to explain how wind and sails work but you need to understand that a sailing ship can sail \"into the wind\".  Those triangles are better at it than those rectangles but those rectangles can get more power by being bigger.  Even better, you can use the front triangular sails (stay sails) to moderate the wind to feed the other sails with less turbulent wind.Wind is free power and it is so well understood.  How on earth is this news?reply",
-      "This is an area I have some peripheral involvement with. For retrofitted sails on bulkers, the figure of 10% saving in fuel is the usual one mentioned rather than 20%. However given the long life of ships, there is much more interest in retrofit than in new build.You mention container ships. I haven't seen anything explicit on these, and I think the reason is probably that they cruise much faster than bulkers and tankers, which means the potential savings from sail is smaller. I would have thought 20% optimistic even for a new-build.reply",
-      "Retro fit is clearly a preferred path for a new approach given ship life spans and size of existing global transport fleet.My gut objection to the container approach taken above in the first link was existing container locking mechanisms for ships can struggle in severe weather to keep the boxes on the boat .. additional forces from a sail (in good weather) might well mimic the forces that break stacks in bad weather.Your point is well taken, I might suggest that container ships could be segregated into fast and slow cargo and that might help somewhat with total fleet fuel consumption. (pure spitball notion).reply",
-      "Wasn't the main issue with this that fuel is paid for by cargo ship customers (the container owners), not the shipping company? So the shipping company doesn't want to spend a ton of capital to get a 10% discount to all their customers, and there was no way for thousands of random customers to exert pressure on the shipping company to do so. Basically the economics didn't make sense.reply",
-      "Thought I may go see it in person but looks like it\u2019s about half way home already.https://www.marinetraffic.com/en/ais/details/ships/shipid:96...reply",
-      "\"World\u2019s Largest Cargo Sailboat Completes Historic First Atlantic Crossing Using Auxillary Engine\"Fixed it.I am pretty sure there is a reason why the very fast Clippers were replaced by steam engines 150 years ago. I guess we can learn why again.reply",
-      "This seems to be a tiny vessel ... just 5000 tons of cargo.  Most container ships carry more like 200,000 tons of cargo.  Can sails scale to carry that much cargo?  If not, I fear the economics will not work out for sails alone.  Perhaps sails plus something else makes more sense?reply",
-      "Sails scale.  You can make them out of steel if necessary - the wind does not care what it pushes.reply"
-    ],
-    "link": "https://www.marineinsight.com/shipping-news/worlds-largest-cargo-sailboat-completes-historic-first-atlantic-crossing/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Study identifies weaknesses in how AI systems are evaluated (ox.ac.uk)",
-    "points": 292,
-    "submitter": "pseudolus",
-    "submit_time": "2025-11-08T14:18:22 1762611502",
-    "num_comments": 153,
-    "comments_url": "https://news.ycombinator.com/item?id=45856804",
-    "comments": [
-      "I work on LLM benchmarks and human evals for a living in a research lab (as opposed to product). I can say: it\u2019s pretty much the Wild West and a total disaster. No one really has a good solution, and researchers are also in a huge rush and don\u2019t want to end up making their whole job benchmarking. Even if you could, and even if you have the right background you can do benchmarks full time and they still would be a mess.Product testing (with traditional A/B tests) are kind of the best bet since you can measure what you care about _directly_ and at scale.I would say there is of course \u201cbenchmarketing\u201d but generally people do sincerely want to make good benchmarks it\u2019s just hard or impossible. For many of these problems we\u2019re hitting capabilities where we don\u2019t even have a decent paradigm to use,reply",
-      "For what it's worth, I work on platforms infra at a hyperscaler and benchmarks are a complete fucking joke in my field too lol.Ultimately we are measuring extremely measurable things that have an objective ground truth. And yet:- we completely fail at statistics (the MAJORITY of analysis is literally just \"here's the delta in the mean of these two samples\". If I ever do see people gesturing at actual proper analysis, if prompted they'll always admit \"yeah, well, we do come up with a p-value or a confidence interval, but we're pretty sure the way we calculate it is bullshit\")- the benchmarks are almost never predictive of the performance of real world workloads anyway- we can obviously always just experiment in prod but then the noise levels are so high that you can entirely miss million-dollar losses. And by the time you get prod data you've already invested at best several engineer-weeks of effort.AND this is a field where the economic incentives for accurate predictions are enormous.In AI, you are measuring weird and fuzzy stuff, and you kinda have an incentive to just measure some noise that looks good for your stock price anyway. AND then there's contamination.Looking at it this way, it would be very surprising if the world of LLM benchmarks was anything but a complete and utter shitshow!reply",
-      "> we completely fail at statistics (the MAJORITY of analysis is literally just \"here's the delta in the mean of these two samples\". If I ever do see people gesturing at actual proper analysis, if prompted they'll always admit \"yeah, well, we do come up with a p-value or a confidence interval, but we're pretty sure the way we calculate it is bullshit\")Sort of tangential, but as someone currently taking an intro statistics course and wondering why it's all not really clicking given how easy the material is, this for some reason makes me feel a lot better.reply",
-      "\u201cHere\u2019s the throughout at  sustained 100% load with the same ten sample queries repeated over and over.\u201d\u201cThe customers want lower latency at 30% load for unique queries.\u201d\u201cErr\u2026 we can scale up for more throughput!\u201d\u0ca0_\u0ca0reply",
-      "Id say your experience is being more monetized for growth for growth sake.reply",
-      "In AI though, you also have the world trying to compete with you, so even if you do totally cheat and put the benchmark answers in your training set and over fit, if it turns out that you model sucks, it doesn't matter how much your marketing department tells everyone you scored 110% on SWE bench, if it doesn't work out that well in production, your announcement's going to flow as users discover it doesn't work that well on their personal/internal secret benchmarks and tell /r/localLLAMA it isn't worth the download.Whatever happened with Llama 4?reply",
-      "Even a p-value is insufficient. Maybe can use some of this stuff https://web.stanford.edu/~swager/causal_inf_book.pdfreply",
-      "I have actually been thinking of hiring some training contractors to come in and teach people the basics of applied statistical inference. I think with a bit of internal selling, engineers would generally be interested enough to show up and pay attention. And I don't think we need very deep expertise, just a moderate bump in the ambient level of statistical awareness would probably go a long way.It's not like there's a shortage of skills in this area, it seems like our one specific industry just has a weird blindspot.reply",
-      "Don\u2019t most computer science programs require this? Mine had a statistics requirementreply",
-      "I don't know how it is in the US and other countries, but in my country I would say statistics is typically not taught well, at least in CS degrees. I was a very good student, always had good understanding at the subjects at university, but in the case of statistics they just taught us formulae and techniques as dogmas without much explanation of where they came from, why, and when to use them. It didn't help either that the exercises we did always applied them to things outside CS (clinical testing, people's heights and things like that) with no application we could directly relate to. As a result, when I finished the degree I had forgotten most of it, and when I started working I was surprised that it was actually useful.When I talk about this with other CS people in my own country (Spain) they tend to refer similar experiences.reply"
-    ],
-    "link": "https://www.oii.ox.ac.uk/news-events/study-identifies-weaknesses-in-how-ai-systems-are-evaluated/",
-    "first_paragraph": "A new study led by the Oxford Internet Institute (OII) at the University of Oxford and involving a team of 42 researchers from leading global institutions including EPFL, Stanford University, the Technical University of Munich, UC Berkeley, the UK AI Security Institute, the Weizenbaum Institute, and Yale University, has found that many of the tests used to measure the capabilities and safety of large language models (LLMs) lack scientific rigour. \u00a0In Measuring What Matters: Construct Validity in Large Language Model Benchmarks, accepted for publication in the upcoming NeurIPS conference proceedings, researchers review 445 AI benchmarks \u2013 the standardised evaluations used to compare and rank AI systems.\u00a0\u00a0The researchers found that many of these benchmarks are built on unclear definitions or weak analytical methods, making it difficult to draw reliable conclusions about AI progress, capabilities or safety.\u00a0\u201cBenchmarks underpin nearly all claims about advances in AI,\u201d says Andrew Bean, le"
-  },
-  {
-    "title": "Characterizing the American Upper Paleolithic (science.org)",
-    "points": 12,
-    "submitter": "bikenaga",
-    "submit_time": "2025-11-09T00:14:50 1762647290",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.science.org/doi/10.1126/sciadv.ady9545",
-    "first_paragraph": ""
-  },
-  {
-    "title": "WriterdeckOS (writerdeckos.com)",
-    "points": 115,
-    "submitter": "surprisetalk",
-    "submit_time": "2025-11-08T18:49:47 1762627787",
-    "num_comments": 57,
-    "comments_url": "https://news.ycombinator.com/item?id=45858945",
-    "comments": [
-      "The idea of a low-distraction laptop OS is a good one, but I'm not sure that this is necessarily the best approach.If I mentally model such a thing myself, I end up with something that looks a lot like Classic (pre-OS-X) Mac OS. It's simplified and has just enough presence to properly host graphical applications. No taskbar, no notifications (or associated drawer), no self-populated launcher menu. File manager is spatial so it doesn't need a sidebar or navigation chrome. Multitasking is technically possible, but high-friction since the only way to switch between running apps is the little app switcher menu in the top right corner and becomes more cumbersome the more apps/windows you open. Included browser does not support tabs, only windows. Shortcuts to frequently used apps must be added intentionally (to your desktop as aliases/shortcuts or to the launcher menu).This design strongly encourages singular focus without forcing it. If you want to have music playing in the background or need to open a browser window for research you can, but gravity is constantly pulling you back towards your task since the machine isn't pleasant to use for goofing off.reply",
-      "This is intended for people who want to use a laptop as a single use device for the purpose of writing. So basic file management and a word processor is all that is needed.WriterdeckOS is not meant to be an OS for general computing.Purppose built writerdecks are quite expensive. WriterdeckOS is a practical, inexpensive and resourceful alternative to a purpose build device.For more information on writerdecks check out:https://www.reddit.com/r/writerDeck/reply",
-      "Uxn from hundred rabbits comes to mind.https://100r.careply",
-      "Not exactly this but found a similar experience recently by throwing Linux lite on an 15-year-old thinkpad with a physical wifi switch.Was for my kid in this case. Loaded a few education-friendly games and then disabled the wifi. Now it\u2019s a simple, focused, and relatively safe box.Could easily do the same for writing or any other activity.reply",
-      "The idea is fine, though the execution seems obnoxious for getting your writing out of your system. The trouble is, depending on what you\u2019re writing, Tilde might be a massive downgrade. For novels, I find something like Scrivener essential.I\u2019ve looked into a few options like this over the years (e.g. the Freewrite, or even an old Alphasmart), but always came to the conclusion they added more friction to my writing process, not less.reply",
-      "While I don't have a use for this, I do like the idea of purposeful modes in computing. Obviously there is a lot you can do with shortcuts and preferences, but its nice to have a limited to base to start with.I think this is even more important with a mobile platform since for one, battery and processing power is at a premium, and two anything with notifications could take you out of your desired \"mode\" if you don't wrangle them properly.Something I've always wanted in a smartphone is to be able to boot into a \"camera only\" mode. There have been many times where all I need my phone for is as a camera, and I don't want it wasting resources/battery doing anything else. If this mode were light enough, it could boot up in the same amount of time as a normal digital camera, allowing your the phone to be truly off while you're not taking pictures. I do often take a digital camera with me, but sometimes I don't want the bulk or maybe I didn't initially plan to take a lot of pictures.reply",
-      "Closing your laptop can also provide a clean, portable writing platform.reply",
-      "No autosaving. That's the wrong way to try to be minimalist.reply",
-      "Yea, that\u2019s something that stuck out to me as well. Seems like auto save and version control could be done in a minimalist manner whist improving QOLreply",
-      "I really enjoyed using CherryTree on top of Git with automatic commit and sync. Getting readable diffs (via using XML as an output format) is meaningful.reply"
-    ],
-    "link": "https://writerdeckos.com",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Control structures in programming languages: from goto to algebraic effects (xavierleroy.org)",
-    "points": 89,
-    "submitter": "SchwKatze",
-    "submit_time": "2025-11-03T11:47:19 1762170439",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=45798068",
-    "comments": [
-      "It's a pity that the section on exceptions didn't do a more detailed analysis on the criticism of exceptions; in my personal view I haven't liked exceptions, in a similar vein to how I'm not a huge fan of the implementation of POSIX signals or setjmp / longjmp.Although I very much see the reason why it was developed, in effect it comes closer to a glorified form of \"come from\" (and people thought that goto was considered harmful).reply",
-      "Although INTERCAL's \"come from\" provided the opportunity to implement a gloriously concise multi-threading syntax/mechanism [1]![1] https://esolangs.org/wiki/Threaded_INTERCALreply",
-      "For French speaking people, Mr. Leroy gave a complete lecture at Coll\u00e8ge de France. Available on Youtube.reply"
-    ],
-    "link": "http://xavierleroy.org/control-structures/",
-    "first_paragraph": "This book is a journey through the design space and history of programming languages from the perspective of control structures: the language mechanisms that enable programs to control their execution flows.  Starting with the \u201cgoto\u201d jumps of early programming languages and the emergence of structured programming in the 1960s, the book explores advanced control structures for imperative languages such as generators and coroutines, then develops alternate views of control in functional languages, first as continuations and their control operators, then as algebraic effects and effect handlers.  Blending history, code examples, and theory, the book offers an original, comparative perspective on programming languages, as well as an extensive introduction to algebraic effects and other contemporary research topics in P.L.To be published by Cambridge University Press.This is an HTML preview of the book, generated with Hevea.  License: CC-BY-NC-ND 4.0.Part I: Control structures for imperativ"
-  },
-  {
-    "title": "Debugging BeagleBoard USB boot with a sniffer: fixing omap_loader on modern PCs (downtowndougbrown.com)",
-    "points": 20,
-    "submitter": "todsacerdoti",
-    "submit_time": "2025-11-08T22:30:58 1762641058",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.downtowndougbrown.com/2025/11/debugging-beagleboard-usb-boot-with-a-sniffer-fixing-omap_loader-on-modern-pcs/",
-    "first_paragraph": "This post is about the original OMAP3530 BeagleBoard from 2008. Yes, the one so old that it doesn\u2019t even show up in the board list on BeagleBoard.org anymore. The BeagleBoard, not the BeagleBone. During my Chumby 8 kernel escapades, at one point I ran into a UART bug that affected multiple drivers, including the omap-serial driver. This led me to buy a BeagleBoard so I could verify the omap-serial bug on hardware.After I figured out the bug with the UART driver, I realized that the OMAP3530 has support for booting from USB, so I decided to go off on a random tangent to get USB boot working. There was no problem I was trying to solve or anything like that. I just thought it would be a fun experiment (am I a masochist?). Little did I know, I would be getting myself into some tricky USB packet analysis.I struggled to find info about this process because of how old the OMAP is today. The main utility I found was a program called omap_loader by Grant Hernandez, which is a newer rewrite of M"
-  },
-  {
-    "title": "Judge says Education Dept partisan out-of-office emails violated First Amendment (npr.org)",
-    "points": 19,
-    "submitter": "toomanyrichies",
-    "submit_time": "2025-11-09T01:03:20 1762650200",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=45861897",
-    "comments": [
-      "Is a judgement worth the paper it\u2019s written on when it\u2019s ignored with zero consequences?reply",
-      "The woman in charge of the Department of Education is so woefully unqualified for the position as to require a new frame of reference. If I were to place a pile of feces into her position, it would by default, do a better job than her. She is the wife of the jackass who runs wrestling. The idea that she'd be in charge of our country's educational system is absolutely galling, and we should not be putting up with it. Trump's previous Dept. of Ed director was the largest private student loan owner in the country. That at least made sense. It was corrupt and evil, but it made sense.The current director could only be in her current position if the plan was to make everyone in the US into violent idiots who hit each other with folding chairs. I guess that's the plan.reply",
-      "She is doing a fine job, being greatly assisted by A1.A1 also assists the flavor of steaks and burgers.reply"
-    ],
-    "link": "https://www.npr.org/2025/11/08/nx-s1-5602859/education-department-out-of-office-emails-ruling",
-    "first_paragraph": "\n\n      Cory Turner\n    \n\n                The Washington headquarters of the Department of Education on March 12. A federal judge ruled that the Trump administration violated the First Amendment rights of Education Department employees when it replaced their personalized out-of-office notifications with partisan language.\n                \n                    \n                    Win McNamee/Getty Images\n                    \n                \nhide caption\nA federal judge ruled that the Trump administration violated the First Amendment rights of Education Department employees when it replaced their personalized out-of-office e-mail notifications with partisan language blaming Democrats for the government shutdown.\"When government employees enter public service, they do not sign away their First Amendment rights,\" U.S. District Judge Christopher Cooper wrote in his decision on Friday, \"and they certainly do not sign up to be a billboard for any given administration's partisan views.\"The la"
-  },
-  {
-    "title": "Aver\u00eda: The Average Font (2011) (iotic.com)",
-    "points": 115,
-    "submitter": "JoshTriplett",
-    "submit_time": "2025-11-08T19:29:44 1762630184",
-    "num_comments": 25,
-    "comments_url": "https://news.ycombinator.com/item?id=45859243",
-    "comments": [
-      "I've used Averia (Serif Libre, specifically) for at least a decade as my primary font for email, web pages in 'reader' mode, writing long-form text, etc. I find it extremely legible, and even calming.Ironically, I've been a typographer for decades, both for print and online. Averia might seem an odd choice for someone  intimately familiar with typographic theory/history and the vast catalog of possible fonts. But there's a certain pleasure and comfort in a font that is not trying to stand out or do anything particularly special.reply",
-      "It's kind of like how if you take the average of enough male or female human faces, the result is a very pleasing, attractive face.reply",
-      "Same with music, a large group of people singing slightly off-key (each in their own way) tends to sound pretty good in aggregatereply",
-      "This is an experiment from 2011 in which the author produced a font by averaging all the fonts on their system.I'm reposting it here because I noticed that this looks a lot like the uncanny valley produced when an image AI tries to make text, which makes perfect sense: it's a statistical average of fonts.reply",
-      "It also reminds me a bit of what text looks like after multiple rounds of photocopying. Like the handouts we'd get in grade school.reply",
-      "I don\u2019t get uncanny valley feel from this one. It feels kind of great for me as a font.reply",
-      "Same. It looks like the print you see in old books. Very pleasing to the eye. The lower case 'm' sticks out to me though, the second hump is raised a little too high.reply",
-      "Interestingly it evokes Open Dyslexic.reply",
-      "Yes, I saw the exact same thing when you posted it - \"oh, AI text looks like an averaging of fonts\".reply",
-      "Interesting how modern designers think readable fonts (with serifs, so people can reliably distinguish between Al and AI, for example) are \"uncanny\" because they don't follow the latest trends in ultra-minimalist \"design\" and other fashions.reply"
-    ],
-    "link": "http://iotic.com/averia/",
-    "first_paragraph": "am not a type designer. This is the story of the creation of a new font,\nAver\u00eda: the average of all the fonts on my computer. The field of typography\nhas long fascinated me, and I love playing with creative programming\nideas, so it was perhaps inevitable that the idea came to me one day of\n\u201cgenerative typography\u201d. A Google on the subject brought up little, and I \nput the idea to the back of my mind until it occurred to me that perhaps the process of\naveraging, or interpolating, existing fonts might bring up interesting results. Luckily at this\npoint I didn't do any more web searching \u2013 instead I grabbed\nmy laptop and came up with an initial idea for finding what the average of all\nmy fonts might look like \u2013 by overlaying each letter at low opacity. The results\ncan be seen in the below image.\n\n\nThis was done by printing each letter of each font, at the same point size,\nto lots of separate images, and then averaging them \u2013 using ImageMagick and PHP.\nThe letters were\naligned to the same c"
-  },
-  {
-    "title": "Open-source communications by bouncing signals off the Moon (open.space)",
-    "points": 46,
-    "submitter": "fortran77",
-    "submit_time": "2025-11-02T14:44:02 1762094642",
-    "num_comments": 13,
-    "comments_url": "https://news.ycombinator.com/item?id=45790672",
-    "comments": [
-      "KA1GT recently found a $100 \u201csolar cooker\u201d dish on AliExpress. Also available on Amazon. It was tested back in August.Announced on the EME Facebook Group: https://www.facebook.com/share/p/19zLsGZiE7/?mibextid=wwXIfrOutput power was 500wreply",
-      "I started reading thinking it was impossible but it has been done with other devices https://en.wikipedia.org/wiki/Earth%E2%80%93Moon%E2%80%93Ear...reply",
-      "Not impossible, just extremely difficult. I'm a ham and getting some contacts over moonbounce is a personal goal of mine. Historically this kind of thing has required some pretty large antenna arrays and very high power though:https://hamradio.engineering/eme-moonbounce-bouncing-signals...http://www.g4ztr.co.uk/app/download/13284489/RaCcom_Feb14+EM...http://www.g4ztr.co.uk/app/download/13300096/Radcom_Mar144+E...reply",
-      "Isn't there a moon bounce mode in WSJT (or one of those digital modes) that provides enough coding gain that 100W and a single large Yagi is enough?  I seem to recall hearing something like that... but, yeah, on CW a monster antenna and the legal limit of 1500W seems to be the median system.A long time ago I started collecting parts for a 432MHz EME system.  Life got in the way and I never built it out.  Good luck with your endeavor!reply",
-      "Expected array gain: ~39.3 dBi / EIRP: ~63.1 dBWTx power: 1 W per antennaYeah... so free space path loss at legal frequencies for hams this thing can transmit on is ~283dB. Neat idea but consider me skeptical. Having said that I can see some interesting applications for this kind of gear, EME seems overly optimistic though.reply",
-      "At those power levels they would have to use some kind of highly error-corrected modulation and coding scheme to provide enough coding gain to overcome the path loss.  I agree they are pretty optimistic, but until they detail their modulation scheme, it's hard to tell.A few years ago I was experimenting with 900 MHz LoRa for a work project -- we had need to communicate a very small data payload from inside elevator cabs, with forgiving latency requirements.  So we took a LoRa board to a hotel building 2 city blocks away from our lab and cranked the coding gain up to the max, which gave us about a 1 byte payload every second.  Perfectly sufficient for our application.  Astoundingly, we had great copy in our lab even when the doors of the elevator cab were closed, inside a building 2 blocks away.  I can't remember the power level, 500mW I think, but I may be wrong.reply",
-      "People use WSJTX software and Q65 modereply",
-      "It's 1 watt per antenna. They have 240, or 53.8 dbm. So assuming 39.3 and your 283 (which seems to be around what I'm seeing online) that's -283+(39.3*2)+53.8=-150.6 dbm receive power. That should be plenty.reply",
-      "It's theoretically possible.63.1 dbW = 93.1 dBm (240 watts + 39.3 dB gain)path loss at 5760 MHz = 283.2 dB (at perigee)RX gain = 39.3 dB93.1 - 283.2 + 39.3 = -150.8 dBmNoise floor at 1.2 dB noise figure and 500 Hz bandwidth = -151.9 dBmSNR = +1.1 dB (easily detectable by ear with CW).reply",
-      "A few hundred Watt at a minimum would be my first guess.reply"
-    ],
-    "link": "https://open.space/",
-    "first_paragraph": "An open-source communications hardware & software initiative empowering the public to connect across the world by bouncing signals off the Moon\u2014and more!Be the first to find out when our hardware launches!Bouncing signals off the Moon\u2014known as Earth-Moon-Earth (EME) communication\u2014has long been the ultimate challenge for radio amateurs. It required large antennas, expensive equipment, and accurate manual pointing and tracking. We try to bring this down to Earth, providing all the tools needed to experience the thrill of space communication, with an open source software-defined phased array.Expected to ship: March 2026.Our first kit is a low-cost digital phased array, with high transmit power and excellent receive sensitivity.\n      It supports flexible transmission modes across any 40 MHz bandwidth in the C-band (4.9\u20136 GHz).With a scalable architecture, you can pick an array size and grow later.\n            This 4-antenna SDR tile designed for arraying. Drop-in compatible with\n         "
-  },
-  {
-    "title": "Cloudflare scrubs Aisuru botnet from top domains list (krebsonsecurity.com)",
-    "points": 115,
-    "submitter": "jtbayly",
-    "submit_time": "2025-11-08T16:25:41 1762619141",
-    "num_comments": 26,
-    "comments_url": "https://news.ycombinator.com/item?id=45857836",
-    "comments": [
-      "If an automated service is pulling the top 100 domains from CF and naively trusting them, why can't it also pull the categorization information that's right there and make sure none of the categories are \"Malware\"??? Who would write something like that? It's absolutely believable that the top 100 domains could contain malware domains...because of the nature of botnets and malware.That's PEBCAK.reply",
-      "People make mistakes. Security engineers need to understand what sort of mistakes people are making and mitigate that risk. Brushing it under the rug as silly users making mistakes doesn't protect anyone.reply",
-      "The automated services using this for security-related purposes are presumably built by \"security engineers\", if they're making mistakes like this they're obviously woefully underqualified.reply",
-      "Almost nothing is built by security engineers, including security features of security products at security companies.reply",
-      "I'm a security engineer, I have built things like this, and I made the original comment. A lot of my job revolves around developing automation for security needs.Also, many of the top 100 domains serve user-generated content (like AWS/S3). Blindly trusting anything from them just because they are big is so woefully misguided it boggles my mind; I seriously doubt that anyone is actually doing what is described in the article.reply",
-      "True masters of security realize all software is flawed, and therefore write none.reply",
-      "Many people are woefully under qualified, we need to have a working society anyway.reply",
-      "Why not include them? What's wrong with have the most resolved domain being the top domain. I think it's interesting to know the actual most resolved domain, than the top of some editorialized list.reply",
-      "As discussed in the article, threat actors are using a botnet to game the system by repeatedly issuing queries for the domains; the list is intended to represent the top 100 domains resolved by legitimate users (and legitimate bots, I assume), not just \"who can make the most queries to CloudFlare for a domain\".reply",
-      "> We should have two rankings: one representing trust and real human use, and another derived from raw DNS volume.Isn't identifying real humans an unsolved problem? I'm not sure efforts to hide the truth that these domain are actually the most requested domains does anyone any favors. Is there something using these rankings as an authoritative list or are they just vanity metrics similar to the Alexa Top Site rankings of yore? If they are authoritative, then Cloudflare defining \"trusted\" is going to be problematic as I would expect them to hide that logic to avoid gaming.reply"
-    ],
-    "link": "https://krebsonsecurity.com/2025/11/cloudflare-scrubs-aisuru-botnet-from-top-domains-list/",
-    "first_paragraph": "For the past week, domains associated with the massive Aisuru botnet have repeatedly usurped Amazon, Apple, Google and Microsoft in Cloudflare\u2019s public ranking of the most frequently requested websites. Cloudflare responded by redacting Aisuru domain names from their top websites list. The chief executive at Cloudflare says Aisuru\u2019s overlords are using the botnet to boost their malicious domain rankings, while simultaneously attacking the company\u2019s domain name system (DNS) service.The #1 and #3 positions in this chart are Aisuru botnet controllers with their full domain names redacted. Source: radar.cloudflare.com.Aisuru is a rapidly growing botnet comprising hundreds of thousands of hacked Internet of Things (IoT) devices, such as poorly secured Internet routers and security cameras. The botnet has increased in size and firepower significantly since its debut in 2024, demonstrating the ability to launch record distributed denial-of-service (DDoS) attacks nearing 30 terabits of data pe"
-  },
-  {
-    "title": "My first fifteen compilers (2019) (sigplan.org)",
-    "points": 42,
-    "submitter": "azhenley",
-    "submit_time": "2025-10-31T20:30:10 1761942610",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=45776368",
-    "comments": [
-      "Every browser can smooth scroll, please stop doing this in JS, manually.I turn mine off, then you force it on me, and CTRL+F4 is an immediate reflex.reply",
-      "You should report it to sigplan.org. Complaining about it here won't make any difference.There's also https://news.ycombinator.com/newsguidelines.html -> Please don't complain about tangential annoyances\u2014e.g. article or website formats, name collisions, or back-button breakage. They're too common to be interesting.reply",
-      "(2017)At the time (387 points, 76 comments) https://news.ycombinator.com/item?id=15153956 https://archive.is/gUVNw2019 edit (388 points, 78 comments) https://news.ycombinator.com/item?id=20408011reply"
-    ],
-    "link": "https://blog.sigplan.org/2019/07/09/my-first-fifteen-compilers/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Court Judge Rules Flock Safety camera data is not exempt from PRA [WA State] (goskagit.com)",
+    "title": "How to maintain good vision amidst the myopia epidemic (ssathe.substack.com)",
     "points": 14,
-    "submitter": "p_ing",
-    "submit_time": "2025-11-09T00:53:07 1762649587",
-    "num_comments": 0,
-    "comments_url": "",
+    "submitter": "plun9",
+    "submit_time": "2025-11-10T01:20:18 1762737618",
+    "num_comments": 2,
+    "comments_url": "https://news.ycombinator.com/item?id=45871107",
     "comments": [
-      "xxx"
+      "I wonder what effects VR and AR will have on this.reply",
+      "Same. Hopefully AR/VR and other display technologies will mitigate myopia.reply"
     ],
-    "link": "https://www.goskagit.com/news/local_news/court-denies-request-that-it-find-flock-safety-camera-data-is-exempt-from-public-records/article_f1edd028-d242-479c-ada8-f2dfca73a1b1.html",
-    "first_paragraph": "This photo provided by Flock Safety shows what the company\u2019s cameras look like.The cities of Sedro-Woolley and Stanwood were denied Thursday their request for a declaratory judgment that the data and images from Flock Safety cameras are not public records.The ruling was made by Skagit County Superior Court Judge Elizabeth Neidzwski.Flock Safety cameras are used by many law enforcement agencies, including the Sedro-Woolley and Stanwood police departments.The cameras record images of passing cars, and using artificial intelligence the system is able to identify cars\u2019 makes, models, colors and license plates. Flock said it deletes the data after 30 days.The cities of Sedro-Woolley and Stanwood filed a motion for a declaratory judgment after receiving public records requests for images recorded by Flock Safety cameras.The requests were made by the same man \u2014 Jose Rodriguez. He requested images from Stanwood\u2019s cameras from 5 to 6 p.m. on March 30, and from Sedro-Woolley\u2019s cameras from 5 to "
-  },
-  {
-    "title": "Humanity's Endgame (noemamag.com)",
-    "points": 9,
-    "submitter": "marojejian",
-    "submit_time": "2025-11-08T23:58:08 1762646288",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.noemamag.com/humanitys-endgame/",
+    "link": "https://ssathe.substack.com/p/vision-in-the-digital-age",
     "first_paragraph": ""
   },
   {
-    "title": "Otto Nemenz, Supplier and Designer of Cameras and Lenses for Hollywood, Dies (hollywoodreporter.com)",
-    "points": 11,
-    "submitter": "Marshferm",
-    "submit_time": "2025-11-04T03:14:02 1762226042",
+    "title": "My Git history was a mess of 'update' and 'fix' \u2013 so I made AI clean it up (github.com/f)",
+    "points": 6,
+    "submitter": "fka",
+    "submit_time": "2025-11-10T01:17:53 1762737473",
+    "num_comments": 2,
+    "comments_url": "https://news.ycombinator.com/item?id=45871084",
+    "comments": [
+      "I think this is the beginning of the end of Github. Who has time to read through all these new vibe-coded projects and tools? The READMEs alone are basically essays. You can always get a chuckle or two if you read long enough, so there's that...\"Acknowledgments- OpenAI for providing the GPT API- The conventional commits specification- The git community for powerful version control tools\"reply",
+      "Perfect for [...] improving repository maintainability.This misses the whole point of using commit messages to record intent.At least with a bunch of \"fixed it\" commits I know what I'm in for. This only fools yourself and others into thinking the repository was well maintained.reply"
+    ],
+    "link": "https://github.com/f/git-rewrite-commits",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n           There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.AI-powered git commit message rewriter using GPT\n\n\nAutomatically rewrite your entire git commit history with better, conventional commit messages using AI. Perfect for cleaning up messy commit histories before open-sourcing projects or improving repository maintainability.This tool rewrites git history, which is generally NOT recommended for shared repositories!When to use:When NOT to use:Remember: Rewriting history changes commit hashes and requires force-pushing, which can disrupt your team's workflow.You can run this tool directly with npx (no installation required):Or install it globally:Note: For GitHub Packages, you'll need to authenticate first:One command to enable AI-powered commit messages:That's it! Now you get:See"
+  },
+  {
+    "title": "Marble Fountain (willmorrison.net)",
+    "points": 490,
+    "submitter": "chris_overseas",
+    "submit_time": "2025-11-09T16:26:09 1762705569",
+    "num_comments": 55,
+    "comments_url": "https://news.ycombinator.com/item?id=45866697",
+    "comments": [
+      "Designers of marble fountains who don't use computing to design the paths run into reliability issues: sometimes balls derailing out of their track. They have to observe the contraption, identify problems (balls getting jammed up or jumping out) and then guess at the root causes and make manual adjustments.That's the thing here: he has it running for hours presumably without any ball jumping out.Most of the tracks consist of two rails, so the ball has two contact points. I'm no physicist but it seems like the goal would be to have ideally nearly equal forces at the two contact points at all times during the ball's descent. In other words, the track has to be perfectly banked so that the gravity and centripetal acceleration vector are balanced by a normal vector perpendicular to the rails. During a derailment, the ball has to lift away from one of the two contact points, so the normal force must have dropped to zero.reply",
+      "It's actually much weirder than that: banking changes the axis of rotation and thus kills the rotational inertia. The tracks bank super aggressively in order to prevent the ball from accelerating too much and hopping the track. This is part of why the descent is so smooth and all the balls move at more or less the same speed.Also to be fair the final system does lose a ball every 30ish minutes. The tuning was largely me staring at the run or taking a video trying to catch where they get lost. Instead of hand tuning I would just update the generator and print another one. I'm considering closing the loop with a camera but that would be a whole new project.reply",
+      "For roller coasters there is a software for simulation. It is imho similar situation compared with balls in your Marble Fountainhttps://www.nolimitscoaster.com/First, I thought about Ansys or CATIA software but I couldn\u2019t find any module specialized for simulation of balls.But I think that people from those companies could help as well and participate in simulation as an interesting usecase. (These software are expensive for personal projects.)reply",
+      "Well except for this is SIM only whereas the OP (WillMor) is making them for real with a 3D printer!reply",
+      "My point was that these software could help to find weak parts in trajectory - so instead of trying to figure it out by looking where balls are too quick to fall from the ride - you can simulate it. I saw real tramway simulation done in Ansys.reply",
+      "I think the physics are different, a ball is basically a car without a differential, so it's going to behave differently on the tracks. I'd imagine the ball is harder to simulate because of that.reply",
+      "> That's the thing here: he has it running for hours presumably without any ball jumping out.You can see a ball on the ground at the end of the video :-)reply",
+      "This is beautiful.  It would be amazing to have the tracks encode/decode audio, you know?  Like, the track of the marble can be used to generate different frequencies...reply",
+      "I actually attempted this, the idea of a python script that converts a midi track into a marble run is just too good to not try. I printed a large drum with different track structures inside so I could test various \"slopes\" by changing the speed and it just doesn't work, the balls bounce around too much to get an audible pitch. A less rigid material or a larger bearing would likely work better but I decided to focus on getting the normal version working well.reply",
+      "Did you try changing thickness of rails instead of bumps to produce different sounds?reply"
+    ],
+    "link": "https://willmorrison.net/posts/marble-fountain/",
+    "first_paragraph": "5 minutesI really enjoy procedural generation, especially systems designed to work with hardware outputs. After starting work at Formlabs in September of 2023 and gaining access to much nicer printers than I was used to, I started wanting to tackle some large algorithmic structure projects. Complexity is free in 3d printing, the limit of design geometry is mostly how much time you\u2019re willing to spend in CAD. I wanted to print the most complicated art piece I could think of. Marble Fountain is what I came up with.My initial system came together quickly. Randomly placing spaced out points, drawing a spline through them, and setting a constant slope just works. My first draft was just subtracting a tube from the solid support structure which worked but was super limited. I wanted to add more parts and so I started working on a path solver. I wanted to fit as much motion into the volume of the printer as possible. This turned out to be extremely challenging.The solver starts by making a ra"
+  },
+  {
+    "title": "Iran faces unprecedented drought as water crisis hits Tehran (bbc.com)",
+    "points": 5,
+    "submitter": "FridayoLeary",
+    "submit_time": "2025-11-10T01:11:52 1762737112",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://www.hollywoodreporter.com/movies/movie-news/otto-nemenz-dead-cameras-lenses-hollywood-1236417089/",
-    "first_paragraph": "Subscribe for full access to The Hollywood ReporterSubscribe for full access to The Hollywood ReporterThe onetime cinematographer and camera operator built specialized equipment for \u2018Grand Prix\u2019 and worked with famed D.P.s Haskell Wexler and Roger Deakins.\n\t\t\t\t\t\t\tBy \n\n\tMike Barnes\nSenior Editor\n\tOtto Nemenz, the Austrian cinematographer and camera operator whose namesake company designed and supplied cutting-edge cameras and lenses to film and television productions for more than four decades, has died. He was 83.\n\tNemenz died Saturday at his Kaanapali home on the Hawaiian island of Maui, a spokesperson for Otto Nemenz International told The Hollywood Reporter.\n\n\n\tNemenz founded his company in 1979 in a small storefront off Sunset Boulevard, and by 1982, he had built a new Hollywood headquarters on Vine Street. In 2020, he celebrated the grand opening of a 38,000-square-foot facility in Culver City. (The company also has an office in Atlanta.)\n\n\t\n\n\n\n\n\n\n\n\n\n\n\n\t\n\t\n\t\t\n\t\t\t\t\tRelated Stories\t"
+    "link": "https://www.bbc.com/news/articles/cy4p2yzmem0o",
+    "first_paragraph": "Iran - especially its capital, Tehran - is facing an unprecedented drought this autumn, with rainfall at record lows and reservoirs nearly empty. Officials are pleading with citizens to conserve water as the crisis deepens.President Masoud Pezeshkian has warned that if there is not enough rainfall soon, Tehran's water supply could be rationed. But he said that even rationing might not be enough to prevent a disaster.\"If rationing doesn't work,\" Pezeshkian said, \"we may have to evacuate Tehran.\"His comments have prompted criticism in Iranian newspapers and on social media. Former Tehran mayor Gholamhossein Karbaschi called the idea \"a joke\" and said \"evacuating Tehran makes no sense at all\".Iran's meteorological officials say no rainfall is expected over the next 10 days.Meanwhile, the water crisis is already affecting daily life in the capital.\"I'm planning to buy water tankers to use for toilets and other necessities,\" a woman in Tehran told BBC Persian.In the summer, Iranian rapper V"
   },
   {
-    "title": "He Chunhui's Tiny386 Turns an ESP32-S3 into a Fully-Functional 386-Powered PC (hackster.io)",
-    "points": 10,
-    "submitter": "HardwareLust",
-    "submit_time": "2025-11-09T01:08:50 1762650530",
-    "num_comments": 0,
-    "comments_url": "",
+    "title": "Ask HN: What Are You Working On? (Nov 2025)",
+    "points": 119,
+    "submitter": "david927",
+    "submit_time": "2025-11-09T21:02:33 1762722153",
+    "num_comments": 363,
+    "comments_url": "https://news.ycombinator.com/item?id=45869146",
     "comments": [
-      "xxx"
+      "A multiplayer game prototype, written in Rust, using Bevy + egui for graphics. Think of it as a bare bones implementation of a game like Runescape, mostly to test out current LLM capability.I haven't found much value in LLMs for coding beyond very self contained tasks, but some people speak highly of it, and I want to be sure that I'm not missing out. So from time to time I give new tools a try. This time is \"Claude Code on the web\".I've put in an estimated 50 hours so far. It has a client and an authoritative server. The client displays 3D graphics with some placeholder models. From the client, you can click on tiles and move to them, or click on enemies to pathfind and attack them. You can right-click on tiles or monsters to open a menu with options (attack, trade, move). There are some unit tests and a few integration tests.Right now the issues that Claude has been unable to resolve after a few attempts are:\n* Attack animations. I'm trying to get it to raise and then lower a rectangular block to simulate a sword attack. It really doesn't get it, and it's harder to write tests for compared to movement and server-client networking.\n* \"Entity interpolation\". Rather walking entities instantly moving from tile to tile, movement should flow smoothly.I have Claude Pro ($20/mo) which let me make a few commits per day. After a few days of that, Anthropic offered $250 in credits to promote \"Claude Code on the web\". The credits expire after two weeks. I'm now five days into that period and have gone through $50 in credits. It is heavily rate limited and frequently locks me out for multiple hours after only a few interactions, but it's free credits so I can't really complain.reply",
+      "Every time I talk acquaintances, friends and family members about finances I'm always shocked at how little people know about basic things like tax brackets, 401Ks, IRAs, ETFs, compounding interest, debt management and etc. So I decided to write a financial literacy/education book with a bit of humor and easily comprehensible language to distill some of these topics. I'm about 1 month into it and try to write a chapter a week.reply",
+      "I recently launched a daily word puzzle!https://tiledwords.comIt\u2019s inspired by tile placement board games like Patchwork and crosswords. You rotate and move tiles to rebuild a broken crossword.It\u2019s free, web based, and responsive.I currently have several hundred daily players and growing. My wife and I create the puzzles and I\u2019m continuing to fix bugs and add new features.I just launched a \u201dcommunity puzzle\u201d feature to let players help build new puzzles.I\u2019d love to know what you think!reply",
+      "This is really fun \u2014 have you played with making the tile position opinionated (not agnostic)?i wonder if have the clues point to a starting square (e.g., \"E5\") would be better than the current \"reveal\" aid. The spatial information would become more helpful toward the end when the player is dealing with the words they need help on.reply",
+      "Could you expand on what you mean about opinionated vs agnostic? It sounds interesting but I\u2019m not sure I follow.I like that clue idea! I want to change how the reveals work. I\u2019ll play with that!reply",
+      "The animations in the interface make it feel more \"jelly\" and not \"wooden\" like a number of other such interfaces.reply",
+      "Thanks! I spent a long time trying to make the core controls feel intuitive and natural to usereply",
+      "Awesome game! I've been looking for something like this.reply",
+      "Thanks, I\u2019m glad you like it!reply",
+      "this is very cool, noticed vue and nuxt nice.reply"
     ],
-    "link": "https://www.hackster.io/news/he-chunhui-s-tiny386-turns-the-humble-esp32-s3-into-a-fully-functional-386-powered-desktop-pc-5454cf6e36a1",
-    "first_paragraph": "Please ensure that JavaScript is enabled in your browser to view this page.Developer He Chunhui has turned the humble Espressif ESP32 microcontroller into a fully-fledged '90s personal computer with Tiny386 \u2014 a resource-efficient emulator capable of running Microsoft Windows 95 and a range of 16- and 32-bit software packages on the low-cost chip.\"Tiny386 is a x86 PC emulator written in C99,\" Chunhui explains of the project. \"The highlight of the project is its portability. It now boots Windows 9x/NT on MCU [Microcontroller Units] such as [the Espressif] ESP32-S3. The core of the project is a built-from-scratch, simple and stupid [Intel] i386 CPU emulator. Some features are missing, e.g. debugging, hardware tasking, and some permission checks, but it should be able to run most 16/32-bit software.\"The 80386, more commonly known as the 386 and later rebadged as the i386, was released in 1985 as the successor to the best-selling 80286, expanding the nascent x86 architecture's capabilities "
-  },
-  {
-    "title": "Valdi \u2013 A cross-platform UI framework that delivers native performance (github.com/snapchat)",
-    "points": 457,
-    "submitter": "yehiaabdelm",
-    "submit_time": "2025-11-08T00:14:50 1762560890",
-    "num_comments": 186,
-    "comments_url": "https://news.ycombinator.com/item?id=45852854",
-    "comments": [
-      "Working at a company that uses react-native I wish nothing more than for the end of app stores and differing platform languages.We're heavily considering just having a website next year with a mobile app using webview, and then native code for the native notifications, GPS and healthkit / health connect.I feel like AI is changing the equation, its nearly better to write your business UI 3 times one for each platform.reply",
-      "I did this and never looked back.It\u2019s called a \u201cWebView app\u201d and you can get a really good experience on all platforms using them. Just:- don\u2019t make any crazy decisions on your fundamental UI components, like breadcrumbs, select dropdowns, etc- add a few platform-specific specialisations to those same components, to make them feel a bit more familiar, such as button styling, or using a self-simplifying back-stack on Android- test to make sure your webview matches the native browser\u2019s behaviour where it matters. For example, sliding up the view when the keyboard is opened on mobile, navigating back & forth with edge-swipes on iOS, etcI also went the extra step and got service workers working, for a basic offline experience, and added a native auto network diagnostic tool that runs on app startup and checks \u201cCan reach local network\u201d \u201cCan reach internet (1.1.1.1)\u201d \u201cCan resolve our app\u2019s domain\u201d etc etc, so users can share where it failed to get quicker support. But this is an app for small-to-medium businesses, not consumer-facing, and the HTML5 part is served from the server and cached. I haven\u2019t thought much about what you might need to do additionally for a consumer app, or a local-first app.reply",
-      "I have never once experienced a WebView app that I would say had \u201ca really good experience.\u201dreply",
-      "It\u2019s because if a webview app experience is good, you don\u2019t notice it, you only notice if it\u2019s bad.A while ago saw a blog link on HN that explained how Apple uses it everywhere and we never notice it because they are done well. Of course I can\u2019t find that link now, I summon the HN gods\u2026reply",
-      "Maybe this https://blog.jim-nielsen.com/2022/inspecting-web-views-in-ma... and https://news.ycombinator.com/item?id=30648424?On mobile the webview app experience is crap and it's immediately obvious that an app is not native. Simply nobody asks customers how they like it. The management assumes that as long as nobody complains and the users don't leave in droves, the experience must be impeccable.reply",
-      "It's often easy to tell, but my concern has shifted from \"Why isn't this native? It's ugly/slow\" to \"Why isn't this a goddamn webpage? It can't justify neither its permissions nor its space\".reply",
-      "It is immediately obvious when you are using a web view app, as it uses browser layout and non-native controls. And  I have never found one to be as intuitive or nice an experience as native controls.reply",
-      "> It\u2019s because if a webview app experience is good, you don\u2019t notice it, you only notice if it\u2019s bad.Aside from Apple\u2019s apps (which imo are noticeably worse than the old ones, but that\u2019s beside the point), what are some good WebView apps on iOS right now?reply",
-      "Somebody scraped the play store and checked the framework, so a list for Android WebView apps, built with capacitor, is here: https://capgo.app/top_capacitor_app/ Maybe an equivalent is there on iOS for the same app...reply",
-      "lichess is really good. Thanks for the info, I'm not surprised to learn it's a webview app, but it is really good.It doesn't look native but who even cares. I think when a UI sucks or is unintuitive or buggy then \"it's not native\" is a sort of catchall easy complaint. Native is a crutch. Sometimes it's a good crutch (accessibility etc). But that's more about developer efficiency and bare minimums of polish.reply"
-    ],
-    "link": "https://github.com/Snapchat/Valdi",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        Valdi is a cross-platform UI framework that delivers native performance without sacrificing developer velocity.\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.\n\n\n\n\n\nNoteBeta Status: Valdi has been widely used in Snap's production apps for the last 8 years. We're calling this a beta because our tools and documentation need more battle testing in the open source world. Valdi will exit beta when we're happy with the developer experience.Valdi is a cross-platform UI framework that delivers native performance without sacrificing developer velocity. Write your UI once in declarative TypeScript, and it compiles directly to native views on iOS, Android, and macOS\u2014no web views, no JavaScript bridges.A basic Valdi component:\n\nValdi is a cross-platform UI framework de"
-  },
-  {
-    "title": "When a \"feature\" is worse than a bug (Hello,Sketchfab) (medium.com/egorich42)",
-    "points": 3,
-    "submitter": "Egorich42",
-    "submit_time": "2025-11-04T16:32:36 1762273956",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://medium.com/@egorich42/when-a-feature-is-worse-than-a-bug-hello-sketchfab-b88a10d52511",
+    "link": "item?id=45869146",
     "first_paragraph": ""
   },
   {
-    "title": "An Algebraic Language for the Manipulation of Symbolic Expressions (1958) [pdf] (computerhistory.org)",
-    "points": 79,
-    "submitter": "swatson741",
-    "submit_time": "2025-11-08T14:58:03 1762613883",
-    "num_comments": 10,
-    "comments_url": "https://news.ycombinator.com/item?id=45857045",
+    "title": "Montana becomes first state to enshrine 'right to compute' into law (montananewsroom.com)",
+    "points": 336,
+    "submitter": "bilsbie",
+    "submit_time": "2025-11-09T13:03:36 1762693416",
+    "num_comments": 167,
+    "comments_url": "https://news.ycombinator.com/item?id=45865289",
     "comments": [
-      "Besides this first report (AIM-001), some of the reports following it in the next months are at least as important, by introducing other essential features of LISP and of many later languages:1958-10: AIM-003 (the special form \"maplist\", i.e. a kind of \"forall\" iteration)1958-10: AIM-004 (anonymous function definitions using \"lambda\"; the special form \"select\", which already at that early date had better syntax and semantics than the \"switch\" or \"case\" statements of later languages; the special form \"search\")1959-03-13: AIM-008 (the special form \"quote\"; the special form \"label\", for defining anonymous recursive functions; also the special forms \"and\" and \"or\", a.k.a. McCarthy AND and McCarthy OR, inherited by many languages, including C)reply",
-      "Does anybody attempt to re-implment each variant of pre-LISP described in these reports? Even if it just for educational/historical purposes?reply",
-      "https://t3x.org/lispxv/index.htmlreply",
-      "If you ever wondered why Lisp has CAR and CDR, this explains it.reply",
-      "It doesn't fully explain it, but drops some hints:\"The other main advantage of the algebraic notation for list structure processing was first noticed by Gelernter.\"That's one of the authors of the Fortran-compiled List-processing Language (FLPL) in which thef unctions XCARF and XCDRF were introduced.MacCarthy drops a hint that he actually had something to do with Gelernter's work and his choices:\"Algebraic notation for list processing is not used by\nNet'Jell, Simon and Shaw, pelhaps beaause to do so is most\nconvenient when a compiler is available, but is used by\nGelernter in the geometry program. This was accomplished\n(on the advice of the present author) by using the Fortran\ncompiler together with a set of machine language coded\nfunctions for handling the primitive list processes that\ngo from one element of a list to the next\"reply",
-      "I think the main reason is car/cdr permits elegant recursive solutions to problems.reply",
-      "more the names then the functions themselvesreply",
-      "Reposting my now very old comment https://news.ycombinator.com/item?id=10502434 :> Herbert Stoyan's historical work on early Lisp http://www.mcjones.org/dustydecks/archives/2010/07/29/185/ https://web.archive.org/web/20050617031004/http://www8.infor... is probably worth reading if one is seriously interested. (I haven't read much of it myself yet.) McCarthy praised Stoyan's work as better than his own 1979 HOPL paper ( http://www-formal.stanford.edu/jmc/history/lisp/lisp.html ): \"Stoyan's reading of the early LISP documents gives a more accurate picture than my own memories turned out to have given.\" http://www-formal.stanford.edu/jmc/history/> (As a side-note, I'm pretty sure that the broken, Wayback-beating link to \"Lisp references according to Miller\" on McCarthy's page is to this http://www.ai.sri.com/~delacaze/alu-site/alu/table/Lisp-Hist... document by Kent Pitman and Brad Miller (see http://www.ai.sri.com/~delacaze/alu-site/alu/table/history.h... ).)From 2015-2018, \"The Mysteries of Lisp -- I: The Way to S-expression Lisp\" by Hong-Yi Dai https://arxiv.org/abs/1505.07375 ( https://news.ycombinator.com/item?id=31153702 )>     Despite its old age, Lisp remains mysterious to many of its admirers. The mysteries on one hand fascinate the language, on the other hand also obscure it. Following Stoyan but paying attention to what he has neglected or omitted, in this first essay of a series intended to unravel these mysteries, we trace the development of Lisp back to its origin, revealing how the language has evolved into its nowadays look and feel. The insights thus gained will not only enhance existent understanding of the language but also inspires further improvement of it.reply",
-      "I like how the McCarthy's paper maps the fundamental operations to machine instructions and memory model.  It's like something you can actually implement.reply",
-      "Subset of Lisp 1.5 https://t3x.org/lispxv/index.htmlreply"
+      "I think this is the main content of the law. (Everything below is quoted.)---Section 3. Right to computeGovernment actions that restrict the ability to privately own or make use of computational resources for lawful purposes, which infringes on citizens' fundamental rights to property and free expression, must be limited to those demonstrably necessary and narrowly tailored to fulfill a compelling government interest in public health or safety.---Section 4. Infrastructure controlled by artificial intelligence system -- shutdown.(1) When critical infrastructure facilities are controlled in whole or in part by an artificial intelligence system, the deployer shall ensure the capability to disable the artificial intelligence system's control over the infrastructure and revert to human control within a reasonable amount of time.(2) When enacting a full shutdown, the deployer shall consider, as appropriate, disruptions to critical infrastructure that may result from a shutdown.(3) Deployers shall implement, annually review, and test a risk management policy that includes a fallback mechanism and a redundancy and mitigation plan to ensure the deployer can continue operations and maintain control of the critical infrastructure facility without the use of the artificial intelligence system.reply",
+      "If that's the gist of it, then:> Government actions that restrict the ability to privately...This seems weirdly backwards. The main problem is not generally what government can and wishes to restrict, it's all the proprietary/private restrictions such as not being able to run whatever code you want on hardware you own. The bill does nothing to address the actual rights of citizens, it just limits some ways government can't further restrict the citizens' right. The government should be protecting the citizens' digital rights from anyone trying to clamp them down.reply",
+      "Yeah, the whole concept of rights in the US are, in the main, about restricting what the federal government and states can do individuals.Whereas in Europe our concept of rights include restrictions on the state, but also also might restrict non-state actors. We also have a broader concept of rights that create obligations on the state and private actors to do things for individuals to their benefit.reply",
+      "It\u2019s kinda good the planet gets to run both experiments, and more.The EU approach seems to want to insert government in to contracts between private individual and those they do business with, and the US approach seems to want to maybe allow too much power to accumulate in those who wield the mercantile powers.The optimal approach probably lies in the tension between multiple loci.reply",
+      "It is oddly funny that people in my town are ferociously protesting the police force's adoption of Flock surveillance cameras when everyone already carries total surveillance devices (smartphones) on their person at all times.reply",
+      "You can (generally) tell when a person around you is filming, and you generally don\u2019t have to worry about tons of random individuals bringing together footage of you for tracking and surveillance.reply",
+      "Private individuals generally aren't systematically using their cameras for mass surveillance of you. The government is.reply",
+      "Most of the cameras are attached to either Apple or Android devices.  The companies that control these ecosystems could use them for mass surveillance.  The government could 'politely' ask these companies to do that for them.  Or they could just directly order the phones.",
+      "In Germany it's (very roughly speaking) illegal to film people in public. (Importantly, not the same as filming a thing or event and having people incidentally in the frame)reply",
+      "Yeah, most places have laws that attempt to impose penalties on stalking behaviour."
     ],
-    "link": "https://softwarepreservation.computerhistory.org/LISP/MIT/AIM-001.pdf",
+    "link": "https://montananewsroom.com/montana-becomes-first-state-to-enshrine-right-to-compute-into-law/",
+    "first_paragraph": "Montana has made history as the first state in the U.S. to legally protect its citizens\u2019 right to access and use computational tools and artificial intelligence technologies. Governor Greg Gianforte signed Senate Bill 212, officially known as the Montana Right to Compute Act (MRTCA), into law.The groundbreaking legislation affirms Montanans\u2019 fundamental right to own and operate computational resources \u2014 including hardware, software, and AI tools \u2014 under the state\u2019s constitutional protections for property and free expression. Supporters of the bill say it represents a major step in securing digital freedoms in an increasingly AI-driven world.\u201cMontana is once again leading the way in defending individual liberty,\u201d said Senator Daniel Zolnikov, the bill\u2019s sponsor and a longtime advocate for digital privacy. \u201cWith the Right to Compute Act, we are ensuring that every Montanan can access and control the tools of the future.\u201dWhile the law allows state regulation of computation in the interest"
+  },
+  {
+    "title": "JVM exceptions are weird: a decompiler perspective (purplesyringa.moe)",
+    "points": 72,
+    "submitter": "vrnvu",
+    "submit_time": "2025-11-04T09:08:23 1762247303",
+    "num_comments": 12,
+    "comments_url": "https://news.ycombinator.com/item?id=45808899",
+    "comments": [
+      "On the subject  void foo() {\n    for (;;) {\n      try { return; } \n      finally { continue; }\n    }\n  }\n\nis my favorite cursed Java exceptions construct.reply",
+      "To anyone wondering, I believe it's cursed because the finally continue blocks hijacks the try return, so the for loop never returnsreply",
+      "Python has the same construct but is removing it, starting with a warning in version 3.14:\nhttps://peps.python.org/pep-0765/reply",
+      "Just tested that in C# and it seems they made the smart decision to not allow shenanigans like that in a finally block:CS0157 Control cannot leave the body of a finally clausereply",
+      "That's not just Java and there is nothing really cursed about it: throwing in a finally block is the most common example. Jump statements are no different, you can't just ignore them when they override the return or throw statements.reply",
+      "It is Java as C# disallow thisreply",
+      "This is exceedingly nasty. Well Done!reply",
+      "Nice post!A minor point:> monitors are incompatible with coroutinesIf by coroutines the author meant virtual threads, then monitors have always been compatible with virtual threads (which have always needed to adhere to the Thread specification). Monitors could, for a short while, degrade the scalability of virtual threads (and in some situations even lead to deadlocks), but that has since been resolved in JDK 24 (https://openjdk.org/jeps/491).reply",
+      "I think it's coroutines as in other JVM languages like Kotlin, where yielding may be implemented internally as return (due to lack of native coroutine support in JVM).Holding a lock/monitor across a yield is a bad idea for other reasons, so it shouldn't be a big deal in practice.reply",
+      "Doesn't JRE has some limited form of decompilation in its JIT, as a pre-pass? IIRC, it reconstructs the basic blocks and CFG from the bytecode and does some minor optimizations before going on to regalloc and codegen.reply"
+    ],
+    "link": "https://purplesyringa.moe/blog/jvm-exceptions-are-weird-a-decompiler-perspective/",
+    "first_paragraph": "Some time ago, I played around with decompiling Java class files in a more efficient manner than traditional solutions like Vineflower allow. Eventually, I wrote an article on my approach to decompiling control flow, which was a great performance boost for my prototype.At the time, I believed that this method can be straightforwardly extended to handling exceptional control flow, i.e. decompiling try\u2026catch blocks. In retrospect, I should\u2019ve known it wouldn\u2019t be so easy. It turns out that there are many edge cases, ranging from strange javac behavior to consequences of the JVM design and the class file format, that significantly complicate this. In this post, I\u2019ll cover these details, why simple solutions don\u2019t work, and what approach I\u2019ve eventually settled on.JVM basicsJVM is a stack-based language. The majority of instructions interact exclusively with the stack, e.g. iadd pop two integers off the top of the stack and pushes their sum back. A small handful of instructions, like if_ic"
+  },
+  {
+    "title": "Drilling down on Uncle Sam's proposed TP-Link ban (krebsonsecurity.com)",
+    "points": 116,
+    "submitter": "todsacerdoti",
+    "submit_time": "2025-11-09T18:17:44 1762712264",
+    "num_comments": 117,
+    "comments_url": "https://news.ycombinator.com/item?id=45867717",
+    "comments": [
+      "We are unfortunately getting to the point where the only option for non-power users will be to create an online account to run local hardware you own; just like Windows 11.I run OPNsense with a collection of Unifi radios (local controller) with great success.reply",
+      "The real lesson here: If you're successful, don't skimp on security/software! Also, don't abandon software/firmware security support for your products so quickly.If I was in charge over at TP-Link, getting news that tens of thousands of MY company's routers were compromised would have me furious! I'd be freaking out, making sure that we take immediate steps to improve software/firmware quality and to make sure we're in a constant state of trying to compromise our own hardware... To ensure no one else finds vulnerabilities before we do.Instead, TP-Link seems to have just laughed and focused strictly on profit margins.reply",
+      "If this was actually the lesson then they'd be banning Fortinet, but it seems these concerns about security don't apply to US listed companies.reply",
+      "Bold of you to assume those Fortinet vulns arent just exposed government backdoors.reply",
+      "This is like seeing a food poisoning outbreak at a fast food restaurant and concluding that it must be CIA/FSB/Mossad bogeymen trying a bioweapon. These breaches are things like not validating authentication tokens (at all, not just correctly) and that would be a big drop in professionalism from what we\u2019ve seen from nation-state level attacks:https://labs.watchtowr.com/get-fortirekt-i-am-the-super_admi...reply",
+      "The real lesson here: don't forget to bribe the president of the US.reply",
+      "Just make them liable for the damages and then they will start caring.This might be one of the only cases where subscription model would work well to cover the maintenance cost.reply",
+      "Yea, in the real world, the CEO gets news that tens of thousands of his company's routers were compromised, and calls up his General Counsel and asks \"are we liable for damages?\" And if the answer is NO, he goes back to enjoying the house party in his luxurious third home.reply",
+      "Yeah, I know, at some point you cannot make them care for their customers wholeheartedly.reply",
+      "I think a lot of companies violate that lesson and continue to make money.reply"
+    ],
+    "link": "https://krebsonsecurity.com/2025/11/drilling-down-on-uncle-sams-proposed-tp-link-ban/",
+    "first_paragraph": "The U.S. government is reportedly preparing to ban the sale of wireless routers and other networking gear from TP-Link Systems, a tech company that currently enjoys an estimated 50% market share among home users and small businesses. Experts say while the proposed ban may have more to do with TP-Link\u2019s ties to China than any specific technical threats, much of the rest of the industry serving this market also sources hardware from China and ships products that are insecure fresh out of the box.A TP-Link WiFi 6 AX1800 Smart WiFi Router (Archer AX20).The Washington Post recently reported that more than a half-dozen federal departments and agencies were backing a proposed ban on future sales of TP-Link devices in the United States. The story said U.S. Department of Commerce officials concluded TP-Link Systems products pose a risk because the U.S.-based company\u2019s products handle sensitive American data and because the officials believe it remains subject to jurisdiction or influence by the"
+  },
+  {
+    "title": "Building a 2.5kWh battery from disposable vapes to power my workshop [video] (youtube.com)",
+    "points": 117,
+    "submitter": "rsanek",
+    "submit_time": "2025-11-03T19:51:30 1762199490",
+    "num_comments": 71,
+    "comments_url": "https://news.ycombinator.com/item?id=45803601",
+    "comments": [
+      "After all networked smartphones and computers were placed under control of the regime, resistance hackers relied on microcontrollers harvested from ordinary household devices like smart lamps and vape pens to slowly rebuild the covert but resilient mesh internetwork that became known as FreeNet.reply",
+      "Congratulations, welcome to the dev team of Collapse OS. https://collapseos.org/Now they are more focused on supply chain break down but your scenario would also be valid.reply",
+      "When I think of what's out there I think of cheapy ARMs, maybe STM32 knock offs. Honestly the F103C8T6 is so prolific that's probably a solid chunk of all processors in existence. And then things like ESP32s. So to not see ARM or Tenscillica on there is a bit weird. But maybe I'm reading too much into it and it's more of a thought experimentreply",
+      "Maybe this is not such a bad side of history to be on after all.reply",
+      "Just curious: if you wanted to do something like that, but prevent a... thermal event, how would you protect an experimental battery realistically? Build a brick enclosure? A fire safe?reply",
+      "If you have the space for it, just put it outdoors 5' from anything flammable and you're good to go. This is not a hobby for folks in apartments unfortunately.I've had one of my DIY ebike batteries short and fail spectacularly at near full charge and was able to push it with a broom out of the garage into the driveway before any damage was done. Now I have a bench with wheels that I can take into the driveway for initial testing.reply",
+      "Current building regulations in the UK are moving towards outside storage of batteries now because of NMC's having a high tendency to combust. The battery management systems do detect a lot of issues, thermal and shorts but at some point I think government is going to force these to be on the outside of houses.The right answer is LifePO4 for home storage, does not combust and has good enough density.reply",
+      "Agreed. I think that about ten years out, when solid state batteries are widely available, lithium-ion batteries bigger than laptop-sized will be prohibited.reply",
+      "Once we have solid state cells I really hope the entire industry moves over to them and we just have solid state, LFP and Sodium Ion, all nicely non combustable chemistries that offer different price, power and weight density trade offs.reply",
+      "Solid-state batteries will never be suitable for all applications, even if they should suffice for the most frequent of them.Batteries with liquid electrolyte will always be able to provide greater power (i.e. greater current) within certain physical constraints. This should not matter for smartphones or laptops, but it should matter for many things with motors.reply"
+    ],
+    "link": "https://www.youtube.com/watch?v=dy-wFixuRVU",
     "first_paragraph": ""
+  },
+  {
+    "title": "The Manuscripts of Edsger W. Dijkstra (utexas.edu)",
+    "points": 183,
+    "submitter": "nathan-barry",
+    "submit_time": "2025-11-09T15:27:42 1762702062",
+    "num_comments": 70,
+    "comments_url": "https://news.ycombinator.com/item?id=45866224",
+    "comments": [
+      "> As a result of the educational trend away from intellectual discipline, the last decades have shown in the Western world a sharp decline of people's mastery of their own languageDijkstra already wrote this in the 80s and today many teachers still complain about this fact. I also know that, at least in the Netherlands, the curriculum is judged based on the percentage of students that pass. If too few students pass, then the material is made easier (never harder!), so you can imagine what happens if this process continued for half a century by now.reply",
+      "The most important one in the context of 2025 is this one:On the foolishness of \"natural language programming\". https://www.cs.utexas.edu/~EWD/transcriptions/EWD06xx/EWD667...reply",
+      "Thanks for the link. Great read.Apparently Dijesktra loved using em-dash!reply",
+      "I love that essay. It's such a joy to read, and even though it is very short and to the point it says so much both about the topic itself and society at large.And its just so obviously correct.reply",
+      "It is not obviously correct. The unstated premise is that programming is - or should be - similar to writing mathematical proofs.reply",
+      "The proofs/programs (Howard/Curry) correspondance has been fairly well established I think.reply",
+      "It's the requirements discovery phase that always breaks every pure mathematical treatment of software development.(And also, like DW points, that software is way more complex. But on this case, it's the requirements discovery.)reply",
+      "Suffers from philosophical liberalism I'd sayWhich leads to the assumption that some people \"just\" dont want to be better.This mental framework is how society justifies the superiority of some persons while ignoring the material realities of others.This framework is the root of classism, the root of racism, the root of elitism and finally it manifesta in individuals as narcissism.reply",
+      "IMHO you are going way way way to far. Far in the weeds.reply",
+      "Nah, I think they're probably seeing warning signs. So much Djikstra's writing is pseudo intellectual pretensious word salad. Which is a shame bc he was an actual intellectual.reply"
+    ],
+    "link": "https://www.cs.utexas.edu/~EWD/",
+    "first_paragraph": "\u00a0HomeNumerical\n\t\t\t\t\t\t\t\t\t\tEWD Index:\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a000xx\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a001xx\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a002xx\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a003xx\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a004xx\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a005xx\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a006xx\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a007xx\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a008xx\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a009xx\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a010xx\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a011xx\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a012xx\n\t\t\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a013xxBibTeX indexMC ReportsOther documentsTranscriptionsVideo and AudioExternal linksIn addition, Dijkstra was intensely interested in teaching, and in the relationships between academic computing science and the software industry.During his forty-plus years as a computing scientist, which included positions in both academia and industry, Dijkstra\u2019s contributions brought him many prizes and awards, including computing science\u2019s highest honor, the ACM Turing Award.Like most of us, Dijkstra always believed it a scientist\u2019s duty to maintain a lively correspondence with his scientific colleagues. To a greater extent than most of us, he put that conviction into practice. For over four decades, he mai"
+  },
+  {
+    "title": "The Principles of Diffusion Models (arxiv.org)",
+    "points": 135,
+    "submitter": "Anon84",
+    "submit_time": "2025-11-09T16:10:23 1762704623",
+    "num_comments": 13,
+    "comments_url": "https://news.ycombinator.com/item?id=45866572",
+    "comments": [
+      "If you're more into videos, be sure to check out Stefano Ermon's CS236 Deep Generative Models [1]. All lectures are available on YouTube [2].[1] https://deepgenerativemodels.github.io/[2] https://m.youtube.com/playlist?list=PLoROMvodv4rPOWA-omMM6ST...reply",
+      "I wish Stanford kept offering CS236 but they haven't run it for two years already :(reply",
+      "CTRL-F: \"Fokker-Planck\"> 97 matchesOk I'll read it :)reply",
+      "why am I only getting 26 matches? where's the threshold then? :Dreply",
+      "It's all about the en dashes and Fokker-Planck vs Fokker\u2013Planck.reply",
+      "AI is definitely related to dashes!!reply",
+      "hn question: how is this not a dupe of my days old submission (https://news.ycombinator.com/item?id=45743810) ?reply",
+      "It is, but dupes are allowed in some cases:\u201cAre reposts ok?If a story has not had significant attention in the last year or so, a small number of reposts is ok. Otherwise we bury reposts as duplicates.\u201dhttps://news.ycombinator.com/newsfaq.htmlAlso, from the guidelines: \u201cPlease don't post on HN to ask or tell us something. Send it to hn@ycombinator.com.\u201dreply",
+      "Reading this reinforces that a lot of what makes up current \"AI\" is brute forcing and not actually intelligent or thoughtful. Although I suppose our meat-minds could also be brute-forcing everything throughout our entire lives, and consciousness is like a chat prompt sitting on top of the machinery of the mind. But artificial intelligence will always be just as soulless and unfulfilling as artificial flavors.reply",
+      "Guessing you\u2019re a physicist based on the name. You don\u2019t think automatically doing RG flow in reverse has beauty to it?There\u2019s a lot of \u201cforce\u201d in statistics, but that force relies on pretty deep structures and choices.reply"
+    ],
+    "link": "https://arxiv.org/abs/2510.21890",
+    "first_paragraph": "In just 5 minutes help us improve arXiv:Help | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n"
+  },
+  {
+    "title": "If You're Not Active, You're Sick \u2013 You Just Don't Know It Yet (howardluksmd.substack.com)",
+    "points": 66,
+    "submitter": "rzk",
+    "submit_time": "2025-11-09T21:56:29 1762725389",
+    "num_comments": 18,
+    "comments_url": "https://news.ycombinator.com/item?id=45869587",
+    "comments": [
+      "I haven't read the paper, but what I am curious about, how much of the damage can be turned back if someone becomes physically active after a long sedentary period? Let's say someone already had low fat oxidization and/or cardiovascular disease, how much of that can be \"cured\" by being active?This post claims: the good news is, this is reversible. But is that so? Is it also proven to reverse things in all cases? I would imagine there are caveats, and things are not that rosy in reality.The reason I am asking because if the answer is \"None. It can only keep the symptoms from worsening\" then it's not really reasonable to expect people with such physiological situation to become active again.They will most probably need to put in much more effort to achieve much smaller gain compared to a healthy individual, which is as I said is unreasonable. Especially because some people simply have worse genetics and or social circumstances which they might not be able to change.So I appreciate these findings, but how I read this: you need to be aware of this to prevent the ill effects. And I doubt the reversible claim (although I have not much of an argument to corroborate that).reply",
+      "Between this and http://myticker.com (posted recently), I want to share a theory of mine:1) the internet is mostly made up of spaces where the median opinion is vanishingly rare among actual humans.2) the median internet opinion is that of a person who is deep into the topic they're writing about.The net result is that for most topics, you will feel moderate to severe anxiety about being \"behind\" about what you shuld be doing.I'm 40, and I'm active. I ran a half marathon last weekend. I spent 5 hours climbing with my kids this weekend. My reaction to these articles, emotionally, was \"I'm probably going to die of heart disease,\" because my cholesterol is a bit high and my BMI is 30. When I was biking 90 miles a week, my VO2 max was \"sub-standard.\"Let's assume this information is true. That's OK. It's all dialed up to 11, and you don't have to do anything about it right now.reply",
+      "Paper: https://www.biorxiv.org/content/10.1101/2024.08.19.608601v1....reply",
+      "Probably a better link for the post, the current article appears to be an AI generated adreply",
+      "I do like the scientific paper, but not everyone wants to read a true paper. Can you point out specific deficiencies in the linked article, aside from it being simplified but more accessible?reply",
+      "But how do you know if you exercise enough?reply",
+      "According to the linked paper [0]:\"- Sedentary (SED): Does not perform exercise regularly or elevate heart rate outside of daily tasks- Active (AC): Performs aerobic exercise for at least 150 minutes per week, and has at least a six-month history of doing so\"A more comprehensive study that determines the optimal amount of exercise per week to achieve peak cellular function over a population would be quite interesting. Also, what about anaerobic exercises like weight lifting? What's the relative impact on metabolic function? Lots more to explore here![0] https://www.biorxiv.org/content/10.1101/2024.08.19.608601v1....reply",
+      "I find this a bit confusing. If you're doing an hour of HIIT a week and additionally work as a removalist, a picker in a warehouse, or a white-water rafting instructor, you're sedentary? Or is there some middle group that was excluded from the study?reply",
+      "What warehouse worker is doing HIIT? I\u2019m not saying they\u2019re sedentary, but there is no way a warehouse worker is moving at the pace of a HIIT workout, let alone for an entire shift.There\u2019s no job on the plan outside of drug runner that requires you to actually \u201crun\u201d.reply",
+      "> There\u2019s no job on the plan outside of drug runner that requires you to actually \u201crun\u201d.Drug runners don't really run either, do they?  But athletes do.reply"
+    ],
+    "link": "https://howardluksmd.substack.com/p/if-youre-not-active-youre-sick-you",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Show HN: DroidDock \u2013 A sleek macOS app for browsing Android device files via ADB (rajivm1991.github.io)",
+    "points": 7,
+    "submitter": "rajivm1991",
+    "submit_time": "2025-11-10T00:51:33 1762735893",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://rajivm1991.github.io/DroidDock/",
+    "first_paragraph": "Browse Android files on macOS with style\n                A beautiful, native macOS application for browsing and managing your Android device files via ADB.\n                Fast, intuitive, and powerful.\n            Version 0.1.0 \u2022 macOS 10.13+ \u2022 Free & Open SourceEverything you need to manage Android files from your MacConnect and browse multiple Android devices simultaneously with automatic device detection.Navigate Android filesystem with a beautiful, intuitive interface. Support for all file types.Pull files from Android to Mac with drag-and-drop or single-click downloads.Push files to Android device with drag-and-drop from Finder or file picker.View image thumbnails directly in the file browser for quick identification.Monitor device storage with real-time usage statistics and visual indicators.Find files instantly with built-in search functionality across directories.Beautiful dark theme that's easy on the eyes during late-night file transfers.Stay up-to-date with automatic update"
+  },
+  {
+    "title": "The Sega Master System (bumbershootsoft.wordpress.com)",
+    "points": 55,
+    "submitter": "ibobev",
+    "submit_time": "2025-11-09T19:15:21 1762715721",
+    "num_comments": 15,
+    "comments_url": "https://news.ycombinator.com/item?id=45868259",
+    "comments": [
+      "This is a bit of history that has always fascinated me ever since I found out in the nineties while employed at Accolade, where we were reverse engineering the Sega Genesis, that the VDP in the Genesis was a variant / descendent of the humble 70's TI TMS9918 (mentioned at the heart of the SG-1000 / Colecovision / MSX and more) - we made a lot of hay in our clean room reverse engineering effort using Texas Instruments data sheets for the 9918!It is also casually mentioned that the TMS9918 inspired the VDP in the Famicom/NES but I haven't seen any direct proof because it also seems possible that the 2A03 was derived from Nintendo/Ikegami Tsushinki  'Namco Galaxian' inspired arcade board design notably used in Donkey Kong.  It's an interesting thread and perhaps studying Galaxian arcade hardware and Donkey Kong hardware and contrasting it with the TMS9918 and 2A03 can establish some geneology for home and arcade VDP design in the early 80'sBut it is clear that there was a pretty 'open source' attitude towards hardware IP at SEGA and Nintendo and elswhere in the early 80s.reply",
+      "As much as we like to consider consoles as these closed exclusive tech kind of things, a lot of it was externally designed.  With Genesis/Mega Drive, if a TMS9918 gets you most of the way there and it is better than what else is out at that time, then that is good enough.When the goal is just to put pixels on screen at the pace of the scan line, a TI part will have solved most of the nagging base issues issues and it is easy to build on. No need for a clean room design.reply",
+      "It was my second console after the Atari. It was a huge upgrade and we loved playing on it. The Mega Drive a few years later was my next one.\nIn low income countries like Brazil they apparently still sell them new but licensed by a local manufacturer with another name I believe. It was so popular it still sells 30 years later.reply",
+      "Tectoy. They also kept releasing games way after the ms was dead else where. Oh and they did their own ms port of street fighter 2!\nhttps://segaretro.org/Street_Fighter_II%27reply",
+      "There\u2019s quite a few Tectoy ports of Sega games that were Genesis only everywhere else. Including games like Sonic Spinball.The ironic thing is while Tectoy kept making MS games because it was cheap, those games now go for a small fortune (relatively speaking) in Europe because the were never exported out of Brazil.reply",
+      "Was the Sonic Spinball port much different than the Game Gear version? My understanding is the Game Gear port was by Sega and the two systems are very similar.reply",
+      "Was just a few days ago in a shop in Den Den town in Osaka, where they still sell original Master System, NES and PS1 games, so many memories!reply",
+      "After reading this, I just have the Alex Kidd In Miracle World theme going over and over in my head.reply",
+      "I got this console when I was a kid just for Phantasy Star. It's unquestionably the best 8 bit RPG, and the weak sequels disappointed me constantly growing up.reply",
+      "Maybe it is nostalgia speaking, but the SMS had a great sound chip, and some amazing composers.My absolute favourite song is from Ninja Gaiden \"Escape in a forest\" (starts at 03:36) here: https://www.youtube.com/watch?v=MFoA0OICiB4&t=207sSomeone played that song with real instruments, and it's also amazing: https://www.youtube.com/watch?v=Arun9KuXImkreply"
+    ],
+    "link": "https://bumbershootsoft.wordpress.com/2025/11/08/the-sega-master-system/",
+    "first_paragraph": "We traditionally divide consoles into \u201cgenerations\u201d\u2014the earliest devices like the Magnavox Odyssey are the first generation, the Atari 2600 is second, the NES third, the SNES and Genesis fourth, the PlayStation fifth, and so on. These divisions turn out to be pretty slippery when you look at them more closely\u2014generations don\u2019t really match product lineage, raw power, or year of release all that closely at all. The closest we come to a real division is that consoles in the same generation competed against one another as peers.Sega\u2019s third generation may be the most blatant gap there. The SG-1000 came out on the very same day as the Famicom, and it is reckoned as a third-generation console. However, its actual hardware closely matches the ColecoVision, released less than a year before but which is firmly in the second generation. It doesn\u2019t spread terribly far, either. Sega doesn\u2019t make a major play for the international market until 1986, three years after the original SG-1000 release a"
+  },
+  {
+    "title": "Bumble Berry Pi \u2013 A Cheap DIY Raspberry Pi Handheld Cyberdeck (github.com/samcervantes)",
+    "points": 102,
+    "submitter": "MakerSam",
+    "submit_time": "2025-11-09T16:34:44 1762706084",
+    "num_comments": 19,
+    "comments_url": "https://news.ycombinator.com/item?id=45866772",
+    "comments": [
+      "It looks similar to this project: https://github.com/ZitaoTech/HackberryPiCM5I picked one up a few months ago and I like it.reply",
+      "Nice. Did you build your Hackberry or buy it?The Hackberry looks awesome. I was going to build/buy one, but I wanted a slightly bigger screen and keyboard, and I also wanted to save some money by using an old 3b+ I had laying around. And I wanted to be able to build it quickly from off-the-shelf Amazon components. So all-in I think I spent ~$70 on this one, whereas the hackberry pi would have cost about double that, and then I would have had to buy the CM5 module.Curious to hear of your experience with the hackberry - I still might consider getting one of those myself.reply",
+      "> I wanted something small enough to fit into a pants pocketI always wanted to know what kind of pants people wear who say that to this device size (see also Nintendo DS & co)reply",
+      "vintage army cargo pants on right now, baggy af and ready for any 'portable' device I throw at themreply",
+      "check out my Steam Deck, so portable.reply",
+      "I wear size 36 Levi's and this one fits in my back pocketreply",
+      "That\u2019s a risky place to put it, if you forget it\u2019s there and sit down hehreply",
+      "My DS XL definitely fits in my pants pockets. They're pretty loose fitting pants but not overly so.reply",
+      "Either cargo pants, or their waist size is much larger than average.reply",
+      "ds (XL, even) fits in my skinny jeansreply"
+    ],
+    "link": "https://github.com/samcervantes/bumble-berry-pi",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n        A cheap & easy to build raspberry pi cyberdeck\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.A cheap, easy-to-build Raspberry Pi Handheld CyberdeckPlease note: Assembly instructions are a work in progress. Please let me know if you'd like additional instructions/videos, etc and I will do my best to provide them.I designed the 3D parts in Solidworks. Let me know if you're interested in the modifying the design and I can post the solidworks files.\n        A cheap & easy to build raspberry pi cyberdeck\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page."
+  },
+  {
+    "title": "Reviving Classic Unix Games: A 20-Year Journey Through Software Archaeology (vejeta.com)",
+    "points": 133,
+    "submitter": "mwheeler",
+    "submit_time": "2025-11-09T12:44:35 1762692275",
+    "num_comments": 51,
+    "comments_url": "https://news.ycombinator.com/item?id=45865159",
+    "comments": [
+      "We\u2019re hitting that point in time when key figures in the history of early computing are starting to leave us. It\u2019s nice to see these early applications preserved. If we can get this code off old disks and tapes and into modern cloud-based repositories, with open source licenses, we might be able to enjoy these programs for a long time, whether for actual amusement or just historical significance. The digital age is both a blessing and a curse in that so much information can be moved around so easily, but a lot of it is locked away on obsolete media that will eventually decay.reply",
+      "Love that a term from Vinge has almost entered our lexicon. The author is a \"programmer archeologist\".reply",
+      "There use to be a set of games which were available for SunOS and may be Solaris, including a flight simulator with wired frame graphics, and Sun even had released a book about these games at that time(may be early 1990's).Are they also covered by these? Anyone remember a flight simulator with wireframe graphics available Unices?reply",
+      "Hello, I am the author of the article. I did not know of those games you mention at the time. We used to play conquer at the AIX (Unix) that our computer labs provided for all the alumni. I have only tracked conquer's authors to obtain their permissions to relicense and preserve in a way that others could study and build upon.reply",
+      "ACM, Sabre?reply",
+      "When I was a kid, early 80s, my mom's job had bought some IBM computer. Not PCs, but some kind of large computer in a room to help with accounting / book keeping. Terminals with green text screens were attached to this computer. They had text based menus, and somewhere in this menu system, there were games. One game was a kind of horse race I remember, where digits were racing from left to right on the screen. Another was probably a lunar lander, but memory is lacking. Can someone tell from this description what kind of computer this was, and what OS it was running?reply",
+      "System/34 or System/36, the game was RACE. Here you go: https://www.youtube.com/watch?v=mYRuTHz-wwkreply",
+      "Yes, that is how it looked like! Such nostalgiareply",
+      "Unfamiliar but probably System/34 or System/36 running SSP (System Support Program) with IBM 5250 series terminals.Unsure about the games. Here\u2019s an early lunar lander:https://www.cs.brandeis.edu/~storer/LunarLander/LunarLander....Another Lunar version:https://undefinedvalue.com/lunar-for-c-and-rust.htmlSystem/36 guide:https://archive.org/details/bitsavers_ibmsystem3rogrammingWi...Possible source for games in David H. Ahl in his book 101 BASIC Computer Games.reply",
+      "IBM System/34, System/36, or System/38 perhaps?  Those are IBM's minicomputers available in that timeframe.reply"
+    ],
+    "link": "https://vejeta.com/reviving-classic-unix-games-a-20-year-journey-through-software-archaeology/",
+    "first_paragraph": "VEJETAWritten by inHow I spent two decades tracking down the creators of a 1987 USENET game and learned modern packaging tools in the process.Picture this: October 26, 1987. The Berlin Wall still stands, the World Wide Web is just text, and software is distributed through USENET newsgroups in text files split across multiple posts. On that day, Edward Barlow posted something special to comp.sources.games:\u201cconquest \u2013 middle earth multi-player game, Part01/05\u201dThat\u2019s how Ed Barlow announced it at the time, before quickly changed the name to Conquer.This was Conquer \u2013 a sophisticated multi-player strategy game that would influence countless others. Players controlled nations in Middle Earth, managing resources, armies, magic systems, and diplomatic relations. What made it remarkable wasn\u2019t just the gameplay, but how it was built and distributed in an era when \u201copen source\u201d wasn\u2019t even a term yet.It was during these days, in the middle of the 90s, that my fellow students and I spent hours e"
+  },
+  {
+    "title": "CHIP8 \u2013 writing emulator, assembler, example game and VHDL hardware impl (blog.dominikrudnik.pl)",
+    "points": 53,
+    "submitter": "qikcik",
+    "submit_time": "2025-11-03T20:52:50 1762203170",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=45804295",
+    "comments": [
+      "Get the free HTTPS cert from Let's Encrypt for your blog.reply",
+      "There is a certificate present, but it's not for this subdomain and there's no https redirect in place.reply",
+      "A chip8 interpreter was a project that a lot of interviewers liked on my resume a few years back, obviously this is a few (read: many) levels above that. Good work.reply"
+    ],
+    "link": "http://blog.dominikrudnik.pl/chip8-emulator-assembler-game-vhdl",
+    "first_paragraph": "short video presentation:repo link: githubProject goal was to:I decided to implement a CHIP8. Depending on the source it can be called a specification of  ISA, a virtual machine,an interpreter or a programming language.CHIP8 contains:As a specification I used Cowgod's Chip-8 Technical ReferenceAt the beginning I just want to mention that I made this project for pure education purpose, and it is not in production ready state.\nThere is some of commented code, some of not optimal solutions and some of dirty fast hacks.\nI wanted only to understand crucial concepts and big picture of \"computer system\".I wanted to focus on opcode implementation in pure details and avoid abstractions layers. That is why, I decided to use C.\nI separated CHIP8 specific implementation code from code that interact with platform (like drawing, handling input).There is content of [chip8.h]:Let's deep dive into some concepts.\nDecoding and execution of instruction is done in the deadly simplest way, that I know.At th"
+  },
+  {
+    "title": "Zensical \u2013 A modern static site generator built by the Material for MkDocs team (squidfunk.github.io)",
+    "points": 124,
+    "submitter": "japhyr",
+    "submit_time": "2025-11-09T12:50:07 1762692607",
+    "num_comments": 41,
+    "comments_url": "https://news.ycombinator.com/item?id=45865189",
+    "comments": [
+      "I\u2019m delighted to see this project evolving and look forward to following its development! I\u2019ve used just about every markup technology over my (many) years as a tech writer, from troff macros, to SGML/DocBook and then XML/DITA, and finally, to Markup with the Material for MkDocs project, as a sponsor. Each has its strengths and weaknesses, but for enabling contributors outside the tech writing community, simpler source formats are the way.That said, if pressed, I\u2019d recommend AsciiDoc[0] over any Markup flavor for a greenfield project _today_. We had to either add or bake plugins or extensions to get features that are already included in AsciiDoc, making our Markup implementation both more complex and wholly unique. That wasn\u2019t a huge problem, because we didn\u2019t have a large pool of contributors to educate and support, but it would have been much easier just to point to a standard.But, hey! The roadmap includes modules, to make way for other source formats! This is the way. :-)[0] https://asciidoc.org/EDIT: s/That's the way/This is the way. :-)/reply",
+      "It is a very reasonable choice: your plug-in project has grown to a scale you have never anticipated. Therefore, you built your own system from the ground up, one which you have total control over, instead of keeping to rely on someone else's system as you did before. This would make new features and bug fixes more easy to be implemented.I am also very curious about what the MKDocs future would be like. Material has been the most popular theme for MkDocs. People are not using it because they have chosen MkDocs, but using MkDocs because they have chosen Material. With Zensical promising (some kind of) MkDocs compatibility, there will be fewer reasons to stay on MkDocs instead of migrating to the new project.reply",
+      "> It is a very reasonable choice: your plug-in project has grown to a scale you have never anticipated. Therefore, you built your own system from the ground up, one which you have total control over, instead of keeping to rely on someone else's system as you did before. This would make new features and bug fixes more easy to be implemented.Exactly this. We ran against walls trying to realize our ideas with MkDocs' APIs, so a rewrite was due. With MkDocs being unmaintained for over a year, we took the initiative. Since we have excellent product-market fit, investing into a new stack was just logical.reply",
+      "As a multi-year sponsor for your work, our open-source community really appreciates the work.reply",
+      "I'm really excited by this development! Material for MkDocs has raised the quality level of so many projects' docs, my own included, by making good navigation the default. It's by far my favorite system to browse as a reader, and use as a project maintainer.I hope the new theme allows for more customization than the old Material theme. It was really hard to create a unique brand identity within the constraints of Material; it just wasn't built with customization in mind beyond a color. The \"modern\" theme looks minimal in a way that gives me some hope for this.Looking forward to kicking the tires on Zensical!reply",
+      "I'm really intrigued by the use of differential dataflow in a static site toolkit, but there isn't much in the way written about it. If anyone from the team are here I would love it if you could explain how it's being used? Does this enable fast incremental builds, only changing the parts that change in the input? If so how do you model that? Are you using multisets as a message format inside the engine?For context, I work on TanStack DB which is a differential dataflow / DBSP inspired reactive client datastore. Super interested in your use case.reply",
+      "Excellent question. We're not using differential dataflow (DD), but are rolling our own differential runtime. It's basically functions stitched together with operators, heavily inspired by DD and RxJS, and is optimized for performance and ease of use. The decision to go from scratch allows us to provide something that, IMHO, is much simpler to work with than DD and Rx, as our goal is to allow an ecosystem to evolve, as MkDocs did as well. For this, the API needs to be as simple as possible, while ensuring DD semantics.Right now, builds are not fast, since Python Markdown is our bottleneck. We decided to go this route to offer the best compatibility possible with the Material for MkDocs ecosystem, so users can switch easily. In the next 12 months, we'll be working on moving the rest of the code base gradually to Rust and entirely detaching from Python, which will make builds significantly faster. Rebuilds are already fast, due to the (still preliminary) caching we employ.The differential runtime is called ZRX[1], which forms the foundation of Zensical.[1]: https://github.com/zensical/zrxreply",
+      "I was excited up until they showed what the new theme looks like. mkdocs-Material was nice in that it didn't have overly rounded corners and over travesties, a shame that custom CSS will be needed to undo the \"modernisation\". Overall this seems very interesting, especially the performance improvements, just a letdown visually.reply",
+      "Creator of Zensical here! As always, it's a matter of taste. We felt the original look was a little date. You can use the classic Material for MkDocs look with Zensical by adding a single line of configuration[1]. This works because the HTML is exactly the same right now. Most users favor the new look over the old one.[1]: https://zensical.org/docs/setup/basics/#theme-variantreply",
+      "> Most users favor the new look over the old one.How do you know?reply"
+    ],
+    "link": "https://squidfunk.github.io/mkdocs-material/blog/2025/11/05/zensical/",
+    "first_paragraph": "We are thrilled to announce Zensical, our next-gen static site generator designed to simplify the process of building documentation sites. Distilled from a decade of experience, Zensical is our effort to overcome the technical limitations of MkDocs, reaching far beyond its capabilities.Zensical is the result of thousands of hours of work \u2013 built from the ground up for a modern and comfortable authoring experience, while making it easy for developers to extend and customize Zensical through its upcoming module system. Our goal is to support docs-as-code workflows with tens of thousands of pages, without compromising performance or usability.To make the transition seamless, compatibility comes first. We're putting significant effort into ensuring a smooth migration from Material for MkDocs for all users. Zensical can natively read mkdocs.yml, allowing you to build your existing project with minimal changes. As of now, a subset of plugins is supported, and we're working on feature parity "
+  },
+  {
+    "title": "Sued by Nintendo (suedbynintendo.com)",
+    "points": 33,
+    "submitter": "notepad0x90",
+    "submit_time": "2025-11-10T00:13:11 1762733591",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=45870675",
+    "comments": [
+      "Somehow expected to see way more cases given the page covers even the ancient ones (1989).Some of the cases are so ridiculously evil, I'm beginning to think they have black marketing division that mostly consists of lawyers.reply",
+      "This doesn't seem exhaustive though I guess I'd be super impressed if it were. For example I watched a pokemon dataset get taken down then go back up under a new name a couple times from huggingface sometime in 2023-24, fairly certain they were getting c&dreply",
+      "This really sucks. I can see why they are protective of the IP, but some fan games seems entirely harmless as long as it's not being monetized.reply",
+      "I\u2019m guessing this is just cherry picking cases that go against the mood of the community. I bet there\u2019s a mountain of C&Ds not listed for less objectionable violations such as the Mario shovelware slop littering app stores for years.reply"
+    ],
+    "link": "https://www.suedbynintendo.com/",
+    "first_paragraph": "Wait a moment while the information loadsYou need to turn on Javascript to see the list\n            If you want to suggest any changes to the information on this site, please\n            click here.\nMade with \u2764\ufe0f by Cawolf."
   }
 ]
