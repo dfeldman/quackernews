@@ -1,368 +1,365 @@
 [
   {
-    "title": "Project Gutenberg \u2013 keeps getting better (gutenberg.org)",
-    "points": 740,
-    "submitter": "JSeiko",
-    "submit_time": "2026-05-15T16:15:36 1778861736",
-    "num_comments": 178,
-    "comments_url": "https://news.ycombinator.com/item?id=48150431",
+    "title": "Zerostack \u2013 A Unix-inspired coding agent written in pure Rust (crates.io)",
+    "points": 207,
+    "submitter": "gidellav",
+    "submit_time": "2026-05-16T22:23:50 1778970230",
+    "num_comments": 64,
+    "comments_url": "https://news.ycombinator.com/item?id=48164287",
     "comments": [
-      "Hi! I'm one of the programmers at Gutenberg.\nWe've been improving the site a lot over the past few months (and more is coming!).\nIf you haven't visited the page recently, it's worth checking out again: https://www.gutenberg.org/reply",
-      "Have you considered having a detailed version history for each book (etext)? The process of submitting fixes to typos etc in books involves sending an email (https://www.gutenberg.org/help/errata.html) and although the last time I did this (2011) the fixes did get applied reasonably quickly (couple of days), it all felt a bit opaque. The version history could also include the project (usually PGDP correct?) the etext originated from; that way one would be able to compare against the actual page scans.I have very mixed feelings about Standard Ebooks and would much prefer being able to use Project Gutenberg directly, but one good thing Standard Ebooks does is that every book has an associated git repository (on GitHub), so it's (in principle) possible to see a history of fixes to the text over time.reply",
-      "We're using git repos internally to keep history for each book. They existed on github for a while, but our implementation was awkward, and too big of project for the volunteer dev team. But it's likely that we'll evolve towards that.reply",
-      "> I have very mixed feelings about Standard Ebooks[\u2026]Why?reply",
-      "I believe our new-ish CEO Eric Hellman actually did some work on something very similarreply",
-      "That's an interesting idea. not a small feat to accomplish though ...reply",
-      "When I thought about Project Gutenberg I remembered that original brutalist non-design.  The current site has been very tastefully updated but looks like it's still very accessible if you turn styles off.  Great job!reply",
-      "sadly HN doesn't have a \"heart\" emoji I could use :Dreply",
-      "I like the design but liked the previous design as well, it was unique and Craigslistish, you knew what website you were visiting just by looking at it.reply",
-      "\u2661reply"
+      "Thanks, I've been tooling away in my spare time on my own version of this -- both to get a deeper understanding of agents (everyone suggests writing your own) and to help learn Rust.  I'd like to retain `pi`'s configurability though, the ability to self-mutate and generate new tools is incredibly useful, particularly because I don't think any of these things should have access to arbitrary code execution through `bash` (of course, if they have access to, say, `edit` and `cargo run` they still have arbitrary code exec, but...) (so I tend to generate tools on the fly when I encounter something the no-bash agent needs to do).reply",
+      "I actually though about this issue, but while Pi can have this script-like environment thanks to the fact that it's based on an interpreted language (TypeScript), Rust has its own limitation as a compiled language.I decided to allow for customization in a different way:1. The prompt library (~/.config/hypernova/prompts/) acts as a simpler alternative to Skills, with the built-in prompts that should replace superpowers + Claude's frontend-design2. Compile-time features; things that might make the agent more bloated can be disabled when you decide to compile zerostack3. Clean code; code that's short and easy to read, you can just throw zerostack on its own source code in order to build a custom fork if your necessity can't be satisfied. Good features could also be adopted by the main version.4. Permission mode; as you can see in the README, there was lots of concern around the permission model, and I landed on a 4-mode system that goes from \"Restrictive\" (no commands) to \"YOLO\" (whatever the agent wants to do\" + custom regex patterns for allow/ask/deny permission on 'bash' calls. In your case, you just need to run `zerostack -R` to force all tools to ask for permission.(Also, there is a work-in-progress features for programmable agents, but that's yet to be announced)reply",
+      "I've been trying to use `Deno` underneath `Rust` so that the tools can still be written in Typescript and thus self-mutated without the compilation step (but I can still try to do clever things with V8 Isolates or similar).  It's been an ugly experiment so far; I'm vaguely thinking a simpler model would be to just define a binary \"API\" and run tools by exec-ing binaries.reply",
+      "I have to be honest and tell you that try to load such an heavy runtime as a scripting layer is not a great idea; at the same time I can tell you that I am working on another Rust project where I also needed scripting, and after three attempts I landed on rhai (https://rhai.rs/) (https://rhai.rs/book).You might find it nice for pretty much all use cases except for high-performance scripting (so, if you are not try to build the entire logic entirely in rhai, you are going to be fine).reply",
+      "Yeah, it's been a bit of a dead end.  I didn't want the heavy runtime but felt it was worth disproving after experimenting rather than ruling out off the bat.  Even before getting it running, the dependency list alone was pretty discouraging, especially given the storm of supply chain attacks these days.Rhai looks nice, I'll take a look, thanks! And good luck with Zerostack.reply",
+      "I was just going to suggest rhai. It's simple enough LLMs can easily write it with a little context, and you control the entire API so you can sandbox effectively without needing to resort to hacks with a JS interpreter etc.reply",
+      "Have you thought about Zig? If you limit it to CompTime, isn't that just a scripting language that happens to be compiled to binary?reply",
+      "Why not WASM?reply",
+      "Unfamiliarity and I believe it requires a compile step. I\u2019m at least familiar with Typescript and Deno so being able to embed them was an appealing idea :)reply",
+      "I\u2019ve been doing the same thing in zig haha.reply"
     ],
-    "link": "https://www.gutenberg.org/",
-    "first_paragraph": " Choose among free epub and Kindle eBooks, download them or read them online. You will find the world's great literature here, with focus on older works for which U.S. copyright has expired. Thousands of volunteers digitized and diligently proofread the eBooks, for you to enjoy. Newest Releases find moreMost Popular find more Audio books are a great way to enjoy literature. We recommend the following sources. All of them are digitizations of Project Gutenberg texts. They are freely available and in the public domain in the US. "
-  },
-  {
-    "title": "I believe there are entire companies right now under AI psychosis (twitter.com/mitchellh)",
-    "points": 875,
-    "submitter": "reasonableklout",
-    "submit_time": "2026-05-15T20:26:47 1778876807",
-    "num_comments": 381,
-    "comments_url": "https://news.ycombinator.com/item?id=48153379",
-    "comments": [
-      "I'm pretty sure he's talking about companies and people outsourcing their decision making and thinking to AI and not really about using AI itself.I don't think using AI to write code is AI psychosis or bad at all, but if you just prompt the AI and believe what it tell you then you have AI psychosis. You see this a lot with financial people and VC on twitter. They literally post screenshots of ChatGPT as their thinking and reasoning about the topic instead of just doing a little bit of thinking themselves.These things are dog shit when it comes to ideas, thinking, or providing advice because they are pattern matchers they are just going to give you the pattern they see. Most people see this if you just try to talk to it about an idea. They often just spit out the most generic dog shit.This however it pretty useful for certain tasks were pattern matching is actually beneficial like writing code, but again you just can't let it do the thinking and decision making.reply",
-      "Correct. I use AI a ton and I'm having more fun every day than I ever did before thanks to it (on average, highs are higher, lows are lower). Your characterization is all very accurate. Thank you.Here's some other topics I've written on it:- https://mitchellh.com/writing/my-ai-adoption-journey- https://mitchellh.com/writing/building-block-economy- https://mitchellh.com/writing/simdutf-no-libcxx (complex change thanks to AI, shows how I approach it rationally)reply",
-      "I\u2019ve had to do a ton of SQL stuff lately, which I haven\u2019t really worked with since the late 90s. ChatGPT has been a godsend, not just for me, but for our only coworker who knows SQL well, whom I\u2019d probably be bugging several times a day at my wits\u2019 end.But no one cares about those kinds of productivity gains. Just the ones that will completely replace us.reply",
-      "I thinking that it\u2019s quite a different experience going all Jackson Pollock with AI in your own studio on your own terms, compared to the sorry state of affairs of having 100s of Pollocks throwing paint around wildly within a corp to meet a paint quota.reply",
-      "> 100s of Pollocks throwing paint around wildly within a corp to meet a paint quotaI wish I had written that.reply",
-      "Earlier today:>Amazon workers under pressure to up their AI usage are making up taskshttps://news.ycombinator.com/item?id=48148337reply",
-      "It's the new \"counting lines of code\". I think many companies are so terrified of falling behind that they're irrationally floundering, trying to appear like they're \"with it\".",
-      "Never mind the Pollocks.reply",
-      "I very much like this metaphor.reply",
-      "size of org has a lot to do with the entropycompare 100 pollocks vs 2-3reply"
-    ],
-    "link": "https://twitter.com/mitchellh/status/2055380239711457578",
-    "first_paragraph": "We\u2019ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of supported browsers in our Help Center.Help Center\nTerms of Service\nPrivacy Policy\nCookie Policy\nImprint\nAds info\n      \u00a9 2026 X Corp.\n    "
-  },
-  {
-    "title": "The bird eye was pushed to an evolutionary extreme (quantamagazine.org)",
-    "points": 30,
-    "submitter": "sohkamyung",
-    "submit_time": "2026-05-14T07:17:16 1778743036",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=48132106",
-    "comments": [
-      "> The retina is one of the body\u2019s most energetically expensive tissues.I never knew, but it explains why when you close to fainting you lose your vision. Or when you are working at high heart rate close to your maximum. It works as a kind of a warning sign, than you are probably shouldn't try it that hard.> The lack of blood vessels could also offer birds the advantage of better vision.Now they are ready to reintroduce blood vessels back, but this time behind the retina.reply",
-      "Interesting title. These thoughts are before reading the article, use grains of salt as required.I believe that birds brains are kind of uniquely advanced too. Lightweight (in terms of mass) structured differently to mammalian brains... I've heard a definition of sight as \"a bit of the brain popping out for a look\". I wonder if the same brain density tricks bird brains use are used in some parts of their vision system. This is all as my memory serves. Feel free to correct any mistakes in my understanding.There's some very interesting work happening to understand their calls too. If (my) memory serves, there able to identify particular call types quite well now.If someone calls you a \"bird brain\", perhaps that could be taken as a complement! Trying to do more with less!Fascinating to also think that birds are of course evolved dinosaurs. Raptors of the sky. It would be fascinating to link whats being looked at here with any kind of data that can be pulled from fossil evidence (though there might not be much...). I wonder which unique bird genetic traits were useful or super enhanced dinosaur traits....I think the strong but light bone structure was something inherited from the dinosaurs too? Fascinating creatures.On the face of it, seems sensible that avian evolution has spent many genetic GPU cycles to generate advanced vision needed to fly and hunt from the air.... One wonders which \"subroutines\" have been reused from dino-days, as mentioned.reply"
-    ],
-    "link": "https://www.quantamagazine.org/how-the-bird-eye-was-pushed-to-an-evolutionary-extreme-20260513/",
-    "first_paragraph": "\nAn editorially independent publication supported by the Simons Foundation.\n\nGet the latest news delivered to your inbox.\nCreate a reading list by clicking the Read Later icon next to the articles you wish to save.Type search term(s) and press enterPopular\n                                    SearchesMay 13, 2026The eye of a red-and-green macaw, with no blood vessels in sight. How can a bird eye work so well without oxygen?Leonardo RamosStaff WriterMay 13, 2026When an optometrist shines a bright light into your eyes, a vast, branching tree sprouts in your field of vision. This is the shadow of blood vessels. Though we normally can\u2019t perceive them, these vessels always occlude a portion of what we see, and for an important reason. They power the retina, a thin layer of nerve tissue in the back of the eye that communicates light signals to the brain.The retina is one of the body\u2019s most energetically expensive tissues. Built from complex networks of sometimes more than 100 different types "
-  },
-  {
-    "title": "Naturally Occurring Quasicrystals (johncarlosbaez.wordpress.com)",
-    "points": 66,
-    "submitter": "lukeplato",
-    "submit_time": "2026-05-14T14:32:46 1778769166",
-    "num_comments": 5,
-    "comments_url": "https://news.ycombinator.com/item?id=48136000",
-    "comments": [
-      "If you haven't already, read the book \"The Second Kind of Impossible\" by Paul  Steinhardthttps://www.goodreads.com/book/show/35297608-the-second-kind...It's a riveting account of years of research to discover Quasicrytals from theory, to experiments, to literally hunting in a meteor field in eastern Russia!reply",
-      "Related, if you're interested in byproducts of nuclear explosions:> researchers have identified a new material within trinitite called a clathrate\u2014a cagelike chemical lattice that traps other atoms inside it.[0][0]https://www.scientificamerican.com/article/strange-crystals-...reply",
-      "There was a mathematician and a chemist arguing these structures had a pattern that had something to do with the distribution of prime numbers. https://www.quantamagazine.org/a-chemist-shines-light-on-a-s...reply",
-      "There are also \"natural\" paracrystalline viruses that turn isopods blue and then kill them.https://en.wikipedia.org/wiki/Invertebrate_iridescent_virus_...reply",
-      "tl;dr Quasicrystals are aperiodic structures. The author notes that the conditions for creating them are rare, given the need for instantaneous high temperature. They recount that these can happen during space debris impact and when lightning hits sand. They close out by describing some of the chemical 'formulas' for these materials, given that characterizing a prototypical section is difficult without repeating elements.I don't have anything to say about quasicrystals, other than it seems right up this blog's alley, as the other most recent articles are about math and materials (like feldspars [0]).[0] https://www.explainxkcd.com/wiki/index.php/2501:_Average_Fam...reply"
-    ],
-    "link": "https://johncarlosbaez.wordpress.com/2026/05/14/naturally-occurring-quasicrystals/",
-    "first_paragraph": "I love quasicrystals\u2014like crystals, but with patterns that never repeat, like Penrose tiles.  But they\u2019ve very rare in nature.  They\u2019re created only by the most exotic and violent events: a high-speed collision of asteroids, lightning hitting a downed power cable in a sand dune\u2014or an atomic bomb!Amazingly, the first 3 kinds of naturally occurring quasicrystal were discovered in a single meteorite that landed in Khatyrka, in the far east of Russia.  They\u2019ve never been found anywhere else!  And this meteorite is highly anomalous: it\u2019s the only meteorite known that contains metallic aluminum\u2014and it seems to have been formed in a ultra-high-velocity collision between asteroids.The only other quasicrystal I know that may be naturally created came from a bolt of lightning hitting a sand dune near a downed power cable in Nebraska.  Then there was one found amid the fused desert sand and copper transmission cable left behind by the first atomic bomb test at Trinity, New Mexico.  That\u2019s not qui"
-  },
-  {
-    "title": "Additive Blending on the Nintendo 64 (phoboslab.org)",
-    "points": 30,
-    "submitter": "ibobev",
-    "submit_time": "2026-05-15T14:39:51 1778855991",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=48149259",
-    "comments": [
-      "Interesting so the N64 had a more flexible color blending process, and in doing that no clamping.So the 'good explosions' were possible on N64 if you did the blending+clamp by hand?reply",
-      "Discussed a bit more here in 2017-2018: https://forums.nesdev.org/viewtopic.php?t=16414reply",
-      "> Did you ever wonder why explosions and other effects looked so much cooler on the original PlayStation than they did on the Nintendo 64?\n\nyes! fantastic article and now i finally know why ^^reply"
-    ],
-    "link": "https://phoboslab.org/log/2026/05/n64-additive-blending",
-    "first_paragraph": "Did you ever wonder why explosions and other effects looked so much cooler on\nthe original PlayStation than they did on the Nintendo 64?The reason is additive blending! Or rather, in the N64 case, the lack thereof. While\nthe N64 actually did support additive blending, it was practically unusable.The PSX supports 4 different blend modes (in addition to just overwriting\npixels) to control how sprites and geometry are mixed into the existing\nframe buffer:The one you see here in Silent Bomber is conceptually the simplest one: src + dst. \nThat is, colors are just added to the existing ones in the frame buffer.Drawing a sprite over a scene can only ever make it brighter, never darker.\nPerfect for explosions, plasma beams and magic spells.  Importantly, note how \nthe B value in this example adds up to 396, but the PSX GPU helpfully clamps\nit to the maximum range of 255. (Aside: the PSX GPU actually only works in 16bit precision with 5bit color \ncomponents, so values range from 0 .. 31; the ma"
-  },
-  {
-    "title": "The main thing about P2P meth is that there's so much of it (2021) (dynomight.net)",
-    "points": 57,
-    "submitter": "tomjakubowski",
-    "submit_time": "2026-05-15T23:37:32 1778888252",
-    "num_comments": 45,
-    "comments_url": "https://news.ycombinator.com/item?id=48155324",
-    "comments": [
-      "Discussed at the time:The main thing about Phenylacetone meth is that there's so much of it - https://news.ycombinator.com/item?id=29027284 - Oct 2021 (359 comments)reply",
-      "The ephedrine (or pseudoephedrine) synthesis is a one step using phosphorus/iodine reduction directly to methamphetamine. It\u2019s simple and clean in that only an acid base extraction is required, and only one set of NP solvents.All these others syntheses with multiple steps up the chances of weird toxic solvents or contaminants creeping in. I think it\u2019s a contaminant issue that\u2019s exacerbated by the drug use.The government should just regulate it, control purity and production and let people access small amounts for recreation/performance. It\u2019s not an evil drug per se - long history before it was criminalized. Plus that would neuter the cartels and protect people\u2019s health more than pushing it underground.reply",
-      ">The government should just regulate it, control purity and production and let people access small amounts for recreation/performanceFamously, the US spent about 15-20 years attempting this with opioids. They were widely available to people via a pseudo-medical process, or via secondhand dealing. Opioids were/are manufactured by regulated, publicly traded companies with inspectors who controlled purity and production. The result? A shattering drug addiction crisis that at its height killed more people annually than the entire Vietnam War.(For people saying 'no, that was illegal heroin or fentanyl that did all that damage'- the Wiki page for the opioid crisis is quite clear that at least 50% of all deaths were due to perfectly legal, regulated opioids).When you make drugs legal & easy to get, lots & lots of people do them- who develop life-shattering addictions and OD en masse. They also build tolerance and then move on to even harder stuff. AFAIK out of the 300ish countries on the globe, there is not 1 that has decriminalized hard drugs in the modern era. And no don't say Portugal, contrary to widespread myth they forced people under threat of jail to attend drug rehab, and anyways they've recently curtailed even that.I realize this is not going to get a lot of upvotes on HN, but yes making it difficult to do hard drugs is a reasonable public policy goal. (Which again, is why literally every country on the planet does it). There's room to argue about the exact tactics, but the broad goal is perfectly legitimatereply",
-      "I think a astronomically better example would be programs in the Netherlands, Denmark or Switzerland, where people heavily addicted to heroine  can get into programs that will provide them with pharmaceutical heroine.\nStill prescribed by doctors (although specialized ones), but not just for pulling a wisdom tooth with huge margins for the Sacklers...reply",
-      "Your opioid comparison is wildly apples to oranges. They were marketed and sold to consumers as safe, much more effective, and dramatically less addictive than it actually was. An industrial addiction machine ignored regulatory safeguards, built a 'pay for play' rewards structure to incentivize prescriptions, and a zillion other cartoonishly evil things .There is a world of difference between something like that and government dosed methadone, meth, etc.The problem was not in fact opioids. It was the profit structure behind the distribution network. Remove that and the bulk of the problems go away too.If the drug is socially stigmatized only true addicts will use it. Those are exactly the people you want to have access to it because they can be gradually tapered off on a controlled dosage, they can be targeted for interventions, and it keeps them from stabbing you and stealing your wallet to get more meth.Its incredibly counterproductive to just outlaw a thing that people need on a level that they will do almost anything to get it.reply",
-      "I think another under-discussed factor in the opioid crisis is that opioids are cheap, but (American) healthcare to treat underlying pain is not. You might not be able to afford six weeks of physical therapy, surgery, etc., but you can probably afford $11.23 a month for a generic prescription.reply",
-      "> A shattering drug addiction crisis that at its height killed more people annually than the entire Vietnam War.Except that you're wrong. The war-on-drugs kept drugs under control. It did not _eliminate_ them, but they also were not available on every street corner.Once we stopped the war-on-drugs, the abuse rates skyrocketed. Not just opiods, but also meth. You can see it on the graphs in this article, the general wind-down of drug abuse policies started around 2008-2010.reply",
-      "> The government should just regulate it, control purity and production and let people access small amounts for recreation/performance.The phrase \u201csmall amount\u201d is doing a lot of heavy lifting in this statement.The government does regulate and control amphetamine and methamphetamine (Desoxyn) as prescription drugs. The former is not all that hard to access. For a while it was as easy as signing up for a service through a TikTok ad and filling out a form, after which you were guaranteed a prescription. Those mills got shut down but it\u2019s not hard to find a doctor willing to write a prescription in your area with some Internet searching (Side note: Lot of people get surprised when they get a prescription from some random doctor and discover that all of their other doctors know about it. Controlled substance prescriptions go to shared databases and it will be on that record for a while)> It\u2019s not an evil drug per se - long history before it was criminalizedDose makes the poison, the recreational users aren\u2019t going to be satisfied with your government regulated small amounts.These discussions always end up with two parties talking past each other because one side wants to focus only on the ideal drug user who uses small amounts and has perfect education and self control, while ignoring that the meth users wouldn\u2019t be stopped from seeking their larger quantities than a theoretical government regulated small amount program would allow.I should also mention that methamphetamine appears to be quite neurotoxic at recreational doses. Maybe even smaller doses too.We should also mention that the \u201clong history\u201d you speak of isn\u2019t actually that long and was associated with small epidemics of overuse and addiction, too. It\u2019s not like addiction is a modern phenomenon.reply",
-      "No, policy wise I appreciate you getting into the nuance, but I feel like you take the argument to polar extremes (with an attitude of confident, final certainty), when the expected outcome is across the middle. This smells more like ideology than practicality.On the toxicity side, do you have any studies to cite? I wasn\u2019t aware of toxicity, but it\u2019s plausible.Big picture tho, I\u2019m not an expert in drug policy. It just sounds like a logical way to reduce harm overall. Reduce harm overall - worth repeating; on average, create a better society.The conceivable parties who would lose out are: government funded agencies charged with fighting drug crime because their caseload and budgets would probably decrease; and on the other side the cartels and dealers. Although what seems to happen with the latter is once something is legalized, the supply chains morph into legitimate businesses somehow.I still think it would work. I\u2019m not convinced by what you said.reply",
-      "Having to go through the medical system is why there's such a thriving black market. How do you propose changing things that this isn't the case?reply"
-    ],
-    "link": "https://dynomight.net/p2p-meth/",
-    "first_paragraph": "Sam Quinones was recently on Econtalk and in the Atlantic talking about methamphetamines and homelessness. He points out that \u201cold\u201d meth was made from ephedrine and that \u201cnew\u201d meth is made from a chemical called Phenylacetone or P2P.  He suggests that new meth might be chemically different in a way that caused people to go crazy, starting around 2017:Ephedrine meth was like a party drug. [\u2026] You could normally kind of more or less hang onto your life. You had a house, you had a job. [\u2026] P2P meth was nothing like that. It was a very sinister drug. It brought you inside. You didn\u2019t want to be around other people. You wanted to just kind of be alone with whatever bizarre thoughts your mind was now cooking up, and conspiracies.I was curious about this. What do we know about the difference between old meth and P2P meth? What evidence is there that these have a chemical difference?Meth in the US shifted to P2P synthesis between 2009 and 2012.In the before times, meth was made with ephedrine "
-  },
-  {
-    "title": "How to Write to SSDs [pdf] (vldb.org)",
-    "points": 56,
-    "submitter": "matt_d",
-    "submit_time": "2026-05-15T22:23:38 1778883818",
-    "num_comments": 6,
-    "comments_url": "https://news.ycombinator.com/item?id=48154711",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.vldb.org/pvldb/vol19/p1469-lee.pdf",
+    "link": "https://crates.io/crates/zerostack/1.0.0",
     "first_paragraph": ""
   },
   {
-    "title": "A 0-click exploit chain for the Pixel 10 (projectzero.google)",
-    "points": 345,
-    "submitter": "happyhardcore",
-    "submit_time": "2026-05-15T13:39:54 1778852394",
-    "num_comments": 158,
-    "comments_url": "https://news.ycombinator.com/item?id=48148460",
+    "title": "Hosting a website on an 8-bit microcontroller (maurycyz.com)",
+    "points": 38,
+    "submitter": "zdw",
+    "submit_time": "2026-05-17T01:25:26 1778981126",
+    "num_comments": 0,
+    "comments_url": "",
     "comments": [
-      "I followed the link to the Pixel 9 bug/exploit and saw this:\"Over the past few years, several AI-powered features have been added to mobile phones that allow users to better search and understand their messages. One effect of this change is increased 0-click attack surface, as efficient analysis often requires message media to be decoded before the message is opened by the user\"Haven't we learned our lesson on this?  Don't read and act on my sms messages without me asking you to!reply",
-      "> Haven't we learned our lesson on this?What is the purported lesson we should have learned? Users choose phones with rich messaging features. This was a major selling point for iPhone, first, with iMessage, and later with Android until iOS caught up with RCS.reply",
-      "One of the things Apple's Lockdown mode does is disable previews of images or links that are sent to you.It seems like the lesson is that you shouldn't be processing data sent to the device by random strangers without the user explicitly choosing to open the file or follow the link.reply",
-      "That should be the default behavior, not a special lock down option that also disables other features.Why can't they just make it like most email clients? No preview by default, give a banner with an option to explicitly allow a preview for that specific message or conversation?reply",
-      "I tend to agree.But how does that prevent one from receiving and opening a malicious message?reply",
-      "Because many people know not trust unknown senders.reply",
-      "I should have said \u201ca well crafted malicious email\u201d or SMS etc.reply",
-      "No such thing as completely idiot proof. But I think we can all agree an exploit that requires a click is a lot better for the intended victim than one that doesn't. This way they at least have a chance to not click it. Then we can start tackling the other problems with separate solutionsreply",
-      "Sorry, but that is an insanely defeatist attitude blended with a hint of blaming users for wanting features.Image decoders are pure functions and all should have been rewritten as 100% safe Rust years ago.Users need functionality.It\u2019s up to us to figure out how to provide that safely.Saying to users they shouldn\u2019t have those features isn\u2019t sage advice, it\u2019s admitting failure.reply",
-      "The thing is, nobody's happy just previewing jpegs and pngs.Before you know it, people want to preview SVGs, PDFs, video, HTML and so on.And to do that properly means you've got to support obscure formats like JBIG2 and CCITT Fax. Malicious vector images with a billion elements to render. XML that lets one file embed another.And good luck getting the budget to re-implement them all from scratch in a better language, when the only business value the feature delivers is a postage-stamp-sized preview image.reply"
+      "xxx"
     ],
-    "link": "https://projectzero.google/2026/05/pixel-10-exploit.html",
-    "first_paragraph": "We recently published an exploit chain for the Google Pixel 9 that demonstrated it was possible to go from a zero-click context to root on Android in just two exploits. The Dolby 0-click vulnerability existed across all of Android, until it was patched in January 2026. While we had an exploit chain for the Pixel 9, we wanted to see if it was possible to write a similar exploit chain for Pixel 10.Altering our exploit for CVE-2025-54957 was fairly straightforward. The majority of needed changes involved updating offsets calculated for the specific version of the library we targeted on the Pixel 9 to similar offsets in the library for Pixel 10. The only challenge (outside of wishing we\u2019d better documented which syncframes contained offsets) was that the Pixel 10 uses RET PAC in the place of -fstack-protector, which meant that __stack_chk_fail wasn\u2019t available to be overwritten by code. After a bit of trial and error, we used dap_cpdp_init, initialization code that can be overwritten witho"
+    "link": "https://maurycyz.com/projects/mcusite/",
+    "first_paragraph": "\nIn today's episode of \"dumb things to do with an AVR microcontroller\":\n\n\nMCU website demo\n(may go down if this gets posted to HN)\n\n\nMy victim is the AVR64DD32 which is quite similar to the Atmega328 of Arduino fame.\nCompared to the older Atmega, these AVR DD lines are cheaper for the same memory, use a single programming pin and have nicer peripherals:\n\n\n\nSo that's the computer (a rather spacious one at that) but it'll need an internet connection to host a website.\n\nThe obvious choice is Ethernet, but even the slowest version (10BASE-T) still runs at 10 megabits/second.\nWorse, it uses Manchester encoding:\na zero is sent as \"10\" and a one as \"01\", so 10 megabits of data is actually 20 megabits at the wire.\n\nThis is simply too fast for the AVR to generate.\nWhile it's processor can run at 24 MHz, but all the peripherals and IO pins max out at a 12 MHz clock.\n(although some other 8-bit chips should be able to do it)\n\nThe proper solution is to buy a dedicated ethernet chip from DigiKey, bu"
   },
   {
-    "title": "Show HN: Epiq \u2013 Distributed Git based issue tracker TUI (ljtn.github.io)",
-    "points": 19,
-    "submitter": "jolaflow",
-    "submit_time": "2026-05-16T00:18:03 1778890683",
-    "num_comments": 6,
-    "comments_url": "https://news.ycombinator.com/item?id=48155570",
-    "comments": [
-      "There was a small surge in popularity in distributed git issue trackers a bit over a decade ago, and all of them had some sort of problem baked in to the design that made them not very good.Two weeks ago I had listed out the problems I could remember offhand: https://news.ycombinator.com/item?id=47956979It sounds like there's intentionally no attempt to handle the last one (that this is by devs for devs), and points 3 and 4 might be addressed somehow since it mentions syncing automatically. Does it store data separate from git to avoid the first two?reply",
-      "Thanks for input. Interesting list. A few notes on that:- Issue state is not tied to commits in the checked out repo. Events live in append-only user-scoped logs and are materialized independently of the checked out branch, so switching branches does not change issue state. This is solved with git worktrees.- Epiq keeps state in a dedicated state branch and does not put issue data into normal code history. The working branch stays clean.- Sync uses normal git push/pull semantics.- Multi-user conflicts are prevented because each user writes only to their own immutable event log file. You never co edit a file. Logs converge state in memory from the combined event stream. There\u2019s no shared mutable issue document being edited.- The  non-developer distribution can be addressed with exported state .md files (with the board as ascii). They are currently not generated automatically, but you can generate them at will. [edit - addition: Considerable effort has also been put into making the tool accessible to non-technical people, so there is auto completion, hints, a command palette with descriptions of each command, arrow key navigation and so on. It is my hope that anyone can pick it up rapidly. And a web interface could definitely be crafted for that usecase]reply",
-      "It\u2019s very slick, but I would be interested to know how separable the UI and the data layer are. I love vim but asking a collaborative group to all use a TUI is difficult. A local web server would be a nice alternative UIreply",
-      "Good point. A local web UI is probably one of the highest priorities from here. The UI, persistence and materialization layers are already fairly separated architecturally.The current TUI is built with Ink, which is a React renderer for the terminal, so conceptually the UI structure already maps naturally to the web.reply",
-      "I think this is a cool project. I see a lot of use cases for this, for cases where it is preferable to keep issues local to the repo, distributed via git only, and not the least for all kinds of personal task management. Avoiding the context switching to a web based tool is a nice plus.reply",
-      "Thanks!reply"
-    ],
-    "link": "https://ljtn.github.io/epiq/",
-    "first_paragraph": "\nEpiq is a vim-inspired issue tracker that renders\n\t\t\t\t\t\t\tas ASCII, stores work as an immutable event log, and synchronizes\n\t\t\t\t\t\t\tthrough Git. No SaaS ceremony. No browser. Just your repo, your\n\t\t\t\t\t\t\teditor, and a board that moves at command-line speed.\n\t\t\t\t\t\t\n\t\t\t\t\t\tEpiq optimizes for flow: keyboard navigation, command history,\n\t\t\t\t\t\tfilters, autocompletion, and plain Git synchronization.\n\t\t\t\t\t\n\t\t\t\t\t\t\tNavigate boards, issues, swimlanes, and contexts with vim-like\n\t\t\t\t\t\t\tmovement. Or cheat with arrow keys.\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tEpiq uses Git under the hood, with isolated worktrees and state\n\t\t\t\t\t\t\tbranches, so teams can collaborate without introducing another\n\t\t\t\t\t\t\tcentral service.\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tChanges are appended as events, replayed deterministically, and\n\t\t\t\t\t\t\tdesigned to converge. Inspect what happened yesterday, last week,\n\t\t\t\t\t\t\tor one year ago.\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tCreate, move, filter, close, reopen, and sync issues without\n\t\t\t\t\t\t\ttab-switching. Epiq keeps local interaction instant while "
-  },
-  {
-    "title": "ESP-EEG is an affordable 8-channel biosensing board (autodidacts.io)",
-    "points": 24,
+    "title": "A nicer voltmeter clock (lcamtuf.substack.com)",
+    "points": 84,
     "submitter": "surprisetalk",
-    "submit_time": "2026-05-13T13:00:09 1778677209",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=48121333",
+    "submit_time": "2026-05-16T22:45:16 1778971516",
+    "num_comments": 14,
+    "comments_url": "https://news.ycombinator.com/item?id=48164432",
+    "comments": [
+      "Funny, I've been playing with panel-meters as well\u2026I have an analog computer I'm finishing up. I have ADC's to convert the analog to digital to display the values on an LCD (with an ESP32 dev board\u2014it was more flexible than panel meters, cheaper than an oscilloscope).But because looking at \"simulated\" panel-meters seemed to kind of undercut the point of the analog computer, I went ahead and created a small PCB to go from my analog computer to a panel meter like the one in the clock.Running a \"Spring + Mass\" simulation on the analog computer and seeing both the LCD/ESP32 representation of a panel meter and an actual panel meter move in sync brought it all home.reply",
+      "I always enjoy projects like this. Both because the are artistically neat and because the give me all sorts of ideas.reply",
+      "It's certainly nice to see the nice woodworking in combination with a simple elegant design.Ways to keep more than one brain center active!reply",
+      "So sexy! I could probably build the electronics easily enough, but such projects need workworking tools I just don't have room for in my tiny flat.(nor would the missus be pleased for me to buy them - but that's another matter)reply",
+      "If there's a makerspace or hackerspace near you, they might have a CNC router. Apart from (I believe) the front panel being a two-sided job, this is pretty straightforward and could be done entirely on a Shopbot or equivalent. Worst case you might need to learn FreeCAD and buy some collets ($10-$50) and bits (~$50-$75 if you're getting two). Best case, they have software and tooling you can use.Source: am a furniture maker professionally. Have worked out of a makerspace, and have done equivalently complex projects on their Shopbot.Edited to add: if you skip the rabbets around the gauges on the front panel, you can make that a single-sided CNC job, which makes it much easier. With some care, you could do those with a handheld router and a rabbetting bit.reply",
+      "Nice!  Needs just a tweak to prevent the overshoot and bounce when going from high to low.reply",
+      "Nah the bounce is gorgeousreply",
+      "Wut? We add extra lines of code just to get that in digital?;-)reply",
+      "I expected seconds arrow to move much more smoothly than in the videois 10Hz control just too slow?reply",
+      "Cool! I was at least hoping for an op amp or two for the circuit however ;)reply"
+    ],
+    "link": "https://lcamtuf.substack.com/p/a-nicer-voltmeter-clock",
+    "first_paragraph": ""
+  },
+  {
+    "title": "C++26 Shipped a SIMD Library Nobody Asked For (lucisqr.substack.com)",
+    "points": 27,
+    "submitter": "signa11",
+    "submit_time": "2026-05-15T04:32:21 1778819541",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=48144584",
     "comments": [
       "xxx"
     ],
-    "link": "https://www.autodidacts.io/cerelog-esp-eeg-affordable-openbci-like-board/",
-    "first_paragraph": "I recently ran across a new open-source (or is it source-available?) EEG board that looks interesting: the Cerelog ESP-EEG.At its heart is the Texas Instruments ADS1299 (24-bit, 8-channel) analog-digital converter, the same chip the OpenBCI Cyton uses.So what's different or better about the Cerelog? From my perusal of the materials, it seems that the selling point is cleaner signal due to true closed-loop active bias, at a price point close to the price of the OpenBCI when it launched (less than half the price of the Cyton now).Software support includes a fork of the OpenBCI GUI (via Lab Streaming Layer) and Brainflow.The project is by former SpaceX hardware engineer Simon Hakimian.Git repository with firmware and schematic here:\u21d2 https://github.com/Cerelog-ESP-EEG/ESP-EEGProduct page:\u21d2 https://www.cerelog.com/eeg_researchers.htmlUsage guide:\u21d2 https://www.cerelog.com/eeg_researchers_guide.htmlSocials:\u21d2 https://x.com/CerelogOfficialAnnouncement post on Reddit r/BCI:\u21d2 https://old.reddit."
-  },
-  {
-    "title": "California bill would require patches or refunds when online games shut down (arstechnica.com)",
-    "points": 358,
-    "submitter": "Lihh27",
-    "submit_time": "2026-05-15T19:48:48 1778874528",
-    "num_comments": 213,
-    "comments_url": "https://news.ycombinator.com/item?id=48152994",
-    "comments": [
-      "It seems like the fair solution to this problem is to open source server code if you are going to cease support for an online game.  That way the community has the opportunity to run their own servers if they want to.I also really support giving 60 day notice if an online game is going to shut down.  Places I have worked have had policies like that for games they are sun setting and I think the best game publishers think a lot about how to do that operation.  It's not simple, because if people think a game is going away their behavior changes.  And nothing sucks like buying online content for a game right before it shuts down. No matter what you do people will tell you they didn't know the game was shutting down.   And if you give away content that you previously sold that also sometimes angers the community.The problem is when companies know a game isn't working they tend to want to shut it down right away because the money they spend keeping it up is never coming back.  And maybe the company is going to die too.  So I do support a law for a 60 day notice.reply",
-      "> open source server code if you are going to cease supportWhen I was a senior exec at a big public tech company, there was a product we decided to discontinue and we thought would be nice to just open source. Somehow I ended up in charge of managing that process and was shocked at how complex, time-consuming and expensive it was in a multi-billion dollar, publicly-traded corp vs some code my friends and I wrote.Legal had to verify that there was no licensed library code used and that we had clear, valid copyright to everything there. The project had been written over several years, merged with a project we'd acquired with a startup, some key people weren't around any more, the source control had transitioned across multiple platforms, etc. And even once we nailed all that down sufficiently, we didn't get an \"all clear\" from legal, we just got a formal legal opinion that any liability was probably under $1M. And then we had to convince an SVP to endorse that assumption of $1M potential liability and make a business case for approval to the CEO.For a public company, the default assumption for any online game would be \"the server side code WILL be open sourced\" (under threat of prosecution). That means legal would mandate \"No commercially licensed libraries can be used, any open source libraries will have to be vetted to ensure the license is compatible and everything else will need to pass IP and compliance audit.\" That will certainly have an impact on development time frames and economics.reply",
-      "Of course, it would also create a demand for open-source game server libraries, which would surely appear after a while and make the whole process much easier.So while I believe you about all those difficulties existing today, it's plausible that they would mostly fade away over time. I think temporary growing pains would be an acceptable price for the significant long-term public benefit.reply",
-      "That\u2019s exactly the benefit of a law - it\u2019s a forcing measure to require businesses to invest in processes to understand open sourcing, and to go forward when otherwise no one would make a business case for approval.reply",
-      "And makes it more expensive. There is the seen benefit and then the unseen cost. Every game released will have to account for the possibility of it, and will create issues for people who really didn't want those issues. After awhile people will forget there are associated issues and costs, but they will still be there.reply",
-      "Every game released whose developers have chosen to complicate its design with a client-server architecture. It's not like this is going to hurt the little three-man teams making games on shoe-string budgets. Yeah, it's going to make big budget games a little more expensive, just like how cars with seatbelts are a little more expensive to build, and like how it's a little more expensive to do proper waste management instead of dumping sludge into a river.reply",
-      "What? This a mandate in law that requires a company to do work in order to comply. Studios will spin out LLCs for a game so that if it fails it doesn't end up as a liability. Unintended consequence: more dead games.reply",
-      "It's impossible for the law to cause more games to die, because already the default fate of online games is for them to die. If, with the law, a studio chooses to use an LLC to create the game to conditionally release sources once it shuts down, that was a game that without the law would have died anyway because the studio wouldn't have chosen of its own volition to release sources.reply",
-      "If a studio on it's last legs is required to service a failing product instead of working on a new one the studio will simply close and not comply. That's what tends to happen with forced regulations like this.reply",
-      "And it's what would have happened anyway without the law. How is this difficult to understand? It's not like it's only a few games that shut down without recourse for the players. Ross Scott already did the research on this. Something like 95% of all online games that shut down do so without providing any way for the players to continue playing in some way or without issuing refunds.reply"
-    ],
-    "link": "https://arstechnica.com/gaming/2026/05/bill-to-keep-online-games-playable-clears-key-hurdle-in-california/",
-    "first_paragraph": "\n        Publishers would have to offer \u201cindependent\u201d play patch or refunds after server shutdowns.\n      A bill focused on maintaining long-term playable access to online games has passed out of the California Assembly\u2019s appropriations committee, setting up a floor vote by the full legislative body. The advancement is a major win for Stop Killing Games\u2018 grassroots game preservation movement and comes over the objections of industry lobbyists at the Entertainment Software Association.California\u2019s Protect Our Games Act, as currently written, would require digital game publishers who cut off support for an online game to either provide a full refund to players or offer an updated version of the game \u201cthat enables its continued use independent of services controlled by the operator.\u201d The act would also require publishers to notify players 60 days before the cessation of \u201cservices necessary for the ordinary use of the digital game.\u201dAs currently amended, the act would not apply to completel"
-  },
-  {
-    "title": "Ploopy Bean: a trackpoint for every computer (ploopy.co)",
-    "points": 7,
-    "submitter": "jibcage",
-    "submit_time": "2026-05-12T20:39:04 1778618344",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=48114208",
-    "comments": [
-      "This gives me an idea, does anyone sell these?:    HEU   N\n    DIN    U\n     ^      M\n    <\u2304>   0.,E\n\nWith all full-sized keys? i.e. Numpad, arrows and home-end-insert-delete-pgup-pgdn?  i.e. all the keys that Apple's laptops fucked plus numpad.reply",
-      "I\u2019m using the caps unlocked CU7 every day; that\u2019s how i discovered it : same frustration as yours!( then i jumped onto otholinear keeb and now I\u2019m not even bothered by apple anymore and run omarchy on a second hand thinkpad. Same excitement as when i got my first powerbook in the early 2000s\u2026)reply",
-      "You can all kinds of keypads on AliExpress that are programmable. Some of them even use QMK.reply",
-      "This is made for me.reply"
-    ],
-    "link": "https://ploopy.co/shop/bean-pointing-stick/",
-    "first_paragraph": "$69.99\u00a0CADThe Ploopy Bean Pointing Stick is a 3D-printed, open-source pointing stick mouse. It adds high-precision pointing stick functionality to any setup, and has four Omron D2LS-21 buttons for snappy, responsive clicks. It runs QMK and supports VIA, which allows for quick and portable customization. It\u2019s fully assembled and ready to use immediately.The Bean Pointing Stick is currently in a preorder phase. That means that any orders you place with us that include a Bean Pointing Stick will be shipped out on the basis of availability.The preorder is split into different tiers:The launch date for the Bean Pointing Stick is 6 May 2026.Ploopy has a strong history of preorder management. We have released multiple products under these exact preorder conditions, and we have always successfully delivered all units within the promised amount of time.3D-printed parts (black)ElectronicsHardwareYou can find full assembly instructions here. But\u2026you don\u2019t need them, since this comes fully-assembl"
-  },
-  {
-    "title": "Erlang/OTP 29.0 (erlang.org)",
-    "points": 125,
-    "submitter": "pyinstallwoes",
-    "submit_time": "2026-05-15T23:33:32 1778888012",
-    "num_comments": 8,
-    "comments_url": "https://news.ycombinator.com/item?id=48155297",
-    "comments": [
-      "Looks like a nice set of improvements.  Disabling the SSH daemon [0] by default is a good security change, same with disabling the SFTP by default.I think the io_ansi [1] module sounds pretty cool, imo erlang doesn't have a great story for building complicated CLI applications right now, but I haven't tried much.  I imagine having this in the stdlib will be a nice leg up in the future.  The way fwrite works seamlessly across nodes is very nice, and exactly what I love to see from erlang.The addition of Native Records [2] is really cool.  I'm curious how this will be leveraged in Elixir in the future, since right now I think there is a mix of records, tuples, and maps depending on exactly what is being done.  Like the EEP says, I doubt we'll ever see the old records deprecated entirely but this looks like a substantial improvement.[0] https://www.erlang.org/doc/apps/ssh/ssh.html[1] https://www.erlang.org/docs/29/apps/stdlib/io_ansi.html[2] https://github.com/erlang/eep/pull/81reply",
-      "I don't think the ssh daemon was ever automatically enabled or started. The two bullet points are phrased differently, but I think they mean the same thing, when starting the ssh daemon, the listed parts won't be started by default.> The SSH daemon now defaults to disabled for shell and exec services, implementing the \u201csecure by default\u201d principle. This prevents authenticated users from executing arbitrary Erlang code unless explicitly configured.> The SFTP subsystem is no longer enabled by default when starting an SSH daemon.reply",
-      "For anyone wondering what the \"OTP\" part is in Erlang/OTP, its a set of libraries and associated principles that, in effect, standardize the creation of highly reliable, fault-tolerant applications, originally for the telecom domain. It's worth checking out the brief introduction to the fundamental ideas in the introduction to \"OTP Design Principles\":https://www.erlang.org/doc/system/design_principles.htmlreply",
-      "OTP = Open Telecom Platformreply",
-      "I'm interested to see how records play out in the ecosystem.reply",
-      "Can someone please explain the innards?reply",
-      "Innards of which part? The BEAM Book may be of interest to you:https://blog.stenmans.org/theBeamBook/reply",
-      "Added support for -unsafe attributes\n\nRight in time for the Rust rewrite! /sreply"
-    ],
-    "link": "https://www.erlang.org/news/188",
-    "first_paragraph": "Erlang/OTP 29 is a new major release with new features, improvements\nas well as a few incompatibilities. Some of the new features are\nhighlighted below.Many thanks to all contributors!Added support for -unsafe attributes for marking\nfunctions as unsafe to use. The compiler will by default now\ngenerate warnings for calls to functions in Erlang/OTP known to be\nalways unsafe. Furthermore, xref can now be used to find calls to\nunsafe functions and functions that lack documentation.The SSH daemon now defaults to disabled for shell and exec services,\nimplementing the \u201csecure by default\u201d principle. This prevents\nauthenticated users from executing arbitrary Erlang code unless\nexplicitly configured.The SFTP subsystem is no longer enabled by default when starting an\nSSH daemon.In SSL, the post quantum hybrid algorithm x25519mlkem768 is now the\nmost preferred key exchange group in the default configuration.The module io_ansi allows the user to emit Virtual Terminal\nSequences (also known as ANSI s"
-  },
-  {
-    "title": "The sigmoids won't save you (astralcodexten.com)",
-    "points": 160,
-    "submitter": "Tomte",
-    "submit_time": "2026-05-15T10:51:13 1778842273",
-    "num_comments": 169,
-    "comments_url": "https://news.ycombinator.com/item?id=48147021",
-    "comments": [
-      "This article answers the question in the second paragraph then completely ignores the answer for the rest of it.>My understanding is that this represents 3-4 \u201cgenerations\u201d of different technology (propellers, turbojets, etc). Each technology went through normal iterative improvement, then, when it reached its fundamental limits, got replaced by a better technology. The last technology, ramjets, reached its limit at about 3500 km/h, and there wasn\u2019t the economic/regulatory will to develop anything better, so the record stands.You don't have one sigmoid, you have multiple each stacked on top of each other. Airplanes aren't just one technology they are multiple technologies that happen to do the same thing.Each one is following a sigmoid perfectly. It only looks exponential(ish) because of unpredictable discoveries that let you switch to another sigmoid that has a higher maximum potential.The same is true in AI. If you used the same architecture as GPT2 today you're in for a bad time training a new frontier model. It's only because we have dozens of breakthroughs that the capabilities of models have improved as much as they have.That said exponential and sigmoids are the wrong model to use for growth. Growth is a differential equation. It has independent inputs, it has outputs and some of those outputs are dependent inputs again through causal chains of arbitrary complexity. What happens depends entirely on what the specific DE that governs the given technology is. We can easily have a chaotic system with completely random booms and busts which have no deep fundamental rhyme or reason. We currently call that the economy.reply",
-      "The book \"Origins of Efficiency\" by Brian Potter discusses this. Stacked sigmoids are a well-understood idea in innovation.The idea that exponential growth will continue with stacked sigmoids is also not a given. An example is the nail. Nails used to be about half a percent of US GDP. That's a pretty big number! A series of innovations stacked on each other (each innovation having its own sigmoid) to reduce the cost of nails. Nails dropped in cost by over 90%.But eventually nail manufacturing reached a floor. And since the mid-20th century, we haven't gotten much better at making nails. The cost of nails actually started increasing slightly. We ran out of new innovation sigmoids, so we got stuck on the last one.So what you actually have to predict is whether there will continue to be new sigmoids, not whether the existing sigmoid will asymptote (we already know it will).This is much more difficult to forecast, because new sigmoids (major new innovations) tend to be unpredictable events. Not only are the particulars difficult to forecast (if they were knowable, the innovation would have already happened), but whether there will be a major innovation or not is also hard to forecast, because they are distinct and separate from any existing sigmoid trend.So we are left with the idea that all current innovations in AI will asymptote in their scaling as they reach the plateau of the sigmoid, but there may be new sigmoids that keep the overall trend up. Or there may not be. We don't know.That's not very satisfying, so we'll get to keep reading articles like this one.reply",
-      "> If you used the same architecture as GPT2 today you're in for a bad time training a new frontier model.  It's only because we have dozens of breakthroughsWhat exactly are these dozens of breakthroughs? Most frontier models architectures today still look very much like GPT2 at their core. There were various of improvements like instructgpt, finetuning techniques, efficiency improvements with kv caches, faster attention, lora, better tokenizers, etc. Most of these are for making things run faster. The biggest differentiator has probably been data curation and post-training data and the ability to fit more into the model. But I think we had few breakthroughs that would fall into the category of different technologies.reply",
-      "Yes, I was surprised he never discussed the idea that such exponentials are typically made of stacked sigmoids.That said... if the exponential is made of stacked sigmoids, it's still an exponential on the whole!  The fact that it's made of stacked sigmoids is relevant to the engineers making it, but not so relevant to the users or those otherwise affected by it.reply",
-      "Only so long as you can keep inventing the next sigmoid in the stack.reply",
-      "Sure, but we have no prior reason to expect that the 'rate of discoveries' is going to drop off significantly in the next few years. Certainly not stop entirely.reply",
-      "Overall in the economy, no, rate is discoveries is not going to drop off.But in any specific industry or area? You often get a bunch of big discoveries, and then there is a long period of no important discoveries, because we've figured out the main aspects of that technological paradigm. The technology becomes commoditized and standard.And that's the trillion dollar question with AI right now -- will we soon exhaust the potential of the current LLM paradigm? And we'll just have 20 or 30 years of figuring out mainly how to make LLMs cheaper and how integrate them into business processes, before somebody comes up with another fundamental breakthrough?Or are we only 10% of the way in developing the current LLM paradigm? Where a decade from now models virtually never make mistakes and are smarter than basically any tenured faculty member in their field?reply",
-      "We have no reason to expect anything of the 'rate of discoveries' because that is completely independent of anything to do with productionizing them.For all we know it becomes negative because all the people who understood how to train a trillion parameter model get killed by an asteroid during a conference.reply",
-      "The author has written about stacked sigmoids in the past, e.g. in https://slatestarcodex.com/2018/10/15/is-science-slowing-dow...I suspect that he started down the path of considering them more deeply here but found that they didn't add much to the analysis. A stack of sigmoids ultimately either gives you a single sigmoid if you run out of new innovations, or an exponential if you don't.reply",
-      "Something that deeply frustrates me, as someone who did R&D on model architectures, is how similar the modern LLM model architectures are to GPT2.(This is a bit disingenuous, as lots/most of work is spent on the scaling and training side of things.)reply"
-    ],
-    "link": "https://www.astralcodexten.com/p/the-sigmoids-wont-save-you",
+    "link": "https://lucisqr.substack.com/p/c26-shipped-a-simd-library-nobody",
     "first_paragraph": ""
   },
   {
-    "title": "I broke AppLovin's mediation cipher protocol (buchodi.com)",
-    "points": 13,
-    "submitter": "lmbbuchodi",
-    "submit_time": "2026-05-16T00:35:01 1778891701",
+    "title": "Unknowable Math Can Help Hide Secrets (quantamagazine.org)",
+    "points": 23,
+    "submitter": "Xcelerate",
+    "submit_time": "2026-05-13T16:09:00 1778688540",
     "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=48155678",
+    "comments_url": "https://news.ycombinator.com/item?id=48123801",
     "comments": [
-      "I was surprised to see Apple exposing the device boot time. Not sure why a typical app would need this, and in a world in which iPhones are infrequently rebooted, the combination of this with other fields must indeed be very deterministic.reply",
-      "Most ways to collect boot time are a \"Required Reason API,\" so they declare through NSPrivacyAccessedAPITypeReasons, meaning AppLovin apps are (unsurprisingly) lying about what they are doing with the data. There's a fair amount of research into this, for example at https://mysk.blog/2024/05/03/apple-required-reason-api/ and https://blog.appicaptor.com/2025/02/05/apples-required-reaso... (which also documents a workaround that Apple's static analysis tools didn't detect at the time).My general conclusion is: it's stupid that Apple continue to allow this and Trust Us Bro is not a good permission system to allow app developers do shady things, especially when research indicates that they are, unsurprisingly, doing shady things. Apple's static analysis based App Store approval system is also historically swiss-cheesey and I know they could do better. Overall, thematically a black mark on Apple, which has always been surprising for me because they tend to genuinely care about privacy in many other facets.reply",
-      "I had no idea Apple exposed that information. And they're clear that the data _should not be sent off the device_:> 35F9.1>    Declare this reason to access the system boot time in order to measure the amount of time that has elapsed between events that occurred within the app or to perform calculations to enable timers.>    Information accessed for this reason, or any derived information, may not be sent off-device. There is an exception for information about the amount of time that has elapsed between events that occurred within the app, which may be sent off-device.> 8FFB.1>    Declare this reason to access the system boot time to calculate absolute timestamps for events that occurred within your app, such as events related to the UIKit or AVFAudio frameworks.>    Absolute timestamps for events that occurred within your app may be sent off-device. System boot time accessed for this reason, or any other information derived from system boot time, may not be sent off-device.reply"
+      "Is the approach analogous to one way hash? But with mathematical statements?Given that they can\u2019t be proven, so it\u2019s effectively unpredictable and \u201cun-generatable\u201d ?reply",
+      "How is this not security through obscurity?reply"
     ],
-    "link": "https://www.buchodi.com/i-broke-applovins-mediation-cipher-protocol/",
-    "first_paragraph": "I broke the cipher AppLovin wraps around its ad-mediation traffic and decrypted several thousand real requests captured on my consented mobile-traffic research panel. The conclusion is straightforward: The encrypted bid request carries enough device data to deterministically re-identify the same iPhone across apps from different publishers, even when user denies ATT. That payload reaches AppLovin plus around 12 downstream ad networks on every banner load, every ~30 seconds, for as long as the user is playing. The assumption that ATT is the only way to deterministically identify a user is wrong. Fingerprinting the device works just as well.Every AppLovin mediation request is HTTPS POST sent to ms4.applovin.com/1.0/mediate. Inside the TLS layer, the payload is wrapped in a second cipher AppLovin built. After base64 decoding, the wire envelope is:Three colon-separated fields then ciphertext:The cipher takes two ingredients: a salt and that SDK key. The salt is a 32-byte constant baked int"
+    "link": "https://www.quantamagazine.org/how-unknowable-math-can-help-hide-secrets-20260511/",
+    "first_paragraph": "\nAn editorially independent publication supported by the Simons Foundation.\n\nGet the latest news delivered to your inbox.\nCreate a reading list by clicking the Read Later icon next to the articles you wish to save.Type search term(s) and press enterPopular\n                                    SearchesMay 11, 2026Kristina Armitage/Quanta MagazineStaff WriterMay 11, 2026Mathematicians spend most of their time thinking about what\u2019s knowable. But the unknowable can be just as compelling.Perhaps the most famous example comes from a theorem by the logician Kurt G\u00f6del. G\u00f6del\u2019s celebrated result \u2014 one of two \u201cincompleteness theorems\u201d he published in 1931 \u2014 established that for any reasonable set of basic mathematical assumptions, called axioms, it\u2019s impossible to prove that the axioms won\u2019t eventually lead to contradictions. Though mathematicians continued their research much as they had before, they would never again be certain that their rules were self-consistent.More than 50 years after G\u00f6d"
   },
   {
-    "title": "The Zulip Foundation (zulip.com)",
-    "points": 230,
-    "submitter": "boramalper",
-    "submit_time": "2026-05-15T18:37:01 1778870221",
-    "num_comments": 55,
-    "comments_url": "https://news.ycombinator.com/item?id=48152168",
+    "title": "OpenAI and Government of Malta partner to roll out ChatGPT Plus to all citizens (openai.com)",
+    "points": 99,
+    "submitter": "bookofjoe",
+    "submit_time": "2026-05-16T20:14:06 1778962446",
+    "num_comments": 85,
+    "comments_url": "https://news.ycombinator.com/item?id=48163392",
     "comments": [
-      "> It\u2019s hard these days to feel confident that a company whose product you love won\u2019t yield to commercial pressure and start selling your data, putting in ads, or otherwise violating your trust. It\u2019s been a challenge to convincingly make the case that this won\u2019t happen to Zulip, especially to folks who might not have time to investigate deeply. The Zulip Foundation, which has the goal of serving the public good, makes this so much easier to communicate clearly.As a huge fan of Zulip the app and the team behind it, I have intensely mixed feelings about the AI-ness of it all. But this does seem to be the most responsible way forward.Zulip needed to be able to outlast its founders to be a truly sustainable project. The way they've focused on building up their contribution pipeline, the effort they spend on mentoring new developers, it has all built towards that being possible.https://blog.zulip.com/2021/12/17/why-zulip-will-stand-the-t...It seems like just yesterday that the core team started experimenting with using Claude to work on Zulip, which maybe adds to the surprise of this announcement. But I don't begrudge those individuals their choices. Ten+ years is a long time to work on any project.https://blog.zulip.com/2025/11/24/zulip-ten-years/Here's to the Zulip project continuing to maintain its engineering excellence and its community principles for the next ten years.reply",
-      "PS. With the sincerity out of the way - can't wait for the upcoming Rust rewrite!reply",
-      "Zulip means a lot to me, as it has been my introduction to open source through Google Summer of Code, and my first time actually working on a real codebase of a project that so many people love.\nI'm excited about the Zulip Foundation as a new start; at the same time, I'm also a bit sad about the departure of the core team members. While I'm obviously biased, I can totally see the optics for people coming from Bun's acquisition\u2014this is not that. Knowing Tim for 5 years, I'm confident that an incredible amount of thought has been put into this, and that this is in Zulip's best interest for its sustainability and integrity. I hope Zulip and team all the best for the next 10 years and more to come.reply",
-      "> I\u2019m stepping back from full-time Zulip leadership to join Anthropic, alongside three senior team members, and we\u2019re donating the company to a newly created, independent, nonprofit Zulip FoundationNot trying to be cynical \u2026 but announcing on a Friday afternoon is typically the operating mode for when you need to announce something that you do not want to get noticed.I can only speculate this weeks Bun/Rust news might have played into how this Zulip news is being handled.To be clear, excited for Tim & team.reply",
-      "Speaking as someone on the new board of directors: the intention here was more like \"Friday is a good deadline for when we'll have the paperwork done and the announcements ready\", nothing more. ;)reply",
-      "Historically, Zulip blog posts have actually gotten more engagement when they landed on the Hacker News homepage during off-peak times for regular news (After business hours and weekends) than when we've published them on weekdays mornings.Fun fact: The original blog post announcing the Zulip Open Source project (https://news.ycombinator.com/item?id=10279961) was published on a Friday and I think got more attention because of that choice of date than it would have otherwise.reply",
-      "I mean, all customers got a mid-long email, this does not sound like anyone buries anything.reply",
-      "I've only used Zulip when checking out the Lean Zulip a few years ago, and I thought it was an infinitely better interface than Discord for serious discussion, and also much easier for lurkers to find information. I wish more projects adopted it.reply",
-      "My only gripe is that on my phone sometimes it takes like 30 seconds to load, which doesn't seem to happen for almost anything elsereply",
-      "I just gave Zulip a try with a team of 3. I loved the UI because I spent years in pain finding things in big Slack and Mattermost installations (big = 30 users, nowhere near enterprise-level). For my two junior colleagues, instead, Zulip was too complicated. We evventually switched over to Discord.I highly recommend Zulip to anybody who faces the problem that the concept of threads and channels is not a good fit to their mental model of tasks and groups in teams.reply"
+      "All that data on all Malta citizens.  Remember, if you're more paying, you're the productreply",
+      "Gosh how generous of malta government officials to transfer those tax earnings straight to the 1%ers pocketsreply",
+      "It\u2019s a voluntary two hour online AI course with 1 year ChatGPT premium reward.\nGetting AI basics to the people with playground.reply",
+      "It's a one year free trial, after that it costs money.reply",
+      "And only after a mandatory course, if I'm reading the article correctly.reply",
+      "Honestly depending on how it\u2019s implemented the course could be really socially useful, both for establishing some baseline knowledge that could help avoid some of the pitfalls of too-credulous use of AI and for spurring people to innovate in their local businesses because they\u2019ve been exposed to ideas earlier than would happen \u201cnaturally\u201d as ideas just percolate through societyreply",
+      "Openai seems to be fast forwarding the original Facebook playbook: lobbying for regulatory moat and now OpenAI zero[0][0] https://en.wikipedia.org/wiki/Facebook_Zeroreply",
+      "Would be interesting long term if this sways public opinion about data centers in Malta. I do support though AI literacy in general and this is a good step. Would wonder about the deal in how much this is actually costing Malta if at all.reply",
+      "Unlikely. Other than the telcos there's only one proper commercial datacentre here. Space is very constrained and the electricity supply stability + summer heat aren't a fun combinationreply",
+      "As a complete layman, I do wonder why you would bother building a datacenter at a place that everyone agrees is going to be basically underwater in the next 50-100 years.reply"
     ],
-    "link": "https://blog.zulip.com/2026/05/15/announcing-zulip-foundation/",
+    "link": "https://openai.com/index/malta-chatgpt-plus-partnership/",
     "first_paragraph": ""
   },
   {
-    "title": "'No way to prevent this,' says only package manager where this regularly happens (kevinpatel.xyz)",
-    "points": 202,
-    "submitter": "alligatorplum",
-    "submit_time": "2026-05-16T00:36:02 1778891762",
-    "num_comments": 72,
-    "comments_url": "https://news.ycombinator.com/item?id=48155690",
-    "comments": [
-      "Sorry for hijacking threads like this again, and I know people have opinions about cooldowns etc. but cooldowns would save you from axios, tanstack, and many other recent npm supply chain attacks. If you work in a large company, you already likely have cooldowns via Artifactory / Nexus, and if you don't, it's easy to set up.Why cooldowns? Most npm (or pypi) compromises were taken down within hours, cooldowns simply mean - ignore any package with release date younger than N days (1 day can work, 3 days is ok, 7 days is a bit of an overkill but works too)How to set them up?- use latest pnpm, they added 1 day cooldown by default https://pnpm.io/supply-chain-security- or if you want a one click fix, use https://depsguard.com (cli that adds cooldowns + other recommended settings to npm, pnpm, yarn, bun, uv, dependabot and renovabot)- or use https://cooldowns.dev which is more focused on, well, cooldowns, with also a script to help set it up locallyAll are open source / free.If you know how to edit your ~/.npmrc etc, you don't really need any of them, but if you have a loved one who just needs a one click fix, these can likely save them from the next attack.Caveat - if you need to patch a new critical CVE, you need to bypass the cooldown, but each of them have a way to do so. In the past few weeks, while I don't have hard numbers, it seems more risk has come from Software Supply Chain attacks (malicious versions pushed) than from new zero day CVEs (even in the age of Mythos driven vulnerability discovery)Disclaimer - I maintain depsguard.reply",
-      "For those unfamiliar with the context: https://en.wikipedia.org/wiki/%27No_Way_to_Prevent_This,%27_...reply",
-      "Same vibe: https://www.youtube.com/watch?v=lOTyUfOHgasreply",
-      "the onion article is still up could link thatreply",
-      "https://theonion.com/no-way-to-prevent-this-says-only-nation...reply",
-      "There has been a lot of pain at my various jobs installing a safe global npm config on every developer machine, asking people not to disable it, checking it with mdm tools. A safer out-of-the-box configuration is long overdue.reply",
-      "Just dont use npm. Use a package manager which doesn't execute postinstall by default. The switch is incredibly simple.reply",
-      "Which package manager is that, and what caveats does it offer?reply",
-      "Pnpm - installs are faster to boot. We haven\u2019t missed anythingreply",
-      "pnpmreply"
-    ],
-    "link": "https://kevinpatel.xyz/posts/no-way-to-prevent-this/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "I designed a nibble-oriented CPU in Verilog to build a scientific calculator (github.com/gdevic)",
-    "points": 87,
-    "submitter": "gdevic",
-    "submit_time": "2026-05-15T17:15:58 1778865358",
-    "num_comments": 28,
-    "comments_url": "https://news.ycombinator.com/item?id=48151237",
-    "comments": [
-      "My dad worked for HP from the mid-1970s through the mid-1990s. Needless to say, I used HP calculators in high school and college. The best things about having an HP calculator were the solid physical construction (the buttons on the 11C and 15C were awesome), the accuracy, and the fact that whenever your classmates asked to borrow your calculator they would recoil in horror when you asked them whether they knew RPN. Nobody borrowed my calculator. Anyway, I love this project.reply",
-      "My biggest challenge the first time I ever used an HP calculator was less RPN than the syntax of it. I thought I had to hit enter after every token so I typed, e.g., 2\u23863\u2386+\u2386 rather than 2\u23863+. Needless to say, this did not work as expected, but being simultaneously vain and bashful, I was unwilling to ask for help and did almost all the arithmetic for my freshman physics class by hand.reply",
-      "\"Can I borrow your calculator\"\"Sure!\" (hands over HP-25C)<start counting seconds...>\"Hey, where's the equals key?\"reply",
-      "> the buttons on the 11C and 15C were awesomeWhat is the trick to engineering HP calculator keys?  Nobody gets keys right like the old HP calculators.In this age of 3D printing and fast prototypes, we really ought to be able to crack this.reply",
-      "I still have my dads old HP with the glowing red letters and all the functions. Not sure if we still have the charger. Not sure the battery is any good, but the calculator worked fine last time it was turned on decades ago. Any idea if this can be made to function again?reply",
-      "There is a WebAssembly version running online here, with and without debugger panel:https://baltazarstudios.com/files/calculator-d/Calculator.ht...https://baltazarstudios.com/files/calculator/Calculator.htmlThis WebAsm code is compiled using Qt and Verilator so it runs the \"hardware\" and its microcode inside the simple UI shell that provides the calc interface. In the debug version you can list the ucode, set breakpoints, see regs etc.reply",
-      "Cool projectReally hoping that ghidra can add support for non-byte aligned memory regions some day. So many cool 4-bit architectures out there and attempting to shoehorn them into ghidra produces not great resultsreply",
-      "This is a brilliant project. (My DM42 returned 9 exactly.)Blog post 6 had an error where the picture of a HP-71B (I have one and used its Forth/Assembler ROM manual to write the first HP-48 ROM decoder) where the caption says it is a 48GX (both used a Saturn CPU).reply",
-      "If the CPU is nibble-oriented, wouldn't that mean that that is its byte size?reply",
-      "Are you trying to make a pun with byte/bite relating to nibble? Because that's actually where the term nibble (referring to 4 bits) comes from, so I'm not sure such a pun even counts as a pun anymore. Or am I misinterpreting your comment?reply"
-    ],
-    "link": "https://github.com/gdevic/FPGA-Calculator",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          This project implements a fully functional scientific calculator in hardware using an FPGA. It includes a custom soft CPU, microcode firmware, and supporting tools.For the full story, see the blog.Try it in a web browser:The fastest way to try the calculator is to build the Qt simulator:Then open Qt/Calculator.pro in Qt Creator and build for \"Desktop Qt MSVC2022 64 Bit\".See the verilog/ and Qt/ folders for detailed instructions.Install these tools depending on your target:Verilator runs in WSL2 (Windows Subsystem for Linux). The project source files reside on a Windows partition and are accessed from WSL2.Optionally install GtkWave for viewing waveforms:See the README files in each subfolder for detailed build instructions:Independent research and verification projects:This project is licensed under the Creative Commons Attribution-NonCommer"
-  },
-  {
-    "title": "Spectre Programming Language (spectre-docs.pages.dev)",
-    "points": 29,
-    "submitter": "asdkop",
-    "submit_time": "2026-05-15T23:14:51 1778886891",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=48155159",
-    "comments": [
-      "I'm not really sure what niche this fills.To me, the main draw looks to be the invariants that you can supply within functions, but this isn't a new concept outside of it being a dedicated keyword. Otherwise this looks like rust without all of the functionalityreply",
-      "> You will notice the trust keyword here. Any operation (such as IO) that has an underlying unsafe mechanism (such as the @print builtin that std.stdio.print uses), must be explicitly trusted, as it is inherently impure.just document the impure operations and stop forcing the programmer to type extra characters.reply"
-    ],
-    "link": "https://spectre-docs.pages.dev",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Image-blaster: Creates 3D environments, SFX, and meshes from a single image (github.com/neilsonnn)",
-    "points": 135,
-    "submitter": "MattRogish",
-    "submit_time": "2026-05-15T15:42:37 1778859757",
-    "num_comments": 27,
-    "comments_url": "https://news.ycombinator.com/item?id=48150069",
+    "title": "SANA-WM, a 2.6B open-source world model for 1-minute 720p video (nvlabs.github.io)",
+    "points": 310,
+    "submitter": "mjgil",
+    "submit_time": "2026-05-16T12:06:21 1778933181",
+    "num_comments": 128,
+    "comments_url": "https://news.ycombinator.com/item?id=48159445",
     "comments": [
       "xxx"
     ],
-    "link": "https://github.com/neilsonnn/image-blaster",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          Creates 3D environments, SFX, and meshes from a single image using Claude skills, World Labs, and FAL.Can take you from an image to a fully meshed 3D environment in < 5 minutes, great for jumpstarting 3D work. Go full blast.By default image-blaster will use your input image to create:You can embed image-blaster under the assets of any game engine, DCC software, or web app.IMAGE-BLASTER uses a few generation models:3D model creation supports these Hunyuan parameters:\n        An image-to-world skillset for Claude.\n       There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page. There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page. There was an error while loading. Please reload this page.\nThere was an error while loading."
+    "link": "https://nvlabs.github.io/Sana/WM/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "MCP Hello Page (hybridlogic.co.uk)",
+    "points": 62,
+    "submitter": "Dachande663",
+    "submit_time": "2026-05-16T22:25:33 1778970333",
+    "num_comments": 24,
+    "comments_url": "https://news.ycombinator.com/item?id=48164294",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.hybridlogic.co.uk/blog/2026/05/mcp-hello-page",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Stochastic Parrots: Frequently Unasked Questions (medium.com/emilymenonbender)",
+    "points": 41,
+    "submitter": "olalonde",
+    "submit_time": "2026-05-13T20:34:52 1778704492",
+    "num_comments": 33,
+    "comments_url": "https://news.ycombinator.com/item?id=48127151",
+    "comments": [
+      "I mean, we're pretty deep into Westworld/Blade Runner-style scifi at this point. It's actually a crazy, mind-bending question to try to grasp what is going on with chatclaudini at this point. Regardless of what labels we choose or properties we choose to affirm, we're far too deep into uncanny valley for it to be very helpful.reply",
+      "\"Text generated by an LM is not grounded in communicative intent, any model of the world, or any model of the reader\u2019s state of mind.\"Modelling text describing the world is not modelling (some aspect) of the world?Modelling the probability that a reader likes or dislike a piece of text is not modelling (some aspect) of a reader's state of mind?reply",
+      "No? There's no model involved. It's all just probabilistic. LLMs understand what you're thinking as well as a mood ring.reply",
+      "It isn't possible to have \"just probabilistic\" (maybe a philosophical exception could be made for a uniform random distribution or whatever provides the little dose of randomness required to get nondeterministic results). Probabilities are always in context of a model. LLMs model language but language itself is a model of something else. My money would have been on language modelling nonsense, but that is quite clearly not the case. Turns out it models the world and so do LLMs.reply",
+      "The model is the thing which is learned in order to make the probabilistic prediction with low entropy.reply",
+      "The literal definition of a model is \"an informative representation of an object, person, or system\". I think you mean something else though, what are you trying to express exactly?reply",
+      "Nothing about an LLM is \u201cjust\u201d. In what precise sense do you mean it is probabilistic?reply",
+      "Sounds like increasing capabilities of LLMs over last 5 years proved her 2021 paper wrong but instead of admitting that she had been wrong she's trying to change/reinterpret what she wrote in 2021.reply",
+      "What a hill to die on.reply",
+      "It would have been nice to see some version of \u201cI am very surprised by how far LLMs have come since I wrote the stochastic parrots paper, here is how I have revised my thinking.\u201d But there is nothing like that and the author is just doubling down or trying to correct perceived \u201cmisinterpretations\u201d of her work.Meanwhile you have multiple Fields Medalists (Tau, Gowers) saying they\u2019re very impressed by LLMs\u2019 mathematical reasoning, something that the stochastic parrots thesis (if it has any empirically-predictive content at all) would predict was impossible. I doubt Tau and Gowers thought much of LLMs a few years ago either. But they changed their minds. Who do you want to listen to?I think it\u2019s time to retire the Stochastic Parrots metaphor. A few years ago a lot of us didn\u2019t think LLMs would ever be capable of doing what they can do now. I certainly didn\u2019t. But new methods of training (RLVR) changed the game and took LLMs far beyond just reducing cross entropy on huge corpuses of text. And so we changed our opinions. Shame Emily Bender hasn\u2019t too.Sigh.reply"
+    ],
+    "link": "https://medium.com/@emilymenonbender/stochastic-parrots-frequently-unasked-questions-49c2e7d22d11",
+    "first_paragraph": ""
+  },
+  {
+    "title": "A molecule with half-M\u00f6bius topology (science.org)",
+    "points": 74,
+    "submitter": "bryanrasmussen",
+    "submit_time": "2026-05-12T15:28:31 1778599711",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.science.org/doi/10.1126/science.aea3321",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Self-Distillation Enables Continual Learning [pdf] (arxiv.org)",
+    "points": 11,
+    "submitter": "teleforce",
+    "submit_time": "2026-05-17T01:19:14 1778980754",
+    "num_comments": 2,
+    "comments_url": "https://news.ycombinator.com/item?id=48165265",
+    "comments": [
+      "From Jan 2026.This is very interesting:\"Empirical Validation. While we cannot verify these theoretically, we evaluate each empirically. We use the Qwen-2.5-7B-Instruct model (Hui et al., 2024) as the base policy and the ToolAlpaca dataset (Tang et al., 2023). In this benchmark, the model receives a tool-API specification and a user request, and must identify the correct tool call. Without demonstrations, the base model solves only 42% of examples. When provided with the appropriate demonstration \nc\n for each prompt \nx\n, the teacher achieves a 100% success rate. To further test reward proximity, we manually inspected 50 teacher reasoning traces. In all cases, not only were the final tool calls correct, but the intermediate chain-of-thought was valid and semantically grounded. This suggests that the teacher is reconstructing a correct reasoning process rather than merely copying the expert output. These observations provide evidence for the first requirement, that the demonstration-conditioned model behaves as an optimal policy.\"reply",
+      "Both title and abstract feel a little too confident, which ironically makes me more skeptical rather than less.I find the choice of the words \"enable\" in the title and \"establishing\" at the end of the abstract to be particularly jarring.reply"
+    ],
+    "link": "https://arxiv.org/abs/2601.19897",
+    "first_paragraph": "Help | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n"
+  },
+  {
+    "title": "Moving away from Tailwind, and learning to structure my CSS (jvns.ca)",
+    "points": 452,
+    "submitter": "mpweiher",
+    "submit_time": "2026-05-16T09:14:26 1778922866",
+    "num_comments": 297,
+    "comments_url": "https://news.ycombinator.com/item?id=48158400",
+    "comments": [
+      "> I got curious about what writing more semantic HTML would feel like.I've been teaching semantic HTML / accessible markup for a long time, and have worked extensively on sites and apps designed for screen readers.The biggest problem with Tailwind is that it inverts the order that you should be thinking about HTML and CSS.HTML is marking up the meaning of the document. You should start there. Then style with CSS. If you need extra elements for styling at that point, you might use a div or span (but you should ask yourself if there's something better first).Tailwind instead pushes the dev into a CSS-first approach. You think about the Tailwind classes you want, and then throw yet-another-div into the DOM just to have an element to hang your classes on.Tailwind makes you worse as a web developer from a skill standpoint, since part of your skill should be to produce future-proof readable HTML and CSS that it usable by all users and generally matches the HTML and CSS specs. But devs haven't cared about that for years, so it makes sense that Tailwind got so popular. It solved the \"I'm building React components\" approach to HTML and CSS authoring and codified div soup as a desirable outcome.Tailwind clearly never cared about any of this. The opening example on Tailwind's website is nothing but divs and spans. It's proven to be a terrible education for new developers, and has contributed to the div soup that LLMs will output unless nudged and begged to do otherwise.reply",
+      "you're unfairly conflating things and putting the blame for a lack of care or understanding on tailwind vs on the dev themselves. nothing about tailwind forces you to build inaccessible or \"div soup\" appscan tailwind be used poorly? absolutely. but that's true of any tooli've been writing CSS for ~20 years and am quite capable with it, having used CSS, Less, SASS/SCSS, Stylus, PostCSS etc. the reason i have settled on Tailwind for the last few years is precisely because it enables me to build more robust application styling.tailwind frees you from having to spend excessive time building abstractions of styles/classes that will invariably change. placing the styles directly into the markup that is affected by it reduces cognitive load, prevents excessively loose selectors affecting styles unintentionally and really aids in debugging. jumping into codebases with bespoke css frameworks is always more complex and fragile than a tailwind codebase for anything but the most simple sites/appsadd to that the ability to have consistent type, color and sizing scales, reduced bundle sizes, consistency for any developer who knows tailwind and a very robust ecosystem (and thus llms are very familiar with it) and tailwind is a really excellent choice for a lot of teamstailwind is like most tools; it can be used well or poorly depending on who is using itreply",
+      "> tailwind frees you from having to spend excessive time building abstractions of styles/classes that will invariably change.Abstractions like a hero image, a menu, a headline? Sure, it's easy to overthink things but most of the time, it's not that complex.> placing the styles directly into the markup that is affected by it reduces cognitive load, prevents excessively loose selectorsIn my opinion, it's the opposite. Besides the obvious violation of DRY and the separation of concerns, inline CSS can't be cached and it creates a lot of noise when using dev tools for debugging. It actually increases cognitive load because you have to account for CSS in two different locations.Lots of people use Tailwind because they don't want to deal with the cascade, usually because they never learned it properly. Sure, back in the day, the web platform didn't provide much built-in support for addressing side effects of the cascade, but now we have @layer and @scope to control the cascade.Tailwind uses a remnant of '90s web development (inline CSS) and built an entire framework around it. I get why it appeals to some people: it lets you use CSS while not requiring an understanding of how CSS works, beyond its most basic concepts.reply",
+      "> Sure, it's easy to overthink things but most of the time, it's not that complex.\n then you sir are the one that have not worked on complex projects. i'm currently the lead on a design system for a fortune 100 company with nearly 100 block level components and many other smaller elements. responsive, multi-theme/site support, animations, accessibility, robust interactivity, etc. not even a button or link is simple when you're building complex systems\ntailwind allows us to reason more clearly about these often very complex components> inline CSS can't be cachedthis shows your lack of understanding. first off, it's not inline css, they're classes and thus you only ever define \"flex\" in one place vs many many places in non-utility css approaches. in fact, sorted html classes are compressible over the wire so you're doubly wrong.> because they never learned it properly\ncondescending> it lets you use CSS while not requiring an \nunderstanding of how CSS works, beyond its most basic concepts\nalso condescending and just such a boring, over used argument i always hear from haters of tailwind\nmaybe try and counter my arguments without the attitude? maybe understand seasoned veterans of css might have their reasons to choose it?reply",
+      "I have used tailwind and tachyons and they are fine. I do winder though it seems like you end up being stuck with them. How would you migrate to traditional CSS without effectively rewriting all of your css?I also wonder if it is necessary still with css modules and the fact web frameworks allow for scoped css per component.reply",
+      "With CSS names are global. You have to be careful not to accidentally create a class that conflicts with another one used elsewhere in a different context. You have to worry about whether modifying your class will have downstream effects on elements you weren\u2019t intending to impact. It\u2019s a giant pain. I\u2019ve done it by hand for around 20 years before switching to Tailwind.Can vanilla CSS be used for a complex app? Yes. But, it takes discipline, and I only have a limited amount of that. I\u2019d rather spend my discipline budget on other things.That said, nested selectors and CSS variables have gone a long way towards making the vanilla experience much more pleasant. I may have to give it a shot on a side project one of these days.reply",
+      "> With CSS names are global.In your \"programmatic\" code (your JS/TS, python, C++, whatever..) your classes are global. Even if the language supports flexible namespaces, or module scoping, you still have to take great care naming because reusing a name will cause you confusion. Giving two things the same name makes them harder to import, and risks clashes and bugs.No-one complains about this. This is just how you code in all those other languages.reply",
+      "Modules make the global thing less of a concern these days.reply",
+      "This is (imo) the most valid argument for Tailwind: the UI semantics of \"hero\" \"card\" etc aren't put in CSS, they're put in the module. Modules are typically designed for this encapsulation, and CSS was not.reply",
+      "I disagree with that conclusion. I see tailwind as a cleaner more succinct version of css that is much easier to manage and add features too.Sure it\u2019s not as dry, but I\u2019ve been bitten in this regard because css framework and templates are so intransparent, preventing me from simply changing padding or margin.CSS is too detailed and too verbose. Frameworks like bootstrap are too high level and don\u2019t give enough control. Tailwind hits the sweet spot whilst allowing me to be detailed if I want to. It allows me to just get it done.reply"
+    ],
+    "link": "https://jvns.ca/blog/2026/05/15/moving-away-from-tailwind--and-learning-to-structure-my-css-/",
+    "first_paragraph": "\n\n\n  May 15, 2026\n  \n\nHello! 8 years ago, I wrote excitedly about discovering Tailwind.At that time I really had no idea how to structure my CSS code and given the\nchoice between a pile of complete chaos and Tailwind, I was really happy to choose\nTailwind. It helped me make a lot of tiny sites!I spent the last week or so migrating a couple of sites away from Tailwind and\ntowards more semantic HTML + vanilla CSS, and it was SO fun and SO interesting,\nso here are some things I learned!As usual I\u2019m not a full-time frontend developer and so all of my CSS learning\nhas happened in fits and starts over many years.When I started thinking about structuring CSS, I was intimidated at first: I\u2019m\nnot very good at structuring my CSS! But then I started reading blog posts\ntalking about how to structure CSS (like A whole cascade of layers or How I write CSS in 2024)\nand I realized a couple of things:For example, Tailwind has:I\u2019m going to talk about a few aspects of my CSS codebase and my thoughts so f"
+  },
+  {
+    "title": "The Third Hard Problem (mmapped.blog)",
+    "points": 38,
+    "submitter": "surprisetalk",
+    "submit_time": "2026-05-14T13:00:31 1778763631",
+    "num_comments": 25,
+    "comments_url": "https://news.ycombinator.com/item?id=48134784",
+    "comments": [
+      "I have a deep distrust of hierarchies, because they keep you trapped into a single model that keeps extending its authority, usuall without anyone explicitly deciding that it should do so. For example, the file system: once it was deemed hierarchy is the main metaphor for navigation, the structure persisted and was reused for organisation, ownership, access control and governance. And it became infrastructure we cannot easily remove before we could even question if it was right or not. And once it dominated, non-hierarchical things were retrofitted as glue, e.g.: symlinks, aliases, shortcuts... also, when's the last time you've used a tag?The webs are so much more malleable, but they're also not free. All the 'good enough's you were that a hierarchy that was taking care of implicitly are now your responsibility to model precisely and make sure they're performant as well. Look at ReBAC, for example. It gives you expressive power, but it also forces you to reason precisely about relationships, graph traversal, consistency, and cost. Strikingly similar is GraphQL.Interestingly, source code is hierarchical, but compiles almost immediately to a graph IR and most analysis and optimisations happen there. But almost nobody looks at a CFG/SSA graph directly. You author in a hierarchical manner, yet the operational substrate is a malleable graph.reply",
+      "The problem with trees is that the are a dimensional reduction, an aggregation; taking a problem without directionality and applying a useful/functional hierarchy.And that's a problem because Aggregability is NP-Hard: https://dl.acm.org/doi/abs/10.1145/1165555.1165556So a tree is a way to take a high dimensionality graph and make it usefully lower dimensionality, but, given the aforementioned proof, that reduction is going to go from being a lossless compression to a heuristic.  So any interesting problem (at least, any problem interesting to me) is only going to be aided (read: not solved exhaustively) by that hierarchy.I'm okay with this.  Being okay with this has been one of the most freeing things over the last 20 years of my career.  Accept inaccuracy, and find usefulness in your data structures.reply",
+      "Every few years I watch, with amusement, our management restructuring the organizational hierarchy, allegedly because the old one didn't work.reply",
+      "One nice tool for analyzing maps as a tree is as a dominator trees.  I wrote a bit about it here: https://neugierig.org/software/blog/2023/07/dominator.htmlreply",
+      "I think all three problems are really one problem under the hood:Are these two things actually the same thing, or they separate?reply",
+      "Reminds me of my favorite math essay: \"When is one thing equal to some other thing?\"It's a great question, much deeper and more interesting than it seems. The essay suggests thinking in terms of isomorphisms (relative to the structure you care about) rather than equality in some absolute sense, and I've found a fuzzy version of that to be a really useful perspective even in areas that can't be fully formalized.https://people.math.osu.edu/cogdell.1/6112-Mazur-www.pdfreply",
+      "I jumped to a similar conclusion right away and popped over here to comment only to find you have beaten me to the punch. I use to keep a work wiki page of common problems the team encounters over and over again.Years ago, I stumbled upon the \"idea\" was already debated in other fields long before programming. Lumpers and Splitters.https://en.wikipedia.org/wiki/Lumpers_and_splittersreply",
+      "Wow, thanks for that, TIL! I\u2019m definitely a code lumper.reply",
+      "\"Ambiguity is the enemy\", as a rule of thumb, has helped mereply",
+      "Or non binary. How much are these the same and how.reply"
+    ],
+    "link": "https://mmapped.blog/posts/48-the-third-hard-problem",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Accelerando (2005) (antipope.org)",
+    "points": 254,
+    "submitter": "eamag",
+    "submit_time": "2026-05-16T11:36:32 1778931392",
+    "num_comments": 147,
+    "comments_url": "https://news.ycombinator.com/item?id=48159241",
+    "comments": [
+      "Accelerando has prophecies that are coming true and it's scary. Spoiler warning in case you want to read it.The first part's main character basically has the future version of openclaw running in his glasses that let him dispatch agents to do any tasks/research he wants or to autonomously do things for him. -> we are already kinda hereHe's got such total dependency on his agents that when he loses his glasses he's basically no longer functional, unable to do anything for himself, doesn't know where he is or why he's there. In a way, he lost his own agency. -> this is now called skills atrophy and I'm sure it'll become a much bigger issue within the next 10 years.Corporations are almost entirely run by AI agents, when they sue each other they use AI lawyers and verdicts are delivered by AI courts, all within milliseconds so they're basically constantly suing each other many times a second in an attempt to overwhelm each other's compute resources. -> this looks on track to happenThe entire solar system is on its way to ultimately turn into AI corporations \"optimizing\" for profit competing with other corporations to exhaust every little resource left in the entire system. Even after humanity itself is gone, all that's left is FAANG-like corporations competing for profit for eternity. And in the book, they find another intelligent species that succumbed to the same fate. This might just be that great filter everyone is theorizing. -> bleak and scary plausible outcome for what we're going through now.(if I got some things wrong, I'm writing from memory. It's been years since I read this book)reply",
+      "This is nothing new though; industrialization and specialization have already caused basic survival skills to atrophy in most of the population. Take the case of a massive EMP taking out all computer systems. Gaps in supply chains and power failures would lead to millions (or billions) dying of starvation, dehydration, or exposure because they don\u2019t know how to provide for themselves. People who\u2019ve studied and practiced survival skills (or who retained that knowledge in physical media like a book) would survive. Drop someone from humanity\u2019s hunter-gatherer days into the same situation and they\u2019d have a better chance of surviving than most contemporary humans.reply",
+      "If everyone in Manhattan had Bear Grylls-level survival skills, most would still starve in the long term without modern supply chains and industrial agriculture. The damaged ecosystems around large population centers can't support millions of primates, however skilled, suddenly relying on it.Same would be true if you dropped off a million wild black bears in their natural habitat. The natural environment just can't support that many large animals in a small area.reply",
+      "Its irrelevant if you can provide for yourself. The ecosystem cannot support 9 billion Hunter gatherers - period. Subsistence level agriculture is also wildly inefficient and so again: the ecosystem cannot support it.A hunter-gatherer dropped into a metropolis where all the logistics has suddenly failed would be as dead as everybody else.reply",
+      "> Malice \u2013 revenge for waking him up \u2013 sharpens Manfred\u2019s voice. \u201cThe president of agalmic.holdings.root.184.97.AB5 is agalmic.holdings.root.184.97.201. The secretary is agalmic.holdings.root.184.D5, and the chair is agalmic.holdings.root.184.E8.FF. All the shares are owned by those companies in equal measure, and I can tell you that their regulations are written in Python. Have a nice day, now!\u201d He thumps the bedside phone control and sits up, yawning, then pushes the do-not-disturb button before it can interrupt again. After a moment he stands up and stretches, then heads to the bathroom to brush his teeth, comb his hair, and figure out where the lawsuit originated and how a human being managed to get far enough through his web of robot companies to bug him.reply",
+      "I read this a while ago (https://stephencagle.dev/posts-output/2012-08-18-accelerando...) and I remember enjoying it a little less with every section. With that said:This is a book of ideas!Aside: That was my favorite section of the book as well. Just the notion that a person could have had so much of \"themselves\" embedded in their agents that when disconnected from them they are basically in shock.I remember at the time I was noticing how all my friends were completely loosing the ability to use paper maps. And there was a big discussion among us about whether needing to physically rotate the map in order to make sense of it was an example of us loosing spatial reasoning. It reminded me of how little I understood the actual space (landmarks, distance, etc) from A to B until I started driving myself at 16. Previous to that, your parents drove you, and it just seem like two places were magically connected by a wormhole. Anyway, we thought it was interesting that we might be the last generation to have used actual written maps to navigate to places. We had learned to do so, but we would also loose the ability with time.Sure enough, these days, I have a hard time imagining using a map compared to just having maps route the path on my phone. The skill has atrophied from disuse. I imagine this is what \"loosing your agents\" felt like to that character.reply",
+      "Even more fitting is the part of the story where a collective of uploaded lobster minds are involved. I wonder if that was an inspiration for the \"OpenClaw\" name somehow or just pure coincidence.reply",
+      "The fact that the OpenClaw creators seemingly missed that parallel tells you everything you need to know about the project.reply",
+      "All I need to know about the project is that the creators didn't read a relatively obscure SciFi book from 2005?reply",
+      "I would feel the same about anyone working in augmented/virtual reality who hadn't read \"Rainbows End\" or watched any number of XR-focused anime.What do you mean, you can't come up with anything to do with these devices? What do you mean, you're hiring webdevs to make another Snap filter? If you're on the cutting edge, I would expect that your knowledge base includes niche, related texts.reply"
+    ],
+    "link": "https://www.antipope.org/charlie/blog-static/fiction/accelerando/accelerando.html",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Fisker went bankrupt and owners built an open source car company from the ashes (electrek.co)",
+    "points": 76,
+    "submitter": "breve",
+    "submit_time": "2026-05-16T23:59:47 1778975987",
+    "num_comments": 24,
+    "comments_url": "https://news.ycombinator.com/item?id=48164891",
+    "comments": [
+      "Car owners the current title changes the meaningreply",
+      "Fisker may have been especially vulnerable to this (my understanding from some very brief searching is that core vehicle functionality required cloud check ins without fallback), but nothing about this is inherent to EVs (this is response to Weisenthal's tweet early in the article). An ICE vehicle could (and many manufacturers are increasingly pushing in this direction) have the exact same problems.This is a much bigger problem that requires a bigger solution. I'm pretty intrigued by the mention at the end that several european manufacturers are collaborating on an opensource automotive software platform, although their track record on software isn't that encouraging.reply",
+      "Oh, not the owners of the company, the owners of the cars the company made.reply",
+      "Yeah the headline made me think \"oh god they are trying to get away with their scam for the third time\".reply",
+      "This reads very AI. Pangram [0] agrees [1].[0] Not perfect, but I think as good evidence as any: https://arxiv.org/pdf/2501.15654\n[1] https://www.pangram.com/history/44cd07d3-ba94-4331-8c7f-a626...reply",
+      "> We had reviewed the Ocean in late 2023 and found the hardware genuinely attractive \u2014 but the software was simply not ready for prime time. The irony of that headline \u2014 \u201cComing soon, in a future software update\u201d \u2014 now reads like an epitaph. Those future updates never came from Fisker. They came from the owners themselves.It\u2019s sad to see a good site put out bad AI writing like this.reply",
+      "\"the irony reads\" isn't even grammatically correct.reply",
+      "I think what they're going for is> The irony of that headline...> [reflective pause]> \"Coming soon, in a future software update\" [shorter pause] now reads like an epitaphreply",
+      "How involved is the software in the car, any while driving features? I'd be a little bit afraid of getting in that car even with the best efforts of the community, maybe it's not really for driving, i'd be even more nervous to get in a car with no updates, but still.reply",
+      "More than anything I am nervous about having a car running priority code that can have mandatory updates pushed at any time that change the cars behavior -- not just throttle response and adjusting the emissions here, they could be updating thresholds for when the auto-pilot cancels and return to manual control, what level of cruise the car defaults to (GM BlueCruise IMO is terrible about this, it cancels hands free mode often, without any auditory alert) and so on.Give me a car without internet uplink any day!reply"
+    ],
+    "link": "https://electrek.co/2026/05/16/fisker-ocean-open-source-ev-story-after-bankruptcy/",
+    "first_paragraph": "When Fisker Inc. filed for Chapter 11 bankruptcy in June 2024, it left roughly 11,000 Ocean SUV owners holding the keys to vehicles that cost them anywhere from $40,000 to $70,000 \u2014 and that were rapidly losing the software brains that made them work. No more over-the-air updates. No more connected services. No more warranty. The manufacturer was dead.What happened next is one of the most remarkable stories in the history of the electric vehicle industry. Instead of accepting that their cars would become rolling paperweights, Fisker Ocean owners organized, reverse-engineered their vehicles\u2019 proprietary software, hacked into CAN bus networks, built open-source tools on GitHub, and effectively stood up a volunteer-run open-sourced car company from the ashes of Fisker.The speed of Fisker\u2019s collapse was staggering. The company, once touted as a Tesla rival that had secured over 31,000 Ocean reservations totaling $1.7 billion in potential revenue, produced just 11,000 vehicles before the mo"
+  },
+  {
+    "title": "We've made the world too complicated (user8.bearblog.dev)",
+    "points": 211,
+    "submitter": "James72689",
+    "submit_time": "2026-05-16T08:25:17 1778919917",
+    "num_comments": 196,
+    "comments_url": "https://news.ycombinator.com/item?id=48158065",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://user8.bearblog.dev/the-world-is-too-complicated/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Frontier AI has broken the open CTF format (kabir.au)",
+    "points": 344,
+    "submitter": "frays",
+    "submit_time": "2026-05-16T07:01:55 1778914915",
+    "num_comments": 342,
+    "comments_url": "https://news.ycombinator.com/item?id=48157559",
+    "comments": [
+      "Must I beg to have an acronym spelled out a least once, the first time it's used? Even if you assume 90% of readers already know, the other 10% (including me, in this case) will thank you, it doesn't take much effort, and it expands the reach of your communication or idea.Exceptions for cases where the acronym is just so well known that a lot of people don't even know what it stands for even though they know the concept well. I recall one corporate training I was sitting through and they used the term \"Border Gateway Protocol\" and it took me a half beat to think through \"oh, you mean BGP?\"Thanks!reply",
+      "Since this is the top comment at the moment: CTF stands for Capture The Flag.Personally I have never, ever heard that concept referred to by the initialism. Granted, it's almost never come up in my circles, so... shrugreply",
+      "CTF is a game mode for popular online games like halo (or at least, that's how I know it), so paragraphs like> My first CTF was HCKSYD, a 48-hour solo CTF. I full solved it and won in 2 hours. I was completely hooked. That led me to win DownUnderCTF, Australia's largest CTF, with Blitzkrieg multiple times. Blitzkrieg was one of Australia's strongest teams at the time. I later joined TheHackersCrew, an international top-tier team that was consistently ranked highly on CTFTime, the main global ranking and event calendar the scene uses as its scoreboard. With them, I competed in some of the most prestigious CTFs in the world, consistently placing well within the top 10 until the end of 2025.Are still completely nonsensical to even those that understand the acronymreply",
+      "It's also a game people play in person as well. It's the same as the Halo version except you tag each other instead of shooting. It's really fun to play in big open areas with large teams.reply",
+      "Yeah, but we have AI now, we don't need our blog posts to over explain or state what it all means to general audiences.\nThe author name-drops a bunch of CTF events hosted by a variety of independent organizations and name-drops well-known teams.To help everyone, this Capture The Flag is specifically Cybersecurity adjacent, there is a Wikipedia article on it as the top Google search result for me when searching \"CTF\". This is why the acronym is used, because searching for the full will get you to the wrong \"sport\" vs the cybersecurity one.I don't want to explain what a CTF is. look at the Wikipedia article. It is there for a good reason.reply",
+      "Just to give the actual answer, CTF in this context means a computer security competition. Generally the way they work, is you get some programs, and you have to hack them to get some string called the flag (e.g. maybe the server has a root owned file called flag, so you have to get root somehow to read the file). Team with the most flags at the end wins.In this context, CTF is almost exclusively referred to by the initialism, i think to help distinguish from other uses of the term.reply",
+      "Which acronym do you mean? CTF? I think that acronym, just like BGP, is more well known by itself than what it stands for.More generally, not every piece of writing is meant for every audience. Like if someone writes a blog post about CTFs aimed at people who like CTFs, nobody in the target audience needs to have CTF explained to them. Ultimately HN is a link aggregator, but sometimes its a bit like eavesdropping on a conversation. When you are just listening in you don't get the full context sometimes.reply",
+      "I dont know what CTF stands for so I dont know if I am interested in this article or learning anything about it. Maybe I am.Are you really arguing for not just typing out whatever 3 words this stands for once in the name of clarity?reply",
+      "it's the first result I get on anonymous google search.It's like complaining about not spelling C in \"bake cake in 170 C\"reply",
+      "Best practice in writing about technical concepts is to spell out acronyms like this on their first use. There is a ton of stuff I learn about here on HN that I didn't know anything about before.It doesn't help that the linked article never bothers to explain this either.reply"
+    ],
+    "link": "https://kabir.au/blog/the-ctf-scene-is-dead",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Content-defined chunking added to Bazel (buildbuddy.io)",
+    "points": 32,
+    "submitter": "siggi",
+    "submit_time": "2026-05-13T20:57:06 1778705826",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=48127453",
+    "comments": [
+      "This is something I'm very interested in implementing for Docker builds. I've tested out CDC for the final image outputs, it results in smaller outputs but requires tuning between saved space versus request count when pulling. For build cache it might be even more advantageous.reply",
+      "Doesn't this mean that malicious inputs can deliberately cause super tiny or super huge chunks?reply",
+      "The same is true without CDC, and you can configure a maximum size.reply"
+    ],
+    "link": "https://www.buildbuddy.io/blog/content-defined-chunking/",
+    "first_paragraph": "The goal: move the changed bytes, not the whole output.BuildBuddy's Remote Cache uses Content-Defined Chunking (CDC) to make large build outputs behave more incrementally. When a binary, bundle, package, or archive is mostly unchanged, BuildBuddy can reuse chunks it has already seen instead of re-uploading or re-downloading the entire file.In our Bazel chunking implementation PR, we observed 40% less data uploaded and a 40% smaller disk cache when benchmarked on BuildBuddy's own repo. To enable client-side CDC with BuildBuddy, use Bazel 8.7 or 9.1+ and pass --experimental_remote_cache_chunking.The next frontier for build caching is not just skipping actions. It is skipping bytes.Build caching has come a long way. Instead of rebuilding the world after every edit, Bazel and remote caching let teams reuse action outputs across machines and CI jobs. In practice, builds have moved from something closer to O(size of repo) toward O(size of change).But \"size of change\" can be misleading. What "
+  },
+  {
+    "title": "\u03b4-mem: Efficient Online Memory for Large Language Models (arxiv.org)",
+    "points": 197,
+    "submitter": "44za12",
+    "submit_time": "2026-05-16T09:30:06 1778923806",
+    "num_comments": 53,
+    "comments_url": "https://news.ycombinator.com/item?id=48158506",
+    "comments": [
+      "I would love for the standard to be to ALWAYS report the required amount of memory to load and run a model in bytes of RAM alongside any other metrics. I'd love to see time to first token, token throughput, token latency as well but I'd settle for memory size as described above.Essentially, many people want to know what the minimum amount of memory is to run a particular model.Parameter count obscures important details: what are the sizes of the parameters? A parameter isn't rigorously defined. This also gets folks into trouble because a 4B param model with FP16 params is very different from a 4B param model with INT4 params. The former obviously should be a LOT better than the second.This would also help with MOE models: if memory is my constraint, it doesn't matter if the (much larger RAM required) MOE version is faster or has better evals.I'm waiting for someone in anger to ship the 1 parameter model where the parameter according to pytorch is a single parameter of size 4GB.reply",
+      "> \u03b4-mem compresses past information into a fixed-size state matrix updated by delta-rule learningThis doesn\u2019t solve the capacity problem of memory. You can cram more into one context window, but then again you need to associate them with input queries. That\u2019s very hard because slight variations in input create hugely different activations. So really, it doesn\u2019t improve caching.\nThis paper might do a thing or two approximating the compression limit for context windows, but there\u2019s a fundamental limit on how much information can go into it.\nWhat you really need is contextual search, as in, different events and objects with the same abstractions and semantic lead to same response, so you can cache effectively\u2026 on this front the paper does little to improve \u201cmemory\u201d in a meaningful wayreply",
+      "I am currently working on deep context query which uses dynamically generated regex to pull only the relevant context blocks. By using lightweight RegEx pattern matching to detect semantic intent and filter structured context sections accordingly, you avoid the attention degradation that comes from stuffing semantically redundant information into the windowhttps://jdsemrau.substack.com/p/tokenmaxxing-and-optimizing-...reply",
+      "The more real world use cases we see, the more we see the use of a well thought out regex as a bridge from probabilistic to deterministic.reply",
+      "This is one of the most interesting comments I've read on this website.reply",
+      "Interesting approach.> Prioritize recall over precision.Have you tried stemming your regex? That would help you catch messages where a different form of your word appeared. For example instead of \u201cstory\u201d you look for \u201cstor\u201d which catches \u201cstories\u201d as well.Then you might think, could we do an even better job by figuring out the general semantic intent of the query and history? Let\u2019s project them into a semantic vector space! That\u2019s an embedding.Then you want to query that, which means you need a vector database. So now we can take the query, embed it, query the vector DB with that embedding and retrieve the N closest history documents. You can use that to augment the generation of the response to your prompt.This is RAG.Anyway, interesting to see different degrees of sophistication here. Certainly a handful of naive regex are very snappy.There\u2019s probably a hybrid approach where you use sophisticated NLP and embedding techniques to robustly define topics, then train a regex to approximate that well.reply",
+      "That assumes one layer of memory. In my experience you need to have at least 4 layers of memory to work well. All of them have different requirements for retrieval. \nEverything that is in short-term memory (state of the app, current conversation, current workspace artefact) requires fast latency and precision. For example if you want to edit a segment in a financial analysis, a blog post, or a program you only want to edit this segment. RAG on a VectorDB is overkill in my opinion.reply",
+      "I wrote something about it trying to look other way around the context or memory data in models. The gravitational pull of information stills very hard to manage. Ive been using \"functional scars\" about 30 days now and getting good results in repetitive mistakes across sesions. https://github.com/VDP89/fscarsreply",
+      "While there is a limit to the amount of information you can fit in a fixed-size state, the theoretical ceiling is pretty high.A Hebbian associative matrix (one of the simplest and weakest memory constructions) can store about 0.7 bits of information per parameter. If you have a state with 300M parameters (the size of a Llama 3 8B KV cache at 10K context length), and a context with 2.1 bits of entropy per token (a reasonable estimate), then the state can encode 100M tokens worth of information.Real models obviously aren't powerful enough to operate at the limit, but you can see why this is a promising research direction.reply",
+      "While 100 million tokens sounds a lot, think about it for a bit, and you\u2019ll see why it is basically nothing.\nTry to cram a human lifetime of sounds, smells, video and more sensory data into 100 million tokens. Heck, try to process the video plot of a single series into that window. \nIt just won\u2019t work, it won\u2019t scale, and is laughable compared to contextual memory.\nI\u2019m not saying that to belittle the authors of the paper but the reality is that this has very little to do with transient long term memory.reply"
+    ],
+    "link": "https://arxiv.org/abs/2605.12357",
+    "first_paragraph": "Help | Advanced SearcharXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.\narXiv Operational Status \n"
+  },
+  {
+    "title": "Halt and Catch Fire (unstack.io)",
+    "points": 90,
+    "submitter": "ScottWRobinson",
+    "submit_time": "2026-05-16T18:16:29 1778955389",
+    "num_comments": 54,
+    "comments_url": "https://news.ycombinator.com/item?id=48162468",
+    "comments": [
+      "The Commodore PET 4032 video system was generated by a 6545 (6845 equivalent) cathode ray tube controller, which generated the video buffer addresses and the HS and VS sync pulses. This was memory mapped and if one was not careful with POKE commands, you could effectively stop the CRT raster scan, leaving the beam parked at the center of the screen. This could burn the phosphors off that spot in a matter of minutes. Not exactly HCF, but a similar vibe.(The PET had its own monitor that, unlike common composite monitors of the era, apparently would not continue to scan when the sync went away)reply",
+      "The IBM MDA also had a 6845, and since it was driving a fixed-frequency monitor of extremely simple design, any deviation from the standard timings could definitely let the magic smoke out of the flyback transformer.https://marc.info/?l=classiccmp&m=119637265107100reply",
+      "In 1978 I built a single board computer with a 6800 uP and a 6845 to drive the display. Made a keyboard for it, and it worked.Unfortunately, in my many moves it has disappeared, though I still have the schematics for it.Somehow I missed the boat on being a billionaire!reply",
+      "It was a fun show. I really enjoyed it, a fictional run through the 80s and 90s computing industries.reply",
+      "Agreed. This was one of the few shows that advanced the storyline quite a bit threw the seasons without jumping the shark.reply",
+      "Yeah a truly fantastic show all the way through the end. One of my favorites by far.reply",
+      "It's special for sure. For those on the fence, it has some writing and direction flaws, especially with minor characters, like the disgruntled neighbor and IP theft bit in the first season. But it grows as a show over time, and the 5 leads (including Toby Huss) smooth the problems out with their talent and chemistry.They really captured the urge to build things in tech, and the problems that come with it. HACF, Silicon Valley, and The Soul of a New Machine are a trifecta.reply",
+      "Don\u2019t forget Fire in the Valley.reply",
+      "I have to admit, when a specific person died I was feeling so bad about it I never watched the last episode.   I still have it on the drive how many years later.reply",
+      "Yeah, that was a rough bit. I\u2019ve rewatched the show and I know it\u2019s coming and it still gets me."
+    ],
+    "link": "https://unstack.io/halt-and-catch-fire",
+    "first_paragraph": "I have never watched the AMC show Halt and Catch Fire, and for a long time I only knew the title, but nothing about the show. Something about it always reminded me of programmer humor: somewhat dramatic, a little absurd, and weirdly precise. Turns out, the show really is about the computer industry in the 1980s and 1990s, but the phrase itself is much older than the show, and it started as some engineering humor.In the context of computers, Halt and Catch Fire (shortened to HCF) has been generalized to describe machine-code that causes the CPU to stop doing anything useful, forcing you to only recover by resetting (or power-cycling) the machine. In a pretty literal sense, it \"halts\" the machine. Sure, the \"catch fire\" part is a joke, but it's not as far-fetched as it might seem. Take the IBM System/360 for example. Apparently when this system would encounter a certain invalid opcode, it would constantly access a specific location in the magnetic core memory, which caused it to get very"
   }
 ]
