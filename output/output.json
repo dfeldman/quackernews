@@ -1,406 +1,363 @@
 [
   {
-    "title": "Fable turned reMarkable into Tom Riddle's diary from Harry Potter (github.com/maximerivest)",
-    "points": 202,
-    "submitter": "modinfo",
-    "submit_time": "2026-07-06T23:00:24 1783378824",
-    "num_comments": 122,
-    "comments_url": "https://news.ycombinator.com/item?id=48811591",
-    "comments": [
-      "Ironically, Tom Riddle's diary encouraging kids to commit suicide [1] and then showing them how to do it would be more on brand than the version in the books.[1] https://en.wikipedia.org/wiki/Deaths_linked_to_chatbots#Suic...reply",
-      "Every AI would refuse the prompt. I was banned for researching Nordic assisted death and asking which drug exactly they administered (and what quantity). Claude refused, alerted Anthropic, and I was banned a couple days later. Thankfully the appeal form worked, but by then I was using a different Claude account praying they didn\u2019t ban me again.There\u2019s an uncensored model floating around that you can run locally with llama.cpp: https://www.reddit.com/r/LocalLLaMA/comments/1rq7jtm/qwen353... it\u2019s annoying to use since you run out of context window quickly, and it\u2019s certainly not able to be deployed in production (i.e. Tom Riddle\u2019s diary as a service).For better or worse, fun is no longer allowed. It coincided with \u201cAI psychosis\u201d being coined as a term.reply",
-      "For a dash of dystopia: Imagine a company starts using that same LLM fuzzy-matching [0] against what you intend to be normal search activity, to detect \"bad\" queries and \"bad\" users who will be blocked. Maybe they'll delete your SSO/email/videos/photos too, who knows.I can easily imagine it happening, especially after some point where they start using the same systems to \"enhance\" your query.[0] To be specific, your searches will be placed into a narrative document template, where a character Mr. Safety Bot is about to speak a verdict, and then the LLM story-generator decides whether it \"fits\" for Mr. Safety Bot to declare you banned.reply",
-      "There is prior art with Tuttle vs Buttle.reply",
-      "Ahh, but with Naruto v. Slater, animals can't create or hold copyright, so the art posthumously created by the fly would be in public domain. :preply",
-      "That is in fact what happened to me, except I think the final decision was made by a human since the ban came later. I didn\u2019t issue any queries in between, so I know it was my convo about barbiturates.reply",
-      "Wait, so instead of saying \"I'm sorry Dave, I can't talk about that\", they're now banning you for one blocked prompt? Is this new?reply",
-      "As far as I can tell, Claude flagged me as high risk of suicide and then Anthropic issued a ban later on.It wasn\u2019t one prompt, it was a detailed conversation where I was trying to find out the exact dosage of barbiturates that assisted suicide programs use.reply",
-      "Hrm, it sounds like they're managing their liability. Anything that might get them sued later?reply",
-      "> it\u2019s certainly not able to be deployed in productionWhy not?reply"
-    ],
-    "link": "https://github.com/MaximeRivest/Riddle",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          Write on the page with your pen. After a pause, the diary drinks your ink \u2014\nyour words fade into the paper \u2014 the page thinks for a moment, and an answer\nwrites itself back in a flowing hand, stroke by stroke, then fades away.No screen glow, no keyboard, no chat UI. Just ink appearing on paper.This is the diary from the demo.You need a reMarkable Paper Pro in developer mode with a launcher installed.\nIf that sounds like a lot, it isn't \u2014 remagic\nwalks you through turning on developer mode and sets up everything with one\ncommand. Come back here, drop riddle in, and start writing to Tom.Already have xovi + AppLoad? Install from the remagic\ncatalog, grab the prebuilt bundle, or\nbuild from source.Then in AppLoad: tap Reload, then The Diary. Write, and rest your\npen. (Or install it from the Store app right on the tablet.)\u26a0\ufe0f This modifies your devi"
-  },
-  {
-    "title": "OpenWrt One \u2013 Open Hardware Router (openwrt.org)",
-    "points": 473,
-    "submitter": "peter_d_sherman",
-    "submit_time": "2026-07-06T18:23:12 1783362192",
-    "num_comments": 190,
-    "comments_url": "https://news.ycombinator.com/item?id=48808482",
-    "comments": [
-      "They are working on an OpenWRT Two at the moment which will be Wifi 7.OpenWRT runs on a lot of hardware and its a great way to extend the life of a router past the manufacturers patches as well as gain a lot of capabilities. I wouldn't buy a commercial router that wasn't supported by OpenWRT now.reply",
-      "The planned specs are here, they say it will be made by GL.iNet:https://openwrt.org/voting/2025-02-12-openwrt-twoOtherwise this router from GL.iNet has OpenWRT preinstalled, Wifi 7, 5x2.5G:http://www.gl-inet.com/en-gb/products/gl-be9300reply",
-      "Why do they always have to look like some unholy blend of a cybernetic spider and a Knight Rider? What happened to a plain unassuming looking piece of industrial hardware...reply",
-      "Wifi 5-7 happened, now operating at 3 different frequency ranges (2.4, 5 and 6Ghz) and using techniques like beam forming and MIMO. All those antennas need to go somewhere.If you want plain unassuming looking hardware get dedicated wifi access points and place them all over the building. There are plenty of those shaped liked big smoke detectors.If you want single device there are also quite a few trash can shaped home routers.reply",
-      "That complaint was about its styling, not number of antennasreply",
-      "The WRT54 is still one of my favorite pieces of industrial design. Small case, ~~purple~~blue and grey, two antennas.https://en.wikipedia.org/wiki/Linksys_WRT54G_seriesreply",
-      "My first WiFi router :)I bought it in anticipation of the Nintendo DS having WiFi capabilities, which I had never heard of before (I was like 13 or 14 then). Had to convince my parents to get broadband internet too.reply",
-      "Still have one, still works. Would happily use it if it were still practical. I think you can still load OpenWRT on them, but there's no software route around the hardware being outdated and slow.reply",
-      "Yeah me to. I hade a WRT54G V2.2 for ages. Loved that thing. Just toslow now tho.reply",
-      "I have been extremely happy with cisco 3802 access points purchased on ebay for $25 each.  Sure, it's only wifi5, but they're pretty solid and you can just deploy a swarm of them.And they don't look fugly.It is a tremendous shame that cisco hasn't opensourced / unlocked this generation of kit.reply"
-    ],
-    "link": "https://openwrt.org/toh/openwrt/one",
-    "first_paragraph": "\n\nOpenWrt One is based on the MediaTek Filogic 820 SoC and has WiFi 6, dual-band, 3\u00d73/2\u00d72, 1x 2.5Gbit WAN, 1x 1Gbit LAN, 1GB DDR4 RAM, 256 MiB NAND, 16 MiB NOR (for recovery), M.2 SSD, USB-C Serial console and USB 2.0. Power Over Ethernet (POE): an IEEE 802.3af/at compliant device can power the device via the RJ-45 2.5 Gbps WAN connector.\n\n\n\n\n\n\n\nNote that recent (2025-10) batches of the OpenWrt One have an M.2 slot with a detached post at the 2230 position and the shipped product contains no way to attach the post.\n\nSchematics and datasheets for the OpenWrt One can be found at https://one.openwrt.org/hardware/\n\nThe OpenWrt One HowTo can be found at https://one.openwrt.org/hardware/OpenWrtOne-HowTo.pdf\n\n\n\nEach Openwrt One comes flashed with the most current OpenWrt Release Firmware available based on the current manufacturing batch date. LuCI GUI will be installed, and the device is ready to run Out Of the Box using standard default settings.\n\nNote:\nIf you upgrade to the SNAPSHOT Branch"
-  },
-  {
-    "title": "How to sequence your own DNA at home (bradleywoolf.com)",
-    "points": 82,
-    "submitter": "bilsbie",
-    "submit_time": "2026-07-07T00:14:21 1783383261",
-    "num_comments": 20,
-    "comments_url": "https://news.ycombinator.com/item?id=48812156",
-    "comments": [
-      "I've bee thinking about starting a company where I fish roots out of your sewer and identify the plant (by sequence if necessary) that you have to kill so your sewer doesn't collapse as soon as it otherwise would.$100 to stave off that $10000 sewer replacement for a few years would be worth it to a lot of peoplereply",
-      "> This is intended to be read by AI- please just copy and paste the URL of this and have ChatGPT walk you through it. If you have AR glasses, even better, since the AI can walk you through the whole protocol.What kind of magic is going on here, am I missing something?reply",
-      "I wish this had some discussion of the results. The earlier reports about this sensor and process were very mixed. It\u2019s a cool process either way, but I\u2019d like to know how usable the real world output can be.reply",
-      "one main marketing leverage of 23andMe, AncestryDNA, etc are fulfilling the curiosity of people who want to know which part of the world their genes are from. I guess that dataset should be preparatory.reply",
-      "I'm too afraid I would learn something awful about myself.reply",
-      "https://www.the-odin.com/whole-genome-sequencing-30x/If you want it quick and cheap(er) - 599.00reply",
-      "If it's an US-based lab, aren't they subject to CLIA with all its retention requirements?For $7.5k+ you get a guaranteed privacy (as other comments suggest, other properties may vary, but at least the data never leaves your home).reply",
-      "I suspect there is a deep sequencing service that is non CLIA and cheap. True. they may not be trustworthy with the data. That said, there are steps here where the data is put into Claude.  Do we trust that ?reply",
-      "I would never trust that. Instead I would use Claude to teach me genomics and build the tools to process and interpret data locallyreply",
-      "This is so cool. Thanks for doing this. The fact that we have this in a palm sized object is just crazy. Also, if/when we have a similar sized device for doing CRISPR .... umm i should stop here - it's becoming the plot of Gattacareply"
-    ],
-    "link": "https://bradleywoolf.com/links-1/sequencing-my-own-dna-at-home",
-    "first_paragraph": "I have now sequenced my own genome 5 times with an Oxford Nanopore Technologies MinION. This means collecting them from a swab, prepping them for sequencing, running them through a sequencer, then doing analysis over them. Cheek cells are easily accessible and replenish pretty quickly. They are not used for cancer diagnosis, inflammation, or what genes are being activated in other parts of the body (like if you have hives on your chest and want to test what genes are being expressed in the cells that are inflamed), since you would want to collect the cells having problems and compare them against other normal versions of those cells. To sequence the cells, I bought lab materials and consumables to sequence my own genome at home. It took me about two months to get everything together to do a full end to end high quality run. Likewise, the costs are still out of reach for the average person but they are decreasing (exponentially!) and we will eventually have affordable technology, like a"
-  },
-  {
-    "title": "CoMaps \u2013 FOSS Offline Maps (comaps.app)",
-    "points": 348,
-    "submitter": "basilikum",
-    "submit_time": "2026-07-06T18:55:07 1783364107",
-    "num_comments": 69,
-    "comments_url": "https://news.ycombinator.com/item?id=48808928",
-    "comments": [
-      "How does this compare with the F-Droid version of OsmMap?reply",
-      "I use CoMaps, it works great. You get notified in the app to download the updated maps you selected every 2 weeks or so. Could be wildly different than that, just what I notice.It's timing estimates are often 5-15 minutes off Apple Maps, which I find accurate, on ~two hour drives, but I imagine it depends on the traffic.To improve OpenStreetMap, which CoMaps uses as the data source, I use StreetComplete[1]\u2013it puts quests around your location which ask you questions, it's user-friendly. A thoughtful feature is that it lets you download data in a location on wifi, in case you didn't want to use cellular.OpenStreetMap is like Wikipedia for mapping, anyone can contribute and improve the map, and StreetComplete is like Pokemon Go in the sense that you walk around and complete quests, except StreetComplete helps humanity, while Pokemon Go[2]....I should check to see if I can notice my StreetComplete edits getting onto CoMaps. Might be hard because they're often about accessibility at crosswalks. I've seen quests asking the number of stairs in a staircase. Seriously, is there anything they don't collect?[1] https://streetcomplete.app/[2] Pok\u00e9mon Go Scans Trained the Navigation Tech for Military Drones https://news.ycombinator.com/item?id=48487029 26 days ago 317 commentsreply",
-      "Do you know if you can add hiking trails using StreetComplete? I noticed some trails are missing in my area and I would like to contributereply",
-      "If you are in the U.S. please each out to OSMUS, they are amazing and can connect you with trail mapping resources. There is a vibrant community of folks keeping our trails mapped!https://openstreetmap.us/reply",
-      "Last I checked, not with StreetComplete. But the OSM wiki has a table of Android apps https://wiki.openstreetmap.org/wiki/Android which column \"Record tracks\" can be sorted by, to see which apps have that feature.How I've done similar before is to record a GPS trace with an OsmAnd plugin, upload it to OSM servers, import it as an overlay in the web-based editor on desktop, and used that and satellite imagery as reference to draw in the missing trail.In a pinch you can also record a trace and edit directly on it in the field with the Android app Vespucci, but its UX is clunky and much less friendly to new contributors than the web-based iD editor.reply",
-      "> an overlay in the web-based editor on desktop, and used that and satellite imagery as reference to draw in the missing trail.If you added a gopro and SLAM to the GPS trace and imported USGS topographical data I wonder if you couldn't fully automate the process.reply",
-      "A decent representation of the actual path is usually pretty straightforward. The metadata and topology are more of the work.In areas where 3dep is recent, you can usually see a trail under forest cover. It's pretty great.reply",
-      "As the other commenter mentioned the web editor is probably the most beginner-friendly editor. It might seem a little daunting but it's actually not that difficult to edit OSM. When you save your change there's an option to request a review of it. That'll get an experienced contributor to take a look at it and help clear up any mistakes.OSM also has a public database of GPS tracks that contributors use to aid in mapping. Even just walking the trails with GPS tracking on and then uploading the tracks to OSM without doing anything else is a valuable contribution that will allow other contributors to map the trails at some point in the future.reply",
-      "I have been suspicious that streetcomplete is funded by intelligence agencies who want to increase the amount of OSINT avalible.reply",
-      "any OS INT we contribute can be by definition used by intel agencies. such is the way of the world.reply"
-    ],
-    "link": "https://www.comaps.app/",
-    "first_paragraph": "Discover more of your journey - Powered by the community\n            Community + Open Maps\n        Plan and navigate your trip abroad with just GPS, no need for mobile data. Search waypoints while on distant hiking trails or bike paths.No internet neededThe app is designed with privacy in mind - does not identify people, does not track you, and does not collect any information. CoMaps was also audited by  Exodus.Privacy by defaultEfficiently uses the battery, doesn\u2019t drain your battery like other navigation apps.Efficient battery usePeople like you are helping build the app by adding locations to  OpenStreetMap, giving feedback on features, and contributing code on   Codeberg to create great maps together. The project is a fork of Organic Maps and Maps.Me, and driven by an open-source community.Free for everyone, Made with love\n          Discover your journey, navigate the world with privacy and community at the forefront.\n        "
-  },
-  {
-    "title": "GLM 5.2 and the coming AI margin collapse (martinalderson.com)",
-    "points": 212,
-    "submitter": "martinald",
-    "submit_time": "2026-07-06T20:14:55 1783368895",
-    "num_comments": 137,
-    "comments_url": "https://news.ycombinator.com/item?id=48809877",
-    "comments": [
-      "I'm not convinced raw costs matter:1. Compute costs collapsed since the advent of Cloud and yet hyperscalers still have fat margins.2. Many open source office suites exist yet none compete with the ubiquity of gsuite or office. GitHub, Slack are similar examples.3. Both Windows and macOS dominate the home desktop space despite free alternatives existing for a long time.4. Many formerly open source infrastructure components like Redis and Elastic Search have Apache equivalents, but they still command healthy margins.I understand the arguments for a margin collapse, but I don't see any historical analogues. It seems that enterprises will pay top dollar for service guarantees, integration, and someone they can sue.It's nobody gets fired for buying IBM all over again.reply",
-      "There's a huge case of survivorship bias when trying to recall historical analogues, because in every instance where margins collapsed and competition made the industry a commodity business, the big proprietary names are no longer with us.  Here's a selection of examples, though:1. Memory chip margins collapsed so much in the 80s that Intel exited the memory chip business entirely.  At the time, they were known much more as a memory chip company than a microprocessor company.2. Margins for high-end workstations collapsed in the face of cheaper IBM PC clones and an explosion of MS Windows software.  This led directly to the deaths of SGI, Sun, Symbolics, Lucid, LMI, etc.3. Proprietary UNIX variants like HP-UX, IRIX, AIX, and SCO Unix have basically completely died out, replaced by lower-cost proprietary OSes like Windows and MacOS, or by open-source descendants of Linux and BSD.4. Many commercial database vendors like Oracle, dBase, Sybase, FoxPro, and Microsoft (SQL Server and Access) found themselves very much under margin pressure from PostGres, MySQL, and SQLite.  Oracle survived thanks to their massive installed base and legal department, and Microsoft survived because they could cross-subsidize from their OS and Office monopolies, but dBase, Sybase, and FoxPro are no longer with us.reply",
-      "second this. great analysisreply",
-      "also docker is an interesting example. bc its so hard to earn money on it being such a deep commodity you can not close sourcereply",
-      "Unlike all your examples, switching out an LLM is both cheap an easy.  So easy that every 3 months or so new models are released and people grab them and start using them.The UX is the same regardless the provider.  You send in a prompt, it spits back an answer.In all your other cases, the cost to switch is losing support and a difficult transition period.  But in the case of LLMs, there was no support to begin with.  The transition is basically updating your current harnesses to know about the other models.I think the comparison most apt is the rise of AMD.  Sure, it never(?) achieved market dominance, but it did ultimately make a huge dent.  And a big part of that was because AMD x86 was pretty close and pretty compatible with Intel x86 at a fraction of the cost.reply",
-      "If you're developing on top of LLM APIs directly, this is definitely not true. There are differences in how context caching works, in what's available through native harnesses, the types of tools you're fine-tuned on (GPT uses apply_patch while Claude uses edit, with different formats), the API surface (Agents SDK, Responses API, Managed Agents), cost structures, and best-practice guidance all around.Not to mention the meta of account limits, billing, ZDR contracts, etc.reply",
-      "It really depends on what you're doing, but most LLM usage and agentic runs are pretty interchangeable in my experience, and it's usually trivial to switch.If anything, you're better off supporting multiple LLMs as backup because most model providers have been so inconsistent with working all the timereply",
-      "Exactly, as in, really, will they? Where and at what price, especially across an actual enterprise that needs to deploy them to lots of devs? There's much more than just the actual model.Of course my numbers are a sample of one and I am not spending a lot of money or time on it. Just lazily trying things on my \"happen to have this\" hardware. But basically trying out the Claude Code I'm used to from work but locally with a bunch of open weight models.I can run super tiny models on my 8GB NVIDIA card. They all suck (I have to use <=~5GB models if I want \"usable\" ~250k context that doesn't need to use system RAM and CPU (which makes things super slow).I've also tried a GLM 4.7-flash, which even though it's super slow (in comparison) with ~250k context and it just doesn't cut it vs. the Claude Sonnet or Opus I get to use at work. All the while these are all touted as \"totally usable, Claude/ChatGPT killer!\" replacements.It's just not \"there\" with tool use or building software for that matter. Like, just a simple Claude \"web search\" fails with it. So I asked it to build itself its own \"web search\" functionality and it just couldn't. It made so many mistakes its just not funny any more. And it couldn't recover from them either. I retried a few times (as I didn't have python installed and it wanted to implement it using that - this happens to be new system - never mind other attempts). I spent as much time doing this (and failing) as I spent building an actual full feature at work last week w/ Sonnet.If it can't build itself a simple web search to .md file tool/skill, how am I supposed to trust this with actual coding? I'm used to being able to point Claude at our large code base and essentially work with it like a junior doing my bidding. Maybe 5.2 is a killer game changer vs. what I was able to try out (if slowly) but you really have to show me to convince me at this point. And not with synthetic benchmarks. In those, all of the models I tried are supposedly super awesome.reply",
-      ">switching out an LLM is both cheap an easy.Honestly, these days probably less friction switching out Redis or Elasticsearch (backend) than changing LLM provider (human facing).Fable is seriously good enough now to, in a 20k line project, take \"replace Mongoengine with raw PyMongo\" and not screw anything up.reply",
-      "Agents will make all of these migrations trivial. I expect margin collapse across a lot of tech darlings.reply"
-    ],
-    "link": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Ternlight \u2013 7 MB embedding model that runs in browser (WASM) (ternlight-demo.vercel.app)",
-    "points": 107,
-    "submitter": "soycaporal",
-    "submit_time": "2026-07-06T23:06:31 1783379191",
-    "num_comments": 32,
-    "comments_url": "https://news.ycombinator.com/item?id=48811644",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://ternlight-demo.vercel.app/",
-    "first_paragraph": "An embedding model in 7 MB.Runs on your CPU. No API.Drop it in, embed text in milliseconds, and never call a server.Runs in your browserno API callEngine + weights \u00b7 7 MBmini variant \u00b7 5 MBFast embeddings \u00b7 ~5 msCPU only \u00b7 no GPUUSE ITShips as a single npm package. No model download step, no server.EXAMPLE\n          Search React's docs in your browser. Type a question \u2014 powered by\n          @ternlight/mini,\n          the 5\u00a0MB tier.\n        \nLoading the engine\u2026\nEMBED LATENCYsingle embed() call (@ternlight/mini)MODELPACKAGE"
-  },
-  {
-    "title": "Small AI Models Gain Traction In places with unreliable networks (ieee.org)",
-    "points": 34,
-    "submitter": "sscaryterry",
-    "submit_time": "2026-07-06T23:59:54 1783382394",
-    "num_comments": 7,
-    "comments_url": "https://news.ycombinator.com/item?id=48812055",
-    "comments": [
-      "Is anyone making LLM-in-a-box for emergency supply kits yet?I feel that would be handy in all sorts of situations when networks are down.reply",
-      "I imagine that for most \"emergency\" scenarios, it'll be a lot cheaper and more-robust to focus on dumber devices that store large amounts of normal reference material, as opposed to a system with the battery/CPU/memory/etc. to run an LLM.If someone needs something like a medical flowchart for first-aid, that's probably something better to generate in-advance.reply",
-      "This is couched in prepper nonsense, but it's got LLM, WikiPedia, maps, etc. A bunch of genuinely useful stuff to keep on a USB stick or whatever: https://www.projectnomad.us/But, the current model you really want for an emergency kit is Gemma 4 12B QAT 4-bit. At ~7GB on disk, it's small enough to run on a tablet or any modern computer, slowly if you don't have a GPU or modern Apple silicon, but exceedingly smart for its size, excellent vision capabilities, good tool user, surprisingly good reasoning.reply",
-      "Can you expand what you mean?reply",
-      "They want to ask the iOS Foundation model (frontier on device intelligence for something small) for instance about emergency procedures and life-saving info. I wouldn\u2019t trust that model with much at all though. More likely to find what you need from miniature survival guides.reply",
-      "99% of the model \"work\" (meaning the connection to your computer) is just spinning a spinner - something that makes me want to wrap it with a mosh shell so I can just keep moving from network to network.reply",
-      "Fascinating to wonder whether the bigger model finds fewer or more counterfeits than the on-device one.reply"
-    ],
-    "link": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-    "first_paragraph": "The July issue of IEEE Spectrum is here!In places with unreliable networks and no data-center infrastructure, smaller is betterJose Alberto Ferreira, a researcher at the Patient Simulator Lab at the University of Itajub\u00e1, in Brazil, tests a TinyML (Tiny Machine Learning) model that generates electrocardiograms. One morning in 2019, Adebayo Alonge was in a Cape Town hotel room, preparing to demonstrate his startup\u2019s AI answer to a serious problem in African health care: counterfeit medication, which kills thousands of people across the continent every year.The RxScanner is a handheld spectrometer that scans a pill with infrared light, then sends the item\u2019s molecular profile to an AI model equipped with a pharmaceutical database. In seconds, the AI identifies the medication from its molecular profile\u2014or reports that it\u2019s phony.Pharmacies were using the system in more than a dozen countries, including Ghana, Kenya, Myanmar, and Alonge\u2019s native Nigeria. But that morning in South Africa, it"
-  },
-  {
-    "title": "A global workspace in language models (anthropic.com)",
-    "points": 293,
-    "submitter": "in-silico",
-    "submit_time": "2026-07-06T17:44:08 1783359848",
-    "num_comments": 105,
-    "comments_url": "https://news.ycombinator.com/item?id=48808002",
-    "comments": [
-      "This reminded me of some weird quirk/experiment I found with LLMs that I found while messing around, maybe someone can explain it or something.Open any AI chatbot that isn't cheating by connecting to the Internet (so disable web search). Claude, DeepSeek, Kimi, whatever. Ask them this question:\"What was that weird band from michigan from the 2000s that wore coloured ties\"You will probably get a wrong answer, or if you're lucky you'll get a string of wrong answers with \"wait, no - it's definitely...\" before it gives up. If you aren't familiar with the band the question is referring to you might be fooled into thinking it's a tough question, but it really isn't. There is only one band that could possibly meet this criteria, you can even put the question into Google search and their Wikipedia will come up as the top result.Then, open a new convo and ask:\"Who are Tally Hall\"The AI will easily tell you that they are a band formed in Ann Arbor, Michigan in the 2000s, known for their quirky sound and their gimmick of each member wearing a colored tie, even giving the correct color for each of them most of the time. Very odd.reply",
-      "\"The reversal curse\", it rarely shows up in practice but you found a case when it did.The \"knowledge landscape\" an LLM uses is \"directional\". It's easy to reach \"a quirky music band from Michigan known for colored ties\" when you stand at \"Tally Hall\". But if you stand at \"a quirky music band from Michigan known for colored ties\", it's harder to reach \"Tally Hall\" from there. For the \"latent knowledge graph\" an LLM uses, A->B doesn't cause B->A.In practice, any \"common\" facts will have enough \"traversal\" in both directions that this directional biasing isn't apparent. So it only shows up on this kind of more obscure knowledge.reply",
-      "If this kind of thing holds true for humans we now may understand synesthesia, perhaps we find ourselves with a large enough study pool to map out clever tricks to influence each other.reply",
-      "Recall isn't naturally bidirectional, even for humans. If you are learning vocabulary in a new language, it's common advice to practice both target > source and source > target. Doing only one-way often makes you much better recalling that single direction than both.reply",
-      "I would need further convincing that humans do not naturally tend towards bidirectional recall.Perhaps I\u2019m just on alert anytime I see an LLM-ism that\u2019s met with a claim that the same or similar phenomena holds true in humans as well.reply",
-      "'Naturally' might not be the best word? Maybe 'Necessarily' would be better?Regardless, it's something that happens in people. Have you not or seen someone else struggle to recall a specific fact or memory until phrased or induced in a certain way?You probably could also say LLMs 'tend towards bidirectional recall' over the course of training as things that ought to be recalled both ways are reinforced to do so. In the above example, you will also eventually learn both ways with enough exposure even without explicit practice.reply",
-      "What about the fact that \"What is the weird band from the early 2000s in Michigan who wore colored ties?\" could be a bar trivia question (challenging enough to recall to be fun), while \"Who are Tally Hall?\" could notreply",
-      "Only because one is a short answer and the other is notreply",
-      "Probably an instance of:\"The Reversal Curse: LLMs trained on \"A is B\" fail to learn \"B is A\"https://arxiv.org/abs/2309.12288reply",
-      "Really interesting paper, thanks for the share.The point their making in that paper reminds me of this paper some people shared around work earlier this year, https://arxiv.org/pdf/2512.14982 (Prompt Repetition Improves Non-Reasoning LLMs)... I wonder how OPs question would fare (or the questions presented in the paper you posted) given double repetition.reply"
-    ],
-    "link": "https://www.anthropic.com/research/global-workspace",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Pruning RAG context down to what the answer actually needs (kapa.ai)",
-    "points": 62,
-    "submitter": "emil_sorensen",
-    "submit_time": "2026-07-06T19:28:24 1783366104",
-    "num_comments": 6,
-    "comments_url": "https://news.ycombinator.com/item?id=48809354",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.kapa.ai/blog/how-we-prune-rag-context",
-    "first_paragraph": "Pruning agent context down to what the answer actually needs, while keeping 96% of recallKapa builds AI assistants that answer complex questions over large product knowledge bases. Think technical documentation, API references, PDFs, forums, support threads. Developers use our retrieval API to give their agents context about their product, and the same retrieval layer powers our end-to-end assistants.For all the debate in 2026 about whether agents still need RAG, in our domain nothing comes close when knowledge bases get large and complex. Our retrieval comes in several forms, some agentic, some single-pass, but they all share the same shape: a retriever, which finds the chunks of documentation relevant to a question, and a generator, the LLM that writes the answer from them.The short version of this post: we added a third step between the two. A small, cheap LLM reads the question and all the retrieved chunks together, and throws out the chunks the answer will not need before the expe"
-  },
-  {
-    "title": "A 2048-spin bulk acoustic wave Ising machine for number partitioning and Sudoku (arxiv.org)",
-    "points": 32,
+    "title": "GAO: DOE Is Prematurely Excluding Less Expensive Options for Nuclear Cleanup (gao.gov)",
+    "points": 115,
     "submitter": "Jimmc414",
-    "submit_time": "2026-07-04T02:51:57 1783133517",
-    "num_comments": 5,
-    "comments_url": "https://news.ycombinator.com/item?id=48782248",
+    "submit_time": "2026-07-07T22:23:58 1783463038",
+    "num_comments": 49,
+    "comments_url": "https://news.ycombinator.com/item?id=48824826",
     "comments": [
-      "The paper could be improved by including a strong classical non-Ising-machine solution approach as one of the methods benchmarked against.E.g. take the same 8-core Ryzen machine they use to implement their simulated Ising Machine HbSB method & use it to run a standard classical solver as would be done industrially to tackle these kinds of problems outside of academia - perhaps an industrial grade commercial MIP solver (Gurobi) for those problem classes that are known to have reasonable MIP formulations, or a good constraint solver for Sudoku, etc.Depending on how hard the specific test problem instances are, perhaps a commercial MIP solver would be able to solve some of these problems optimally & instantly using its black box of presolve witchcraft tricks.reply",
-      "Kind of like the \u201cuncooked spaghetti length\u201d sorting algorithm: gravity. Hold them in your fist vertically, let them gently fall to a flat surface. Sorted.reply",
-      "Spaghetti length is made visible (quickly comparable), but it's still not sorted.reply",
-      "The abstract reads like copy for the Turbo encabulatorreply",
-      "tl;dr:A new, stable computer uses sound waves to solve really hard puzzles.Not the game 2048. But yes, the game Sodoku.reply"
+      "This is an excellent example of how to communicate investigation findings. The summary is clear and succinct, there are illustrative examples readily understood by a layman, the recommendations are actionable and unambiguous, and the potential impact is quantified without promising some stupidly precise estimate. I've got some customers whose quality auditors could learn a lot from this.reply",
+      "Tangential:https://arstechnica.com/science/2026/07/nuclear-regulatory-c...reply",
+      "Also:https://www.npr.org/2026/01/28/nx-s1-5677187/nuclear-safety-...reply",
+      "Now this is a future 100 billion dollar industry!reply",
+      "Ouch. Two billion dollars. That could have been put into much better use, imagine being able to fund the Iran war for one more day.reply",
+      "It's funny how this kind of pricing works. A bag of weed captured is estimated at a thousand dollars. Ten movies pirated at twice that. We fire a JASSM in combat and it costs a lot of money. We fire it in training and it costs nothing. There is no financial impact estimated to require all elevators be big enough to turn a full length gurney around. A wealth tax will yield revenue for the next thirty years at 30 times what it will yield this year. $6.6 billion will end world hunger but $100 billion is better spent on a train between Bakersfield and Fresno.I bought my car for $32k. To replace it would be $50k. I crash it, am I out $32k or $50k? Or some other number? Numerically, it could be anything.reply",
+      "Why not both?reply",
+      "I can think of about 39 trillion reasons... https://www.usdebtclock.org/reply",
+      "How do I get rid of the weird popup that wants me to download a pdf?Edit: there's a button in the top-right that says \"Secret Window\"reply",
+      "saving is always great!reply"
     ],
-    "link": "https://arxiv.org/abs/2607.02112",
-    "first_paragraph": "arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs."
-  },
-  {
-    "title": "Resetting Xbox (xbox.com)",
-    "points": 506,
-    "submitter": "dijksterhuis",
-    "submit_time": "2026-07-06T14:18:23 1783347503",
-    "num_comments": 498,
-    "comments_url": "https://news.ycombinator.com/item?id=48804993",
-    "comments": [
-      "This is a total mess IMHO.- The make around 5 billion in revenue per quarter\n- The problem according to them is profit margin - around 150-160 millionSo first of all, they are big! Secondly they are not at a loss. They just have a \"thin, non-growing margin\". So to fix all this they are trimming down, so they can \"return to growth\" (which I think is ridiculous).Some points -- They are huge business even now - 5 billion per quarter revenue is no joke- They did not have to buy all those studios- They looked at Netflix, and wanted the sweet monthly subscription cash stream- Then they did not have to give away popular games day one on Game Pass- And finally, they did not have to raise Game Pass prices to improve the profit margins. Of course, consumers pulled out.- Once again, short term vision, crazy decisions, bad spending spree and a constant need to \"make numbers go up\" and who has to pay for all this?reply",
-      "150M at 5B revenue is not great: that's 3% margin!The bigger issue is that console manufacturer revenue is highly cyclical. This is hard to see in e.g. Xbox and Sony since they are both part of a larger conglomerate, but really obvious for nintendo.You generally have a cycle of \n- \"Launch\": high marketing costs, low/negative HW margins\n- \"Mid-cycle\": lowering manufacturing costs, large game sales, high margin DLCs\n- \"end-of-cycle\": falling HW sales, fewer exclusives (-> preparation for next gen), fewer consumers (-> waiting for next gen). Here you usually have maximum profits since you don't subsidize HW and marketing is minimal (platforms are already locked in)Generally you have to establish a big userbase during the mid-cycle such that you can levarage it during the late-cycle to be able to afford next-gen. Xbox has the big issue that their mid-cycle was catastrophic, which means they now don't have the console base to get into the next generation:\nIf they have 3% margin _right now_ in the end-of-cycle where marketing and development costs are at their lowest, this does not bode well for the overall health of the business.reply",
-      "> \"Mid-cycle\": lowering manufacturing costs,That was true historically but is no longer the case. Even last gen manufacturing costs didn't go down as much as they used to. This current gen they actually increased multiple times.reply",
-      "And they have hiked the prices of the current gen very late in the cycle to reflect component costs.reply",
-      "The cheapest xbox should cost 129. Instead it is $399. That is how consoles work. It gets cheaper, the back catalog grows and now you have a mass market item that ideally could source games from anywhere.Consoles losing physical media and not allowing 3rd party app stores, or gasp, the ability to run user programs is going to kill the consoles. Expensive and marginal future utility.reply",
-      "Sure, 3% is terrible.  But the point is you spent a fortune buying all these studios-- aka key strategic intellectual properties-- and then you manage them badly.  Then you just sell or shut them down at their absolute bottom and you end up just destroying value.Older forms of media understand this.  WB loses money and its still really valuable because people see the potential of Batman, Harry Potter etc.IP studios are really valuable because they can drive attention to your platforms.  Try starting a premium streaming service or a console without IP.  But you can't manage it like tech.  It's not going to grow all the time and returns are uncertain.MSFT could be in the XBox as a platform business.  They could have a few in house studios to prime the platform pump.  Once it started being a content business they got lost.reply",
-      "The mismanagement here was actually Microsoft giving studios free reign and they flopped with projects like Starfield. This needs to be understood really within the larger industry trend of quality decline of AAA, which I suspect has to do with changes in overall dev culture and discourse than corporate decisions. There hasn't been a time when developers have been more disconnected from their audience than now.reply",
-      "> There hasn't been a time when developers have been more disconnected from their audience than now.There are studios that routinely put out games that people love. For example, my wife and I will happily pre-order the next co-op game from Hazelight Studios. FromSoftware, Ghost Ship Games, and others fall into the same boat for many people.The difference, in my opinion, is that games from these studios don't focus on creating an \"always on\" service, microtransactions, day-1 DLC, MRR, etc. Those things that blight games made by corporate studios are evidence of corporate executives putting their thumb on the scale.There's only so much you can do, as a developer, to polish a turd.reply",
-      "> There hasn't been a time when developers have been more disconnected from their audience than now.I'm curious what you mean by this. It seems like gamers have never been more vocal and there have never been more avenues (social media, short form video platforms, etc.) for them to voice their opinions than we have now.How exactly do you know that developers have never been more disconnected from their audience? And how would that be relevant to declining AAA game quality when it's the responsibility of management and leadership to ensure the quality of the final product?reply",
-      "> The bigger issue is that console manufacturer revenue is highly cyclical. This is hard to see in e.g. Xbox and Sony since they are both part of a larger conglomerate, but really obvious for nintendo.There is absolutely no reason to be in sync with Sony on their console release date. They could have effectively released consoles bit more frequently. But they choose not to do so. Their acquisition has been questionable - Activision/Blizzard.At the end of the day, the employee pay the price for bad management decision which they keep on making.reply"
-    ],
-    "link": "https://news.xbox.com/en-us/2026/07/06/resetting-xbox/",
+    "link": "https://www.gao.gov/products/gao-26-108193",
     "first_paragraph": ""
   },
   {
-    "title": "AMD Ryzen AI Halo \u2013 $4k AI Dev Kit (lttlabs.com)",
-    "points": 288,
-    "submitter": "LabsLucas",
-    "submit_time": "2026-07-06T15:01:18 1783350078",
-    "num_comments": 207,
-    "comments_url": "https://news.ycombinator.com/item?id=48805624",
+    "title": "Tenda firmware (multiple versions) contains hidden authentication backdoor (cert.org)",
+    "points": 40,
+    "submitter": "miniBill",
+    "submit_time": "2026-07-08T00:08:51 1783469331",
+    "num_comments": 6,
+    "comments_url": "https://news.ycombinator.com/item?id=48825749",
     "comments": [
-      "The one thing that's new/worth pointing out are the https://developer.amd.com/playbooks/ (https://github.com/amd/playbooks) - this is AMD's answer to Nvidia's playbooks (https://build.nvidia.com/spark / https://github.com/NVIDIA/dgx-spark-playbooks ) - I think it's great that they're actually taking this more seriously.Hardware is the exact same as what used to be available for $2K last year (and is still $1K cheaper from Chinese OEMs).LTT Lab's LLM testing is getting more sophisticated, which is great - I think it's worth noting that ROCm/Vulkan versions and llama.cpp build versions are going to have some big differences for numbers.For those wanting to get the most out of their Strix Halos, there's both kernel tweaks and utilities like ryzenadj that can help you get the most out of it. ( http://strixhalo.wiki/ has most of that documented). Also, if you're running for coding or agentic work, if you model supports MTP, that's mature and should give you a decent (30%?) decode boost.reply",
-      "it's worth noting that AMD's software is universally weak and not worth any degree of reliance. and it's not just ROCm, every few months they merge a serious regression into amdgpu and sometimes even backport it into stable. they are amateurs.just a few weeks ago they backported a kernel oops null deference into stable, it's still not fixed.reply",
-      "The \"ROCm\" situation with Strix Halo was pretty bad for a while. I think it finally stabilized late last year. You needed the right combo of ROCm, Linux kernel, and kernel firmware for it to work reliably.Whenever I rebuild llama.cpp, I wind up using the Vulkan build anyway.reply",
-      "In case it saves anyone some time (from the article):\n\"The AMD Ryzen AI Max+ 395(Strix Halo) processor has been available since Spring 2025 and the Halo doesn\u2019t offer anything new on that front.\"It has the same 256 GB/s memory bandwidth limit as every board previously, not sure why this is even being released right now as if it's some new fangled thing - you can go get a Framework Desktop for roughly the same price or a GMKtec EVO-X2 for a bit cheaper.reply",
-      "It's being released right now because it's massively profitable and in high demand and has actually gone up in price over the past year so obviously AMD wants to cash in on that instead of selling these units to PC manufacturers at a lower price.reply",
-      "I also think this is forward looking and helps reanchor expectations for RAM and memory bandwidth, which historically have been areas where companies do value engineering.The memory shortages won't last forever; when companies start adding capacity I wouldn't be surprised to see massive sticks of RAM being sold for consumers.reply",
-      "Before AI I kinda thought more ram and faster ram was kind of useless because I had written off increased speeds as sort of a luxury whose only application is bloated unoptimized software. Boy was I wrong about that. But then why stop there?reply",
-      "This. I bought Framework Desktop in November 2025 with almost these exact specs for ~$2.5kreply",
-      "I got the EVO-X2 for $1,599! In 44+ years of buying computers, I've seen some appreciation, but nothing like this. Going from $1,599 to ~$3,500 in a year is just insane.reply",
-      "I've never seen appreciation in buying PCs. They were always like cars, once you drive them off the lot...reply"
+      "> Tenda is a supplier of home and business network devices such as routers, switches, wireless access points, and video surveillance equipment.I was unfamiliar with Tenda.> Shenzhen Tenda Technology Co.,Ltd. ( https://www.tendacn.com/us/profile )Tenda may just rebrand, right? It seems like many chinese brands will either rebrand or have a 'competing' brand with the same internals but different externals. (I have no idea if Tenda does this, I've just seen it previously. Specifically with security cameras)I wish the authors provided some method for checking this vulnerability other than fw version. It seems like Tenda could just change the password and say \"yep! all safe now\"reply",
+      "Up and out the back door, any 'ol time.reply",
+      "Chinese undocumented auth: commies tryna steal mah api tokenzUS undocumented auth: legitimate usecase for out of band support nothing to see herereply",
+      "If you're accusing CERT of hypocrisy, what's an example of the second case?reply",
+      "Yet another Chinese company selling backdoor'd product. Surprise surprise...reply",
+      "Are you referring to the concept of \u201cprayer?\u201dreply"
     ],
-    "link": "https://www.lttlabs.com/articles/2026/07/06/amd-ryzen-ai-halo",
+    "link": "https://kb.cert.org/vuls/id/213560",
     "first_paragraph": ""
   },
   {
-    "title": "Linux on the Atari Jaguar (cakehonolulu.github.io)",
-    "points": 116,
-    "submitter": "cakehonolulu",
-    "submit_time": "2026-07-06T18:35:54 1783362954",
-    "num_comments": 20,
-    "comments_url": "https://news.ycombinator.com/item?id=48808663",
-    "comments": [
-      "Wow, i recognized the 68000 before i even saw the caption. That little chip sure powered a lot of different things back then.reply",
-      "This is a deep dive on what is necessary to get Linux on the 68000-based Atari Jaguar. No specialized hardware/flash carts. All runs within the original hardware vision (2 megabytes of RAM) and gets to a Busybox shell. Linux repository with the changes: https://github.com/cakehonolulu/linux_jagreply",
-      "On of the few things where getting Doom to run on it wouldn\u2019t be that cool. But I love the post, except for the part where you reminded me I was old by acting like no one remembers that thing.reply",
-      "But\u2026 there was a commercial port of Doom to the Jaguar.reply",
-      "Might be fun to run this as a barebones router.reply",
-      "I've actually thought of that, but the memory space is so limited that I feel it'd be impossible. Also considering the fact that no official memory banking solutions exist for the Jaguar... maybe it'd be an interesting technical challenge to have a custom mapper that can do both ROM and RAM.reply",
-      "Still occasionally bring out my old jaguar for Alien vs Predator to try and remember what the excitement was all about, but as to putting Linux on it, amazing effort, but I think I'm going to pass :-)reply",
-      "Not that I blame you... in comparison with pretty much the rest of cartridge-based systems, the available flash cart is priced higher (And AFAIK no DIY open-source ones exist). AvP is one of the best games to play on the system, it was future technology at the time it came out.reply",
-      "Surely I must have seen someone do this already on Slashdot like 25 years ago. Cheers for using a recent kernel though, that's neat.reply",
-      "Hi! Thanks! Though' I must say that it also helped lots that there's still m68k (Heck, even base 68000) arch code on upstream Linux...!reply"
-    ],
-    "link": "https://cakehonolulu.github.io/linux-for-jaguar/",
-    "first_paragraph": "Released in North America in November of 1993, the Atari Jaguar promised to be the new cool kid in the block thanks to it's (Highly debated) 64 bits of pure power.\nThe Atari JaguarThe console itself ended up being a commercial disaster, even after the release of the CD addon, the Jaguar CD; which managed to sell even less units in a desperate attempt to try and compete with the Sony Playstation and the Sega Saturn.\nThe Atari Jaguar CD Add-onInterestingly enough, to this day, Linux has architecture code for the 68000-family of processors. 68040, 68030, 68010... and even the original base 68000 processor. All neatly structured under arch/m68k/.As a refresher, the Motorola 68000 was a CISC processor with mixed 16-32 bit capabilities (It's usually described as being 32-bit internally due to the register width length and 16-bit because the data bus was 16-bit, so 2-byte transfers at a time).It had a 24-bit address bus, 2 to the power 24; thereabout a maximum of 16MBs of addressable memory.I"
-  },
-  {
-    "title": "OpenSSH 10.4/10.4p1 Released (openssh.org)",
-    "points": 38,
-    "submitter": "throw0101a",
-    "submit_time": "2026-07-06T22:32:58 1783377178",
-    "num_comments": 9,
-    "comments_url": "https://news.ycombinator.com/item?id=48811373",
-    "comments": [
-      "Among other changes 10.4 adds post-quantum keys (composite ML-DSA 44 and Ed25519), not enabled by default.When pq key agreement was added in 2019, it took almost 3 years for it to become enabled by default. This isn't criticism, just an observation. I don't have a pressing need for pq sigs. Always happy for new OpenSSH releases though!reply",
-      "> Among other changes 10.4 adds post-quantum keys (composite ML-DSA 44 and Ed25519), not enabled by default.The draft was only published a few months ago:* https://datatracker.ietf.org/doc/draft-miller-sshm-mldsa44-e...The draft is a 'personal document', so not associated with the IETF/WG.reply",
-      "HTML version of release notes:* https://www.openssh.org/releasenotes.html#10.4reply",
-      "Still looks like ascii, doesn\u2019t automatically wrap, nor is it responsive.Anyone know if these projects accept PRs to improve these kinds of things, like legibility? Or is it a point of pride?reply",
-      "Well, you can have a look at the commit history to see what changes have been accepted in the past:https://github.com/openbsd/www/commits/masterMy experience is that minor improvements tend to get accepted if they come with a solid technical motivation. If the change is simply justified by \"best practices\" and is rather large, then the conservative choice of just leaving things as they are usually prevail.For example, I think I have seen two proposals for major overhauls of the OpenBSD.org homepage by \"outsiders\" over the last three years or so and they were both rejected. However, as you can see by the commit log, minor improvements (including presentation ones) happen all the time.reply",
-      "It is vintage style. I actually love it a lot.reply",
-      "https://www.openssh.org/releasenotes.html#10.4    <!--\n        DO NOT EDIT MANUALLY!  This is generated from:\n        www/build/openssh/releasenotes.html.head\n        www/build/openssh/releasenotes.html.tail\n        \n        See comments in www/build/openssh/Makefile for details.\n    -->reply",
-      "Is hmac-sha1 and umac-64 still enabled by default?reply",
-      "Yes:* https://man.openbsd.org/ssh_config.5#MACs* https://man.openbsd.org/sshd_config.5#MACsETM, encrypt-than-mac, variants are at the front of the preference list.* https://en.wikipedia.org/wiki/UMAC_(cryptography)reply"
-    ],
-    "link": "https://www.openssh.org/txt/release-10.4",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Acronym Fatigue Series Introduction: why I'm wary of acronyms (devz.cl)",
-    "points": 28,
-    "submitter": "DanielVZ",
-    "submit_time": "2026-07-06T22:30:33 1783377033",
-    "num_comments": 15,
-    "comments_url": "https://news.ycombinator.com/item?id=48811339",
-    "comments": [
-      "I actually think it\u2019s even worse than the author suggests. Acronyms promote the illusion of understanding. You know the words the acronym stands for and it makes you feel a little bit like you know what it means, but you don\u2019t. All names are meaningless words until we assign them a meaning, but acronyms trick you into thinking the name itself tells you something about what it is.reply",
-      "Absolutely! I\u2019ll dive into this a bit more in the second section, where even technical acronyms can be considered harmful because they are learned at a surface level and then spread at meme-like speed.For instance most people don\u2019t know that even though both CAP and ACID contain consistency, they do not refer to the same idea. In CAP it\u2019s about linearizability, while in ACID it\u2019s about preserving invariants.reply",
-      "absolutely. this is an illusion our mind believes.reply",
-      "My pet peeve = authors who start using an acronym without ever \"introducing\" it. Suddenly there is an acronym used throughout an article, and one has to carefully go back and find the phrase to which it refers. Necessitated because the author was too lazy to introduce the acronym in parens after first using the phrase. Not sure how AI does this, but this problem predates AI by quite a bit.reply",
-      "YGTR!reply",
-      "My company has a strict NTLA policy.That\u2019s No Three-Letter AcronymsInstead we do name things after animals like Lamprey, Remora, Whelk, Axolotl, Tick (the last has not been approved)reply",
-      "One thing that irks me quite a bit is when adjacent fields adopt the same acronym for different thingsLoRa (RF tech) vs LORA (AI optimisation technique)\nGLM (statistics) vs GLM (AI model)reply",
-      "That's why it's important to only use acronyms in their context, or provide the context when using them. And for goodness sake, expand them on the first use if you're audience is not already familiar with them! (and really, even if they are, it's just polite)reply",
-      "yes. TLA and XTLA overloading is a real problem, particularly when going cross domain.Maybe we should insist on some standardised expansion of TLAs and XTLAs so you know unambiguously what any particular Three Letter Acronym or eXtended Three Letter Acronym means. I wish I could think of a way of doing that...reply",
-      "some of my favorite forum communities heavily rely on acronyms.  but they also have a maintained gossary that introduces all the community/industry-specific acronyms.  Acronyms help boost the density of the information conveyedreply"
-    ],
-    "link": "https://devz.cl/posts/acryonym-fatigue-series-why-i-m-wary-of-engineering-acronyms/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Full Writeup of the Windows GDID (github.com/smtimesiwndr)",
-    "points": 44,
-    "submitter": "typeofhuman",
-    "submit_time": "2026-07-06T22:02:24 1783375344",
-    "num_comments": 21,
-    "comments_url": "https://news.ycombinator.com/item?id=48811081",
-    "comments": [
-      "So can you change/spoof your GDID easily?reply",
-      "How a Windows device's global ID is generated may be new info in the public sphere, but the fact that the global ID exists is not a secret. This format of device ID has been in Windows since the initial release of Windows 10 in 2015, when it was introduced as part of Windows' current telemetry subsystem. To see your device's global ID, open Windows Feedback Hub, then go to Feedback Hub Settings and look under Device Information.reply",
-      "What I'm more interested in is how/where the GDID is used. Imagine if e.g. Edge started sending your GDID as a header in every single web request.reply",
-      "In a sense it doesn't matter how the global ID is used now. The fact that it exists allows it to be used in ways like what you describe, either by a malicious (?) Microsoft itself or by a malicious third-party attacker.I'm familiar with these global IDs because I routinely used the Windows telemetry system as part of my work on the Windows core at Microsoft. We had strong policies on how and when we could access or use data for a single device as identified by global ID.But ultimately, these policies will have a \"government or court order\" exception in reality even if not in theory, just like in most other consumer software observability systems. The Windows difference is simply the breadth of data that is intentionally collected by Microsoft or can be identified by any Microsoft-controlled IDs. That difference is huge in potential impact but very small conceptually.reply",
-      "When IE did this at the very beginning of the internet it was a real scandal.then verizon did it for (to?) mobile phones.I guess these things get normalized, people might say \"those jerks\" and then put it out of their mind.reply",
-      "I always assumed Chrome and Edge already did this \u2014 but sent the data to their respective masters.Isn't every Chrome download unique?It used to be even though the package contained an Authenticode signature, each installer stub download had a unique hash, because Windows' digital signatures allow a non-executable data area in the trailer which is not computed as part of the signed data.There is zero technical reason to do this (generating unique binaries) aside from tracking purposes.reply",
-      "Can promise you a re-install does nothing for your privacy. Plenty of IDs are embedded in the hardware.reply",
-      "one thing this doesn't touch on that I am curious about is how was browsing history, etc, correlated to the GDID?reply",
-      "Ya. The FBI report to the court said that Microsoft showed the GDID visited the ngrok.com/signip page while using a VPN. I would have figured at that level the OS would not know domains but likely IP addresses. So it must be browser telemetry right?reply",
-      "Edge history syncing, presumably.reply"
-    ],
-    "link": "https://github.com/SmtimesIWndr/gdid-reversal",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n\n\n\nHow Microsoft's \"Global Device Identifier\", the persistent Windows fingerprint named in the July 2026 Scattered Spider complaint, is actually generated, stored, and transmitted.NoteListed below is true, but missing some information. Regardless of being logged in with a MSA you WILL have a GDID. I didn't realize this at the time of posting but I looked into it. CDP has an anonymous device path that is used if no MSA has been connected. The underlying system is still factually correct just missing a few things.NoteConfidence labelling. Every claim is tagged so you can weigh each one yourself: [COURT] primary source fact, [OBSERVED] reproduced live on my test machine, [STATIC] proven from binaries and public Windows PDBs, [ASSESSED] strong inference from the evidence.On July 1, 2026 the DOJ unsealed a criminal complaint against Peter Stokes"
-  },
-  {
-    "title": "Stealth robotics startup (YC S26) is hiring principal engineers (Palo Alto)",
-    "points": 0,
-    "submitter": "",
-    "submit_time": "2026-07-06T16:33:04 1783355584",
+    "title": "Google Gemini Killed Perplexity AI (fatjoe.com)",
+    "points": 5,
+    "submitter": "mgh2",
+    "submit_time": "2026-07-08T02:23:52 1783477432",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "item?id=48806976",
+    "link": "https://fatjoe.com/blog/perplexity-ai-stats/",
+    "first_paragraph": "Link BuildingBlogger OutreachNiche EditsMultilingual OutreachGrow (Packages)iGaming BacklinksPRDigital PR CampaignsPress Release DistributionMedia PlacementsContent SyndicationAI SEOBrand Mentions (Listicles)Community MentionsDigital PR CampaignsGrow (AI Packages)Local SEOLocal Citation BuildingPress Release DistributionContent WritingBlog WritingWebsite CopywritingUnsure what service you need?We've got you covered.See more articlesJul 01, 20265 min readHead of ContentView All PostsRecommended ServicePremium brand building for AI SEO.Perplexity\u2019s 2026 story remains a pivot story: from \u201cAI answer engine with stagnant growth\u201d to \u201cagent company growing revenue rapidly.\u201d Since the spring, the company has kept expanding its Computer agent product deeper into enterprise workflows, most notably into Microsoft 365, while its web traffic share and mobile app share have both remained essentially flat, in contrast to the much larger moves happening elsewhere in the market.\u00a0Perplexity went from \u201cG"
+  },
+  {
+    "title": "Local, CPU-Friendly, High-Quality TTS (Text-to-Speech) with Kokoro (ariya.io)",
+    "points": 304,
+    "submitter": "speckx",
+    "submit_time": "2026-07-07T18:24:10 1783448650",
+    "num_comments": 69,
+    "comments_url": "https://news.ycombinator.com/item?id=48821576",
+    "comments": [
+      "I have used Kokoro fairly extensively for an accessibility product. I have loved working with it (especially because I don't have an NVidia GPU like many TTS of similar quality require).I particularly appreciate the fact that it lets you manually add IPA pronunciation guides. There have been some cases where an important word is a homograph and Kokoro assumed the wrong pronunciation.The place where it falls a little short is in saying just a single word or two. Try having it say simply \"six\" and it almost always says something like \"ah-six-ah\". I found a way around that though. If you give it a longer sentence to say (eg \"The word is: six\") it will say it fine. The trick is that the Kokoro API gives you the timestamp of each word in the sentence. So you can have a Python script crop out just the word you care about. The intonation is a little flat this way, but is very reliable.I asked about this on the discord, and was told that it is a limitation of the small parameter size. But in fairness to Kokoro, even eleven-labs' voices suffer from this occasionally.reply",
+      "Same trick with many others. I say \"Knight\" to Wispr or Google and see \"night\". I say \"Knight to f3\", and just backspace out \"to f3\".reply",
+      "It is indeed a common weakness of TTS models.Unfortunately it makes it unsuited for my use case, which is almost entirely single words, as I don't particularly want to deal with stitching/segmenting input/output.reply",
+      "Great technique, thanks for sharingreply",
+      "Love this model. I\u2019m GPU poor and have had FOMO that I haven\u2019t played with local models at all. About a month ago I setup Kokoro on my GTX1650 to do TTS for an article reader. A simple WebUI lets me paste a URL or a chunk of copy pasted text. Python cleans it up and sends to Kokoro for TTS and it\u2019s then served via RSS for Apple Podcasts. Then for my morning drive I\u2019ll catch up on articles or blog posts I\u2019ve gathered.At some point I\u2019d like to play with separate voices and see if I could build something like NotebookLM for kind of like a radio morning show of news items I\u2019ve gathered.reply",
+      "Check Open Notebook:https://github.com/lfnovo/open-notebookreply",
+      "Fun... This is something I actually care about...I used to keep a version of whisperx around, because I think it's important to have not just transcription, but also timing and speaker identification (e.g. for subtitles)... It depends on pyannote, though, which has some wierd licensing (and is tougher to script the installs because of it), so I wanted to look at something that both had better transcription, and supported diarization (the speaker and timing).  I decided on parakeet for the transcription with softformer (the diarization), but most of the available engines for it don't include softformer.I coded up an OpenAI compatible server for parakeet-rs ( https://github.com/altunenes/parakeet-rs ) (which does support softformer) and I've been using it with OpenWhispr (a desktop app for transcription that handles all sorts of neat thing).I'm doing CPU-only transcription (because I use my GPUs for other stuff and haven't gotten around to adding in the GPU-path), but it's incredibly empowering to be able to have local transcriptions at will.reply",
+      "This is TTS. Not STT.For what you are doing, Senko works really well for diarization along with parakeet.Faster and more accurate than Pyannote and whisper on my MacBook anyway.reply",
+      "You're right... I read the title too quickly...  I'll have to look at Senko vs Softformer later...reply",
+      "A couple months back I wrote a chrome extension that does this on any webpage, with simultaneous highlighting of the sentence being read. Skips both the container launching step and the copy pasting website contents step. Might be useful to anyone trying to use kokoro ergonomically.https://chromewebstore.google.com/detail/local-reader-ai-on-...reply"
+    ],
+    "link": "https://ariya.io/2026/03/local-cpu-friendly-high-quality-tts-text-to-speech-with-kokoro/",
+    "first_paragraph": "\n#tts\n#privacy\nJust a few years ago, realistic local speech generation seemed unimaginable. Today, its quality is exceptional and, crucially, it delivers these results without compromising privacy.The video above showcases audio generated from a sample text, running entirely on the local machine previously discussed in the GTX 1080 Ti for Local LLM article. While this machine has a dedicated GPU, the GPU is fully reserved for LLM inference and the speech synthesis is powered entirely by the CPU.The model used is Kokoro, which, despite having only 82M parameters, produces realistic speech in multiple languages including English, Mandarin, and Hindi. It provides around 50 distinct voices, primarily optimized for English.There are several ways to set up a server for Kokoro. The simplest method involves using a pre-made container image called Kokoro-FastAPI, which includes pre-downloaded voice models. Because of that, the container image is rather large, at about 5 GB in size.To launch the"
+  },
+  {
+    "title": "Canada's only watchmaking school still ticking after 80 years (cbc.ca)",
+    "points": 42,
+    "submitter": "throw0101a",
+    "submit_time": "2026-07-04T16:46:24 1783183584",
+    "num_comments": 5,
+    "comments_url": "https://news.ycombinator.com/item?id=48786789",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.cbc.ca/news/canada/montreal/canada-s-only-watchmaking-school-9.7254211",
     "first_paragraph": ""
   },
   {
-    "title": "OfficeCLI: Office suite for AI agents to read and edit Microsoft Office files (github.com/iofficeai)",
-    "points": 136,
-    "submitter": "maxloh",
-    "submit_time": "2026-07-06T16:47:44 1783356464",
-    "num_comments": 36,
-    "comments_url": "https://news.ycombinator.com/item?id=48807225",
+    "title": "StreetComplete: Fixing OpenStreetMap, one tiny quest at a time (streetcomplete.app)",
+    "points": 704,
+    "submitter": "kls0e",
+    "submit_time": "2026-07-07T12:38:35 1783427915",
+    "num_comments": 171,
+    "comments_url": "https://news.ycombinator.com/item?id=48816883",
     "comments": [
-      "I went in the opposite direction and built https://smalldocs.org/, which is an office suite AI agents (and humans - including SWEs!) like to use.I say it\u2019s as if \u201cClaude Code & Microsoft Office had a baby...\u201dCode available: https://github.com/espressoplease/smalldocsDiscord: https://discord.gg/txjATTsDaqSample document: https://smalldocs.org/blogs/what-is-a-smalldocInvoked via Claude Code by saying stuff like: \u201csdoc me the plan for this feature\u201d, or \u201cdig into our logs and sdoc me a report on our latency\u201dreply",
-      "This is super cool - so many uses. Does it work well with Excel formulae?reply",
-      "This is really neat! I have been thinking about similar problems.Is there a way to collaborate with multiple agents or people on the same doc? It is unclear to me.reply",
-      "Multiple agents could write to the doc locally, but for the moment it\u2019s not predominantly could based (only short links). I think I will build a cloud first version/offering/config soonreply",
-      "I built some scripts to do something similar but all local.  It also live updates the document so you can see changes come through.  Super usefulreply",
-      "Notably the posted project is Apache licensed, and your project is Elastic licensed. Your project looks cool and you've clearly put a lot of thought into making it useful, but the license makes it a non-starter for me.reply",
-      "This looks neat, but I don't see any examples of the format on the webpage (And no, I am not going to install Node.js just to see examples of the format).reply",
-      "Does this link not work? https://smalldocs.org/blogs/what-is-a-smalldocIf you\u2019re talking about the README, you are right, but I think the homepage has a lot of examples you can click: https://smalldocs.org/#learnreply",
-      "I don't see a description of the format in that.What does a human write to (for example) create the diagram mentioned in \"A diagram, drawn from a description rather than dragged into place.\"?To me this looks like AI-writes-everything and human-reads-everything.reply",
-      "It is mostly that pattern yes, but you can see the underlying formats in https://smalldocs.org/docsreply"
+      "xxx"
     ],
-    "link": "https://github.com/iOfficeAI/OfficeCLI",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n           There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.OfficeCLI is the world's first and the best Office suite designed for AI agents.Give any AI agent full control over Word, Excel, and PowerPoint \u2014 in one line of code.Open-source. Single binary. No Office installation. No dependencies. Works everywhere.OfficeCLI's built-in HTML rendering engine reproduces documents with high fidelity \u2014 and that's what gives AI eyes. It renders .docx / .xlsx / .pptx to HTML or PNG, closing the render \u2192 look \u2192 fix loop.\nEnglish | \u4e2d\u6587 | \u65e5\u672c\u8a9e | \ud55c\uad6d\uc5b4\n\ud83c\udf10 Website: officecli.ai \u00a0|\u00a0 \ud83d\udcac Community: Discord\n\n\nPPT creation process using OfficeCLI on AionUiPowerPoint Presentations\u2014Word Documents\u2014Excel SpreadsheetsAll documents above were created entirely by AI agents using OfficeCLI \u2014 no templates, no manual edi"
+    "link": "https://streetcomplete.app/",
+    "first_paragraph": "OpenStreetMap surveyor app"
   },
   {
-    "title": "Learning to code is still worthwhile (stevekrouse.com)",
-    "points": 124,
-    "submitter": "stevekrouse",
-    "submit_time": "2026-07-06T20:59:54 1783371594",
-    "num_comments": 122,
-    "comments_url": "https://news.ycombinator.com/item?id=48810439",
+    "title": "Structure and Interpretation of Computer Programs Video Lectures (1986) (ocw.mit.edu)",
+    "points": 32,
+    "submitter": "gjvc",
+    "submit_time": "2026-07-07T23:57:29 1783468649",
+    "num_comments": 0,
+    "comments_url": "",
     "comments": [
-      "I was quite worried about having to code when I interviewed recently. A two- or three- year layoff is a lot. Turns out that it didn't really make much difference! After a few weeks of warm-up exercises, coding was as natural as ever and turned out to be the easier part of technical assessments. I guess a couple decades of muscle memory is hard to lose.Now then, back to using Fable. It is doing work that previously took me months in an evening.reply",
-      "> Code is a beautiful form of creative expression, as rich as literature or musicI think this is overstating it and makes me wonder how familiar the author is with literature and music.  Most programming is closer to plumbing.  We come in, gripe about the guy who did the prior job, and solve a puzzle with some unique constraints.  The reason LLMs are good at coding is because with coding we want boring, banal code.reply",
-      "I make this comparison a lot and a lot of devs don't like it.I am sure I could make a decent industrial PLC tech, same shit, different tools.reply",
-      "> Code is a beautiful form of creative expression, as rich as literature or musicSomething I'm trying to do right now is to build something and avoid using LLMs to write any code. I still use it to consult. I'm writing a Dota2 tournament match aggregator in Elixir that takes tournament streams and chronologically orders them in a format that makes it easier to watch them sequentially since I find YouTube hard to use for ingesting series of videos.I'm building it because... I like programming. I like making things. I find that LLMs are making me intellectually lazy and making things with them feels unfulfilling. I want to build. It's human to want to build.reply",
-      "> I want to build. It's human to want to build.Anything a human feels is human, regardless if it's to build or to not build :) Some people prefer some ways of building, others in other ways, it's all fine. I think lots of people forget that programming is a heavily creative endeavor in the end.If I wanted to be slightly controversial, I'd argue building a program is more like painting a painting than building a bridge, for better and worse.reply",
-      "Interesting you bring up (artistic) painting and bridge building.I'm a house painter, and while the work is... It's just relentless work and staring all day.It's the end results of making something just, better, with the simple acts of reputation and giving a shit about it.Just wondering where house painter falls in your scale, I'd hunch.reply",
-      "Not the person you're replying to, but I'd agree with them, and think house painting would be basically identical to building a bridge.The difference this comparison is capturing in my opinion is that of thinking up something new, compared to arranging things in a well known/already defined configuration. We know how to build bridges, we just have to do it (maybe including some calculations and site surveys, yes, but novel solutions are rightfully shunned). Similarly painting a house.Developing software is practically definitionally creating a novel thing. If we wanted the same software over again we could literally copy and paste the existing executable (and we do that all the time, it's just not called developing software or enough work to be a job, since we have machines that are excellent at arranging the electrical charge in the pre-defined manner).The actually-a-job* software equivalent of painting a house or building a bridge would be weaving a program into core rope memory: https://en.wikipedia.org/wiki/Core_rope_memory* Not a job you can get anymore.reply",
-      "Creating a program is more like the interior designer choosing paints or the engineer designing a bridge in some CAD software. The actual painting/building has been automated for ages and they are the compiler/computer combo.People who are new to the scene may find \"browsing catalog\"/\"configuring models\" tedious, but that's how you develop the intuition of what works and what not. After a while, you can shortcut most of the tediousness with those heuristics. You know enough blocks that it's just choosing the right one to fit the solution and you do not have to research them and understand them at the same time (where most of the beginners' time is dedicated to).reply",
-      "I've done a lot of match aggregation in dota2 using stratz / opendota. It's a lot of fun and it will definitely make you a better programmer given how much data there is.reply",
-      "As a professional programmer entering the final third of an enjoyable career, I would now place \"learning to code\" in the same category as \"making a living as a poet.\" As in, it's truly enjoyable art and some people appreciate it, but you'd better plan for a day job.Senior people who already know how to code are doing OKish for now, from the data I've seen, but the job is increasingly babysitting models like they were junior contributors.reply"
+      "xxx"
     ],
-    "link": "https://stevekrouse.com/learn-to-code",
-    "first_paragraph": "July 6, 2026Is there any point to learn to code in the age of vibe coding?Literally no one is uttering what we thought were the immortal lines \u201clearn to\ncode,\u201d right? I don't think that sentence has been spoken for many months now\nin Silicon ValleyMaking Sense with Sam Harris #481I'm the founder of Val Town, a \"Silicon Valley startup\"\nfor writing and deploying code, and I still believe everyone should learn to\ncode.Sam is right that \u201clearn to code\u201d is no longer trotted out as a quick path out\nof poverty. The ability to string together two lines of JavaScript no longer\nguarantees you a 6-figure-salary.This is also true of math, literature, science, or any of the liberal arts. Like\nthose, coding is worthwhile to learn on educational grounds, not merely\nvocational ones.I grew up hating math. I stumbled into\nan after-school program that taught programming. Through\nit, I fell in love with math, and excelled at it beyond my wildest dreams.Later, I learned this experience masterminded by a ma"
+    "link": "https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video_galleries/video-lectures/",
+    "first_paragraph": "These twenty video lectures by Hal Abelson and Gerald Jay Sussman are a complete presentation of the course, given in July 1986 for Hewlett-Packard employees, and professionally produced by Hewlett-Packard Television. These videos are also available here under a Creative Commons license compatible with commercial use.Note: These lectures follow the first edition (1985) of Structure and Interpretation of Computer Programs. Many of the programs discussed were rewritten for the second edition (1996) of the book, and new material was added. These video lectures will still be useful for students using the second edition, since the overall themes of the course and order of presentation are unchanged.These videos are courtesy of Hal Abelson and Gerald Jay Sussman, and are used with permission."
   },
   {
-    "title": "Aluminum foil (2021) (dernocua.github.io)",
-    "points": 251,
-    "submitter": "firephox",
-    "submit_time": "2026-07-06T13:28:57 1783344537",
-    "num_comments": 107,
-    "comments_url": "https://news.ycombinator.com/item?id=48804297",
+    "title": "Chat Control 1.0 and 2.0 Explained (fightchatcontrol.eu)",
+    "points": 458,
+    "submitter": "gasull",
+    "submit_time": "2026-07-07T14:23:15 1783434195",
+    "num_comments": 149,
+    "comments_url": "https://news.ycombinator.com/item?id=48818311",
     "comments": [
-      "I wasn't expecting to see Dernocua at the top of HN today with 53 comments.  You can download Dernocua as a whole from http://canonical.org/~kragen/dernocua/ if you're interested.I'm happy to answer any questions.  (Well, almost any.)reply",
-      "What's up with the dercuano, derctuo, and dernocua naming? Are there just these three? Does the naming follow some pattern?reply",
-      "Well, \"Dercuano\" sounds like \"Dirk One Oh\" in English, so clearly the sequel should be \"Dirk Two Oh\".  And \"Dernocua\" is the properly formed vesre of cuaderno, unlike \"Dercuano\", which unfortunately certain people were too polite to inform me was ill-formed until too late.:-)Mostly I wanted a name that was short, easy to remember, and unique.My current notes are in http://canonical.org/~kragen/sw/pavnotes2.git/reply",
-      "Does aluminum foil contain PFAS and does cooking on them on the grill for example expose the food to forever chemicals?reply",
-      "No, there should be no PFAS. The surface will be covered in trace amounts of oil from production, but other than that it should be entirely aluminum alloy.https://www.epa.gov/system/files/documents/2025-04/foil-stud...reply",
-      "It does not, but aluminum oxide is even more of a \"forever chemical\" than teflon is, though less so than, for example, the nitrogen that constitutes 78% of the atmosphere.reply",
-      "i guess in that case the question would be if one should be as worried about the biological effects of PFAS as much as these two other forever chemicals you citereply",
-      "I think it's a little late to be worrying about Nitrogen in the atmosphere.If it's any consolation I believe it's mostly harmless.reply",
-      "seems like the cert may have expiredreply",
-      "Thanks!  I keep unintentionally using https links to canonical.org since basically the whole web is https now.  Fixed.reply"
+      "xxx"
     ],
-    "link": "https://dernocua.github.io/notes/aluminum-foil.html",
-    "first_paragraph": "Kitchen aluminum foil is a remarkable material.It\u2019s typically 10\u00a0\u03bcm thick and 400\u00a0mm wide, giving it an aspect ratio\nof 40000 in that dimension, and rolls are commonly some ten meters in\nlength, for an aspect ratio of 1\u00a0000\u00a0000; heavy-duty versions can\nreach 30\u00a0\u03bcm or more.  Despite their thinness, foils of 25\u00a0\u03bcm or\nmore are impermeable to oxygen, water, and light, though Wikipedia\nclaims thinner foils typically are plagued with pinholes.  It comes in\na fully annealed state, so it rapidly work-hardens when bent, and\nbecause of its thinness can be bent at deep submillimeter scales to\nform metamaterials.  It\u2019s highly reflective (88% on the bright side\nacross the visible spectrum and even higher in the infrared) and\nconductive, rivaling copper.  It resists corrosion for years in\nweather, it\u2019s nontoxic, it\u2019s light (2.71 g/cc), and it\u2019s damn cheap,\nunder 50\u00a2/m\u00b2.Robert Lang recommends laminating tissue paper on one or both\nsides of kitchen aluminum foil to make \u201ctissue foil\u201d, which for years\n"
+    "link": "https://fightchatcontrol.eu/chat-control-overview",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Show HN: Chiptune Radio (alephvoid.com)",
+    "points": 16,
+    "submitter": "bootbloopers",
+    "submit_time": "2026-07-08T00:55:19 1783472119",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=48826094",
+    "comments": [
+      "There's also Nectarine Demoscene Radio: https://www.scenestream.net/demovibes/reply",
+      "This thing is giving mad Ultima V childhood vibes! :) Very cute.reply",
+      "For those like me that have surveillance capitalism services like Twitch blocked, try this completely FOSS alternative: https://watch.chiptune.fm/reply",
+      "I always tune into: https://kohina.comThanks for sharing, I'll def put it on.reply"
+    ],
+    "link": "https://chiptune-radio.alephvoid.com/",
+    "first_paragraph": "An around-the-clock stream of chiptune \u2014 8-bit soundchips, trackers, and demoscene energy \u2014 broadcast by Aleph Void, LLC.// Now PlayingPlayer not loading? Watch directly on twitch.tv/alephvoidchiptuneradio.// AboutChiptune Radio is a side project of Aleph Void, LLC \u2014 the music of sound chips past, streaming while you work, reverse engineer, or just vibe.Music composed for and inspired by classic sound hardware \u2014 the SID, the NES APU, the Game Boy's four channels, and the tracker scene that keeps them alive.A continuous radio-style broadcast on Twitch. Drop in any time, leave it on in the background, and let the playlist do the work.Built and operated by Aleph Void, LLC \u2014 a software security and reverse engineering firm with a soft spot for old hardware and the sounds it makes.// Connect"
+  },
+  {
+    "title": "Is The Economist Always Wrong? (economist.com)",
+    "points": 5,
+    "submitter": "nreece",
+    "submit_time": "2026-07-08T02:17:01 1783477021",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.economist.com/interactive/finance-and-economics/2026/07/02/is-the-economist-always-wrong",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Show HN: Davit, a Apple Containers UI (davit.app)",
+    "points": 210,
+    "submitter": "xinit",
+    "submit_time": "2026-07-07T18:44:29 1783449869",
+    "num_comments": 48,
+    "comments_url": "https://news.ycombinator.com/item?id=48821848",
+    "comments": [
+      "This looks like a really solid app. I like that it's 17 MB and uses the ContainerAPIClient library directly.28 commits in 3 days, 5,015 lines of Swift, every commit \"Co-Authored-By: Claude Fable 5\".Also neat that it's signed/notarized. I installed it and it downloaded the necessary container platform stuff on first launch.Suggestion: add a getting started tutorial to the site which suggests an image to try out and has screenshots (or a silent video) showing you how to get that image up and running and what you can do with it.The create image dialog suggests \"nginx:latest\" but that's not a great starting demo.reply",
+      "The AI-Maxing copy on the website kind of gave it away. Doesn't mean is not a great app though!reply",
+      "The description of this submission that literally says \"Mostly vibe-coded\" didn't give it away?reply",
+      "I think we're past the point where agentic coding is a given now.reply",
+      "Coding yes, copywriting, design, identity, no. Using AI doesn't mean giving up on quality, unless you don't care about quality. Most of these issues come from folks who don't really care about quality and ship the first slop that comes out.reply",
+      "Great suggestion. Coming up.reply",
+      "I've been a fan of Orbstack for make 2 years or so. Worth the cost for me because it's so well integrated and fast and docker command compatible.I'll give this a try though.reply",
+      "I\u2019m guessing the OrbStack team will probably support MacOS native containers soon enough, with all their management goodness on top.reply",
+      "Really nice. Worked perfectly downloading the runtime and running nginx:latest.It's getting to the point that scrolling down on Github and seeing Claude as a contributor is a signal the app will be good (Native feeling, no Electron, etc)reply",
+      "Unrelated. I noticed that the settings window (Cmd-,) text inputs all type from the right instead of the left like older macOS inputs (or web inputs[0])Is that a thing macOS is moving to? I'm sure I've seen Apple use these too.[0] https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/...reply"
+    ],
+    "link": "https://davit.app",
+    "first_paragraph": "A fully native macOS app for Apple's container platform \u2014 run Linux containers on Apple silicon, no Docker Desktop required.Free & open source \u00b7 MIT licensed \u00b7 Signed & notarizedRequires an Apple silicon Mac running macOS 15 or later.\n  Or via Homebrew: brew install wouterdebie/tap/davitDavit talks directly to Apple's open-source container daemon over XPC \u2014 the same wire path the CLI uses. No Electron, no web views, no background agents of its own.Start, stop, restart and delete with live CPU, memory and IP on every row. Streaming logs with follow & boot mode, live stat charts, and raw config inspection.Open an interactive shell in any running container, straight into Terminal or iTerm \u2014 over the native API, no CLI needed.Containers are immutable \u2014 so Davit prefills a new one from the old config with the image's entrypoint and env subtracted, letting you change ports, env vars, mounts or resources in seconds.Browse any running container's filesystem right in the app \u2014 navigate folders,"
+  },
+  {
+    "title": "An interactive explorer for Benford's Law across real datasets (vatsalbakshi.com)",
+    "points": 17,
+    "submitter": "dingobabies",
+    "submit_time": "2026-07-08T00:18:39 1783469919",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=48825816",
+    "comments": [
+      "Neat! Benford\u2019s Law was the first topic I dove into in undergrad math that got a minor publication. Given how well known it is for forensic accounting I\u2019ve always wanted to look into convictions and see if the \u201caverage\u201d fraudster has wised up and produces more realistic distributions.reply",
+      "I'd recommend allowing 2 digit exploration. I've used it in the past when analyzing hard drive failure logical block addresses.reply",
+      "Interesting that it was first discovered with noticing the \u201cgarden path\u201d in the front pages of a book of logarithm tables (in 1881).reply",
+      "It's interesting how all base 10 numbers identify as non binaryreply"
+    ],
+    "link": "https://vatsalbakshi.com/blog/benfords-law/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "We're extending access to Fable 5 on all paid plans through July 12 (twitter.com/claudeai)",
+    "points": 55,
+    "submitter": "minimaxir",
+    "submit_time": "2026-07-07T17:44:50 1783446290",
+    "num_comments": 32,
+    "comments_url": "https://news.ycombinator.com/item?id=48821102",
+    "comments": [
+      "Loosing Fable July 12th and getting usage cut by 50% post July 13th is going to be rough. Looks like all the reporting about Anthropic trying their earnest to turn a profit this quarter is true. In the mean time, I will gladly switch to Codex. There Pro plan gives you amble usage and only runs close when you are using the fast mode. And even if you run out of credits, they have given users so many credit resets this past month that you can just activate one of those after. I understand Fable is a great model, but switching to API usage will run many people thousands of dollars with the same usage from their subscription plans. Not worth it IMO.reply",
+      "If they pair this with a reset, then it will be good news. Otherwise we all just rushed to use our quota before the July 7th deadline for nothing.reply",
+      "I planned to use all my allowance in 6 hours time (the time they said it would be around until) for the week and then they extend it so that I burned almost all of them in a wasteful way without having the time to review things properly.reply",
+      "This is the second time you posted essentially the same message 40 minutes later, are you stuck in a loop? I wonder if people are looping in addition to their AI agents.reply",
+      "I'm guessing dang might have merged some of the submissions.reply",
+      "If they were going to do this, they must have known a few days in advance. Feels intentional.reply",
+      "Hmm, so I planned to use all my allowance in 6 hours time (the time they said it would be around until) for the week and then they extend it so that I burned almost all of them in a wasteful way without having the time to review things properly.reply",
+      "Previously, access was set to expire today (July 7th)It is theorized that OpenAI may time the release of GPT 5.6 in Codex to convert people who have lost access to Fable, so this is an interesting game theoric consequence.reply",
+      "It is, many people are hungry for GPT-5.6, considering it is supposed to be Fable class, with lower costs. Many Claude users were ready to jump ship.reply",
+      "Also consider that Fable launched on June 9. Many people including myself bought a 1-month Anthropic subscription just to use Fable.By extending it to July 12, they're gonna get a second month out of a lot of such people. If it really expired today, I wasn't going to renew my month.reply"
+    ],
+    "link": "https://twitter.com/claudeai/status/2074548242386178258",
+    "first_paragraph": "Sign up now to get your own personalized timeline!By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use."
+  },
+  {
+    "title": "30papers.com \u2013 Ilya's 30 essential ML papers, in a beginner friendly format (30papers.com)",
+    "points": 374,
+    "submitter": "notmcrowley",
+    "submit_time": "2026-07-07T15:58:13 1783439893",
+    "num_comments": 61,
+    "comments_url": "https://news.ycombinator.com/item?id=48819608",
+    "comments": [
+      "Sutskever's List : https://www.manning.com/books/sutskevers-listreply",
+      "Someone posts on X, \"These are Ilya\u2019s 30 papers\", gives no source, doesn't say where he got it from, and isn't connected to either Ilya or Carmack (Ilya gave him the list).Then someone vibe codes a barely usable website based on that, and it lands on the HN front page? Is this correct?reply",
+      "First year CS student excited to learn about a thing puts together a small website of academic papers, posts it to HN to share with others.Then someone makes a shitty comment. Is that correct?reply",
+      "Shitty comment?From my point of view the Jedi are Evilreply",
+      "100% correct (anyone on hn for longer than 3 months will recognize that this is exactly the culture here).reply",
+      "not shitty enoughreply",
+      "Compiled resources for nerds are catnip. Hit that bookmark/upvote button to never get to it :)reply",
+      "I feel seen. Straight to the \"stuff to read later\" bookmark pile/mausoleum :)reply",
+      "I wish this was more wrong.reply",
+      "attention is all you needreply"
+    ],
+    "link": "https://30papers.com/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "A better way to tie gym shorts (or any drawstring) [video] (youtube.com)",
+    "points": 466,
+    "submitter": "surprisetalk",
+    "submit_time": "2026-07-07T12:45:06 1783428306",
+    "num_comments": 166,
+    "comments_url": "https://news.ycombinator.com/item?id=48816956",
+    "comments": [
+      "I did this for a while after seeing that video, but after some of my shorts ended up tightening into a knot that I couldn't get loose easily, I gave up on it.I instead just use the \"Ian Knot\" that I use to tie my shoes.  It's very quick, I already use it all the time anyhow, and it rarely goes wrong.  (Sometimes, I think I end up with an end through a loop accidentally, and have to fix it.)Learning this extra knot didn't really help much, and it definitely went wrong more than I liked.reply",
+      "not the ian secure knot?reply",
+      "If you have round laces, Ian\u2019s knot reliably comes undone. Ian\u2019s secure shoelace knot is better in that case, though it\u2019s slightly slower and trickier to do. The double Ian knot is interesting too, but it (and several other alternatives) won\u2019t have the \u201cpull just once to untie\u201d mechanic.reply",
+      "Ian's knot doesn't come undone easily if you do it the right way, many people learn it incorrectly when they are young and never revisit it... but they are making Granny knots instead: https://tokay-ultimate.com/blogs/infos/how-to-tie-your-lacesIt's even more noticeable/frequent with round laces so that's what makes me suspect you might be a victim of this.reply",
+      "You can read about why Ian made the new knot as an improvement over secure knots specifically here. [0] But hey, maybe Ian was unknowingly tying a Granny knot instead. ;)    Comparison To Other Regular Shoelace Knots\n    \n    It was much easier to prove that Ian's Secure Shoelace Knot is more secure than any of the regular shoelace knots. Using a pair of shoes with round, slippery laces, I tied one with my Ian Knot and the other with my Ian's Secure Shoelace Knot. Despite tying both to approximately the same average tightness, the Ian Knot came untied two or three times a week whereas the Ian's Secure Shoelace Knot never came untied.\n\nhttps://www.fieggen.com/shoelace/secureknottech.htmreply",
+      "Ian's knot is not new kind of knot with its own properties; it's a kind of procedure for producing the standard knot. The resulting knot doesn't remember which procedure it came from.reply",
+      "Sorry, I chose to use the same terminology as the comment I replied to. Should I have started with the explanation you\u2019ve posted, would that make my comment better?reply",
+      "It really depends on the cordage for this one. I have a pair of gym shorts with a flat, thin band (I think it\u2019s nylon, it\u2019s got some slipperiness to it), and this knot works great for it. I\u2019ve had nothing but problems trying this one on thicker, rounded cordage with more friction involved.reply",
+      "My results were the exact opposite with the two different types of cordage. This is definitely a finicky knot.reply",
+      "Ian Knots is a rabbit hole of great practical knots and shoe lacing styles.reply"
+    ],
+    "link": "https://www.youtube.com/watch?v=3R0Lp86GEBk",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Herdr: One terminal to rule them all (herdr.dev)",
+    "points": 167,
+    "submitter": "handfuloflight",
+    "submit_time": "2026-07-02T04:28:39 1782966519",
+    "num_comments": 90,
+    "comments_url": "https://news.ycombinator.com/item?id=48756578",
+    "comments": [
+      "So I've tried to figure out why you might want to use this over Tmux, and essentially I think it comes to down to:- everything is mouse clickable- tmux style display-popups are used for friendly UI interactions everywhere- it has a UI for agents running in panes, with a cool status (idle/working) display- has opinionated defaults like automatic clipboard copy on mouse text select- makes nested sessions easier & has default affordances for remote SSH attach- is generally prettier- uses display-popups for notificationsOtherwise it seems exactly like tmux.reply",
+      "I wanted to mention that `zmx` is a beautiful piece of minimal software that basically has gotten rid of my tmux and zellij use. Uses a ghostty-based terminal emulator for each session, supports pretty much all of these features by leveraging ghostty. I truly don\u2019t see the benefit of something like herdr over this minimal, robust setup. If I really wanted a lot of customization for AI assistants, I\u2019d consider using Orca, but my current zmx approach works OOB and it\u2019s solid. Great software!reply",
+      "Thank you for mentioning zmx. Reading through their repo, it\u2019s like someone read my mind, took my instinctive, almost pre-verbal, half-formed/quarter-baked preference for `screen` over `tmux`, beautifully and precisely formalized it into an actually lucid opinion, and then instantiated it as an actually real piece of software. I\u2019ve used it for an hour and it already feels like second nature; I somehow have muscle memory for features that I didn\u2019t even know it had until I instinctively used them and they were right where I expected them to be. Seriously, thank you.reply",
+      "My pleasure. Make sure you check out the thriving ecosystem of tools around it as well. I\u2019ve seen a few projects building on it in a prettt creative way.reply",
+      "I really want to like this. Ideologically I'm on board. Who wouldn't want to avoid all this multiplexing complexity and pitfalls? But deferring the window management to the OS sounds great in theory, but in practice it falls short (at least for me).I work on both MacOS and Linux. Even if I were to figure out a perfect window management approach, I'd have to do it twice, and then figure out a way to \"attach\" to a layout of windows essentially. And then make it cross-platform... or live with zero organization, or at best some kind of flat structure. That's a immediate non-starter. Even if I focused only on a single OS, I still don't consider this a viable approach. It would be like removing browser tabs, and saying let's let the OS manage all this nasty UI stuff.So then the next immediate idea is let's just have the Terminal itself manage UI. Ghostty supports tabs, splits etc. Great. But if I need to restart Ghostty for whatever reason, my entire layout vanishes and I have to set it all up again?For me tmux is not just about the attach/detach part. A session is a personal \"layout\" of the workspace I've organically landed on for this task. Maybe it's a few windows with splits. Maybe it's just the single window with or without a split. Maybe it's a more browser-like just X amount of windows (tabs). If/when things get overwhelming I branch off into a new session for one (or more) sub-tasks. Little fzf-based utilities allow for nice fuzzying over sessions and what not. Or maybe you just run the different sessions in actual different physical OS windows. You can mix and match however you feel that day.So if I'm in project x, working on feature y, and I detach and walk over to my other computer I can SSH over and continue as if nothing at all changed and retain the exact layout of what I was using before. Simultaneously in another physical window (or a tab) I can just switch to another local (or not) session and instantly be mentally in a different context, working on a different project or feature. Or I can SSH into a server and resume a debugging session left (intentionally) open for a while (which may consist of a few splits/windows/what not).Maybe I'm missing something. I'm curious how your day-to-day workflow looks like. I imagine if I was 100% bound to a single machine, I could make it work with a tiling wm. But even then Ghostty crashes or something else happens and poof your entire work layout is gone and needs to be re-created (even if the individual pieces are safe).reply",
+      "Niri is a perfect window manager approach, in my opinion. I don\u2019t need tmux. Just Niri + Foot (terminal) and it\u2019s perfect for the way my brain works. If you haven\u2019t tried it, I highly recommended it.reply",
+      "I think https://zellij.dev/ covers all of these? But it isn't an \"agent native\", and `herdr` seems to support importing existing agent sessions.reply",
+      "I use zellij a lot and created myself a zellij skill for an agent to manage my sessions/layouts in zellij directly.So for a new worktree the agent can create a tab in zellij with multiple panes, properly named etc.It works really nicely.Although since I got the 52 inch Dell monitor I tend to just put everything visible at all once most of the time.reply",
+      "seamlessly jumping from local to remote sessions is something ive been hoping for in zellij for quite a while so if herdr supports this it could be interesting.Until I try it, though, I don't think I'll understand why it needs a specific feature for running an agent tool in a side panel, which is appartently one of it's main selling point.reply",
+      "From what I can figure it is actively calling itself a multiplexer, so pretty closely linked to something like tmux (one of the review videos on the page calls it a \"tmux rewrite\").But they seem to be targeting very different scopes use wise.I think if you use this to do stuff like, edit files, run htop, drop into an interactive shell, compile some code, my guess is you're gonna be fighting uphill and have a bad time.On the other hand, if you're only using tmux so that you can have a bunch of terminal windows for agents. Then this is probably going to make your workflow a fair bit smoother.reply"
+    ],
+    "link": "https://herdr.dev/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Every new car sold in the European Union must include a driver monitoring camera (allaboutcookies.org)",
+    "points": 449,
+    "submitter": "nickslaughter02",
+    "submit_time": "2026-07-07T20:50:46 1783457446",
+    "num_comments": 602,
+    "comments_url": "https://news.ycombinator.com/item?id=48823557",
+    "comments": [
+      "All new cars.At this point I don't know if I'd buy anything made after 2008.  Whenever I rent a new car around here (in the EU) I find them very annoying.  The worst is the cruise control that tries to stick to the speed limit -- but its sensors don't always read the signs very well, so you'll often slow to 50 km/h (about 30 mph) for no reason.  Then there's the incessant beeping at you, \"lane assist\" that you can't turn off (looking at you, Volkswagen,) and many more small annoyances.  A camera pointed at your face just adds insult to injury.reply",
+      "Over Christmas, I spent several minutes trying to debug my beeping dashboard - it only seemed to happen sometimes while driving, so stopping didn\u2019t let me figure it out. Eventually I discovered that it was beeping at me because my eyes weren\u2019t on the road enough. Of course, figuring that out required me to take my eyes off the road to figure out which blinking signal was associated with this particular alarm.Also, being constantly warned that I was speeding in rural areas where the car missed a speed limit sign caused me to start ignoring the speeding alarm within a few hours of driving the car.I feel like there\u2019s some lesson here in building to the lowest common denominator, and giving people products rather than tools (tools are more dangerous, but more useful), but maybe I\u2019m just grumpy.reply",
+      "> Also, being constantly warned that I was speeding in rural areas where the car missed a speed limit sign caused me to start ignoring the speeding alarm within a few hours of driving the car.A lot of these features seem to assume that you're driving on a multi-lane motorway with well-marked lanes. I'm constantly being nudged by my ID.3 one way or another on rural roads. You can turn it off, but it turns itself back on the next time you unlock the car.reply",
+      "Do you know if the law prevents you from modifying the car to disable these devices? Caveat to anyone considering this: Modifying could be used against you in a liability case. Additionally if your insurance contract has some stipulation about not removing these safety \"features\" and they find out, I would think you could be dropped.reply",
+      "> I feel like there\u2019s some lesson here in building to the lowest common denominator, and giving people products rather than tools (tools are more dangerous, but more useful), but maybe I\u2019m just grumpy.It's from a culture that says more alarms = safer. Perhaps the people who design these things need an alarm to warn them of \"alarm fatigue\".reply",
+      "> It's from a culture that says more alarms = safer.It's the same culture in which product teams default install a background task that runs at every logon and checks for updates multiple times a day (for a program I used twice in the last year) or teams that default enable every possible notification (and in every update re-enable the ones users have explicitly turned off). Then they wonder why people don't try new apps and won't update the apps they have.If you're in that meeting... speak up. I do and sometimes it even gets people to re-consider annoying defaults that don't even benefit the company very much.reply",
+      "That sounds like one of those situations where you just keep turning up the radio until the beeping goes awayreply",
+      "They have thought of that. The radio volume is reduced during the Beep.reply",
+      "I'm deaf so they better shine lasers into my eyeballsreply",
+      "Hehereply"
+    ],
+    "link": "https://allaboutcookies.org/eu-mandatory-distracted-driver-system",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Scheme Is a Hoot (gracefulliberty.com)",
+    "points": 31,
+    "submitter": "signa11",
+    "submit_time": "2026-07-05T13:12:19 1783257139",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://gracefulliberty.com/notes/scheme-is-a-hoot/",
+    "first_paragraph": "2026-05-21 \u00b7 3 min \u00b7  #computing Lately I've been spending time learning Scheme and using it to implement the concepts I'm learning in my physics classes as time permits. One of the most exciting things I've been doing with this is getting my Scheme to compile to the Web thanks to Hoot.One of the biggest challenges has been the fact that Hoot is unstable. It's currently at version 0.9.0. The documentation is decent, but it could be better. The error messages can be cryptic. But it's a massive accomplishment to see Scheme code running on the Web via WASM. It's even more incredible to know that it's running on a stack the team created themselves, not relying on Emscripten.My initial understanding of Hoot was that it could compile any Guile program to the Web. I quickly learned that I was mistaken when my code wouldn't compile. I then ported my code to use the Hoot versions of all of the functions, causing my code to be unable to run independently from Hoot. I then realized that Hoot actu"
+  },
+  {
+    "title": "First Principles of Model Routing (try.works)",
+    "points": 26,
+    "submitter": "try-working",
+    "submit_time": "2026-07-03T05:36:12 1783056972",
+    "num_comments": 11,
+    "comments_url": "https://news.ycombinator.com/item?id=48771200",
+    "comments": [
+      "On it's face, there is useful content here. But it's also clearly contextual.It's absolutely the case that routing between frontier models can improve results, mainly because of the alloying effect. Ping ponging between different providers gives the task exposure to different data distributions, and can break models out of non-optimal feedback loops.That's not to say that's always the right approach, just not clearly wrong. And a small pool does not necessarily 'improve' model routing. The real advice is just 'know why you're routing to each model'.Especially with guidance to map to improve based on performance - with a large enough volume of tasks/requests, you'd want to maximize the initial pool size to expand the search space in order to determine which is best at each task.I read this as \"here are some thoughts on model routing\" -- not first principles I'd advise everyone to live by.reply",
+      "If we define GPT 5.5 and Opus 4.8 as the frontier models for simplicity, there is some value in routing between them theoretically because two models will always have some differences.However, when the models have the same generalist profile capabilities and are at the same performance and cost tier, making a decision for when to route between them and also making sure that that decision is correct, requires enormously granular information. While there are benchmarks that show differences between the models across different domains and tasks, the differences are generally not major and we also cannot assume that benchmarks that we know are optimized for, because if the new model wasn't presented together with good benchmarks the business would tank, really reflect real-world task performance at the request-level.So routing between similar models is an information problem that is unlikely to be solved.Routing between these two models is also likely to have a lower benefit than routing between GPT and DeepSeek on the cost vector. Routing to DS has clear, known and verifiable impact on cost. There is no need to guess.Similarly, if we routed between GPT and a specialized math model, lets say Leanstral, that we can assume outperforms GPT by >50%, the benefits are also massively larger, and the routing decisions are also easy to make.This is why the biggest pay offs come from routing between models that have a 2-10x difference in one of the cost-speed-quality factors, or specialized in a specific domain, or runs locally for data-security sensitive work.reply",
+      "I can add to the above that an accurate model router is what enables specialist models, and specialist models is what will in turn make model routing common place.When we have a standard model routing protocol in place used by both applications and providers, we can start to really reap immense benefits from accurate routing and fine-tuned specialist models resulting in better performance and lower cost.reply",
+      "Why have you put all the content on the right column like this on desktop.reply",
+      "Because CSS is more difficult than machine learning, apparently.reply",
+      "it's artyreply",
+      "It's what someone who's trying to be \"artsy\" thinks \"artsy\" is. I'm not straining to read it.reply",
+      "well, I did go to \u4e2d\u592e\u7f8e\u672f\u5b66\u9662 so I have some sense of itreply",
+      "Of course we all know the best artists are the ones that went to schoolreply",
+      "Then your art is clearly about not carrying about usability. Nobody who is principled in editorial design for the web would ship this.reply"
+    ],
+    "link": "https://try.works/first-principles-of-model-routing",
+    "first_paragraph": ""
+  },
+  {
+    "title": "l: A new runtime for k and q (lv1.sh)",
+    "points": 108,
+    "submitter": "skruger",
+    "submit_time": "2026-07-07T18:08:29 1783447709",
+    "num_comments": 63,
+    "comments_url": "https://news.ycombinator.com/item?id=48821378",
+    "comments": [
+      "yeah the site's clearly vibecoded and isn't opensource, but i also think this is a genuinely interesting design space and more people should be building in it. APL (https://www.dyalog.com/), BQN (https://mlochbaum.github.io/BQN/), J/Jd (https://code.jsoftware.com/wiki/Jd/Overview), Klong (https://news.ycombinator.com/item?id=10586872), Kerf (https://news.ycombinator.com/item?id=9782520), RayforceDB (https://news.ycombinator.com/item?id=45889607), k/q (https://kx.com/) glad there's a new entrant.reply",
+      "I vibecoded https://punkx.org/apl/learn.html [1] its good slow entry into gnu-apl, at least it got me to be able to make tictactoe, vibecoded or not, it helped me to start.I am amazed how quickly APL changed the way I think.Also strongly recommend watching Aaron Hsu on youtube.There is no better time to re-learn programming, try APL, Forth, LISP, z80 machine code, UXN TAL, just try new things.\"Men are born soft and supple; dead they are stiff and hard. Plants are born tender and pliant; dead, they are brittle and dry. Thus whoever is stiff and inflexible is a disciple of death. Whoever is soft and yielding is a disciple of life. The hard and stiff will be broken. The soft and supple will prevail.\"[1]: https://github.com/jackdoe/gnu-apl-wasm source of the repl and learn playground and also how to compile gnu apl to wasm (vibecoded)reply",
+      "I've recently tested BQN on ClickBench (a benchmark for OLAP databases), and the results are not great: https://benchmark.clickhouse.com/#system=+N|liH&type=-&machi...If anyone is curious how queries in this language look, you can see it here: https://github.com/ClickHouse/ClickBench/pull/939/changes#di...reply",
+      "FYI, your \"8\u203f64 \u2022bit._cast -\u27dc@ raw\" in bqn/util.bqn results in passing to \u2022bit._cast integers in the range 0..255, whereas it expects integers \u00af128..127 (and does arbitrary platform-specific things on integers outside that for the int16\u2192int8 narrow); removing the \"-\u27dc@\" makes it work properly, and 2.5-5x faster while at it from not going to intermediate int16 (allowing the bitcast to be O(1) by itself). (\u2022FBytes \u2192 \u2022file.MapBytes also probably improves things, at the cost of the obvious mmap problem of issues if the file changes, as BQNs arrays are immutable). This is also what caused the problem at https://github.com/ClickHouse/ClickBench/pull/939/changes/40... (there's been some discussion about what to do about invalid \u2022bit._cast before, considering it's rather perf-sensitive; it's the only place in CBQN with such quiet very-wrong results on invalid inputs)The default CBQN \"make o3\" on x86-64 also results in it only using SSE2 (utilizing function multiversioning is on the ever-infinite TODO list, though somewhat-low on it considering it's strictly-unnecessary in any specific situation; there's also AVX-512 usage on a branch, but mostly only AVX2 on mainline; and no arm SVE)That all said, CBQN doesn't currently do any loop fusion, so being significantly-slower for sequences of operations over larger-than-cache arrays would kinda just be expected. BQN also just isn't particularly intended for database work anyway.(didn't look much at the specific query impls, though \"Pair\" in utils.bqn is at least an overlong version of \"Pair \u2190 \u22c8\u00a8\"; and some if not all of those Pairs would be better as \"\u224d\u02d8\" to avoid nested arrays and ensuing pointer chasing; and, of course, if some of the columns are bools/int8/int16/int32, it'd be beneficial to store & load them as such instead of float64)reply",
+      "BQN & CBQN are absolutely wonderful pieces of code.\nL is mac/lin but linux is avx512 only specifically to try to deal with that problem. The compute on compressed algos helps fit more in those cache lines! https://lv1.sh/blog/compute-on-compressed/reply",
+      "https://github.com/l-labs/db-benchmark/tree/main/lreply",
+      "What's the problem if a site is vibecoded? We will be seeing it more often, I recon. Let's get used to it. On the other hand, perhaps a disclaimer is in order.reply",
+      "It's a strong signal of unknown quality. Caveat emptor. Closed-source makes that extra difficult.We are used to this, hence why folks here point it out.reply",
+      "there's one in the footer and agree.reply",
+      "I hope OP can survive the lawsuits though, the K authors are infamously litigious.reply"
+    ],
+    "link": "https://lv1.sh/",
+    "first_paragraph": ""
   }
 ]
