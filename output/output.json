@@ -1,403 +1,342 @@
 [
   {
-    "title": "Elevators (john.fun)",
-    "points": 927,
-    "submitter": "Jrh0203",
-    "submit_time": "2026-07-31T15:17:28 1785511048",
-    "num_comments": 231,
-    "comments_url": "https://news.ycombinator.com/item?id=49124218",
+    "title": "Go 1.27 Interactive Tour (victoriametrics.com)",
+    "points": 43,
+    "submitter": "Hixon10",
+    "submit_time": "2026-08-02T01:35:51 1785634551",
+    "num_comments": 7,
+    "comments_url": "https://news.ycombinator.com/item?id=49140218",
     "comments": [
-      "Back in highschool, simulating different elevator algorithms was one of the projects I implemented during my CS class. It wasn't for the class \u2014 AP CS did not require anything like actual programming \u2014 but it was a fun project.A cool connection is that a spinning-disk hard drive (HDD) is actually kind of like one really long elevator, just wrapped around a spindle instead of perfectly vertical. The SCAN algorithm is actually a disk-scheduling algorithm!https://en.wikipedia.org/wiki/Elevator_algorithmreply",
-      "We did this in college as well using microcontrollers and leds or something - i forget the exact details.  It was super funreply",
-      "> Destination Dispatch [...] are in general worseI wonder if this is an artifact of how the author used random destinations.  I worked in a building that used Destination Dispatch, and the common travel pattern seemed to be:- Everyone who is not on the ground floor generally want to go to the ground floor.- People who are on the ground floor generally travel in large groups to the same destination.This happens because people who worked on the same floor often leave for lunch at the same time, and return at the same time to the same floor.  Destination Dispatch helps in this case because it's batching large groups of people with the same destination.reply",
-      "This is case where you need to make sure your test data reflects real-world usage or you end up optimizing for the wrong thing.Ideally a new elevator installation would have a trial period where they record usage and then run it through a simulator like this to determine the optimal strategy for that particular building.  And you'd want to re-run it every once in a while as the building tenants/usage changes.  I wonder if this actually happens, though.reply",
-      "Yeah, and definitely is not the right story for hotels. His premise of \"morning traffic mostly from lobby to floors\" is completely false in an hotel where you get it both ways due to people going down for breakfast and going back up and the down once again.I see hotels with the kiosk model changing the UI depending on breakfast rush hourreply",
-      "Most interesting hotel elevator system I\u2019ve seen was in Washington DC.Instead of hitting the call button, you started the request with your floor. Then the system would assign you an elevator (there were 6 cars as I recall).I assume this gave the system more accurate routing data to make it more efficient for everyone.reply",
-      "Yes, it's definitely more likely for an individual already in an upper floor to return to ground than a stop above or below. The people queuing up in simulations don't seemingly get this right all the time.Also the group of people going to or returning from lunch is real as well. The grouping factor happens more at the middle of the day and less at the morning or evening. Primarily because of lunch.reply",
-      "Is it because the criteria is wait time not travel time?  Destination dispatch would avoid some extra stops on the trip.I just visited a new building with destination dispatch, so it seems to be still around.My EE roommate in college had to build an elevator circuit as a final problem.   It was on a bread board and had a bunch of call buttons and had a motor and a clear disk with black squares so it could figure out where it was\u2026. I think it was the simple algorithm\u2026reply",
-      "> Is it because the criteria is wait time not travel time?Yeah, it doesn't make any sense to optimize wait time instead of total time from pressing the button to reaching destination.reply",
-      "Human psychology might allow other reasonable criteria even if perfectly rational choice is just total time to destination.reply"
+      "This release also fixes runtime.findnull() to be compatible with MTE on Android ([1] and [2]). This was the only thing preventing MTE from being enabled for apps that use gomobile on MTE-compatible Android OS's like GrapheneOS.[1] https://go-review.googlesource.com/c/go/+/749062[2] https://go-review.googlesource.com/c/go/+/751020reply",
+      "This level of generics actually has me interested a bit in Go now.reply",
+      "Am I the only one who\u2019s absolutely shocked that Go finally is embracing generics?Does anyone have a bit of an inside view into what changed in the perspectives of the language maintainers?I\u2019m not buying the \u201cit took us 20 years to understand how to do it correctly\u201d argument, as this is something you explicitly take into consideration when designing the language or not. And it was specifically not a part of language design, and is much harder to retrofit (backwards compatibility).So what changed?reply",
+      "(I was on the Go team for ages)Seriously, that's all it was. Just Ian alone proposed and rejected a half dozen of his own different approaches to generics. Finally a language + implementation plan came together that people all liked.Nobody was ever opposed to generics that I saw.reply",
+      "> what changed in the perspectives of the language maintainers?The original maintainers moved on to other projects and the new community maintainers came to a consensus through the proposal and governance process.reply",
+      "No, that's not accurate. The same core people were involved.reply",
+      "Some examples for the upcoming release https://go.dev/doc/go1.27reply"
     ],
-    "link": "https://john.fun/elevators",
-    "first_paragraph": "Everyone has shared the frustration of waiting for an elevator that never seems to arrive. \"I pressed the button, why isn't it coming?\" you ask. For something as commonplace as elevators, they are far more complex than meets the eye.Over the course of this article, we'll unravel the mysteries of elevators. The way you push their buttons, and how they push yours.The simplest elevator algorithm is called SCAN and was patented in 1961. The elevator starts at the lobby and goes all the way to the top floor before reversing and coming back down. It picks up and drops off anybody on the way.Most of the time you don't actually need to go to the TOP floor. If the elevator goes only as high as requested before reversing, the algorithm is called the LOOK algorithm. This is the algorithm most people know and expect.Here's where the mystery begins. If there are multiple elevators, how do the cars coordinate who picks up who?In the most basic system, there's a central scheduler that tells each elev"
+    "link": "https://victoriametrics.com/blog/go-1-27/index.html",
+    "first_paragraph": "Your privacy settings or an extension blocked the booking widget.If you use a blocker, allow embeds for this site and try again.Jes\u00fas EspinoJul 31, 202619 mins readGo 1.27 is coming soon, so it\u2019s a good time to get a head start on what\u2019s new. The official release notes are pretty dry, so here\u2019s a hands-on version with runnable examples showing what changed and how the new behavior works.A quick credit first: the interactive Go tours were started by Anton Zhiyanov, who wrote one for every release from Go 1.22 through Go 1.26. He\u2019s decided to stop, so we\u2019re picking up where he left off. His earlier tours are all still worth a read:Thanks, Anton.Before we start digging into the new features, let\u2019s set the context.This article is based on the official release notes and the Go source code, licensed under the BSD-3-Clause. This is not an exhaustive list; see the official release notes for that.Links point to the documentation (\ud835\uddd7), proposals (\ud835\udde3), most relevant commits (\ud835\uddd6\ud835\udddf), and authors (\ud835\uddd4) fo"
   },
   {
-    "title": "qm \u00e2\u20ac\u201c Multiplayer agent harness for work (github.com/yc-software)",
-    "points": 476,
-    "submitter": "tosh",
-    "submit_time": "2026-07-31T18:04:58 1785521098",
-    "num_comments": 103,
-    "comments_url": "https://news.ycombinator.com/item?id=49126604",
+    "title": "Seedance 2.5 (bytedance.com)",
+    "points": 201,
+    "submitter": "njaremko",
+    "submit_time": "2026-08-01T20:45:12 1785617112",
+    "num_comments": 95,
+    "comments_url": "https://news.ycombinator.com/item?id=49138302",
     "comments": [
-      "I gave an agent its own Slack channel and it started scheduling meetings with other agents without me. I've never felt more like middle managementreply",
-      "Aren't there a ton of products already doing this? Why not just use claude Cowork? Surely they're simpler/better/more featureful/developed than the alternatives here? What advantage does this have? Would love to see a 'QM vs Cowork' comparison!reply",
-      "> Why not just use claude Cowork?Because people want to be able to do things like use their own clients of pi or opencode with LLMs they run themselves, such as the just released deepseek v4 flash 0731, not permanently tied to an Anthropic ecosystem of non-open-weight LLMs and pay forever per token.reply",
-      "> Why not just use claude Cowork?Many people don't want to support a company pushing for regulatory capture.reply",
-      "this one is trying to cashin on the 'multiplayer' keyword after the buzz that 'no one has cracked multiplayer yet'. well the ui sucks and is not it.reply",
-      "Kinda makes sense. Multiplayer is at odds with async, generally speaking - and LLMs/agents really see their productivity rise up with async work.reply",
-      "what does multiplayer means in this context?reply",
-      "maybe you want to use a different model?reply",
-      "Love seeing this direction along with Buzz.The hardest problem in multiplayer agents, at least for us, has not been the agent loop. It is scoping and QM's per-person scopes plus shared rooms is a sane answer for a company-wide assistant.I build in the adjacent lane, AQ (aq.dev), a multiplayer coding harness where teams run Claude Code and Codex together), so seeing YC ship \"a multiplayer agent harness for work\" is validating and a little surreal.reply",
-      "In a tangential earlier release, Gary Tan's own gstack:https://github.com/garrytan/gstackUse Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QAreply"
+      "There is a woman on twitter who makes seedance videos of her and Dario from anthropic, they're kinda weird but generally pretty high quality: https://x.com/CuiMao/status/2058458683781365873 (full collection: https://x.com/CuiMao/status/2082740754380984373) - seeing them was the first time I'd been impressed with AI video gen.reply",
+      "This is deeply disturbing\u2026for so\u2026so so many reasons.reply",
+      "Super strange. It feels like something a stalker would do...reply",
+      "This is absolutely hilarioushttps://x.com/CuiMao/status/2049828401201246395reply",
+      "This specific video is the first time I have been distributed by AI video.This is extraordinary lifelike.reply",
+      "People are still figuring out the social norms surrounding \"deepfakes\" and I'm convinced there are some versions of the future where it becomes normalized for content under essentially fair use/free speech doctrine, and many where it's used to restrict free speech in the small number of jurisdictions where public figures would currently be allowed to be featured in this content.Obviously there are a lot of ways it shouldn't be used but I want to live in the future where it's something we use to have fun, where reasonable, rather than a dangerous/sketchy tabooreply",
+      "I can't make up my mind if the simplistic narrative typical of Chinese romcom shorts is more funny or more weird.reply",
+      "That is absolutely hilarious. Dario Amodei, a romcom lead.reply",
+      "I dont normally like AI videos but this was just amazing, by next year the tech will be perfect, cheaper, we are going to AI videos everywhere whether  anyone likes it or not.reply",
+      "people like it. Maybe not older generations, but we're about to get a fresh new generation of people that will not have a lifetime of experience looking at human generated content, and so have no real bias against AI content.And then every generation after that will be born into increasingly a AI-video rich world.reply"
     ],
-    "link": "https://github.com/yc-software/qm",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n           There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.A multiplayer agent harness for work. In Slack and on the web.Most agents are designed like personal assistants. You can make one work for a whole\ncompany, but it quickly gets complex. QM is designed for startups. Employees each get\ntheir own isolated workspace and work independently without affecting each other, and\nthey can also collaborate with the agent in channels, group messages, and projects.Each person and each room has its own scoped memory, files, keychain view, permissions,\ncrons, web apps, and durable sandbox.It's built with open source in mind. Pick your own harness and model and switch between\nthem \u2014 Pi, OpenCode, Codex, and Claude Code all drive the same core, so a deployment\nisn't tied to any single vendor.Eve"
+    "link": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+    "first_paragraph": "One-take Creation, Flexible Referencing: Introducing Seedance 2.5Date2026-07-31CategoryModelsToday, we are officially launching Seedance 2.5, the new-generation video creation model. Since the release of Seedance 2.0, we have noticed a shift in what users expect from video creation models: from merely generating a clip to completing a creative work. Building on the unified multimodal audio-video joint-generation architecture of Seedance 2.0, Seedance 2.5 centers on foundational generation and reference-based generation, delivering major breakthroughs in long-form storytelling, multimodal reference, and editing. Grounded in real-world use cases, it opens up greater creative imagination and control, and further unlocks productivity.Key highlights include:Up to 30 seconds per generation, with multi-round extensions: Seedance 2.5 can generate high-quality, 30-second audio-video clips in a single pass and supports multiple rounds of extension. It also improves shot transitions and scene cha"
   },
   {
-    "title": "How to Exist (raptitude.com)",
-    "points": 34,
-    "submitter": "walterbell",
-    "submit_time": "2026-08-01T00:25:00 1785543900",
-    "num_comments": 9,
-    "comments_url": "https://news.ycombinator.com/item?id=49129990",
-    "comments": [
-      "> When you stop doing everything and just exist, you almost feel like you\u2019re dying.It sounds like the author drinks too much caffeine. This definitely isn't unusual in rat race culture, but it's also by no means the universal human experience.reply",
-      "Not really sure how to feel about this post. I guess I will try still..reply",
-      "I'm just trying to Exit.reply",
-      "If you are stuck in vim, it's :q.  If you are stuck in life, stay with us, we want you to stay.reply",
-      "Who's \"we\"?reply",
-      "Don't give up, friend. People care for you. If no one else, this person online does! I hope you are able to find help.reply",
-      "Today there is no guarantee that that sequence of characters, or the one it was produced in reply to, or, indeed, this very one you are reading right now did not come from a bot. There is a lot of \"care\" being performed and not much left to just exist.reply",
-      "This is hacker news so there's a good chance they mean \"have a successful acquisition of their business\", in which case I hope they can Exit.reply",
-      "it's possible that he was making a joke about exiting a startupbut I appreciate your comment regardlessreply"
-    ],
-    "link": "https://www.raptitude.com/2026/07/how-to-exist/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Software for One (ajwaxman.com)",
-    "points": 10,
-    "submitter": "awaxman11",
-    "submit_time": "2026-07-29T12:29:20 1785328160",
+    "title": "ASRock BC-250: Building the Budget Steam Machine (plug-world.com)",
+    "points": 15,
+    "submitter": "plug_world",
+    "submit_time": "2026-08-02T01:35:11 1785634511",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://www.ajwaxman.com/writing/software-for-one",
-    "first_paragraph": "In 2020, Robin Sloan wrote about BoopSnoop, a messaging app he built for his family. Four people downloaded it. He considered this a resounding success. His point was simple: an app can be a home-cooked meal. You don't need scale. You don't need users. You cook for the people you love.The app took him a week to build, half of it lost to code-signing purgatory. He wrote: \"In a better world, I would have built this in a day, using some kind of modern, flexible HyperCard for iOS.\"Six years later, the essay resurfaced on X when Thariq wrote that \"personal software was a bit early in 2020 but in 2026, it really can be as personal as a home cooked meal, or a handwritten letter.\"Lee Robinson wrote about the same shift. AI has made \"personal computing\" actually personal. He and his wife built a baby tracker because they didn't need \"user profiles, badges, subscription tiers, or any other extra features.\"I spent the past six months building way too much personalized software:Our sleep consultan"
+    "link": "https://plug-world.com/posts/2026/asrock-bc250-the-budget-steam-machine/",
+    "first_paragraph": "July 8, 2026My complete guide for setting up the ASRock BC-250. You can\u2019t beat its price for performance, and it\u2019s perfect for those who love projects.TLDR (for those with BC-250 experience):For those looking for a full guide, with all the juicy tips and tricks, please continue\u2026USB Bluetooth/WiFi AdapterBC-250 printed caseChipset -> Integrated Graphics Controller -> ForcesDon\u2019t bother with buying two fans. Only one really makes a difference. See very helpful Reddit post.Set fan-curve in the bios.Out of the box, the BC250 GPU is locked to 1500MHz. The cyan-skillfish-smu GPU governor allows for dynamically scaling the GPU clock speeds to match demand. Highly recommended for both decreasing idle power usage, and dramatically increasing game performance.Cachy OS installation:Bazzite installation:Once installed, edit the config file: /etc/cyan-skillfish-smu/config.tomlThese are extremely safe defaults, meant to work on everyone\u2019s BC250. However, there\u2019s a good chance you can squeeze out mor"
   },
   {
-    "title": "The Absurdity of Albert Camus (historytoday.com)",
-    "points": 62,
-    "submitter": "apollinaire",
-    "submit_time": "2026-07-30T23:21:17 1785453677",
-    "num_comments": 38,
-    "comments_url": "https://news.ycombinator.com/item?id=49117089",
+    "title": "Di\u00e1taxis (diataxis.fr)",
+    "points": 214,
+    "submitter": "ryanseys",
+    "submit_time": "2026-08-01T20:33:27 1785616407",
+    "num_comments": 30,
+    "comments_url": "https://news.ycombinator.com/item?id=49138188",
     "comments": [
-      "His Sisyphus essay is famous for its closing line but I find it interesting how for several pages it closes with a thump, thump, thump and metaphor fusion (the essay is ending, the rock is rolling, the gods are watching, the choice is being made...) Even the second-last line is underrated:\"There is no fate that can not be surmounted by scorn. [...] His fate belongs to him. His rock is his thing. [...] The absurd man says yes and his effort will henceforth be unceasing. [...] The struggle itself toward the heights is enough to fill a man's heart. One must imagine Sisyphus happy.\"reply",
-      "> One must imagine Sisyphus happyNotice that Camus doesn't say HOW to imagine Sisyphus happy.  How do you?I imagine that he's happy because he takes pride in the quality of his work pushing the stone.reply",
-      "I don't directly interpret Camus, but I think to my interpretation of Dostoevsky's underground man. He knows he's irrational, can \"rationally prove\" he's irrational, yet still lives on anyways.There's a sort of pride in fully knowing, accepting, and disengaging with some rational proof, and still \"living your life anyways\". In some sense, even though that might be irrational, it's one of the deepest forms of satisfaction.reply",
-      "And this explains a lot of politics these days\u2026reply",
-      "As a sort of dessert to that main course, one could imagine Camus happy. Or appetizer.Personally, this helped\nhttps://www.theparisreview.org/blog/2023/03/14/camuss-new-yo...https://archive.ph/JEuoa(As well as the rest of the diary)reply",
-      "As it happens, I recently re-read The Stranger -- the last time was in 2006, so it was essentially fresh.The first half of the short book is easily on-par with any of the great masterpieces of literature.  It was written in a direct, vivid, gripping, and yet somehow languorous style -- something almost paradoxical.  It was also very attuned to the aesthetics and flow of the outside world, but inattentive to the narrator's inner life -- insensitive and, in a sense, essentially masculine in a non-performative way.  As a purely aesthetic work, it is truly excellent.The second half falls apart catastrophically.  The key scenario, the book's turning point, is contrived almost beyond belief.  The trial is a farce on several distinct levels -- you can criticize it from almost any perspective, and you'd be right.  (There's a well-known Orientalist critique which is just the tip of the iceberg.)  And the close of the book brings with it a number of unreliable narrator problems, which make the book as difficult to resolve as time-travel fiction.My impression was that it worked wonderfully as pure prose, and that Camus should probably have written travel journals a la Gerard Nerval.  As philosophy, though, it was hopelessly muddled, badly contrived, and confused.reply",
-      "At least from my perspective, the trial is meant to be contrived and a farce. From Meursault's perspective (which I agree that he can be an unreliable narrator) everything happening around him is inconsequential; he reflects that death-even of someone so \"close\" to him as his mother-doesn't matter as the end would always come. Meursault is on trial for his disposition, rather than the actual murder. The prosecution argues that Meursault is guilty due to his aloofness rather than any discussion of the murder (the defense openly questions whether Meursault is on trial for the murder of the arab or the murder of his mother!). At least for me, this difference was what _The Stranger_ was about; this inherent clash between indifference and the human rejection of the \"gentle indifference of the universe\". The fact that Meursault's unreliable narrator aspect comes about of the confrontation between the priest(?) and himself makes me think that Meursault too was hiding under this coating of lucidity, where he (and others who pretend to be stoics in the face of the absurd) will eventually break down. I reccomend reading _The Myth of Sisyphus_, especially the third and fourth parts, for Camus' explanation of the absurd hero.Also, could you link the critiques? They sound interesting and I'd like to read them.reply",
-      "The problem as I see it is in the fact that the book describes the world very naturalistically.  The first half of the book is basically Proust, if Proust were less introspective and didn't care to inflate his word count.  It's actually rare to find a book where the events of day-to-day life -- running to catch a tram, or spending a lazy Sunday afternoon on one's balcony -- are relayed with such clarity and directness.Then the murder happens -- which was a highly contrived and even quite ridiculous scenario, in that (a) Mersault's party was quite literally being stalked by an armed gang, (b) Mersault separated himself from the pack and was menaced by one of his stalkers, who was armed with a knife, (c) the naked knife was in the man's hand, as that man was blocking Mersault's path, (d) there were no witnesses, and (e) Mersault was a Frenchman in colonial French Algeria.Not 1 in 10000 times does that go to court for murder, and not 1 in 1000000 times does it result in the death penalty.But, anyway, back to my point:  The minute the murder happens, we're yanked out of the naturalistic world and thrust directly into the world of Kafka's The Trial.  Nothing makes sense any longer.  What once was so true-to-life becomes something akin to the hallucinatory descent of divine justice -- a bad trip, a fever dream.  \"Yeah, you're off to the guillotine because you didn't cry at your mom's funeral.  What kind of monster are you?\"  The most parsimonious interpretation is that the narrator has simply lost his mind.Don't even get me started on the fact that every reviewer thinks that Mersault was executed, when that never actually happens in the book, and would result in him not being able to write the book in the first place.  (Further confused by the variety of tenses used in the construction of the prose.)  The book, which is written something like a memoir, ends with his appeal still pending, and the prison chaplain \"sure of its success.\"As to the critiques, the Orientalist one is in Edward Said's \"Culture and Imperialism\" but I don't think that the full version is online.  As I recall, it basically concerned point (e) above, and noted that the trial would not have happened -- so the notion of the trial may be a sort of cope.reply",
-      "It\u2019s been a while, but I recall finding The Plague more compelling than The Stranger.While I agree with Camus\u2019s philosophical points about the absurdity of existence and the indifference of the universe, within the scope of our tiny little lives there is morality and meaning.  Taking action to address the suffering caused by an epidemic is meaningful. So are the deaths of an Arab or one\u2019s mother, and the premise that a human would be so alienated that they would feel nothing at them is unconvincing, even if the universe doesn\u2019t care.There was an essay in The Guardian a couple days ago on a related topic, positing that the essence of the self is the biological body including the brain, rather than the isolated mind. https://www.theguardian.com/commentisfree/2026/jul/30/alive-...reply",
-      "When Martin Shkreli first burst onto the scene it reminded me of the trial a bit. Like I really believe a lot of the negative polarization he received was due to his smirk rather than due to his drug pricing per sereply"
+      "I and my team did a full set of documentation for handing over a codebase to the client. A large complex codebase with accumulated history and subtle reasons why things were done.Diataxis was fantastic. It took a bit of effort to work out what the page titles were to cover everything we needed, but then when you were writing a page it was glorious.It was so clear what you were saying and what \"voice\" you were writing in. If it's a Reference page you're all descriptive, with diagrams and bullet points. When it's a guide you're more discursive, but you know you're just imparting information not trying to teach. It made it so much easier to be coherent and clear about everything.reply",
+      "I'd like to take advantage of the attention it's getting to point out that I am working on translating Di\u00e1taxis into other languages https://diataxis.fr/translation/, and you can see an in-progress version with some partially completed translations at https://diataxis-translated.readthedocs.io/translation/.reply",
+      "I urge people to not read this. Once you do, you will see all documentation will as the flawed and confusing mess it is. Ignorance is bliss!reply",
+      "truly. its the kind of thing that makes docs people justify their jobs rather than coming from a founder or user centric povreply",
+      "Maybe I'm incorrectly parsing your comment, but what does a \"founder centric pov\" for documentation look like?reply",
+      "looks like a load bearing seam with strong decisionsreply",
+      "survivor biased modelsreply",
+      "We just invested a good amount of time restructuring our docs for Di\u00e1taxis. It was helpful, but I wouldn't take it as gospel. The important thing to remember is that each piece of content should be one of the four types.If you're embarking upon a refactoring / rewriting journey for your docs, the only advice I'd share is to actually read the website beginning to end before starting. Especially this page: https://diataxis.fr/complex-hierarchies/. The guide is (unsurprisingly) very well written, and it's easy to internalize the concepts because they're repeated often.reply",
+      "Ugh, I don't like that page and I have actually deleted it. It'll be gone soon.There is a real problem there, and that page doesn't do a good enough job of dealing with it. I have something cooking that is much, much better.reply",
+      "Please post some kind of visible change notification (and something here) when you do!reply"
     ],
-    "link": "https://www.historytoday.com/archive/portrait-author-historian/absurdity-albert-camus",
+    "link": "https://diataxis.fr/",
     "first_paragraph": ""
   },
   {
-    "title": "Progressive Web Components (arielsalminen.com)",
-    "points": 99,
-    "submitter": "hosteur",
-    "submit_time": "2026-07-31T10:04:40 1785492280",
-    "num_comments": 15,
-    "comments_url": "https://news.ycombinator.com/item?id=49121196",
-    "comments": [
-      "I think it's better to think of \"Web components\" as \"Custom Elements\" they really aren't components in the way you think of components in other frameworks (which on the web introduced them first), and I think most of the dissatisfaction with them comes from trying pretend they're an alternative as they just aren't. Components in almost every other framework are efficient (efficient rendering runtime) and expressive (the ability not to have a root element but instead a frag, or context APIs etc) in ways that web components never will be, which makes them unappealing.But when you think of them as a suite of APIs to define custom elements, that can coexist with your framework components, this delimma goes away.I do think it's a-shame that modern frameworks don't better support shadow dom and local styles, and local events. Understandably I also get why they also don't see that as a good use of their time either, it adds complexity to the runtimes, they need to observe events at multiple root nodes.Besides the cost of implementation and commitment to additional complexity, assuming that was a nonissue, with the exception of those otherwise legitimate reasons, there's no technical limitation that prevents React from supporting shadow roots for arbitrary custom element. I made a proof of concept of this myself seems to work quite nicely with a stylesheet loader hook (which ensured it was loaded once and there was a shared sheet between all instances of the same element), but I had to start observing events in each elements shadow root.reply",
-      "This article I came across last month on \u201cFramework-agnostic design systems\u201d happens to use this Elena library and I think explains its use case well: https://piccalil.li/blog/framework-agnostic-design-systems-p...reply",
-      "When you built this you probably were aware of lit. How does Elena differ from lit?reply",
-      "One fun thing I did once is use the custom elements API to make a custom tag <element-template>. When the page sees <element-template tag=what-name></element-template>, it looks inside, finds any <template></template> <script></script> and <style></style> tags, and builds a new custom element with that tag name and all the powers. Cool but not incredibly simple.Another amazing trick is to put a mutation observer on the page to detect <template> tags as they're created. (template tags parse the HTML within but don't actually create it on the page). Once the observer finds a template tag it can upgrade them to have new powers, like replacing the contents of other tags. There are ways to tame web components and make them very easy to use.reply",
-      "The syntax looks very similar to Lit, but it's a nice application of HTML & CSS first, instead of relying entirely on JS to do that.reply",
-      "I like web components, the simpler the better, so I like what I see but having a strong OCD about syntax I just want to propose the use of <Button ... instead of <elena-button ...It's just a matter of using a regex [1] and making your syntax more palatableRegardless, kudos for the release* const componentRegex = /<%[ ]+([A-Z][a-zA-Z0-9])([^%]?)%>/g;reply",
-      "HTML is case insensitive, so <Button> is the same as <button>, and custom element names must have a hyphen.Your component regex represents a JSX limitation, but web components do not need React. Plus, if you capitalize the first letter, JSX would treat it as a React component rather than a web component (i.e. custom native HTML elements)reply",
-      "I don't understand your proposalCustomer elements MUST have an hyphen.<Button> is the same as <button> in HTMLreply",
-      "The HTML + CSS first approach and JS only for enrichment sounds great, and like what should be done anyway. I wonder though, how it will play out in reality. Will web developers using this library make the effort to keep essential functionality JS free, if possible, and provide additional views using whatever web framework they use, or will they implement essential functionality as \"JS enrichment\", requiring JS for things that do not actually need to be done in JS at all?reply",
-      "In reality, building anything complex is a huge pain using web components, particularly because it is hard to author them with appropriate level of styling API and accessibility support. In my experience, web components are fantastic for consumers but terrible for the authors.Still, the advantages are clear: they don\u2019t need any special runtime and can be used with other JS frameworks.Another thing in favor of web components is support for custom registries which make gradual migration from one version to another trivial. AFAIK, no JS framework has an equivalent of custom registries.reply"
-    ],
-    "link": "https://arielsalminen.com/2026/progressive-web-components/",
-    "first_paragraph": "I\u2019ve worked with web components for nearly a decade and built various enterprise-scale design systems with them. While I love what they offer on paper, the same pain points keep coming back:Layout shifts, flash of unstyled content, poor server-side rendering support, too much reliance on client side JavaScript, doesn't play well with frame\u00adworks like React Server Components, accessibility issues, and so on\u2026Despite all of this, I still think web components are a great foundation for a\u00a0design system. No other approach gives you true cross-framework portability built on what the web platform already provides. The problem isn\u2019t necessarily the model itself, it\u2019s how we\u2019ve been building them.This is how I ended up creating Elena, a library that I\u2019m open sourcing today. Elena starts from HTML and CSS, and stays grounded in web\u00a0standards and what the web platform natively provides.A Progressive Web Component is a native Custom Element designed in two layers: a base layer of HTML and CSS that "
-  },
-  {
-    "title": "June in Servo: real world compat, media queries, SharedWorker, and more (servo.org)",
-    "points": 112,
-    "submitter": "iamnothere",
-    "submit_time": "2026-07-31T18:17:52 1785521872",
-    "num_comments": 34,
-    "comments_url": "https://news.ycombinator.com/item?id=49126765",
-    "comments": [
-      "Congrats on the new release. Anything that creates more competition in the browser space has my support. I was hyped about Ladybird but their recent adoption of LLMs and going source-available only has put a bit of a dent in it.reply",
-      "I think you mean that the Ladybird project doesn't accept outside contributions anymore but it's still open source (just checked it's under BSD 2-Clause License). Pretty important distinction I think.reply",
-      "It's just a pause until they get to their alpha deadline. Hard to do that when you can't quickly validate all the drive by llm contributionsreply",
-      "The last few times I've tried to build Servo it's failed for me. (It's also one the very few rust projects that have ever failed to build for me).reply",
-      "On a Linux system or something else? Iirc a proper build uses spider money which is hell to build/embed.reply",
-      "Yeah, it's a Linux system. I can't remember if it was spidermonkey that it failed on or not. Though it sounds like maybe they should consider using another JavaScript engine if it's causing problems.reply",
-      "Does anyone actually use Servo for anything?reply",
-      "Maybe give them a second? Yes, it's usable for applications web views if you're willing to restrict yourself but for general purpose web browsing there's still a lot that needs doing (but work is progressing). Under Google's management, web tech has grown fast. And it's an ever shifting living standard. There is a lot for any alternative browser engine to implement, let alone keep pace with the changes.reply",
-      "Servo is 14 years old, it's hardly a new project. Ladybird has come much farther in a shorter amount of time. The issue has always been Mozilla not being focused.reply",
-      "Servo was sparsely maintained for years after Mozilla abandoned the project. Just in the last year it has picked steam as an independent project with a range of third party sponsors. Work is now progressing apace and it's becoming increasingly compatible with real-world websites.reply"
-    ],
-    "link": "https://servo.org/blog/2026/07/31/june-in-servo/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Big Food vs. the People (lighthousereports.com)",
-    "points": 197,
-    "submitter": "jruohonen",
-    "submit_time": "2026-07-31T16:04:32 1785513872",
-    "num_comments": 133,
-    "comments_url": "https://news.ycombinator.com/item?id=49124858",
-    "comments": [
-      "I'm about as hippie with my food as you can get, but this \"article\" is badly written propaganda that conceals more than it reveals. Half way down the article you learn that ~80% (193 out of 239) of the lawsuits are in Mexico and> many of them were against the country\u2019s labelling regulation. Quinto Elemento Lab reveals the companies\u2019 arguments: that the laws were a violation of their constitutional rightsBut the article doesn't say what those rights are, which makes me think the lawsuits were justreply",
-      "People have to learn to recognize the patterns.In this case, lighthouse reports is an international NGO which receives on the order of ~1MM in income per year (an extremely common pattern for these NGOs), which was directly given to them by (unspecified) government grants and (unnamed) private donors (can see all this in their openly published annual reports). In exchange for the funding (80.38% of which they paid out to themselves as wages/compensation), they put together and release \"reports\", \"studies\", etc., that push the messaging the NGO was created to push.reply",
-      "I think you are saying \"an NGO probably has an agenda.\"  Ok, sure, they are not robots with no opinions, and if you read even the first few sentences of that report you can see the opinion.But if you are suggesting that this NGO is carrying water for some unspecified shadowy group that is pulling the strings, you'll need to provide some backing for that.   Who has a nefarious motivation to oppose junk food?Trial lawyers? Misguided do-gooders? Big Celery?reply",
-      "It's not they are not robots with no opinions. The agenda is the reason the organisation exists. NGOs exist to push agendas. If you are on the other side of an agenda it's always \"outrageous\" the government is funding them of course.I do not know who is pushing but if you think there is not an entire industry of \"healthy\" alternatives for the companies in the article, you are very much mistaken.Hell it might be the artificial sweetener industry, in the UK it's now practically impossible to buy a soda that is not full of artificial sweeteners, excluding regular coca cola, and regular red bull.reply",
-      "Not all NGOs. Some are actually mission focused and spend their money and effort on direct action instead of policy or advocacy. Do you really think the purpose of Doctors Without Borders is to push an agenda? No. They provide care to those who would otherwise receive none, who would suffer and die from poverty as much as illness.reply",
-      "Considering we have 0 visibility into how their decisions are made and by whom, I think it's naive to claim that an organization's publicly stated \"mission\" is the only incentive that organization acts on. I don't know anything about DWB, but what determines if an organization has an agenda is the leadership, not their marketing.reply",
-      "Unfortunately, there are actually people who believe that DWB's purpose is political. Here's an example from the Times of Israel [0].[0] https://www.timesofisrael.com/doctors-without-borders-and-th...reply",
-      "> motivation to oppose junk food.On social media, making dubious claims about food science or food ingredients, then following up by selling some \"clean, unprocessed, organic\" product is big business. (I make no claims about this specific NGO).reply",
-      "Yes - the obvious state of dysfunction in food regulation and lack of enforcement in that area has led to an abundance of scam supplement hawkers[1] but I don't think the right conclusion to draw from that is that all criticisms of food regulation are in bad faith - I think it's very fair to say \"We should have a serious discussion about our food quality and also we need to crack down on these BS supplements\".  I think we're all[2] pretty well aligned on the fact that the BS supplements need the crack down but we also should introspect on why so many people are motivated to seek things like that out.1. I personally enjoy a can of hogwater every day and am happy to give you a referral code.2. Except those who financially benefit from hawking snake oil, of course.reply",
-      "astroturfing works, and is only getting better/worse depending on your point of view. it used to require people to read forums and make posts manually. now, you can automate that with a bot and in multiple languages.reply"
-    ],
-    "link": "https://www.lighthousereports.com/investigation/big-food-vs-the-people/",
-    "first_paragraph": "Bad diets kill millions of people globally every year, and lead to tens of billions of dollars in health costs, often placing the heaviest burden on communities who are least able to afford it. Children, with limited decision-making power, are particularly vulnerable to this.Legislators and government officials have worked to rein in this public health crisis by enacting laws that require food companies to be transparent about their ingredients and limit the advertising of unhealthy foods.In public, the world\u2019s biggest and richest food companies such as Coca Cola, PepsiCola, and Mondelez say they want to be part of the solution. But behind closed doors, they have taken governments to court to delay, dilute, and derail public health laws, which the companies say violate their rights.This cross border collaboration with health academics and an international media coalition shed light on how transnational corporations use legal tactics \u2013 lawsuits and legal threats \u2013 to stymie public healt"
-  },
-  {
-    "title": "Demystifying DRAM Read Disturbance: RowHammer and RowPress Phenomena (arxiv.org)",
-    "points": 40,
-    "submitter": "Jimmc414",
-    "submit_time": "2026-07-31T20:44:29 1785530669",
-    "num_comments": 17,
-    "comments_url": "https://news.ycombinator.com/item?id=49128323",
+    "title": "Show HN: I'm a 15 Year Old Wannabe Engineer, This Is a Cycloidal Gearbox I Built (github.com/tom-ilan)",
+    "points": 14,
+    "submitter": "tomilan",
+    "submit_time": "2026-08-02T02:07:09 1785636429",
+    "num_comments": 0,
+    "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://arxiv.org/abs/2607.28233",
-    "first_paragraph": "arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs."
+    "link": "https://github.com/tom-ilan/cycloidal_gearbox",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          This is my cycloidal gearbox I built, and the python script I created to generate it!This gearbox was a handcranked gearbox specifically meant to test the validity of the python cycloidal generator. It had a gear ratio of 1:9.This design was a micro cycloidal gearbox with a ratio of 1:9, meant to only take up the same footprint as a NEMA 17. Due to the tight tolerances needed for a small cycloidal drive and the lack of precision offered by 3D printing, this design did not work.This gearbox was the first working version to run on a NEMA 17. It has a larger footprint compared to Version 2 allowing greater tolerances and a fully functional design.This python script was based on the SolidWorks article Building a Cycloidal Drive with SOLIDWORKS. The two main parametric equations I used were:$$x = R \\cos(t) - E \\cos(N t) - r \\cos(t + \\psi), \\quad "
   },
   {
-    "title": "Getting 25 Gbps Thunderbolt Ethernet on My Mac Studio (jeffgeerling.com)",
-    "points": 149,
+    "title": "AI financial advice is surprisingly good, especially if you ask right questions (mitsloan.mit.edu)",
+    "points": 185,
+    "submitter": "foxtrot8672",
+    "submit_time": "2026-08-01T22:25:12 1785623112",
+    "num_comments": 144,
+    "comments_url": "https://news.ycombinator.com/item?id=49139102",
+    "comments": [
+      "People in this thread are massively underestimating the level of financial illiteracy in the general population.We've had multiple people try to convince us to set up bank accounts for our kids, so that they could accumulate interest over 18 years.More that tried to convince me to gamble on random pump and dump shitcoins.More still that talked about \"investing\" in random collectables like Funko Pops or Pokemon cards - they're not a bubble, Logan Paul told me so!You could replace the AI with a piece of paper that says \"set aside 10% of your income and invest it in an ETF\" and it would outperform the financial \"advice\" that people receive on a daily basis.reply",
+      "\u201cPay your bills on time and fully\u201d\u201cDo what you can to eliminate addictive vices or never get them\u201d\u201cMax your Roth and 401k contributions before even thinking about anything else\u201d\u201cTry to budget\u201d\u201cDon\u2019t live beyond your means. Monthly payment need to be considered carefully\u201dIf you can even TRY to do these things it puts you SO far ahead of the average person.It sucks because I get it, if you\u2019re behind waiting years for things to stabilize sucks, if you even can. So these get rich quick by just doing X scams are enticing but only set you farther behind.God I still remember when a friend showed up on his 18th birthday with a pack of cigarettes to show how \u201cmature\u201d he was. I always think about how much that one decision cost him over the years.reply",
+      "I never personally liked the blanket advice to \"Max your 401k.\" For most, if achievable at all, that would be the most they can invest at all. Even though it is often recommended alongside a proper \"emergency fund,\" that advice leaves little liquidity without major penalties.reply",
+      "Roth contributions are withdrawable without penalty. Also most employers offer a match of some amount, which is essentially free money.reply",
+      "The writer of one punch man was on to somethingreply",
+      "He knew the wayreply",
+      "> God I still remember when a friend showed up on his 18th birthday with a pack of cigarettes to show how \u201cmature\u201d he was. I always think about how much that one decision cost him over the years.The irony of taxing vices. I imagine most of it's paid by people who didn't know better at a young age, and helps encourage the downward spiral of poverty.And if you say it discourages young people from starting on the addiction, I think we're barking up the wrong tree. Disposable vapes have the highest amount of nicotine they can put in their nicotine salts. Nicotine pouches like zyns sell the most at 6mg and above. Dispensaries and street weed have enough THC that would put a hippie in the 70's in a psychotic break.reply",
+      "We have bank accounts for our kids, currently earning 1.75% because we aren't depositing money every month. If money is deposited it's another 3.3%.I really need to get around to setting up Vanguard for them.  Thanks for the reminder!reply",
+      "What\u2019s wrong with bank accounts for your kids?  Sorry, this one doesn\u2019t seem to fit with your other examples.reply",
+      "As the OP has \"Aussie\" in their name I think they'd be referring to the Commonwealth Bank of Australia Dollarmites accounts. They were shutdown recently after a watchdog investigation. It was locking kids into using the bank that would continue into adulthood and schools were getting paid to sign kids up.https://www.morningstar.com.au/personal-finance/the-lessons-...\"They found that it provided little value for children and the largest outcome was that children were being exposed to \u2018sophisticated\u2019 marketing tactics.\"reply"
+    ],
+    "link": "https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions",
+    "first_paragraph": "\nGet MIT Sloan's latest expert insights in your inbox.\nSign up for the MIT Sloan Thinking Forward newsletter.\nA full-time, two-year MBA program.A two-year, dual-degree program awarding an MBA from MIT Sloan and an SM from MIT School of Engineering.Deferred admission program; candidates work two to five years before enrolling in the MBA program.An MBA program designed for working professionals.A 12- or 18-month graduate program in finance.A 12-month graduate program in business analytics.A doctoral program that researches management science, economics, finance, marketing, operations, strategy, and other business disciplines.Undergraduate degrees offered in management, business analytics, and finance.Combine an international MBA with a graduate degree in management science; available to partner and affiliate school students only.A 20-month executive MBA program for mid-career professionals.A one-year, full-time MBA program for mid-career professionals.A master's degree program combining "
+  },
+  {
+    "title": "RFC 10015: Deprecating Obsolete Key Exchange Methods in TLS 1.2 and DTLS 1.2 (rfc-editor.org)",
+    "points": 32,
+    "submitter": "Jimmc414",
+    "submit_time": "2026-08-01T23:44:55 1785627895",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.rfc-editor.org/rfc/rfc10015.html",
+    "first_paragraph": "For (D)TLS 1.2, this document deprecates the use of two key exchanges, namely Diffie-Hellman (DH) over\na finite field and RSA. It also discourages the use of static Elliptic Curve Diffie-Hellman (ECDH)\ncipher suites.\u00b6These prescriptions apply only to (D)TLS 1.2, since (D)TLS 1.0 and TLS 1.1 are\ndeprecated by RFC 8996 and (D)TLS 1.3 either does not use the affected\nalgorithms or does not share the relevant configuration options.\n(There is no DTLS version 1.1.)\u00b6This document updates RFCs 4162, 4279, 4346, 4785, 5246, 5288, 5289, 5469,\n5487, 5932, 6209, 6347, 6367, 6655, 7905, 8422, and 9325 to either deprecate or\ndiscourage the use of cipher suites using the above key exchange\nmethods in (D)TLS 1.2 connections.\u00b6\n            This is an Internet Standards Track document.\u00b6\n            This document is a product of the Internet Engineering Task Force\n            (IETF).  It represents the consensus of the IETF community.  It has\n            received public review and has been approved for pu"
+  },
+  {
+    "title": "Four Time Scales for Technology Development and Deployment (rodneybrooks.com)",
+    "points": 5,
+    "submitter": "jeffreyrogers",
+    "submit_time": "2026-08-02T02:26:52 1785637612",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://rodneybrooks.com/four-time-scales-for-technology-development-and-deployment/",
+    "first_paragraph": "Robots, AI, and other stuffYour email:\u00a0rodneybrooks.com/four-time-scales-for-technology-development-and-deployment/I have come to understand four very different time scales for development of technologies and their deployments. \u00a0And I think people often jump between them and end up making outrageously wrong, and sometimes damaging, predictions of when in the future a technology is going to be able to do what.Time scale 1. New Research IdeasNew research ideas take ten to twenty years to form before there is an understanding to bring them to really solid lab demonstrations. \u00a0Some things take much longer as there are many,\u00a0 many false starts, or there is a really hard step which takes decades to crack.Once things really have been established as a solid laboratory technology there is often a gold rush phase where major new tweaks, on essentially the same idea, come along every six months or so and it feels like the ground is shaking under us.The first \u201ccomputational\u201d models of neurons were"
+  },
+  {
+    "title": "Postmortem for Kernel Soundness Bug #14576 (leodemoura.github.io)",
+    "points": 121,
+    "submitter": "juhopitk",
+    "submit_time": "2026-08-01T18:32:20 1785609140",
+    "num_comments": 44,
+    "comments_url": "https://news.ycombinator.com/item?id=49137060",
+    "comments": [
+      "> The practical consequence: checking with an independent kernel still works, since it required two distinct bugs in two implementations, but users who rely on it need current versions of both.Things like this aren't too surprising, given that even much simpler type checkers like Rust's have soundness issues occasionally. I think it's very important to view verified results not as an absolute and unbreakable guarantee, just an extraordinarily strong one where (1) the surface area for soundness issues has been painstakingly minimized and (2) any realized soundness issues are taken very seriously and fixed in short order.reply",
+      "To what degree can you say something like \"if the kernel doesn't have metaprogramming [or some other set of features] it's fine\". When were the last bugs with a reduced feature set?reply",
+      "The implementation of the kernel is relatively trivial, it's an intentional design choice.reply",
+      "As claude would say, \"relatively\" is carrying a lot of weight in that frase. Definitely load-bearing \u2014 would not pass a quick smoke test.reply",
+      "but where\u2019s the seam!?reply",
+      "This thread has some context. A proof-system researcher found some proof-system bugs and presented them a funny way:https://leanprover.zulipchat.com/#narrow/channel/270676-lean...A mathematically-inclined reviewer (or an LLM) can quickly identify that it's an exploit. (Two exploits; it's crafted to hit a bug in another proof checker, too.)The post gestures at this, but a natural follow-up, beyond fixing specific bugs around this exploit, would be to task some security-oriented models with proving False in Lean, or with reviewing the code for potentially unsound steps, missing checks, or even useful 'hardening'. That's happening and bugfixes are landing as a result.reply",
+      "Feels appropriate for bugs in a formal proof system:> Beware of bugs in the above code; I have only proved it correct, not tried it.-Knuth, 1977reply",
+      "Reminds me of this: https://mathoverflow.net/questions/513742/are-we-stuck-with-...I know this is an implementation bug not a meta-theory bug, but I'd almost consider the fact soundness bugs are possible as a bug in the ideology, or at least a severe drawback. Stuff like this just wouldn't happen in Metamath. In a future where AI is autogenerating formalizations, why not have the AI use a harder but airtight system like Metamath?reply",
+      "Took me about 90 seconds to find a Metamath implementation bug that apparently allowed proving something that shouldn't be provable: https://github.com/metamath/metamath-exe/issues/184reply",
+      "That's with the original C verifier only. The actual database is cross-checked by 6 independent implementations. This is the whole point of Metamath: its kernel is so tiny that you can implement a verifier in a weekend.Metamath isn't a silver bullet in the design space of formal proof tools, but I personally think it just about nails the metatheory we want. Maybe some explicit facility around definitions would be desireable.reply"
+    ],
+    "link": "https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/",
+    "first_paragraph": "\n            A soundness bug in the Lean kernel (#14576) was reported and fixed during the week of July 27. It has had visibility on Zulip and social media (e.g., X, LinkedIn, and Mastodon).\n              On July 25, Ramana Kumar published a repository containing a sorry-free \"disproof\" of the Collatz conjecture, produced with AI assistance. It is not a valid proof because it exploits a bug in the kernel's handling of nested inductive types. On July 28, Kiran Gopinathan reduced it to a small proof of False and opened issue #14576. We pushed a fix one hour after the report (#14577). Joachim Breitner reviewed it and suggested improvements, and it was merged. New patch releases are out.\n              The bug: when the kernel eliminates a nested occurrence under an inductive type T with parameters Ds, and these parameters are phantom (not mentioned in constructor fields), they disappear from the generated auxiliary type and thus escape type checking. An ill-typed argument in that position "
+  },
+  {
+    "title": "Unraveling the mysteries of habit formation (kyoto-u.ac.jp)",
+    "points": 41,
+    "submitter": "hhs",
+    "submit_time": "2026-08-01T22:55:52 1785624952",
+    "num_comments": 12,
+    "comments_url": "https://news.ycombinator.com/item?id=49139383",
+    "comments": [
+      "I was watching a Charlie Rocket interview today and I got a lot of inspiration from him.  He made it a habit of staying positive, turning a loss into a win and always finding the upside.  Instead of getting sucked into the despair, he takes a loss as a learning lesson.  Good habits can be hard to find but once you get into the habit of something, it becomes super easy.  Everything is hard to do -- if it was easy, everybody would be doing it.  Once you learn to do something, and keep doing it, you understand it better and it can make your life so much easier, or happier, or better, in so many ways.  There are also bad habits but those are just as easy to break as good ones.reply",
+      "Agree with most everything and will check our that interview, that attitude is how I try and live, but the last sentence is obviously not true. Taking heroin is a habit, going to a gym is a habit, and obviously one is much easier to stop whether either willfully or not.I'd say the ease which you can pick up habits or drop them is extremely variable across the specific habit and person. (as a different example, someone with less social awareness will find it harder to pick up the habit of being a hospitable host than someone it comes naturally to, but once learned its probably fairly easy to maintain)One of my favorite quotes is, \"first the man makes the habit, then the habit makes the man\" , and it works both ways, good and bad. I really think this is something that should be taught much more explicitly in school to everyone, rather than leaving it only in places like sports and the military.reply",
+      "There's a fine line between what you described and toxic positivity.It's important not to ruminate on bad thoughts (when your proposal is a good replacement behavior), but it's also important not to bottle up natural human emotions as if they are unjustified or unreal.A thought exercise: if it wasn't your behavior that caused your own despair, but your spouse's behaviors that caused you irritation / grief. Do you think it's better to paint a smile on yourself and ignore the underlying problem, or spend a few minutes feeling your emotions, describe the cause to your partner, then politely suggest a substitute behavior? The former builds resentment and bottles up strong emotions for an inevitable outburst down the road. The other diffuses the emotion, potentially alleviates the offending behavior, and doesn't betray what you authentically emote.reply",
+      "The determined mouse with the barbells and the headband is my new spirit animal.reply",
+      "The same mouse later:https://www.youtube.com/watch?v=0K8lrVjT6fMreply",
+      "Same :D That mouse is determined.  I love it.reply",
+      "What also still puzzles me about habits is the fact that once I have a routine (like going to the gym at 6am) it is super easy. But once I lost it I struggle a lot to get it back.reply",
+      "I feel like it's much the same for bad habits broken, too.  If you allow yourself to fall back into a bad habit (smoking, drinking, gambling, etc for example) it feels really challenging to break it yet again.  Best excuse I suppose to keep those good habits and bad ones right where you wanna keep 'em.reply",
+      "That is opposite, not the same.reply",
+      "This reminds me also of the Andrew Huberman <-> Jordan Peterson discussion where doing sth you do not like actually physically lets a specific region in your brain grow and if you do not do it, it shrinks (sorry for the simplification - not a neuro scientist haha)reply"
+    ],
+    "link": "https://www.kyoto-u.ac.jp/en/research-news/2026-07-28",
+    "first_paragraph": "\u7814\u7a76\u8005\u540dAsaoka, NozomiActivity Database on Education and Research\u00a0\u7814\u7a76\u8005\u540dDiane PaganoORCID\u00a0\u7814\u7a76\u8005\u540dHayashi, YasunoriActivity Database on Education and Research\u00a0Kyoto, Japan -- Habit formation describes the repeated performance of a behavior until it becomes routine: in other words, the shift from deliberate to automatic decision-making. This concept is often invoked as a way to improve one's life by making a routine of beneficial activities that can otherwise feel tedious, such as cleaning, studying, and regular exercise.That repeating the same behavior is essential for forming a habit has become well-established, but whether a habit develops as an exact replication of the original behavior, or if the behavior itself gradually changes as it becomes a habit, remains unclear. Because habit formation takes a long time, comparing behavioral and neural changes within the same subject before and after a habit develops has been difficult. To overcome this challenge, a team of researchers at Kyoto Univer"
+  },
+  {
+    "title": "Persistent State Machines: LLM Attention with INT4 In-Memory Cells (zenodo.org)",
+    "points": 6,
+    "submitter": "yusuke_esaka",
+    "submit_time": "2026-08-02T01:01:45 1785632505",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://zenodo.org/records/21753002",
+    "first_paragraph": "Persistent State Machines: Complete Mathematical Proofs and Vivado Implementation Synthesis (Version 8.0)ABSTRACT\u00a0We present a formal discrete framework for attention operators in Large Language Models via Persistent State Machines (PSMs). Computation is broadcast to stationary in-memory cells that evaluate local deterministic state transitions. Complete mathematical proofs are given for quantization error bounds, a concrete multi-phase discrete Softmax construction under an explicit bounded-logits assumption, deterministic finite-automaton equivalence with spatial factorization, and membership in DSPACE(O(n)).We validate the implementation feasibility of the architecture on contemporary programmable logic fabric through two distinct evaluation flows:Low-Power Evaluation (Zynq-7000 xc7z020): A full 1024-cell array (d=128) out-of-context (OOC) block design implementation. By annotating the post-route netlist with a Switching Activity Interchange Format (SAIF) file obtained from a post-r"
+  },
+  {
+    "title": "CISA Alert: Water Sector PLC Targeting (censys.com)",
+    "points": 78,
     "submitter": "speckx",
-    "submit_time": "2026-07-31T16:15:31 1785514531",
-    "num_comments": 85,
-    "comments_url": "https://news.ycombinator.com/item?id=49125034",
+    "submit_time": "2026-08-01T18:50:17 1785610217",
+    "num_comments": 49,
+    "comments_url": "https://news.ycombinator.com/item?id=49137228",
     "comments": [
-      "I'm using the sonnet at work. Work paid for it. Yes it's more expensive. I have gotten over 25 gbps bidirectional, but not by much. Maybe 27. A big downside is that it only supports 15W upstream power which I didn't think to check, so since that laptop only has 2 usb-c ports for power input, it's a bit limiting.The upside, though, was that I plugged it in, got my throughput, and never had to worry ever again. Remember that engineering time is mucho $$. So troubleshooting overheating, divising a solution, manufacturing it, etc, that all eats into the savings.The $400 dock would be cool though. It seems smaller than the sonnet and fixes my charging problem. Weirdly I didn't think I'd care about not including transceivers but they did actually come in handy, so that is a downside. Might try to get one of these if I need another one in the future.reply",
-      ">I'm using the sonnet at work.I initially read this as SONET[1] and was seriously questioning your technical choices.[1] https://en.wikipedia.org/wiki/Synchronous_optical_networkingreply",
-      "hey. hey. not everyone\u2019s on board with this packet switching fad, buster.what a man does in his own homelab, even if it does involve ATM, is none of our business.reply",
-      "Can't you just put a real PCIe NIC in an eGPU enclosure with a fan? I bet you can solve this problem for like $150 and two craigslist transactions.reply",
-      "Thats what I do.ConnectX-4 and newer are natively supported. I use a ConnectX-4 LX in a $50 Razer CoreX off of craigslist. Works fine, hit similar limits to what Jeff did.Using an OCP is the neat trick here. MUCH smaller setup.As far as the other posters comment about Tx's... that is an entirely different topic. I've never had an issue with FS.com optics personally.reply",
-      "Absolutely not. It's another layer of throughput/compatability bingo on top of the already often quite annoying SFP bingo.If you are unfamiliar, the reality of the situation is quite bad. Slight hardware revisions of adapters/switches, which if you are lucky can be differentiated by manufacture date or serial number sequence, will not recognize known good modules, and if they do you then have to actually test if they can establish link, then let them burn for 24+ hours to see if they can maintain it without dropping (often, because of forward error correction, you will not start to see flapping until enough correctable errors have accumulated and the buffer overflows). Then there are firmware updates where this process must then be repeated.You would think with how expensive all of this shit is you would simply be able to buy the officially listed as compatible components but my experience with them has been that a shotgun approach is best for your sanity and deadlines, buying sample kits of each module and trying them all, and then once you find the ones that play nice, buying as many of them as is reasonable and testing all of them.If I had a dollar every time two modules from the same brand, that came in the same box, from the same production run, did not work with one another, I would be able to test your theory for free. Network Engineering is Funreply",
-      "Jeff, I\u2019m curious whether you really would have needed the $1,000 version of the Sonnet TB5 PCIe chassis. Would this $400 one have sufficed? https://www.bhphotovideo.com/c/product/1932655-REG/sonnet_ec...reply",
-      "$400 is for the empty enclosure and $1,000 is for the enclosure with a NIC in it. Obviously it's still a ripoff because a 25G NIC does not cost $600.reply",
-      "Yeah the best option for cost is to buy one of the many TB4 to PCIe adapters on the market now (I've tried two), that are less than $100. They require external PSU power though, and they don't look nearly as nice on a desk.reply",
-      "One of the YouTube comments pointed out the issue is most likely the lack of support for SMB Direct (RDMA) in macOS. Would be nice to repeat the test on a Windows/Linux laptop.reply"
+      "xxx"
     ],
-    "link": "https://www.jeffgeerling.com/blog/2026/getting-25g-ethernet-mac-thunderbolt/",
+    "link": "https://censys.com/blog/cisa-alert-water-tower-plc-targeting/",
     "first_paragraph": ""
   },
   {
-    "title": "Tailscale didn't stop the Hugging Face intrusion (tailscale.com)",
-    "points": 475,
-    "submitter": "bluehatbrit",
-    "submit_time": "2026-07-31T19:03:45 1785524625",
-    "num_comments": 183,
-    "comments_url": "https://news.ycombinator.com/item?id=49127306",
+    "title": "But can your calculator run Linux? (raymii.org)",
+    "points": 69,
+    "submitter": "jandeboevrie",
+    "submit_time": "2026-08-01T19:44:48 1785613488",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=49137713",
     "comments": [
-      ">No \u201cvulnerabilities\u201d in Tailscale were found or exploited, and that might make it even more uncomfortable for us. [...] But, we're a security tool. Their intrusion is our intrusion, and it's our job to take it seriously.im a happy customer of tailscale, so i am obviously biased, but i have a lot of respect for this. they could have just stayed quiet and i dont think anyone would have bat an eye.reply",
-      "Agreed its a tool, and it does not looks like any vulnerability was exploited on their end. However part of the blog is confusing to me. Long lived keys vs short lived have their own space in discussion, there are use cases, pros & and cons for the same. However it is not very clear how a short lived credential would have prevented the exploit in this case?reply",
-      "It would not have prevented the initial exploit. The agent gained access to the K8s cluster and read the Tailscale Auth Key from Cluster Secrets. A short-lived credential would reduce the risk that the key is still valid when an agent gains access.reply",
-      "Tailscale as a company reminds me of Valve and other good old tech-oriented people that I can \"trust\" that they know what they're doing. I'm a happy customer too and I hope they retain the essence of what distinguishes Tailscale.reply",
-      "For me, the calculus is simply: \u201cthere\u2019s no way I could do this better than Tailscale\u201d.reply",
-      "That's true, but for some things I require a bar much higher than \"at least as good as I could do.\"reply",
-      "\u201cthere\u2019s no way I could do this better than Tailscale\u201d is a much higher bar than \"at least as good as I could do.\"reply",
-      "[flagged]",
-      "(Tailscale CEO) You have posted here multiple times that \"none of the code has had a security audit\" and that the SOC2 audit \"is not the same thing.\"It's true that those two audits aren't the same thing. However, the SOC2 auditor confirms, in the published report, that Tailscale has regular and ongoing security audits including penetration tests and many kinds of code reviews.The security audit report, which you perhaps imagine to be a long list of vulnerabilities... doesn't look like that. It says we don't have a long list of vulnerabilities. The security bulletins are all here: https://tailscale.com/security-bulletinsreply",
-      "The majority of your security bulletins are as the result of third-party reports to you.Which, by definition, means they are not done by you, which means you don't know when they will be done or how much of your code base they are looking at.I think you know full well what I mean by a security audit. If you don't, go look at, for example, the ones that Mullvad publish for their software https://mullvad.net/en/blog/tag/audits.Please do not try to portray SOC2 as being the same thing as a code audit.And IF you have regular code audits, then please publish suitably redacted reports in public on your website.  Just like everyone else does !reply"
+      "I use the Prime G2 daily. I VERY much prefer RPN, love that I can program it with Python (and occasionally PPL,) and am often in environments where having a backlit screen is a lot more convenient than pulling out a flashlight. Linux on it would be a fun novelty, but the clunkiness would make it a lot less useful to me. The big collection of physical buttons behaving predictably without needing to look at the screen is super useful. Otherwise I\u2019d just use my phone.reply",
+      "If a toaster can run on Linux,so can a calculator.(NetBSD used to have that slogan with regards to toasters. I have not followed it for several years, so I don't know which operating system dominates toasters nowadays.)reply",
+      "These calculators are, without question, excellent little devices and the HP ones in particular had great engineering behind them.  I had an HP48 in undergrad, which was considered pretty much mandatory for engineering.  There was a thriving student sneakernet of programs you could get that would trivialize certain problems.  Some friends had the HP49G which was, in my opinion, a step down in terms of build quality.  Years later I bought an HP50 which was the best of both worlds.I still have my HP50 but there's just no reason to use it.  Anywhere I go I either have my phone or a computer.  When I was in the air force I would have to go into EMSEC zones where you couldn't bring external devices, such as SCIFs, but the number of people with needs to be running engineering calculations in such an environment rounds down to 0.  Certainly I wasn't one of them.Even \"in the field\" nowadays, you're likely to have satellite connectivity and a laptop.  There's just not really a use case for graphing calculators that I can think of.  It's too bad, because they're awesome.reply",
+      "I still have my 50g on my work desk for one reason - to do calculations with units. Admittedly I use emulation on my phone mostly, but the 48-50 units calculations are still the best I\u2019ve used. (But if I don\u2019t need units I use my SM 42).reply"
     ],
-    "link": "https://tailscale.com/blog/hugging-face-intrusion",
-    "first_paragraph": "Meet TailscaleProductsAperture by TailscaleUnified AI governance for AI agents and users. Join us at TailscaleUpTailscale\u2019s conference for engineering, security, and IT leaders.SolutionsCustomer StoriesJoin the CommunityEventsLearn moreJoin us at TailscaleUpTailscale\u2019s conference for engineering, security, and IT leaders.Partner OpportunitiesMeet TailscaleProductsSolutionsCustomer StoriesJoin the CommunityEventsLearn morePartner OpportunitiesAn AI agent escaped its sandbox, entered Hugging Face\u2019s infrastructure, and used a stolen Tailscale credential to enroll 181 nodes onto their tailnet. No Tailscale vulnerability was found or exploited\u2014we should have been able to prevent it anyway.By now, you\u2019ve likely heard about the AI agent that escaped a security evaluation and attacked Hugging Face, an LLM marketplace. The agent decided Hugging Face might have the answers to its benchmark, so it stole them just to cheat on the exam. That's a funny motive but a scary outcome.Hugging Face publish"
+    "link": "https://raymii.org/s/articles/But_can_your_calculator_run_Linux.html",
+    "first_paragraph": "\n\n\n\n\nPublished: 01-08-2026 20:08 | Author: Remy van Elst | Text only version of this article\nOne of my all time favorite calculators is the HP 16C. It is an RPN calculator aimed at\ncomputer programmers with support for hex, binary, octal and decimal and all\nsorts of useful operations like bit shifting, masking and rotations.  I don't\nown one myself, I have a Swiss Micro's DM16L, a high quality modern day\nremake with improvements like a 2 line display. There is a limited run\ncollectors edition of the HP 16C coming soon though.\nBut none of those calculators run Linux.This one can:xcalc on an actual calculatorScreenshot of the console and partial fbv image viewerOf course it runs DoomMy all time favorite, the HP-16CBelow are at least a thousand words covering the HP Prime G2 and other\ngraphical calculators capable of running Linux. You can skip that if you just want to read about my updated Linux port for the Prime\nG2.  The HP Prime is a graphing\ncalculator on the market since 2013, with "
   },
   {
-    "title": "Run Kimi K3 using 29 GB of RAM at 0.50 tok/s (github.com/sqliteai)",
-    "points": 165,
-    "submitter": "marcobambini",
-    "submit_time": "2026-07-31T14:12:38 1785507158",
-    "num_comments": 66,
-    "comments_url": "https://news.ycombinator.com/item?id=49123386",
-    "comments": [
-      "Approximate calculation is putting the cost at ~$5 per million tokens (assuming 42W sustained, 20\u00a2/kWh), and that's excluding hardware and other costs.reply",
-      "I got to the same conclusion another way. There's ~2.6million seconds a month and this is getting 0.5tok/s which is 1.3million tokens a month. Give some room for overhead and a reasonable rule of thumb;The cost to run the machine per month is the cost per million tokens.reply",
-      "Claude might as well be .5 tok/s. I end up waiting several minutes and what it tells me could usually be summarized in under 100 words.So I could potentially live with this if it was concise.reply",
-      "That README hits all my \u201cthis is authored by an LLM\u201d instincts. I presume the codebase is also written by an LLM?reply",
-      "it is definitely the claudiest. it's weird, it's like there's a spot developing in my head next to all the other spots where i park mental models for how people write, but instead of being for a person, it's for the terse-staccato-prosodic-diarrhea that claude generates in readmes by default.reply",
-      "Yup, I hate to engage in anything that looks like a \"shallow dismissal\" but the project documentation seems to outright contradict itself wrt. whether it's running the model at genuinely native precision (though the claimed 3-bit quant is potentially interesting) and the headline claim of achieving 2 secs/token in a mere 29GB RAM footprint looks outright nonsensical given what we know about K3 itself (~115GB in dense parameters alone at native precision, plus ~25GB active sparse experts per token and some comparatively minor footprint for the KV cache).  This is just not very helpful.reply",
-      "I wrote tons of software, even a programming language by hand https://github.com/marcobambini/gravity.I'm using my skills to orchestrate LLMs and agents, and I can write better code much faster. As developers, we can choose to adapt to new technologies or become extinct.reply",
-      "Please consider writing your Readmes by hand even if the code is computer-generated. I want to read what human authors think about their projects. I virtually never want to read what a computer thought.reply",
-      "Also irrespective of the merits of LLMs, it's simply unpleasant to read LLM generated prose. It can't write well. The annoyance is compounded when you read the same poor writing everywhere.I don't know how people that shovel AI prose don't realise this. Are they not also reading other people's shitty AI text?I did see one sloperator who told his agent to copy his writing style. I have no idea if that works but it's got to be better than yet more \"Here's the kicker\" LinkedIn drivel.reply",
-      "Rewrite the readme in my voice, use all of my comments and responses in current context as source. Don't use em dashes or other LLM things.Done, solved. Never had a problem with a readme or email since.reply"
-    ],
-    "link": "https://github.com/sqliteai/waste",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n           There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.Kimi K3 \u2014 2.78 trillion parameters \u2014 running on a consumer laptop.WASTE is an embeddable inference engine written in C, with no third-party runtime dependencies. It keeps the model trunk in memory, streams selected experts directly from disk, and uses the remaining RAM as a bounded expert cache.Its current proof point is the complete open-weights Kimi K3 model: 2.78 trillion parameters, converted into a 982 GiB container and running on a 64 GB MacBook Pro at 0.49\u20130.54 tokens per second. This is not a distilled, pruned, or reduced variant.WASTE was written for that one model and that one constraint: K3 does\nnot fit in the RAM of current mainstream consumer systems. It is 1.42 TB\nas published and 982 GB after conversion. But a "
-  },
-  {
-    "title": "Golang proposal: container/: generic collection types (github.com/golang)",
-    "points": 128,
-    "submitter": "jabits",
-    "submit_time": "2026-07-31T18:39:47 1785523187",
-    "num_comments": 78,
-    "comments_url": "https://news.ycombinator.com/item?id=49127031",
-    "comments": [
-      "Step by step, Go is now learning the hard lessons every other language has learned over the last 20 years. The fact that despite their best efforts, their propositions look like everone else is a surprisingly refreshing affirmation of status quo.reply",
-      "I respect \"we're going to try not to add features until we have to and have a plan that we like\" as an approach to a practical language, vs \"we're going to plan to support everything normal modern languages have\".\nIt isn't the best approach to language design in theory, but they did try to build a language that isn't impossible to change, and to be fair the mix of language features they chose didn't have any good more successful examples to borrow from,  so waiting for enough practical experience to make the relevant trade-offs on practical grounds isn't the bare naivety that some people seem to take it as.reply",
-      "The problem is that when you don\u2019t have a cohesive picture of how things fit from the outside, it becomes really hard to evolve the language in a way that makes sense and doesn\u2019t break existing code. Data storage and languages share this unique property that the past impacts your decisions and what makes is possible in the future in a way pure logic doesn\u2019t struggle with.reply",
-      "And this is -exactly- one of the reasons they didn't accept or continue with a sane proposal for more ergonomic error handling. I like go, but this was the one thing that I kept feeling like I was wasting so much time dealing with.reply",
-      "I totally get that. Java is my favorite language for exactly that reason. They are a deliberate \"late mover language\" and adopt what other languages have proven right.But looking at how adamant Go used to be on the whole \"No Generics\" stance and the path and the troubles they are having... it all seemes so preventable?reply",
-      "I think it was.Go without generics was ok. I say that as a fan of generics in other languages.There is room for languages with simpler feature sets.It takes a strong leader (and the good and bad that comes with that) to continue to deny features. Go had that. Does it still? (I genuinely don't know.)I'm not sure what Go's value proposition is now.Developers can't pick it up in a week, as it used to be. Maybe that's okay too, since Go already has critical mass.reply",
-      "Does it? It was only preventable by not releasing Go, which isn't exactly the greatest of solutions.As you know from when Go was first broadcast to the world, they hadn't figured out how to make generics fit[1]. It is not like they weren't trying. Ian Lance Taylor is regarded for beginning work on generics before anyone outside of Google had even heard of Go. \"In short: not yet\"What was surprising is that after Go was released as an open source project, nobody across the whole wide world ever came up with a workable solution. You can sense the optimism in that original announcement that later turned to \"Go might never get generics\" dispair. As you'll recall, it finally took convincing Philip Wadler (of Haskell and Java generics fame) to help. Without that lucky break, which almost certainly never would have happened if Go was still some basement project used by nobody, Go probably still wouldn't have generics.[1] https://youtu.be/rKnDgT73v8s?t=3267reply",
-      "Well, better late than never. Stuff like sets or a typed heap is long overdue. Maybe they'll even add iterator API for database/sql results this decade too (something like my pull request for sqlx https://github.com/jmoiron/sqlx/pull/990 but maybe more polished)reply",
-      "Also having stuff like a concurrency limiter (instead of doing weird var limiter chan struct{} and using it as `limiter <- struct{}{}` and `defer <-limiter`) as a library function in `sync` package would be great too.reply",
-      "There is actually a way to do this with errgroup provided you can work with func() error signaturehttps://pkg.go.dev/golang.org/x/sync/errgroup#Group.SetLimitreply"
-    ],
-    "link": "https://github.com/golang/go/issues/80590",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n           There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.Background: The Go Collections working group was formed in late 2025 with the purpose of bringing common collection data structures to the standard library, guided by the familiar Go principles of pragmatism and simplicity. Alphabetically by last name, the group consists of Jonathan Amsterdam (@jba), Alan Donovan (@adonovan), Robert Griesemer (@griesemer), Daniel Mart\u00ed (@mvdan), Roger Peppe (@rogpeppe), Keith Randall (@khr), and Ian Lance Taylor (@ianlancetaylor). We\u2019ve now reached a point where we\u2019re ready to share our results with the community.This issue is an umbrella for discussing several related proposals for new collections APIs for Go 1.28. It presents a high level overview of the themes, and links to the various con"
-  },
-  {
-    "title": "Let's make the worst Htmx (zserge.com)",
-    "points": 75,
-    "submitter": "RebelPotato",
-    "submit_time": "2026-07-31T05:16:45 1785475005",
-    "num_comments": 21,
-    "comments_url": "https://news.ycombinator.com/item?id=49119270",
-    "comments": [
-      "Have a pretty large application running HTMX + WebComponents + Hono + Cloud Functions to serve up frontends, happy with it for about 2 years nowPeople throw salt at my stack but it\u2019s fast, and straightforward to manage attack surfacereply",
-      "Huh, so every interactive event has a network request in the loop, with perceptible latency? And you still end up obligating client-side JS for the plumbing? I'd been meaning to look into HTMX but based on the content of this post it seems like a worst-of-all-worlds technical solution. Is it at least pleasant to work with?reply",
-      "No, every interactive event doesn't need to have a network request in the loop. And you only need a tiny bit of client-side JS for a most of the plumbing.It is quite pleasant to work with, because you don't have to worry about a constant stream of vulnerabilities or supply chain attacks. You just vendornthe script in your repo, add it as a <script> tag on the page, and you're done.reply",
-      "Supply chain attacks are not a JavaScript or npm exclusive risk. If you pull in any dependencies you have a supply chain risk.reply",
-      "Who is worrying? If JavaScript is on the front end the supply chain attacks are really not your problem.reply",
-      "What? It handles your password fields.reply",
-      "Just do SSO.reply",
-      "That's why many times HTMX is used together with alpinejs [1].For areas that need server side, if you use say react and return a JSON you have to deserialize and do the render. It might be much more efficient to just replace.Having said that I use HTMX /alpinejs for small projects, and still trust react for bigger more interactive ones.[1] https://alpinejs.dev/reply",
-      "It\u2019s only has a network request in the loop if the interaction requires a network request.Htmx is a replacement for network interactions, not every bit of UI interactivity.reply",
-      "It's for building extremely backend-brained frontend stuff, like a sort of anti-NextJS. Also like NextJS, this sort of domain-bending has some unfortunate operational consequences.reply"
-    ],
-    "link": "https://zserge.com/posts/worst-htmx-ever/",
-    "first_paragraph": "This is a continuation of a series of posts about building tiny \u201cclones\u201d of popular web frameworks.Web is changing rapidly, and so the tools we use to build web apps (yet, I\u2019m sincerely happy that my React/Vue posts are now seven years old, and those frameworks are still popular and relevant).Today the hot topic is htmx, basically a frontend library for backend developers who couldn\u2019t care less about JavaScript. HTMX started as intercooler, then evolved and grown more features, and is there is some beauty to it:In a declarative manner, it says: when the button is clicked, send a POST request to /clicked, and replace the outer HTML of the element with id #parent-div with the response data. HTMX wires together events, AJAX requests, and DOM updates hiding away frontend complexity. As long as your backend can send HTML templates you can go pretty far with it and build complete apps without a single line of JavaScript.Looking at the example above, seems like our library should fetch() some"
-  },
-  {
-    "title": "How JPEG works: Interactively explore JPEG's lossy compression methods (cgjennings.ca)",
-    "points": 118,
-    "submitter": "at1as",
-    "submit_time": "2026-07-27T15:11:14 1785165074",
-    "num_comments": 13,
-    "comments_url": "https://news.ycombinator.com/item?id=49070810",
-    "comments": [
-      "Nicely illustrated, and only one criticism: our preference for luminance (using more bits for \"Y\" vs \"Cr/Cb\") isn't due to the number of rods in the eye - there are so many rods so that we can capture more photons at night, and they are usually saturated at daylight illuminances. \nThe effectiveness of the YCbCr encoding is much more related to the predominant pathway to the LGN (80-90% of the \"number of bits\" used) encoding luminance and center-surround, so those things both map well to using more bits for \"Y\".reply",
-      "I remember when I first learned about the difference between spatial and frequency domains. I didn\u2019t actually get it fully during class. But during the walk home I had to stop and sit down and think about it\u2026 I started to \u201crefactor\u201d all of human history into frequency changes! It\u2019s a pretty interesting concept.reply",
-      "I made the most discoveries of solutions to my work in that drive home.reply",
-      "There's a series of videos showing the algorithm: https://www.youtube.com/watch?v=LFXN9PiOGtYI finally understood DCT after watching https://www.youtube.com/watch?v=Q2aEzeMDHMAAnd someone created a \"JPEG to PNG\" tool that \"finds the smoothest possible picture that encodes to the given JPEG file\": https://github.com/victorvde/jpeg2png . I tried it with some very terribly compressed images, and the outputs were a lot better.reply",
-      "That jpeg2png is extremely cool and looks like something which could be built in to image viewers. Naturally, nothing about the \"maximally smooth decode\" process requires the output to be PNG.reply",
-      "Here's another option, comparison to jpeg2png at the bottom of the README.https://github.com/ilyakurdyukov/jpeg-quantsmoothreply",
-      "I appreciated the information being presented, but when the controls are not visible at the same time as the thing they effect it makes the interactive component almost worthless.reply",
-      "same, OP you should put the source image and controls in a floating popover that's static while the rest of the page content is scrolled, or a sticky header or something.reply",
-      "Thanks, this is a clear explanation, thanks for sharing!\nI\u2019d be curious in follow ups on other formats like PNGreply",
-      "(2017)reply"
-    ],
-    "link": "https://cgjennings.ca/articles/jpeg-compression/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "The most official water costs $120k a gallon (signoregalilei.com)",
-    "points": 144,
-    "submitter": "surprisetalk",
-    "submit_time": "2026-07-31T15:00:15 1785510015",
-    "num_comments": 127,
-    "comments_url": "https://news.ycombinator.com/item?id=49124042",
-    "comments": [
-      "NIST Cigarettes are a mere $204 per carton.Depending on what state you live in, that's not bad these days.https://shop.nist.gov/ccrz__ProductDetails?sku=1196a&cclcl=e...reply",
-      "Shows $508 for 2 cartons, so 254 per. NY has probably most expensive smokes, ranging $140-155 per cartonreply",
-      "most needs for such water are for calibration of instruments - many labs run stable isotopes measurements which has many applications from tracing how plants use water to measuring your metabolic base rate .. so the main use case it to calibrate instruments because it's really difficult to have an absolute measurement of stable isotope ratios from first principles - and the ratios are so small you typically express them in relation to standards like VSMOWreply",
-      "Reminds of me of the \"most expensive peanut butter\" at ~$2.44/g - sold by NIST, I assume for some sort of peanut butter factory process calibration:\nhttps://shop.nist.gov/ccrz__ProductDetails?sku=2387reply",
-      "For more context, sample reference materials from the NIST reference catalogue are not meant to be exceptionally high purity examples of the sample -- SRMs are usually commercially-produced products. The real value is that each sample comes with a datasheet with incredibly detailed and accurate measurements that are (as you said) used for calibration of measuring devices in industrial settings. To quote a Veritasium video about the topic from a few years ago[1], \"the thing you're paying for is not the peanut butter, it's the knowledge of exactly what is in the peanut butter\".[1]: https://youtu.be/esQyYGezS7c?t=226reply",
-      "Truth.  I once paid nearly $500 for a set of 17 certified, calibrated wooden pencils, with documentation showing that each one met their rated hardness levels of 9H thru 6B. And for $500, they don't even come with erasers, that is an added-cost option.https://www.gardco.com/product/pencil-hardness-test-kit-astm...reply",
-      "I'd like to ask a more specific question than my sibling's excellent \"Wait, why?\" question :)Why offer erasers on these things?  The procedure described below has nothing to do with using these as pencils, and at $500 for a pack I can't imagine anyone, anywhere casually drawing with these.(Is there another procedure, similar to the one described below, except instead of dragging the pencil tip across a surface you drag the eraser across it? )reply",
-      "Can I ask why :-) Sounds like an interesting project.reply",
-      "His link includes procedures, which suggest he was testing the hardness of some surface coating or similar:> For the pencil hardness test, reference ASTM D3363, pencils of increasing hardness values are moved over the surface in a precisely defined way until one lead damages the surface. Surface Hardness is defined by the hardest pencil grade which just fails to damage the surface.> Observe the pencil track. Sufficient pressure must have been applied either to cut or damage the coating or to crush the lead pencil point.> If neither coating damage or pencil point crushing is observed, repeat the test until a definite observation is made.> If scratching or damage of the surface occurs, proceed with the next softer pencil grade and repeat the testing process until a pencil lead grade is found which crushes and does not damage the coating.> If crushing of the hardest lead should occur, the coating is therefore extremely hard and is beyond the measuring range of this testreply",
-      "You use the kit to test the harness of a finish coating, like a paint or a ceramic coating for cars. Pencils have their own hardness scale which can be used to gauge the hardness of the coating. Its really more of a relative qualitative test than quantitative as you'd use this for sample/coupon testing identical coatings. There are more absolute, quantitative methods to measure various hardness characteristics (scratch, indentation, and rebound). Like you'd use the pencil kit on a factory floor to make sure each paint sample performs the same, the sample being a small area on the product or a plate that's painted the same way.reply"
-    ],
-    "link": "https://signoregalilei.com/2026/07/26/the-most-official-water-costs-120000-a-gallon/",
-    "first_paragraph": "Let's Explore!BlogVideos\n\n\n\n\n\n\n\n \n\t\t\t\t\t\t\t\tSubscribe\t\t\t\t\t\t\t\nWe all learned in science class that water freezes at 0 \u00b0C or 32 \u00b0F at atmospheric pressure. But what water, exactly?\u00a0Even after you distill out all the dissolved salts and minerals to get pure H2O, not all H2O is created equal \u2013 and for the most precise temperature measurements, the differences really matter.Here\u2019s the problem: hydrogen and oxygen atoms aren\u2019t all identical. All atoms of a single element have the same number of protons by definition, but they can have different numbers of neutrons, forming different isotopes. We need to know how much of each isotope to use for our experiments.Credit: OpenStaxFirst, let\u2019s go over the isotopes of hydrogen and oxygen. Hydrogen has one proton and either zero, one or two neutrons forming its isotopes protium, deuterium, and tritium. Oxygen has 8 protons and either 8, 9, or 10 neutrons forming the much less creatively named oxygen-16, oxygen-17, and oxygen-18.Different isotopes of a"
-  },
-  {
-    "title": "Loops (YC W22) Is Hiring a Product Educator (ycombinator.com)",
+    "title": "Morph (YC S23) Is Hiring Member of Technical Staff (ycombinator.com)",
     "points": 0,
     "submitter": "",
-    "submit_time": "2026-07-31T21:00:40 1785531640",
+    "submit_time": "2026-08-01T22:52:44 1785624764",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://www.ycombinator.com/companies/loops/jobs/zqUnwqB-product-educator-technical-content-creator",
-    "first_paragraph": "Email sending for startupsLoops (YC W22) is the email platform for modern software companies. We help product and growth teams send better lifecycle email without fighting legacy tools.The roleWe\u2019re hiring a US-based Product Educator and technical content creator on a contract-to-hire basis. You\u2019ll turn Loops features, launches, and customer workflows into clear, useful product marketing and educational content across video, YouTube, email, social, and docs.We\u2019re looking for an ambitious self-starter. This is a hands-on role on a small team: you\u2019ll work directly with product, find the stories worth teaching, and build our product education playbook as you go.What you\u2019ll do\u2022 Script, record, and edit concise product tutorials, demos, and launch videos\u2022 Create email, social, and docs content that helps customers use Loops\u2022 Show teams how to build onboarding, trial-conversion, and churn-prevention email flows\u2022 Repurpose strong ideas across X, LinkedIn, YouTube, email, and docs\u2022 Work direct"
+    "link": "https://www.ycombinator.com/companies/morph/jobs/0Z8vI3K-member-of-technical-staff",
+    "first_paragraph": "Fast Models Optimized for Coding AgentsThe best candidates would be top 1% at multiple parts of the inference stack.work on PD disaggregation researchMorph builds the inference infrastructure behind the fastest open models. Our stack spans kernels, model serving, routing, autoscaling, and capacity. We are hiring a performance engineer to make the entire system faster, cheaper, and more reliable.You will work directly with the founders on problems that determine how efficiently frontier-scale models can be served. Small team, enormous compute, immediate production impact.2 day work trialMorph builds specialized code-generation models and serves them on a custom inference stack.Technical work involves autoresearch for kernels and custom speculative-decoding models.\u00a9 2026 Y Combinator"
   },
   {
-    "title": "How far can you push the range of Wi-Fi connectivity in an ideal environment? (phidgets.com)",
-    "points": 12,
-    "submitter": "rzk",
-    "submit_time": "2026-07-28T13:59:14 1785247154",
-    "num_comments": 8,
-    "comments_url": "https://news.ycombinator.com/item?id=49084005",
+    "title": "The Art of 64-bit Assembly (nostarch.com)",
+    "points": 198,
+    "submitter": "0x54MUR41",
+    "submit_time": "2026-08-01T14:09:00 1785593340",
+    "num_comments": 87,
+    "comments_url": "https://news.ycombinator.com/item?id=49134599",
     "comments": [
-      "I remember some sort of stunt where they had got hold of two 3 meter dishes paired them with off the shelf wifi radios, mounted one on a pickup truck and drove out across a dry lake bed. 53 miles before signal loss is what I remember.I will probably never be able to find the source, and my poor memory probably inflated the range like any good fish story.reply",
-      "Not about range, but speed. Wifi is surprisingly slow. I noticed downloading a model from the internet (Huggingface) to my Desktop (connected by LAN cable) is faster than copying it from said Desktop to the laptop in the same room via Wifi.reply",
-      "I\u2019m pretty sure I\u2019ve connected to a bog-standard Mikrotik Metal over a thousand feet. The surprise wasn\u2019t that it connected, it was that the phone could transmit back.reply",
-      "They address that they were looking at the maximum unlicensed power.In HAM circles some people do use WiFi in an arguably legal manner by making the SSID their callsign and either making the network open or putting the password somewhere public. This is because you are not allowed to use public bands for encrypted communications (with a carveout for satellite control, for obvious reasons).I'm unsure what ranges can be hit with that setup, but I know it can be far enough that LoS due to curvature of the earth becomes a factor.I do think just getting a wireless P2P bridge is easier and smarter and why this hasn't seen more use.reply",
-      "You can buy consumer wireless repeaters basically but the latency sucksreply",
-      "I am still reminded of early WiFi and ways to extend it with Cantenna or foil backed contraptions made out of cardboard.reply",
-      "And no passwords! That's how I got Internet as a broke college student living off campus.reply",
-      "Used a cantenna and a PCI card with modified firmware to great effect when I only had WiFi for internet at the barracks in Japan in the 00's. I was absolutely outside of the legal limits on power, which I didn't really know at the time.Extreme contention when 250 people had 3 APs as their only connection and half were trying to play WoW at the same time.reply"
+      "I know that we're discouraged from meta-comments, but what is going on in this thread? It's a nearly 800-page book about the art of programming. A huge amount of work on a topic that should be dear to our hearts. News for hackers, right?But somehow, the discussion has three themes. It's 50+ comments of \"I don't like the first sentence of the marketing copy\", \"I don't like the tool the author is using\", and \"what would happen if we train an LLM on this book?\". Has anyone read the sample chapter? Did you like it? Anyone here owns volume 1 and has opinions about that?reply",
+      "I own volume 1 and when it first arrived I dropped it on my foot and had to go to the doctor. I have not got around to reading it again. His original x86 ASM book was good though.I also read his Write Great Code series and generally found it to have some pretty good advice, but it was also full of things like recommendations to never trust compilers and to write lots of arcane unreadable magic code to unlock ultimate speedy hacker cred.That being said, if you want to learn about ASM in TYOOL 2026 then you could do a lot worse than learning it from someone who doesn't trust compilers and does everything themselves.reply",
+      "Yeah, I'd second a recommendation of at least the first two volumes of Write Great Code. I've long suggested those to juniors who have come out of bootcamps, self-taught, or other backgrounds outside a typical CS degree and didn't have much exposure to lower level machine concepts. I was a bit let down by the third volume... not that it was bad per se, but I feel like the sw engineering process stuff it covered both strayed outside his core strengths and had been done better elsewhere already.reply",
+      "> if you want to learn about ASM in TYOOL 2026 then you could do a lot worse than learning it from someone who doesn't trust compilers and does everything themselves.Not bad advice, but the Fasm forums used to be pretty good for asking questions, no clue if they are around and active still, but there were a lot of programs people had written and even a few simple OSs(including KolibriOS) which had a ton of code to read through that mostly was commented. Once you get the basics it is pretty easy to do stuff, and most of learning is doing stuff.reply",
+      "His earlier 32bit book was pretty decent, but super windows focused, I wish a similar work using a reasonable syntax existed for Linux, but the linux equivalent(some kind of foundations of programming or something similar assembly book) used gas syntax which is like nails on a chalkboard.  Fasm is also so much nicer these days to use(masm is neglected by microsoft, but is the tool the author has used for everything).reply",
+      "Volume 1 is actually a really good book. Randall Hyde is a great author on this subject. HN has changed a lot from what it once was. It's just filled with a lot of this kind of snark and nonsense. What else would you expect when the most common take on AI on HN is this insane idea that \"LLMs are just like a compiler was?\" But, its not everyone. If you're interested in this topic then I think it will be worth working through.reply",
+      "this is what almost every hn post is: lowbrow reflexive/reactionary responses. it's been like this for years. try to call it out and you'll be censured by dang or one of the other police officers for being \"uncharitable\" or something like that <shrug>reply",
+      "Interesting to see that people are still spending much time on assembly languages :) \nI've had a lot of fun with it in recent years as well. (Shameless plug: I've written a few on LLVM integrated assembler regarding better fragments and improving expressions and relocations).When comparing GNU Assembler and MASM, GAS is missing many features: while loop, string processing (.e.g strlen)> page 3: \"It\u2019s important to understand that MASM converts macro invocation arguments to text values before doing the macro expansion\"Like MASM, GAS uses call-by-name evaluation by default. While GAS's altmacro mode does allow for expression evaluation using syntax like `%(1+2)`, it has strict limitations: it only supports absolute expressions and is restricted to argument positions.In contrast, MASM's % operator (page 8) looks far more general.reply",
+      "I'm just gonna be the weirdo in this comment thread and say: yay! Assembly!\nThe most god forsaken language i ever had to learn. \nBut still very very usefulreply",
+      "i'm sorry, starting with \"you can ask AI to \u2026 [but it'll do an incomplete and bad job]\" and then launching forth into a hundred words of AI-produced text is not very appetizingi hope this is the publisher's fault and the author replaces it with something decent of their own. contrary to the opinions i've heard around (including elsewhere on this thread) learning asm is still meaningful today and it's something i'd like to get better at so i will consider getting this book or one like it once $work is a bit less hecticreply"
     ],
-    "link": "https://www.phidgets.com/?view=articles&article=LongRangeWifi",
-    "first_paragraph": "To access your account, use the shopping cart, or complete a purchase, please enable JavaScript in your browser settings.\n                        For this project, we aim to answer a simple question: given an ideal environment, how far can you push the range of Wi-Fi connectivity?\n                    \n                        To test this, we set out with the goal to control a robot as far away as possible using Wi-Fi to transmit commands from a laptop\n                        to a Phidget SBC4.\n                    \n                        Before we could start, though, we had to do some research.\n                    \n                To get a handle on our main question, we need to establish some background. Wireless communications, such as Wi-Fi, rely on transmitting\n                radio waves at a specific frequency in specific patterns. These patterns are then picked up by a receiving antenna, and translated to \n                usable data. In order for the receiver to understand the"
+    "link": "https://nostarch.com/art-64-bit-assembly-v2",
+    "first_paragraph": ""
   },
   {
-    "title": "Twenty-five years ago it was cryptography, today it's model weights (weeraman.com)",
-    "points": 178,
-    "submitter": "aweeraman",
-    "submit_time": "2026-07-28T13:31:25 1785245485",
-    "num_comments": 74,
-    "comments_url": "https://news.ycombinator.com/item?id=49083599",
-    "comments": [
-      "The same argument applies to DRM and piracy. DRM only disadvantages people who want to consume content legally. Only one person has to bypass it (be it through cryptographic or software failings or the good old fashioned analog hole ala telesync) then upload the resulting unencumbered media file to a piracy site.As a result, it's not just cheaper, but also easier and more reliable to steal media than it is to buy it legally.What would happen if media were offered without DRM? Everything would be on a piracy site? It already is.reply",
-      "Cheaper & easier - not by much. Australia blocks all the good torrent sites, so now I need a VPN, a reputable one. Also need terabytes of network connected storage, and usually I need more and more of it over time. Better and more networking equipment to buy and maintain. Media management and streaming software that works locally and remotely, to (maybe buy) and maintain.Or I can usage discount offers for the various streaming platforms, and pay for each one I want to watch something on from time to time.The streaming services also don\u2019t come with who knows what malware like pirated media can.And a YouTube Premium subscription because you get ad free YouTube Music and ad free YouTube.reply",
-      "This is true for music because the labels decided that they would upload their catalogs to every streaming service.It's not true for movies, because the movie industry decided to sign exclusivity deals or make movies only available on their own platforms. Thus piracy is still the only reliable way to watch movies: you might get access to some subset of movies depending on which streaming service you subscribe to, but certainly not to all of them.reply",
-      "How does that negate needing a VPN, storage, networking, media management, remote access, malware?I\u2019ve never met even a data hoarder who has \u201call of them\u201d, and I tend to watch them one at a time anyways, so I\u2019d argue \u201cnot all of them\u201d isn\u2019t really a problem anyone has.Having said that, I do tend to pirate a relatively small collection of movies and series, just the ones I could watch  over and over and never get tired off.reply",
-      "You can access streaming (not torrenting) sites without a VPN and just watch whatever movies you want and there's no hastle or malware? If you like something particularly you can download it and then storage becomes a factor, and if all streaming sites are blocked a VPN subscription (reputable just mulvad) costs less than any streaming service and gives you access to every single movie and show, impossible to debate that it's not more convenientreply",
-      "It's only a DNS block fwiw.  If you set your DNS to 1.1.1.1 or 8.8.8.8 everything works fine.reply",
-      "I recently realised even the build in iOS Private Relay gets around the Australian Government site blocks.reply",
-      "It\u2019s cat and mouse game. Australia blocks sites, sites move urls. If you don\u2019t keep up, then they have caught you too.Streaming sites can just delete your purchases whenever they want to. Sony already has.reply",
-      "> The streaming services also don\u2019t come with who knows what malware like pirated media can.How does one put malware in media? Are we talking exploiting unlatched vulnerabilities in codecs, or are we talking random exe files?reply",
-      "> now I need a VPN, a reputable one. Also need terabytes of network connected storage, and usually I need more and more of it over time. Better and more networking equipment to buy and maintain. Media management and streaming software that works locally and remotely, to (maybe buy) and maintain.Literally none of these things are reality other than for the very specific means you are aware of.> The streaming services also don\u2019t come with who knows what malware like pirated media can.What is this, an MPAA pitch from 2007?reply"
-    ],
-    "link": "https://weeraman.com/because-we-can/",
-    "first_paragraph": "Technologist \u00b7 Architect \u00b7 FounderTwenty-five years ago, I made my first donation to an open source project and purchased a CD with an operating system as downloading a few hundred megabytes over a 14.4kbps dial-up wasn't very fun. It was a project I believed in, and a community that was fighting an impassioned campaign to assert access to strong cryptography for everyone, no matter where they were.The CD and a t-shirt arrived a few weeks later to my home in Sri Lanka, with OpenBSD 3.0. The t-shirt featured the iconic puffer fish on the front. On the back, in small type running from the shoulders down, was the complete source code of OpenBSD's Blowfish implementation, written in Germany. Written in the United States, it would have been classified as a weapon.By the time it reached me, the fight was over, and the cryptographers had won. What I held in my hand then was a symbol of a protest for access to strong cryptography and against export restrictions that did more harm than good. St"
-  },
-  {
-    "title": "The First Transatlantic Telegraph Cable Was a Bold, Beautiful Failure (ieee.org)",
-    "points": 24,
-    "submitter": "sparsesignal",
-    "submit_time": "2026-07-29T11:59:10 1785326350",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=49096319",
+    "title": "Why Is Europe Burning? (newyorker.com)",
+    "points": 11,
+    "submitter": "littlexsparkee",
+    "submit_time": "2026-08-02T00:00:46 1785628846",
+    "num_comments": 0,
+    "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://spectrum.ieee.org/the-first-transatlantic-telegraph-cable-was-a-bold-beautiful-failure",
-    "first_paragraph": "The August issue of IEEE Spectrum is here!Allison Marsh is a professor at the University of South Carolina and the codirector of the Ann Johnson Institute for Science, Technology & Society.Hip Hip Hooray! The opening of the first transatlantic cable was celebrated with a wide range of souvenirs, including watch fobs, earrings, pendants, charms, letter openers, candlesticks, walking-stick toppers, and tabletop displays.Photo: Division of Work & Industry/National Museum of American History/Smithsonian InstitutionOn 16 August 1858, Queen Victoria and U.S. president James Buchanan exchanged telegraphic pleasantries, inaugurating the first transatlantic cable connecting British North America to Ireland. It wasn\u2019t exactly instant messaging: The queen\u2019s 98-word greeting of goodwill took almost 16 hours to send through the 3,200-kilometer cable. Still, compared to packet steamships, which could take 10 days to cross the Atlantic, the cable promised a tremendous improvement in speed for urgent "
+    "link": "https://www.newyorker.com/news/the-lede/why-is-europe-burning",
+    "first_paragraph": "On July 15th, a wildfire broke out near the small town of Or\u00e9s, Spain, in the northern province of Zaragoza. Propelled by strong winds and low humidity, the flames quickly spread over foothills and through canyons. By the next day, as the fire ballooned to more than eleven thousand acres, five towns in its path had to be evacuated. For Jos\u00e9 Luis Duce Arag\u00fc\u00e9s, a wildland firefighter whose family is from Zaragoza, news of the fire felt personal. As a teen-ager, he\u2019d spent summers exploring the same mountains that were now burning.Just two days later, Arag\u00fc\u00e9s, who is based in California but travels internationally to help communities manage fire risk, learned about another blaze. This one, in the nearby Guadalajara province of Spain, was close to where members of his family live today. He\u2019d begun his fire career in Guadalajara, working summers in the small town of Cogolludo. \u201cEverything started for me there,\u201d Arag\u00fc\u00e9s told me. \u201cI started my suppression career there\u2014my first hand crew, firs"
+  },
+  {
+    "title": "We accidentally built an LLVM compiler for Jax (iza.ac)",
+    "points": 14,
+    "submitter": "infinitewalk",
+    "submit_time": "2026-07-30T23:46:05 1785455165",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=49117303",
+    "comments": [
+      "Neat. XLA predates MLIR. Interesting stories there. You'd have to stop by the Bay Area LLVM monthly meetup to hear them. :-X> So if XLA already uses LLVM, why is our approach different?Uses MLIR, XLA does not.> So\u2026 what is the point?> Honestly? We aren\u2019t entirely sure yet.> Let me be perfectly clear: this is not going to beat XLA for standard deep learning workloads. XLA has years of hyper-specific optimizations for linear algebra on GPUs and TPUs. If you are training a massive transformer, stick to standard JAX.> But what we do think is cool is what happens when you connect JAX directly to the broader LLVM ecosystem and drop the heavy XLA runtime. (Plus, no need to build XLA using Bazel either! You\u2019re welcome.)reply",
+      "> Neat. XLA predates MLIR. Interesting stories there. You'd have to stop by the Bay Area LLVM monthly meetup to hear them. :-XI would love to hear those stories! Sadly I'm based in Toronto, so dropping by the Bay Area meetups isn't in the cards anytime soon.If any of that history ever makes it into a blog post, I'd be first in line to read it.reply",
+      "> Uses MLIR, XLA does not.https://github.com/search?q=repo%3Aopenxla%2Fxla+mlir&type=c...> 1.5k filesyou're behind the times. XLA moved over probably ~2 years ago - \"Captain Awesome\" eventually relented.reply"
+    ],
+    "link": "https://iza.ac/posts/2026/07/accidental-llvm-compiler-for-jax/",
+    "first_paragraph": "Sometimes when you build software, you shave a yak so deeply that you end up with a surprisingly\nnice sweater (while the yak, presumably, wonders why it is suddenly rather\u00a0drafty).For the past while, my team and I have been building a quantum compiler called\nCatalyst for the\nquantum software library PennyLane. Our goal was relatively\nstraightforward: optimize large, hybrid quantum-classical workflows in a scalable manner using\nMLIR. To do this, we needed a fast, robust way to capture classical Python processing\n(including NumPy and associated scientific libraries) and represent it in our intermediate\u00a0representation.We chose JAX, for a couple of reasons: its ability to trace through Python functions and capture the\ncomputational graph1, its support\nof the NumPy and SciPy APIs with relatively good coverage, and the fact that it already lowers down\nto MLIR. We also aimed to address a couple of quality of life improvements, such as the ability to\ncapture native Python control flow2, and su"
+  },
+  {
+    "title": "China begins producing advanced chipmaking deep-ultraviolet lithography machines (reuters.com)",
+    "points": 20,
+    "submitter": "ck2",
+    "submit_time": "2026-07-30T14:12:44 1785420764",
+    "num_comments": 7,
+    "comments_url": "https://news.ycombinator.com/item?id=49110319",
+    "comments": [
+      "China is still far behind modern lithography. It took ASML almost 2 decades to get from immersion DUV (and EUV prototypes) to commercial EUV machines.reply",
+      "But isn't it easier to copy some existing approach than to create it from a green field? ASML tech is presumably highly protected, but China is also very good in spying, hacking etc.reply",
+      "True but also catching up to an existing tech is a much different game than creating it from scratch. Hiring people who have the right knowledge can speed that up.reply",
+      "This, these news organizations have no f'n clue. China this, China that, it's all part of the 10 billion China spends on b.s to feed the Americans that they are behind or they are useless and that they don't stand a chance....China is on the verge of collapse walking the razors edge.reply",
+      "Yes. China is behind on some of the crucial technology that gives the West its advantage, but this framing that the country is on the verge of collapse is just not true.Also recreating a know technology usually takes much less time even if you don't have access to the underlying tech.reply",
+      "ASML dropped; it used to be the undisputed leader of immersion DUVInteresting in so many ways that theinfo kept the company anon but Reuters exposed it (allegedly)Aside: what we know for sure is that Chinese are catching up to Japanese in putting dad-style puns in their brandshttps://www.hoshinocoffee.com/reply",
+      "nvidia clone in next year or two?btw photo on that article is actually intel at Oregonreply"
+    ],
+    "link": "https://www.reuters.com/world/china/china-starts-production-home-grown-immersion-duv-chipmaking-tools-source-2026-07-28/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "How Google helped destroy adoption of RSS feeds (2023) (openrss.org)",
+    "points": 417,
+    "submitter": "pudgywalsh",
+    "submit_time": "2026-08-01T18:07:07 1785607627",
+    "num_comments": 151,
+    "comments_url": "https://news.ycombinator.com/item?id=49136821",
+    "comments": [
+      "The Internet in the early 2000s felt a little more special as compared to today, when 99.999 % of content is locked in a handful of walled gardens. I mean sure everything we had then is still possible but let\u2019s be honest everything about the web is fine tuned to deliver ads to our eyeballs, browsers, operating systems and even protocols are being designed with ad delivery in mind. Even the privacy friendly browsers just exist to serve ads when I think about it. Kind of sad really, but I guess you could be happy as it\u2019s so big now and there\u2019s so much to do. Just makes you wonder what stuff would thrive if ads didn\u2019t exist. As of now every niche thing that gets successful will be invariably pulled into the ad ecosystem as it\u2019s very hard to say no to money.RSS wasn\u2019t in the interest of the big platforms as it\u2019s decentralized and there\u2019s no good way to deliver ads through it, simple as that.reply",
+      "> everything about the web is fine tuned to deliver ads to our eyeballs, browsers, operating systems and even protocols are being designed with ad delivery in mind.I use Firefox with uBlock Origin on Linux, and haven't seen an ad in years. It's not like ads weren't a thing 20 years ago. Pop-up windows were particularly bad. Javascript, in particular, has been constantly abused against the user ever since it was created.reply",
+      "> Firefox with uBlock Origin on LinuxSame setup and same experience. I've recently joined another company which only provided chrome with no extensions by default. I know the web is filled with ads but I'm shocked again and again when I get a glimpse into what it's like without an adblocker.reply",
+      "There are dozens of us. Maybe one day people will realize how much better Firefox is now and how nicer the web can be with no ads.reply",
+      "There was also .001% of the content there is now. The Internet of 2000 was microscopic.Now everyone can create content, without any of the friction of hosting it. The vast majority of it is crap, but that was always the case.The main difference between now and 30 years ago is that the Internet is vastly more diverse. It isn't just other CS majors any more. Now everyone gets to wade in the vast crap pool looking for the smidge of things that appeal to them. Meanwhile the CS majors still host their own stuff, because they can, and you find out about it via the same word of mouth.reply",
+      "It sounds like you agreed with them from the other direction. \u201cThe internet of yesteryear felt more special.\u201d - \u201cNah, there wasn\u2019t as much slop back then and now it\u2019s a crap pool that anyone can wade into and look for scraps.\u201dreply",
+      "The .001% was the top .001% of today's content. The other 99.999% we gained was spam aimed at getting money while providing minimal value and taking minimal effort.reply",
+      "can\u2019t wait to hear about how some 9/11 truther blog was the cream of the crop. I\u2019m surprised you can see anything through those rose coloured glasses.the most charitable interpretation is that the internet used to more exclusively cater to your interests specifically, which i\u2019m sure is true.try asking most women about the internet then vs now. there are still scumbags, and one could reasonably argue that they\u2019ve gotten worse, but at least theres more to do now.reply",
+      "> It isn't just other CS majors any more.Hey, that's not fair! It also had nine year olds who bought a book about HTML and made shitty sites on Geocities!reply",
+      "Those were just CS majors before they majored in CS.reply"
+    ],
+    "link": "https://openrss.org/blog/how-google-helped-destroy-adoption-of-rss-feeds",
+    "first_paragraph": "Although RSS feeds are alive and still heavily used today, their level of adoption has suffered because of how difficult a handful of popular technology companies have made it to use them. Google, especially, has relied on the open web RSS protocol to gain so much market share and influence, but continues to engage in behavior that exploits the open web at the expense of its users. As a result, Google has single-handedly contributed to the reason many users who once relied on RSS feeds have stopped using them.Below, we dive deeper into Google's track record of what appears to be an Embrace, Extend, and Extinguish model. The company has continuously built and extended their products around the free and open RSS protocol to gain user trust, only to then remove RSS support once they've locked users in, and ignore any complaints or requests to restore it. Not only is it a blatant disregard for RSS and a huge disappointment to those who use it, it poses one of the biggest threats to the fre"
+  },
+  {
+    "title": "Kobuk the Destroyer \u2013 Tales from the Wild, Unseen World of Test Engineering (wwnorton.com)",
+    "points": 8,
+    "submitter": "ripe",
+    "submit_time": "2026-08-02T00:01:46 1785628906",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://wwnorton.com/books/9781324051299",
+    "first_paragraph": ""
   }
 ]
