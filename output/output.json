@@ -1,342 +1,396 @@
 [
   {
-    "title": "Go 1.27 Interactive Tour (victoriametrics.com)",
-    "points": 43,
-    "submitter": "Hixon10",
-    "submit_time": "2026-08-02T01:35:51 1785634551",
-    "num_comments": 7,
-    "comments_url": "https://news.ycombinator.com/item?id=49140218",
+    "title": "CP/M-386 \u2013 CP/M for 386 protected mode, derived from CP/M\u201168K (github.com/johnsonjh)",
+    "points": 33,
+    "submitter": "TMWNN",
+    "submit_time": "2026-08-03T00:38:10 1785717490",
+    "num_comments": 9,
+    "comments_url": "https://news.ycombinator.com/item?id=49149898",
     "comments": [
-      "This release also fixes runtime.findnull() to be compatible with MTE on Android ([1] and [2]). This was the only thing preventing MTE from being enabled for apps that use gomobile on MTE-compatible Android OS's like GrapheneOS.[1] https://go-review.googlesource.com/c/go/+/749062[2] https://go-review.googlesource.com/c/go/+/751020reply",
-      "This level of generics actually has me interested a bit in Go now.reply",
-      "Am I the only one who\u2019s absolutely shocked that Go finally is embracing generics?Does anyone have a bit of an inside view into what changed in the perspectives of the language maintainers?I\u2019m not buying the \u201cit took us 20 years to understand how to do it correctly\u201d argument, as this is something you explicitly take into consideration when designing the language or not. And it was specifically not a part of language design, and is much harder to retrofit (backwards compatibility).So what changed?reply",
-      "(I was on the Go team for ages)Seriously, that's all it was. Just Ian alone proposed and rejected a half dozen of his own different approaches to generics. Finally a language + implementation plan came together that people all liked.Nobody was ever opposed to generics that I saw.reply",
-      "> what changed in the perspectives of the language maintainers?The original maintainers moved on to other projects and the new community maintainers came to a consensus through the proposal and governance process.reply",
-      "No, that's not accurate. The same core people were involved.reply",
-      "Some examples for the upcoming release https://go.dev/doc/go1.27reply"
+      "I'm pretty sure C/PM 86 was already a thing. I believe there was even Concurrent CP/M 86, which let you run up to 4 (or more?) virtual sessions concurrently. Light years ahead of MS-DOS but nobody wanted it, so DRI dumbed it down and added MS-DOS compatibility and re-released as DR-DOS (still superior to MS-DOS though).reply",
+      "CP/M-86 was definitely a thing, but CP/M-386 was not. By the time the 386 existed, DRI had dropped the CP/M name in favour of Concurrent DOS - though they had MS-DOS compatibility in Concurrent CP/M - and, as you say, eventually renamed it to DR-DOS.Much as I loved DR-DOS, it did have occasional compatibility hiccups.reply",
+      "Not 386 though.reply",
+      "CP/M - because pip just makes more sense than copy.reply",
+      "It also has an \u201ced\u201d that will make you miss UNIX\u2019s \u201ced\u201d. I\u2019ve used it to write programs and it is not fun!reply",
+      "Wasn't that abbreviation from \"pipe\"? As in - this is a pipe that you can use to connect terminal to a file, file to a printer... and yes, file to a file (that's cp/copy).reply",
+      "No.https://en.wikipedia.org/wiki/Peripheral_Interchange_Programreply",
+      "Does it support flat memory model or its banked like DOS ?reply",
+      ">\"Compatible with 386 (and later systems) with 2MB (or more) memory.\"Looks good!An order of magnitude (or two!) less code complexity and less memory hungry than most of 2026's bloated Operating Systems...Well done!reply"
     ],
-    "link": "https://victoriametrics.com/blog/go-1-27/index.html",
-    "first_paragraph": "Your privacy settings or an extension blocked the booking widget.If you use a blocker, allow embeds for this site and try again.Jes\u00fas EspinoJul 31, 202619 mins readGo 1.27 is coming soon, so it\u2019s a good time to get a head start on what\u2019s new. The official release notes are pretty dry, so here\u2019s a hands-on version with runnable examples showing what changed and how the new behavior works.A quick credit first: the interactive Go tours were started by Anton Zhiyanov, who wrote one for every release from Go 1.22 through Go 1.26. He\u2019s decided to stop, so we\u2019re picking up where he left off. His earlier tours are all still worth a read:Thanks, Anton.Before we start digging into the new features, let\u2019s set the context.This article is based on the official release notes and the Go source code, licensed under the BSD-3-Clause. This is not an exhaustive list; see the official release notes for that.Links point to the documentation (\ud835\uddd7), proposals (\ud835\udde3), most relevant commits (\ud835\uddd6\ud835\udddf), and authors (\ud835\uddd4) fo"
+    "link": "https://github.com/johnsonjh/cpm386",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          CP/M\u2011386 is CP/M for 386 protected mode, derived from CP/M\u201168K.CP/M\u2011386 is currently in the very early development stages.CP/M\u2011386 should be highly source\u2011compatible with other implementations:The system currently reports BDOS 2.2 to applications.The following dependencies are required to compile CP/M\u2011386:\n\u2020Be sure to use cpmtools version 2.23 or later.  Older\nversions may appear to work but have several known bugs.Building CP/M\u2011386 is supported on current releases of NetBSD and\nFreeBSD\u2021, and most recent Linux distributions.The following are the minimum versions of Linux distributions that have been\nverified to build CP/M\u2011386 successfully: CentOS Stream 9, Fedora 36,\nDebian 12, Ubuntu 18.04 (with gcc-16 from ppa:ubuntu-toolchain-r/test),\nUbuntu 22.04, Alpine 3.24, and OpenSUSE Leap 15.4.\nThe build produces two primary artifacts:You can downl"
   },
   {
-    "title": "Seedance 2.5 (bytedance.com)",
-    "points": 201,
-    "submitter": "njaremko",
-    "submit_time": "2026-08-01T20:45:12 1785617112",
-    "num_comments": 95,
-    "comments_url": "https://news.ycombinator.com/item?id=49138302",
+    "title": "Karpathy\u2019s Pelican (twitter.com/karpathy)",
+    "points": 456,
+    "submitter": "delichon",
+    "submit_time": "2026-08-02T04:05:56 1785643556",
+    "num_comments": 350,
+    "comments_url": "https://news.ycombinator.com/item?id=49140998",
     "comments": [
-      "There is a woman on twitter who makes seedance videos of her and Dario from anthropic, they're kinda weird but generally pretty high quality: https://x.com/CuiMao/status/2058458683781365873 (full collection: https://x.com/CuiMao/status/2082740754380984373) - seeing them was the first time I'd been impressed with AI video gen.reply",
-      "This is deeply disturbing\u2026for so\u2026so so many reasons.reply",
-      "Super strange. It feels like something a stalker would do...reply",
-      "This is absolutely hilarioushttps://x.com/CuiMao/status/2049828401201246395reply",
-      "This specific video is the first time I have been distributed by AI video.This is extraordinary lifelike.reply",
-      "People are still figuring out the social norms surrounding \"deepfakes\" and I'm convinced there are some versions of the future where it becomes normalized for content under essentially fair use/free speech doctrine, and many where it's used to restrict free speech in the small number of jurisdictions where public figures would currently be allowed to be featured in this content.Obviously there are a lot of ways it shouldn't be used but I want to live in the future where it's something we use to have fun, where reasonable, rather than a dangerous/sketchy tabooreply",
-      "I can't make up my mind if the simplistic narrative typical of Chinese romcom shorts is more funny or more weird.reply",
-      "That is absolutely hilarious. Dario Amodei, a romcom lead.reply",
-      "I dont normally like AI videos but this was just amazing, by next year the tech will be perfect, cheaper, we are going to AI videos everywhere whether  anyone likes it or not.reply",
-      "people like it. Maybe not older generations, but we're about to get a fresh new generation of people that will not have a lifetime of experience looking at human generated content, and so have no real bias against AI content.And then every generation after that will be born into increasingly a AI-video rich world.reply"
+      "A lot of people are posting here about how bad the end product is, but that is kind of the point. Models have moved beyond generating images to a new kind of benchmark that better exposes understanding of the physical world, and we can use benchmarks like this to measure future progress. (Of course, it will have to be a qualitative/subjective measurement.)reply",
+      "I fully agree.But I do think this was a poor demonstration of the idea for another reason: Tolkien works have a HUGE corpus of training data. It's great that random users can come in and immediately recognize what the footage is, but it fails at the very first thing the pelican was meant to do:- Render this thing you have only tangential training data of, that also happens to be an asymmetrical object so we can see how much you fuck up the details if you somehow flip the orientation half the time.They should have used an obscure story, not \"Most Studied Piece of Literally Work of The Past Century trademarksymbol\"reply",
+      "I don't know I think it is charming in a way that is lacking in nearly everything else an LLM tries to do creatively.I have always preferred the result of getting an LLM to draw an svg or make a procedural animation like this to the uncanny hyper-realistic result of diffusion image/video generation.reply",
+      "To help explain AI to my elderly mother, I said it is like an alien intelligence on a planet too far away to directly observe Earth, and everything it knows about humanity and our world it learned from reading just about every book and website. You can ask it a question or to do some work and it can often give a useful response but it can never directly judge its accuracy if it relates to the physical world, it has only your judgment to work with.Given that limitation, it is incredible what it can still accomplish. And when it falls short, it is often in a charming way, if you are open to seeing it that way. It reflects something like a child's understanding of the world, not entirely wrong, just incomplete.The fluttering cubes that might have been bees or butterflies were my favorite part.reply",
+      "Agree. The pelican benchmark was interesting a year ago when most models struggled and a good pelican indicated an unusually capable model. Now it\u2019s saturated and uninteresting.A good new benchmark should have awful performance to start and there should be a lot of headroom for improvement. This benchmark is also intentionally difficult and requires the LLM to develop the animation through spatial reasoning and first principals rather than existing video generation pipelines. Similar to how SVG generation was out of distribution for most models a year ago.reply",
+      "I think it's interesting to see them visibly struggling to improve. Claude pelicans aren't much better today than they where 18 months.reply",
+      "The code I see is a lot like the pelicans. All of the code in codebases, good, bad and ugly, is slowly being replaced by whatever level of code ai is currently able to create. All code is now a slightly wonky pelican on a bike, but if you look closely, it doesn\u2019t fully make sense. Since ai is converging on less wonky, but not internally consistent, we\u2019re just moving on to what is possible with high volume instead of detailed quality. I think that is the ai software world as well.reply",
+      "Rendering 3d worlds has hugely improved though.reply",
+      "Have you seen pelicans in Simon Willison\u2019s tests? It is still not a pelican on bike I would like to publish :)Imho we don\u2019t need to make benchmarks that draw the whole 3D world. Pelican\u2019s drawing is really nice in its simplicity and complexity at the same time.It seems to be an obscene waste of compute time to generate useless 3D worlds that are just a bragging - 3D is really heavy discipline to make it right, see Mark Zuckerberg\u2019s ceased attempt with 3D VR\u2026Multiply it by thousands times as a lot of people have found out threejs lib and prompt \u201cgenerate 3D world and make no mistake\u201d are new orange/black.reply",
+      "> useless 3D worlds that are just a braggingNo, this demo is the useless 3D world, and you're bragging.A real game would have a lot more immersive of a world, and you wouldn't need to.reply"
     ],
-    "link": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
-    "first_paragraph": "One-take Creation, Flexible Referencing: Introducing Seedance 2.5Date2026-07-31CategoryModelsToday, we are officially launching Seedance 2.5, the new-generation video creation model. Since the release of Seedance 2.0, we have noticed a shift in what users expect from video creation models: from merely generating a clip to completing a creative work. Building on the unified multimodal audio-video joint-generation architecture of Seedance 2.0, Seedance 2.5 centers on foundational generation and reference-based generation, delivering major breakthroughs in long-form storytelling, multimodal reference, and editing. Grounded in real-world use cases, it opens up greater creative imagination and control, and further unlocks productivity.Key highlights include:Up to 30 seconds per generation, with multi-round extensions: Seedance 2.5 can generate high-quality, 30-second audio-video clips in a single pass and supports multiple rounds of extension. It also improves shot transitions and scene cha"
+    "link": "https://twitter.com/karpathy/status/2083749667410727319",
+    "first_paragraph": "See what\u2019s happening and join the conversation"
   },
   {
-    "title": "ASRock BC-250: Building the Budget Steam Machine (plug-world.com)",
-    "points": 15,
-    "submitter": "plug_world",
-    "submit_time": "2026-08-02T01:35:11 1785634511",
-    "num_comments": 0,
-    "comments_url": "",
+    "title": "Show HN: Isopolis \u2013 isometric pixel map of SF (isopolis.city)",
+    "points": 38,
+    "submitter": "nuwandavek",
+    "submit_time": "2026-08-03T00:46:38 1785717998",
+    "num_comments": 11,
+    "comments_url": "https://news.ycombinator.com/item?id=49149966",
     "comments": [
-      "xxx"
+      "Behind the scenes stuff:https://sf.isopolis.city/dev.html> The source is Google Photorealistic 3D Tiles. Isometric.nyc explored and rejected the use of 3d building data. It is pretty insane that US gov has free LIDAR data for every city in the US available to the public. I spent <30mins exploring this and stuck to google 3d images. Claude Code whipped up a scraper to stream the 3D Tiles and render with three.js. This gives the best \"real\" texture base for the model to learn from. Anything else would involve a LOT of manual work to get the inputs right.> Now that we have the 3D tiles, we need to generate the ground truth pairs for training! Similar to isometric.nyc, I generated a few ghibli-style pixel-art images using Google's Nano Banana. SF terrain is very interesting. There are quite a few distinct features like skyscrapers in FiDi, the hills in the southeast, 2 iconic bridges, lots of coastline, piers, parks, suburban grids and lots of water. I generated a ton of images and curated from them. Getting consistent style was a challenge. There was a LOT of manual trial and error. But as usual, Claude Code added this feature to the dev app that allowed me to select the best images and approve them.reply",
+      "Those who know game dev know making good isometric maps can be deceptively difficult. You grabbed that bull by the horns and did so beautifully. Well done!reply",
+      "Incredible. It's easy to just go on browsing and exploring. The massive, scrollable pixel art aspect reminds me a little of Floor796: https://floor796.com/reply",
+      "This is amazing, it got everything I could think of but not all, where\u2019s little nightmares, silent hill, naruto, men in black, for a starter. But it\u2019s neat regardless!reply",
+      "Really cool. I can see some issues, like Starr King park turned into a lake for some reason, but it\u2019s so much fun to look at. Do you have any way to patch errors and discontinuities at the tile boundaries?reply",
+      "This is really cool, it gives me SimCity 2000 vibes. I like that I can click on neighborhoods and regions and get more information about them!reply",
+      "time to push the boundaries of your creationreply",
+      "Amazing! I was sad I couldn't zoom in more thoreply",
+      "Super cool! Can you talk a bit about how you built it?reply",
+      "THIS IS SICK!\nThe BGM, the SFX, the visual are all perfect.\nMy favorite is the banner plane, this is really really SFreply"
     ],
-    "link": "https://plug-world.com/posts/2026/asrock-bc250-the-budget-steam-machine/",
-    "first_paragraph": "July 8, 2026My complete guide for setting up the ASRock BC-250. You can\u2019t beat its price for performance, and it\u2019s perfect for those who love projects.TLDR (for those with BC-250 experience):For those looking for a full guide, with all the juicy tips and tricks, please continue\u2026USB Bluetooth/WiFi AdapterBC-250 printed caseChipset -> Integrated Graphics Controller -> ForcesDon\u2019t bother with buying two fans. Only one really makes a difference. See very helpful Reddit post.Set fan-curve in the bios.Out of the box, the BC250 GPU is locked to 1500MHz. The cyan-skillfish-smu GPU governor allows for dynamically scaling the GPU clock speeds to match demand. Highly recommended for both decreasing idle power usage, and dramatically increasing game performance.Cachy OS installation:Bazzite installation:Once installed, edit the config file: /etc/cyan-skillfish-smu/config.tomlThese are extremely safe defaults, meant to work on everyone\u2019s BC250. However, there\u2019s a good chance you can squeeze out mor"
-  },
-  {
-    "title": "Di\u00e1taxis (diataxis.fr)",
-    "points": 214,
-    "submitter": "ryanseys",
-    "submit_time": "2026-08-01T20:33:27 1785616407",
-    "num_comments": 30,
-    "comments_url": "https://news.ycombinator.com/item?id=49138188",
-    "comments": [
-      "I and my team did a full set of documentation for handing over a codebase to the client. A large complex codebase with accumulated history and subtle reasons why things were done.Diataxis was fantastic. It took a bit of effort to work out what the page titles were to cover everything we needed, but then when you were writing a page it was glorious.It was so clear what you were saying and what \"voice\" you were writing in. If it's a Reference page you're all descriptive, with diagrams and bullet points. When it's a guide you're more discursive, but you know you're just imparting information not trying to teach. It made it so much easier to be coherent and clear about everything.reply",
-      "I'd like to take advantage of the attention it's getting to point out that I am working on translating Di\u00e1taxis into other languages https://diataxis.fr/translation/, and you can see an in-progress version with some partially completed translations at https://diataxis-translated.readthedocs.io/translation/.reply",
-      "I urge people to not read this. Once you do, you will see all documentation will as the flawed and confusing mess it is. Ignorance is bliss!reply",
-      "truly. its the kind of thing that makes docs people justify their jobs rather than coming from a founder or user centric povreply",
-      "Maybe I'm incorrectly parsing your comment, but what does a \"founder centric pov\" for documentation look like?reply",
-      "looks like a load bearing seam with strong decisionsreply",
-      "survivor biased modelsreply",
-      "We just invested a good amount of time restructuring our docs for Di\u00e1taxis. It was helpful, but I wouldn't take it as gospel. The important thing to remember is that each piece of content should be one of the four types.If you're embarking upon a refactoring / rewriting journey for your docs, the only advice I'd share is to actually read the website beginning to end before starting. Especially this page: https://diataxis.fr/complex-hierarchies/. The guide is (unsurprisingly) very well written, and it's easy to internalize the concepts because they're repeated often.reply",
-      "Ugh, I don't like that page and I have actually deleted it. It'll be gone soon.There is a real problem there, and that page doesn't do a good enough job of dealing with it. I have something cooking that is much, much better.reply",
-      "Please post some kind of visible change notification (and something here) when you do!reply"
-    ],
-    "link": "https://diataxis.fr/",
+    "link": "https://sf.isopolis.city/",
     "first_paragraph": ""
   },
   {
-    "title": "Show HN: I'm a 15 Year Old Wannabe Engineer, This Is a Cycloidal Gearbox I Built (github.com/tom-ilan)",
+    "title": "Why Book Corners won't sync contributions back to OpenStreetMap (andreagrandi.it)",
+    "points": 47,
+    "submitter": "pizzaiolo",
+    "submit_time": "2026-08-03T00:12:16 1785715936",
+    "num_comments": 27,
+    "comments_url": "https://news.ycombinator.com/item?id=49149746",
+    "comments": [
+      "In summary: Because OSM requires work and care to be put into the data submission plan, which isn\u2019t worth it.A project like OSM would be bombarded with spam and junk submissions if it didn\u2019t have these barriers to submission. Understandable.reply",
+      "This is partially because they import into their own system, and then export->import into OSM. At that point, they're considered an integration which imports data.If their apps instead submitted directly to OSM (letting submission trickle back down), then the flow would fit into \"user submission\". Book Corners simply becomes an app though which the user performed the submission, rather than an intermediary exporting data.reply",
+      "To be clear to folks not familiar with OSM:These restrictions are unique to projects doing automated submissions of mass data.If you're an individual just trying to make the world a better place, you can make an OSM account, go to the website, click, add a thing, hit submit, done. Someone will review it.Apps like CoMaps and Organic Maps make it super easy to contribute data for businesses, landmarks, and such.reply",
+      "> you can make an OSM account, go to the website, click, add a thing, hit submit, done. Someone will review it.I will share an unpopular opinion: thil will only make a freeworkforce for those projects who profit from using OSM. And the OSM has surprisingly unreliable data quality for walking around even in the popular tourist places like Tokyo or Kyoto, or New York. I've tried, and it's so worse than GMaps (or Bing) to being completely unusable. No work hours of Starbucks, no local dining cafe, no menu contributions.It's great for the trail and hike outdiors, sure. But that's very different from the city map, as the nature featutes rarely change, not like city POIs.reply",
+      "This is kinda what StreetComplete is supposed to help with, right? it asks me questions about opening and closing hours of cafes and things.I would assume that tourist places don't have many locals going by and updating them and tourists don't want to fill in info on that kind of app, but that's mostly an adoption question. If more people contributed more info would be mapped.reply",
+      "One of the nice things about OSM is you can profit from it from it if you want to.I don\u2019t think you\u2019ll find even most the die hard OSM fan disagree with you on the POI data.On the other hand, the road network in OSM is very high quality. As you point out, it\u2019s used and contributed to by companies like Lyft and Amazon.The fact that anyone can download an accurate detailed global road network for free is pretty crazy.reply",
+      "It's fine to make a project that will only be interesting if people choose to contribute, and it's fine if people want to contribute.reply",
+      "> No work hours of Starbucks, no local dining cafe, no menu contributions.This moves the goal posts of OSMreply",
+      "I think the piece I\u2019m confused most about is why the little free library website\u2019s map isn\u2019t the place to log little free libraries.\nThat being said, it makes sense that OSM has guidelines like this in place to ensure the data quality stays, well, quality.reply",
+      "This makes sense, but I wish there was a generally accepted way to share geospatial data and POI data against OSM IDs. e.g. I want to be able to add overlays for noise level, etc. and I find the whole thing too fragmented. The OSM way seems to be the right way, but no one seems to do it. You just maintain your own DB with an optional OSM POI entity identifier etc.I suppose if you want something badly enough you have to do it yourself, but it's not that the thing doesn't exist though it doesn't seem to. It's that I want others to want it too :)reply"
+    ],
+    "link": "https://www.andreagrandi.it/posts/why-book-corners-wont-sync-contributions-back-to-openstreetmap/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "RFC 9851: TLS 1.2 is in Feature Freeze (rfc-editor.org)",
     "points": 14,
-    "submitter": "tomilan",
-    "submit_time": "2026-08-02T02:07:09 1785636429",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://github.com/tom-ilan/cycloidal_gearbox",
-    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          This is my cycloidal gearbox I built, and the python script I created to generate it!This gearbox was a handcranked gearbox specifically meant to test the validity of the python cycloidal generator. It had a gear ratio of 1:9.This design was a micro cycloidal gearbox with a ratio of 1:9, meant to only take up the same footprint as a NEMA 17. Due to the tight tolerances needed for a small cycloidal drive and the lack of precision offered by 3D printing, this design did not work.This gearbox was the first working version to run on a NEMA 17. It has a larger footprint compared to Version 2 allowing greater tolerances and a fully functional design.This python script was based on the SolidWorks article Building a Cycloidal Drive with SOLIDWORKS. The two main parametric equations I used were:$$x = R \\cos(t) - E \\cos(N t) - r \\cos(t + \\psi), \\quad "
-  },
-  {
-    "title": "AI financial advice is surprisingly good, especially if you ask right questions (mitsloan.mit.edu)",
-    "points": 185,
-    "submitter": "foxtrot8672",
-    "submit_time": "2026-08-01T22:25:12 1785623112",
-    "num_comments": 144,
-    "comments_url": "https://news.ycombinator.com/item?id=49139102",
-    "comments": [
-      "People in this thread are massively underestimating the level of financial illiteracy in the general population.We've had multiple people try to convince us to set up bank accounts for our kids, so that they could accumulate interest over 18 years.More that tried to convince me to gamble on random pump and dump shitcoins.More still that talked about \"investing\" in random collectables like Funko Pops or Pokemon cards - they're not a bubble, Logan Paul told me so!You could replace the AI with a piece of paper that says \"set aside 10% of your income and invest it in an ETF\" and it would outperform the financial \"advice\" that people receive on a daily basis.reply",
-      "\u201cPay your bills on time and fully\u201d\u201cDo what you can to eliminate addictive vices or never get them\u201d\u201cMax your Roth and 401k contributions before even thinking about anything else\u201d\u201cTry to budget\u201d\u201cDon\u2019t live beyond your means. Monthly payment need to be considered carefully\u201dIf you can even TRY to do these things it puts you SO far ahead of the average person.It sucks because I get it, if you\u2019re behind waiting years for things to stabilize sucks, if you even can. So these get rich quick by just doing X scams are enticing but only set you farther behind.God I still remember when a friend showed up on his 18th birthday with a pack of cigarettes to show how \u201cmature\u201d he was. I always think about how much that one decision cost him over the years.reply",
-      "I never personally liked the blanket advice to \"Max your 401k.\" For most, if achievable at all, that would be the most they can invest at all. Even though it is often recommended alongside a proper \"emergency fund,\" that advice leaves little liquidity without major penalties.reply",
-      "Roth contributions are withdrawable without penalty. Also most employers offer a match of some amount, which is essentially free money.reply",
-      "The writer of one punch man was on to somethingreply",
-      "He knew the wayreply",
-      "> God I still remember when a friend showed up on his 18th birthday with a pack of cigarettes to show how \u201cmature\u201d he was. I always think about how much that one decision cost him over the years.The irony of taxing vices. I imagine most of it's paid by people who didn't know better at a young age, and helps encourage the downward spiral of poverty.And if you say it discourages young people from starting on the addiction, I think we're barking up the wrong tree. Disposable vapes have the highest amount of nicotine they can put in their nicotine salts. Nicotine pouches like zyns sell the most at 6mg and above. Dispensaries and street weed have enough THC that would put a hippie in the 70's in a psychotic break.reply",
-      "We have bank accounts for our kids, currently earning 1.75% because we aren't depositing money every month. If money is deposited it's another 3.3%.I really need to get around to setting up Vanguard for them.  Thanks for the reminder!reply",
-      "What\u2019s wrong with bank accounts for your kids?  Sorry, this one doesn\u2019t seem to fit with your other examples.reply",
-      "As the OP has \"Aussie\" in their name I think they'd be referring to the Commonwealth Bank of Australia Dollarmites accounts. They were shutdown recently after a watchdog investigation. It was locking kids into using the bank that would continue into adulthood and schools were getting paid to sign kids up.https://www.morningstar.com.au/personal-finance/the-lessons-...\"They found that it provided little value for children and the largest outcome was that children were being exposed to \u2018sophisticated\u2019 marketing tactics.\"reply"
-    ],
-    "link": "https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions",
-    "first_paragraph": "\nGet MIT Sloan's latest expert insights in your inbox.\nSign up for the MIT Sloan Thinking Forward newsletter.\nA full-time, two-year MBA program.A two-year, dual-degree program awarding an MBA from MIT Sloan and an SM from MIT School of Engineering.Deferred admission program; candidates work two to five years before enrolling in the MBA program.An MBA program designed for working professionals.A 12- or 18-month graduate program in finance.A 12-month graduate program in business analytics.A doctoral program that researches management science, economics, finance, marketing, operations, strategy, and other business disciplines.Undergraduate degrees offered in management, business analytics, and finance.Combine an international MBA with a graduate degree in management science; available to partner and affiliate school students only.A 20-month executive MBA program for mid-career professionals.A one-year, full-time MBA program for mid-career professionals.A master's degree program combining "
-  },
-  {
-    "title": "RFC 10015: Deprecating Obsolete Key Exchange Methods in TLS 1.2 and DTLS 1.2 (rfc-editor.org)",
-    "points": 32,
     "submitter": "Jimmc414",
-    "submit_time": "2026-08-01T23:44:55 1785627895",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.rfc-editor.org/rfc/rfc10015.html",
-    "first_paragraph": "For (D)TLS 1.2, this document deprecates the use of two key exchanges, namely Diffie-Hellman (DH) over\na finite field and RSA. It also discourages the use of static Elliptic Curve Diffie-Hellman (ECDH)\ncipher suites.\u00b6These prescriptions apply only to (D)TLS 1.2, since (D)TLS 1.0 and TLS 1.1 are\ndeprecated by RFC 8996 and (D)TLS 1.3 either does not use the affected\nalgorithms or does not share the relevant configuration options.\n(There is no DTLS version 1.1.)\u00b6This document updates RFCs 4162, 4279, 4346, 4785, 5246, 5288, 5289, 5469,\n5487, 5932, 6209, 6347, 6367, 6655, 7905, 8422, and 9325 to either deprecate or\ndiscourage the use of cipher suites using the above key exchange\nmethods in (D)TLS 1.2 connections.\u00b6\n            This is an Internet Standards Track document.\u00b6\n            This document is a product of the Internet Engineering Task Force\n            (IETF).  It represents the consensus of the IETF community.  It has\n            received public review and has been approved for pu"
-  },
-  {
-    "title": "Four Time Scales for Technology Development and Deployment (rodneybrooks.com)",
-    "points": 5,
-    "submitter": "jeffreyrogers",
-    "submit_time": "2026-08-02T02:26:52 1785637612",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://rodneybrooks.com/four-time-scales-for-technology-development-and-deployment/",
-    "first_paragraph": "Robots, AI, and other stuffYour email:\u00a0rodneybrooks.com/four-time-scales-for-technology-development-and-deployment/I have come to understand four very different time scales for development of technologies and their deployments. \u00a0And I think people often jump between them and end up making outrageously wrong, and sometimes damaging, predictions of when in the future a technology is going to be able to do what.Time scale 1. New Research IdeasNew research ideas take ten to twenty years to form before there is an understanding to bring them to really solid lab demonstrations. \u00a0Some things take much longer as there are many,\u00a0 many false starts, or there is a really hard step which takes decades to crack.Once things really have been established as a solid laboratory technology there is often a gold rush phase where major new tweaks, on essentially the same idea, come along every six months or so and it feels like the ground is shaking under us.The first \u201ccomputational\u201d models of neurons were"
-  },
-  {
-    "title": "Postmortem for Kernel Soundness Bug #14576 (leodemoura.github.io)",
-    "points": 121,
-    "submitter": "juhopitk",
-    "submit_time": "2026-08-01T18:32:20 1785609140",
-    "num_comments": 44,
-    "comments_url": "https://news.ycombinator.com/item?id=49137060",
-    "comments": [
-      "> The practical consequence: checking with an independent kernel still works, since it required two distinct bugs in two implementations, but users who rely on it need current versions of both.Things like this aren't too surprising, given that even much simpler type checkers like Rust's have soundness issues occasionally. I think it's very important to view verified results not as an absolute and unbreakable guarantee, just an extraordinarily strong one where (1) the surface area for soundness issues has been painstakingly minimized and (2) any realized soundness issues are taken very seriously and fixed in short order.reply",
-      "To what degree can you say something like \"if the kernel doesn't have metaprogramming [or some other set of features] it's fine\". When were the last bugs with a reduced feature set?reply",
-      "The implementation of the kernel is relatively trivial, it's an intentional design choice.reply",
-      "As claude would say, \"relatively\" is carrying a lot of weight in that frase. Definitely load-bearing \u2014 would not pass a quick smoke test.reply",
-      "but where\u2019s the seam!?reply",
-      "This thread has some context. A proof-system researcher found some proof-system bugs and presented them a funny way:https://leanprover.zulipchat.com/#narrow/channel/270676-lean...A mathematically-inclined reviewer (or an LLM) can quickly identify that it's an exploit. (Two exploits; it's crafted to hit a bug in another proof checker, too.)The post gestures at this, but a natural follow-up, beyond fixing specific bugs around this exploit, would be to task some security-oriented models with proving False in Lean, or with reviewing the code for potentially unsound steps, missing checks, or even useful 'hardening'. That's happening and bugfixes are landing as a result.reply",
-      "Feels appropriate for bugs in a formal proof system:> Beware of bugs in the above code; I have only proved it correct, not tried it.-Knuth, 1977reply",
-      "Reminds me of this: https://mathoverflow.net/questions/513742/are-we-stuck-with-...I know this is an implementation bug not a meta-theory bug, but I'd almost consider the fact soundness bugs are possible as a bug in the ideology, or at least a severe drawback. Stuff like this just wouldn't happen in Metamath. In a future where AI is autogenerating formalizations, why not have the AI use a harder but airtight system like Metamath?reply",
-      "Took me about 90 seconds to find a Metamath implementation bug that apparently allowed proving something that shouldn't be provable: https://github.com/metamath/metamath-exe/issues/184reply",
-      "That's with the original C verifier only. The actual database is cross-checked by 6 independent implementations. This is the whole point of Metamath: its kernel is so tiny that you can implement a verifier in a weekend.Metamath isn't a silver bullet in the design space of formal proof tools, but I personally think it just about nails the metatheory we want. Maybe some explicit facility around definitions would be desireable.reply"
-    ],
-    "link": "https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/",
-    "first_paragraph": "\n            A soundness bug in the Lean kernel (#14576) was reported and fixed during the week of July 27. It has had visibility on Zulip and social media (e.g., X, LinkedIn, and Mastodon).\n              On July 25, Ramana Kumar published a repository containing a sorry-free \"disproof\" of the Collatz conjecture, produced with AI assistance. It is not a valid proof because it exploits a bug in the kernel's handling of nested inductive types. On July 28, Kiran Gopinathan reduced it to a small proof of False and opened issue #14576. We pushed a fix one hour after the report (#14577). Joachim Breitner reviewed it and suggested improvements, and it was merged. New patch releases are out.\n              The bug: when the kernel eliminates a nested occurrence under an inductive type T with parameters Ds, and these parameters are phantom (not mentioned in constructor fields), they disappear from the generated auxiliary type and thus escape type checking. An ill-typed argument in that position "
-  },
-  {
-    "title": "Unraveling the mysteries of habit formation (kyoto-u.ac.jp)",
-    "points": 41,
-    "submitter": "hhs",
-    "submit_time": "2026-08-01T22:55:52 1785624952",
-    "num_comments": 12,
-    "comments_url": "https://news.ycombinator.com/item?id=49139383",
-    "comments": [
-      "I was watching a Charlie Rocket interview today and I got a lot of inspiration from him.  He made it a habit of staying positive, turning a loss into a win and always finding the upside.  Instead of getting sucked into the despair, he takes a loss as a learning lesson.  Good habits can be hard to find but once you get into the habit of something, it becomes super easy.  Everything is hard to do -- if it was easy, everybody would be doing it.  Once you learn to do something, and keep doing it, you understand it better and it can make your life so much easier, or happier, or better, in so many ways.  There are also bad habits but those are just as easy to break as good ones.reply",
-      "Agree with most everything and will check our that interview, that attitude is how I try and live, but the last sentence is obviously not true. Taking heroin is a habit, going to a gym is a habit, and obviously one is much easier to stop whether either willfully or not.I'd say the ease which you can pick up habits or drop them is extremely variable across the specific habit and person. (as a different example, someone with less social awareness will find it harder to pick up the habit of being a hospitable host than someone it comes naturally to, but once learned its probably fairly easy to maintain)One of my favorite quotes is, \"first the man makes the habit, then the habit makes the man\" , and it works both ways, good and bad. I really think this is something that should be taught much more explicitly in school to everyone, rather than leaving it only in places like sports and the military.reply",
-      "There's a fine line between what you described and toxic positivity.It's important not to ruminate on bad thoughts (when your proposal is a good replacement behavior), but it's also important not to bottle up natural human emotions as if they are unjustified or unreal.A thought exercise: if it wasn't your behavior that caused your own despair, but your spouse's behaviors that caused you irritation / grief. Do you think it's better to paint a smile on yourself and ignore the underlying problem, or spend a few minutes feeling your emotions, describe the cause to your partner, then politely suggest a substitute behavior? The former builds resentment and bottles up strong emotions for an inevitable outburst down the road. The other diffuses the emotion, potentially alleviates the offending behavior, and doesn't betray what you authentically emote.reply",
-      "The determined mouse with the barbells and the headband is my new spirit animal.reply",
-      "The same mouse later:https://www.youtube.com/watch?v=0K8lrVjT6fMreply",
-      "Same :D That mouse is determined.  I love it.reply",
-      "What also still puzzles me about habits is the fact that once I have a routine (like going to the gym at 6am) it is super easy. But once I lost it I struggle a lot to get it back.reply",
-      "I feel like it's much the same for bad habits broken, too.  If you allow yourself to fall back into a bad habit (smoking, drinking, gambling, etc for example) it feels really challenging to break it yet again.  Best excuse I suppose to keep those good habits and bad ones right where you wanna keep 'em.reply",
-      "That is opposite, not the same.reply",
-      "This reminds me also of the Andrew Huberman <-> Jordan Peterson discussion where doing sth you do not like actually physically lets a specific region in your brain grow and if you do not do it, it shrinks (sorry for the simplification - not a neuro scientist haha)reply"
-    ],
-    "link": "https://www.kyoto-u.ac.jp/en/research-news/2026-07-28",
-    "first_paragraph": "\u7814\u7a76\u8005\u540dAsaoka, NozomiActivity Database on Education and Research\u00a0\u7814\u7a76\u8005\u540dDiane PaganoORCID\u00a0\u7814\u7a76\u8005\u540dHayashi, YasunoriActivity Database on Education and Research\u00a0Kyoto, Japan -- Habit formation describes the repeated performance of a behavior until it becomes routine: in other words, the shift from deliberate to automatic decision-making. This concept is often invoked as a way to improve one's life by making a routine of beneficial activities that can otherwise feel tedious, such as cleaning, studying, and regular exercise.That repeating the same behavior is essential for forming a habit has become well-established, but whether a habit develops as an exact replication of the original behavior, or if the behavior itself gradually changes as it becomes a habit, remains unclear. Because habit formation takes a long time, comparing behavioral and neural changes within the same subject before and after a habit develops has been difficult. To overcome this challenge, a team of researchers at Kyoto Univer"
-  },
-  {
-    "title": "Persistent State Machines: LLM Attention with INT4 In-Memory Cells (zenodo.org)",
-    "points": 6,
-    "submitter": "yusuke_esaka",
-    "submit_time": "2026-08-02T01:01:45 1785632505",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://zenodo.org/records/21753002",
-    "first_paragraph": "Persistent State Machines: Complete Mathematical Proofs and Vivado Implementation Synthesis (Version 8.0)ABSTRACT\u00a0We present a formal discrete framework for attention operators in Large Language Models via Persistent State Machines (PSMs). Computation is broadcast to stationary in-memory cells that evaluate local deterministic state transitions. Complete mathematical proofs are given for quantization error bounds, a concrete multi-phase discrete Softmax construction under an explicit bounded-logits assumption, deterministic finite-automaton equivalence with spatial factorization, and membership in DSPACE(O(n)).We validate the implementation feasibility of the architecture on contemporary programmable logic fabric through two distinct evaluation flows:Low-Power Evaluation (Zynq-7000 xc7z020): A full 1024-cell array (d=128) out-of-context (OOC) block design implementation. By annotating the post-route netlist with a Switching Activity Interchange Format (SAIF) file obtained from a post-r"
-  },
-  {
-    "title": "CISA Alert: Water Sector PLC Targeting (censys.com)",
-    "points": 78,
-    "submitter": "speckx",
-    "submit_time": "2026-08-01T18:50:17 1785610217",
-    "num_comments": 49,
-    "comments_url": "https://news.ycombinator.com/item?id=49137228",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://censys.com/blog/cisa-alert-water-tower-plc-targeting/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "But can your calculator run Linux? (raymii.org)",
-    "points": 69,
-    "submitter": "jandeboevrie",
-    "submit_time": "2026-08-01T19:44:48 1785613488",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=49137713",
-    "comments": [
-      "I use the Prime G2 daily. I VERY much prefer RPN, love that I can program it with Python (and occasionally PPL,) and am often in environments where having a backlit screen is a lot more convenient than pulling out a flashlight. Linux on it would be a fun novelty, but the clunkiness would make it a lot less useful to me. The big collection of physical buttons behaving predictably without needing to look at the screen is super useful. Otherwise I\u2019d just use my phone.reply",
-      "If a toaster can run on Linux,so can a calculator.(NetBSD used to have that slogan with regards to toasters. I have not followed it for several years, so I don't know which operating system dominates toasters nowadays.)reply",
-      "These calculators are, without question, excellent little devices and the HP ones in particular had great engineering behind them.  I had an HP48 in undergrad, which was considered pretty much mandatory for engineering.  There was a thriving student sneakernet of programs you could get that would trivialize certain problems.  Some friends had the HP49G which was, in my opinion, a step down in terms of build quality.  Years later I bought an HP50 which was the best of both worlds.I still have my HP50 but there's just no reason to use it.  Anywhere I go I either have my phone or a computer.  When I was in the air force I would have to go into EMSEC zones where you couldn't bring external devices, such as SCIFs, but the number of people with needs to be running engineering calculations in such an environment rounds down to 0.  Certainly I wasn't one of them.Even \"in the field\" nowadays, you're likely to have satellite connectivity and a laptop.  There's just not really a use case for graphing calculators that I can think of.  It's too bad, because they're awesome.reply",
-      "I still have my 50g on my work desk for one reason - to do calculations with units. Admittedly I use emulation on my phone mostly, but the 48-50 units calculations are still the best I\u2019ve used. (But if I don\u2019t need units I use my SM 42).reply"
-    ],
-    "link": "https://raymii.org/s/articles/But_can_your_calculator_run_Linux.html",
-    "first_paragraph": "\n\n\n\n\nPublished: 01-08-2026 20:08 | Author: Remy van Elst | Text only version of this article\nOne of my all time favorite calculators is the HP 16C. It is an RPN calculator aimed at\ncomputer programmers with support for hex, binary, octal and decimal and all\nsorts of useful operations like bit shifting, masking and rotations.  I don't\nown one myself, I have a Swiss Micro's DM16L, a high quality modern day\nremake with improvements like a 2 line display. There is a limited run\ncollectors edition of the HP 16C coming soon though.\nBut none of those calculators run Linux.This one can:xcalc on an actual calculatorScreenshot of the console and partial fbv image viewerOf course it runs DoomMy all time favorite, the HP-16CBelow are at least a thousand words covering the HP Prime G2 and other\ngraphical calculators capable of running Linux. You can skip that if you just want to read about my updated Linux port for the Prime\nG2.  The HP Prime is a graphing\ncalculator on the market since 2013, with "
-  },
-  {
-    "title": "Morph (YC S23) Is Hiring Member of Technical Staff (ycombinator.com)",
-    "points": 0,
-    "submitter": "",
-    "submit_time": "2026-08-01T22:52:44 1785624764",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.ycombinator.com/companies/morph/jobs/0Z8vI3K-member-of-technical-staff",
-    "first_paragraph": "Fast Models Optimized for Coding AgentsThe best candidates would be top 1% at multiple parts of the inference stack.work on PD disaggregation researchMorph builds the inference infrastructure behind the fastest open models. Our stack spans kernels, model serving, routing, autoscaling, and capacity. We are hiring a performance engineer to make the entire system faster, cheaper, and more reliable.You will work directly with the founders on problems that determine how efficiently frontier-scale models can be served. Small team, enormous compute, immediate production impact.2 day work trialMorph builds specialized code-generation models and serves them on a custom inference stack.Technical work involves autoresearch for kernels and custom speculative-decoding models.\u00a9 2026 Y Combinator"
-  },
-  {
-    "title": "The Art of 64-bit Assembly (nostarch.com)",
-    "points": 198,
-    "submitter": "0x54MUR41",
-    "submit_time": "2026-08-01T14:09:00 1785593340",
-    "num_comments": 87,
-    "comments_url": "https://news.ycombinator.com/item?id=49134599",
-    "comments": [
-      "I know that we're discouraged from meta-comments, but what is going on in this thread? It's a nearly 800-page book about the art of programming. A huge amount of work on a topic that should be dear to our hearts. News for hackers, right?But somehow, the discussion has three themes. It's 50+ comments of \"I don't like the first sentence of the marketing copy\", \"I don't like the tool the author is using\", and \"what would happen if we train an LLM on this book?\". Has anyone read the sample chapter? Did you like it? Anyone here owns volume 1 and has opinions about that?reply",
-      "I own volume 1 and when it first arrived I dropped it on my foot and had to go to the doctor. I have not got around to reading it again. His original x86 ASM book was good though.I also read his Write Great Code series and generally found it to have some pretty good advice, but it was also full of things like recommendations to never trust compilers and to write lots of arcane unreadable magic code to unlock ultimate speedy hacker cred.That being said, if you want to learn about ASM in TYOOL 2026 then you could do a lot worse than learning it from someone who doesn't trust compilers and does everything themselves.reply",
-      "Yeah, I'd second a recommendation of at least the first two volumes of Write Great Code. I've long suggested those to juniors who have come out of bootcamps, self-taught, or other backgrounds outside a typical CS degree and didn't have much exposure to lower level machine concepts. I was a bit let down by the third volume... not that it was bad per se, but I feel like the sw engineering process stuff it covered both strayed outside his core strengths and had been done better elsewhere already.reply",
-      "> if you want to learn about ASM in TYOOL 2026 then you could do a lot worse than learning it from someone who doesn't trust compilers and does everything themselves.Not bad advice, but the Fasm forums used to be pretty good for asking questions, no clue if they are around and active still, but there were a lot of programs people had written and even a few simple OSs(including KolibriOS) which had a ton of code to read through that mostly was commented. Once you get the basics it is pretty easy to do stuff, and most of learning is doing stuff.reply",
-      "His earlier 32bit book was pretty decent, but super windows focused, I wish a similar work using a reasonable syntax existed for Linux, but the linux equivalent(some kind of foundations of programming or something similar assembly book) used gas syntax which is like nails on a chalkboard.  Fasm is also so much nicer these days to use(masm is neglected by microsoft, but is the tool the author has used for everything).reply",
-      "Volume 1 is actually a really good book. Randall Hyde is a great author on this subject. HN has changed a lot from what it once was. It's just filled with a lot of this kind of snark and nonsense. What else would you expect when the most common take on AI on HN is this insane idea that \"LLMs are just like a compiler was?\" But, its not everyone. If you're interested in this topic then I think it will be worth working through.reply",
-      "this is what almost every hn post is: lowbrow reflexive/reactionary responses. it's been like this for years. try to call it out and you'll be censured by dang or one of the other police officers for being \"uncharitable\" or something like that <shrug>reply",
-      "Interesting to see that people are still spending much time on assembly languages :) \nI've had a lot of fun with it in recent years as well. (Shameless plug: I've written a few on LLVM integrated assembler regarding better fragments and improving expressions and relocations).When comparing GNU Assembler and MASM, GAS is missing many features: while loop, string processing (.e.g strlen)> page 3: \"It\u2019s important to understand that MASM converts macro invocation arguments to text values before doing the macro expansion\"Like MASM, GAS uses call-by-name evaluation by default. While GAS's altmacro mode does allow for expression evaluation using syntax like `%(1+2)`, it has strict limitations: it only supports absolute expressions and is restricted to argument positions.In contrast, MASM's % operator (page 8) looks far more general.reply",
-      "I'm just gonna be the weirdo in this comment thread and say: yay! Assembly!\nThe most god forsaken language i ever had to learn. \nBut still very very usefulreply",
-      "i'm sorry, starting with \"you can ask AI to \u2026 [but it'll do an incomplete and bad job]\" and then launching forth into a hundred words of AI-produced text is not very appetizingi hope this is the publisher's fault and the author replaces it with something decent of their own. contrary to the opinions i've heard around (including elsewhere on this thread) learning asm is still meaningful today and it's something i'd like to get better at so i will consider getting this book or one like it once $work is a bit less hecticreply"
-    ],
-    "link": "https://nostarch.com/art-64-bit-assembly-v2",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Why Is Europe Burning? (newyorker.com)",
-    "points": 11,
-    "submitter": "littlexsparkee",
-    "submit_time": "2026-08-02T00:00:46 1785628846",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.newyorker.com/news/the-lede/why-is-europe-burning",
-    "first_paragraph": "On July 15th, a wildfire broke out near the small town of Or\u00e9s, Spain, in the northern province of Zaragoza. Propelled by strong winds and low humidity, the flames quickly spread over foothills and through canyons. By the next day, as the fire ballooned to more than eleven thousand acres, five towns in its path had to be evacuated. For Jos\u00e9 Luis Duce Arag\u00fc\u00e9s, a wildland firefighter whose family is from Zaragoza, news of the fire felt personal. As a teen-ager, he\u2019d spent summers exploring the same mountains that were now burning.Just two days later, Arag\u00fc\u00e9s, who is based in California but travels internationally to help communities manage fire risk, learned about another blaze. This one, in the nearby Guadalajara province of Spain, was close to where members of his family live today. He\u2019d begun his fire career in Guadalajara, working summers in the small town of Cogolludo. \u201cEverything started for me there,\u201d Arag\u00fc\u00e9s told me. \u201cI started my suppression career there\u2014my first hand crew, firs"
-  },
-  {
-    "title": "We accidentally built an LLVM compiler for Jax (iza.ac)",
-    "points": 14,
-    "submitter": "infinitewalk",
-    "submit_time": "2026-07-30T23:46:05 1785455165",
+    "submit_time": "2026-08-03T01:23:26 1785720206",
     "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=49117303",
+    "comments_url": "https://news.ycombinator.com/item?id=49150181",
     "comments": [
-      "Neat. XLA predates MLIR. Interesting stories there. You'd have to stop by the Bay Area LLVM monthly meetup to hear them. :-X> So if XLA already uses LLVM, why is our approach different?Uses MLIR, XLA does not.> So\u2026 what is the point?> Honestly? We aren\u2019t entirely sure yet.> Let me be perfectly clear: this is not going to beat XLA for standard deep learning workloads. XLA has years of hyper-specific optimizations for linear algebra on GPUs and TPUs. If you are training a massive transformer, stick to standard JAX.> But what we do think is cool is what happens when you connect JAX directly to the broader LLVM ecosystem and drop the heavy XLA runtime. (Plus, no need to build XLA using Bazel either! You\u2019re welcome.)reply",
-      "> Neat. XLA predates MLIR. Interesting stories there. You'd have to stop by the Bay Area LLVM monthly meetup to hear them. :-XI would love to hear those stories! Sadly I'm based in Toronto, so dropping by the Bay Area meetups isn't in the cards anytime soon.If any of that history ever makes it into a blog post, I'd be first in line to read it.reply",
-      "> Uses MLIR, XLA does not.https://github.com/search?q=repo%3Aopenxla%2Fxla+mlir&type=c...> 1.5k filesyou're behind the times. XLA moved over probably ~2 years ago - \"Captain Awesome\" eventually relented.reply"
+      "This shouldn\u2019t be too much of a surprise, as TLS 1.3 has been out for many years and is widely adopted.I haven\u2019t paid too much attention to the TLS WG lately (for obvious reasons if you look at their mailing list), but I assume this is mostly a \u201cif you want Post-Quantum cryptography, you need 1.3\u201d.reply",
+      "I don\u2019t get it.  Were there revisions or optional features of v1.2?I thought the 1.2 spec was the frozen spec.reply",
+      "Makes sense. Nobody wants to deal with \"this user-agent claims to support TLS 1.2, except this extension that was added in 2026\" anymore.If you're going to add or remove features, follow semver and bump that number.reply"
     ],
-    "link": "https://iza.ac/posts/2026/07/accidental-llvm-compiler-for-jax/",
-    "first_paragraph": "Sometimes when you build software, you shave a yak so deeply that you end up with a surprisingly\nnice sweater (while the yak, presumably, wonders why it is suddenly rather\u00a0drafty).For the past while, my team and I have been building a quantum compiler called\nCatalyst for the\nquantum software library PennyLane. Our goal was relatively\nstraightforward: optimize large, hybrid quantum-classical workflows in a scalable manner using\nMLIR. To do this, we needed a fast, robust way to capture classical Python processing\n(including NumPy and associated scientific libraries) and represent it in our intermediate\u00a0representation.We chose JAX, for a couple of reasons: its ability to trace through Python functions and capture the\ncomputational graph1, its support\nof the NumPy and SciPy APIs with relatively good coverage, and the fact that it already lowers down\nto MLIR. We also aimed to address a couple of quality of life improvements, such as the ability to\ncapture native Python control flow2, and su"
+    "link": "https://www.rfc-editor.org/rfc/rfc9851.html",
+    "first_paragraph": "Use of TLS 1.3, which fixes some known deficiencies in TLS 1.2, is\n   growing.  This document specifies that no changes will be approved \n   for TLS 1.2 outside of urgent security fixes (as determined by \n   TLS Working Group consensus), new TLS Exporter Labels, and\n   new Application-Layer Protocol Negotiation (ALPN) Protocol IDs.  \n   This applies to TLS only; it does not apply to DTLS (in\n   any DTLS version).\u00b6\n            This is an Internet Standards Track document.\u00b6\n            This document is a product of the Internet Engineering Task Force\n            (IETF).  It represents the consensus of the IETF community.  It has\n            received public review and has been approved for publication by\n            the Internet Engineering Steering Group (IESG).  Further\n            information on Internet Standards is available in Section 2 of \n            RFC 7841.\u00b6\n            Information about the current status of this document, any\n            errata, and how to provide feedback on"
   },
   {
-    "title": "China begins producing advanced chipmaking deep-ultraviolet lithography machines (reuters.com)",
-    "points": 20,
-    "submitter": "ck2",
-    "submit_time": "2026-07-30T14:12:44 1785420764",
+    "title": "Show HN: ssh ssh.place (ssh.place)",
+    "points": 30,
+    "submitter": "jeninh",
+    "submit_time": "2026-08-03T00:23:21 1785716601",
+    "num_comments": 14,
+    "comments_url": "https://news.ycombinator.com/item?id=49149805",
+    "comments": [
+      "Are we coordinating factions here, like the original r/place? The social aspect was such a big part of the original. I'll start:# PURPLE FRAME #Our mission is to draw a purple frame around the canvas. 2 rows of blank space between the frame and the top/bottom of the canvas. 4 cols of blank space between the frame and the left/right of the canvas.reply",
+      "I can't see my cursor if it is placed on top of a cell that has already been colored.reply",
+      "Oops. I'll fix that right nowreply",
+      "This is fun, I tried to draw a flower but it sucks.reply",
+      "It's a pretty flower :-) I hope it wasn't you who put that red line through itreply",
+      "lol no someone else did that while i was drawing it. thanks :)reply",
+      "> Your cooldown is tied to your SSH keyThis sounds like a recipe for bots that bypass the cooldown...reply",
+      "I also have limits for IP and device + some other factors :) The full details are in the README on GitHub. But also I don't expect too many people to find this, it's one of my first public projects. If we do get a surge of people then I'll implement something better.reply",
+      "ssh join@bbs.profullstack.comreply",
+      "Make sure to not be forwarding ssh agents! :)reply"
+    ],
+    "link": "https://ssh.place",
+    "first_paragraph": "One canvas. Everyone draws on it over SSH.No account, no install \u00b7 200\u00d760 cells \u00b7 one placement every 15sAny SSH key works. There is nothing to sign up for.This canvas is color only. The server turns down anything with a character in it, so you cannot write text here. Draw something instead.Your cooldown is tied to your SSH key, so reconnecting will not reset it. This page only reads the canvas. It changes over SSH and nowhere else."
+  },
+  {
+    "title": "Autoregressive Language Model on the 6502 Processor (mattbeton.com)",
+    "points": 65,
+    "submitter": "nmstoker",
+    "submit_time": "2026-07-31T13:08:30 1785503310",
     "num_comments": 7,
-    "comments_url": "https://news.ycombinator.com/item?id=49110319",
+    "comments_url": "https://news.ycombinator.com/item?id=49122655",
     "comments": [
-      "China is still far behind modern lithography. It took ASML almost 2 decades to get from immersion DUV (and EUV prototypes) to commercial EUV machines.reply",
-      "But isn't it easier to copy some existing approach than to create it from a green field? ASML tech is presumably highly protected, but China is also very good in spying, hacking etc.reply",
-      "True but also catching up to an existing tech is a much different game than creating it from scratch. Hiring people who have the right knowledge can speed that up.reply",
-      "This, these news organizations have no f'n clue. China this, China that, it's all part of the 10 billion China spends on b.s to feed the Americans that they are behind or they are useless and that they don't stand a chance....China is on the verge of collapse walking the razors edge.reply",
-      "Yes. China is behind on some of the crucial technology that gives the West its advantage, but this framing that the country is on the verge of collapse is just not true.Also recreating a know technology usually takes much less time even if you don't have access to the underlying tech.reply",
-      "ASML dropped; it used to be the undisputed leader of immersion DUVInteresting in so many ways that theinfo kept the company anon but Reuters exposed it (allegedly)Aside: what we know for sure is that Chinese are catching up to Japanese in putting dad-style puns in their brandshttps://www.hoshinocoffee.com/reply",
-      "nvidia clone in next year or two?btw photo on that article is actually intel at Oregonreply"
+      "> The model weights and inference code need to be contained within 25KB of user-space memoryWouldn\u2019t it be era-appropriate to allow relying on banked memory? You\u2019d still need to hold the inference code, but you could effectively stream(ing page) the weights as you compute on them.reply",
+      "From a look at https://en.wikipedia.org/wiki/BBC_Micro#Specifications I think the 6502 versions of the beeb didn't have banked RAM so to keep it loadable from tape the limits might be as stated.But with substantial additional effort, maybe some banked ROMs could be added..?reply",
+      "Cool to think this demo would have been possible over fifty years ago. I wonder what someone from 1975 would have said if you had shown this to them back then.reply",
+      "The biggest win for AI dev efficiency is cutting down what gets loaded into context. Semantically matching tasks to the top tools helps a lot.reply",
+      "This is super cool!\nAs someone who's worked a little with NES programming and tried out cc65, I'm surprised he didn't just hand write some assembly, he likely couldve saved a lot of space if I had to guess.reply",
+      "This is amazing project! I hope it will result in real miniaturization of AI - for example, edge LLM inside of glasses. That will be awesome.reply",
+      "The 6502 is notoriously unfit for a C compiler, so probably there is room for more performance in the future. :)reply"
     ],
-    "link": "https://www.reuters.com/world/china/china-starts-production-home-grown-immersion-duv-chipmaking-tools-source-2026-07-28/",
-    "first_paragraph": ""
+    "link": "https://mattbeton.com/blog/bitnet-6502.html",
+    "first_paragraph": "The MOS 6502 is an 8-bit microprocessor released in 1975, powering the BBC Micro and the Apple II. I am lucky enough to have access to my dad's BBC Model B from the 80s; I wanted to see, using modern machine learning, what the strongest language model we could fit on this machine was.Unsurprisingly, this poses significant challenges. The model weights and inference code need to be contained within 25KB of user-space memory \u2014 my final configuration was 9KB inference code and 13KB model weights. The CPU only operates on an 8-bit integer datatype, and doesn't include multiplication in its instruction set.CC65 is used for the inference code, enabling compilation of C to the 6502 instruction set. A binary of a model trained on my MacBook can then be written to the BBC Micro using PlayUEF and a custom 3.5mm-to-tape cable I DIY'ed. This convinces the BBC that it's listening to a tape drive, while my laptop plays audio out of its headphone jack.The sim65 emulator allows a parity check between "
   },
   {
-    "title": "How Google helped destroy adoption of RSS feeds (2023) (openrss.org)",
-    "points": 417,
-    "submitter": "pudgywalsh",
-    "submit_time": "2026-08-01T18:07:07 1785607627",
-    "num_comments": 151,
-    "comments_url": "https://news.ycombinator.com/item?id=49136821",
+    "title": "Show HN: Kakehashi \u2013 Experimental userspace to run macOS binaries on Linux ARM (github.com/wie-project)",
+    "points": 186,
+    "submitter": "vlad_kalinkin",
+    "submit_time": "2026-08-02T16:26:40 1785688000",
+    "num_comments": 40,
+    "comments_url": "https://news.ycombinator.com/item?id=49145937",
     "comments": [
-      "The Internet in the early 2000s felt a little more special as compared to today, when 99.999 % of content is locked in a handful of walled gardens. I mean sure everything we had then is still possible but let\u2019s be honest everything about the web is fine tuned to deliver ads to our eyeballs, browsers, operating systems and even protocols are being designed with ad delivery in mind. Even the privacy friendly browsers just exist to serve ads when I think about it. Kind of sad really, but I guess you could be happy as it\u2019s so big now and there\u2019s so much to do. Just makes you wonder what stuff would thrive if ads didn\u2019t exist. As of now every niche thing that gets successful will be invariably pulled into the ad ecosystem as it\u2019s very hard to say no to money.RSS wasn\u2019t in the interest of the big platforms as it\u2019s decentralized and there\u2019s no good way to deliver ads through it, simple as that.reply",
-      "> everything about the web is fine tuned to deliver ads to our eyeballs, browsers, operating systems and even protocols are being designed with ad delivery in mind.I use Firefox with uBlock Origin on Linux, and haven't seen an ad in years. It's not like ads weren't a thing 20 years ago. Pop-up windows were particularly bad. Javascript, in particular, has been constantly abused against the user ever since it was created.reply",
-      "> Firefox with uBlock Origin on LinuxSame setup and same experience. I've recently joined another company which only provided chrome with no extensions by default. I know the web is filled with ads but I'm shocked again and again when I get a glimpse into what it's like without an adblocker.reply",
-      "There are dozens of us. Maybe one day people will realize how much better Firefox is now and how nicer the web can be with no ads.reply",
-      "There was also .001% of the content there is now. The Internet of 2000 was microscopic.Now everyone can create content, without any of the friction of hosting it. The vast majority of it is crap, but that was always the case.The main difference between now and 30 years ago is that the Internet is vastly more diverse. It isn't just other CS majors any more. Now everyone gets to wade in the vast crap pool looking for the smidge of things that appeal to them. Meanwhile the CS majors still host their own stuff, because they can, and you find out about it via the same word of mouth.reply",
-      "It sounds like you agreed with them from the other direction. \u201cThe internet of yesteryear felt more special.\u201d - \u201cNah, there wasn\u2019t as much slop back then and now it\u2019s a crap pool that anyone can wade into and look for scraps.\u201dreply",
-      "The .001% was the top .001% of today's content. The other 99.999% we gained was spam aimed at getting money while providing minimal value and taking minimal effort.reply",
-      "can\u2019t wait to hear about how some 9/11 truther blog was the cream of the crop. I\u2019m surprised you can see anything through those rose coloured glasses.the most charitable interpretation is that the internet used to more exclusively cater to your interests specifically, which i\u2019m sure is true.try asking most women about the internet then vs now. there are still scumbags, and one could reasonably argue that they\u2019ve gotten worse, but at least theres more to do now.reply",
-      "> It isn't just other CS majors any more.Hey, that's not fair! It also had nine year olds who bought a book about HTML and made shitty sites on Geocities!reply",
-      "Those were just CS majors before they majored in CS.reply"
+      "Interesting project! A long term vision for MacOS applications is feasible given the success of WINE/Proton with Windows applications.Are you familiar with the Darling project? https://github.com/darlinghq/darling There's an open PR for ARM64 support https://github.com/darlinghq/darling/pull/1753 Could you combine efforts or do your goals differ too much?reply",
+      "In their \"License\" section on Github, they write \"This project is not derived from Darling.\" - so they clearly are familiar with it.reply",
+      "Wine got a lot of support from games, even today productivity apps are often much less supported.reply",
+      "Which makes sense, games have a much smaller area of contact with the host platform.This sounds strange given how much modern GPUs can do, but consider that a typical Windows machine ca. 2005 will have Access/JET Red, Active Directory/JET Blue, possibly MSSQL, definitely MSMQ/MTS, ODBC, OLE DB, DAO, ADO, that one SQL interpreter inside Windows Installer, and I\u2019ve just listed Microsoft\u2019s database-adjacent things. I\u2019m not surprised that press reports about the \u201cMinWin\u201d initiative mentioned as the main difficulty the fact that nobody could figure out if any given component was actually necessary for a Windows install to function, let alone to be compatible with third-party software. Now consider that this was, by our standards, a lightweight system on a massively underpowered computer.reply",
+      "Yeah.. just give me a thing I double click that starts After Effects and Excel.reply",
+      "Hi HN,\nI started developing an experimental project with the goal of running macOS CLI binaries natively on Linux ARM machines.\nAs of now, we have working prototypes for:\n- 7-Zip: Passes multi-threaded compression tests on an 8k-file tree. Currently ~5.2x slower than native Linux execution, but I already mapped out a clear optimization plan to cut this gap down.\n- curl: Over 200 commands and options successfully pass our automated Docker test script.\n- Xcode Tools Git: Basic version control commands (init, add, commit) are up and running, though 100% stability is not yet guaranteed.\nI would be highly grateful for your constructive criticism, architectural ideas, and feedback!\nThank you!reply",
+      "Do you plan on supporting different target versions and implementing similar restrictions to those targets?eg: older macOS had a writable /usr/ while newer does not without manual effort.Also, do you plan on having similar cli tools available with similar features ported (maybe from the available Darwin sources?)eg: can I run a /bin/bash script that expects a macOS environment? Will it get \"Darwin\" from \"uname -o\"reply",
+      "I assume you eventually plan to target binaries that don't already exist on Linux? Where do you think you'll start?reply",
+      "Well, of course, most of all I would like to achieve full-fledged support for Xcode Tools (including building iOS applications) and the macOS version of Homebrew. But, of course, there is still a lot of work ahead to get to this point. Thank you!reply",
+      "I would look at osxcross[0] if you haven't looked into it already. It can at least do the \"build stuff targeting macos\" part (well, relatively speaking). Swift support kinda breaks down, unfortunately, and actually getting it set up is a bit of a hassle. but it does work.[0]: https://github.com/tpoechtrager/osxcrossreply"
     ],
-    "link": "https://openrss.org/blog/how-google-helped-destroy-adoption-of-rss-feeds",
-    "first_paragraph": "Although RSS feeds are alive and still heavily used today, their level of adoption has suffered because of how difficult a handful of popular technology companies have made it to use them. Google, especially, has relied on the open web RSS protocol to gain so much market share and influence, but continues to engage in behavior that exploits the open web at the expense of its users. As a result, Google has single-handedly contributed to the reason many users who once relied on RSS feeds have stopped using them.Below, we dive deeper into Google's track record of what appears to be an Embrace, Extend, and Extinguish model. The company has continuously built and extended their products around the free and open RSS protocol to gain user trust, only to then remove RSS support once they've locked users in, and ignore any complaints or requests to restore it. Not only is it a blatant disregard for RSS and a huge disappointment to those who use it, it poses one of the biggest threats to the fre"
+    "link": "https://github.com/wie-project/kakehashi",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n           There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.Userspace macOS ARM64 \u2192 Linux aarch64 translation layer (CLI-first, no JIT).Load Darwin Mach-O on Linux aarch64, map a freestanding libSystem, translate\nBSD syscalls, and run real guests (clang probes, 7-Zip 7zz, curl,\nthreads).Verified on Docker/Colima and UTM (Linux aarch64). Install once:Relative -o / archive paths resolve against the host CWD of the kh\nprocess (create parent dirs yourself, or rely on auto-mkdir for O_CREAT).\nThrough the bottle, /Volumes/linux/\u2026 bridges to the host root (/ \u2192 host /).Docker helpers (artifacts under host .tmp/kh-out/):Docker helpers:Harmless noise on many runs:Details and gates: docs/curl.md.Full curl feature set (POST bodies, proxies, HTTP/3 end-to-end, every scheme),\nreal Apple Security.fr"
   },
   {
-    "title": "Kobuk the Destroyer \u2013 Tales from the Wild, Unseen World of Test Engineering (wwnorton.com)",
-    "points": 8,
-    "submitter": "ripe",
-    "submit_time": "2026-08-02T00:01:46 1785628906",
+    "title": "Qwen 3.8 Max Live Now (qwencloud.com)",
+    "points": 18,
+    "submitter": "zkmon",
+    "submit_time": "2026-08-03T02:18:40 1785723520",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://wwnorton.com/books/9781324051299",
+    "link": "https://www.qwencloud.com/models/qwen3.8-max",
+    "first_paragraph": "2.4-trillion-parameter MoE flagship delivering a comprehensive leap in coding and professional work. Autonomously codes and delivers complete projects spanning 10+ days. Handles hundreds of specialized tasks across legal, financial, design, and other professional domains, producing production-grade results end-to-end in a single conversation. Native visual understanding runs through the full cycle of planning, execution, and verification, enabling deep semantic analysis of ultra-long documents and extended video content. In long-horizon tasks, plans autonomously, iterates through closed feedback loops, and continuously evolves.\u00a9 2026 Intelligent Cloud Computing (Singapore) Private Limited. All rights reserved.Cookie preferences"
+  },
+  {
+    "title": "Note-Taking and Personal Knowledge Management (unattributed.cc)",
+    "points": 140,
+    "submitter": "surprisetalk",
+    "submit_time": "2026-07-28T14:21:10 1785248470",
+    "num_comments": 41,
+    "comments_url": "https://news.ycombinator.com/item?id=49084324",
+    "comments": [
+      "Asking \"what have note-taking apps accomplished?\" is like asking \"what have spreadsheets accomplished?\" or \"what have cameras accomplished?\". A tool doesn't accomplish anything on its own. A tool is a means to an end.A few days ago, someone jokingly asked if Henry Ford had a personal knowledge base in Obsidian... Well, sort of! He had something he called \"jot books\", where he journaled, kept notes, grocery lists, etc. Not dissimilar to how people use Obsidian. The Henry Ford Museum has fifty of these notebooks: https://www.thehenryford.org/search?Query=%22jot+book%22How should we quantify the impact of Henry Ford's notebooks? How should we quantify the impact of spreadsheets?Most people who accomplish anything take notes in some form, because writing is a way of thinking. We love to mythologize the tools and methods of accomplished people because we hope it will let us absorb a bit of their genius. But a good camera doesn't make a good photographer. Taking lots of photos helps.Should you take notes? Probably. Does it matter what your method is? Probably not. Whatever works for you. Obsidian (or any other form of notetaking) is successful if it disappears and lets you accomplish your work.reply",
+      "In his biography Richard Branson also talks about his personal notebooks, which he keeps and have some bookshelves worth by nowreply",
+      "He also has Dyslexia, so this would have been harder and more effort than for most other people. It probably help him overcome the short term into long term memory flow that a lot of people with Dyslexia struggle with.reply",
+      "Or lab notebooks from any lab ever.reply",
+      "I've realized that most of my tendencies to set up elaborate note-taking systems and frameworks have been an attempt to address my anxiety around learning and productivity. I'm constantly in the mode of \"learning defensively\" - questioning what I'm absorbing into my mental toolkit, how much I retain, and how much I'd be able to conjure if I needed to solve a problem in that domain. In this context, noting down whatever I come across in Obsidian canvases or webs of interlinked notes or making Anki flash cards gives me some comfort about what I'm doing, and of course satisfies the urge of organizing and categorizing things.But when I relate these activities to learning itself, it becomes difficult to gauge how much of it is necessary. If I don't constantly serialize or test what I'm learning, how do I know I'm learning anything at all? And externalizing so much starts to feel like a burden and gives me less confidence in my own intrinsic ability to just go and do things.I was going to post an \"Ask HN\" on this topic to see if other people related to this. If anyone has been in this mindset before and managed to break out of it, I'd be curious to know what helped!reply",
+      "I don't know your specifics, so I'm going to reply with what I've learned about learning:I found reading a textbook, and typing notes into a dumb markdown file with the textbooks name is good enough. Typically: definitions, quotes, and personal thoughts while reading. Did this for stats/comp sci/etc. Obsidian + markdown worked for that, even without plugins. Being able to text search is useful, which is why I don't hand write.Anything beyond that you have to be cautious about paralyzing yourself from trying XYZ PKM.Theres a quote from stephen king that goes somewhere along the lines of \"during first draft don't try referencing or fixing grammar because it breaks your train of thought\". I think similarly, when learning something, choose the thing thats most out of the way (usually the simplest) that is least likely to break your train of thought.In terms of tracking how much you're learning, I'd be very very slow and incremental in what tooling/methods you pick. For me, I just trust myself after reading/notetaking a textbook. Usually homeworks get very easy which is a good sign. Being able to explain what I learned to someone else is a good sign.reply",
+      "Great advice, thanks!> Usually homeworks get very easy which is a good signI agree, but having homeworks in itself is a big advantage! It means you're in a structured learning environment where someone has taken the care to create a learning path and added checkpoints with carefully designed problems designed to refresh + assess what you've absorbed until that point.When you're learning outside the classroom (for yourself or on the job), there's this sudden loss of all bounds where you now also have to draw a line of what knowledge is reasonable to acquire and what is out of scope. For example, when working independently on personal projects, I sometimes get sucked into reading about the details of protocols, standards, RFCs etc. and have a difficult time deciding when to stop.One answer is learn just enough to solve the problem at hand at move on, but if you're in a field like eg. security you feel an obligation to do your due diligence when designing something. And of course, with LLMs now it's possible to move past any problem without learning anything at all, so you have to be even more intentional in which things you do decide to learn.reply",
+      "> ...typing notes into a dumb markdown file with the textbooks name is good enoughWhat sorts of things are you writing into your markdown file? After 3.5 years of uni I still don't know how or why to take proper notes to enhance my learning.reply",
+      "40 years ago we just wrote as much as we could down. The teacher usually hand wrote on the chalkboard. Some courses had slides, a precursor to PowerPoint. There is some reasearch that writing down on paper or with a stylus puts the stuff in extra places in our head.reply",
+      "I never learned to take notes. Good grades but think my notes were always rubbish!reply"
+    ],
+    "link": "https://unattributed.cc/note-taking-and-personal-knowledge-management",
+    "first_paragraph": " Bridge heading into the smokey landscape. License: CC-0I read Brennan Kenneth Brown's What have note-taking PKMs accomplished, really?, and found myself writing a lengthy response. But, after I wrote my response I reread Brennan's article and found myself in a bit of a quandary. I found myself asking a simple question: was it intentional that he presented both arguments and counterarguments in his piece? That seemed to have a simple answer: yes.Any good piece of writing should undertake to present the relevant perspectives, and treat them seriously. But this is where I stumbled to understand Brennan's position. While he presented the counterpoints, or counterarguments to these positions, he didn't seem to treat them in the same manner as his primary arguments and points. That has caused me to think about his article from a different perspective.There is a statement, or rather a question, that forms the premise of Brennan's argument about Personal Knowledge Management:Obsidian has been"
+  },
+  {
+    "title": "SwiftUI After 7 Years (ykvm.com)",
+    "points": 118,
+    "submitter": "mpweiher",
+    "submit_time": "2026-08-02T18:59:05 1785697145",
+    "num_comments": 100,
+    "comments_url": "https://news.ycombinator.com/item?id=49147263",
+    "comments": [
+      "The problem with complex systems is that you can be dead long before you realize you're dead. Things can continue to seem \"pretty good\" for a long time just from the inertia of past good decisions and built-up infrastructure. You see some fraying or cracks but everything looks fundamentally sound, until it isn't.Apple's inability to deploy a new UI framework that's better than the previous one is troubling. This is the company that shifted from Toolbox to Carbon to Cocoa and each step was better than the last. Could Apple build MacOS X and Cocoa today if they didn't already exist? Microsoft's two decades of failure to ship a true successor to Win32 suggests that Microsoft (at least, the operating system side of the company) died a long time ago. I wonder if we'll say the same thing about Apple 10 years hence.reply",
+      "I think the problem with SwiftUI in a way was (or is) that Cocoa was so good. And, at least IMHO, it didn't need replacing, just improving.But I feel like Apple wanted to appeal to young web devs and tried to offer something more similar to what these are used to.reply",
+      "Totally agreed. I kind of figured things were going to get shitty when the guy who made autolayout got hounded on so hard that he left.I sure hope they can figure out a way through. Whatever it is, SwiftUI isn't it.reply",
+      "> Whatever it is, SwiftUI isn't it.I think this opinion is heavily shared by Swift developers now, but the messaging every WWDC is always \"Swift and SwiftUI is the best way to build apps for Apple Platforms\", etc.. If you have to keep telling everyone what they don't believe is true, it's a sign there's a problem.It feels like someone with a lot of organizational power is disconnected from the pulse of the community. SwiftUI is undeniably clean in a lot of ways, it presents beautifully and fits on slides well, but that matters less and less, and this all wasn't really working out even before LLMs disrupted things.reply",
+      "Well the problem now is Apple would need to admit they made a mistake. And Apple does not make mistakes.reply",
+      "It\u2019s a seductive idea, but it displaces who is responsible for the poor framework development onto users of the framework.It\u2019s easy to say they were just trying to be trendy and thus the real flaw was the trend is bad and the fault of worse devs than us (the young web devs mentioned)The thing that obviates that is the trendy stuff works, yet, SwiftUI doesn\u2019t.(source: I wrote ObjC/Cocoa as early as 2006, and switched to Flutter as my primary dev kit some years ago: it simply doesn\u2019t have the performance issues mentioned.)reply",
+      "Not just complex.  Also \"successful for other reasons\".  And of course the RDF is particularly strong in Apple's case.  And these are interlinked as well:  they were successful in the past not just despite ignoring feedback/outside advice, but often because of it.reply",
+      "I think the main issue is the functional approach. Having a functional approach to state can be quite elegant, but ultimately the computer does not do functional. You have to implement a lot of plumbing to have stuff that is a bit performance (clojure), or just add a veneer of functional over what is essentially a normal state machine (emacs).React works well, because it's only an abstraction over the real DOM. React only handles your app state. But the DOM mechanism is still very performant and very much imperative. But I don't think something like React would work well in a mobile app, because the UI tree is often very simple on iOS and macOS.reply",
+      "Not just does the computer not do functional.UI is also very much not functional, and in fact the lack of progress in UI the last 30-40 years can largely be traced to trying to create UI with procedural/functional programming languages, an instance of linguistic-architectural mismatch.Further reading:Programs = Data + Algorithms + Architecture: Consequences for Interactive Software Engineering -- St\u00e9phane Chatty.https://link.springer.com/chapter/10.1007/978-3-540-92698-6_...Can Programmers Escape the Gentle Tyranny of call/return?https://2020.programming-conference.org/details/salon-2020-p...UIs Are Not Pure Functions of the Model - React.js and Cocoa Side by Sidehttps://blog.metaobject.com/2018/12/uis-are-not-pure-functio...Beyond Procedure Calls as Component Glue: Connectors Deserve Metaclass Statushttps://2024.splashcon.org/details/splash-2024-Onward-papers...reply",
+      "Thanks for those links! Some of it was great reading.What is your thesis then? What is UI?reply"
+    ],
+    "link": "https://ykvm.com/2026/07/swiftui-a-story-of-mediocrity/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Developers are attached to tools because tools encode trust (stackoverflow.blog)",
+    "points": 162,
+    "submitter": "HieronymusBosch",
+    "submit_time": "2026-07-29T14:25:54 1785335154",
+    "num_comments": 85,
+    "comments_url": "https://news.ycombinator.com/item?id=49097961",
+    "comments": [
+      "This article is a bit rambly so I'll just focus on some things from the beginning:>If your kitchen knife kept changing shape, weight, and edge, you\u2019d have to relearn it every time; that\u2019s a hard tool to build trust in.This concept was betrayed far before agentic tools, with a much earlier concept: Automatic updates.To use one product as an example: When Windows ME and Windows Vista came out, people hated them even more than they usually hated Windows, so they did not use them. Microsoft was forced to respond by making a not-quite-as-bad OS in Windows XP and a pretty good OS in Windows 7 respectively. No longer is that an option, your workflow will simply be interrupted by automatic updates.>Vim and Emacs, in their infinite customizability, can be molded to fit your exact hand and workflowVim is one major exception to the automatic update problem. I trust vim not just because it can do a ton of shit (although that is certainly nice), but because unlike most other software, its UI doesn't change unless I tell it to change. Aside from switching from vim to neovim (my decision, not a forced update), my muscle memory from a couple decades ago still works today.reply",
+      "That's not just developers as you noted.It is \"velocity fallacy\" \u2014 product people want \"all the features ASAP or right away\".Until users with their managers come with pitchforks and torches. I worked on such internal project where we as developers were able to deliver new features and new version every 2 weeks (which is not a pinnacle of the game of course) and were thinking if we can move to daily delivery. Because we were good devs and wanted to appease product owner.Until one day product owner came back with feedback, how everyone is pissed off at him for shifting ground under people feet, while he also thought he is doing great delivering all those great features. It was pushed back to limited amount of features each month.People need training, people need to understand what and why.In the end it turns out it is also AI coding fallacy, because most of the software is built for limited audience, which has its specific timeline on accepting and internalising new features or different ways of doing stuff. Unless we take humans from the equation and we start building for AI itself.reply",
+      "I\u2019ve seen this too and it\u2019s darkly humorous.We published 1-2 releases of our component each month.  Eventually another (internal) team would pick it up along with others, test, and release the combined set maybe 1-2 times a year.Customers being extremely risk adverse never wanted to update, due to risk of changes combined with the interruption, even though we were fixing serious bugs left and right from the earlier rushed development.We\u2019d get escalations on things that were fixed years ago.Probably should have spent another 3-5 years getting the first release in better shape instead of spending 3-5 years  flinging flaming turds to the paying customers.The executives slowly released they inexplicably lost half the business compared to the previous generation as upstart competitors stole their market share.You know that famous \u201chow shit happens\u201d tale?  I\u2019m pretty sure each layer of management was telling the next how powerful the product was\u2026  few could abide by it.reply",
+      "> Customers...never wanted to update, due to risk of changes [...] We\u2019d get escalations on things that were fixed years ago [...] as upstart competitors stole [our] market share.This is so weird to me, though.  Your customers had two choices:1. Stay with your software and upgrade to the latest version, where the bugs they were hitting were fixed, and risk some amount of retraining due to UI/UX changes.2. Switch to a completely new, different product, which guarantees retraining (possibly a lot more), and probably would contain the same or different bugs they were fighting with when using your software.And... they went with #2??  I get that people think the grass is always greener on the other side, but there's a reason why we have that saying!reply",
+      "You are assuming the changes would all be positive, minus some UI hassle. I have seen plenty of products where vital workflows were scrapped entirely or made significantly more clunky.Modern software is quicksand. Maybe an update improves things, but users have all experienced working software made worse.reply",
+      "I suspect they were thrilled at the prospect of a better made product (not encumbered by historical baggage) that cost less, had a lower friction sales process, made by a company actively trying to win them over.reply",
+      "This is exactly what I said to the last company (which is basically shutting down now lol) management - \"infinite customizeability\" means \"zero percent understandability\" for a typical suite of software.I literally was told not to narrow down the features too much or the product would be too constrained... well then wtf does it actually _do_ for anyone?reply",
+      "I don't think infinite customizeability is a problem.  Poor default configurations are the problem when you build in the ability to customize.The idea is that the user should be able to be productive more or less immediately after installing the software, and then incrementally customize it as they discover they have different needs than the defaults give them.A lot of developers/companies forget the first part, and ship something that requires a team of consultants six months to set up before anyone can do anything useful with it.  Of course no one wants that.  (Well, except for the highly-paid consultants.)reply",
+      "What mythical software is this? The only infinitely customizable software I can think of is emacs, and that takes an enormous amount of effort to become proficient.reply",
+      "Just up thread from your comment, someone commented in a positive way on the infinite customisability of vi.So which is preferable - customisability or very limited feature set?reply"
+    ],
+    "link": "https://stackoverflow.blog/2026/07/29/developers-are-attached-to-tools-because-tools-encode-trust/",
+    "first_paragraph": "The tools themselves are new and their capabilities are in constant flux. If your kitchen knife kept changing shape, weight, and edge, you\u2019d have to relearn it every time; that\u2019s a hard tool to build trust in. But it also points to a flaw in how you use that tool, the process around it, and the way the tool reinforces the process.About six years ago, we ran a piece about IDEs where the gist was that IDEs were getting to be so powerful and capable that it was a marvel that anybody used Vim or Emacs like a caveman. While yes, it was a provocative article, it got a lot of developers pretty riled up. Comments came from both sides, both from folks trashing the article for not understanding how developers work and from those developers who preach the good news of Emacs all day. But mostly there was a great discussion about why these tools were actually useful.For a novice, Vim and Emacs can seem like unintuitive terminal programs that require memorization of secret keystrokes to use (and esc"
+  },
+  {
+    "title": "Read the Novels and Forget Everything Else (hedgehogreview.com)",
+    "points": 61,
+    "submitter": "samclemens",
+    "submit_time": "2026-07-31T23:31:28 1785540688",
+    "num_comments": 30,
+    "comments_url": "https://news.ycombinator.com/item?id=49129676",
+    "comments": [
+      "I want to know, or care, about zero details about an artist, except their name, (so that I can find their other works). period.reply",
+      "He is a completely flawed man. The books are borderline flawless (will admit when I reread them now I skip the last 2 or 3 because he clearly felt the creep of time and started killing off characters I loved deeply).>O\u2019Brian as \u201can artificer\u201d whose work lacked the \u201cfrisson\u201d one finds \u201cin the presence of creative greatness\u201dAbsolutely zero idea what that even means. The books are wonderful as escapist superhero stuff, as an entry into British history and as a study of human relationships. \"Jane Austen on the high seas\" isn't far from the truth. The books track an incredible friendship, a couple of hard-won marriages and the meaning of work. A lot of what I learned/ think about the management of multi-person projects is influenced by Jack Aubrey: you don't necessarily have to be right, but you have to decide if you're going to lead. And trying to manage a team larger than can fit in a longboat is a hard road to choose.The article skips my favorite funny line, \"Your friend has a singular genius for striking the wrong note.\"reply",
+      "I think the quoted sentence is basically saying his work is workman like and doesn't cause the chills that reading something truly great does.(I don't agree)reply",
+      "Sometime in the mid-90s, after I'd read M&C and the two following books, I heard Patrick O\u2019Brian interviewed on the radio as I was driving to work in Sunnyvale. The interview included about 20 minutes of his reading from M&C.After listening to him read for about 30 seconds, I pulled onto the shoulder of 101 around Ames lab, shut down my car and just listened to him. I'd never  before heard someone give voice to the English language in what sounded to me as such a profoundly perfect form. I remember thinking that I'd love to have heard him read Shakespeare.I appreciate the post. I had no idea he was such a flawed person, and it's illuminating to learn that. But it doesn't affect my happy memory of hearing my native tongue (if I may claim that, even though I'm American) employed with such superlative skill.Maybe I should look into training an AI in the audio style of Patrick O\u2019Brian and have it read Shakespeare for me.reply",
+      "I loved the Peter Weir adaptation and was always hopeful there would be more, particularly with that ending leaving it open like that. I picked up the first book recently so that I could read through it on vacation. I do tend to agree with Jan Morris in that only people who knew the author have reason to care about his personal life. Of course there are limits, and given the author has been dead for 26 years and the events he is accused of happened 70+ years ago, O'Brian can no longer atone for his past misdeeds. I'm not certain if knowing that O'Brian was a horrible family man will change my enjoyment of the first book, but that remains to be seen. I may not even get through reading it due to other factors, anyway.I was curious if his family ever wrote about him and his son Richard Russ did in below article. I think this gives a good insight into how his son felt about his father, and particularly how his mother felt until her death.https://www.theguardian.com/books/2003/nov/28/fiction.filmreply",
+      "I haven't read Master and Commander and likely never will after reading this article. I couldn't get over the bad taste in my mouth I don't think. Fortunate for you to have read the book before the article.Too many good novels that weren't written by dispicable people.reply",
+      "I think the best heuristic for separating artist from their work is: How much does the artist try to put their own personality into it?Woody Allen films are very much soaked through with Woody Allen. I don't get the sense that O'Brian's books are to the same degree.reply",
+      "You have to question what of the person filtered through to their works.As a teen I voraciously read my way through the Belgariad, and later the Malloreon, Elenium and the Tamuli.Shocked to learn that Eddings and his wife were both convicted and jailed for child abuse prior to writing those novels.reply",
+      "I stopped after Malloreon more because my interests changed. Finding out their history hasn\u2019t changed anything for me. But Marion Zimmerman Bradley for some reason has and I have no desire to read any of her books ever again.reply",
+      "I still like those books, and, for some reason, that didn't affect me. Other people, however, have. Science fiction/fantasy has a long, turgid history of weird and unsavory authors. I tend to ignore that.I think books have a firewall between the author and the characters on the page. Actors, however, are a different matter. They are the medium.reply"
+    ],
+    "link": "https://hedgehogreview.com/web-features/thr/posts/read-the-novels-and-forget-everything-else",
+    "first_paragraph": ""
+  },
+  {
+    "title": "The Computational Theory of Mind (2015) (stanford.edu)",
+    "points": 34,
+    "submitter": "cyanregiment",
+    "submit_time": "2026-08-02T22:35:35 1785710135",
+    "num_comments": 12,
+    "comments_url": "https://news.ycombinator.com/item?id=49149125",
+    "comments": [
+      "This was the core premise behind my research during grad school and beyond. My favorite project \u2014 which ultimately became my dissertation \u2014 was a proposal to connect reinforcement learning algorithms, neuronal data, psychological behavior, and phenomenology. Specifically, the idea was the feeling of cognitive fatigue is a mathematical signal to \u2018rest\u2019, in which the value of rest is defined by offline mechanisms that contribute to decision-making. I proposed a connection to hippocampal replay, and was able to leverage fMRI and choice data to evaluate the hypothesis.Zooming out of my specific work, the \u201cbest\u201d success stories were connections across math/CS, neuro, and psych and the golden child is the dopamine model of reinforcement learning where firing patterns encode the TD prediction errorreply",
+      "That's not going to work: https://vod.video.cornell.edu/media/1_sfv907qpConscious agents are creating spacetime. Not the other way around: https://pmc.ncbi.nlm.nih.gov/articles/PMC4060643/reply",
+      "Not broad enough. Better: https://en.wikipedia.org/wiki/Calculating_Spacereply",
+      "\u2665reply",
+      "Illegal character, no whimsy allowed, get his ass dangreply",
+      "Doesn\u2019t the concept of a subconscious, or inner voice, invalidate any tight analogies to Turing Machines? What logical process is putting the Fur Elise into my head (earworms etc)I think this article is right that definitions really matter here cause one could argue \u201cCTM is trivial, because we can describe almost any physical system as executing computations.\u201d So we have a dual problem here\u2014not just the difficult discussion of \u2018what\u2019s going on in minds\u2019, but also \u2018what is computation\u2019.reply",
+      "I would agree, but I recently read https://transformer-circuits.pub/2026/workspace/index.html which is quite interesting in it's own right.What are your thoughts on this?reply",
+      "Are LLMs even covered by \u2018computational theory of mind\u2019? Cause if I say \u201cI like to bake\u201d the LLM is only able to recognize and respond to that sentence due to the neural network making emergent connections between the tokens in the words\u2014very different from the kind of computer programs these guys seem to have been thinking about.reply",
+      "I think many cognitive scientists think language is a core part of human cognition, and that LLMs were a major advance in AI/cognitive science due to connecting AI algorithms with language production, but LLMs aren\u2019t considered (or even aiming) to be accurate models of human cognitionreply",
+      "Wonder if the subconscious could simply be another LLM with a higher temperature setting\u2026Have long thought that creativity is little more than a finely tuned filter driven by noise\u2026reply"
+    ],
+    "link": "https://plato.stanford.edu/entries/computational-mind/",
+    "first_paragraph": "\nCould a machine think? Could the mind itself be a thinking machine?\nThe computer revolution transformed discussion of these questions,\noffering our best prospects yet for machines that emulate reasoning,\ndecision-making, problem solving, perception, linguistic\ncomprehension, and other mental processes. Advances in computing raise\nthe prospect that the mind itself is a computational system\u2014a\nposition known as the computational theory of mind (CTM).\nComputationalists are researchers who endorse CTM, at least\nas applied to certain important mental processes. CTM played a central\nrole within cognitive science during the 1960s and 1970s. For many\nyears, it enjoyed orthodox status. More recently, it has come under\npressure from various rival paradigms. A key task facing\ncomputationalists is to explain what one means when one says that the\nmind \u201ccomputes\u201d. A second task is to argue that the mind\n\u201ccomputes\u201d in the relevant sense. A third task is to\nelucidate how computational description rela"
+  },
+  {
+    "title": "How the words we teach English language learners changed (pudding.cool)",
+    "points": 193,
+    "submitter": "c-oreills",
+    "submit_time": "2026-08-02T15:41:08 1785685268",
+    "num_comments": 133,
+    "comments_url": "https://news.ycombinator.com/item?id=49145590",
+    "comments": [
+      "I tried to organize vocab by difficulty level for an English language-learning app once.It shocked me how there is absolutely no \"right\" answer.If you are teaching English for travel, then you're prioritizing a lot of stuff around bathrooms, transportation, menu items, etc.If it's for understanding TV, it's a lot of words like \"murder\", etc. Depending on which TV shows you want to understand.If it's for reading the newspaper, you don't ever need to know \"bathroom\", but you sure do need to know words like \"congressman\".While if you are living somewhere, it's really important to know a lot of basic supermarket items that you wouldn't prioritize for other usages.Also, while it's easy to calculate word frequencies for stuff like newspaper articles, there aren't any good statistics (last I checked) around just normal everyday conversation. Because that stuff isn't getting recorded and transcribed. And the substitutes -- transcribed speech from TV, radio, podcasts, etc. -- is not the same context as the random stuff you say at home and during an average day.reply",
+      "> Also, while it's easy to calculate word frequencies for stuff like newspaper articles, there aren't any good statistics (last I checked) around just normal everyday conversation. Because that stuff isn't getting recorded and transcribed.Linguists have resorted to spying on people in parks and shops and restaurants, to get \"natural\" language unperturbed by observer effects, audience tailoring, the filter of writing, etc.    (In most cases that would not be considered ethical today!)The gold standard is something like: get acculturated to the language community you wish to study, make some acquaintances and friends, somehow finagle an invite to their homes or workplaces or social venues, and then with their permission, record their conversations as unobtrusively as you can.There is so little data on how language is really used it is quite bedevilling.  As soon as people know you are listening they change how they speak.reply",
+      "> Linguists have resorted to spying on people in parks and shops and restaurants, to get \"natural\" language unperturbed by observer effects, audience tailoring, the filter of writing, etc.Hence the common phrase, found in most language phrasebooks: \u201cis that a linguist hiding behind that bush?\u201dreply",
+      "That\u2019s what makes ethnolinguistics fascinating. As a native French speaker, I started getting interested by linguistics when I learned Italian, and now I keep noting things I never thought about when I talk with other native French speakers. As someone said, \u201cYou don\u2019t know your language until you know another one\u201d.reply",
+      "That's what I discovered religion is for, understand the language as it was created.Ever wonder who decides what's self-explanatory and what resonates?reply",
+      "What?reply",
+      "This is one upside of the digital panopticon, I guess.reply",
+      "> If it's for reading the newspaper, you don't ever need to know \"bathroom\", but you sure do need to know words like \"congressman\".Unless you're reading a newspaper from the last 5 years or so - in which case, the word \"bathroom\" becomes surprisingly more relevant.reply",
+      ">Retired radio shock jock Alan Jones\u2032 influence and reputation survived one arrest, in a London public toilet in 1988.Always has been.reply",
+      "There is also a whole different language used to talk to toddlers and small children that native speakers know but very few adult learners ever pick up. And slang used among teenagers and young adults that often times not even their parents understand fully.reply"
+    ],
+    "link": "https://pudding.cool/2026/07/essential-words/",
+    "first_paragraph": "Look through the words scattered around this page. Every one of them is among the most commonly used words in the English language.They come from a 2023 list of about 2,800 words, shown to cover over 90% of general English use, intended for people learning the language.This 2023 list is an update of an earlier one, made in 1953, which identified about 2,300 words as the essential vocabulary to everyday life at the time.Between the two lists, 70 years apart, about 600 words were dropped, and over 1,100 were added. The rest remained as is.Some of the changes make immediate sense: Telegraph dropped out; computer was added, along with website and blog. Tobacco was replaced by cigarette. Motherhood became mom, and dad was added too, though fatherhood was never on the list to begin with. The world changed and vocabulary surely followed.But also: apple didn\u2019t make the new list. Neither did fork, soap, umbrella or leaf, for example. It\u2019s not that these things vanished from everyday life, but m"
+  },
+  {
+    "title": "Show HN: Mu \u2013 Tools for Agents (github.com/micro)",
+    "points": 36,
+    "submitter": "asim",
+    "submit_time": "2026-08-02T22:06:34 1785708394",
+    "num_comments": 11,
+    "comments_url": "https://news.ycombinator.com/item?id=49148899",
+    "comments": [
+      "how come people think an AI readme is good enough? especially for devtools, every dev will not be able to bypass the PTSD of reading Claude prose.Writing is hard. But that\u2019s the point, takes a lot of effort to close the gap between a new and skeptical user and your vision. =\\reply",
+      "but... why?you almost never want these tools in any given session, and creating any of them can be done simply with Claude. looking at the PRs, it seems like that is exactly what's happening. i guess this is my generic problem with MCP releases, who are they for and why?reply",
+      "for high effort MCPs I see the reason. Big MCPs take major tokens to produce and test (if you're just telling an LLM to handle it) , it's nice if there is a high quality well tested thing out there to just plug into.for things that are essentially a skill compendium, I see less reason..reply",
+      "Im not OP but as someone who did one of these recently, I think about it kind of like sharing an essay. I had an idea, I clauded a working thing, used and refined until it was useful for my team then wanted to share the kernel that developed. OP is not claiming it\u2019s like a panacea or a masterpiece and idk I appreciate the thoughts it\u2019s making me think.My other more general thought here is that the nature of LLMs is so generic and context specific that just learning about a workflow can unlock a ton of potential. This is evident in how the null state of every chat UI has a bunch of examples to teach you to use it.  MCP\u2019s are a portable way to share a workflow. To get concrete: I was pulling a lot of business data sources into my Claude code sessions to great effect but it was a force multiplier for my team to figure out an MCP version that would tell their Claude\u2019s how to do the same. None of it was deeply technical engineering but it was immediately useful and most of the team using it are not engineers.reply",
+      "I\u2019d go even further and add that these distinct tools don\u2019t belong in the same toolbox.reply",
+      "contributors are one human and four agents, what an all star teamreply",
+      "Hey,\nI liked this tool. Do you plan to develop more on the app creation tool? Is that shareable artifacts or what is the value prop?reply",
+      "I admire your grit Asim, you never stop :) This looks great !! but what are we using for searching news here, I mean the sources ?reply",
+      "Funny how you made the name Micro / MU while there is a major company called Micron with the stock ticker MU. Intentional I guess?reply",
+      "Faith area is interesting.reply"
+    ],
+    "link": "https://github.com/micro/mu",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n           There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.Tools for agentsMu gives an agent the everyday internet as tools: news, web search, mail,\nmarkets, weather, video, places, images, files, calendar, contacts. 67 of them, behind one\nMCP endpoint. Connect once and your agent has\nall of them, instead of wiring up a server for each.Real tools, not wrappers. Most things offering an agent tools are a thin\nlayer over somebody else's API. Mu runs the mail server (SMTP with DKIM), the\nfeed aggregator, the search index, the app sandbox and the wallet it hands you.\nmail_inbox reads a real inbox. db_create writes to real storage. The tools\naren't a catalogue of other people's products \u2014 they're this instance's own\ncapabilities, exposed.There is also a web app on the same tools, because t"
+  },
+  {
+    "title": "Show HN: A Handwritten Blogging Platform (handwritten.blog)",
+    "points": 9,
+    "submitter": "emilesilvis",
+    "submit_time": "2026-07-31T06:37:42 1785479862",
+    "num_comments": 5,
+    "comments_url": "https://news.ycombinator.com/item?id=49119751",
+    "comments": [
+      "Similar but for typists, https://onetypedpage.com/reply",
+      "Reminds me of tinyprojects.dev Paper Website project from 2021https://paperwebsite.com/reply",
+      "Interesting, thanks for sharing.reply",
+      "Hi EmileI like the concept too. People are losing the ability to read handwritten letters and notes. I'm just curious, how does this all work? Can I simply take a photo of a page?reply",
+      "Hi cmbza - yes, you take a photo, which you can then upload through the site or email to a publish address.reply"
+    ],
+    "link": "https://handwritten.blog/",
+    "first_paragraph": "Some thoughts deserve more time.Writing by hand slows us down.A place for authentic thinking.No algorithmic feed. Every blog has RSS. No likes.Just your pages, published as you wrote them.See a page.Perhaps the web could feel a little more human.Start your own handwritten blog at handwritten.blog.\n\nalso scribbled here:\nabout\nterms\nprivacy\nhello@handwritten.blog\n"
+  },
+  {
+    "title": "Show HN: Make your Framework 12 sound like a creaky door (github.com/arcaege)",
+    "points": 57,
+    "submitter": "arcaege",
+    "submit_time": "2026-08-02T20:33:01 1785702781",
+    "num_comments": 7,
+    "comments_url": "https://news.ycombinator.com/item?id=49148048",
+    "comments": [
+      "That's really fun and cool! :) I was hoping the sound would also be sped up/down (or change of pitch perhaps would work better) as you moved the hinge faster/slower, so you could do that really slow \"tack-tack-tack\" sound like when you move a really heavy door on a worn hinge really slowreply",
+      "> pitch depends on position of hinge\n> volume depends on how fast you adjust itYeah, I had the same thought - in all the creaky doors I've seen, pitch and speed go together.reply",
+      "Chewbacca door: https://www.youtube.com/watch?v=OMn-9lbwl0wreply",
+      "from the readme:> the filtering is optimised for framework 12's hinge stiffness.never in a million years would I expect to have to optimize software for a given hinge stiffness, this made me chuckle just reading italso:> why> funnyI like that :)reply",
+      "It finally feels premium. This is really funnyreply",
+      "Are you running MacOS on your Framework?reply",
+      "The Whoopie Laptopreply"
+    ],
+    "link": "https://github.com/ArcaEge/creakwork12",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          turn your framework 12 into a creaky wooden door, basically this (that was also the inspiration too) but ported to a fw12. it may or may not work on other laptops too, I haven't tested it. the filtering is optimised for framework 12's hinge stiffness.funnythere is an executable in the releases tab. download it, do the usual chmod +x and run. enjoy. note: this was built on fedora, so your mileage may vary on other distros - there might be dynamic linking issues.or git clone and do cargo run. you'll have to install libiio-devel and alsa-lib-devel first though if you do that (or libasound2-dev and libalsa-dev on debian/ubuntu)make your framework hinge rusty (wow it's also written in rust too)"
+  },
+  {
+    "title": "Show HN: NixOS-DGX-Spark \u2013 Nix and NixOS on the DGX Spark (github.com/graham33)",
+    "points": 99,
+    "submitter": "graham33",
+    "submit_time": "2026-08-02T17:05:54 1785690354",
+    "num_comments": 29,
+    "comments_url": "https://news.ycombinator.com/item?id=49146267",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://github.com/graham33/nixos-dgx-spark",
+    "first_paragraph": "We read every piece of feedback, and take your input very seriously.\n            To see all available qualifiers, see our documentation.\n          \n\nTry DGX Spark playbooks using Nix on DGX OS, or install NixOS on your DGX\nSpark for the full Nix experience. The repository provides USB images and a\nNixOS module with settings for DGX Spark systems.This works on the NVIDIA DGX Spark itself and also on the Asus Ascent GX10.See my 5 minute lightning talk from Planet Nix for an intro:\nhttps://youtu.be/AvK_gi_snJE?si=MPKv3iiuS9B5elIEYou can use the dev shells and playbooks in this repo on NVIDIA DGX OS (Ubuntu)\nwithout installing NixOS.Install Nix using the official installer:Alternatively, you can use the Determinate Nix Installer:Enable flakes and nix-command by adding to /etc/nix/nix.conf:Enable the graham33 Cachix cache \u2014 see Caching below.On non-NixOS systems, Nix-built CUDA applications need\nnix-gl-host to find the host GPU\ndrivers. The playbook devshells handle this automatically \u2014 con"
+  },
+  {
+    "title": "TinyNES Review \u2013 A Super Niche NES Console (lon.tv)",
+    "points": 36,
+    "submitter": "throwoutway",
+    "submit_time": "2026-08-02T20:01:37 1785700897",
+    "num_comments": 7,
+    "comments_url": "https://news.ycombinator.com/item?id=49147760",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://blog.lon.tv/2023/02/05/tinynes-review-a-super-niche-nes-console/",
     "first_paragraph": ""
   }
 ]
