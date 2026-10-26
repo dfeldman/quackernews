@@ -1,376 +1,413 @@
 [
   {
+    "title": "Removing Next.js Got My Blog to 100 on Every Lighthouse Category (bloffy.blog)",
+    "points": 45,
+    "submitter": "textlanes33",
+    "submit_time": "2026-10-26T01:03:39",
+    "num_comments": 11,
+    "comments_url": "https://news.ycombinator.com/item?id=50237712",
+    "comments": [
+      "I wrote not so basic CRUD application that uses HTML and vanilla javascript. I don't even minify the javascript. That website loads significantly faster than all the other websites I have made.reply",
+      "What are the best static site generators for blogs these days?reply",
+      "I love Astro. It is so extensive to your liking and if you want to have complex interactive stuff at some point, you can just add a framework of your liking (react, vue, svelte, etc) and it will still work wonders. It doesn't abstract that much, and yet provides a nice UX and performance is top notch, which is why I love it so much. You can do from the most simplest website and blog on it, to the most complex content driven websites. I use it for so many different things, both hobbyist and professionally.reply",
+      "I created a static blog framework called Amytis: https://github.com/hutusi/amytis and I'm really excited for you to give it a try.reply",
+      "I use Hugo for one blog [1] and Zola for another [2], I think they're both pretty simple to use once you wrap your mind around how they structure things.Astro is also great (as others have noted) esp if you want to leverage the JS ecosystem at large.[1] https://frominsidethebox.com[2] https://yakshed.comreply",
+      "I'm on Hugo. It's simple, capable, well documented, LLMs understand it well, and I don't have to touch the JS ecosystem. My previous setup was with a Node based SSG and it broke on literally every update and had a hundred dependencies.reply",
+      "Astro https://astro.build/reply",
+      "Astro is fantastic.https://astro.build/reply",
+      "I'm using tanstack+tailwind and Ai to write a few scripts for doing what static generators would do. Keep it simple, make it unique, bring back the weirdreply",
+      "ai. like have them take your language of choice, your templating of choice, your architecture of choice etc and spit out something. they've seen enough that it can pretty much oneshot something relatively simple.edit: i mean have the ai write the generator, don't use it to actually generate pages...reply"
+    ],
+    "link": "https://korindiehacker.bloffy.blog/en/removing-nextjs-got-my-blog-to-100-on-every-lighthouse-category",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Dolly Parton's Imagination Library (imaginationlibrary.com)",
+    "points": 435,
+    "submitter": "jumploops",
+    "submit_time": "2026-10-25T18:23:54",
+    "num_comments": 83,
+    "comments_url": "https://news.ycombinator.com/item?id=50234474",
+    "comments": [
+      "My daughter receives books through this program and I was curious how it was sustained at a $2.5/book wholesale cost.Interestingly, the coordinating body that selects books, facilitates distribution, and negotiates wholesale pricing is the Dolly Parton Imagination Library, but per-book funding is actually entirely through local charities and so on. This means that where charities are unable to act as partners, children will not receive books, but it also means that the program can operate by growing and shrinking as local support (including from state and local government grants) comes online and goes offline while keeping the overhead for local partners low.Dolly Parton came up with the initial local structure for her region in Tennessee and David Dotson of Dollywood scaled the operation using this decentralized model. Very impressive structure that makes this sustainable.Here\u2019s the interview where he talks about it: https://www.endbookdeserts.com/dolly-parton-imagination-libr...reply",
+      "Regarding cost per unit. I think the publisher likes this type of partner because they can really get their initial order volume up high without much risk. This allows them to have a super low cost per unit, maximizing profit, from the start.reply",
+      "> initial order volumeNone of the books you get through this program are new releases. But they are printed special for imagination library.reply",
+      "Yup, and the \u201cindustry standard\u201d wholesale discount publishers give to e.g. bookstores is usually 55%reply",
+      "That seems like an incredible discount. Can I assume then that bookstores are competing against each other via very minute (perhaps one or two dollar) price discounts while still maintaining a high profit margin?reply",
+      "I worked at a publisher back around 2010.The unit cost for the publisher to put a $20 AUD book on a shelf in a book shop was about $2 AUD.The bookstore kept quite a bit of that margin - $10 or so - but they had to pay rent & staff a store. If they were only selling $500 worth of books per day, it wouldn't have mattered if their margin was 100%, the fixed overheads would eat it all. If they could keep stock turning over quickly, the profits were impressive.reply",
+      "That makes sense to me. Thank you for that anecdote. I had no idea about these figures.reply",
+      "This structure is (I would argue) a form of mutual aid. Alcoholics Anonymous famously operates under a similar structure. Mutual aid is very popular among Anarchists and is one of the most fundamental tactics of Anarchism, Food not Bombs probably being the most famous mutual aid movements that is explicitly Anarchists.https://en.wikipedia.org/wiki/Mutual_aidreply",
+      "Dolly Parton was famous for her embrace of anarchist sympathies.reply",
+      "some governments provide funding -- Tennessee has been covering half the costs statewidereply"
+    ],
+    "link": "https://imaginationlibrary.com/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "F-Zero X on Nintendo 3DS (hypnotize.works)",
+    "points": 75,
+    "submitter": "bpierre",
+    "submit_time": "2026-10-25T23:27:30",
+    "num_comments": 37,
+    "comments_url": "https://news.ycombinator.com/item?id=50237078",
+    "comments": [
+      "Well this is interesting to see. I was thinking of porting my game to 3DS which is based on my memories of playing F-Zero X (mainly trying to make it as fast as possible!)Now I\u2019ll have to do it and see how they compare. I purposefully avoided playing it again during development so it\u2019ll be most curious.reply",
+      "I\u2019m curious why people have started using the 3DS as the gateway device for ports of games, like Melee and F-Zero X.Don\u2019t get me wrong, the 3DS is a gem of a console, and it harks back to when Nintendo put more thought into what they released instead of just another Mario sports game; but since the Switch is so much more powerful, I\u2019d expect ports to that be more of a priority.reply",
+      "Not sure why others are doing it, but the switch is kind of a boring console imo. You may as well just use one of the million PC handhelds with the same form factor, and persistent hacks require a hardware mod.The 3DS is a fun pocketable form factor which a lot of people already own and easy to permanently mod on any firmware version or hardware revision.reply",
+      "The 3DS has the novelty of 3D. I always wanted to play F-Zero in this form factor and it seemed like a reasonable port to accomplish.reply",
+      "I would guess the 3DS is far more \"jailbroken\" than the switch.reply",
+      "Jailbroken 3DS scene is usually for modding the console OS itself given how easy it is to run custom firmware. And for ports, and emulation. While the GBA has a pretty dedicated community for custom games and romhacks, people often create games for the platform at gamejams because of how great the dev tooling is. It's a bit lackluster on the 3DS, but I did find the Love Brew[0] framework to be really nice. Even has simulator support[1] for testing your builds locally, though fonts will look much different on real hardware, with likely a bunch of other gotchas. Running out of RAM being a big one.[0] https://lovebrew.org/[1] https://github.com/lovebrew/nestedit: compared it to the GBA homebrew scene since it's a large dedicated community to derive pros and cons between the two from. Switch is still receiving updates from Nintendo to brick your system.reply",
+      "It is. Any 3DS can be jailbroken with CFW with a simple Internet guide and no physical modifications. As far as I know, the Switch CFW is locked to only V1 motherboards or modchips, making it far less accessible even if it is more powerful.reply",
+      "The N64 dev scene seems to be taking off too. If I had to guess, working around limitations in hardware are the fun part for a lot of people.reply",
+      "Hey, author of the project here! Thanks for posting! It's been a really fun project to work on, and a great way to learn about how to use Claude more efficiently. I'm just a few hours away from posting a big update with:64dd on original 3DSLocal & Online MultiplayerQR Code sharing for Custom CoursesI hope ya'll check out the authors notes, post-morterm, and give it a try on your 3DS.reply",
+      "Look, I'm gonna say what's been said a lot of times, but bears repeating: when the very first two or three sentences I read are mind-blanketing AI prose breathlessly em-dashing together fragments of stuff I don't care about, it makes me skeptical that there's value perusing the rest of the project. Like, you can't even be bothered to make your lede some form of human-to-human communication.reply"
+    ],
+    "link": "https://hypnotize.works/gdx-3ds/postmortem/index.html",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Overgrown, when plants invade your abandoned tabs (charliegerard.dev)",
+    "points": 173,
+    "submitter": "speckx",
+    "submit_time": "2026-10-22T15:52:21",
+    "num_comments": 49,
+    "comments_url": "https://news.ycombinator.com/item?id=50197108",
+    "comments": [
+      "Related:  Zero regrets: Firefox power user kept 7,500 tabs open for two years\n\nhttps://news.ycombinator.com/item?id=41156568reply",
+      "This isn\u2019t as useless as it seems. It is a visual representation of how old the tab is. And I control what \u201cold\u201d is.To put it another way, it helps me recognize which tabs I am using. And which I am saving for later without having to evaluate the content of the tab.One tweak\u2026 the coverage percentage can it be adjustable? Max = 100% looses all information about the pages contents, except the title.Also also\u2026 if the images can be made translucent\u2026 you can make old timey effects like yellowing and decay.reply",
+      "It also creates a human feedback loop. It will train you to instinctively not keep old tabs open as you need to deal with the plants.reply",
+      "Why would you not want to keep them open?reply",
+      "If you have tabs sitting there unused for days, isn't that just a bookmark?reply",
+      "Or a history item!People forget about browser history. It\u2019s super useful.My technique: I open tabs just like anyone else, and when I feel like \u201cthat\u2019s too many tabs\u201d, I just close them all. Every one of them.If I need them again? Open up the browser history. It\u2019s searchable. It has everything. Use it!reply",
+      "At work I\u2019m basically required to use Chrome and Chrome does not keep browser history beyond 90 days. That is useless. An open tab can easily last more than 90 days and survive restarts.reply",
+      "> It\u2019s searchable.not very well, except you add a lot keywords to website title manually via bookmaeksreply",
+      "Browser history is nothing but self incriminating evidence. Why would you keep it around?reply",
+      "Why? I don't really have anything that dangerous, illegal, or weird open... And the browser history on my local machine is at most exposed to me and my fianc\u00e9, who I don't really care to hide it away from.reply"
+    ],
+    "link": "https://charliegerard.dev/blog/overgrown-extension/",
+    "first_paragraph": "I was doing a little creative exercise the other day around the word \"Overgrowth\". The first thing that came to mind was an apocalyptic scene, something like The Walking Dead or The Last of Us, where plants tend to overgrow abandoned buildings.I then wanted to apply this idea to the digital world, and the word \"abandoned\" made me think of my browser tabs... What if my tabs were slowly taken over by plants the longer I left them unread? What if I had to clear away these invasive plants to access my tabs again? A bit like trying to open a door that's been overgrown...So I built this fun little Chrome extension that does just that. It won't necessarily make me read my tabs more but it's ok.Link to the repositoryOriginally, I was thinking about blocking users from closing their overgrown tabs until they slash all plants, but I thought it would be too annoying... \ud83d\ude05The code is organised in 3 main parts: the background logic, the content script to display the plants and animation on the tabs "
+  },
+  {
+    "title": "Show HN: TitleArt \u2013 Make text like it's 1997 (dvy.io)",
+    "points": 3,
+    "submitter": "davidbarker",
+    "submit_time": "2026-10-26T03:23:57",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://titleart.dvy.io/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Attention Is Not What You Need (2025) (arxiv.org)",
+    "points": 41,
+    "submitter": "westurner",
+    "submit_time": "2026-10-25T23:52:05",
+    "num_comments": 15,
+    "comments_url": "https://news.ycombinator.com/item?id=50237224",
+    "comments": [
+      "\"subconscious\" reasoningreply",
+      "why doesn't the author have any internet footprint (or at any rate any one that links to this paper)? it's curious.reply",
+      "Because he doesn't need attentionreply",
+      "Scale is all you need.That's why you see other attention free large language models work. But in a world with constraints on time and compute the architecture does matter because scaling does have a cost (which is dropping)reply",
+      "In Qwen 3.5, 75% of the layers are linear attention. I think the theory is that linear attention is usually enough, but some regular attention layers help to handle more sophisticated long-range relationships.reply",
+      "(2025)reply",
+      "Interesting...reply",
+      "Interesting idea, but it reads like an LLM write up. For me to engage properly with your written work, I need to see human effort. There are too many half-baked ideas out there, and unless you, as the author, thought the idea is worth putting proper effort into communicating, why should I think of this anything other than something someone said in passing? One way you could communicate effort to me, and likely others, rather than this work looking like the output of some LLM, is to use graphs, schematics and figures to support claims. Metrics are extremely misleading, only really useful when we've verified what is being measured is what one assumes is being measured. Metrics on their own are often deeply bullshit, so without any kind of graphs of trends or other important qualities, I assume it's all LLM output, since LLM's will default to not plotting anything while humans tend to go the opposite way.Also, more effort into completeness needs to go in. Perhaps it is in there, but you just report an \"accuracy\" without defining what that means. The more I look, the more it starts becoming apparent this likely hasn't received any real human over-sight at all. \"What does Grassmann mixing actually buy us?\" It buys nothing, because it is a concept, Claude.Neat idea, but in my opinion devoid of critical thinking / analysis or the level of rigour required to be suitable for broader dissemination. I'd put effort into making this a more credible body of work ASAP. Slop like this WILL cripple your standing in the field.reply",
+      "This might sound like a joke, but your comment sounds LLM generated, and I'm going to assume it's all LLM output.reply",
+      "> For me to engage properly with your written work, I need to see human effortAgreed.I say: \u201cif you want a human response, then give human effort\u201dreply"
+    ],
+    "link": "https://arxiv.org/abs/2512.19428",
+    "first_paragraph": "\n      Press Enter to search \u00b7 Advanced search\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs."
+  },
+  {
+    "title": "Why I Am a Programmer (alfie.wtf)",
+    "points": 153,
+    "submitter": "jruohonen",
+    "submit_time": "2026-10-25T19:11:31",
+    "num_comments": 56,
+    "comments_url": "https://news.ycombinator.com/item?id=50235017",
+    "comments": [
+      "Conan the Barbarian and Below the Root on our Apple IIe. Tiny worlds behind the glowing Orange CRT. How do I make something like this? My mum (lol) helped me figure out how to get keyboard input in BASIC. I made a little game where an O character chases your X character around the screen. Core game loop. Browsing pirate CGA games at the warung in Pondok Indah, well outside the jurisdiction of US law. Glorious rack upon rack of tiny worlds to explore. Death Track and Prince of Persia. More BASIC and that gorilla throwing bananas. Later on the Multiline BBS. Talking late into the night with tech weirdos twice my age. All manner of mind bending ideas. Newsgroups. Punks and skaters and cypherpunks. Predicting what was coming, seeing the future we expected unfolding. Downloading Commander Keen over FTP. WinSock and Netscape. My first homepage. Downloading Linux and getting it running. Configuring XFree86 modelines all night lol. Turbo Pascal and VAX VMS at uni. My first job coding. Hacking out web backends in gnarly ass Perl. No databases just blatting and slurping comma delimited text files lol. Getting paid to do the most exciting thing there was to do, all day. Magic.reply",
+      "I grew up with an Aplle IIc and I loved Conan the Barbarian. A neighbor made me a copy and I used to absolutely love playing that game. I remember there was a message on the screen when you died, and the one burnt in my mind is \"The eyes have it\". I also loved Prince of Persian for the 486. That one I actually beat. Your history is very similar to mine. Now, I have been coding for decades, but it all started on the Apple IIc.reply",
+      "Happy days. I think Prince of Persia is one of the only games I beat.Did you ever play Another World by Erich Chahi? Still one of the greatest games and still good today.reply",
+      "Oh hell yeah. My neighbor had that for his commodore 64. I never owned that one, but I was blown away by its graphics and how smooth the animations were. I have not thought about that game in a really long time. Good times! I also loved text based adventures. Like probably lots of kids in the early 80s, one of the first ones I played was Adventure. I also loved The Hitchhikers Guide to the Galaxy. Infocom was awesome. I have been playing through the zork series with my 14 year old recently.One other game I absolutely loved for the Apple II was Captain Goodnight. I got really far into that game, but I don't think I ever beat it.reply",
+      "buck rodgers on c64reply",
+      "I've never heard it mentioned, but I think Another World was visually influenced by another French project, https://en.wikipedia.org/wiki/Spartakus_and_the_Sun_Beneath_...reply",
+      "Below the Root was a fantastic game, I somehow stumbled upon that 40+ years ago on my PC and played it not understanding what the rules were.  Now I\u2019m going to have to look for it as abandonware.reply",
+      "That sounds like my childhood and teen years. It feels so far away culturally. I miss the sub culture and counter culture.reply",
+      "It's not coming back either.At the same time: a Raspberry Pi 2 W has more CPU power than all of the machines that I had between 1980 and 1991. The experience is still there. But it is very difficult to take a child from say 'Minecraft' to a blinking cursor on the screen and get them to be interested.reply",
+      "I just produced a restoration/translation of Below The Root last month!  Check it out, hope it brings back some memories:  https://root.saul.pw.reply"
+    ],
+    "link": "https://www.alfie.wtf/programming/why-i-am-a-programmer.html",
+    "first_paragraph": "There they sit, the preschooler class encircling their mentor, the substitute teacher.\"Now class, today we will talk about what you want to be when you grow up. Isn't that fun?\"The teacher looks around and spots the child, silent, apart from the others and deep in thought.\"Jonny, why don't you start?\"she encourages him. Jonny looks around, confused, his train of thought disrupted. He collects himself, and stares at the teacher with a steady eye.\"I want to code demos,\"he says, his words becoming stronger and more confidant as he speaks.\"I want to write something that will change peoples perception of reality. I want them to walk away from the computer dazed, unsure of their footing and eyesight. I want to write something that will reach out of the screen and grab them, making heartbeats and breathing slow to almost a halt. I want to write something that, when it is finished, they are reluctant to leave, knowing that nothing they experience that day will be quite as real, as insightful, "
+  },
+  {
+    "title": "What goes into making an animated film? (disneyanimation.com)",
+    "points": 110,
+    "submitter": "embedding-shape",
+    "submit_time": "2026-10-25T20:27:09",
+    "num_comments": 43,
+    "comments_url": "https://news.ycombinator.com/item?id=50235738",
+    "comments": [
+      "How much of this is AI automating? That drawing of the car design, the storyboarding... isn't generative AI aiming to do away with most of it?I've been seeing some of the lengthier AI films on X (i.e. the one about badgers vs. rats that looks like Lord of the Rings), and there is certainly a lot of work put into them. However the type of work that goes into them is substantially different than what is shown in this article about Zootopia. There are a lot less decisions made by humans. AI is driving a lot of the creative decisions. In the end you get something good, but is it still riding on the decisions of the training data that came from humans like the ones who made Zootopia by hand crafting every element of it? I think this is an interesting question.reply",
+      "The point of storyboarding is to determine what you want to make. I guess you can consider it part of the \"prompt.\"Not something that can be automated away assuming you still have preferences at all.reply",
+      "I remember seeing a Pixar documentary a really long time ago where someone talked about attention to detail. The designers would fully texture out the inside of a dresser draw that will never be shown in the film. The idea was imagine how much attention to detail and time is spent on the things that will be seen. Pure craftsmanship.reply",
+      "> The designers would fully texture out the inside of a dresser draw that will never be showing in the film. The idea was imagine how much attention to detailHehe, as an ex FX animator/TD, this sounds kinda funny to me, there\u2019s likely more to the story. If they knew for sure the textures weren\u2019t going to be shown, it\u2019s a waste of time, not craftsmanship or attention to detail. But it\u2019s plausible because often modeling & surfacing departments have to start work before the shots & camera are fully planned. And sometimes there are camera changes late in the production. It could be that someone\u2019s shot that saw the inside of the dresser drawers got cut, that surfacing expected the drawers to be open in a shot, or that a scene inside the drawer was in storyboards but didn\u2019t make it to layout, stuff like that happens a lot. But no productions are having artists work on stuff that they know will never be shown in the film.reply",
+      "That's what I'd have thought too, it's more of a just in case thing, if the director later wanted a shot inside the drawer.reply",
+      "That's interesting. So, filling in details on demand with something like Gaussian splats and then backfilling them later on could save a lot of \"wasted\" time.reply",
+      "You're thinking of Steve Jobs and his attention to detail on the inside of Apple computers; a trait he learned from his father as detailed in the book about him by Walter Isaacsonreply",
+      "Jobs funded and bought Pixar from George Lucas so it's no surprise the same level of detail went into both his companies.reply",
+      "Quite the opposite. Texturing something they know will never be seen was (at least in those days) time not spent paying attention to detail on the things that will be.I do understand it from an artistic perspective, and who knows when and how an asset will be used in the future; but the premise doesn't appear to hold water under scrutiny.reply",
+      "Now go watch \"Kono Express\". Disney laid off an animator from the Star Wars factory, and he's cranking out stuff about as good as Disney Animation all by himself. With Unreal Engine and AI tools, of course.It's been a long time since there was an ink and paint department.reply"
+    ],
+    "link": "https://www.disneyanimation.com/process/",
+    "first_paragraph": "DISNEY ANIMATIONDISNEY ANIMATION CAREERS\u00a0What We DoEach department works together to bring us the big picture. From sequence to shot to frame, the film comes together through the deep collaboration between everyone at the studio.Zootopia 2 has a total run time of 97 minutes and 30 seconds.\nZootopia 2 has a total run time of 97 minutes and 30 seconds.Zootopia 2 had 41 sequences that ranged from 37 seconds to 6 minutes.\nZootopia 2 had 41 sequences that ranged from 37 seconds to 6 minutes.Hot Pursuit contains 80 shots and is 2 minutes and 22 seconds long.Hot Pursuit contains 80 shots and is 2 minutes and 22 seconds long.Frame 01Click on the image below to toggle between the left eye and right eye images.Our filmmaking process begins in Development, where our storytellers begin to craft the narrative, and our artists define the look of the characters and worlds.Editorial and Sound teams piece together evolving story ideas, guiding production.Editorial and Sound teams piece together evolvin"
+  },
+  {
+    "title": "IBM CEO says open weight models are now irresistibly good and cheap on-prem (theregister.com)",
+    "points": 48,
+    "submitter": "Betelbuddy",
+    "submit_time": "2026-10-26T01:47:46",
+    "num_comments": 9,
+    "comments_url": "https://news.ycombinator.com/item?id=50238088",
+    "comments": [
+      "While he thinks most businesses can build useful AI infrastructure in just two or three racks, he feels many will struggle to get it running.\n\n  \u201cThe question becomes: how do you do that?\u201d he said. \u201cThe question that the enterprise struggles with is: \u2018Where are my kernel engineers? Where are the people who worry about the underlying network? Who can make sure that the model is clustered on GPUs that are close to each other in network proximity? Who can make sure that you\u2019re doing the right caching of results so you get an incredible response?\u2019\u201d\n\nHas he heard of \u201cagentic AI\u201d? You simply fire up Claude or ChatGPT and ask it how to do all of the above.reply",
+      "But hardware to run them is conveniently something IBM would be happy to sell you.reply",
+      "Not till Jensen buys his next leather jacket.reply",
+      "Can we please stop giving weight to CEOs talking their book? Like of course IBM wants you to think this, it would be great for them if it\u2019s true. And maybe it is true! But IBM\u2019s CEO saying it\u2019s true tells me just as much as if a frontier lab said it\u2019s not: nothing.reply",
+      "\"CEO Said A Thing!\" Journalismhttps://karlbode.com/ceo-said-a-thing-journalism/reply",
+      "It\u2019s a conversation point off which a discussion can be hadreply",
+      "Good enough for the old world, but I'm not so sure it's good enough for what's coming.reply",
+      "What do you think is coming that isn't already in the old world?Cerebras with Claude 8?reply"
+    ],
+    "link": "https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640",
+    "first_paragraph": "TOPICS\n                    systems\n                \n        90 percent of the performance at ten percent of the price, in just two or three racks, is hard to beat\n    IBM CEO Arvind Krishna has told investors that open weight models now make brilliant sense for on-prem enterprise use.Speaking on the company\u2019s Q3 earnings call, Krishna said that in 2024 closed frontier models were plainly superior to open alternatives.\u201cIf you ran some assessment, some benchmark, and it was broad-based, not narrow, the top model might score a 70, and the open model might score a 20 or a 30.\u201d\u201cIn late 2025, we began to see that gap shrink, where maybe the gap was not 70 to 20 or 30, it was 70 to 50,\u201d he continued.The CEO said open weight models currently deliver \u201canywhere from 25 percent to 10 percent of the token cost of the frontier models. That is very attractive given that they\u2019re now 90 percent as effective.\u201d\u201cIt\u2019s a simple question for any enterprise. Would you like something that\u2019s 10 percent of the "
+  },
+  {
+    "title": "The State of Context Engineering (dbreunig.com)",
+    "points": 98,
+    "submitter": "pchristensen",
+    "submit_time": "2026-10-25T20:32:31",
+    "num_comments": 32,
+    "comments_url": "https://news.ycombinator.com/item?id=50235780",
+    "comments": [
+      "I like the idea of VictorTaelin's UniiChat [1] which summarizes every message into a single line and on top of that a binary tree of lines combined from lower levels. The context is then a view of that tree with more detail in recent messages and less detail in historical messages, plus a `zoom` tool that enables the agent to navigate the tree and read messages.An implementation of this idea based on the pi harness: https://github.com/jonaslsaa/pi-optchat[1]: https://gist.github.com/VictorTaelin/91837951a5ce5b38f341ec1...reply",
+      "It's nice that this article goes beyond the \"context too long\" scapegoat diagnostic.There is more to it than just reducing content in context. LLMs attention mechanism works by finding graphs of related words and concepts and it works best when the relevant relationships are close together in the text. Length matters but how well the information is organized matters as well.It's useful to be familiar with the concept of dependency length. The two sentences in this image ( https://benoitessiambre.com/img/dependencylength.png ) have the same words and same meaning but sentence C is organised to minimize the distance between related words.This can also apply to paragraphs and sections. Ordering them so that related information is recursively closer together, helps AIs think better (also helps humans, Dependency Length Minimization, DLM is an idea from psycho-linguistics).This is one reason progressive disclosure and sub agents are important. Including unnecessary information spreads apart surrounding information and makes it more difficult for AIs to figure things out.For eg. optimizing skills, it can help to put more important information at the bottom of a skill. Usually after a skill is loaded, the AI will start \u201cthinking\u201d, talking to itself to try to reason through a problem. The thinking block will have an easier time considering the text closest to it, the last part of the skill, than information farther up.Thinking blocks can produce a lot of text (a lot of it often hidden from users) that also spreads information apart. Sometimes, when an early instruction is still relevant but there\u2019s been a lot of thinking and discussion added to the context since, it\u2019s worth repeating a summary the early information ( keeping in mind that too many reminders can also spread other information apart ). I think however, LLMs are tuned to overweight very early information so that they don't disregard system prompts. You might be able to exploit this by placing some important facts near the very beginning of a conversation.If you've ever written compression algorithms where repeated blocks are referenced instead of encoded, you'll be familiar with how related information being clustered allows for better compression. It's another example of the parallels between intelligence and compression and it hints at the information theoretic aspect of DLM.reply",
+      "> As we focus more on memory, we also need to think about strategic forgetting. Over time, overly precise memories become conflicted and messy, and nobody has yet figured out how to handle this.> I think that\u2019s the context problem of tomorrow.This passage is explains why humans have imperfect memory. Seems the perfect memory we wish LLMs had impedes creativity and is maladaptive.Strategic forgetting helps put the non-deterministic machine to best use. LLMs don't need perfect memory; that's covered by the computer itself.I like that this justifies the continuing relevance of context engineering - a seemingly dated term - in the face of trends like loop engineering.reply",
+      "actually, I think agents have a lot to design after Zettelkasten yet. It's the concept of having an append-only policy and gardening to consolidate knowledge. IMO we've seen some, but there is still so much potentialreply",
+      "I use a lightweight ticket system. Planning creates very detailed tickets with acceptance criteria. Implementation finishes with updating any info relevant to future work on the tickets as comments. The planner searches for previous related work both to avoid past pitfalls but also to get any potentially relevant info into its context. Works well with subagents ramping up quickly.reply",
+      "> The tea task for FireRed was in its weights, so it poisoned its context.Mmm, to my mind, isn't this mixing completely different things? I thought poisoned context is stuff in the context that makes the model behave poorly. But if it's in the weights, that's just... model issues.reply",
+      "> When building intelligent applications, harnesses, and workflows, our job is to choose when to be deterministic (what to put in code) and when to be probabilistic (when to let the model drive).I really like this final sentence from the presentation. When I read this phrase, I realized that it captured one of the core dynamics that I've been using to figure out when and how to apply AI to a task. I often find myself trying to figure out if it is better to A) ask the AI to do a task for me or B) ask the AI to build something that can do the task for me. A major component of that answer comes down to how deterministic or probabilistic the task is.reply",
+      "I like the overall idea of deliberate forgetting. And I found checkpointing into artifacts (code, design, intent) to start with fresh context to work well for that purpose.Interestingly, the artifacts include not just code but alao retroactive design and retroactive \u201cexecution plan\u201d. I feed them to another agent to validate the approach and resume work with fresh context and update mission statement.Unexpectedly, design doc and an execution plan are now  outcomes of coding process, not inputs to it. I\u2019m not sure how to think about this.reply",
+      "> For me, around 200,000 or 300,000 is where I start looking. I\u2019ll check, see it\u2019s at 250,000, and think: I\u2019ve got a big job coming up. I\u2019m going to reset and start freshI don't find this to be true, at least with the newer models. I also find that the models fill up to 250k very quickly (presumably mostly by looking through the codebase). Without that context I find the models perform badly. I also don't really notice that large of a change until around 700-800k context and even then it isn't as bad as it used to be. I suspect, that (especially for coding), the long horizon RLVR tasks have helped with this quite a bit.reply",
+      "having an index of the code that the agent can use to find what its looking for instead of grep seems to work wondersreply"
+    ],
+    "link": "https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html",
+    "first_paragraph": "\nOct 24, 2026\n    This week, I gave a short talk at AGNTCon titled, \u201cContext Fails & Fixes,\u201d that functioned as a sort of \u201cState of Context Engineering.\u201d How did context engineering emerge, where has it gone, and where might it go in the future? As model makers target new capabilities, they inadvertently create challenges we, as users and harness builders, must overcome.Below are the slides and a lightly edited transcript. As always, shoot me a note with any feedback, thoughts, or questions. I really appreciate it.Hi, everyone. Thanks for joining me today. We\u2019re going to walk through context fails and fixes.I have a book coming out in a bit, The Context Engineering Handbook. When I first talked to the team at O\u2019Reilly, back in June 2025, they asked me a very reasonable question: \u201cHow do we know this won\u2019t become obsolete in a few weeks?\u201d The trouble with AI textbooks is that many age extraordinarily quickly.I said, I don\u2019t know, but I\u2019m optimistic. Giving clear instructions about what "
+  },
+  {
+    "title": "iPhone Duo Teardown (ifixit.com)",
+    "points": 56,
+    "submitter": "kripy",
+    "submit_time": "2026-10-26T01:23:24",
+    "num_comments": 19,
+    "comments_url": "https://news.ycombinator.com/item?id=50237896",
+    "comments": [
+      "Nearly 10 years in to foldables, and they still bring so many caveats. They are consistently worse for size, weight, shape, cameras, battery, robustness, and longevity. I don't think I'd ever recommend one.On the other hand, the advantages are... an iPad like experience sometimes? Or a smaller phone for the flip form factor? The flip form factor certainly does not pay off. I'm honestly not sure who the trade-offs pay off for.reply",
+      "18-20 million foldable phones were sold in 2025. About 10 million PS5 consoles were sold in that same period. So there's definitely a bit of interest.Why does it have to be an all-or-nothing fight for the final smartphone form? Can't it just be a semi-niche product that some people buy?reply",
+      "I don't think this is a fair comparison, they are different markets \u2013 most people need a smartphone today, nobody really needs a PS5. A better comparison is to say that of smartphones sold in 2025 (~1.65bn), foldables represented ~1%. That's pretty niche.reply",
+      "> Can't it just be a semi-niche product that some people buy?As a fan of smaller smartphones  (the likes of which aren\u2019t made anymore), I thought the answer to this was supposedly a resounding no.I mean, Apple sold millions of iPhones mini but we were told that wasn\u2019t a viable product.reply",
+      "Some countries, like China, LOVE foldable phones. It\u2019s fun to see how cultural it is.reply",
+      "From what I've gathered, China is much more in to mobile gaming and livestreaming than the rest of the world. Folding phones seem to appeal to those who primarily consume media on their phones, so it checks out they would want larger phones.reply",
+      "I suspect this might be my blindspot. I use my phone a huge amount, but almost never for watching video or gaming. Being able to have a \"full screen\" video, and another app running \"full screen\", with the effectively 2x screen space, makes sense.reply",
+      "A foldable phone + split keyboards = a mini laptop fit inside your pouchreply",
+      "???  everyone I know who's gone fold hasn't gone back.yes, battery & camera are a generation back and water/dustproof is even worse.but productivity and fun are off the charts: slab phones feel pathetic once you've got a fold. Communication apps show you the list of conversations as well as the current one - or the current one and the details/multimedia. Google Maps shows the map and the listing details/reviews. Games and multimedia are delightful. Photos are full sized, and you can see what you're shooting in detail - if you shoot with a digital camera, remote shooting is amazing because there's enough space to show detailed focus.reply",
+      "Huge screen that's pocketable and also your primary device (not a 2nd device you need to choose to carry in addition to your phone, and have a bag for) and ability to have 2 apps at once on iOS is in fact highly valuable for many.reply"
+    ],
+    "link": "https://www.ifixit.com/News/119895/iphone-duo-teardown",
+    "first_paragraph": "Repair GuidesLearn how to fix just about anything with our step-by-step guides.AppYour pocket repair helper.FixBotThe friendly AI repair assistant.RepairabilityLearn why fixable products make sense.TeardownsGet a sneak peek inside the latest gadgets.Answers ForumShare solutions and get help from a friend.Find Your CommunityFind teams, events, and fellow fixers.Help OutHelp make repair knowledge free and accessible for everyone.Right to RepairLearn about the Right to Repair movement and how to be an advocate.FeaturedQuality parts and tools backed by our lifetime guarantee.ToolsShop our wide selection of precision tools.PartsShop parts backed by our quality guarantee.iPhone BatteriesBatteries tested and guaranteed plus a kit with everything you need.Free Shipping on Domestic Orders $75+ \nElizabeth Chamberlain\n\n      with\u00a0\n\n              \n        \n                \n          Arthur Shi\n        \n              \n                                        \u00a0and\u00a0\n                  \n                "
+  },
+  {
+    "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis (lynchlab.net)",
+    "points": 476,
+    "submitter": "sungam",
+    "submit_time": "2026-10-25T17:15:38",
+    "num_comments": 216,
+    "comments_url": "https://news.ycombinator.com/item?id=50233779",
+    "comments": [
+      "This is an example of why I'm a little stumped about why people are excited about Jev-style decision models. For any application at scale it'd be way more accurate to have a dedicated classifier using the right architecture (neural net, bayesian, etc.) LLMs drive the cost of making those models down to near zero.Just use the LLM to make a thing that's actually good at what you need it to do.reply",
+      "Jev's launch was the best AI era marketing campaign I've seen so far. It was executed and timed so perfectly that Jev became synonymous with decision models overnight.I think it reveals how many people were only familiar with LLMs as the generic AI tool for everything. It only took one ambitious marketing campaign for someone to come along and present a simpler technology as a new breakthrough to audiences that hadn't considered anything else.The largest LLMs are really amazing for how much they can accomplish on unseen tasks. That is undeniably remarkable. The mistake that gets made everywhere is thinking that they're the best tool for every task, because LLMs are the only AI tool in most developer's AI toolbelt right now.reply",
+      "I think you have a very narrow and specific experience with people claiming to be \"devs\".I don't know of any devs in real life who would loudly and publicly get excited about anything unless it was their own completed project to show off.The tools are a footnote. It's precisely because it's so hard to get a project that far along that they would be familiar with many more tools than they would ever speak about. I suppose some people have a low bar. I wouldn't really call them \"devs\", especially now in this \"AI era\".reply",
+      "> I don't know of any devs in real lifeI think you're coming at this from a very narrow and specific experience with a few people you know.Jev really went from the announcement to being discussed all over overnight. We're discussing how popular things are in general, not among your narrow and specific group of people you work with.reply",
+      "I agree with what you said above, but not this. Jev was discussed \"all over\" by people chasing hype. I think that is actually a narrow set of people.reply",
+      "\"No you!\" :-)I think it's clear we're at the tail end of this cycle. I'm very glad to see it.reply",
+      "I think there are a lot of practical applications where something that works few-shot and doesn't require training is quite appealing if the cost of inference is low.  That's the sweet spot for Jev and similar models. If you have time and an eval set to train it, clearly a \"real\" special-purpose classifier should have much better performance (and for most applications cheaper cost/faster inference), but Jev and friends are way better than using a full-fat transformer LLM for a classification task.As an example, I've been using winnow running locally as a decision model in openchamber to select between llms for doing various tasks.  I don't have an eval set of different coding and other tasks that I could use to train a proper classifier.  This I just download off huggingface and it works out of the box and has cut my token spend to a fraction of what it was.  So it's good enough to be beneficial.reply",
+      "There are a lot of people working in software that have limited knowledge of information theory or machine learning.Unfortunately LLMs are magic to them.When you lack a first principles understanding of how something really works, you will bolt on hacks and duct tape on the wrong approach.reply",
+      "it's also the unfortunate practice of trying to use the new shiny thing everywhere and anywhere to signal that you're keeping with the times. It's funny how i've seen newer devs brush off things as 'traditional ml'reply",
+      "Which is nuts because one thing LLMs are actually pretty good up is generating \"traditional ml\" harnesses.  You just have to describe the problem you are trying to solve and ask the LLM for algorithm suggestions.It's also nuts because \"traditional ml\" generally requires a fraction of the resources of an LLM.  If you need to auto label, tag, categorize, it's never been easier to setup that sort of system in any project.reply"
+    ],
+    "link": "https://lynchlab.net/llm-skin-cancer",
+    "first_paragraph": "I am a dermatologist. I tested the ability of GPT-6 Astra and Claude Fable 5.1 to diagnosis skin cancer and found that they were less accurate than I expected. I compared to a 10-year old CNN and to my surprise found that this was superior.\n        By Dr Magnus Lynch \u00b7 25 October 2026\n        \u00b7 5 min read\n      This is a melanoma.I showed these two images - a clinical photograph and a dermoscopic (skin microscope) image - to GPT-6 Astra and Claude Fable 5.1, two of the most capable AI models available in October 2026. Both said it was a seborrhoeic keratosis, a harmless warty growth, and that the patient could be discharged. I then showed them to fine-tuned version of Inception v3, a convolutional neural network (CNN) first published by Google in 2015 and fine-tuned here on public dermatology images. The CNN got the right answer based on the dermoscopy view.  It was one of 200 biopsy-proven lesions I gave to all three. The CNN named the right diagnosis (out of 6 possiblities) for 125 o"
+  },
+  {
+    "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why? (minimaxir.com)",
+    "points": 194,
+    "submitter": "minimaxir",
+    "submit_time": "2026-10-25T21:11:31",
+    "num_comments": 217,
+    "comments_url": "https://news.ycombinator.com/item?id=50236102",
+    "comments": [
+      "Competition drives prices down. We tried Kimi and GLM models after hitting 'cybersecurity' blocks on OpenAI and Anthropic. We found them to be much cheaper to access and helped us complete our work without 'cybersecurity' refusals blocking us.reply",
+      "They just started competing against each other? No.Anthropic is going public soon. Until September, OpenAI was going public. Neither are remotely profitable.reply",
+      "They're not competing against each other, they're competing against free/local/open weight models that they're also lobbying very hard to regulate/ban.reply",
+      "As much as I hear this sentiment, and as much as all the smart software people around me echo the desire for this sentiment to be true; it feels like people say these things, but then at the same time say - well, Claude/Chatgpt is still marginally better for me now. But clearly they are catching up so maybe one day!!!In that sense, I'm really not sure if Kimi/chinese models are really competing against Anthropic/OAI? Not to mention that for individuals, the subscription model is extremely different, and Kimi subs are (I think) worse value, and chinese API's maybe marginally end up cheaper than using american subscriptions.reply",
+      "Openrouter stats seem to indicate that there is a lot of demand for \u2018good enough at a good price.\u2019 After all, not everyone is decompiling PS5 games. In fact, most people are just speedrunning notetaking apps in JavaScript frameworks.reply",
+      "But, Openrouter stats can only measure the usage they see. I'm not sure it is really all that representative of total LLM usage across the market.I think that's the difference here -- OpenAI and Anthropic are competing more with each other (and Google Gemini) than they are with open weight models. While people on HN are familiar with Kimi and GLM models, I'm not sure how many casual users of LLMs know about them. I think the competitive risk open weight models pose to OpenAI and Anthropic is much further in the future.There is a lot of usage that's only known by Anthropic or OpenAI that's not visible to the rest of the world.reply",
+      "Have you considered you are reading comments from different people?reply",
+      "If this is mostly competition enduced, I have to assume either their usage has plummeted or they will implode financially in short order.The frontier labs were already burning money on more expensive price models, and competition wouldn't have reduced their capex proportionately.reply",
+      "How could they do anything but implode financially? Genuinely curious. The numbers are not right.reply",
+      "Did the frontier labs take out debt or did they make flimsy unenforceable agreements to neoclouds who took out debt?reply"
+    ],
+    "link": "https://minimaxir.com/2026/10/cheap-llms/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Making the Buddha Head from Merv Whole Again (getty.edu)",
+    "points": 27,
+    "submitter": "laybak",
+    "submit_time": "2026-10-23T18:46:00",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.getty.edu/news/buddha-head-of-merv-turkmenistan-conservation/",
+    "first_paragraph": "A collaboration between the Getty Museum and the State Museum of TurkmenistanThe Buddha head during excavation at Merv, about 1966. \u00a9 State Museum of Turkmenistan\n            By\n\n            Susanne G\u00e4nsickeSusanne G\u00e4nsicke is senior conservator and head of antiquities conservation in the Department of Antiquities at the Getty Museum.I first saw the large head of a Buddha, resting on an earthen pedestal, in historic black-and-white photographs in 2020. The images were taken some 60 years ago, when the head had just been discovered during excavations by the South Turkmenistan Archaeological Inter-disciplinary Expedition (YuTAKE) of the Academy of Sciences of the Turkmen Soviet Socialist Republic in the ancient oasis town of Merv. Located in the Karakum Desert of Turkmenistan, the Silk Road city had been occupied since the third millennium BCE and served as a vibrant urban center of enormous wealth (it\u2019s said to have counted one million inhabitants in the 12th century).The head undergoin"
+  },
+  {
+    "title": "Amazon's \"digital pacifier\" for toddlers (oligarchwatch.substack.com)",
+    "points": 114,
+    "submitter": "jumploops",
+    "submit_time": "2026-10-21T18:37:48",
+    "num_comments": 168,
+    "comments_url": "https://news.ycombinator.com/item?id=50185534",
+    "comments": [
+      "I usually try not to judge, people have family, commitments, gotta put food on the table. But. I genuinely wonder how people working at some of these companies that actively make the world a worse place live with themselves. This is basically, and obviously, child abuse in the implied usage. Someone might make a tablet good for education, but I don't think Amazon is structurally capable of doing it.reply",
+      "It's not obviously child abuse. If you go back 100 years old children were abused far more than we possibly could simply by malnutrition, disease, lack of shelter. Giving them something that may or may not harm them is not obviously child abuse.reply",
+      "A few years ago this would have made the perfect April Fools joke.(Continue down below for an amusing rant - trigger warning maybe?)Now it\u2019s just part of insatiable corporate greed and the current sad reality.I wonder if Zuck lets his girls use Instagram all day long or if Andy would gift his own toddler (if he had another one) this beautiful tablet. Probably not, he\u2019d have a full time nanny to keep the kid busy.Alas, these folks are the symptoms and the real problem is systemic folks. Companies are chasing targets to please\u2026drumroll\u2026the shareholders. Yes, each one of us holding index funds are also culpable. It\u2019s a SNAFU. We\u2019ve been sucked whole into the system and escape is hard (especially with the newly proposed Dell bank account for kids that can only be used to invest in stocks).reply",
+      "If not Amazon, someone else would ship this. At least if you ship it you can make it less shittyreply",
+      "Right, because it's profitable.There are lots of wildly profitable enterprises that we regulate or make illegal.If everyone else is selling boiled orphan elixir, you'd be leaving money on the table not to boil yourself some orphans. But maybe we decide that boiling orphans isn't an industry we want as a society, and legislate consequences for doing so.reply",
+      "150 years ago, people used to pacify toddlers with \"cordial\" containing laudanum, better known as opium.Today we're still doing the same thing, only the drugs hit is being delivered by other means.reply",
+      "This feels somewhere between an Onion article and one of those vintage ads for giving children cocaine.reply",
+      "I was thinking about what a great commentary Toy Story 5 was on this topic. I'm surprised Amazon didn't call their tablet a Lily Pad.I recently watched Toy Story 5 on a long flight. I almost felt it should come with a trigger warning - I thought it was a spot on, brilliant yet inherently depressing commentary on our current relationship with tech.(Minor spoiler alert) One of my favorite scenes was when a slew of toys were running through a house with a family inside. Normally in the Toy Story world when a human see the toys they need to \"play dead\", but since all the humans were glued to their screens they could run by unimpeded.reply",
+      "Closer to the coke, unfortunatelyreply",
+      "\u2026 until your get to the political messages further down.reply"
+    ],
+    "link": "https://oligarchwatch.substack.com/p/amazons-digital-pacifier-for-toddlers",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Iron Age salt-mining complex found beneath Hallstatt in Austria (archaeologymag.com)",
+    "points": 16,
+    "submitter": "janandonly",
+    "submit_time": "2026-10-22T21:00:14",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://archaeologymag.com/2026/09/iron-age-salt-mining-complex-beneath-hallstatt/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "I refuse to accept a censored Internet. Join Me at FOSDEM 27 (talkweb.eu)",
+    "points": 419,
+    "submitter": "Tomte",
+    "submit_time": "2026-10-25T17:30:55",
+    "num_comments": 207,
+    "comments_url": "https://news.ycombinator.com/item?id=50233929",
+    "comments": [
+      "Is there an uncensored intetnet, because i dont think there is. if there is any, it can be turned off because its being routed on the censored net wrapped in encryption.that being said, that makes me pretty interested in this talk. outside of hacking sattelites and such things and/or infra i really dont see any opportunities to break free of the will of corporations as they can simply pay infra providers to do their bidding.I dont think software can solve all problems because internet exists essentially as informaiton transported over infrastructure. the software surely helps enable that but its a helper not the actual network.happy to learn otherwise from anyone here ofc :-)reply",
+      "It's not black and white though. There's a scale from \"easy to censor without collateral damage\" to \"need to take the whole nation offline to suppress information flow\".And there is a scale from \"trivial to circumvent, if only (you know) you want to\" to something like \"need to be very tech-savy and use custom hardware\"reply",
+      "As Spain, Italy and now France are showing us though, states have no hesitancy to take the whole country offline to block just one piece of unwanted information.reply",
+      "OTOH, third world or dictatorships won\u2019t blink when it comes to turning off an entire country - example is Tanzania in the recent election.. are there solutions for communication when international links are cut? A lan like solution scaled to cities or an entire country that is disconnected from the rest of the world?reply",
+      "You can receive data over radio waves, which would be pretty hard to block country-wide I think. Sending data would be a bit trickier without being caught.reply",
+      "this does require quite some expertise. as u noted sending can be triangulated. Also because this sending issue, it wouldnt really be an internet since only few parties would have the resources for mobile or ship-based transmitting systems that are harder to pin down or stopreply",
+      "> are there solutions for communication when international links are cut?How far can you scale wireless mesh nets?reply",
+      "In theory, there is no reason it can't scale indefinitely using something similar to IP. It's already a self-building network. The hard part is how you incentivise transit nodes. Currently that's what ISPs and backbones provide. They are incentivised to interconnect because that's their core business model. So a truly decentralized Internet requires a decentralized incentive system.This would enable circumvention, but it's also pretty easy to triangulate radio signals, so it's fairly easy for a belligerent organization to track that someone is sending something.reply",
+      "> In theory, there is no reason it can't scale indefinitely using something similar to IP.I'm sorry, that just wrong. Gupta-Kumar capacity scaling law (2000) says that as you add participants, each participant gets less bandwidth, until it becomes impractical. Imagine a room with 10 people talking in it. Easy. Now imagine 10,000. Hard to have a conversation if it's still all ad-hoc.reply",
+      "You have to increase the width of the mesh.reply"
+    ],
+    "link": "https://talkweb.eu/openweb/4558/",
+    "first_paragraph": "\nBogomil Shopov - \u0411\u043e\u0433\u043e\nAs one of the managers of the Digital Dissident Devroom, I invite you to be part of a conversation we cannot afford to ignore.Around the world, people are being silenced, monitored, and denied access to information. Free software can help change that, but only if we build it together. We need tools people can trust and control to communicate safely, expose the truth, and resist censorship.This devroom brings together developers, researchers, activists, and everyone committed to digital freedom. We want real solutions, honest lessons, and collaboration across projects, not product pitches.If you believe technology should serve people, not control them, join us. Bring your ideas, experience, and questions. Let\u2019s build the tools that help keep freedom alive.Our focus complements other devrooms, including Decentralized Internet and Privacy, which explores the broader decentralized ecosystem. While they focus on technologies, we focus on the people under threat and th"
+  },
+  {
+    "title": "Retired decorator's Pok\u00e9mon cards sell for \u00a31.5M (bbc.co.uk)",
+    "points": 22,
+    "submitter": "HelloUsername",
+    "submit_time": "2026-10-22T18:25:40",
+    "num_comments": 12,
+    "comments_url": "https://news.ycombinator.com/item?id=50199199",
+    "comments": [
+      "I had a big book of cards that I never sold but they somehow disappeared when I left for the service.reply",
+      "As a child I had considerably more than 42 Pokemon cards, from that time range, and all in excellent condition with several \"shinies\"... all of which went into the washing machine because I left them in my pocket. Depressing.reply",
+      "I had at least that many, first generation as well, including a bunch of Japanese shinies that my mum found in a shop somewhere and bought for me.They all went into the loft at some point and later ended up in a bonfire along with my first edition Harry Potter book collection when my mum was doing a \"clear out\".  Such is life.reply",
+      "Just to clarify: it was 42 _sets_ of cards, not just 42 cards.reply",
+      "Good catch. I guess that shows I don't know anything about pokemon or how many make a set anymore.reply",
+      "Pokemon cards are today's latest ponzi scheme and have an infinite printing supply without any utility or valid use case whatsoever.They are today's beanie babies and is a complete waste of money. Even stablecoins have a better use case than this over inflated garbage.reply",
+      "It's kind of funny to see the Pokemon card vending machines at various grocery stores.Today I went to a hardware store, and was humourously-surprised to find a Pokemon card vending machine there too.reply",
+      "we have one of those by our office and it's funny how every day it says sold out but there's never really anyone there.one time we did walk up to it as a few unscrupulous looking guys were hanging out and we figured they're just waiting for a restock. I don't think those vending machines really do anything to prevent people from getting as much as they want.reply",
+      "It is gambling, with some valuable \"pulls\" and intermediate steps that grant a plausible non-gambling veneer (such as having to sell the card on eBay instead of just pocketing money, etc.)I never see kids using the machine at my local grocery store. I see adults, the same ones that patronize the CA lottery machine located next to the Pokemon machine, loitering while waiting for the next set of packs to \"unlock\" (they are on a timed release to manage the stock).It's a depressing sight.reply",
+      "> without any utility or valid use case whatsoever.Pokemon battles have some amount of entertainment value.I mean sure, it's glorified cock fighting for kids, but that doesn't diminish the utility of the game as entertainment. It just makes it squishier.reply"
+    ],
+    "link": "https://www.bbc.co.uk/news/articles/cvp8gy1zwxxwo",
+    "first_paragraph": "The auctioneer said there had been an \"incredible\" buzz before the saleA retired decorator has become a millionaire after selling a collection of Pok\u00e9mon cards at auction. The man, from Woking, said he had no idea the cards had any value until he read in his local newspaper about a single card fetching more than \u00a36,000.His collection, which had been in an attic for 15 years, was auctioned off at Ewbank's on Wednesday for \u00a31.56m. The Surrey auction house claimed it was the UK's most valuable trading cards auction ever and suggested it could be a European record. \"I know people always talk about finding treasure in the attic, but in my case that is literally true,\" said the man, who asked not to be identified.\"When my son was young, in the late 1990s, he started getting cards and swapping them at school. \"I thought they looked nice and wondered whether they might be a good investment.\"He had his own cards, but he never got to touch these, I'm glad to say.\"Pok\u00e9mon is a Japanese franchise "
+  },
+  {
     "title": "We should be more ambitious with the software we build (danluu.com)",
-    "points": 239,
+    "points": 753,
     "submitter": "ltratt",
     "submit_time": "2026-10-24T21:47:31",
-    "num_comments": 198,
+    "num_comments": 697,
     "comments_url": "https://news.ycombinator.com/item?id=50225695",
     "comments": [
-      "I get what the author is saying, but his examples like \"a ripgrep fork that ... is faster for my codex ripgrep workloads\" don't strike me as particularly ambitious.Perhaps we should be more ambitious in the types of problems we try to solve, and the types of value we try to provide with the software we build.reply",
-      "> Funnily enough, for coding, on many tasks, if you actually use one of their SOTA models and compare it to what you get from Anthropic, the actual speedup isn't all that large because of time spent on things like compiling Rust.That's why I bet that fast compilers are the future. See this other thread that reached the front page a few hours ago about the Roc language [1][1] https://news.ycombinator.com/item?id=50218195reply",
-      "With every new model I've been attempting to build something that takes at least 1 month and really pushes the model. So far I've done:- Python interpreter in Rust (fail): https://github.com/BlueBlazin/pyrs- Low-poly Google Earth like engine (success): https://github.com/BlueBlazin/lowpolyearth- Codebase -> 2d infinite-zoom visualization (success): https://github.com/BlueBlazin/blockvizI have never understood or liked all the obsession with one-shot builds.reply",
-      "I used Fable 5.1 and Opus 5.5 to build a Python interpreter in Rust. Appears to pass all the 3.12 code I throw at it.To get a toy version that can run most things takes under 2 hrs. Half of that time is collecting the tests you want to pass, how it should evaluate the code, what your criteria are, etc.reply",
-      "> I've been attempting to build something that ... pushes the model ... never understood ... one-shot buildsSame, and I have found some of the failure modes in the realm of eyes free coding and limited auditing. I often see it more as pushing the process than the model, as I tend to bounce around models for the benefits diversity provides.Have you also found there is a point where they hit code complexity and start churning without progress? (at which point you have to step in to help the bot step back and think big picture, which usually takes a few sessions)reply",
-      "Yes! I absolutely have! And I've been thinking a lot lately about how to prevent them from collapsing into this state. It is getting better with newer and better models though. But yes, there comes a point when the codebase size and complexity crosses a threshold and we enter a churn state with very little progress.I was motivated to make the codebase visualizer linked above to help me understand how the various pieces of the system that is being vibe coded connect with each other.Now I'm thinking about how I can build something similar for agents. How can we teach \"systems thinking\" to a model?reply",
-      "> How can we teach \"systems thinking\" to a model?I've been working on process more than model. Similar to having a PR review team, you need multiple teams or processes that run over the code, markdown, assumptions. I still don't think this is enough.I'm working on an NES harness, and the agent was churning with detecting certain state changes like dialogs, menu navigation, screen change. The bot and I got churning and I put it down for a while. A few days later it occured to me to ask the bot \"Does the emulator and game state change with frames? Can we just get the state each frame rather than trying to be clever about it?\"It said yes, but added some nonsense about being performance hindered... (flash model). I haven't worked on it again yet, but my intention was to next have it build a small recorder based on this so it can get frame accurate game state change.This is just a long way of saying, sometimes you have to step back and help them help themselves. They have a really hard time with recognizing ambiguity or how to determine lack of context that could be filled.reply",
-      "We should be more ambitious, but we need to learn how we can be ambitious with AI, and what value we can create.AI can take us from 0 to MVP in a prompt. It can fill in gaps of knowledge and allows someone who knows half of the stack to build the whole thing nearly seamlessly. These are superpowers but don't by themselves lead to new products.What AI cannot do is remove the world of complications that happen after the MVP - product feature tradeoffs and choices, how to handle integrations and customizations, how to serve multiple types of users, how to communicate and market the app, how to handle security and data storage, how to deal with customers and bugs, etc. All of these need to be considered and acted on by a human in some fashion. AI can help with each concern but can't solve them without understanding the concern and determining how to frame it in a prompt.This is why we have a glut of amazing demos that go nowhere while we figure out how to build software differently. This will take some time and I imagine the result will be software heavily-structured with a bit of AI reasoning woven throughout, not an army of agents and sub-agents burning infinite tokens.reply",
-      "I haven't yet seen any significant products made with AI that are at least used long-term. All these browser demos, from the Adobe killers to Star Citizen, are just bells and whistles that I close after 30 seconds of use.reply",
-      "I enjoy this quote from Antoine de Saint-Exup\u00e9ry:\"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.\"And I feel that sums up my feelings on AI this and that. Just as the wood and clay contain the sculpture within and it's the artist's duty and privilege to reveal that. So, is elegant software exposed from the conceptual mass, rather than built up.The AI zeitgeist currently is 'how many features can I add' because we've tied self worth to work output instead of some other more personal or human rubric. AI will happily pile more and more and more code on your plate because it's a buffet. It's gone through reinforcement cycles guiding it to add whatever feature you ask. There is no training for elegance or careful considered design. Nobody is teaching this generation of LLM restraint.The safest code is that which never runs. The most elegant feature is that which is not necessary.reply"
+      "This statement stood out to me.> I have a similar thought about \"there's no reason for software to be slow\" BTW; in many cases, if you use AI to speed up some flow, you will add a bunch of messy code that will be overfit for the use case you tested on and will neither generalize, perf-wise, for all the use cases you should care about, nor will be maintainable upon future changes.LLMs have hardened hundreds of apps where I work.Maybe it's a language-specific thing. Most of the time, in Java, LLMs take into consideration tradeoffs (especially if they are part of the initial prompt) and actively explains them. It generally won't make messy workarounds, without a lot of extra prompting forcing it to do so.Ofc, if you have:- Functional tests - you'll be able to see it in the execution times of specific APIs- Stress testing - performance profiling is the most important output artifactreply",
+      "> Maybe it's a language-specific thing. Most of the time, in Java, LLMs take into consideration tradeoffs (especially if they are part of the initial prompt) and actively explains them. It generally won't make messy workarounds, without a lot of extra prompting forcing it to do so.Claude in its current Opus 5.5 form has made some wild reaches in response to reasonable-seeming prompts. For instance: \"this error is getting swallowed, make sure the real termination message exposes the root cause\" -> discovering that the issue is actually in a third party library that isn't exposing the original error except so through logs, so doing some hackery to inject a log-capturer that gets the stdout, buffers it, and looks for the message in order to re-throw based on that...And it can demonstrate that working, but it's added some fragile and/or unintended consequences like (a) string matching on a particular WARN log message of a particular version of the lib, and (b) buffering those logs such that there were now cases where they would never make it to the actual output stream before the program terminating.It's certainly capable of being used smarter than that, but it's also really easy to end up with messy fragile stuff if you get lazy about reviewing the output.reply",
+      "> \"this error is getting swallowed, make sure the real termination message exposes the root cause\"Without judgement, I think this illustrates a fundamental objection the anti-AI crowd raises.The example prompt requires no understanding of what's happening, before suggesting action. Where I work, process requires that a PR review for a solution, has to have a corresponding explanation of why, or it's marked needs workreply",
+      "I don't disagree.I think there's some nuance here though between \"fully anti-AI\" and \"be careful with that power saw.\"That example I mentioned didn't make it to production. It got noticed and fixed more properly by the person who submitted the first prompt before it even went to PR.But a lot of times things in that same vein can be solved sufficiently with a \"dumb\" prompt like that, so a one-line prompt to get a PR drafted in the background for the dumb stuff can be a pretty good time saver.The art is not skimping on your attention to the bigger or more important stuff so much that all the time you save on first getting code written is lost by cleaning up stuff like that...reply",
+      "As a very amateur woodworker in addition to my day job, I have always thought the power tool analogy is a good one for LLMs.  The tools don\u2019t remove the need for skill and being very very careful with how you use them.  You can work faster but do a lot more damage also.reply",
+      "I think you're misunderstanding where in the process that prompt got made.reply",
+      "I used Opus 5.5 to figure out that a language model we were serving at work for internal use (we don't really serve models, we only use this internally because it processes sensitive data that we can't send to external endpoints) was being bottlenecked by CPU contention on tokenization, by having Opus run in an autoresearch style loop.Opus's first proposal for a fix was to spawn multiple Python processes and build a load balancer between them in Python. At first I asked it why it wasn't using haproxy and it said that haproxy would be an added dependency and that the overhead for this kind of thing in Python would be negligible. I knew this was idiotic but wanted to test this out, so had Opus run two experiments in parallel. Sure enough an haproxy load balancer was much, much better on HTTP load balancing than Python code was.This is the kind of thing that if you're unfamiliar with how networking code works, the models can autopilot into bad decisions that are verifiably correct (higher throughput than the original CPU-bottlenecked implementation) but much short of best practice.reply",
+      "Are you doing CPU inferencing? For small models you could check qxotic.ai which is a whole inferencing stack for many popular open models in Java, which can beat llama.cpp in speed in some cases. Its tokenizer toknroll is faster than tiktoken, which is what made me think of it for your use case.The advantage is that you don't have issues like the GIL or whatever, so there's no need for all the complexity of load balancing between multiple pythons.reply",
+      "Thanks for the pointers, I'm gonna look into them.I'm not doing CPU inferencing but I'm doing some tokenization in Python which is CPU-bound. In all honesty I started on this project to scale the model and did not build it myself so have been trying to read code and walk back the approach. I've been thinking about rewriting the Python glue in Go to avoid issues with the GIL.reply",
+      "> but it's added some fragile and/or unintended consequencesIn python, in a co-worker's code, it seems to significantly prefer \"some_dict.get('key')\" over \"some_dict['key']\".  For the non-python-users, the first one will return None (equivalent to null) when the key is missing, while the second raises a KeyError.  It was being used in a whole bunch of places that would cause problems (bad data instead of errors) if it did receive None.  Some of these keys were actually optional and it does makes sense for those, but it looks like whichever model he was using just repeated the pattern everywhere instead of just where it was appropriate.reply"
     ],
     "link": "https://danluu.com/ambitious/",
     "first_paragraph": ""
   },
   {
-    "title": "Xbox Turns Down Netflix $500M Offer (darkhorizons.com)",
-    "points": 7,
-    "submitter": "xoxxala",
-    "submit_time": "2026-10-25T03:05:53",
-    "num_comments": 0,
-    "comments_url": "",
+    "title": "Oregon Police Are Charging a Local News Outlet $2.5M for Records About One Cop (theintercept.com)",
+    "points": 424,
+    "submitter": "tdeck",
+    "submit_time": "2026-10-25T18:04:11",
+    "num_comments": 111,
+    "comments_url": "https://news.ycombinator.com/item?id=50234232",
     "comments": [
-      "xxx"
+      "Some agencies have a different tactic: go really slowly.I sent a public records request to my local school district on March 9th 2026.They responded on 19th March 2026 saying they'd respond on in late April.Since then, every month they've sent an email with some small portion of the records, with a PDF letter saying they'll send a follow up a month later.I've received 8 of those responses so far, and there's no indication when, if ever, I will have received all the records responsive to my request.reply",
+      "Having been on the other side, the delay may not be a deliberate strategy.Your question likely landed in someone's inbox. The work falls outside normal scope of the person's job. There's likely zero guidance on how to answer and an implication that the person is personally liable if they accidentally reveal something that legitimately should not be revealed, like PII. And the question is competing with many other priorities in their inbox making it easier to snooze it for another day.This is not an excuse just an explanation. I was not aware of some of this until I got here. I try hard to answer thoroughly and with as much detail as possible. Sometimes it just takes a while.reply",
+      "I can tell you that I worked at a local government many many years ago and purposefully delaying or charging a lot for open records requests the entity did not want to complete is absolutely something that was discussed and employed internally. Almost certainly there is malicious intent here, you are giving them too much benefit of doubt.reply",
+      "> Almost certainly there is malicious intent here, you are giving them too much benefit of doubt.It's equally as certain (not very certain) you're attributing malicious intent where there is none. They're both real possibilities.reply",
+      "It can be both, one situation to the next.reply",
+      "I'd say \"failing to train or staff anyone to handle an important legal duty\" still falls under malice, perhaps just slightly higher up the chain of command.reply",
+      "\"The work falls outside normal scope of the person's job.\"Maybe in some cases, but not in this case with this agency (SFUSD).The responses I've received so far from SFUSD (over several years) were each from someone whose whole job is/was dealing with public records requests.One of the requests that was refused was for a Google Slides deck that was visible to all of SFUSD's ~10000 employees.reply",
+      "Having got out of traffic tickets, it may be deliberate. If they don't respond at all within 30 days you can argue due process violation, but by slow dripping they can drag it out and not hit that timer. The 30 day period is telling.reply",
+      "Acoustic slow loris attack, lolreply",
+      "Like another commenter, I've also been on the other side, and there was open discussion about how to delay responses or leave incriminating information out of them.I remember specific examples of figuring out spurious legal objections to raise that would immediately fall if challenged, but would take months to challenge. I also remember people using records retention policies as 1) an excuse to destroy records that were still held, and pretending like they had been destroyed in the past, and 2) actively changing them in order to destroy things that had been requested, but maybe the request had been withdrawn to be resubmitted. I, as the IT person, remember being asked to come up with technical reasons why something could not be done, or would be expensive to do.Related: I remember my innocence as an eager little guy in one of his earliest professional jobs, installing a system that would make everybody's email easily searchable if a subpoena or a FOIA had to be responded to, and the sheer panic and chaos that ensued. The solution was to install a chat that instantly dumped history and was not searchable, and to have a lot more face to face meetings.Hanlon's Razor is a corruption enabler that only resonates because people confuse it with Occam's Razor. Occam was a logician; Hanlon's Razor was some bullshit submitted to a jokebook, and nobody knows who \"Hanlon\" is supposed to refer to.reply"
     ],
-    "link": "https://www.darkhorizons.com/xbox-turns-down-netflix-500-million-offer/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "The Goose Programming Language (aardappel.github.io)",
-    "points": 275,
-    "submitter": "bobbydigitales",
-    "submit_time": "2026-10-24T19:06:55",
-    "num_comments": 179,
-    "comments_url": "https://news.ycombinator.com/item?id=50224100",
-    "comments": [
-      "Btw I made the language, AMA.\nrepo: https://github.com/aardappel/goosereply",
-      "I would throw the entire docs out and write it from scratch in your own words. I get that we live in an era where the machine writes most/all of the code, and I can accept that. What I need, to even consider using and extending this project, is some understanding of what part of the design is yours and what part is accident by Claude. I can't get that from reading Claudese.reply",
-      ">>I get that we live in an era where the machine writes most/all of the codeOnly on the Internet is this true, not in real life. I cannot and do not trust any of these things to do a proper job because they have not in any situation succeeded in any job I've given them. And no company I deal with claims otherwisereply",
-      "That's like me with violins!reply",
-      "Maybe violins don't write good code after all?reply",
-      "The version of the documentation which I would very much like to see would be a Literate Programming version where all the code is explained from the ground up.Apparently, this can actually assist the LLM:https://silly.business/blog/we-should-revisit-literate-progr...as discussed here previously:https://news.ycombinator.com/item?id=47300747reply",
-      "Once a week, I tell Antigravity (3.8-flash) to rewrite every code comment and documentation that was changed in the past week. Neither GPT nor Claude can write like a human.reply",
-      "We as a society have to cut this low effort commenting out.  The documentation is perfectly comprehensible.  What action would you take differently if a given feature were implemented by Claude, or a human?reply",
-      "If you've ever been tasked with coming up to speed on a system mostly documented with AI writing, you'll quickly realise how hard it is to trust anything you are reading. Even if the Claude documentation is 100% accurate, you'll never shake the worry that some crucial fact you founded your understanding on was wrong. It's a fast recipe for psychosis.That's without even mentioning that AI writing can often state the what but not the why. That human perspective is usually the most valuable knowledge to get across in writing.reply",
-      "There\u2019s no reason to trust a human any more than an LLM for this. Humans are not 100% accurate and very capable of making crucial factual errors in documentation. Ask me how I know.reply"
-    ],
-    "link": "https://aardappel.github.io/goose/",
-    "first_paragraph": "A memory-safe systems language with no heap allocator, garbage\ncollector, or lifetime annotations. In this repository's benchmarks,\nGoose runs faster than C++ and Rust while using less memory.Tutorial \u00b7 Reference \u00b7 Specification \u00b7 Packages \u00b7 Samples \u00b7 Benchmarks \u00b7 Standard libraryGoose has syntax familiar to C and Rust programmers, but\nthere is no heap. Every dynamic value lives inline on a\ndata stack managed by the compiler. Growth advances a pointer, and\nmemory is freed when its scope ends. The language's type and lifetime\nrules make this memory model safe to use. The tutorial walks through all of\nthis by example, the reference covers\nthe whole language topic by topic, the specification has the exact rules, and\nthe benchmarks have the numbers, losses\nincluded.This section focuses on what distinguishes Goose. The tutorial explains these features in more\ndetail, and the samples show them in\nthirty-one complete programs.A program has the native call stack, static data and N data stacks,"
-  },
-  {
-    "title": "Listen and read USA nuclear forces Emergency Action Messages, heard on 11175 kHz (missileer.watch)",
-    "points": 137,
-    "submitter": "liotier",
-    "submit_time": "2026-10-24T19:43:27",
-    "num_comments": 86,
-    "comments_url": "https://news.ycombinator.com/item?id=50224422",
-    "comments": [
-      "> Mostly static. The net is quiet until it isn't.> Preformatted is what you can hear: the same shape every time.> hearing it is all anyone outside the force can do.> The day has a shape.I would recommend switching to a newer Claude model.reply",
-      "Everyone worried about AI detectors and here I am thinking I can spot Claudenglish in a sentence or two.reply",
-      "> ClaudenglishI prefer to call it Cloddish, myself.reply",
-      "I initially thought Claude was a reference to clod from warbreaker and your spelling made me think of it again, for those that read warbreaker they might understand his description is darn close to what Claude is, but alas I believe I was deftly wrongreply",
-      "LLMesereply",
-      "All Anthropic models write like that since Opus 4.8. Opus 4.8 was still tolerable.Unfortunately only Gemini models can write text that isn't vomit-inducing.reply",
-      "Opus 5.5 doesn't write like this anymorereply",
-      "It has different awfulness.reply",
-      "I don't find it anywhere remotely as bad. I'm not saying it's good, but jesus.. i was ready to leave anthropic lol.reply",
-      "I literally left. 5.5 is so much better. I don't know how they managed to mess up 5 so badreply"
-    ],
-    "link": "https://missileer.watch",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Cerebras Deploys Trillion-Parameter AI Models (cerebras.ai)",
-    "points": 12,
-    "submitter": "gmays",
-    "submit_time": "2026-10-25T01:33:49",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=50227356",
-    "comments": [
-      "> The total number of concurrent requests represents the number of simultaneous requests moving through the pipeline at any point in time. Unlike a GPU batch, those requests don\u2019t wait for one another to finish, they stream through the pipeline continuously.What do they mean by \u201cunlike a GPU batch\u201d? It\u2019s not a hardware limitation of GPUs right? It\u2019s just the scaffolding to do this in software isn\u2019t available rightreply",
-      "Ok I'm sold, where to buy? \n:Dreply",
-      "At 20 kW average consumption per WSE-3T wafer this gives roughly 1.18 MW for the whole system. Assuming 1500 tokens per second and 190 concurrent requests this gives 4.1 J/token. Which is good I suppose for the size of the model?reply",
-      "Extreme speeds are actually interesting if you think about it. We are apparently getting some interesting results from LLMs nowadays. If they would put 100x effort in 10% the time it takes, or imagine 1% where how long tool calls take become the bottleneck, that would actually probably feel like a really special kind of \"super intelligence\".reply"
-    ],
-    "link": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
-    "first_paragraph": "ProductsDevelopersResourcesCompanyOct 22 2026One of the most frequently asked questions we get is how we deploy large models on Cerebras wafer-scale chips. A single Cerebras WSE-3T wafer has 44 GB of on-chip memory, and trillion-parameter frontier models need terabytes for their weights alone.In this post, we\u2019ll explain how we split a large frontier model across multiple WSE-3T wafers, to run multi-trillion parameter models at 1000-2000+ tokens per second.We\u2019ll use the open source model Kimi K3, with ~3 trillion parameters, as an illustrative example.By the end, you'll understand:Kimi K3 is an open source, 3T parameter model with 69 linear-attention layers and 24 dense layers.It scores an impressive 88.3% on Terminal-Bench 2.1 (vs. GPT-5.6 Sol's 88.8%) and 91.2% on BrowseComp (vs. GPT-5.6 Sol's 90.4%). These results demonstrate frontier-level coding and agentic capabilities, even outperforming leading proprietary models on some benchmarks. Read more about Kimi K3 here.For this illustra"
-  },
-  {
-    "title": "America has lost 200k of jobs in media, film and the arts. How much is AI? (apricitas.io)",
-    "points": 211,
-    "submitter": "gnabgib",
-    "submit_time": "2026-10-24T23:11:54",
-    "num_comments": 198,
-    "comments_url": "https://news.ycombinator.com/item?id=50226419",
-    "comments": [
-      "I liked this article. I appreciate that it didn't try to say it is or isn't AI.To me, the entertainment industry suffers from a lot of the same problems in most other industries that chase \"efficiency\", in terms of resources used and profit made. Economies and industries and labor are interdependent and more \"alive\" than balance sheets and bank accounts.For the film industry, when you start moving things away from LA to \"save money\", it has knock on effects that happen over long periods of time. Multiple Quarterly Earnings Reports long, if you will. Local businesses that depend on the film industry close due to less work, so then there is less expertise available. Less expertise means it can command high prices. Suddenly it's too expensive to film in LA altogether. So the rest of the jobs leave too.This pattern seems super common, not just in the film industry.It is a narrative that interweaves with AI, too. AI is supposedly an efficiency boom. In the macroeconomy, who is the \"efficiency\" we are chasing for, who benefits? Who is getting the money that was \"saved\"? Regular people do not have more more money or time. The \"efficiency\" is for people who are already very rich, to get richer. Is that worth the price we're paying? I know my answer. The article gets close to it by mentioning the consolidation in Hollywood, but I do not see how we fix this without enforcing our antitrust laws. It is embarrassing what we let rich people do in the name of stock price go up.reply",
-      ">Regular people do not have more more money or timeOf course they do. Median real weekly wages[1] have been rising for decades all while the average number of hours worked per worker have fallen[2].[1] https://fred.stlouisfed.org/series/les1252881600Q[2] https://fred.stlouisfed.org/series/avhwpeusa065nrugreply",
-      "Meanwhile household basics increased faster than wages. In other words people don\u2019t have more money.https://www.unitedforalice.org/essentials-indexreply",
-      "They do have more money, less spending power.reply",
-      "The term \u201creal\u201d means the values are adjusted for inflationreply",
-      "...which is notorious for using a dogshit basket and basket-update methodology to make the number look good.reply",
-      "Yup. The St. Louis Fed is a joke. Inflation of owners' equivalent rent alone blows the whole argument up..reply",
-      "This is research from a labor advocacy group, with the explicit aim of the organization to advocate for this sort of thing. This doesn't mean the research is is automatically invalid, but it is bias worth mentioning.Looking at an article from the CATO institute, over the last 30 years wages have climbed 169 percent, while food prices 111 percent.But an even better measure is PCE, or personal consumption index. Rather than CPI, or any other \"household basics\" measure, which subjectively categorize goods and then tracks those, PCE measures the total dollar amount spent by the entire U.S. consumer sector on goods and services. This is what is used by the FRED database referenced in the reply above.https://www.cato.org/commentary/why-dire-pronouncements-abou...reply",
-      "1. PCE tracks spending by and on behalf of households, including employer-paid health insurance and government-funded medical programs like Medicare. Arguably this does not reflect out-of-pocket costs or the immediate cash-flow reality experienced by a regular household.2. Shelter accounts for roughly 34% of the CPI, whereas it makes up only about 16% to 17% of the PCE which underplays the pressures of housing people face. Housing arguably is one of the most basic necessity and people will spend on it. For majority of the people in the country housing as a % of income is the biggest expense, so weighing it at 16% sounds almost ridiculous.3. PCE also famously isn\u2019t based on household surveys like CPI which means it doesn\u2019t accurately represent the actual inflation either.4. PCE also doesn\u2019t accurately represent lifestyle downgrades even though it tracks them. PCE will capture if you swap chicken for beef (like people are doing right now) but the conclusion you\u2019ll come to is that people have the same amount of spending power as before.reply",
-      "I feel like people complain about \u201cfood\u201d but it\u2019s a stand-in and that the cumulative increase in rent, transportation and food probably rose faster than wages. So Cato reply \u201cbut food hasn\u2019t grown as fast as wages\u201d is a myopic retort (admittedly one they acknowledge) that tries to fight the narrow factual argument ignoring the broader one where the emotional narrative probably remains true.reply"
-    ],
-    "link": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Why Gopher in 2026? (muffinlabs.com)",
-    "points": 38,
-    "submitter": "andsoitis",
-    "submit_time": "2026-10-24T23:33:19",
-    "num_comments": 9,
-    "comments_url": "https://news.ycombinator.com/item?id=50226577",
-    "comments": [
-      "I still think Gopher (the protocol that is) is still very relevant today. The beauty of it really is in its simplicity. Great to see that the library I wrote all those years ago is still being used :Dhttps://pkg.go.dev/git.mills.io/prologic/go-gopherreply",
-      "I love the idea of Gopher (even more so of Gemini), but the basic hurdle I run into is content. It feels like half of it is talking about how great gopher/gemini is, and the other half are deeply personal blogs. While the technology reflects the early days of the Internet, the content reflects the early days of blogging and social media (which came later). Rather than talking about things they are passionate about, they are talking about themselves.reply",
-      "Maybe they are passionate about themselves??reply",
-      "gopher://sdf.org and gopher://magical.fish have far more than retro-onanism.reply",
-      "The content split is what keeps me from staying. Once you leave the two or three hosts everyone names, it is hard to tell a technical phlog from another post about the protocol itself. Do you keep a short list of non-meta phlogs, or is it mostly hopping between known hosts?reply",
-      "- https://geminiprotocol.net- https://reticulum.networkreply",
-      "Gemini it's good on legacy machines and some clients can be really barebones (awk+less), and for some security there are clients written in Go. For awk+less,\ndo yourself a favour. Run    unset LESSOPEN \n\nor have it at ~/.profile.Reticulum it's unusable in 32 bit machines, it badly needs a Go port for nomadnet.On Gopher, well, lynx/sacc and maybe i2pd for some security and anonimity.As a start, there's:     gopher://magical.fish\n     gopher://sdf.org\n\nFor gemini,     gemini://gemi.dev it's nice.\n\n'Lagrange'  covers both gemini and gopher as a client.You can set an HTTPS proxy for it and read news sites and blogs over Gemini.Just set     stargate.gemi.dev:1994\n\nAs the HTTP proxy in the settings for Lagrange.For the terminal guys, there's Telescope and it can use HTTP proxies as well. Read the man page.reply",
-      "Why ?  It is not owned and controlled by billionaires.  Plus no AI slop being spammed to gopher sites.FWIW, the same applies to gemini protocol.reply",
-      "Same applies to HTTP too thoughreply"
-    ],
-    "link": "https://gopher.muffinlabs.com/sdf.org/users/nervtoji/phlog/001.txt",
-    "first_paragraph": "Gophper \u00a9 2026 Colin\n\t        Mitchell. Content delivered via Gophper belongs to its\n\t        original authors.\n        "
-  },
-  {
-    "title": "SpeedCrunch 1.1 (speedcrunch.org)",
-    "points": 93,
-    "submitter": "LordNibbler",
-    "submit_time": "2026-10-24T19:19:43",
-    "num_comments": 12,
-    "comments_url": "https://news.ycombinator.com/item?id=50224210",
-    "comments": [
-      "I've been using it for years and was surprised to see a new version after a dacade.After installing it, I was surprised to see that the immediate changes most noticeable to me were that the input box was unnecessarily doubled in size, enclosed in an unnecessary border, and surrounded by unnecessary dead space; and that there's now marked input lag that never existed in the original version.I never had a single problem with 0.12 over the past ten years, and use it nearly every day -- no bugs, no missing features.I appreciate the desire to improve and innovate, but you know, sometimes, software really is finished.reply",
-      "I'm using it for a long time already. 1.0 and 1.1 are the first updates after  10 years now?reply",
-      "This is nice to see, and it looks like this release (and maybe some earlier ones?) includes a small order of operations bug fix that hadn't been released for a long time. 1/2(-9.8) now equals -4.9 rather than -0.05102040816326530612. I like how the expression also renders with a multiplication symbol to clarify: 1 / 2 \u00d7 (\u22129.8)reply",
-      "This is such an ambiguous formula. It reminds me of those order-of-operations social media engagement baits.reply",
-      "> 1/2(-9.8) now equals -4.9 rather than -0.05102040816326530612That should really be an error.reply",
-      "Related:SpeedCrunch - https://news.ycombinator.com/item?id=29661485 - Dec 2021 (131 comments)Speedcrunch (calculator) - https://news.ycombinator.com/item?id=460520 - Feb 2009 (2 comments)reply",
-      "Love speedcrunch it has been sitting on my taskbar for many years always my go-to for quick scratchpad for equations, etc.reply",
-      "List of changes for this calculator [0].I used to use it quite a bit, but I now gravitate towards numbat instead [1].[0]: https://www.speedcrunch.org/download.html[1]: https://github.com/sharkdp/numbatreply",
-      "Amazing!\nThis is the most useful calculator.. bit shifts..radix conversations...I've been using it for years after struggling missing the windows 2000 calculator.reply",
-      "I also recently made a fairly complete scientific calculator. I first asked Claude what functions it would put in it, then I made some modifications (added complex numbers), and told it to write the calculator. It looked perfect in one shot. This is really how simple this kind of thing has become.reply"
-    ],
-    "link": "https://www.speedcrunch.org/",
-    "first_paragraph": "A free, open-source high-precision scientific calculator.Built for STEM professionals, students and teachers.\n\u00a0Download\n \u00a0User Manual\n \u00a0Donate\nFree to download and use on Windows, macOS, and Linux.\n        \u00a9 Copyright 2026, The SpeedCrunch Developers.\n      Created using Sphinx 9.1.0.\n"
-  },
-  {
-    "title": "Small Programs and Languages (ratfactor.com)",
-    "points": 52,
-    "submitter": "andsoitis",
-    "submit_time": "2026-10-24T21:44:23",
-    "num_comments": 5,
-    "comments_url": "https://news.ycombinator.com/item?id=50225674",
-    "comments": [
-      "I have written some useful small programs in uxn, such as: hex decoder in 39 bytes (which handles optional spaces and line breaks, uppercase and lowercase, etc), a program to convert JSON to NDJSON in 125 bytes, a program to convert DER to a subset of TER in 220 bytes, BLAKE2s in 1024 bytes (although some of it is padding for alignment, which is why it comes out to exactly 1024), a card game (including graphics, sound effects, fonts, scoring, etc) in 1853 bytes, etc. (These do not always check for errors (although the card game does check that you had made a valid move), which is one of the things that makes them short; since you might want such things sometimes that makes other programs longer, and this is not specific to uxn or to programs I wrote.) Other people might have also done.The description of uxn and varvara are also small and might need only two pages (I did not write it).I also remember reading in a book that someone made a game on Atari in 2 kilobytes, and described how they could make it fit (by making the map symmetric, etc), which was rejected because they had 4 kilobyte cartridges by then. (The article in this submission also links to a different game that (probably) someone else made in 2 kilobytes, but this time with JavaScript and HTML. Atari and uxn/varvara are much simpler systems than HTML/JavaScript, though.)reply",
-      "Little Languages by Jon Bentley - https://news.ycombinator.com/item?id=40989069Constructing Language Processors for Little Languages by Randy Kaplan - https://www.amazon.com/dp/0471597538?lv=shuf&channelId=500&p...reply",
-      "https://t3x.orgAlso, JimTCL.reply",
-      "That's a very interesting website with a lot of info.Thanks for sharing.reply",
-      "This was such an enjoyable read. I\u2019ve been a bit meh on software development recently and this really re-piqued some old interests.reply"
-    ],
-    "link": "https://ratfactor.com/cards/pl-small",
-    "first_paragraph": "My Implementing a Forth article got some\ngreat feedback, particularly around the subject of tiny Forth implementations.\n(And it was an excuse to list some of the tiniest Forths I\u2019ve seen.)I know I\u2019m not alone in seeing the appeal of tiny Forths, tiny languages, tiny\nprograms, and just small stuff in general. What\u2019s up with that, anyway?Tiny programs are approachable.If I see that something is 200 lines of code, I\u2019m much more likely to\nread it than if it\u2019s 2,000 or 20,000 lines.What\u2019s more, if it\u2019s a program that does something interesting in 20 lines when\nI was expecting  2,000, then I\u2019m going to be very, very interested to read\nthose 20 lines!When I was researching DOM diffing libraries\nprior to creating RetroV, one of\nthe repos I looked at was ijk by Luke Jackson.I was pretty used to looking at fat JavaScript\nlibraries at that point, so when I cracked open\nthe source file for ijk, I was really surprised.\nHere\u2019s the source: index.js (githubusercontent.com).Just 25 lines! I was instant"
-  },
-  {
-    "title": "I Built a Stereo Vision Board for Hardware Hackers (rootkitlabs.com)",
-    "points": 43,
-    "submitter": "machinehum",
-    "submit_time": "2026-10-20T20:45:52",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://rootkitlabs.com/2026/10/06/i-built-a-stereo-vision-board-for-hardware-hackers/",
-    "first_paragraph": "This article was written entirely by a human, for humans.I tend to get excited about certain chips. This time, it was a microprocessor: The Rockchip RV1103 is a single-core 1.1 GHz ARM Cortex-A7 SoC (system on chip) with 64 MB of DDR2 RAM and a MIPI CSI-2 bus shoved into a QFN-88 package. With this chip, I built a cheap, simple stereo vision board with built-in compute and Linux support.Design FilesI envision integrating this board into robotics projects, like an Arduino needing obstacle avoidance or navigation. Once powered up, the board transmits data over serial. Or you can use it on its own, with everything you\u2019d expect from a Linux board.The video below shows image capture and depth processing on the hardware:This blog post outlines the hardware, firmware, and software details!A cheap four-layer board worked for this project.Top Layer: Controlled-impedance traces: USB, MIPI, and Ethernet. With some Signal/Power.Inner L1: Solid ground.Inner L2: Signal/PowerBottom Layer: Signal/Powe"
-  },
-  {
-    "title": "Social dynamics of toxic metal industry in medieval Europe (cambridge.org)",
-    "points": 20,
-    "submitter": "XzetaU8",
-    "submit_time": "2026-10-20T17:06:48",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.cambridge.org/core/journals/antiquity/article/social-dynamics-of-toxic-metal-industry-in-medieval-europe-peak-district-lead-production-ad-6001500/34A2A16AC99B1B12E3EB99CEA1DDB829",
-    "first_paragraph": "Menu links\n      Published online by Cambridge University Press:\u00a0\n      13 October 2026The Derbyshire Peak District in central England was one of the largest lead-producing regions in medieval Europe, yet the early history of production is obscure. Here, the authors use tooth-enamel-based lead concentrations accumulated in childhood in three cemeteries, linked to radiocarbon dates, to identify the development of post-Roman lead smelting from the mid-seventh century, with large-scale production and contamination around key mines, including Castleton, by the mid-eighth century AD. Intra- and inter-site comparisons of lead concentrations hint at the social dynamics of producer communities that may provide a benchmark for identifying lead- and silver-producing communities in medieval Europe more widely. The production of key metals, such as silver and lead, has long been studied by historians of the European Middle Ages (c. AD 400\u20131500) but textual sources on the origins of these industrie"
-  },
-  {
-    "title": "Show HN: Steal My Bitcoin (stealmybitcoin.com)",
-    "points": 427,
-    "submitter": "cloudlandsdev",
-    "submit_time": "2026-10-24T20:30:31",
-    "num_comments": 260,
-    "comments_url": "https://news.ycombinator.com/item?id=50224916",
-    "comments": [
-      "There is a lot of cynicism in this thread but the fact this is still open and hour later ends the narrative in my view. There are not \"thousands of swarms of agents autonomously compromising every site for its authors\" or any the other x / LinkedIn dribble ive been reading.It clearly isnt happening.reply",
-      "Yeah, AI seems like a good shift in \"narrative making.\" It's easy to ask AI \"give me an efficient way to \"confirm or deny this narrative\" and have something like this go viral. This is good because it makes narratives more truthfulreply",
-      "Because only a fraction of people would double check (AI or otherwise), AI making it easier to flood the zone with fine tuned spam actuallu has the opposite effect. We're seeing this at play at a large scale anywhere an election is happening right now. The narratives are even less truthful than before.reply",
-      "Wow we have lost it. You really need AI to come up with something like this\u2026 let\u2019s just end it at this point honestly.reply",
-      "What point is an anonymous online post proving? Can anyone verify that the private key actually exists? Or which version of PHP the site is running? Or if it is running PHP at all?reply",
-      "If someone was able to gain access to the server and there was no key, they would report it here with proof. If someone had a working PHP exploit and it didn't work on this server, they would be able to post it here with proof.reply",
-      "I just hacked the site and wasn't able to find any key. Do you believe me? Why not? I posted exactly as much proof as the person who posted the challenge.reply",
-      "Shut the server down or deface it and I'll believe you. Should be simple if you've gained shell access.reply",
-      "Wow i don\u2019t know\u2026 maybe modify the web page to have your username on it. No wow that is too hard for you leet haxers. Are you really this dumb you can\u2019t figure out any of the hundreds of way to show proof?reply",
-      "right: either it\u2019s so hard to exploit that $1,000 isn\u2019t enough to risk \u201cgiving away\u201d your exploit chain or actual exploitation of this bug is impractical, either way the CVEpocalypse is overblownreply"
-    ],
-    "link": "https://stealmybitcoin.com/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "FreeDNS (afraid.org)",
-    "points": 262,
-    "submitter": "esher",
-    "submit_time": "2026-10-24T15:20:01",
-    "num_comments": 65,
-    "comments_url": "https://news.ycombinator.com/item?id=50222133",
-    "comments": [
-      "I've used FreeDNS on occasion for test domain names, one-off experiments, and similar. I'm very appreciative this exists, but there are some pain points that similar services handle better.The domains are missing from the public suffix list. This impacts how cookies are handled by the domain names, with concerns the browser will allow software to set the cookie on the shared domain name instead of the subdomain. This can be a security problem. Getting added to the PSL may not happen: https://github.com/publicsuffix/list/pull/79It can be difficult to get a free HTTPS certificate for your subdomain. Let's Encrypt applies per-domain name rate limits and these domain names see lots of issuance requests. There's a process to lift those limits, but last I checked FreeDNS didn't use it. You can still, of course, pay for a certificate.There's tons of abuse on free domains so you may find that your domain is blocked on various lists.Here are some compelling alternatives I use now, which manage these issues better:- https://messwithdns.net/ - Exceptionally well-made DNS console for learning DNS- https://open-domains.com/ - Uses Cloudflare, great Discord group- Even more: https://free.hrsn.dev/#/?id=domainsreply",
-      "> Let's Encrypt applies per-domain name rate limits and these domain names see lots of issuance requests. There's a process to lift those limits.I'm familiar with the process to lift those limits, and Let's Encrypt has been amenable to bumping the certs as high as 250,000 but balked at 500,000, saying, \"This is too large for us to support\"(I run a DNS service nip.io / sslip.io, and lots of my users request certs, so I'm always bumping into the limits)reply",
-      "The entire publicsuffix thing is such a mess. The fact that project even exists is ridiculous. Why can this not be a dns setting?reply",
-      "They should have never allowed cross subdomain access for cookies. Every subdomain should be treated as completely unrelated to all other subdomains.reply",
-      "One of the complications that gets discussed is that there are way too many use cases with different requirements on what it means for domains to be related. The cookie problem is something browsers need to solve, so its perhaps reasonable that Mozilla (and volunteers) manage a list that focuses on that user case. But that's poorly suited for other use cases.There's a lot of people thinking about this though. One somewhat related example is https://datatracker.ietf.org/doc/draft-manelidis-dnsop-domai..., which has a double-opt-in DNS TXT record mechanism. That draft and forthcoming discussions on the mailing list are a good place to understand the complexities here.reply",
-      "If, for example, you could trick a client into thinking \"com\" was not a public suffix, then from malicious.com you could set cookies on paypal.comDNSSEC is not widely deployed, and so we cannot rely on the authenticity of DNS.Maybe if we had DNSSEC, then we could rely on it for publicsuffix. Maybe lots of others things could be more easily solved if we had that too.DNSSEC automation is coming, e.g. https://www.rfc-editor.org/info/rfc10026/. It might never become mainstream, but don't let anyone tell you that we couldn't benefit from having DNS authenticity!reply",
-      "because, like everything, bad guys would abuse it, causing a list of \"bad publicsuffix\" to exist, which is basically the same thing.reply",
-      "Could we just publish (and cache!) TXT records at the appropriate-level domains? E.g.:  host -t TXT github.io.\n  etld_depth=2reply",
-      "This is one of the most solid and longest lasting services online. Have been using it for almost two decades I think and nothing's changed.reply",
-      "> and nothing's changedOne thing has changed. At some point, they introduced the 'shared management queue', and any random person can attach a subdomain to my domains, and apparently I have to explicitly deny these. Until then, scammers can create a subdomain on my domain, point it to whatever IP they want, and use it for their nefarious purposes.I get that I'm a freeloader: I haven't paid for FreeDNS, so I can't complain much. But this seems like a terrible 'feature'. If I were a pro subscriber, my domains would be private and therefore not available for scammers to use. I've migrated all but one of my domains away from the service (they were all trivially easy - just haven't finished the last one).reply"
-    ],
-    "link": "https://freedns.afraid.org/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "I don't understand quantum physics (2018) (southampton.ac.uk)",
-    "points": 289,
-    "submitter": "rramadass",
-    "submit_time": "2026-10-24T09:53:26",
-    "num_comments": 222,
-    "comments_url": "https://news.ycombinator.com/item?id=50219666",
-    "comments": [
-      "So many entry-level explanations of quantum mechanics start with classical physics, waves, particles, the double-slit experiment, etc. and then jump straight to infinite-dimensional Hilbert spaces. In my opinion, there's way too much conceptual baggage that comes with these concepts [0].As a non-physicist, QM only clicked for me when I learned the linear algebra of one- and two-qubit systems and observables on those systems [1]. The math is accessible at a pre-calculus level, and the most \"counter-intuitive\" aspects of QM (interference, the uncertainty principle, entanglement) make perfect sense in this framework. I think it's the best starting point for understanding what QM really says.[0] That's not to say they aren't important historically or for a complete understanding of QM. I'm talking about conceptual understanding for someone, especially an amateur, encountering QM for the first time.[1] Chapter 2 of Nielsen and Chuang is what did it for me. It's heavygoing if you've never seen linear algebra before, but I don't know of a clearer explanation of the postulates of quantum mechanics.reply",
-      "Agreed.Quantum Processes, Systems, & Information by Benjamin Schumacher and Michael Westmoreland is another good treatment along those lines.reply",
-      "https://profmcruz.wordpress.com/wp-content/uploads/2017/08/q...reply",
-      "Do you have any recommended resources that you used to help learn the linear algebra?reply",
-      "Start with 3Blue1Brown's \"Essence of Linear Algebra\" series https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2x...Axler's \"Linear Algebra Done Right\" https://linear.axler.net/LADR4e.pdfNielsen and Chuang's \"Quantum Computation and Information\" Chapter 2. (Available online, but legality depends on where you live)If you're interested primarily in QM rather than linear algebra, I'd recommend not working through all of Axler, but instead using Nielsen and Chuang to learn about qubits and observables, and using Axler to fill in the gaps.reply",
-      "https://linear.axler.net/reply",
-      "not sure about its specific applications to quantum mechanics, but I worked through MIT OpenCourseWare's Linear Algebra class (taught by Gilbert Strang) and I thought it was amazing. The lectures are very very good.reply",
-      "It makes sense in the framework but the framework makes no sense. The model contradicts regular intuition.reply",
-      "If we've learned anything from modern physics, it's that our regular intuitions are often wrong. The framework makes perfect sense mathematically, and it makes the right predictions experimentally. It's still controversial how exactly the framework relates to reality, which is where you get into interpretations of quantum mechanics.reply",
-      "One of my favourite examples of this pedagogically is how kinetic energy is quadratic with velocity. It's easy to tie into things people think they understand, like braking distance. Our intuitions are wrong even in shockingly simple problems.reply"
-    ],
-    "link": "https://www.southampton.ac.uk/~doug/quantum_physics/index.html",
-    "first_paragraph": ""
-  },
-  {
-    "title": "The Importance of Limitations for Creativity and Learning (2023) (ratfactor.com)",
-    "points": 35,
-    "submitter": "andsoitis",
-    "submit_time": "2026-10-24T21:42:47",
-    "num_comments": 10,
-    "comments_url": "https://news.ycombinator.com/item?id=50225663",
-    "comments": [
-      "I remember one pivotal moment in college being when I was given an assignment, and I asked if some of the restrictions on the task could be removed. The teacher told me what I really did was just ask for the hard version of the problem.I asked her what she meant, and instead of telling me, she just laughed and said go ahead, remove the restrictions and see for myself.She was right! Without the restrictions there were so many more possibilities I had to work much harder to complete the assignment. It was still fun though and I learned more than just the assignment from that lesson.reply",
-      "This is a very frequent experience for me when I think about writing any computer program. Passed all my algorithms and data structures with flying colours. Did some projects that were easy to start back when I knew fewer languages. Did some projects that had to be done in certain platforms for compatibility with existing software. Now new projects are hard to start. Maybe I should learn to use AI to transliterate programs and it wouldn't feel like it mattered as much?And now I'm in the real world where you can do almost anything. It's not just software platforms that are the problem. Should I apply for jobs? Definitely. Which jobs? And what about the other paths? Should I also write some SaaS and hope I get acquihired? Which one? In which platform? Should I learn how government contracts work? Probably can't get one as an individual, but should I learn about them anyway? Should I pay the fees to found a company, even though it's just me and doesn't have a business plan, to look more legitimate to potential customers for the thing I don't even know yet?reply",
-      "\"Art from Adversity\" is the idiom that comes to mind. You can poke around and watch the principle in action, particularly in the art of cinema.Many lesser directors often end up with \"lightning in a bottle\" -- aka a film that far exceeds their normal ability -- because the common stress of the experience on direction, on production, on the talent made for a synthesis better than sum of its parts.It doesn't always work that way, but when it does it's very striking.reply",
-      "This is why I like sports, or more specifically \"walled\" games.The \"walls\" are the rules and the task is to figure out how to succeed within those rules. Succeed is up to perspective in many instances.This encourages creativity. It's why I love baseball, cuz the rules are constantly evolving as people game them. It's so joyful seeing people exploit the rules they agreed to play by.Limits force us to think INSIDE the box. It's a lot of fun.Communal boredom is also very important. Being bored with friends is an amazing launching pad for new ideas and thinking.reply",
-      "Are there any games that are not \u201cwalled\u201d games?reply",
-      "Brings https://web.archive.org/web/20260418203923/http://gamestudie... to mind.reply",
-      "> Are there any games that are not \u201cwalled\u201d games?Some games approximate infinite play: Minecraft, Roblox, EVE Online, Second Life, Gary's Mode.However, even they have technological, economic, and rule-based boundaries.reply",
-      "Those are simulations, not games, I would say. Even though they host games inside them.reply",
-      "i often observe, \"the constraint is the technique.\"there isn't much to add to it other than the slight refinement that constraints yield technique. it's similar to relating to rules as tools and not merely limits or constraints. it's an orientation.reply",
-      "The Obstacle is the Toolreply"
-    ],
-    "link": "https://ratfactor.com/cards/limitations",
-    "first_paragraph": "creativity, learningThe other day, my kids started messing around (at home) with an online document\nwriting platform their school uses. They\u2019d discovered a fun little easter egg.\nI watched them laugh and play with the feature - pushing its limits and\nultimately crashing the browser.These same kids have messed about in\nScratch\n(wikipedia.org)\nthrough the school as well, but they rarely stick with it for very long.I think Scratch is brilliantly done and I don\u2019t wish to speak ill of it.But it struck me how the limitations of the easter egg made it more compelling\nto play with. The feature was a little buggy and did not handle multiple instances\nvery well. This led to interesting behavior as they added more and more instances\nto the page.This \"toy\" had way less features than Scratch, but it was pretty free-form in use\nand it was easy to invoke. It also had severe limitations and was easy to break.I think Scratch is so featureful that it is intimidating to newcomers.\nThe paradox of having s"
-  },
-  {
-    "title": "FindMyWeb: Apple Find My, reverse enginiered (codeberg.org/misom)",
-    "points": 27,
-    "submitter": "Velocifyer",
-    "submit_time": "2026-10-24T23:42:52",
-    "num_comments": 7,
-    "comments_url": "https://news.ycombinator.com/item?id=50226646",
-    "comments": [
-      "This seems to be a UI on top of the FindMy.py library.https://github.com/malmeloo/FindMy.pyreply",
-      "I always worry if these will get the account banned at some point.Also the page says own your tracker, but if we\u2019re using someone else\u2019s network, are we really owning anything?reply",
-      "Yeah if you value your Apple account don't touch these projects with a 10 foot pole.reply",
-      "If you have a project and the title and subtitle of the post about it are:<punchy name>: <noun>, <past tense verb>then please take 10 seconds to reword it.\"UptimeChecker: Baby's first SaaS, implemented with 900 unit tests\"\"Andre's Steakhouse: Fine dining, cooked au sexuale\"\"Dogdos: Sex toys for your dog, delivered to your door\"A lot of people will just ignore it and they won't see the valuable work Claude spent a handful of your 5h sessions performing.reply",
-      "Reverse engineering is a field where AI is actually quite useful, but if there was anything interesting about the project, you'd still expect a human to write the readme and subtitle to prove that. You could just say \"I used AI to reverse engineer Apple's Find My.\" Using the raw AI title betrays that there was absolutely no human oversight and the project was pumped out by an HN content farm.It's not even about human projects having higher quality, it's just a spam filter.reply",
-      "\u2026or that the person responsible doesn\u2019t speak English (well enough to audit the quality of English prose), but had the AI write the code (and prose) in English anyway, for TAM reasons. In such cases, the person responsible probably read back the README and title the AI gave them, and \u201cfrom what they can tell\u201d it says what it they wanted it for say, so they approved it.(I\u2019m not 100% sure this happens with entire repos, but it certainly seems to be an increasingly-common explanation for entirely AI-prose-populated PRs and demo sites.)reply",
-      "This just wraps a python library for Find My?reply"
-    ],
-    "link": "https://codeberg.org/Misom/FindMyWeb",
-    "first_paragraph": "A project which allows you to build trackers which you actually own. The idea is to create a way for you to build your own trackers using the already existing networks without requiring you to own any vendor specific devices.Currently there are a lot of different networks for location trackers from a plethora of different vendors. This causes a lot of fragmantation and everyone requires you to own a device where their closed-source software runs without you knowing what actually happens with your location. The idea is to create a web interface for all of them and allow you to build your own open-source trackers.The backend currently uses malmeloo's FindMy.py library to interact with Apple's network while the trackers run a custom Zephyr based firmware. You can find out more info in the setup instructions.\nPowered by Forgejo\n"
-  },
-  {
-    "title": "Reactive Optimizers: rewrite the optimizer's source code during training (xingjianbai.com)",
-    "points": 18,
-    "submitter": "matt_d",
-    "submit_time": "2026-10-21T22:17:12",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://xingjianbai.com/reactive-optimizers/",
-    "first_paragraph": "TL;DR We put an agent at the heart of the optimizer. It watches the training dynamics, reacts to them, and rewrites the optimizer\u2019s source code as training goes. When no recipe has been tuned for a task, it matches or beats the best recipe one could pick off the shelf, across image and language tasks. Further, we demonstrate that it spontaneously comes up with sophisticated schedules and intricate strategies to prevent loss spikes and escape overfitting. Try it on your own training run with the OPAL package.X post: x.com/SimulatedAnneal/status/2112936831398375800Today, the recipe used to optimize a deep neural network is typically completely determined before training even begins. A great deal of human ingenuity has gone into priors regarding how training should progress: adaptive step sizes [1], preconditioning [2, 3], orthogonalized updates [4, 5], schedules tied to the training step [6, 7], and learning rates scaled with model size [8]. Automated discovery [9, 10, 11, 12] searches a"
-  },
-  {
-    "title": "A story of a Figma bug that wasn't a bug at all (2021) (aresluna.org)",
-    "points": 9,
-    "submitter": "jllyhill",
-    "submit_time": "2026-10-21T19:30:52",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://aresluna.org/this-is-a-story-of-a-figma-bug/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Meta employees say Lula\u00e2\u20ac\u2122s accounts restricted in Brazil election: Report (aljazeera.com)",
-    "points": 18,
-    "submitter": "nidnogg",
-    "submit_time": "2026-10-25T02:18:35",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=50227639",
-    "comments": [
-      "It\u2019s sad but it\u2019s real and it\u2019s happening. In Brazilian news, this is actively being exploded upon and it is not reaching mainstream media properly.[1] - https://www.instagram.com/reel/De2BfVRD30o[2] - https://www.aljazeera.com/economy/2026/10/16/meta-employees-...reply",
-      "Title: Meta employees say Lula\u2019s accounts restricted in Brazil election: Report> don't editorialize.https://news.ycombinator.com/newsguidelines.htmlreply",
-      "Did you expect more from FaceBook?reply",
-      "Previously: https://news.ycombinator.com/item?id=50122713reply"
-    ],
-    "link": "https://www.aljazeera.com/economy/2026/10/16/meta-employees-say-lulas-accounts-restricted-in-brazil-election-report",
-    "first_paragraph": "The messages, reported by a Brazilian daily, say the platform recommended Bolsonaro\u2019s profile and his WhatsApp channel.SaveShareEmployees at Meta have acknowledged in internal communications that the Instagram accounts of Brazilian President Luiz Inacio Lula da Silva were negatively affected by restrictions during the country\u2019s election, media reports say.The messages, reported on Friday by Brazilian daily Folha de S Paulo, also acknowledged the platform recommended the profile of Lula challenger Senator Flavio Bolsonaro, as well as his WhatsApp channel. Folha, the Sao Paulo-based paper, cited messages it had reviewed.Meta told the Reuters news agency that the technical issues cited in the report were already public and the conversations it referenced related solely to the severity of the issues, not political interference.\u201cAny suggestion that Meta favors one side is false,\u201d it added in a statement.Lula, the left-wing incumbent, will face right-wing challenger Bolsonaro in a presidenti"
-  },
-  {
-    "title": "The St. Helena 5 pence coin shows Jonathan, a roughly 190 year old tortoise (numista.com)",
-    "points": 100,
-    "submitter": "schleck8",
-    "submit_time": "2026-10-24T16:41:55",
-    "num_comments": 32,
-    "comments_url": "https://news.ycombinator.com/item?id=50222927",
-    "comments": [
-      "> In July 2023 there was a fight between David and Fredrik which resulted in Fredrik being turned onto his back and left to die, in an area where his plight would not have been visible from the house or the tortoise viewing area. Fortunately he was spotted in time by visiting vet Joe Hollins, who turned Fredrik the right way up with no long-lasting ill effects. This is apparently not the first time recently when a tortoise has been turned over, though in the other occasion it was David who finished the wrong way up, not after a fight but after an unsuccessful attempt to mount Emma for mating purposes\u2026His companions. Never thought tortoises have such a wild life.https://sainthelenaisland.info/jonathan.htmreply",
-      "Shouldn't it be easy to attach a sensor at the belly of the turtle that alarms staff when it happens. Sounds like an actual no-brainer use for modern technology.reply",
-      "I raised market-sheep when I was younger and during breeding the ram wears a harness with colored chalk on the underside. You then have visual cues for which ewes are likely to become pregnant.reply",
-      "That would probably really piss the tortoise off. Imagine if your ass was made out of bone, and someone glued a lego to it. Sitting down would be a nightmare.reply",
-      "I wonder why not glue it to the top? Somewhere unobtrusive.reply",
-      "Could also put one of the thrusters from\nSpaceX rockets (or the roadster now) to automatically turn it right side up if it happens.reply",
-      "How did these animals survive as a species for millions of years with this flip-over bug in their genes? Why hasn't evolution solved it, for example, by eliminating flip-prone individuals from the gene pool and giving better survival chances to those who can right themselves?reply",
-      "> How did these animals survive as a species for millions of years with this flip-over bug in their genes?Whether or not they can right themselves depends upon the terrain. Falling over can be a fatal experience for humans too.> Why hasn't evolution solved it, for example, by eliminating flip-prone individuals from the gene pool and giving better survival chances to those who can right themselves?Evolution is all about trade-offs. Being big makes it hard to right yourself, but it also makes you much harder to flip.  It probably also probably makes you much hotter to potential mates.reply",
-      "The web is a wonderful place:  https://www.atlasobscura.com/articles/giant-tortoise-galapag...reply",
-      "You're assuming natural selection selects for not flipping over, when in reality, it selects for the winner of the shell flipping contest as presumably without intervention, the flipped tortoise does not breed, while the winning tortoise does (or at least still has the opportunity to)reply"
-    ],
-    "link": "https://de.numista.com/9866",
-    "first_paragraph": ""
+    "link": "https://theintercept.com/2026/10/01/oregon-police-misconduct-public-records-cost-fee/",
+    "first_paragraph": "\u00a9 THE INTERCEPTALL RIGHTS RESERVEDA Eugene-based publication requested records about a cop accused of misconduct. The city slapped it with a prohibitive fee.\n    In partnership with  Lauren Harper is Freedom of the Press Foundation\u2019s first Daniel Ellsberg Chair on Government Secrecy.How much does it cost to get more information about a cop who punched someone in the face?If you guessed anything lower than $2.5 million, you\u2019d be wrong \u2014 at least according to the city of Eugene, Oregon.In August, the local news outlet Double Sided Media filed a public records request for records about police officer Justin Peckels, which focused on potential misconduct between 2018 and 2026. Peckels has been the subject of community complaints, including for punching a resident in the face during a traffic stop, making the records vital for oversight and their release clearly in the public interest.The city\u2019s response is beyond belief. In its response to the request on Monday, the Eugene Police Departmen"
   }
 ]
