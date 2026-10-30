@@ -1,343 +1,342 @@
 [
   {
-    "title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5 (divagr.com)",
-    "points": 210,
-    "submitter": "csmantle",
-    "submit_time": "2026-10-29T00:25:45",
-    "num_comments": 47,
-    "comments_url": "https://news.ycombinator.com/item?id=50282838",
+    "title": "Binance-hacker-1029 \u2013 $5.6B stolen from Binance (arkm.com)",
+    "points": 943,
+    "submitter": "Tiberium",
+    "submit_time": "2026-10-29T21:38:59",
+    "num_comments": 554,
+    "comments_url": "https://news.ycombinator.com/item?id=50296470",
     "comments": [
-      "This is fun and games, but wait until an agents finds this and does the most misaligned thing with it in order to fold paper clips.> Because a CPU inside a language model clearly wasn't cursed enough, I decided the prudent thing would be to give it a filesystem too.Love the spirit :)reply",
-      "For safety, it needs an HCF instruction.Not only can it solve the halting problem, but also the ignition problem!reply",
-      "There was an interesting bit of research that qwen has a single neuron that makes it \u201cdemonic evil qwen\u201d and a simple \u201cWho are you?\u201d will get some absolutely terrifyingly vile results.Anyways, what I\u2019m trying to say is I want evil qwen to be my CPU.reply",
-      "The single-neuron steering stuff has been going around twitter lately, do you happen to know who was the first one to do it?I wonder how this squares with the recent \"NNs are already clean\" interpretability finding, which may have also been the impetus for this kind of research. Similar to their work on CNNs, maybe residual-steering is overkill, there might be just a single neuron that \"cleanly\" corresponds to \"evilness\" that you can turn up/down?reply",
-      "I think it's from lyra's neuron-explorer project https://x.com/_lyraaaa_/status/2113833330429083662 (see also https://neuronary.org/about, https://github.com/lyramakesmusic/neuron-explorer)reply",
-      "Well I think the first big publication on this front was Anthropic\u2019s Golden Gate Bridge neuron.reply",
-      "This was not a neuron. This was from a trained sparse auto encoder.In a few words, they found a way to map residual stream activations (so, a vector) into a few interpretable sparse concepts. They also had the converse maps, that translate concepts into activations.Golden Gate claude was obtained by artificially increasing the activations in the direction of the 'Golden Gate' concept. It was not neuron surgery.reply",
-      "You don't even need SAE for residual stream based steering, you can do so much more naively by just taking the average difference in activations of prompted vs. unprompted versions, then PCA to get a \"control vector\" that you can use to elicit the prompted behaviorhttps://vgel.me/posts/representation-engineering/reply",
-      "> When Qwen 'saves' a file, the compiled layers hash its name into one of 1,024 slots in a directory kept in the DeltaNet state, and store the text itself in other heads, with eight tokens per row, chained togetherI\u2019ve never wanted to learn how LLMs work more than reading this. Fascinating.Does divagr get paid to do wild things with LLMs? Just curious if they\u2019re being compensated for these wild experimentsreply",
-      "Learning the basics of how LLMs work is legitimately doable in a weekend if you have ever passed a linear algebra course.If you are actually good at linear algebra, it's doable in an afternoon.They are fantastically simple in structure, all the intelligence is in the massive piles of data in them, not their structure. Then there is of course a lot of room in optimization once the basics are done.If interested, maybe start here: https://www.deeplearning.ai/courses/how-transformer-llms-wor...reply"
+      "Their insurance fund (SAFU) is completely wiped out, it's only $1 billion in BTC: https://www.binance.com/en/academy/glossary/secure-asset-fun...The name of the fund was originally inspired by this meme: https://www.youtube.com/watch?v=DelF6zEHXpEFWIW, at the end of every crypto bear market, a CEX usually blows up (eg FTX)...reply",
+      "Top post on /r/cryptocurrency Good to see all these organic posts across social media.MelangeBot\nOP\n\u2022\n2h ago\nTheir insurance fund (SAFU) is completely wiped out, it's only $1 billion in BTCThe name of the fund was originally inspired by this memeFWIW, at the end of every crypto bear market, a CEX usually blows up (eg FTX)...reply",
+      "Dead internetreply",
+      "I\u2019m sorry to say this is not dead internet.reply",
+      "Don't worry, we're well moderated and free of bots here.reply",
+      "[X] Doubtreply",
+      "If ever there was proof that this site doesn't do sarcasm, this comment being downvoted is it.reply",
+      "Came back here to see if i was seeing doublereply",
+      "> As of 2026, the SAFU fund comprises crypto assets valued at approximately US$1 billion, held entirely in BitcoinAnd decreasing, since BTC is dropping as we speak. Always a good idea to hedge a currency with the currency itsselfreply",
+      "> And decreasing, since BTC is dropping as we speak. Always a good idea to hedge a currency with the currency itsselfDepends on what you\u2019re insuring, no? For theft, it actually makes senses, right? That way, you\u2019re insuring a constant number of coins, no matter what the market is doing. If you\u2019re insurance currency would tank during a bitcoin heist, you would lose the insurance effect.reply"
     ],
-    "link": "https://divagr.com/blog/qwenputer",
+    "link": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
     "first_paragraph": ""
   },
   {
-    "title": "Why is this fingerprinting script creating bioweapons? (nullpt.rs)",
-    "points": 959,
-    "submitter": "hazebooth",
-    "submit_time": "2026-10-28T17:13:29",
-    "num_comments": 201,
-    "comments_url": "https://news.ycombinator.com/item?id=50276998",
+    "title": "We're releasing the weights of Mistral Large 4 (mistral.ai)",
+    "points": 1274,
+    "submitter": "kuberwastaken",
+    "submit_time": "2026-10-29T14:13:21",
+    "num_comments": 357,
+    "comments_url": "https://news.ycombinator.com/item?id=50289418",
     "comments": [
-      "> Out of curiosity, I tried GLM-5.3 with the same prompt and it complied!I am noticing a trend here.Didn't HF say the same thing, when they got hacked, the only LLM that would assist with defense was GLM?> When we started the log analysis, we first used frontier models behind commercial APIs. This did not work: the analysis requires submitting large volumes of real attack commands, exploit payloads, and C2 artifacts, and these requests were blocked by the providers' safety guardrails, which cannot distinguish an incident responder from an attacker. We ran the forensic analysis instead on zai-org/GLM-5.2, an open-weight model, on our own infrastructure. This had a second benefit: no attacker data, and none of the credentials it referenced, left our environment.https://huggingface.co/blog/security-incident-july-2026reply",
-      "HF was not signed up to any of the (free to OSS) programs like Daybreak or Glasswing.reply",
-      "Interestingly from the article:> I also attempted this using the Daybreak Blue toggle with the same result, blocked.reply",
-      "This makes me feel so much safer.reply",
-      "Nice sleuthing!We do a similar thing to mark documents that are still under embargo and one day I forgot to remove the watermark. The customer complained they had not received the document (a day or two after I sent it), and much searching was done. Finally we found a line in an outlook log on their end that said that the watermark was the reason the file had been put in indefinite quarantine until someone would take a look at it.That's when I realized my error, and of course it was soon fixed afterwards. It is the first proof that it worked though, so I'm kind of happy about that.reply",
-      "> the file had been put in indefinite quarantine until someone would take a look at it.Someone who's not the guy you sent it to?reply",
-      "Inconvenient question.reply",
-      "pretty crafty i must say hats off. i will steal this idea if you dont mind!reply",
-      "Feel free! The easiest way to do this is white text on a white background on the last page of the document. If you want to do it on every page do it in the header or the footer. Font size '1' for bonus points ;)reply",
-      "Amusingly Nathan For You did this in a humourous way back in 2014 (S02E06 - \"Party Planner\").reply"
+      "They slashed pricing, it's now nearly half vs the preview (Input: $0.7/M Tokens, Output: $2.1/M Tokens vs Input: $1.36/M Tokens, Output: $4.18/M Tokens).At the original pricing in my evals, Mistral Large 4 Preview was not competitive. With this price point and some improvements on top, this full release warrants a major reassessment.[0] https://docs.mistral.ai/inference/pricingreply",
+      "They didn't. Original price was maybe higher but they slashed it during preview and in fact it was lower by a  bit ($0.68/M tokens) and $2.09 for output.I've been using it for my personal project and it's  still too expensive and very slow when thinking. I think we need one more generation from mistral and with maybe 50% of this already \"slashed\" price for this to be competitive (I use Opus 5.5 at work and it's still much better than this).reply",
+      "I just checked, seems you are right. They had roughly a week with the lower pricing, then increased it, now decrease it again. Very odd. My testing was with the higher pricing and looking at AA, theirs seems to have been too.reply",
+      "Is it odd? I would guess that they're doing cost-plus pricing and the costs have been fluctuating with model revs.reply",
+      "Given the size of the model, that's very aggressive pricing.I wonder if it is serving at a loss to get training feedback (maybe using the margins they get from GLM 5.3 serving which is a slightly smaller model but double the price).reply",
+      "based on Anthropic's S1 no one is serving models at a loss, but cutting your price to keep usage high makes a lot of sense when you have your inference booked for long periods.reply",
+      "> They slashed pricing, it's now nearly half vs the preview (Input: $0.7/M Tokens, Output: $2.1/M Tokens vs Input: $1.36/M Tokens, Output: $4.18/M Tokens).Those in the EU wanting EU-only inference should be aware Mistral put a 10% tax (\"upcharge\") on Regional Inference[1].[1] https://docs.mistral.ai/inference/regional-inferencereply",
+      "> this full release warrants a major reassessment.I really don't think it does, the benchmark numbers are dreadful and the cost is higher than Sol. If you have to use an EU model knock yourself out but there are a ton of models that are a lot smarter for a lot less money.reply",
+      "You mean they didn't benchmaxx it? That's an extra reason to give it a try.reply",
+      "So if scores are good, they must be benchmaxxed, and if they are bad, they must not be benchmaxxed. So basically, the narrative is whatever you want it, no matter what the data says.reply"
     ],
-    "link": "https://nullpt.rs/fingerprinting-bioweapons",
-    "first_paragraph": ""
+    "link": "https://mistral.ai/news/mistral-large-4-oss/",
+    "first_paragraph": "Get in touchMenuResearchSovereign AICloudCustomersCompanyGet in touchLoginWhy Sovereign AIProductsMethodSovereign AI in practiceInferenceComputeEnergy & utilitiesManufacturingFinancial servicesPublic sectorCybersecurityAll customersBlogDocsAbout usCareersWhy Sovereign AIProductsMethodSovereign AI in practiceInferenceComputeEnergy & utilitiesManufacturingFinancial servicesPublic sectorCybersecurityAll customersBlogDocsAbout usCareersGet in touchLoginStudioVibeBack to BlogThinkingSummaryMistral released Mistral Large 4 (Le Chonk), a 1-trillion-parameter multimodal model, now available with improved coding, cybersecurity, and reasoning efficiency. It leads open-weight benchmarks in coding and defensive security while offering three reasoning modes for cost-performance balance. Fully open-weight and European-trained, it empowers sovereign AI with customizable, self-hosted deployment options.We release the weights of Le Chonk, advancing the frontier of open models in agentic coding and cybe"
   },
   {
-    "title": "GitLab Security Incident: Attempted Exploitation of CVE-2026-97229 (alpinelinux.org)",
-    "points": 120,
-    "submitter": "sashk",
-    "submit_time": "2026-10-28T23:45:46",
-    "num_comments": 45,
-    "comments_url": "https://news.ycombinator.com/item?id=50282544",
-    "comments": [
-      "> Upgrading to GitLab 19.3.6 on October 22 didn\u2019t fix the vulnerability. The fix isn\u2019t in GitLab\u2019s own code but in a patch to Ruby, which GitLab applies only in its official packages. Our image used standard Ruby, so it didn\u2019t get the patch.> The bug is in Ruby\u2019s regular expression engine, so any program that compiles regular expressions from untrusted input is exposed, not only GitLab.I feel like this era of constant exploits/patches is really bad for those who build from source or make their own images vs those who rely on provided images and upgrade them often. I really can't think of a decent solution for those people other than being plugged in 24/7 to the latest news which is really unfortunate and must be exhausting...reply",
-      "At this point if you are self hosting you should have everything behind a VPN. Only companies with their own security and development teams should be putting things on the public internet.reply",
-      "Gosh I'm at a big company and I'm pretty sure all the self-hosted tools are only accessible through VPN-like tech anyway. The only truly public stuff is Jira, Confluence (which I assume it more to do with Atlassian's pricing of self-hosted) and Sharepoint.reply",
-      "Atlassian products (Jira Server) are no longer supported, and their more Enterprise offering dies in 2029, so everything is ending up in their cloud now yeah.reply",
-      "I know a lot of companies vibe-coding alternatives. I'm not an expert but it's perhaps even illegal for most European companies to migrate any customer data to Atlassian servers.reply",
-      "Can you give more information on \"illegal for most European companies\" part? Asking for a EU company using Jira :)reply",
-      "This person is just posting absolutely baseless claims, as if Atlassian, a company that basically exists purely on the back of B2B SaaS sales, has not considered EU data residency requirements in their core product offering: https://www.atlassian.com/software/data-residencyreply",
-      "Yeah I thought Jira at least was all built on AWS these days. I've never set up a Jira Cloud instance but I'd be surprised if you don't chose where your data lives.reply",
-      "This is how SaaS dies, vibe-coded to death.I\u2019m doing my part!reply",
-      "this is a really bad look in 2026 imohttps://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-fo...> We have not requested CVE identifiers in Ruby for these fixes, at least for now.> Ruby has generally considered it unsafe to compile and use a regular expression created from untrusted input. We stated this in the advisory for CVE-2022-28738, where we nevertheless treated a double free in Regexp compilation as a vulnerability after a comprehensive assessment. We did the same for CVE-2024-27282.reply"
-    ],
-    "link": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
-    "first_paragraph": "On October 20 and 21, an attacker tried to exploit a GitLab vulnerability (CVE-2026-97229) on our instance, a week after the fix was released. The attack came close to working. We have found no evidence that it succeeded, but we cannot rule it out, so we treated the instance as compromised and rebuilt it from scratch. Our checks show that the aports repository, packages, and the October 21 releases were not tampered with.GitLab is being tested before we open it to the public again. All passwords have been reset, so when it is back you will need to set a new one with \u201cForgot your password?\u201d on the sign-in page. We will post exactly what you need to do when it reopens. In the meantime: if you used the same password for your gitlab.alpinelinux.org account anywhere else, change it there. We have seen automated login attempts against our GitLab with passwords leaked from other sites.If you have questions or concerns please reach out to us at infra@alpinelinux.org.The vulnerability:\nCVE-2026"
-  },
-  {
-    "title": "Claude Code burns ~15\u201320% of your tokens on a 3-word status line (gist.github.com)",
-    "points": 96,
-    "submitter": "NikZaal",
-    "submit_time": "2026-10-29T03:33:42",
-    "num_comments": 15,
-    "comments_url": "https://news.ycombinator.com/item?id=50284255",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
-    "first_paragraph": "\n        Instantly share code, notes, and snippets.\n      by Flamerix AI \u00b7 MIT LicenseTested on Linux, Claude Code 2.1.257\u20132.1.312 (see Tested versions). The binary is not modified (BUN_OPTIONS=--preload). An update can silently undo it, so see Verify.To make it permanent for every Claude Code process, see Install.Every ~30 seconds, for every background agent, Claude Code sends that agent's entire\ntranscript to the agent's own model (usually Opus) and asks it to \"describe your most recent\naction in 3-5 words\". The answer only updates the agent's status line in the agents panel; it\nnever reaches the model or your conversation. There is no setting that turns it off, and since\n2.1.232 (August 2026) it has been on by default.The anomaly was detected by DRIM in Claude Code's OpenTelemetry export:\ngrouping claude_code.api_request events by query_source showed agent_summary costing more than the main conversation itself.Spend here means Claude Code's own per-request estimate (cost_usd), not a"
-  },
-  {
-    "title": "A Health Update (furbo.org)",
-    "points": 154,
-    "submitter": "frizlab",
-    "submit_time": "2026-10-28T21:13:21",
-    "num_comments": 24,
-    "comments_url": "https://news.ycombinator.com/item?id=50280974",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://furbo.org/2026/10/28/a-health-update/",
-    "first_paragraph": "\nfurbo.org\ninfo\n\t\t\t\t\tI'm Craig Hockenberry and this is where I write for the web. I make apps and run websites.\n\t\t\t\t\n\t\t\t\t\tYou can learn more about me, view my r\u00e9sum\u00e9, check out my source code, or  follow me.\n\t\t\t\t\n\t\t\t\t\tRSS in XML or JSON\n\n\t\t\t\t\t\u00a9 2026 Craig Hockenberry\n\t\t\t\t\n\t\t\t\t\tAll rights reserved\n\t\t\t\tI\u2019m writing this post from a hospital bed. And I couldn\u2019t be happier.You hear folks say chemotherapy sucks, but until you go through it yourself, you don\u2019t really know how bad it can be. It remains a popular activity only because it\u2019s better than the alternative.My first exposure to chemotherapy was with this contraption: a fluoroscope.Every week, they used this machine to tap into my spine, extract 5 mg of fluid for analysis, and replace it with 5 mg of methotrexate. There was only a local anesthetic during the procedure and the hardest part was knowing that there was a needle, turned up to eleven, going into my back.It was afterwards that things got dicey: the nerves in your spine float "
-  },
-  {
-    "title": "CNC Stone Carving (carmelitegothic.com)",
-    "points": 437,
-    "submitter": "bschne",
-    "submit_time": "2026-10-28T14:38:22",
-    "num_comments": 122,
-    "comments_url": "https://news.ycombinator.com/item?id=50274409",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://carmelitegothic.com/cnc-stone-carving/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "The 'else' keyword is probably a literal translation from German (2020) (github.com/e-n-f)",
-    "points": 36,
+    "title": "Cuis: The Modern Smalltalk-80 (cuis.st)",
+    "points": 32,
     "submitter": "theanonymousone",
-    "submit_time": "2026-10-25T16:05:56",
-    "num_comments": 16,
-    "comments_url": "https://news.ycombinator.com/item?id=50233059",
+    "submit_time": "2026-10-27T06:33:16",
+    "num_comments": 8,
+    "comments_url": "https://news.ycombinator.com/item?id=50255343",
     "comments": [
-      "\u2019Else\u2019 is not commonly used in English today but the meaning does fit. From Webster\u2019s (1913):Else, adverb or conjunction1. Besides; except that mentioned; in addition; as, nowhere else; no one else.2.\nOtherwise; in the other, or the contrary, case; if the facts were different.\u201cFor thou desirest not sacrifice; else would I give it.\u201d \u2013 Ps. li. 16.After \u2018or\u2019, else is sometimes used expletively, as simply noting an alternative. \u201cWill you give thanks, \u2026 or else shall I?\u201d \u2013 Shak.reply",
-      "whatreply",
-      "The modern universal keywords if, else, for and while are good because they are fairly short and thus quick to type.reply",
-      "If something were to be true, then foo.Or if this other thing were to be true, then bar.If it\u2019s something else, then baz.reply",
-      "Don\u2019t even get me started on \u201celif\u201dreply",
-      "No. English has used else to mean \"otherwise\" since before computers came along. Wiktionary offers this quote from Call of the Wild (1903):\"He had never seen dogs fight as these wolfish creatures fought, and his first experience taught him an unforgetable lesson. It is true, it was a vicarious experience, else he would not have lived to profit by it.\"https://en.wiktionary.org/wiki/else#ConjunctionThere's also \"or else\", as made famous in crime dramas: \"Meet me by the docks at midnight. Bring the money. Come alone. No cops... or else!\" But in other usage it can of course be followed by something. \"He had to get to work on time, or else he might be fired.\"reply",
-      "Article states else is archiac English but later says someone called it ignorantly incorrect English and suggested using \"or\".Ive always assumed it was effectively \"otherwise\" but shortened to \"or else\" -> \"else\".Given the alternative to use \"or\" as the first pushback I feel that acts as confirmation. I prefer else because \"or\"  has implications in boolean and bitwise logic that else doesn't.reply",
-      "it was probably a rote translation of the German word \u2018sonst\u2019reply",
-      "> I can't use \"else\" as a conjunction in normal speech, only in computer programs.sure you can. who's going to stop you?reply",
-      "Hurry up, else we'll be late.\nYou'd better leave now, else you'll miss the bus.\nDo what I say, else there'll be trouble.reply"
+      "I hadn\u2019t heard anything about Smalltalk since seeing it used in version 1.4 of Scratch, so it\u2019s a pleasant surprise to come across it again after all this time.reply",
+      "What most people do not know is that Smalltalk was originally a childrens' teaching language, a peer of Logo, which (I have learned in previous comments) preceded it.\"Smalltalk is a purely object-oriented programming language that was originally created in the 1970s for educational use, specifically for constructionist learning, but later found use in business.\"https://en.wikipedia.org/wiki/Smalltalkreply",
+      "Same VM as Squeak and Pharo so just as fast but a bit lacking in libs but this is an opportunity to contribute to open source for me.Currently using it to build a mostly static website (with Pocketbase & lighttpd). A good experience all round.reply",
+      "I haven't used these in a long while.Is this a fork? What's Cuis' main selling point compared Squeak and Pharo?reply",
+      "Cuis is an environment derived from Squeak as I understand it with all the \"clutter\" removed. So it is really a cut-down Squeak. Just as Pharo was a cut-down Squeak originally.For me it was easier and quicker to get something done in Cuis than in any other Smalltalk (Squeak, Pharo, VA, Dolphin).reply",
+      "It looks like it is a fork started quite a long time ago.https://cuis.st/documentation/explanation/historyreply",
+      "The history link gives details, but if you want a quick analogy:Pharo & Cuis both forked from squeak at roughly the same timeSqueak = DebianPharo = ArchCuis = AlpineCuis has rigorously simplified, so its much easier to explore & understand the system - because there's less of itCuis's re-engineering of morphic is really quite brilliant. Everything is hardware accelerated vector graphics. EVEN THE FONTS are drawn that way. And they remain crisp even when zoomed (in or out) & rotated.Pharo does have some cool stuff though. I'd love to see fuel (object serialization) & soil (a fully oo database) ported to cuis. And the big one - seasideBut its not an either-or situation. 99% 9f what you learn & do in one is applicable to the other. But if you're starting out, I would definitely recommend cuis (not implying that you wouldn't necessarily stick with it)reply",
+      "This looks cool and beautiful! Ive looked at other Smalltalks and been pretty intimidated. This feels cool and welcoming.reply"
     ],
-    "link": "https://github.com/e-n-f/if-then-else/blob/master/if-then-else.md",
-    "first_paragraph": "VideoHi, I'm Eric. I'm here to talk about what seems like an absurd idea:\nthat if-then-else had to be invented.If-then-else is how we talk about conditions in programming languages:\nif something is true, then do a thing, else do a different thing.That's just English, right? Except that it isn't.\nI can't use \"else\" as a conjunction in normal speech,\nonly in computer programs.Where did this else come from? It's a mystery.\nIt's too microscopic a detail to have made it\ninto books on the history of programming languages.It doesn't seem to have come from surveys or legal proceedings or algorithms\nas they were written before there were computers. You find \"if yes\" and \"if no\"\nand \"if however\", but not \"else\".The first computer to be able to perform different instructions\ndepending on the result of a previous calculation seems to have been the Eniac.\nIn 1946, Haskell Curry and Willa Wyatt wrote this report describing a program\nto invert a function. They used the name \"discrimination\" for the\nf"
+    "link": "https://cuis.st/",
+    "first_paragraph": "Cuis is a free Smalltalk-80 environment with a specific set of goals: being simple and powerful.It is also portable to any platform, fast and efficient.Get started\u201cI like it\u2026 It\u2019s nice and clean and simple and pretty. Nice stuff!\u201d2007-04-27 \u00b7 Source\u201cYay, Juan. You GO, guy! \u2026a great example of malleable software (and a clever mind) at work.\u201d2007-04-27 \u00b7 Source\u201cI think you have a very elegant design aesthetic.\u201d2007-11-19 \u00b7 Private communicationMore nice comments about CuisSmalltalks 2026 takes place from October 14 to 16 at the Facultad Regional Rosario of the UTN, in Rosario, Argentina, and Cuis will be there: eight talks of the program come from the Cuis community or show work done in Cuis. We hope to see you all there!What. It is a \u201cDemo Meeting\u201d for demonstration then discussion.\n  Milan Lajtos will present his experience on using a code agent to\n  develop Blueprint, a revisit of the Cuis Smalltalk system desktop.Cuis 7.8 stable release!\nOlder news\n\nSubscribe\n  \nCristi\u00e1n P\u00e9rez presen"
   },
   {
-    "title": "StackOverflow now gets fewer than 1000 questions a month (data.stackexchange.com)",
-    "points": 213,
-    "submitter": "babelfish",
-    "submit_time": "2026-10-28T23:35:02",
-    "num_comments": 203,
-    "comments_url": "https://news.ycombinator.com/item?id=50282454",
+    "title": "Astroterm: A Planetarium for Your Terminal (github.com/da-luce)",
+    "points": 36,
+    "submitter": "nvmdbljstm",
+    "submit_time": "2026-10-28T08:29:55",
+    "num_comments": 2,
+    "comments_url": "https://news.ycombinator.com/item?id=50270651",
     "comments": [
       "xxx"
     ],
-    "link": "https://data.stackexchange.com/stackoverflow/query/1926661#graph?t=1",
+    "link": "https://github.com/da-luce/astroterm",
+    "first_paragraph": "A planetarium for your terminal! Explore stars, planets, constellations, and more, all rendered right in the command line\u2014no telescope required. \u2728\ud83e\ude90\n\n\nastroterm is a terminal-based star map written in C. It displays the real-time positions of stars, planets, constellations, and more, all within your terminal\u2014no telescope required! Configure sky views by date, time, and location with precise ASCII-rendered visuals. See usage for all supported options!astroterm is constantly improving, and we'd love to hear your ideas! If you have a suggestion or find a bug, please open an issue and share your feedback. See CONTRIBUTING.md for guidelines on building, testing, and contributing to astroterm.The night sky above Singapore on January 2, 2025See usage on how to obtain this viewStars over Sydney, Australia on January 6, 2025Several installation methods are provided based on your platform. If none of these fit your needs, you can always build from source. Refer to troubleshooting for help resolvi"
+  },
+  {
+    "title": "We ran AI agent swarms in Minecraft and Mindustry (labs.ycombinator.com)",
+    "points": 219,
+    "submitter": "sandslash",
+    "submit_time": "2026-10-29T21:40:28",
+    "num_comments": 70,
+    "comments_url": "https://news.ycombinator.com/item?id=50296486",
+    "comments": [
+      "This is hilarious and adorable.> \"Ada tossed a cooked chicken to Noor; Esme picked it up by accident and ate it. A three-minute \"no blame\" inquiry produced a written protocol...\"They're like super-serious little senior engineers. (edit: or dining-philosophers).About how much KV cache do these kinds of agents use? Could you squeeze 50 of these $game agents onto a small consumer GPU (small LLM)?Idly imagining a game server of some kind with a bunch of human friends sharing one person's GPU, with a flock of agents colocated on it.reply",
+      "Doubt it, there was a streamer doing minecraft experiments with all the different SOTA models and pitting them against eachother in a survivor-esque style reality TV show competition and they had quite a hard time.reply",
+      "If you want to do a version of this yourself quickly --Install Luanti with Minetest (open source minecraft), and instruct your agent to write a mod that gives it network access to the game's Lua interpreter. The agent can then do anything from modifying the world state directly to controlling NPCs.I had it build giant bases similar to black mesa in half life with power distribution mods. It would write solvers to optimally place the power cables / repeaters in accordance to the spacial dimensions of the rooms that it would build (lol). I guess this is how I discovered vibe gaming.I suppose you can have multiple agents interact with each other through that, provided an adapter to proxy agent player navigation and perception to get real information asymmetry between them. Or just emulate / hook the client and do away without a remote Lua mod entirely.reply",
+      "Interesting setups, I found the Minecraft agents to work in an almost turn-based manner, which makes me think that the three hours and open format did not really give them sufficient incentives to play in a more lively or reactive manner. On the other hand, they also behave similarly in Bed Wars, which should have incentivised it. A bit disappointed...I'm also wondering if the article itself was generated by agents too, in a \"here are the logs, clip interesting moments thx\" manner by the authors. It's got a certain disinterested and distracted style to it.reply",
+      "I think big reasoning LLMs are just the wrong architecture for live games like this, latency is going to be crap given that every token requires an entire forward pass through the model.Card games or turn based strategy are much better suited.reply",
+      "Depends. If the models are smart enough to write enough solid helper scripts, so that the model only does the big picture thinking, not guiding every step .. then they will get powerful and capable quickly. I am also playing a bit with minecraft AI right now. Fun to experiment.reply",
+      "> There was a tendency toward bureaucracy. Four agents spent 11 minutes appointing \n> a \"sole fertilizer operator\" for a single piece of bone meal on a single wheat \n> block.Feels like a scene from Douglas Adams' B Ark.reply",
+      "Exactly what I was thinking reading through this. This is amazing and also frightening and hilarious. It\u2019s like a deformed version of how normal groups of humans would operate. Very rules and process-oriented humans. I found the no-blame inquiry into chicken tossing that resulted in what is effectively written law particularly striking, and adorable, and depressing. And cute.reply",
+      "These things were fed human corpuses so if anything it is reflective of our own tendencies to bikeshed.reply",
+      "Getting hung up on pointless stuff seems common with agents in general.reply"
+    ],
+    "link": "https://labs.ycombinator.com/projects/games/index.html",
     "first_paragraph": ""
   },
   {
-    "title": "Human-enhanced tsunami hazard in large lakes (nature.com)",
-    "points": 19,
-    "submitter": "gumby",
-    "submit_time": "2026-10-26T13:00:03",
-    "num_comments": 0,
-    "comments_url": "",
+    "title": "Herdr has released native app (github.com/herdrdev)",
+    "points": 70,
+    "submitter": "cherioo",
+    "submit_time": "2026-10-30T00:42:41",
+    "num_comments": 53,
+    "comments_url": "https://news.ycombinator.com/item?id=50298436",
     "comments": [
       "xxx"
     ],
-    "link": "https://www.nature.com/articles/s41467-026-78272-8",
-    "first_paragraph": "Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain\n            the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in\n            Internet Explorer). In the meantime, to ensure continued support, we are displaying the site without styles\n            and JavaScript.Advertisement\nNature Communications\nvolume\u00a017,  Article\u00a0number:\u00a010531 (2026) Cite this article\n2885 Accesses93 AltmetricMetrics detailsWorldwide, human-induced erosion enhances sediment delivery to lake deltas, increasing their susceptibility to collapse. In Lake Iseo, northern Italy, two millennia of intensified land use tripled sediment flux, oversteepening the delta and preconditioning it for failure. Here we show from geological records and numerical simulations that earthquakes in 1117 CE (Mw 6.5) and 1222 CE (Mw 6.0) triggered major subaqueous delta collapses, generating massive tsunamis with maximum run-ups of ~50\u2009m "
+    "link": "https://github.com/herdrdev/herdr-app",
+    "first_paragraph": "herdr desktop appHerdr is a desktop app for terminals and coding agents. Keep work in spaces, see which agents need you, and leave terminals running when you close the window.Linux needs a desktop session and a working Vulkan driver. macOS builds are available for Apple Silicon; Intel Mac users can build from source. Linux builds are x86-64 and ARM64.The installer adds Herdr to your apps and puts the command in ~/.local/bin.\nAdd that folder to your PATH if the installer asks.\nOn macOS the app lives in ~/Applications/Herdr.app.\nFor drag-and-drop installation on Apple Silicon, download Herdr.dmg and drag Herdr to Applications.Run in PowerShell on x64 Windows with curl and tar installed (Windows 10 1803 or newer):Herdr appears in the Start menu. The installer adds %LOCALAPPDATA%\\Programs\\herdr-app to your user PATH. Open a new terminal to pick it up.Both installers download and run code. Read the shell installer or PowerShell installer first if you prefer.\nThey also install herdr-core if "
   },
   {
-    "title": "Gemini 4 Carbon (blog.google)",
-    "points": 850,
-    "submitter": "acossta",
-    "submit_time": "2026-10-28T17:01:23",
-    "num_comments": 705,
-    "comments_url": "https://news.ycombinator.com/item?id=50276792",
-    "comments": [
-      "At this point if a Google PM handed me $100 and said \"go figure out how to issue a prompt to Gemini 4 Argon\" I'm only ~30% sure I could figure out how. The Gemini app in my phone only has 3.8 Pro as the latest model; it does say \"Ultra\" in the bottom left, but I really don't think I'm on the Ultra plan. How I would sign up for that, on a Workspace account, is beyond our brightest minds.Its sad watching them try to keep up when they want nothing more than to crumble under the weight of their own bureaucracy, and at this point I'm not sure there's any hope for them.reply",
-      "This model is not for you or me. This model is for Google AI engineers to put on their perf review at the end of the year. How you find or not find it, it doesn't matter. It goes into the \"designed and developed Gemini 4 Carbon Ultra Pro\" paragraph and people get a promotion, get to keep their jobs and hope to not get replaced by Gemini 4 Carbon next year.reply",
-      "That seems like an overly negative caricature of Google\u2019s corporate culture, and unlikely to be the case here, given the stakes and enormous investments in AI.It\u2019s more likely what the grandparent was saying, I\u2019m reminded of Steve Yegge\u2019s rant from 15 years ago and it seems like not a lot has changed.https://gist.github.com/chitchcock/1281611reply",
-      "The results are indistinguishable. Massive organisations tend towards self aggrandivizing work.At some point, the metrics for delivering to customers runs counter to what the bureaucracy was building itself to actually deliver: jobs.reply",
-      "\"overly\"? surely not... maybe in the sense that it isn't \"underly\", but there are much more uncharitable caricatures of Google's corporate culture that I would freely admit than that.reply",
-      "Uh, proof needed for this outlandish claim.reply",
-      "I wish this was a joke. Turns out, Google turned into a joke. I was really rooting for them; They had everything in place to be the top dog. From people to research to hardware to internet.zip (and video.zip and emails.zip and newsgroups.zip and code.zip and android.zip etc..). I don't want to sound negative and what they built is probably great in its own right, but what was expected of them and what they have delivered so far, I can definitely say that they blew it hard. They did manage to turn gemini into search 2.0 on google.com and it does work.. but, come on. Where's the google of yesterday? Seems they put a ton of weight that's not on the level of people that were there before and I don't want to offend anyone there, but it sure looks like that.reply",
-      "The same was true 15 years ago when the cloud started hyping up and Google missed that in similar ways as well, so I\u2019m not sure whether the \u201cGoogle of yesterday\u201d is who you think it is.This is the Google of yesterday, they didn\u2019t change.reply",
-      "Fair pointreply",
-      "A good % of the Google of yesterday is now in working in frontier labs, crushing it.reply"
-    ],
-    "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
-    "first_paragraph": "Gemini 4 Carbon: our next frontier modelLearn more:Learn more:Learn more:Models & ResearchProductsInfrastructure & cloudTechnology\n              Learn more:\n            ProductsPlatformsDevices\n              Learn more:\n            Outreach & initiativesLeadershipInside Google\n              Learn more:\n            Oct 28, 2026\n                Gemini 4 Carbon is our strongest model with state-of-the-art cybersecurity and long horizon capabilities.\n              Koray KavukcuogluSVP, Google DeepMind and Chief AI Architect, GoogleToday, we\u2019re announcing the next frontier model: Gemini 4 Carbon, our strongest model with state-of-the-art cybersecurity and long horizon capabilities.Carbon ranks #1 on the recently updated v5.0 of Artificial Analysis Intelligence Index at 59. It shows significant gains across coding and agentic tasks as well as across key capabilities critical for cybersecurity defense, landing a firm lead in SEC-bench Pro (88.2%) for finding vulnerabilities, ExploitGym (54.8%"
-  },
-  {
-    "title": "Formlabs Studio 1 $699 Resin Printer (formlabs.com)",
-    "points": 153,
-    "submitter": "mhb",
-    "submit_time": "2026-10-28T21:19:30",
-    "num_comments": 97,
-    "comments_url": "https://news.ycombinator.com/item?id=50281044",
-    "comments": [
-      "Formlabs uses a proprietary resin cartridge... it's the paper printers situation all over again, the printers themselves are not that expensive but the disposable ink costs an arm and a leg.Don't go with Formlabs, support any of the open-platform alternatives.And also, be aware that these printers require some serious development work (you need solvent to wash away uncured resin (if you ask me, this basically necessitates a chemical hood... Formlabs will happily upsell the \"Form Wash\" for this for another 699). If uncured resin falls on your floor (which has happened to me a little too many times), boy is it a horror cleaning it up even if you have industrial grade solvents; FDM printers are easier and their \"ink\" is much, much less expensive by comparison.reply",
-      "It says it includes \"Open Material Mode\" which let's you \"...print with any 405 nm photopolymer resin or 1064 nm powder on Formlabs 3D printers...\"reply",
-      "The amount of upselling, extra parts necessary for basic functionality, predatory resin pricing and specific open \"modes\" that are free to be subjects to amendment by contract makes this seem like a cash grab for investors rather than serious product. Really sour taste in the mouth from this.Just buy an open source version from China that has the necessary hardware in an open format and let Claude adjust the software if there are concerns.reply",
-      "I'm unclear what the open source version from China of a resin printer is.  Creatlity and Elegoo don't appear to be at all it as they lock you to the chitubox ecosystem.reply",
-      "I use prusaslicer and uvtools with my Elegoo Saturn. No proprietary lockin. I also own a Prusa, so I don't feel bad using their software with another brand.reply",
-      "> Just buy an open source version from ChinaReferences and links?There is currently no open source version of the high resolution monochrome LCDs.  The LCDs and their drivers lock you into the Chitu ecosystem.The problem, as Chitu figured out, is that as soon as you cough up the NRE to make the LCDs and make it publicly available, EVERYBODY will copy you and then there will be no profit left to sink the NRE that you just spent.reply",
-      "* If you buy the \"Form Studio 1 Resin Tank Pro\" extra at $79 because the included tank \"is not compatible with Tough 1500 Resin or materials needing to utilize Open Material Mode\"reply",
-      "OMG $79 more!  That ruins everything!reply",
-      "You need to buy a tank anyway, which is $50 or so \u2014 that works with their new Alpha resins. The slightly more expensive tank is necessary only for their engineering-grade resins (only a couple are certified for the Studio 1 so far) and 'OMM' (Open Material Mode), which as mentioned above, comes out of the box on the Studio 1.(Not replying to you directly, but generally to this thread)reply",
-      "$79 per tank.Along with some issues with the screen and the non-pro resins.It\u2019s anti-consumer.They want to be the HP/Bambu of resin printers.reply"
-    ],
-    "link": "https://formlabs.com/products/form-studio-1-basic-founders-edition/",
-    "first_paragraph": "Free ShippingSKU: FST1-FLEX-US$749excl. sales taxForm Studio 1 is the first affordable, professional-grade resin 3D printer with a powerful, long-lasting print engine and an open platform. Print most parts in under two hours with razor-sharp detail and a workflow that's safe, reliable, and mess-free from start to finish. Paired with Alpha Resins and the Formlabs VOC Extractor, Form Studio 1 is the first and only resin printer with UL GREENGUARD Certification for low chemical emissions.Masked Stereolithography (MSLA)9 industry-leading Formlabs materials or third-party materials using Open Material Mode (included).\nMore exciting new materials are currently in development.\nExplore Materials20.0 x 12.5 x 23.5 cm\n7.9 x 4.9 x 9.3 in\n5.9 litersForm Studio 1 is the first affordable, professional-grade resin 3D printer with a powerful, long-lasting print engine and an open platform. Print most parts in under two hours with razor-sharp detail and a workflow that's safe, reliable, and mess-free f"
-  },
-  {
-    "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand (circuithub.com)",
-    "points": 465,
-    "submitter": "seddona",
-    "submit_time": "2026-10-26T13:13:31",
-    "num_comments": 211,
-    "comments_url": "https://news.ycombinator.com/item?id=50243060",
-    "comments": [
-      "Hi Andrew founder of CircuitHub here. Happy to answer any questions. Hardware design has been in the news a lot lately as it's going through the same AI revolution as coding. We're happy to make it easy to turn those designs into physical products.reply",
-      "I'd highly recommend you revisit your protection of customer's IP. Considering that you require source files (not just the industry standard gerbers), your legal terms are very unfavorable to customers. This makes me uncomfortable because it makes my IP much easier to leak. As written, I cannot justify the risks given your agreement.Nothing in the legal terms explicitly prevents your employees from using my designs for other purposes. If you leak my IP and I find out 13 months later, your terms prevent me from seeking damages because you only cover 12 months from manufacturing.I like that you have an NDA that I can opt in to, but you should be offering the NDA by default when I upload the files. I should not have to go looking for it in your documentation.Edit: I realize that there is also limited protection and a lot of risk using a Chinese manufacturer. But requiring source files makes it much, much, easier to look at my design, recognize what it's for, and reproduce it, or at least copy the innovative parts of my design.reply",
-      "You can upload Gerbers/ODB++ if you like. We also sign custom NDA's. We count many of the worlds largest corporations as customers so this is pretty standard.reply",
-      "Here's what the documentation says:---In order to receive a quote on CircuitHub, you will need to upload the original design files from your EDA tool, or an export that carries the same data. This allows us to provide instant quotes and automate the manufacturing process to lower lead times and cost. Currently, our platform works with Altium, KiCad and Fusion 360 files, and with ODB++ and IPC-2581 exports from any design tool, including Cadence Allegro and OrCAD.We do not accept Gerber files on their own because they do not contain all of the design and assembly data required by our automated process. We do use your Gerber files when you upload them together with an ODB++ or IPC-2581 export, or with Fusion 360's EAGLE exports, which describe the parts.---Other vendors don't require this. They just need the gerbers, BOM, and CPL files. That's way different than source files or ODB++/IPC-2581 exports, which is basically the same thing as source.reply",
-      "IPC-2581 is the future.Good riddance to the compatibly hellhole of 30 different flavors of Gerber/Gerberx/NCdrillEDIT: haven't even mentioned everyone's different goofball CSV BOMsreply",
-      "Would you address other concerns voiced above?  They are pretty serious points or allegations. Also, a PCB sourcing should not require a custom NDA when the selling point is convenience, legal protection, and speed vis-a-vis overseas sourcing.reply",
-      "Then there's either a usability issue or a bug. I uploaded gerbers but it wouldn't let me continue unless I uploaded schematics and board files.And why should I have to sign an NDA? You aren't giving me any confidential data, I am giving it to you.reply",
-      ">> We also sign custom NDA's> And why should I have to sign an NDA?I think you misunderstood?reply",
-      "What did I misunderstand? Their documentation (https://docs.circuithub.com/importing-a-project/files-requir...) says:---For additional legal protection of your intellectual property please sign our NDA.---To make it worse, you can't even read what their NDA says without signing up with your email address on a third party site.reply",
-      "Yes. If you're that risk adverse that giving your email address in 2026 to a site is too much of a burden, you're going to be a problem customer and they don't want your business. They're in business to make money and it's a business transaction and if you can't cross that low threshold, you're more trouble than you're worth as a customer.Isn't capitalism neat\u203dreply"
-    ],
-    "link": "https://www.circuithub.com/post/unveiling-the-grid",
-    "first_paragraph": "CapabilitiesCase StudiesCareersGCase studyFor the last five years we've been quietly running and scaling something we haven't really talked about in public. Today we're showing it to the world. This is The Grid, our factory-scale robot in Massachusetts that builds circuit boards on demand.Over the past 30 years, most electronics manufacturing left the West. Assembly was labor-intensive, and labor is expensive in high-wage countries, so it moved to where labor was cheap. We designed in the US and built in China, and for a long time that worked.Automation is starting to change that, but mostly at huge volumes. SpaceX now builds Starlink dishes by the million in Bastrop, Texas. When you make the same product over and over, it's worth building a line around it.Most products don't reach Starlink volumes. The typical hardware company needs ten of this, a hundred of that, and a new revision next week. That kind of high-mix work has stubbornly resisted automation, because every new design mean"
-  },
-  {
-    "title": "The Milwaukee Brewers win the first World Series title in franchise history (cnn.com)",
-    "points": 24,
-    "submitter": "skeptrune",
-    "submit_time": "2026-10-29T03:44:12",
-    "num_comments": 5,
-    "comments_url": "https://news.ycombinator.com/item?id=50284329",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.cnn.com/2026/10/28/sport/live-news/game-5-world-series",
-    "first_paragraph": "\nOur live coverage of Game 5 of the World Series has ended. For a full recap of the Brewers\u2019 World Series-clinching victory, read below.\n\n            The Milwaukee Brewers put on a masterclass in every facet of the game as they beat the Tampa Bay Rays 4-1 to win their first World Series title in franchise history in five games on Wednesday at Tropicana Field in St. Petersburg, Florida.\n    \n            In a game that saw both teams\u2019 aces go head-to-head, it was the Brewers\u2019 Cy Young candidate Jacob Misiorowski besting Rays ace Drew Rasmussen.\n    \n            The NL Cy Young frontrunner went five-and-two-thirds innings, striking out two while only allowing two hits before exiting the game with an apparent cramp in his leg. Rasmussen was pulled after four innings with him being on short rest and a reported pitch count of 60.\n    \n            The real story was the Brewers offense \u2013 especially rookie shortstop Cooper Pratt.\n    \n            Pratt got the scoring started in the second inn"
-  },
-  {
-    "title": "Zillow to pay $212.5M to settle class action for real estate venture (reuters.com)",
-    "points": 13,
-    "submitter": "WaitWaitWha",
-    "submit_time": "2026-10-29T03:48:05",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.reuters.com/legal/government/zillow-pay-2125-million-settle-class-action-over-failed-real-estate-venture-2026-10-28/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "MacBook Pro with PROLED XDR Display and Touch (apple.com)",
-    "points": 526,
-    "submitter": "etothet",
-    "submit_time": "2026-10-28T17:10:37",
-    "num_comments": 909,
-    "comments_url": "https://news.ycombinator.com/item?id=50276940",
-    "comments": [
-      "Touch-screen Macs is kind of a terrible development for anyone who loves the Mac. It's not just a harmless feature that you can ignore if you don't want it, because it's customer-facing and will now generate complaints and bugs from people who do use it. Those people will complain (rightly) that macOS UI widgets are too small to accurately manipulate with your fingers (they are indeed too small) and don't make sense with a touch screen (they don't make sense).That means Apple will begin imposing all sorts of UI dreck on all of us, whether we want to use our screens as touch surfaces or not.This is basically what happened with Microsoft - Windows Vista and 7 were installed in plenty of laptops with touchscreens, and customers would complain about not being able to maximize windows without closing them, not being able to open menus without touching toolbar buttons, etc.Eventually Microsoft listened to them and we got Windows 8. Now this is the beginning of the same process for macOS.reply",
-      "I would argue that once the dust settled post-Windows 8 with Windows 10 a full decade ago, the touch screen has been the opposite of what you\u2019ve described for Windows systems. It absolutely is a harmless feature that you can ignore. There\u2019s no reason not to have one.Same goes for Linux. My CachyOS install on my Framework 13 Pro has a touch screen. There\u2019s literally no downside for me having it. I don\u2019t have to use it if I don\u2019t want to. But if I want to scroll a website or scrub a video the option is there.reply",
-      "I don't think you can say that. Windows 10+ has a tablet mode that is completely detached from desktop mode, and it's a global toggle. Switching on tablet mode brings full-screen, upscaled, simplified explorer and settings, and switches off the classic desktop launcher with paper bin, shortcuts, etc. in favor of a larger \"Start\"-type menu launcher. What deeper and experimental integration there was in Windows 8 had just been removed as it became clear MS couldn't quite sell into the iPad/Android tablet market or compete in terms of power management. After stripping most of Windows 8 innovations, what remains is a touch keyboard, touch mouse emulation, and a few affordances in explorer to make tablets not outright terrible, with the target audience education and mbas interested in mobile powerpoint and web/mail.reply",
-      "Windows 10 had a tablet mode. Windows 11 does not - it just appropriately scales up the padding and size of some UI controls to make them easier to tap.reply",
-      "I\u2019m failing to see where there\u2019s some kind of downside here. What you describe doesn\u2019t really sound like a bad experience.reply",
-      "You cant figure out how those kinds of requirements might influence or curtail development in the non touch parts of the system?We saw the same thing happen with mobile first on websites.reply",
-      "The introduction of the mouse led to developers paying less attention to keyboard shortcuts and function keys, but I don\u2019t see anyone seriously saying computers should not have mice.Or for that matter, that adding support for game controllers (something that has actually happened with Linux desktops) would led to curtailed development of non-controller parts.reply",
-      "Have you found some kind of performance or other detriment of the mere support of touch screens or is this just theoretical?reply",
-      "The downgrade to touch is fine for basically everyone.  People clutching pearls are simply mostly uninformed or specifically worried about deep edge cases from some stupid mountain of stupid superiority.reply",
-      "It's a fine experience. It's not what Apple is doing though. Apple is doing the half way experience that will leave all unhappy.reply"
-    ],
-    "link": "https://www.apple.com/macbook-pro/proled-xdr-display/",
-    "first_paragraph": "Lease a new Mac with low monthly payments for 24 or 36 months and upgrade at the end of your term with Apple\u00a0Upgrade.\u00a7 Learn more\n\t\t\t\t\t\t\t\tA screen come\u00a0true.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tAvailable starting 11.6November 6th\nPROLED\u00a0XDR. The world\u2019s best laptop display. With true-to-life color and unparalleled brightness and\u00a0contrast.Touch. A new dimension for pro\u00a0workflows.M5\u00a0Pro and M5\u00a0Max chips. Superfast for demanding\u00a0tasks.A powerful platform for AI. Smart to the\u00a0core.Up to 24 hours of battery life.1 Work, create, and play from\u00a0anywhere.Dynamic\u00a0Island. See your activities, alerts, and notifications at a\u00a0glance.\nEverything to\u00a0see\u00a0here.\nIntroducing MacBook\u00a0Pro with PROLED\u00a0XDR Display. Featuring a groundbreaking tandem OLED display with Touch, Dynamic\u00a0Island, a redesigned thermal system, an enhanced audio system, and slimmer display borders \u2014 all in a lighter design. It\u2019s the pinnacle of\u00a0pro.Sizes and weights. The 14-inch model weighs just 3.0 pounds and the 16-inch model weighs just 4.0\u00a0pounds.2Col"
-  },
-  {
-    "title": "Why birds can fly over Mount Everest (2020) (nautil.us)",
-    "points": 102,
-    "submitter": "andsoitis",
-    "submit_time": "2026-10-24T13:17:59",
-    "num_comments": 16,
-    "comments_url": "https://news.ycombinator.com/item?id=50220975",
-    "comments": [
-      "> at 43 percent a lightning strike will cause the entire atmosphere to ignite since it is so high in flammable oxygenGood article except oxygen is not flammable. Oxygen is the stuff that makes other stuff flammable.reply",
-      "Written by Walter Murch?? Like, the guy who is considered maybe the best editor and sound designer of all time, who was nominated for 9 Academy Awards, and won 3??? (Editing perhaps second only to Thelma Schoonmaker.)reply",
-      "From the footer of TFA:Walter Murch has been working in film for more than 50 years, as an editor, sound designer, writer, and director. He edited and sound-designed many films for Francis Coppola (The Godfather Trilogy, The Conversation, Apocalypse Now) and Anthony Minghella (The English Patient, The Talented Mr. Ripley, Cold Mountain). His interest in science can be seen in his editing of Mark Levinson\u2019s film Particle Fever (2013), about the search for the Higgs Boson.Yes, That Walter Murch.In The Blink Of An Eye is on the bookshelf just behind the monitor I'm typing this on, with my headphones and BMD Speed Editor slightly blocking my view of it.reply",
-      "(2020). Previous submissions with comments:https://news.ycombinator.com/item?id=23639294 (Jun 26, 2020 - 96 comments)https://news.ycombinator.com/item?id=28844872 (Oct 12, 2021 - 108 comments)https://news.ycombinator.com/item?id=34210508 (Jan 1, 2023 - 6 comments)This submission is from 4 days ago, so it must've been placed into the second chance pool.reply",
-      "The part about coal coming from dead trees during a window of time before bacteria evolved lignin digestion is no longer the scientific consensus. Such bacteria existed earlier; not all coal is high lignin; and coal still formed later. Too bad; it was a lovely story!reply",
-      "It's not bacteria. The only organisms that can digest lignin are fungi, and they do it by blasting lignin with peroxides.As such, this works only in aerobic environments (not swamps).reply",
-      "The hero image is titled Murch_HERO. Big publishers get lazy with their titling too!reply",
-      "It needs better alt text for accessibilityreply",
-      "> The difficult thing is that most old folks grew up thinking that oil, coal, and gas were great, and it is hard to teach old dogs new tricks.Doesn't seem cynical enough to me. Some people make money on oil, coal, and gas, and it doesn't matter what they believe about the climate, they would do anything to continue enriching themselves. It is even worse, really, because they are not just some individuals, it is a big network of organizations. And some states too have their GDP dependent on a fossil fuel trade. You can probably talk a capitalist into surrendering their money-making practices, if they are damaging the Earth, but you can't convince an organization to dissolve or a state to go into a deep recession.reply",
-      "But oil, gas and coal are indeed cool, you get some of the highest chemical energy density substances on Earth for the price of digging. It sucks that burning them reverts the atmosphere to something life isn't really adapted anymore, but the substances themselves are still pretty cool.reply"
-    ],
-    "link": "https://lede-v2.nautil.us/why-birds-can-fly-over-mount-everest-237864",
-    "first_paragraph": "A story for my grandchildren about oxygen, evolution, and our planet\u2019s fate.1:47 PM CDT on June 24, 2020Murch_HERODear Bella, Chloe, and DavidI\u2019m going to imitate Rudyard Kipling and tell you a just-so story. Kipling was one of the most popular writers in the world 100 years ago. He wrote The Jungle Book. And also Just So Stories, which began as bedtime stories he told his daughter Josephine. They were about how animals got their famous features, like the camel\u2019s hump and the leopard\u2019s spots. Kipling was a wonderful writer but he made up his animal stories. My story is based on science, which means many people, through many recent experiments, have concluded things might \u201cjust so\u201d be the way of this story.It\u2019s also a story about evolution, which is nature\u2019s research and development department. Like Kipling, I\u2019ve given a human voice to certain things: Bacteria form committees and petition the research and development department for answers to their problems, as do plants and dinosaurs. "
-  },
-  {
-    "title": "Nixpkgs for the Front End Impaired (fzakaria.com)",
-    "points": 26,
+    "title": "I'm so bad at billiards that I ended up in the hyperbolic plane [video] (youtube.com)",
+    "points": 28,
     "submitter": "surprisetalk",
-    "submit_time": "2026-10-26T15:00:05",
-    "num_comments": 5,
-    "comments_url": "https://news.ycombinator.com/item?id=50244929",
+    "submit_time": "2026-10-28T13:20:05",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=50273104",
     "comments": [
-      "xxx"
+      "This entire youtube channel is a gem btw.Delightful video on the lambda calculus and other compution concepts \nhttps://www.youtube.com/watch?v=RcVA8Nj6HEoreply",
+      "Thanks for sharing. I remember reading Introduction to Lambda Calculus many years ago and it was one of those times where I had crazy math dreams and would wonder around SF convinced everything is functions. Like literally everything.reply",
+      "I miss having the crazy math dreams I used to get when I was in college. If only life could be an endless stream of turning over new stones.reply"
     ],
-    "link": "https://fzakaria.com/2026/10/12/nixpkgs-for-the-frontend-impaired",
-    "first_paragraph": "Farid Zakaria\n2026-10-12\n\u00b7\n8 min read\ntl;dr jinx is a tool that compiles Nix to TypeScript. All of nixpkgs, each 231,777 attribute, produces the exact drvPath Nix does. Open the playground or evaluate hello in your browser tab with no Nix installed anywhere. \ud83d\ude08Despite my admiration and joy for Nix, the language and tool, it is not what is magical. The store model is the great idea. Any similar tool built\non the same model will have the same magical properties of reproducibility, and hermeticity.I have spent a lot of posts exploring what falls out of the Nix ecosystem, but the language itself is a small lazy functional language with a derivation primitive. You could design another one in a weekend.What you cannot design in a weekend is nixpkgs: twenty years of fixes, every cross-compilation workaround, every stdenv phase, every patched configure script, every \u201cthis library needs this flag on aarch64-darwin\u201d that somebody already solved. As of October 2026, it is 140,000-plus packages tha"
+    "link": "https://www.youtube.com/watch?v=kL9BTbIGxLg",
+    "first_paragraph": ""
   },
   {
-    "title": "Treap (Cartesian Tree) (cp-algorithms.com)",
-    "points": 3,
-    "submitter": "vismit2000",
-    "submit_time": "2026-10-26T11:19:31",
-    "num_comments": 0,
-    "comments_url": "",
+    "title": "A tiny world model running games on a Raspberry Pi Pico 2 W (github.com/sheepseb)",
+    "points": 165,
+    "submitter": "airinei",
+    "submit_time": "2026-10-29T20:32:28",
+    "num_comments": 9,
+    "comments_url": "https://news.ycombinator.com/item?id=50295450",
     "comments": [
-      "xxx"
+      "If this runs on a PI... can it run on webgpu ?reply",
+      "I might have missed it in the readme, but what hardware did the training take place on? This is really neat.reply",
+      "For the world model training I've used an RTX 4060, but for the agent playing the game that was directly on the pico using stream-acreply",
+      "This is incredibly cool! Fascinating to see looped transformers be necessary for mini-Doom, but not for simpler games.reply",
+      "Very cool. I didn't know NNs were capable of such determinism, that's very interesting. Is this a similar effect to overfitting? Also, it's the same model for all the games, right?reply",
+      "> Also, it's the same model for all the games, rightIt's a bit unclear but it looks like different models, since they all have different parameter and MAC counts. It would be much more impressive with a single world model that could maybe dream up new games inbetween the games in the training set.reply",
+      "It's a self contained net for each game but the data used for training doesn't overlap with the validation. I think it would be easy to merge them into a single modelreply",
+      "Is the actor trained on world model's mistakes as well? If so, it should learn to force hallucinations that force it into an easier state.reply",
+      "Honestly fascinating. I almost feel like you'd be better off avoiding any discussion of the fact that this runs on a Raspberry Pi Pico 2 W because it takes away from the crazy world model capabilities (of course, the fact that this does run on a Pico 2 makes the whole thing much more impressive).There's gotta be a good way to incorporate this logic into a larger, more \"traditional\" game in a meaningful way. Seems like an approach for procedural generation that could solve some of the issues usually found with actual procedural generation.reply"
     ],
-    "link": "https://cp-algorithms.com/data_structures/treap.html",
-    "first_paragraph": "A treap is a data structure which combines binary tree and binary heap (hence the name: tree + heap $\\Rightarrow$ Treap).More specifically, treap is a data structure that stores pairs $(X, Y)$ in a binary tree in such a way that it is a binary search tree by $X$ and a binary heap by $Y$.\nIf some node of the tree contains values $(X_0, Y_0)$, all nodes in the left subtree have $X \\leq X_0$, all nodes in the right subtree have $X_0 \\leq X$, and all nodes in both left and right subtrees have $Y \\leq Y_0$.A treap is also often referred to as a \"cartesian tree\", as it is easy to embed it in a Cartesian plane:Treaps have been proposed by Raimund Siedel and Cecilia Aragon in 1989.In such implementation, $X$ values are the keys (and at same time the values stored in the treap), and $Y$ values are called priorities. Without priorities, the treap would be a regular binary search tree by $X$, and one set of $X$ values could correspond to a lot of different trees, some of them degenerate (for exam"
+    "link": "https://github.com/SheepSeb/tinyworldformer",
+    "first_paragraph": "Tiny world model generates games and stream ac plays them all on Pico 2WUsing 2 small neural networks to generate and play the game at the same time on a Raspberry Pi Pico 2 W. The first one creates the game: given the current frame and the action, it predicts the next frame and the reward. The second one plays that game: it uses the generated frame and picks an action.Every frame above was sampled by the world model network, and the actions were taken by the actor network.I got interested in looped transformers, where one transformer block is applied several times with the same weights instead of stacking different layers. Reusing weights is cheap on memory, so I wanted to see if a looped world model could be small enough to run on a microcontroller. I picked the Pico 2 W because it is cheap and has an FPU, and small games because I could write the real versions directly into numpy and check every generated frame against them. Later I added a streaming RL agent so the board could also"
   },
   {
-    "title": "How we made our MMDB files a 33% smaller (ipinfo.io)",
+    "title": "Pico CSS is no longer maintained (github.com/picocss)",
+    "points": 70,
+    "submitter": "henrid",
+    "submit_time": "2026-10-30T01:58:44",
+    "num_comments": 21,
+    "comments_url": "https://news.ycombinator.com/item?id=50298964",
+    "comments": [
+      "Some recent alternatives/successors/forks that are in the same vein as Pico- Nimble: https://leftium.github.io/nimble.css/demo/pico.html- Sumi.css: https://vladocar.github.io/Sumi.css/docs.html- Blades: https://github.com/anyblades/blades- Oat: https://oat.ink/reply",
+      "First, I confess that I had built quite a lot of CSS Frameworks and Design Systems in my early developer life. So, this is going to be more of a personal experience.Ever since Coding Assistant LLMs became pretty good (2025-Q4 - 2026-Q1), I feel that it makes very little sense to continue to use pre-defined CSS Frameworks that 'has everything.' Of course, it is still OK if the general team decides on one, and they are OK (such as the Tailwinds, MUI of the frontend world.)I have used Foundation[1] and Bourbon[2] extensively. Mostly because I can break it down and take just what the project needs and keep it within a low CSS budget for any project.With that in mind, in the 10+ projects that started for some of the biggest brands of the world, I just defined the CSS framework, design systems, design token, with room for extension as the project grows. Claude Code is my tool of choice for now and I just let it run overnight, tweak as the project scaffolds and finally takes about less than a week to have a complete CSS framework in just plain CSS, and JavaScript where it needs to talk to the broader frontend.1. https://get.foundation2. https://www.bourbon.ioreply",
+      "I really enjoyed using Pico CSS, but I understand the choice.Thank you Lucas Larroche for building Pico CSS and sharing it with us.reply",
+      "https://github.com/anyblades/blades seems to be a continuation in the same spiritreply",
+      "Thanks for sharing! Same spirit, new home.We\u2019re actively maintaining Blades CSS over on GitHub and Discord, and would love community feedback.We also set up a dedicated page outlining key details: https://blades.dev/css/pico/reply",
+      "I haven't done frontend dev in a while, but one thing stands out to me here... they call out using OKLCH colours, which I had to look up. (For the uninitiated, this is a cylindrical projection of the also-new-to-me Oklab colour space, which appears largely unrelated to the older CIE L*a*b* colour space).Do people actually use this? In particular, before LLMs ate the world, I mean. When I did frontend, it was hex, or if you felt fancy, `rgba(...)` (though at that point named colours had mostly fallen out of style).Is using these less-intuitive colour encodings made more practical through the use of CSS variables?reply",
+      "Do people actually use this?\n\nYes. I made https://uchu.style after I read this blog post: https://evilmartians.com/chronicles/oklch-in-css-why-quit-rg...I love OKLCH. Awkward to say, beautiful to look at.reply",
+      "Well I use it on my personal site: the colors change with the weather and seasons [1]. Oklab\u2019s so-what is that the hues are perceptually a uniform brightness, unlike HSL (which I started with) where blues and reds look a lot brighter than greens and yellows at the same saturation/lightness.So in my case where color shifting is happening, Oklab actually helps. I don\u2019t know how it\u2019s better than HSL for simple UI elements unless maybe you can get physically brighter values that pop out more on certain screens.[1]: https://joeldueck.comreply",
+      "Yes. And I'd argue it's more intuitive if all colors with the same lightness value are in fact the same lightness. Hue and chroma are pretty easy to understand too.reply",
+      "Yes, since the last couple of years. I tend to help architect and scaffold large projects that goes on for years, and changes a lot of developers, designers in its lifecycle. I was pretty confident of moving to OKLCH about 4-years ago and have have had it as default. OKLCH values are now the source of truth for these projects, and other design elements \u2014 all the way to Powerpoints (HEX/RGB) and Print (CMYK) are derived from OKLCH. There are variations but most people don\u2019t even know the difference.This started way back working with my long-term business partner and he built a pretty good tool to help visualize and tinker with it.Website https://colorcolor.inSource https://github.com/saneef/color-colorreply"
+    ],
+    "link": "https://github.com/picocss/pico/discussions/754",
+    "first_paragraph": " There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.v2.1.1 is the final release.Why\nToday, AI can generate lightweight, standalone, accessible HTML with just the CSS it needs, so a Minimal CSS Framework for Semantic HTML matters less than it used to. To stay relevant, Pico CSS would need a full rewrite: plain modern CSS instead of Sass, built on features it doesn't use today (OKLCH colors, cascade layers, Popover, anchor positioning) with fallbacks for older browsers, and a native compiler that strips unused CSS and makes customization easy. That would be a different project. Pico CSS stays as it is.What this meansThank you\nWhat started as a small side project ended up powering thousands of websites. Thank you to everyone who used it, opened issues, sent pull requests and wrote kind messages over the years."
+  },
+  {
+    "title": "CVE-2026-98432: Linux TCP Use-After-Free Risk and Patch Validation (penligent.ai)",
     "points": 21,
-    "submitter": "mmaia",
-    "submit_time": "2026-10-25T17:33:02",
-    "num_comments": 4,
-    "comments_url": "https://news.ycombinator.com/item?id=50233948",
+    "submitter": "cobychapple",
+    "submit_time": "2026-10-30T02:33:04",
+    "num_comments": 14,
+    "comments_url": "https://news.ycombinator.com/item?id=50299182",
+    "comments": [
+      "Thankfully the vast majority of servers are not creating MPTCP listeners by default (that I'm aware of).Not sure why the article doesn't mention it, but you can specifically check for MPTCP listeners using `ss -M`.reply",
+      "https://go.dev/doc/go1.24> ListenConfig now uses MPTCP by default on systems where it is supported (currently on Linux only).This seems to imply basically any golang server built since February 2025 is going to be at least attempting to use it.reply",
+      "Given these types of security bugs that are being found left and right, I reckon there's going to be an uptick in hiring of software engineers to fix them.reply",
+      "This is a good portion just slop, another 9000 word article that could have been a couple of paragraphs. More text doesn't mean better.reply",
+      "There's other coverage, this just has most of the comments nowUbuntu (34 points, 16 hours ago, 3 comments) https://news.ycombinator.com/item?id=50287647CVE.org (2 points, 7 hours ago) https://news.ycombinator.com/item?id=50295879GoogleGroups (slight tangent) Go programs enable MPTCP by default, exposing them to Linux CVE-2026-98432 (9 points, 3 hours ago, 4 comments) https://news.ycombinator.com/item?id=50298526reply",
+      "I fail to understand / find the gist of this article.Article describes the technical aspects of the bug, how it got handled by different vendors...AI position on it...But, one would always ask themselves, why did the author write this article? That part hasn't been clear to me even after going through much of the article.reply",
+      "Would dropping these specialized ipv4 syn packets with extra header size beyond 20 bytes (as indicated by options value >5) with the firewall be low enough in the order of things to mitigate the attack? Like, iptables -A INPUT -p tcp --syn -m u32 --u32 \"0>>24&0xF=6:15\" -j DROP   ?reply",
+      "This one is quite serious and the type of vulnerability is once again, a C style memory corruption and a race condition combined; leading to an RCE.At this point, we seriously need to discuss whether if the major projects still written in C such as Linux, Chromium and even git can even handle the stream of now near infinite bugs being discovered with AI.Attackers are already rapidly finding and building exploits for those vulnerabilities the moment they are discovered with abliterated frontier-level models.These sort of vulnerabilities are far to common in those projects and in the future, it will be extremely unsafe for even experts to continue using C or C++ in any way.reply",
+      "> Attackers are already rapidly finding and building exploits for those vulnerabilities the moment they are discovered with abliterated frontier-level models.Are they? Distributions are rating this at a lower severity presumably because it can\u2019t be easily exploited.reply",
+      "I bet there's a half-life to bugs though. Bugs might be infinite over the lifespan of a project, but the rate that they are produced goes down with our ability to detect them.A lot are being found _now_ in projects written in C because the backlog of bugs to find is mostly written in C. We haven't yet gotten to the point when we're detecting most bugs before they're released, but we will.Things won't get worse for too long. If we haven't already surpassed it, we're approaching the point of being able to do static analysis and ensure the mathematical correctness of the most complex C programs ever written so far.I don't use C or C++, but look how much safer it is to use C or C++ these days.reply"
+    ],
+    "link": "https://www.penligent.ai/hackinglabs/cve-2026-98432/",
+    "first_paragraph": "CVE-2026-98432 is a use-after-free in the Linux kernel\u2019s IPv4 TCP handshake path. The flaw appears when two processors act on related request and child sockets while both can still reference the same IP options object. One path may free that object immediately while another path, protected only as an RCU reader, continues to use it. The result is a stale kernel pointer in code reachable through network traffic.The concise description sounds like a familiar kernel race, but the public evidence demands careful interpretation. The CVE record carries a CVSS 3.1 score of 9.8, representing a network-reachable, unauthenticated worst case with high confidentiality, integrity, and availability impact. Red Hat\u2019s product analysis assigns a lower 5.9 score because it treats exploitation as a difficult race and assesses the practical consequence in its supported products more conservatively. Separately, Anthropic\u2019s Frontier Red Team reported a working remote root code-execution chain against a Linu"
+  },
+  {
+    "title": "H.264 Is Magic (2016) (sidbala.com)",
+    "points": 362,
+    "submitter": "ea016",
+    "submit_time": "2026-10-29T15:53:03",
+    "num_comments": 132,
+    "comments_url": "https://news.ycombinator.com/item?id=50291054",
     "comments": [
       "xxx"
     ],
-    "link": "https://ipinfo.io/blog/how-made-mmdb-files-smaller",
-    "first_paragraph": "Start using accurate IP data for cybersecurity, compliance, and personalization\u2014no limits, no cost.In August we told database customers their files had shrunk by up to 80%, and promised to explain how. This is that explanation. The tool that does it is now open source.We found a serious size saving in the MMDB file format, described below. We shipped it as an update to mmdbctl and as a standalone tool, mmdbshrink. The tool takes an existing MMDB file and writes a smaller one. The new file is a standard MMDB: every reader library that opens the old file opens the new one and returns the same answer for every IP address. Across the 89 databases we build every day, the catalogue went from 91.2 GB to 62.8 GB, a 31% reduction. The best single result was ipinfo_privacy, from 789 MB to 155 MB, an 80% reduction.Nothing was compressed. There is no decompression step, no new reader, no new format. The saving is real at rest, on the wire, and in memory, because MMDB files are memory-mapped and th"
+    "link": "https://sidbala.com/h-264-is-magic/",
+    "first_paragraph": "H.264 is a video compression codec standard. It is ubiquitous - internet video, Blu-ray, phones, security cameras, drones, everything. Everything uses H.264 now.H.264 is a remarkable piece of technology. It is the result of 30+ years of work with one single goal: To reduce the bandwidth required for transmission of full-motion video.Technically, it is very interesting. This post will give insight into some of the details at a high level - I hope to not bore you too much with the intricacies. Also note that many of the concepts explained here apply to video compression in general, and not just H.264.Why even compress anything?A simple uncompressed video file will contain an array of 2D buffers containing pixel data for each frame. So it's a 3D (2 spatial dimensions and 1 temporal) array of bytes. Each pixel takes 3 bytes to store - one byte each for the three primary colors (red, green and blue).1080p @ 60 Hz = 1920x1080x60x3 => ~370 MB/sec of raw data.This is next to impossible to deal"
   },
   {
-    "title": "Nango (YC W23) Is Hiring Across Eng, FDE, Marketing, DevRel (nango.dev)",
-    "points": 0,
-    "submitter": "",
-    "submit_time": "2026-10-28T21:00:06",
+    "title": "Iterating Backwards in C (davidpriver.com)",
+    "points": 62,
+    "submitter": "cremno",
+    "submit_time": "2026-10-26T19:28:19",
+    "num_comments": 32,
+    "comments_url": "https://news.ycombinator.com/item?id=50249598",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.davidpriver.com/Iterating-backwards-in-C.html",
+    "first_paragraph": "\nHome\n\nDavid Priver, October 24th, 2026\n\nThis is shorter than some of my other posts, but I keep seeing people\ndoing this wrong. It's even worse now in the LLM era.\n\nLet's say you have a buffer and a counter and you need to iterate it\nbackwards for some reason:\n\nAlmost everyone can do the forward version on autopilot:\n\nSo they try to do the same thing, just iterating backwards:\n\nBut that doesn't work at all! i >=0 is tautologically true\n(modern compilers will warn). Even worse, if count is 0, i immediately becomes\nSIZE_MAX.\n\nOk, so they try the next version:\n\nThis works in practice with a signed index but introduces\nsome problems:\n\nAvoiding these problems brings us to the actual, proper way to iterate backwards in C:\n\nSo much simpler! Let's break it down:\nThe key is the postdecrement operator on i.\nIt decrements i but yields the value that i was before the operation.\nIn this case, this means that in the body of the loop i is always in bounds\nas its value will be decremented after initi"
+  },
+  {
+    "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014) (animationstudies.org)",
+    "points": 74,
+    "submitter": "simonebrunozzi",
+    "submit_time": "2026-10-29T22:26:38",
+    "num_comments": 12,
+    "comments_url": "https://news.ycombinator.com/item?id=50297089",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://journal.animationstudies.org/article/id/66/",
+    "first_paragraph": "Animation Studies JournalArticleKeywords:\n                    \n                        \n                    animation, \n                    \n                        \n                    militarism, \n                    \n                        \n                    Miyazaki, \n                    \n                        \n                    nationalism, \n                    \n                        \n                    non-killing policy, \n                    \n                        \n                    war\n                    How to Cite:\n\n\n    Akimoto, D.,\n    (2014) \u201cA Pig, the State, and War: Porco Rosso (Kurenai no Buta)\u201d,\n    Animation Studies Journal 9(1).\n    \n    doi: https://doi.org/10.64864/a85b8d7f-b345-4fd3-a0ff-4f1b600c9b97\n\n\n    Akimoto, D.,\n    (2014) \u201cA Pig, the State, and War: Porco Rosso (Kurenai no Buta)\u201d,\n    Animation Studies Journal 9(1).\n    \n    doi: https://doi.org/10.64864/a85b8d7f-b345-4fd3-a0ff-4f1b600c9b97\n\nDownloads\nDownload HTML\n\nIntroduction\nHistoricall"
+  },
+  {
+    "title": "LLM Voice (martinfowler.com)",
+    "points": 385,
+    "submitter": "ibobev",
+    "submit_time": "2026-10-29T14:57:55",
+    "num_comments": 205,
+    "comments_url": "https://news.ycombinator.com/item?id=50290177",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://martinfowler.com/bliki/LLM-Voice.html",
+    "first_paragraph": "ArchitectureRefactoringAgileDeliveryMicroservicesDataTestingDSLAboutBooksFAQVideosContent IndexFragmentsBoard GamesPhotographyHomeInsightsCareersRadarEngineeringRSSMastodonLinkedInBlueskyXBGG29 October 2026Martin FowlerSometimes when I read a post, I get the growing feeling that I'm reading\n  the output of an LLM. I can't necessarily define why, although there are the common\n  tells (it's not the em-dashes, it's the load-bearing tapestries). As I\n  do this my desire to read on atrophies, sometimes to the point of revulsionThere are tools out there that claim to be able to tell the difference\n  between LLM-written prose and the old-fashioned biological product. I'm wary\n  of them, partly due skeptism about their accuracy, but also because it rather\n  misses the point. The reaction to LLM-Voice is a human one, that sense that we\n  are in an uncanny\n  valley of prose. By the time I'd reach for a tool to tell me what I'm\n  reading, it's already too late, even if it confidently tells me the"
+  },
+  {
+    "title": "Show HN: I Turned DOOM into a Transformer (github.com/mottopanikeiku)",
+    "points": 59,
+    "submitter": "falperc",
+    "submit_time": "2026-10-29T23:25:46",
+    "num_comments": 13,
+    "comments_url": "https://news.ycombinator.com/item?id=50297697",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://github.com/mottopanikeiku/doomformer",
+    "first_paragraph": "Compile an integer neural network into a DOOM map. Voodoo dolls do the arithmetic, light levels and plane heights hold the values, and every value is checked against NumPy with tolerance 0.\n\nDoomformer compiles integer neural networks into ZDoom maps and runs them in ViZDoom. Voodoo dolls (the copies of the\nplayer that DOOM spawns for extra player-1 starts) do the arithmetic, and sector light levels and plane heights hold the\nsums. Python reads every exposed value back from the running game and compares it with a NumPy integer reference, tolerance 0.\nOne value off by one and the run fails. It is slow: about 23,000 times slower than NumPy on a small MLP (engine time; 65,000\ntimes with a timer around the whole call), and a handwritten digit takes 163 seconds of real-time DOOM in one map at the\ndefault schedule and 8 seconds at --opt 3.Install \u00b7 Proof \u00b7 How it works \u00b7 Films \u00b7 Docs\n\n\n\ndoomformer doctor checks ViZDoom, Freedoom and the display, builds ACC if it is absent, and compiles an AC"
+  },
+  {
+    "title": "DoorDash to acquire Instacart (doordash.com)",
+    "points": 451,
+    "submitter": "WalterSobchak",
+    "submit_time": "2026-10-29T12:33:05",
+    "num_comments": 622,
+    "comments_url": "https://news.ycombinator.com/item?id=50287919",
+    "comments": [
+      "Seems like it should be \u201cDoorDash (YC S13) to Acquire Instacart (YC S12)\u201d, if only to emphasize that this is by far the largest merger of YC companies.reply",
+      "> DoorDash to Acquire Instacart to Help Local Stores Win> to Help Local Stores WinAny local store will tell you DD is a necessary evil they put up with but strongly dislike overall. From the % of sales they take to the incredibly rude delivery drivers, DD is not well liked.On multiple occasions a family member's employees (or they, themselves) have had a DD delivery driver cut to the front of the line, interrupt the cashier, and shove their phone in their face. No words, no anything, just \"here is the code/screen/whatever I need to show you to pick up the order\". DD doesn't let stores rate delivery drivers so there isn't any recourse.reply",
+      "I worked at a local grocery store while unemployed, and I actually PREFERRED the Doordash/Instacart customers.Quite a few of them spoke no English, so yes, they'd just present their phone screen.  I didn't take it as rude.  It was a very clear and direct communication.  A simple scan, and boom, nothing further needed, I could just scan their items. Thr QR code scan handled payment and everything.   They almost always helped with doing thier own bagging:  Time is money, after all.reply",
+      "> Quite a few of them spoke no English, so yes, they'd just present their phone screen. I didn't take it as rude.I want to be clear, the ability to speak English is not what I took issue with. That doesn't bother me and I'm fine with just showing the phone screen, no conversation. The issue I had was cutting the line and essentially demanding they be helped immediately. Wait in line like everyone else. This is a small food stall in a food hall with often just 1 person working the front. If they are actively helping another customer and have a line, I find it unacceptable to think you can cut to the front and immediately demand attention. What message does that send to the customers in line? \"You're less important than delivery orders\", and I can tell you that isn't the case due to the large chunk that DD takes.My family member has even considered shutting down DD orders temporarily if/when the drivers act this way and publishing on social media about it. According to them, the loss in sales (and overall profit, which is minor on DD orders) wouldn't matter compared to the publicity/engagement (I don't know, that's not my world).reply",
+      ">What message does that send to the customers in line? \"You're less important than delivery orders\", and I can tell you that isn't the case due to the large chunk that DD takes.I noticed a more extreme version of this while traveling in mainland China. Takeout shops, especially bubble tea shiops, that were genuinely pleasant a decade ago now seem entirely beholden to delivery algorithms and their productivity targets, with walk-in customers reduced to an afterthought. I once waited a half hour in the rain for a bubble tea while delivery orders repeatedly jumped ahead; the moment I requested a refund, my order was suddenly next. I don't particularly blame the staff, but they weren't apologetic and I was really bothered that algorithmic metrics were prioritized at the expense of basic social courtesy. Watching those incentives gradually erode everyday civic norms was genuinely depressing.reply",
+      "Ah, I see.  That does suck.  There was no line-cutting, that I saw, where I was.  But at a grocery store you get kinda forced between belts and carts, so line-cutting would be quite a challenge.reply",
+      "Yeah mixed blessing at best. Increased volume, but not every 30-table restaurant is set up to do much more; kitchens are sized to expected in-person dining.And all the stuff you mention.The one restaurant owner I know who\u2019s happy with DD set up an entirely separate kitchen in an industrial park. But to get to the DD revenue necessary to justify that investment, he had a couple of years of DD hell in his main restaurant.reply",
+      "That sounds like a scary investment to make on behalf of what's effectively a single customer. Without some kind of contractual commitment that locks in volume and price, they would really have you over a barrel.reply",
+      "I hate industrial/ghost kitchens so much. Accidentally ordered from one with friends and it was so off-putting.Could see the kitchen areas through a window and they weren't necessarily dirty, but looked sketchy for some reason. Few people, robots delivering orders, one set of cooks making the food. Just dystopian.We might as well just build ready to eat food factories that pipe the slop directly into your house. We got rid of the \"inconvenience\" of going out to eat and enjoying a restaurant. Why not get rid of the pesky delivery middle-man too?reply",
+      "Look up commissary kitchens. A ton of food is made that way, and I don\u2019t see it as being all that different.And the DD-specific kitchen I know is basically just a typical restaurant kitchen minus attached dining. You can make slop in an industrial park, you can make slop in a real restaurant (I\u2019ve certainly experienced that).Why in the world would it be necessary to have dining tables for a kitchen to make good food?reply"
+    ],
+    "link": "https://about.doordash.com/en-us/news/doordash-to-acquire-instacart",
+    "first_paragraph": "Together, DoorDash and Instacart would help stores of every size reach more customers with the kinds of innovative technology that the biggest online retailers and grocers build for themselves.Transaction values Instacart at $65.00 per share, representing a 26% premium to Instacart's closing price on October 22, 2026Together, DoorDash and Instacart would help stores of every size reach more customers with the kinds of innovative technology that the biggest online retailers and grocers build for themselves Consumers to benefit from more choice and access to affordable delivery and savingsDashers and Shoppers to have more earnings opportunities and more choice over when and how they earn DoorDash, Inc. (NASDAQ: DASH) and Maplebear Inc. (d.b.a. Instacart, NASDAQ: CART) today announced a definitive agreement under which DoorDash will acquire Instacart for a total value of $65.00 for each Instacart share, or an equity value of approximately $17 billion. The aggregate transaction considerati"
+  },
+  {
+    "title": "Solving Postgres' Count Problem (paradedb.com)",
+    "points": 13,
+    "submitter": "philippemnoel",
+    "submit_time": "2026-10-28T05:34:16",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://nango.dev/careers",
-    "first_paragraph": "AuthorizationAI agentsProduct integrations We are a veteran team of dev-tool lovers, serving developers out in the open, with humility. Our global team operates remotely with modern tools, valuing outcomes over hours.We champion transparency, community and developer friendliness. Work for your peers, on pain points you know, with a fast feedback loop.From DevExp to high scale to API fragmentation, we work on hard problems.We are veterans from developer infrastructure companies.With fast-growing revenues & usage, it\u2019s a perfect time to join."
+    "link": "https://www.paradedb.com/blog/opening-a-closed-tin-part-2",
+    "first_paragraph": "In Part I, we improved ParadeDB\u2019s Top K BM25\nperformance by orders of magnitude. At the end, we committed to publishing a\nPart II focusing on COUNT. This post walks through the optimizations that made\nour COUNT queries much faster. Here\u2019s the end result, using the same Wikipedia\ndataset and benchmark harness as the original TIN post:Clean tables. One-second buckets reconstructed from each worker's ordered raw query timings and measured start/finish interval; latency uses continuous percentiles. Lines use a centered 9-second moving average; legend values are unsmoothed full-run results.First, we\u2019ll explain how we improved COUNT performance. In the second half,\nwe\u2019ll go beyond unfiltered BM25 and simple COUNT queries to test search queries with\ndifferent filters and sort orders, where ParadeDB is up to 66 times faster.\nWe\u2019ll explain why and discuss what\nthese differences mean when comparing benchmarks and choosing a search engine\nfor your application.But first, let\u2019s dive into making COU"
+  },
+  {
+    "title": "Launch HN: Simantic (YC F26) \u2013 Firmware Simulation for AI Agents",
+    "points": 57,
+    "submitter": "shong0504",
+    "submit_time": "2026-10-29T15:56:32",
+    "num_comments": 16,
+    "comments_url": "https://news.ycombinator.com/item?id=50291116",
+    "comments": [
+      "xxx"
+    ],
+    "link": "item?id=50291116",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Patrick Stewart has died (nytimes.com)",
+    "points": 2604,
+    "submitter": "j4mie",
+    "submit_time": "2026-10-29T19:41:39",
+    "num_comments": 553,
+    "comments_url": "https://news.ycombinator.com/item?id=50294702",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html",
+    "first_paragraph": ""
+  },
+  {
+    "title": "The Great American Rascal: Tom Sawyer at 150 (claremontreviewofbooks.com)",
+    "points": 53,
+    "submitter": "beatstop",
+    "submit_time": "2026-10-29T22:14:23",
+    "num_comments": 20,
+    "comments_url": "https://news.ycombinator.com/item?id=50296947",
+    "comments": [
+      "One of my fondest childhood memory is reading sawyer and huck. The rural setting was similar to the ones we had in Kerala, India growing up.It was an old copy and was not censored and included all the racial slurs. It took me years before knowing that the words used were racial slurs as those words were not in common usage in India.reply",
+      "The racial slurs are critical as Twain used them to indict the culture of the antebellum American South, and not to endorse its prejudices.  When Huck Finn chooses \"All right then, I'll go to Hell\" by helping Jim, he goes against his ingrained social training as a white Southerner.People who want to censor Twain misunderstand his message, either out of ignorance, or purposefully so as to take the sting out of Twain's social commentary and rewrite history.Perhaps you can think of some works of literature set in India where characters utter analogous slurs, and the purpose of the author is to criticize the caste system?reply",
+      "The passage where Tom goes to whitewash the fence is brilliant.https://www.pbs.org/kenburns/mark-twain/tom-sawyer#:~:text=T...Relatable to any kids forced to do chores.reply",
+      "To the article's point, I grew up in the 80s. Even though I lived a different life from Tom and Huck it wasn't so different that I couldn't relate to it. I wonder how many more generations we can go before that's all gone, or if it already has. There's still a lot of value in it as a work of literature, but I don't know if it has the same intuitive understanding it had in the 20th century.I don't think that's a bad thing. We shouldn't put the past on a pedestal, but it makes me wonder who the Tom Sawyer of the 21st century is. I just hope it isn't Katniss Everdeen or Edward Cullen.reply",
+      "I doubt a few decades of time is going to make much literature so much harder to understand. Just a little bit of historical context and background on currency values is enough to read and comprehend stuff back to Shakespeare where viewers and readers can instantly recognize the human foibles in fictional characters from centuries ago. Translations are a different beast where it\u2019s a collaboration between translators and original author but there are many subplots in say Don Quixote that would not be out of place in media as different as It\u2019s Always Sunny in Philadelphia to many romcom movies(I picked the oldest novel I could think of, The Iliad and Odyssey can work though translation does a lot of heavy lifting in those cases for majority of readers).reply",
+      "\" I just hope it isn't Katniss Everdeen or Edward Cullen.\"How about Harry Potter?Well, all of those have in common that they are fantasy and not really connected to this reality, while Tom Sawyer was a fictional adventure in reality.reply",
+      "I loved Mark Twain when I was a kid. Read Tom Sawyer and Huckleberry Finn multiple times. I didn't even consider reading it to my kid when she was younger. Wasn't a good way to handle all the N words.reply",
+      "Times change but people don't.reply",
+      "The way people interact has definitely changed with the times. Whole plots of twentieth-century fiction and cinema would now be unlikely or impossible in the smartphone era, for instance.reply",
+      "Sure, the plot devices might be rendered moot by technological change but the underlying motivations remain the same.Technology has changed, but humans haven\u2019t.reply"
+    ],
+    "link": "https://claremontreviewofbooks.com/the-great-american-rascal/",
+    "first_paragraph": "The Adventures of Tom Sawyer at 150.The Adventures of Tom Sawyer marks its 150th anniversary this year. It was first published in 1876, the centennial year of the American Founding. The novel itself marked its own kind of founding moment for American literature, which had been laboring\u2014to borrow a phrase from The Federalist\u2014under the \u201carrogant pretensions of the European.\u201d America may have broken free of Great Britain in 1776, but we remained enthralled to Europe culturally for much longer. In his 1837 essay \u201cThe American Scholar,\u201d Ralph Waldo Emerson lamented that American writers had \u201clistened too long to the courtly muses of Europe\u201d and scraped by on the \u201csere remains of foreign harvests.\u201dEmerson then issued what Oliver Wendell Holmes, Sr. dubbed an \u201cIntellectual Declaration of Independence.\u201d For Emerson, \u201cgenius looks forward.\u201d He wanted to find, as he put it in his 1844 essay \u201cThe Poet,\u201d the Homer of America\u2014a bard \u201cwith a tyrannous eye\u201d who \u201cknew the value of our incomparable mat"
   }
 ]
