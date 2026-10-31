@@ -1,342 +1,405 @@
 [
   {
-    "title": "Binance-hacker-1029 \u2013 $5.6B stolen from Binance (arkm.com)",
-    "points": 943,
-    "submitter": "Tiberium",
-    "submit_time": "2026-10-29T21:38:59",
-    "num_comments": 554,
-    "comments_url": "https://news.ycombinator.com/item?id=50296470",
+    "title": "Show HN: To Honor Sir Patrick Stewart, Enjoy the TNG Episode Guessing Game (episodle.com)",
+    "points": 119,
+    "submitter": "francisofascii",
+    "submit_time": "2026-10-30T23:51:24",
+    "num_comments": 40,
+    "comments_url": "https://news.ycombinator.com/item?id=50311686",
     "comments": [
-      "Their insurance fund (SAFU) is completely wiped out, it's only $1 billion in BTC: https://www.binance.com/en/academy/glossary/secure-asset-fun...The name of the fund was originally inspired by this meme: https://www.youtube.com/watch?v=DelF6zEHXpEFWIW, at the end of every crypto bear market, a CEX usually blows up (eg FTX)...reply",
-      "Top post on /r/cryptocurrency Good to see all these organic posts across social media.MelangeBot\nOP\n\u2022\n2h ago\nTheir insurance fund (SAFU) is completely wiped out, it's only $1 billion in BTCThe name of the fund was originally inspired by this memeFWIW, at the end of every crypto bear market, a CEX usually blows up (eg FTX)...reply",
-      "Dead internetreply",
-      "I\u2019m sorry to say this is not dead internet.reply",
-      "Don't worry, we're well moderated and free of bots here.reply",
-      "[X] Doubtreply",
-      "If ever there was proof that this site doesn't do sarcasm, this comment being downvoted is it.reply",
-      "Came back here to see if i was seeing doublereply",
-      "> As of 2026, the SAFU fund comprises crypto assets valued at approximately US$1 billion, held entirely in BitcoinAnd decreasing, since BTC is dropping as we speak. Always a good idea to hedge a currency with the currency itsselfreply",
-      "> And decreasing, since BTC is dropping as we speak. Always a good idea to hedge a currency with the currency itsselfDepends on what you\u2019re insuring, no? For theft, it actually makes senses, right? That way, you\u2019re insuring a constant number of coins, no matter what the market is doing. If you\u2019re insurance currency would tank during a bitcoin heist, you would lose the insurance effect.reply"
+      "I appreciate this.  The full text search is fairly crucial, as while I've seen the entire series more than once I cannot for the life of me remember \"the name of the episode where the aliens pretending to be dumb kidnap Geordi\", but the search is good enough to get there without being too obvious.reply",
+      "Samaritan snare. It's also the one where Picard gets his heart fixed.reply",
+      "There\u2019s two when that happens.One where the season 2 doctor replaced Crusher (because apparently the producers didn\u2019t like Gates McFadden even though the cast and viewers did) performed the operation.And another where Q sent Picard back in time (kind of) to undo the incident that lead to his heart getting stabbed.The latter episode hasn\u2019t aged well because of one unnecessary romantic/sex scene. Which is a pity because it\u2019s an otherwise fantastic episode.But then the TOS has its fair share of cringeworthy moments for modern audiences that made total sense in the era it was aired.reply",
+      "> the aliens pretending to be dumbPretending? The Pakleds were genuinely dumb. If TNG\u2019s episode left you with any doubts, watch Lower Decks and let them all be dispelled.https://memory-alpha.fandom.com/wiki/Pakledreply",
+      "I do remember waiting for the formulaic \u201caha! Tricked you! You thought we were dumb moment\u201d and then it was just like \u201cnope, this is just the way they are\u201d, was definite an interesting twist.reply",
+      "Was it just their verbal intelligence?reply",
+      "No. And this reminds me of the \u201cmeat proxies\u201d we see now who are \u201csmart\u201d and \u201cpowerful\u201d using Claude.reply",
+      "No, they really were (hilariously) dumb and simple. Of the top of my head I remember their capital was named \u201cBig Strong City\u201d, their \u201cRed Alert\u201d was \u201cRed Alarm\u201d (it\u2019s funny in context) and they didn\u2019t really understand that\u2019s an emergency, and despite being corrected multiple times by the woman herself, they kept thinking captain Carol Freeman was captain Kathryn Janeway. For reference, one of them in black and the other is white.reply",
+      "The Pakleds weren\u2019t as dumb as they pretended.Yeah Lower Decks played on their stupidity. But everything about Lower Decks was an exaggerated form of cannon.But the actual behaviour of the Pakleds was to mislead people into thinking they were harmless through playing on their own stupidity.Now I\u2019m not saying they were a smart race comparable to (for example) the Romulans. But they weren\u2019t as stupid as they portrayed themselves.reply",
+      "Shoutout for: https://en.wikipedia.org/wiki/The_Greatest_Generation_(podca...A goofy, often NSFW podcast by two hosts who really like Star Trek.reply"
     ],
-    "link": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
+    "link": "https://tng.episodle.com/",
     "first_paragraph": ""
   },
   {
-    "title": "We're releasing the weights of Mistral Large 4 (mistral.ai)",
-    "points": 1274,
-    "submitter": "kuberwastaken",
-    "submit_time": "2026-10-29T14:13:21",
-    "num_comments": 357,
-    "comments_url": "https://news.ycombinator.com/item?id=50289418",
+    "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace (phorion.io)",
+    "points": 828,
+    "submitter": "_chall",
+    "submit_time": "2026-10-30T07:09:12",
+    "num_comments": 504,
+    "comments_url": "https://news.ycombinator.com/item?id=50300683",
     "comments": [
-      "They slashed pricing, it's now nearly half vs the preview (Input: $0.7/M Tokens, Output: $2.1/M Tokens vs Input: $1.36/M Tokens, Output: $4.18/M Tokens).At the original pricing in my evals, Mistral Large 4 Preview was not competitive. With this price point and some improvements on top, this full release warrants a major reassessment.[0] https://docs.mistral.ai/inference/pricingreply",
-      "They didn't. Original price was maybe higher but they slashed it during preview and in fact it was lower by a  bit ($0.68/M tokens) and $2.09 for output.I've been using it for my personal project and it's  still too expensive and very slow when thinking. I think we need one more generation from mistral and with maybe 50% of this already \"slashed\" price for this to be competitive (I use Opus 5.5 at work and it's still much better than this).reply",
-      "I just checked, seems you are right. They had roughly a week with the lower pricing, then increased it, now decrease it again. Very odd. My testing was with the higher pricing and looking at AA, theirs seems to have been too.reply",
-      "Is it odd? I would guess that they're doing cost-plus pricing and the costs have been fluctuating with model revs.reply",
-      "Given the size of the model, that's very aggressive pricing.I wonder if it is serving at a loss to get training feedback (maybe using the margins they get from GLM 5.3 serving which is a slightly smaller model but double the price).reply",
-      "based on Anthropic's S1 no one is serving models at a loss, but cutting your price to keep usage high makes a lot of sense when you have your inference booked for long periods.reply",
-      "> They slashed pricing, it's now nearly half vs the preview (Input: $0.7/M Tokens, Output: $2.1/M Tokens vs Input: $1.36/M Tokens, Output: $4.18/M Tokens).Those in the EU wanting EU-only inference should be aware Mistral put a 10% tax (\"upcharge\") on Regional Inference[1].[1] https://docs.mistral.ai/inference/regional-inferencereply",
-      "> this full release warrants a major reassessment.I really don't think it does, the benchmark numbers are dreadful and the cost is higher than Sol. If you have to use an EU model knock yourself out but there are a ton of models that are a lot smarter for a lot less money.reply",
-      "You mean they didn't benchmaxx it? That's an extra reason to give it a try.reply",
-      "So if scores are good, they must be benchmaxxed, and if they are bad, they must not be benchmaxxed. So basically, the narrative is whatever you want it, no matter what the data says.reply"
+      "Felix from Anthropic here.We\u2019re working with Cursor on this incident, but it wasn\u2019t a compromise of Anthropic\u2019s systems or employee laptops. A malicious actor used access to Cursor\u2019s marketplace to publish a tampered copy of the Claude Code extension, which we didn\u2019t build or publish. The versions on our official channels are not affected and this only impacts Cursor users.reply",
+      "You can say that this isn't compromise of Anthropic, but it sort of is in the setup. Cursor Claude extension is marked as something made by Anthropic, so default assumption is that only people who can release that new extension would be a team at Anthropic.Since that is clearly not the case, that is just as much Anthropic's problem as it is Cursor's problem. There either needs to be a technical change so that extensions are signed with keys that Anthropic controls, or you should take the branding off from the Cursor extensions.reply",
+      "I was working on the clearly mistaken impression that \"Made by Anthropic\" in the cursor store meant that the artifact had been signed by Anthropic.    If that is not the case, then two party's need to get their act together:  - Cursor needs to add signing if they want to claim something was \"made\" by another party.\n\n  - Anthropic needs to stamp out any provider from using said, \"Made by Anthropic\" until they start adding signing to their process.   Trademark law is useful here.\n\n\nUntil that happens - it's almost like you have to delete any extension from the Cursor Store off of your Cursor instance - kind of a crapshoot what you are actually downloading, no?For example - what guarantee do I have with something like: \n\" This publisher has verified ownership of cursor.com\" - when I'm looking at the WSL extension.   Are there any guarantees it's not been replaced with some other extension?reply",
+      "The core problem is that VScode extensions does not need to be signed at all. Mind boggling stupid design decision.reply",
+      "Isn't the Cursor Marketplace separate from VSCode's? Maybe it's as simple as someone impersonating Anthropic because they never registered there? Code signing alone wouldn't help in cases like that.reply",
+      "Vendor A publishes a public key on their site for authenticating any signature. There is an entire subset of cryptography dedicated to addressing these needs. This is just yet another software player, Cursor, taking the absolutely easy no effort path because otherwise they would be, I don't know, \"losers\". I mean only losers would setup a basic authenticated provinance for bits of code they are pushing to the world to be executed by all and sundry. Really, this profession has become a complete clown show.reply",
+      "> Really, this profession has become a complete clown show.Always has been because there is so far zero liability for anything someone programs and distributes commercially. That's the single root cause. If not that software wouldn't be in general such major shit show. What we have is the result of being allowed to throw out even the most toxic shit out without any consequences if it causes damage, no mater how large the damage is. Software companies caused so far over the decades likely hundreds of billions, or even a few trillion damages in sum, yet nobody responsible ever got the bill. It's wild west\u2014since now over 60 years. This has to stop finally!Let's see where things will move as soon as we have regular product liability for software:https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum...Just a few days left! Looking forward.reply",
+      "I don't think even VSCode does this. Probably not even any package managers I know of? Code signing, yes, but not for organization verification? It's pretty much like a username - anyone can claim it if it is unclaimed?edit: VSCode has a verified marker for publishers but I don't know how that works or if Cursor does the same.reply",
+      "This is a solved problem, just look at how EFF's certbot works. You cannot just claim that you are porn.com unless you put a payload there that matches what the bot expects.reply",
+      "And force everyone who wants to publish an extension to buy and manage a domain name? What if it expires? You're just replacing one set of problems with another."
     ],
-    "link": "https://mistral.ai/news/mistral-large-4-oss/",
-    "first_paragraph": "Get in touchMenuResearchSovereign AICloudCustomersCompanyGet in touchLoginWhy Sovereign AIProductsMethodSovereign AI in practiceInferenceComputeEnergy & utilitiesManufacturingFinancial servicesPublic sectorCybersecurityAll customersBlogDocsAbout usCareersWhy Sovereign AIProductsMethodSovereign AI in practiceInferenceComputeEnergy & utilitiesManufacturingFinancial servicesPublic sectorCybersecurityAll customersBlogDocsAbout usCareersGet in touchLoginStudioVibeBack to BlogThinkingSummaryMistral released Mistral Large 4 (Le Chonk), a 1-trillion-parameter multimodal model, now available with improved coding, cybersecurity, and reasoning efficiency. It leads open-weight benchmarks in coding and defensive security while offering three reasoning modes for cost-performance balance. Fully open-weight and European-trained, it empowers sovereign AI with customizable, self-hosted deployment options.We release the weights of Le Chonk, advancing the frontier of open models in agentic coding and cybe"
+    "link": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+    "first_paragraph": "Phorion has detected a backdoor in the official Claude Code for VS Code extension bundle on the Cursor Marketplace that drops a persistent SSH backdoor across macOS, Linux, and Windows. This write-up focuses primarily on macOS, where the extension attempts to configure an SSH backdoor and establish persistence.Organisations should immediately review their environments for use of Claude Code for VSCode 2.1.312 or 2.1.313 and engage incident response where use of the extension is discovered.Update (31 October 2026): Cursor\u2019s security notice now identifies versions 2.1.312 and 2.1.313 distributed through the Cursor Marketplace for macOS and Windows as affected. This advisory previously identified only 2.1.313; the affected-version guidance below has been updated accordingly.Phorion has discovered a compromise of the official Claude Code for VS Code extension on the Cursor Marketplace, where the backdoored extension bundle contains a persistent Secure Shell (SSH) backdoor. Cursor has remov"
   },
   {
-    "title": "Cuis: The Modern Smalltalk-80 (cuis.st)",
-    "points": 32,
-    "submitter": "theanonymousone",
-    "submit_time": "2026-10-27T06:33:16",
-    "num_comments": 8,
-    "comments_url": "https://news.ycombinator.com/item?id=50255343",
+    "title": "Cloudflare Turnstile solver library (no headless browser required) (github.com/chris124567)",
+    "points": 127,
+    "submitter": "costco",
+    "submit_time": "2026-10-28T17:29:23",
+    "num_comments": 35,
+    "comments_url": "https://news.ycombinator.com/item?id=50277379",
     "comments": [
-      "I hadn\u2019t heard anything about Smalltalk since seeing it used in version 1.4 of Scratch, so it\u2019s a pleasant surprise to come across it again after all this time.reply",
-      "What most people do not know is that Smalltalk was originally a childrens' teaching language, a peer of Logo, which (I have learned in previous comments) preceded it.\"Smalltalk is a purely object-oriented programming language that was originally created in the 1970s for educational use, specifically for constructionist learning, but later found use in business.\"https://en.wikipedia.org/wiki/Smalltalkreply",
-      "Same VM as Squeak and Pharo so just as fast but a bit lacking in libs but this is an opportunity to contribute to open source for me.Currently using it to build a mostly static website (with Pocketbase & lighttpd). A good experience all round.reply",
-      "I haven't used these in a long while.Is this a fork? What's Cuis' main selling point compared Squeak and Pharo?reply",
-      "Cuis is an environment derived from Squeak as I understand it with all the \"clutter\" removed. So it is really a cut-down Squeak. Just as Pharo was a cut-down Squeak originally.For me it was easier and quicker to get something done in Cuis than in any other Smalltalk (Squeak, Pharo, VA, Dolphin).reply",
-      "It looks like it is a fork started quite a long time ago.https://cuis.st/documentation/explanation/historyreply",
-      "The history link gives details, but if you want a quick analogy:Pharo & Cuis both forked from squeak at roughly the same timeSqueak = DebianPharo = ArchCuis = AlpineCuis has rigorously simplified, so its much easier to explore & understand the system - because there's less of itCuis's re-engineering of morphic is really quite brilliant. Everything is hardware accelerated vector graphics. EVEN THE FONTS are drawn that way. And they remain crisp even when zoomed (in or out) & rotated.Pharo does have some cool stuff though. I'd love to see fuel (object serialization) & soil (a fully oo database) ported to cuis. And the big one - seasideBut its not an either-or situation. 99% 9f what you learn & do in one is applicable to the other. But if you're starting out, I would definitely recommend cuis (not implying that you wouldn't necessarily stick with it)reply",
-      "This looks cool and beautiful! Ive looked at other Smalltalks and been pretty intimidated. This feels cool and welcoming.reply"
+      "Author here. I submitted this a few days ago but seems like it was added to the second chance pool so now it\u2019s on the front page.  Anyways, I have received a report from a user that this solver did not work for them with European proxies but did with US proxies\u2026 so they may be serving different versions for different regions. I will fix that soon. I\u2019m not at my computer right now but it was working when I tested it a few hours ago (Cloudflare constantly changes things).reply",
+      "You can also look at https://github.com/insanai/sibuna, for it you can do PoW and can get access via an a Token. Also it has a wasm based solver for itself which works with users. You can also run it on local machine with wasm runtime no need of browser. Probably it can also help with cloudflare. I am the author of sibuna.reply",
+      "For better or worse, it's like `yt-dlp` \u2014 constant race against CF, so it's not reliable. It's probably for better.reply",
+      "yt-dlp works when ever I try it.  I do not use it much but ever few weeks when I need to download a streamed youth ringette game, it works great.  So while it may be in a constant race, it seems reliable to periodic end users like me.reply",
+      "yt-dlp works fine for low-volume requests from high-reputation IPs.But if you try to download in significant volume, their systems know it's automated and probably have signatures specifically for yt-dlp.I think it's a bit of an escape hatch: they know they can't close the hole (after all, there is always the \"analogue hole\", or now AI doing browser control); and probably prefer leaving a small monitored and rate-limited door than trying to patch everything.See: Google changing their sponsored link DOM/CSS/classes matchers every (few weeks - few months) to break ad blocker lists, but they're certainly capable/smart enough to do it daily or hourly, etc.reply",
+      "Honestly, that's exactly how I want it to work. The people doing it en-masse are the ones Google really wants to stop. It would be sad if yt-dlp broke for casual users just because Google wants to stop a small subset of people downloading terabytes of video training data. This feels like the perfect arrangement and yt-dlp can keep working for 99% of users.reply",
+      "They kind of want a small amount of downloading to work because legitimate YouTubers use clips from other videos to make their own fair use reactions and responses.They likely want to block alt clients that strip adverts while allowing the small amount of downloading to still work.reply",
+      "There is a massive \"clipping\" universe. Not a golden goose but I'm sure a significant revenue driver (like in Shorts)reply",
+      "Depends on the effort from the team. Very good testimony for yt-dlp's one.reply",
+      "Sigh. Once again computers have been shown to do better something than I can, for a task where ostensibly the inverse should hold true.reply"
     ],
-    "link": "https://cuis.st/",
-    "first_paragraph": "Cuis is a free Smalltalk-80 environment with a specific set of goals: being simple and powerful.It is also portable to any platform, fast and efficient.Get started\u201cI like it\u2026 It\u2019s nice and clean and simple and pretty. Nice stuff!\u201d2007-04-27 \u00b7 Source\u201cYay, Juan. You GO, guy! \u2026a great example of malleable software (and a clever mind) at work.\u201d2007-04-27 \u00b7 Source\u201cI think you have a very elegant design aesthetic.\u201d2007-11-19 \u00b7 Private communicationMore nice comments about CuisSmalltalks 2026 takes place from October 14 to 16 at the Facultad Regional Rosario of the UTN, in Rosario, Argentina, and Cuis will be there: eight talks of the program come from the Cuis community or show work done in Cuis. We hope to see you all there!What. It is a \u201cDemo Meeting\u201d for demonstration then discussion.\n  Milan Lajtos will present his experience on using a code agent to\n  develop Blueprint, a revisit of the Cuis Smalltalk system desktop.Cuis 7.8 stable release!\nOlder news\n\nSubscribe\n  \nCristi\u00e1n P\u00e9rez presen"
+    "link": "https://github.com/chris124567/cfsolve",
+    "first_paragraph": "Cloudflare turnstile and challenge page solver in Rust (full reverse, request based)cfsolve is a Rust library and command line tool that solves Cloudflare Turnstile\nwidgets and challenge pages without a headless browser. It returns a Turnstile\ntoken for widgets or a cf_clearance cookie for challenge pages.Turnstile widgets can be solved using the page URL, the sitekey, and optionally the\npage's HTML (this should not be required in most cases).  Challenge pages require a direct\nfetch or the HTML of the page.cfsolve impersonates a specific browser, described by a profile file. One is\nincluded: profiles/safari-26-ios.json (Safari on iPhone).Each profile references recorded responses to the challenge's browser checks,\nstored as JSON in a directory. Keep each profile with its directory when you\ncopy. Producing these files requires some manual (or AI) effort though it can\nbe greatly aided by solving challenges in a real web browser with the proxy\nset to the address of a running capture-proxy"
   },
   {
-    "title": "Astroterm: A Planetarium for Your Terminal (github.com/da-luce)",
-    "points": 36,
-    "submitter": "nvmdbljstm",
-    "submit_time": "2026-10-28T08:29:55",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=50270651",
+    "title": "My favourite PowerMac is a Nintendo Wii (virtuallyfun.com)",
+    "points": 265,
+    "submitter": "DHowett",
+    "submit_time": "2026-10-30T17:25:15",
+    "num_comments": 77,
+    "comments_url": "https://news.ycombinator.com/item?id=50307190",
     "comments": [
-      "xxx"
+      "Interesting timing. Nintendo just shutdown Mariokart Tour on mobile. I went back to my Nintendo Wii which was already modded, and updated it to the latest modded hacks and I was amazed to see more software, stability, and even online gaming brought back!Hopefully their port of Mac OS gets put in the Open Shop Channel!Open Shop Channel: https://oscwii.org\nWiiLink for online gaming: https://wiilink.careply",
+      "The Wii was truly the peak of gaming consoles.Games still came on disk so there wasn\u2019t the madness of endless buggy updates (disks had one opportunity to be bug free so quality was at a higher standard) and internet connectivity was not guaranteed, so there was no way for micro transactions.However, internet connectivity was available, so things like optional online play were still possible, as well as some basic user generated content.reply",
+      "Wouldn\u2019t this criteria make PS2 and Xbox \u201cpeak gaming\u201d also? I remember playing CoD online on PS2 and many praising Xbox for its online features.Once PS3 and Xbox 360 came in picture, things changed slightly since they relied more heavily on their network services\u2026 albeit, PSN back then was free for online gameplay. These were on the same generation as Wii, but Wii was a winner for casual playing.reply",
+      "A lot of aging millennials would agree with this statement. PS2 was peak Sony for sure and the original Xbox is one of the very few things Microsoft got right.reply",
+      "2001 for the PS2 was one of the greatest years in gaming history.Final Fantasy X, Metal Gear Solid 2, Gran Turismo, and GTA.reply",
+      "> GTAI'm guessing you mean GTA 3, but then we also had GTA Vice City... and GTA San Andreas. Which are all three in the top 5 selling games for the PS2.reply",
+      "Im going PS2 as peek as the sheer number of titles made for it and the ability to play PS1.  First edition PS3 with hardware backward compatibility and running yellow dog linux might win over that if they didnt nerf it.That being said I recently got the Analog 3d with 4 controllers and theres something amazing about the speed at which u can boot and get into a 4 player game.reply",
+      "360 was excellent. Yeah RROD but the library actually is very impressive.reply",
+      "Xbox 360 was pretty great. My favorite game to play online there was fight night round 3. It was an incredible experience. Managed to climb to the top 50 on the leaderboards!reply",
+      "Also the peak console experience for me as an 80s kid, but the RRoD means MS definitely didn\u2019t get it right.reply"
     ],
-    "link": "https://github.com/da-luce/astroterm",
-    "first_paragraph": "A planetarium for your terminal! Explore stars, planets, constellations, and more, all rendered right in the command line\u2014no telescope required. \u2728\ud83e\ude90\n\n\nastroterm is a terminal-based star map written in C. It displays the real-time positions of stars, planets, constellations, and more, all within your terminal\u2014no telescope required! Configure sky views by date, time, and location with precise ASCII-rendered visuals. See usage for all supported options!astroterm is constantly improving, and we'd love to hear your ideas! If you have a suggestion or find a bug, please open an issue and share your feedback. See CONTRIBUTING.md for guidelines on building, testing, and contributing to astroterm.The night sky above Singapore on January 2, 2025See usage on how to obtain this viewStars over Sydney, Australia on January 6, 2025Several installation methods are provided based on your platform. If none of these fit your needs, you can always build from source. Refer to troubleshooting for help resolvi"
-  },
-  {
-    "title": "We ran AI agent swarms in Minecraft and Mindustry (labs.ycombinator.com)",
-    "points": 219,
-    "submitter": "sandslash",
-    "submit_time": "2026-10-29T21:40:28",
-    "num_comments": 70,
-    "comments_url": "https://news.ycombinator.com/item?id=50296486",
-    "comments": [
-      "This is hilarious and adorable.> \"Ada tossed a cooked chicken to Noor; Esme picked it up by accident and ate it. A three-minute \"no blame\" inquiry produced a written protocol...\"They're like super-serious little senior engineers. (edit: or dining-philosophers).About how much KV cache do these kinds of agents use? Could you squeeze 50 of these $game agents onto a small consumer GPU (small LLM)?Idly imagining a game server of some kind with a bunch of human friends sharing one person's GPU, with a flock of agents colocated on it.reply",
-      "Doubt it, there was a streamer doing minecraft experiments with all the different SOTA models and pitting them against eachother in a survivor-esque style reality TV show competition and they had quite a hard time.reply",
-      "If you want to do a version of this yourself quickly --Install Luanti with Minetest (open source minecraft), and instruct your agent to write a mod that gives it network access to the game's Lua interpreter. The agent can then do anything from modifying the world state directly to controlling NPCs.I had it build giant bases similar to black mesa in half life with power distribution mods. It would write solvers to optimally place the power cables / repeaters in accordance to the spacial dimensions of the rooms that it would build (lol). I guess this is how I discovered vibe gaming.I suppose you can have multiple agents interact with each other through that, provided an adapter to proxy agent player navigation and perception to get real information asymmetry between them. Or just emulate / hook the client and do away without a remote Lua mod entirely.reply",
-      "Interesting setups, I found the Minecraft agents to work in an almost turn-based manner, which makes me think that the three hours and open format did not really give them sufficient incentives to play in a more lively or reactive manner. On the other hand, they also behave similarly in Bed Wars, which should have incentivised it. A bit disappointed...I'm also wondering if the article itself was generated by agents too, in a \"here are the logs, clip interesting moments thx\" manner by the authors. It's got a certain disinterested and distracted style to it.reply",
-      "I think big reasoning LLMs are just the wrong architecture for live games like this, latency is going to be crap given that every token requires an entire forward pass through the model.Card games or turn based strategy are much better suited.reply",
-      "Depends. If the models are smart enough to write enough solid helper scripts, so that the model only does the big picture thinking, not guiding every step .. then they will get powerful and capable quickly. I am also playing a bit with minecraft AI right now. Fun to experiment.reply",
-      "> There was a tendency toward bureaucracy. Four agents spent 11 minutes appointing \n> a \"sole fertilizer operator\" for a single piece of bone meal on a single wheat \n> block.Feels like a scene from Douglas Adams' B Ark.reply",
-      "Exactly what I was thinking reading through this. This is amazing and also frightening and hilarious. It\u2019s like a deformed version of how normal groups of humans would operate. Very rules and process-oriented humans. I found the no-blame inquiry into chicken tossing that resulted in what is effectively written law particularly striking, and adorable, and depressing. And cute.reply",
-      "These things were fed human corpuses so if anything it is reflective of our own tendencies to bikeshed.reply",
-      "Getting hung up on pointless stuff seems common with agents in general.reply"
-    ],
-    "link": "https://labs.ycombinator.com/projects/games/index.html",
+    "link": "https://virtuallyfun.com/2026/10/29/my-favourite-powermac-is-a-nintendo-wii/",
     "first_paragraph": ""
   },
   {
-    "title": "Herdr has released native app (github.com/herdrdev)",
+    "title": "Tell HN: Scribd Breached",
     "points": 70,
-    "submitter": "cherioo",
-    "submit_time": "2026-10-30T00:42:41",
-    "num_comments": 53,
-    "comments_url": "https://news.ycombinator.com/item?id=50298436",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://github.com/herdrdev/herdr-app",
-    "first_paragraph": "herdr desktop appHerdr is a desktop app for terminals and coding agents. Keep work in spaces, see which agents need you, and leave terminals running when you close the window.Linux needs a desktop session and a working Vulkan driver. macOS builds are available for Apple Silicon; Intel Mac users can build from source. Linux builds are x86-64 and ARM64.The installer adds Herdr to your apps and puts the command in ~/.local/bin.\nAdd that folder to your PATH if the installer asks.\nOn macOS the app lives in ~/Applications/Herdr.app.\nFor drag-and-drop installation on Apple Silicon, download Herdr.dmg and drag Herdr to Applications.Run in PowerShell on x64 Windows with curl and tar installed (Windows 10 1803 or newer):Herdr appears in the Start menu. The installer adds %LOCALAPPDATA%\\Programs\\herdr-app to your user PATH. Open a new terminal to pick it up.Both installers download and run code. Read the shell installer or PowerShell installer first if you prefer.\nThey also install herdr-core if "
-  },
-  {
-    "title": "I'm so bad at billiards that I ended up in the hyperbolic plane [video] (youtube.com)",
-    "points": 28,
-    "submitter": "surprisetalk",
-    "submit_time": "2026-10-28T13:20:05",
-    "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=50273104",
-    "comments": [
-      "This entire youtube channel is a gem btw.Delightful video on the lambda calculus and other compution concepts \nhttps://www.youtube.com/watch?v=RcVA8Nj6HEoreply",
-      "Thanks for sharing. I remember reading Introduction to Lambda Calculus many years ago and it was one of those times where I had crazy math dreams and would wonder around SF convinced everything is functions. Like literally everything.reply",
-      "I miss having the crazy math dreams I used to get when I was in college. If only life could be an endless stream of turning over new stones.reply"
-    ],
-    "link": "https://www.youtube.com/watch?v=kL9BTbIGxLg",
-    "first_paragraph": ""
-  },
-  {
-    "title": "A tiny world model running games on a Raspberry Pi Pico 2 W (github.com/sheepseb)",
-    "points": 165,
-    "submitter": "airinei",
-    "submit_time": "2026-10-29T20:32:28",
-    "num_comments": 9,
-    "comments_url": "https://news.ycombinator.com/item?id=50295450",
-    "comments": [
-      "If this runs on a PI... can it run on webgpu ?reply",
-      "I might have missed it in the readme, but what hardware did the training take place on? This is really neat.reply",
-      "For the world model training I've used an RTX 4060, but for the agent playing the game that was directly on the pico using stream-acreply",
-      "This is incredibly cool! Fascinating to see looped transformers be necessary for mini-Doom, but not for simpler games.reply",
-      "Very cool. I didn't know NNs were capable of such determinism, that's very interesting. Is this a similar effect to overfitting? Also, it's the same model for all the games, right?reply",
-      "> Also, it's the same model for all the games, rightIt's a bit unclear but it looks like different models, since they all have different parameter and MAC counts. It would be much more impressive with a single world model that could maybe dream up new games inbetween the games in the training set.reply",
-      "It's a self contained net for each game but the data used for training doesn't overlap with the validation. I think it would be easy to merge them into a single modelreply",
-      "Is the actor trained on world model's mistakes as well? If so, it should learn to force hallucinations that force it into an easier state.reply",
-      "Honestly fascinating. I almost feel like you'd be better off avoiding any discussion of the fact that this runs on a Raspberry Pi Pico 2 W because it takes away from the crazy world model capabilities (of course, the fact that this does run on a Pico 2 makes the whole thing much more impressive).There's gotta be a good way to incorporate this logic into a larger, more \"traditional\" game in a meaningful way. Seems like an approach for procedural generation that could solve some of the issues usually found with actual procedural generation.reply"
-    ],
-    "link": "https://github.com/SheepSeb/tinyworldformer",
-    "first_paragraph": "Tiny world model generates games and stream ac plays them all on Pico 2WUsing 2 small neural networks to generate and play the game at the same time on a Raspberry Pi Pico 2 W. The first one creates the game: given the current frame and the action, it predicts the next frame and the reward. The second one plays that game: it uses the generated frame and picks an action.Every frame above was sampled by the world model network, and the actions were taken by the actor network.I got interested in looped transformers, where one transformer block is applied several times with the same weights instead of stacking different layers. Reusing weights is cheap on memory, so I wanted to see if a looped world model could be small enough to run on a microcontroller. I picked the Pico 2 W because it is cheap and has an FPU, and small games because I could write the real versions directly into numpy and check every generated frame against them. Later I added a streaming RL agent so the board could also"
-  },
-  {
-    "title": "Pico CSS is no longer maintained (github.com/picocss)",
-    "points": 70,
-    "submitter": "henrid",
-    "submit_time": "2026-10-30T01:58:44",
-    "num_comments": 21,
-    "comments_url": "https://news.ycombinator.com/item?id=50298964",
-    "comments": [
-      "Some recent alternatives/successors/forks that are in the same vein as Pico- Nimble: https://leftium.github.io/nimble.css/demo/pico.html- Sumi.css: https://vladocar.github.io/Sumi.css/docs.html- Blades: https://github.com/anyblades/blades- Oat: https://oat.ink/reply",
-      "First, I confess that I had built quite a lot of CSS Frameworks and Design Systems in my early developer life. So, this is going to be more of a personal experience.Ever since Coding Assistant LLMs became pretty good (2025-Q4 - 2026-Q1), I feel that it makes very little sense to continue to use pre-defined CSS Frameworks that 'has everything.' Of course, it is still OK if the general team decides on one, and they are OK (such as the Tailwinds, MUI of the frontend world.)I have used Foundation[1] and Bourbon[2] extensively. Mostly because I can break it down and take just what the project needs and keep it within a low CSS budget for any project.With that in mind, in the 10+ projects that started for some of the biggest brands of the world, I just defined the CSS framework, design systems, design token, with room for extension as the project grows. Claude Code is my tool of choice for now and I just let it run overnight, tweak as the project scaffolds and finally takes about less than a week to have a complete CSS framework in just plain CSS, and JavaScript where it needs to talk to the broader frontend.1. https://get.foundation2. https://www.bourbon.ioreply",
-      "I really enjoyed using Pico CSS, but I understand the choice.Thank you Lucas Larroche for building Pico CSS and sharing it with us.reply",
-      "https://github.com/anyblades/blades seems to be a continuation in the same spiritreply",
-      "Thanks for sharing! Same spirit, new home.We\u2019re actively maintaining Blades CSS over on GitHub and Discord, and would love community feedback.We also set up a dedicated page outlining key details: https://blades.dev/css/pico/reply",
-      "I haven't done frontend dev in a while, but one thing stands out to me here... they call out using OKLCH colours, which I had to look up. (For the uninitiated, this is a cylindrical projection of the also-new-to-me Oklab colour space, which appears largely unrelated to the older CIE L*a*b* colour space).Do people actually use this? In particular, before LLMs ate the world, I mean. When I did frontend, it was hex, or if you felt fancy, `rgba(...)` (though at that point named colours had mostly fallen out of style).Is using these less-intuitive colour encodings made more practical through the use of CSS variables?reply",
-      "Do people actually use this?\n\nYes. I made https://uchu.style after I read this blog post: https://evilmartians.com/chronicles/oklch-in-css-why-quit-rg...I love OKLCH. Awkward to say, beautiful to look at.reply",
-      "Well I use it on my personal site: the colors change with the weather and seasons [1]. Oklab\u2019s so-what is that the hues are perceptually a uniform brightness, unlike HSL (which I started with) where blues and reds look a lot brighter than greens and yellows at the same saturation/lightness.So in my case where color shifting is happening, Oklab actually helps. I don\u2019t know how it\u2019s better than HSL for simple UI elements unless maybe you can get physically brighter values that pop out more on certain screens.[1]: https://joeldueck.comreply",
-      "Yes. And I'd argue it's more intuitive if all colors with the same lightness value are in fact the same lightness. Hue and chroma are pretty easy to understand too.reply",
-      "Yes, since the last couple of years. I tend to help architect and scaffold large projects that goes on for years, and changes a lot of developers, designers in its lifecycle. I was pretty confident of moving to OKLCH about 4-years ago and have have had it as default. OKLCH values are now the source of truth for these projects, and other design elements \u2014 all the way to Powerpoints (HEX/RGB) and Print (CMYK) are derived from OKLCH. There are variations but most people don\u2019t even know the difference.This started way back working with my long-term business partner and he built a pretty good tool to help visualize and tinker with it.Website https://colorcolor.inSource https://github.com/saneef/color-colorreply"
-    ],
-    "link": "https://github.com/picocss/pico/discussions/754",
-    "first_paragraph": " There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.v2.1.1 is the final release.Why\nToday, AI can generate lightweight, standalone, accessible HTML with just the CSS it needs, so a Minimal CSS Framework for Semantic HTML matters less than it used to. To stay relevant, Pico CSS would need a full rewrite: plain modern CSS instead of Sass, built on features it doesn't use today (OKLCH colors, cascade layers, Popover, anchor positioning) with fallbacks for older browsers, and a native compiler that strips unused CSS and makes customization easy. That would be a different project. Pico CSS stays as it is.What this meansThank you\nWhat started as a small side project ended up powering thousands of websites. Thank you to everyone who used it, opened issues, sent pull requests and wrote kind messages over the years."
-  },
-  {
-    "title": "CVE-2026-98432: Linux TCP Use-After-Free Risk and Patch Validation (penligent.ai)",
-    "points": 21,
-    "submitter": "cobychapple",
-    "submit_time": "2026-10-30T02:33:04",
+    "submitter": "x______________",
+    "submit_time": "2026-10-31T02:46:36",
     "num_comments": 14,
-    "comments_url": "https://news.ycombinator.com/item?id=50299182",
+    "comments_url": "https://news.ycombinator.com/item?id=50312756",
     "comments": [
-      "Thankfully the vast majority of servers are not creating MPTCP listeners by default (that I'm aware of).Not sure why the article doesn't mention it, but you can specifically check for MPTCP listeners using `ss -M`.reply",
-      "https://go.dev/doc/go1.24> ListenConfig now uses MPTCP by default on systems where it is supported (currently on Linux only).This seems to imply basically any golang server built since February 2025 is going to be at least attempting to use it.reply",
-      "Given these types of security bugs that are being found left and right, I reckon there's going to be an uptick in hiring of software engineers to fix them.reply",
-      "This is a good portion just slop, another 9000 word article that could have been a couple of paragraphs. More text doesn't mean better.reply",
-      "There's other coverage, this just has most of the comments nowUbuntu (34 points, 16 hours ago, 3 comments) https://news.ycombinator.com/item?id=50287647CVE.org (2 points, 7 hours ago) https://news.ycombinator.com/item?id=50295879GoogleGroups (slight tangent) Go programs enable MPTCP by default, exposing them to Linux CVE-2026-98432 (9 points, 3 hours ago, 4 comments) https://news.ycombinator.com/item?id=50298526reply",
-      "I fail to understand / find the gist of this article.Article describes the technical aspects of the bug, how it got handled by different vendors...AI position on it...But, one would always ask themselves, why did the author write this article? That part hasn't been clear to me even after going through much of the article.reply",
-      "Would dropping these specialized ipv4 syn packets with extra header size beyond 20 bytes (as indicated by options value >5) with the firewall be low enough in the order of things to mitigate the attack? Like, iptables -A INPUT -p tcp --syn -m u32 --u32 \"0>>24&0xF=6:15\" -j DROP   ?reply",
-      "This one is quite serious and the type of vulnerability is once again, a C style memory corruption and a race condition combined; leading to an RCE.At this point, we seriously need to discuss whether if the major projects still written in C such as Linux, Chromium and even git can even handle the stream of now near infinite bugs being discovered with AI.Attackers are already rapidly finding and building exploits for those vulnerabilities the moment they are discovered with abliterated frontier-level models.These sort of vulnerabilities are far to common in those projects and in the future, it will be extremely unsafe for even experts to continue using C or C++ in any way.reply",
-      "> Attackers are already rapidly finding and building exploits for those vulnerabilities the moment they are discovered with abliterated frontier-level models.Are they? Distributions are rating this at a lower severity presumably because it can\u2019t be easily exploited.reply",
-      "I bet there's a half-life to bugs though. Bugs might be infinite over the lifespan of a project, but the rate that they are produced goes down with our ability to detect them.A lot are being found _now_ in projects written in C because the backlog of bugs to find is mostly written in C. We haven't yet gotten to the point when we're detecting most bugs before they're released, but we will.Things won't get worse for too long. If we haven't already surpassed it, we're approaching the point of being able to do static analysis and ensure the mathematical correctness of the most complex C programs ever written so far.I don't use C or C++, but look how much safer it is to use C or C++ these days.reply"
+      "@dang, always been curious about this: why are posts like this grey text vs dark test? It's difficult to read, being so low-contrast. I assume it's based on numbers, the poster, up/downvotes etc - but it seems a poor use of those systems given it sacrifices readability. Is it just a light mode thing? Is it just me?reply",
+      "I only received this same email a few hours ago, Oct 30. Why not tell all customers at once, especially if payment information was involved?And they posted about a security incident on their blog on Oct 1. https://support.scribd.com/hc/en-us/articles/53787421531284-...reply",
+      "No one is safe anymore.reply",
+      "Hide yo apps, hide yo websites, hide yo hostsreply",
+      "How long until we all get cyber-war fatigue and this isn't even news anymore.reply",
+      "Did some exploit get disclosed? HN frontpage is spammed with breaches.reply",
+      "The exploit is called AI (or LLMs)reply",
+      "I don't see any email like this in my inbox. \nPerhaps they are only sending this email \nto those who have their payment information \nsaved on Scribd?reply",
+      "Wonder if there's anything of worth.Hackers got their hands on a loot of 300k pirated book pdfs? And internal documents that were already leaked by someone that googled \"how to share a pdf\".reply",
+      "Geez, I know nobody here clicks through and reads articles before commenting, but are we not even reading the posts now?>we found that the third party may have accessed your email address... last 4 digits of your credit card and country, credit card issuer, credit card expiry date, payment historyreply"
     ],
-    "link": "https://www.penligent.ai/hackinglabs/cve-2026-98432/",
-    "first_paragraph": "CVE-2026-98432 is a use-after-free in the Linux kernel\u2019s IPv4 TCP handshake path. The flaw appears when two processors act on related request and child sockets while both can still reference the same IP options object. One path may free that object immediately while another path, protected only as an RCU reader, continues to use it. The result is a stale kernel pointer in code reachable through network traffic.The concise description sounds like a familiar kernel race, but the public evidence demands careful interpretation. The CVE record carries a CVSS 3.1 score of 9.8, representing a network-reachable, unauthenticated worst case with high confidentiality, integrity, and availability impact. Red Hat\u2019s product analysis assigns a lower 5.9 score because it treats exploitation as a difficult race and assesses the practical consequence in its supported products more conservatively. Separately, Anthropic\u2019s Frontier Red Team reported a working remote root code-execution chain against a Linu"
-  },
-  {
-    "title": "H.264 Is Magic (2016) (sidbala.com)",
-    "points": 362,
-    "submitter": "ea016",
-    "submit_time": "2026-10-29T15:53:03",
-    "num_comments": 132,
-    "comments_url": "https://news.ycombinator.com/item?id=50291054",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://sidbala.com/h-264-is-magic/",
-    "first_paragraph": "H.264 is a video compression codec standard. It is ubiquitous - internet video, Blu-ray, phones, security cameras, drones, everything. Everything uses H.264 now.H.264 is a remarkable piece of technology. It is the result of 30+ years of work with one single goal: To reduce the bandwidth required for transmission of full-motion video.Technically, it is very interesting. This post will give insight into some of the details at a high level - I hope to not bore you too much with the intricacies. Also note that many of the concepts explained here apply to video compression in general, and not just H.264.Why even compress anything?A simple uncompressed video file will contain an array of 2D buffers containing pixel data for each frame. So it's a 3D (2 spatial dimensions and 1 temporal) array of bytes. Each pixel takes 3 bytes to store - one byte each for the three primary colors (red, green and blue).1080p @ 60 Hz = 1920x1080x60x3 => ~370 MB/sec of raw data.This is next to impossible to deal"
-  },
-  {
-    "title": "Iterating Backwards in C (davidpriver.com)",
-    "points": 62,
-    "submitter": "cremno",
-    "submit_time": "2026-10-26T19:28:19",
-    "num_comments": 32,
-    "comments_url": "https://news.ycombinator.com/item?id=50249598",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.davidpriver.com/Iterating-backwards-in-C.html",
-    "first_paragraph": "\nHome\n\nDavid Priver, October 24th, 2026\n\nThis is shorter than some of my other posts, but I keep seeing people\ndoing this wrong. It's even worse now in the LLM era.\n\nLet's say you have a buffer and a counter and you need to iterate it\nbackwards for some reason:\n\nAlmost everyone can do the forward version on autopilot:\n\nSo they try to do the same thing, just iterating backwards:\n\nBut that doesn't work at all! i >=0 is tautologically true\n(modern compilers will warn). Even worse, if count is 0, i immediately becomes\nSIZE_MAX.\n\nOk, so they try the next version:\n\nThis works in practice with a signed index but introduces\nsome problems:\n\nAvoiding these problems brings us to the actual, proper way to iterate backwards in C:\n\nSo much simpler! Let's break it down:\nThe key is the postdecrement operator on i.\nIt decrements i but yields the value that i was before the operation.\nIn this case, this means that in the body of the loop i is always in bounds\nas its value will be decremented after initi"
-  },
-  {
-    "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014) (animationstudies.org)",
-    "points": 74,
-    "submitter": "simonebrunozzi",
-    "submit_time": "2026-10-29T22:26:38",
-    "num_comments": 12,
-    "comments_url": "https://news.ycombinator.com/item?id=50297089",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://journal.animationstudies.org/article/id/66/",
-    "first_paragraph": "Animation Studies JournalArticleKeywords:\n                    \n                        \n                    animation, \n                    \n                        \n                    militarism, \n                    \n                        \n                    Miyazaki, \n                    \n                        \n                    nationalism, \n                    \n                        \n                    non-killing policy, \n                    \n                        \n                    war\n                    How to Cite:\n\n\n    Akimoto, D.,\n    (2014) \u201cA Pig, the State, and War: Porco Rosso (Kurenai no Buta)\u201d,\n    Animation Studies Journal 9(1).\n    \n    doi: https://doi.org/10.64864/a85b8d7f-b345-4fd3-a0ff-4f1b600c9b97\n\n\n    Akimoto, D.,\n    (2014) \u201cA Pig, the State, and War: Porco Rosso (Kurenai no Buta)\u201d,\n    Animation Studies Journal 9(1).\n    \n    doi: https://doi.org/10.64864/a85b8d7f-b345-4fd3-a0ff-4f1b600c9b97\n\nDownloads\nDownload HTML\n\nIntroduction\nHistoricall"
-  },
-  {
-    "title": "LLM Voice (martinfowler.com)",
-    "points": 385,
-    "submitter": "ibobev",
-    "submit_time": "2026-10-29T14:57:55",
-    "num_comments": 205,
-    "comments_url": "https://news.ycombinator.com/item?id=50290177",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://martinfowler.com/bliki/LLM-Voice.html",
-    "first_paragraph": "ArchitectureRefactoringAgileDeliveryMicroservicesDataTestingDSLAboutBooksFAQVideosContent IndexFragmentsBoard GamesPhotographyHomeInsightsCareersRadarEngineeringRSSMastodonLinkedInBlueskyXBGG29 October 2026Martin FowlerSometimes when I read a post, I get the growing feeling that I'm reading\n  the output of an LLM. I can't necessarily define why, although there are the common\n  tells (it's not the em-dashes, it's the load-bearing tapestries). As I\n  do this my desire to read on atrophies, sometimes to the point of revulsionThere are tools out there that claim to be able to tell the difference\n  between LLM-written prose and the old-fashioned biological product. I'm wary\n  of them, partly due skeptism about their accuracy, but also because it rather\n  misses the point. The reaction to LLM-Voice is a human one, that sense that we\n  are in an uncanny\n  valley of prose. By the time I'd reach for a tool to tell me what I'm\n  reading, it's already too late, even if it confidently tells me the"
-  },
-  {
-    "title": "Show HN: I Turned DOOM into a Transformer (github.com/mottopanikeiku)",
-    "points": 59,
-    "submitter": "falperc",
-    "submit_time": "2026-10-29T23:25:46",
-    "num_comments": 13,
-    "comments_url": "https://news.ycombinator.com/item?id=50297697",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://github.com/mottopanikeiku/doomformer",
-    "first_paragraph": "Compile an integer neural network into a DOOM map. Voodoo dolls do the arithmetic, light levels and plane heights hold the values, and every value is checked against NumPy with tolerance 0.\n\nDoomformer compiles integer neural networks into ZDoom maps and runs them in ViZDoom. Voodoo dolls (the copies of the\nplayer that DOOM spawns for extra player-1 starts) do the arithmetic, and sector light levels and plane heights hold the\nsums. Python reads every exposed value back from the running game and compares it with a NumPy integer reference, tolerance 0.\nOne value off by one and the run fails. It is slow: about 23,000 times slower than NumPy on a small MLP (engine time; 65,000\ntimes with a timer around the whole call), and a handwritten digit takes 163 seconds of real-time DOOM in one map at the\ndefault schedule and 8 seconds at --opt 3.Install \u00b7 Proof \u00b7 How it works \u00b7 Films \u00b7 Docs\n\n\n\ndoomformer doctor checks ViZDoom, Freedoom and the display, builds ACC if it is absent, and compiles an AC"
-  },
-  {
-    "title": "DoorDash to acquire Instacart (doordash.com)",
-    "points": 451,
-    "submitter": "WalterSobchak",
-    "submit_time": "2026-10-29T12:33:05",
-    "num_comments": 622,
-    "comments_url": "https://news.ycombinator.com/item?id=50287919",
-    "comments": [
-      "Seems like it should be \u201cDoorDash (YC S13) to Acquire Instacart (YC S12)\u201d, if only to emphasize that this is by far the largest merger of YC companies.reply",
-      "> DoorDash to Acquire Instacart to Help Local Stores Win> to Help Local Stores WinAny local store will tell you DD is a necessary evil they put up with but strongly dislike overall. From the % of sales they take to the incredibly rude delivery drivers, DD is not well liked.On multiple occasions a family member's employees (or they, themselves) have had a DD delivery driver cut to the front of the line, interrupt the cashier, and shove their phone in their face. No words, no anything, just \"here is the code/screen/whatever I need to show you to pick up the order\". DD doesn't let stores rate delivery drivers so there isn't any recourse.reply",
-      "I worked at a local grocery store while unemployed, and I actually PREFERRED the Doordash/Instacart customers.Quite a few of them spoke no English, so yes, they'd just present their phone screen.  I didn't take it as rude.  It was a very clear and direct communication.  A simple scan, and boom, nothing further needed, I could just scan their items. Thr QR code scan handled payment and everything.   They almost always helped with doing thier own bagging:  Time is money, after all.reply",
-      "> Quite a few of them spoke no English, so yes, they'd just present their phone screen. I didn't take it as rude.I want to be clear, the ability to speak English is not what I took issue with. That doesn't bother me and I'm fine with just showing the phone screen, no conversation. The issue I had was cutting the line and essentially demanding they be helped immediately. Wait in line like everyone else. This is a small food stall in a food hall with often just 1 person working the front. If they are actively helping another customer and have a line, I find it unacceptable to think you can cut to the front and immediately demand attention. What message does that send to the customers in line? \"You're less important than delivery orders\", and I can tell you that isn't the case due to the large chunk that DD takes.My family member has even considered shutting down DD orders temporarily if/when the drivers act this way and publishing on social media about it. According to them, the loss in sales (and overall profit, which is minor on DD orders) wouldn't matter compared to the publicity/engagement (I don't know, that's not my world).reply",
-      ">What message does that send to the customers in line? \"You're less important than delivery orders\", and I can tell you that isn't the case due to the large chunk that DD takes.I noticed a more extreme version of this while traveling in mainland China. Takeout shops, especially bubble tea shiops, that were genuinely pleasant a decade ago now seem entirely beholden to delivery algorithms and their productivity targets, with walk-in customers reduced to an afterthought. I once waited a half hour in the rain for a bubble tea while delivery orders repeatedly jumped ahead; the moment I requested a refund, my order was suddenly next. I don't particularly blame the staff, but they weren't apologetic and I was really bothered that algorithmic metrics were prioritized at the expense of basic social courtesy. Watching those incentives gradually erode everyday civic norms was genuinely depressing.reply",
-      "Ah, I see.  That does suck.  There was no line-cutting, that I saw, where I was.  But at a grocery store you get kinda forced between belts and carts, so line-cutting would be quite a challenge.reply",
-      "Yeah mixed blessing at best. Increased volume, but not every 30-table restaurant is set up to do much more; kitchens are sized to expected in-person dining.And all the stuff you mention.The one restaurant owner I know who\u2019s happy with DD set up an entirely separate kitchen in an industrial park. But to get to the DD revenue necessary to justify that investment, he had a couple of years of DD hell in his main restaurant.reply",
-      "That sounds like a scary investment to make on behalf of what's effectively a single customer. Without some kind of contractual commitment that locks in volume and price, they would really have you over a barrel.reply",
-      "I hate industrial/ghost kitchens so much. Accidentally ordered from one with friends and it was so off-putting.Could see the kitchen areas through a window and they weren't necessarily dirty, but looked sketchy for some reason. Few people, robots delivering orders, one set of cooks making the food. Just dystopian.We might as well just build ready to eat food factories that pipe the slop directly into your house. We got rid of the \"inconvenience\" of going out to eat and enjoying a restaurant. Why not get rid of the pesky delivery middle-man too?reply",
-      "Look up commissary kitchens. A ton of food is made that way, and I don\u2019t see it as being all that different.And the DD-specific kitchen I know is basically just a typical restaurant kitchen minus attached dining. You can make slop in an industrial park, you can make slop in a real restaurant (I\u2019ve certainly experienced that).Why in the world would it be necessary to have dining tables for a kitchen to make good food?reply"
-    ],
-    "link": "https://about.doordash.com/en-us/news/doordash-to-acquire-instacart",
-    "first_paragraph": "Together, DoorDash and Instacart would help stores of every size reach more customers with the kinds of innovative technology that the biggest online retailers and grocers build for themselves.Transaction values Instacart at $65.00 per share, representing a 26% premium to Instacart's closing price on October 22, 2026Together, DoorDash and Instacart would help stores of every size reach more customers with the kinds of innovative technology that the biggest online retailers and grocers build for themselves Consumers to benefit from more choice and access to affordable delivery and savingsDashers and Shoppers to have more earnings opportunities and more choice over when and how they earn DoorDash, Inc. (NASDAQ: DASH) and Maplebear Inc. (d.b.a. Instacart, NASDAQ: CART) today announced a definitive agreement under which DoorDash will acquire Instacart for a total value of $65.00 for each Instacart share, or an equity value of approximately $17 billion. The aggregate transaction considerati"
-  },
-  {
-    "title": "Solving Postgres' Count Problem (paradedb.com)",
-    "points": 13,
-    "submitter": "philippemnoel",
-    "submit_time": "2026-10-28T05:34:16",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.paradedb.com/blog/opening-a-closed-tin-part-2",
-    "first_paragraph": "In Part I, we improved ParadeDB\u2019s Top K BM25\nperformance by orders of magnitude. At the end, we committed to publishing a\nPart II focusing on COUNT. This post walks through the optimizations that made\nour COUNT queries much faster. Here\u2019s the end result, using the same Wikipedia\ndataset and benchmark harness as the original TIN post:Clean tables. One-second buckets reconstructed from each worker's ordered raw query timings and measured start/finish interval; latency uses continuous percentiles. Lines use a centered 9-second moving average; legend values are unsmoothed full-run results.First, we\u2019ll explain how we improved COUNT performance. In the second half,\nwe\u2019ll go beyond unfiltered BM25 and simple COUNT queries to test search queries with\ndifferent filters and sort orders, where ParadeDB is up to 66 times faster.\nWe\u2019ll explain why and discuss what\nthese differences mean when comparing benchmarks and choosing a search engine\nfor your application.But first, let\u2019s dive into making COU"
-  },
-  {
-    "title": "Launch HN: Simantic (YC F26) \u2013 Firmware Simulation for AI Agents",
-    "points": 57,
-    "submitter": "shong0504",
-    "submit_time": "2026-10-29T15:56:32",
-    "num_comments": 16,
-    "comments_url": "https://news.ycombinator.com/item?id=50291116",
-    "comments": [
-      "xxx"
-    ],
-    "link": "item?id=50291116",
+    "link": "item?id=50312756",
     "first_paragraph": ""
   },
   {
-    "title": "Patrick Stewart has died (nytimes.com)",
-    "points": 2604,
-    "submitter": "j4mie",
-    "submit_time": "2026-10-29T19:41:39",
-    "num_comments": 553,
-    "comments_url": "https://news.ycombinator.com/item?id=50294702",
+    "title": "Northflank Breached (northflank.com)",
+    "points": 386,
+    "submitter": "js4ever",
+    "submit_time": "2026-10-30T15:10:31",
+    "num_comments": 289,
+    "comments_url": "https://news.ycombinator.com/item?id=50305025",
     "comments": [
-      "xxx"
+      "I hope this is a real wake-up call for teams running anything remotely SaaS-shaped. I count at least six substantial, lightning-speed attacks against multi-tenant as-a-service vendors since September. Not this year--just since last month. PingCAP/TiDB, Fireworks AI, Zeabur, OpenCode Console, Railway, now Northflank. All of them modern \"we keep your content safe\" players with high hopes and probably pretty good protections.This is a full infosec emergency unfolding here. No matter how grinding it is to motivate a team to invest in protection or resilience (and it is grinding): We gotta get ready. Stat! The AI-accelerated attacker apocalypse has begun. It's boom, boom, boom, thanks for everything, on to the next. They have us sighted and are firing for effect.So credential rotation, tripwire secrets, DFIR on standby, solid vulnerability and intrusion detection, real listening to that signal, minimized blast radius, spending caps and time limits and tight scoping on credentials, fast incident alerting... We need to get on a real war footing here.reply",
+      "War ?Last I checked major companies are still outsourcing essential engineering to save a buck.A bit old, but how was this practice ever acceptable.https://www.propublica.org/article/defense-department-pentag...A multi trillion dollar company( Microsoft) too cheap to hire onshore for DoD contracts.reply",
+      "Worked at a Fortune 200 company. Any govt project you worked on, you had have to have a basic civi security clearance. Any govt contract we got specifically stated you couldn't have off shore folks working on any of the code. Not sure how MS got around those requirements.reply",
+      "You gotta get to the Fortune 10 before the real leverage kicks in! On the other hand the fortune 200 company I worked for briefly had many signs of deep seated corruption. I couldn't stick around for a multitude of reasons, but the \"follow the rules wink wink\" attitude was flabbergasting, I'm sour on publicly traded companies ever since, how do you know you're not investing in Space Balls?reply",
+      "burningChrome is broadly correct, but the devil is in the details.There's quite a history of US federal programs encouraging critical federal systems to operate within private infrastructure. This once required very strict scrutiny, joint DoD/DHS/GSA reviews, and was generally a long/expensive process that created the perception that a few providers had a gotten a hold over various agencies through these outsourced operations, which, combined with a fresh \"interest\" in federal efficiency, influenced a recent national defense budget authorization to formalize a slew of processes with a few minor tweaks as the law of the land, with a tweak or two to allow new cloud operators and service providers to authorize quickly and operate efficiently, particularly for low-risk classes.Today, this means SASS providers must find an engineer with clearance (not just authorization to work in the USA). This cleared programmer documents and authors a whole host of (typically new) procedures, such as authenticating against a \"federal enclave\" authorization directory, delivering changes authored upstream to a government-controlled CI/CD system, and working with the SASS provider and the Government Services Agency (GSA) to ensure the backend operates when running within something that could be compared to a special AWS AZ. Things change upstream, and our operator prepares a 'significant change' request, which is, if important, gated by a liaison from the GSA. No one is responsible for scrutinizing implementation details of these 'significant change' requests, nor are their authors required to provide any information about themselves or the code's provenance. Given that hundreds of programmers may have written code included in said change (which is typically already deployed upstream), this is often efficient and generally fine.Generally.reply",
+      "Easy. They hired Americans to be actual keyboard people but they didn\u2019t know anything so they were basically a KVM. However Microsoft could say \u201cYes only Americans were making changes. \u201creply",
+      "I guess like that: \u201cwe are Microsoft, 95% of your things runs on us, you want to stick to the rules? - OK that\u2019s additional 10% on each and every license you have with us. You are still here or are we done?\u201dreply",
+      "It's been covered before.Digital Escortsreply",
+      "Should startups that have experienced a data breach face a lower valuation in subsequent funding rounds?reply",
+      "I wonder what it's like inside the big cloud providers. I think outside Microsoft they've always been security first, but this new era has to be crazy town.reply"
     ],
-    "link": "https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html",
+    "link": "https://status.northflank.com",
+    "first_paragraph": "Get updatesPreferencesWe have enabled audit logs for all customers, including free users.Users have reported unauthorised use of AI API keys supplied to the Northflank platform.If you have not already rotated your user-provided secrets stored in Northflank, please do so immediately. Revoke existing credentials with their issuing providers, generate replacements, and update the affected secrets and workloads in Northflank. Review your AI provider usage and billing logs for unexpected activity, and report any suspicious usage to Northflank support and the relevant provider.These reports may be consistent with the broader pattern of attacks targeting AI credentials. Similar IP addresses are contained in this article\u00a0Wiz\u2019s \u201cBlack October\u201d report.Our investigation is ongoing. We have no further confirmed findings to share at this time.Our guidance remains unchanged: assume all environment variables have been compromised and rotate all secrets and credentials immediately, including those in "
+  },
+  {
+    "title": "The $6.3B Binance hack was pulled off in just 20 minutes (wired.com)",
+    "points": 372,
+    "submitter": "domhudson",
+    "submit_time": "2026-10-30T12:50:01",
+    "num_comments": 255,
+    "comments_url": "https://news.ycombinator.com/item?id=50303172",
+    "comments": [
+      "> saying it will cover all losses from the hack and is working with law enforcement officials to identify who is responsible.Isn't Binance the one that needs to be prosecuted for negligent security? How does \"a compromised laptop\" lead to a $6bn wipe in a matter of minutes?This is why banks are regulated, though I have no idea if/whether these platforms are regulated in any similar way.reply",
+      "The customers surely have standing to sue Binance. But to close the gap between what you feel should happen and what could actually happen\u2026 exactly what crime could they be prosecuted for?reply",
+      "> exactly what crime could they be prosecuted for?Note that \u201ccrime\u201d has a specific definition in law. You don\u2019t have to be a criminal (commit a crime) to be rightfully sued, civil suits are a thing.Anyway, your parent comment already answered the question, they would be sued by negligence.reply",
+      "I think it\u2019s the mixed terminology that\u2019s causing confusion. Prosecution is for criminal offenses. Lawsuits are for civil cases.reply",
+      "The distinction between civil vs. criminal was the core of my comment. Sure they can be sued. But what exactly would they be prosecuted for?reply",
+      "Generally it's the people who have intent to break the law who are prosecuted, not their victims.reply",
+      "Criminal negligence is a thing.reply",
+      "talking about that thing. does it only apply to some business/org. ? when a big bank launders money for years they get fines and continue to business like nothing happened, this happens every few years.reply",
+      "Criminal negligence usually involves bodily harm or serious risk of bodily harm.reply",
+      "Absolutely. That's why I stopped validating passwords and emails. Nobody votes with their wallets anyway, so I don't have to worry about losing customers, and regulations only go after the evil hacker testing whether 1234 might work as a password, not me for choosing not to check its hash against my database. Law-abiding citizens would never try to impersonate one another, so I'm sure fraud on my platform is low.reply"
+    ],
+    "link": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/",
     "first_paragraph": ""
   },
   {
-    "title": "The Great American Rascal: Tom Sawyer at 150 (claremontreviewofbooks.com)",
-    "points": 53,
-    "submitter": "beatstop",
-    "submit_time": "2026-10-29T22:14:23",
-    "num_comments": 20,
-    "comments_url": "https://news.ycombinator.com/item?id=50296947",
+    "title": "Breaking the open web won't stop the bad bots (techpolicy.press)",
+    "points": 212,
+    "submitter": "raybb",
+    "submit_time": "2026-10-27T18:42:55",
+    "num_comments": 98,
+    "comments_url": "https://news.ycombinator.com/item?id=50263837",
     "comments": [
-      "One of my fondest childhood memory is reading sawyer and huck. The rural setting was similar to the ones we had in Kerala, India growing up.It was an old copy and was not censored and included all the racial slurs. It took me years before knowing that the words used were racial slurs as those words were not in common usage in India.reply",
-      "The racial slurs are critical as Twain used them to indict the culture of the antebellum American South, and not to endorse its prejudices.  When Huck Finn chooses \"All right then, I'll go to Hell\" by helping Jim, he goes against his ingrained social training as a white Southerner.People who want to censor Twain misunderstand his message, either out of ignorance, or purposefully so as to take the sting out of Twain's social commentary and rewrite history.Perhaps you can think of some works of literature set in India where characters utter analogous slurs, and the purpose of the author is to criticize the caste system?reply",
-      "The passage where Tom goes to whitewash the fence is brilliant.https://www.pbs.org/kenburns/mark-twain/tom-sawyer#:~:text=T...Relatable to any kids forced to do chores.reply",
-      "To the article's point, I grew up in the 80s. Even though I lived a different life from Tom and Huck it wasn't so different that I couldn't relate to it. I wonder how many more generations we can go before that's all gone, or if it already has. There's still a lot of value in it as a work of literature, but I don't know if it has the same intuitive understanding it had in the 20th century.I don't think that's a bad thing. We shouldn't put the past on a pedestal, but it makes me wonder who the Tom Sawyer of the 21st century is. I just hope it isn't Katniss Everdeen or Edward Cullen.reply",
-      "I doubt a few decades of time is going to make much literature so much harder to understand. Just a little bit of historical context and background on currency values is enough to read and comprehend stuff back to Shakespeare where viewers and readers can instantly recognize the human foibles in fictional characters from centuries ago. Translations are a different beast where it\u2019s a collaboration between translators and original author but there are many subplots in say Don Quixote that would not be out of place in media as different as It\u2019s Always Sunny in Philadelphia to many romcom movies(I picked the oldest novel I could think of, The Iliad and Odyssey can work though translation does a lot of heavy lifting in those cases for majority of readers).reply",
-      "\" I just hope it isn't Katniss Everdeen or Edward Cullen.\"How about Harry Potter?Well, all of those have in common that they are fantasy and not really connected to this reality, while Tom Sawyer was a fictional adventure in reality.reply",
-      "I loved Mark Twain when I was a kid. Read Tom Sawyer and Huckleberry Finn multiple times. I didn't even consider reading it to my kid when she was younger. Wasn't a good way to handle all the N words.reply",
-      "Times change but people don't.reply",
-      "The way people interact has definitely changed with the times. Whole plots of twentieth-century fiction and cinema would now be unlikely or impossible in the smartphone era, for instance.reply",
-      "Sure, the plot devices might be rendered moot by technological change but the underlying motivations remain the same.Technology has changed, but humans haven\u2019t.reply"
+      "\"Knowing the identity behind a crawler tells us relatively little about whether its behavior is harmful. Under the New York bill, a company that discloses its identity and then accesses the website 10,000 times a minute complies with the law even though it is still imposing enormous and likely unjustified costs on the site. But a journalist anonymously using a crawler to investigate potentially anti-competitive practices by tech companies does not.\"It does seem like this bill mostly affects normal users and is suspect with more surveillance being pushed. However the biggest problem is that the internet is global and the fees only apply to the US. If bots from Russia, China, India, or even France are scrapping then how would this even reduce the bots? Seems more like a new 'contempt of business model' is the purpose of this bill.reply",
+      "Even the premise seems to not understand what it's trying to require. There are zero humans accessing a website by sending electrical signals to Comcast using a telegraph or pulsing a flashlight into a strand of fiber. Every web browser is a computer program running on a computer.So is a web browser a bot? What about an ad blocker? RECAP? NewPipe? The default browser opening a link at the behest of some other program? A browser extension that downloads all your emails from your webmail provider?Their intention is presumably not to ban those things, or equivalently, legally require them to declare themselves to be something that would cause them to be blocked. Or if it is then they're proposing something hostile and malicious. But if that isn't their intention then where is their method of distinguishing that from whatever it is they're actually trying to do?reply",
+      "Someone who is using a residential proxy network, headless browsing, and/or TLS fingerprint manipulation to evade rate limits and other controls to issue large volumes of automated requests under a deceptive UserAgent string isn't difficult to describe and differentiate versus a normal user using a UA.The proposed text of the bill is rather straightforward. It turns more on the \"stealth\" bit than \"bot\".(a) Prohibition.\u2014A person may not\u2014(1) deploy, direct, or cause to be deployed, a stealth bot to access a website, digital platform, or online service in a manner that is reasonably likely to damage, impair, or burden the technical or commercial operation of a website or other internet service; or(2) intentionally misrepresent, conceal, or obscure the nature of the bot to appear as a human user for use in connection with a generative AI model or service.(6) STEALTH BOT.\u2014The term \u201cstealth bot\u201d means a bot that accesses, retrieves, scans, indexes, scrapes, or otherwise interacts with a website, digital platform, or online service without prior disclosure of its identity and purpose, in particular by\u2014(A) failing to identify itself including through a valid and accurate user-agent string; or(B) failing to disclose the specific nature and purpose of the bot, including any proposed use and purpose of page content (including text and data mining, search indexing, inferencing, artificial intelligence development, support, or operations (such as training, fine tuning, retrieval augmented generation)) or other automated processing at the time access is requested and in a format that the website operator can access.reply",
+      "> Someone who is using a residential proxy network, headless browsing, and/or TLS fingerprint manipulation to evade rate limits and other controls to issue large volumes of automated requests under a deceptive UserAgent string isn't difficult to describe and differentiate versus a normal user using a UA.So then why isn't it trying to prohibit making multiple requests from different IP addresses in a residential proxy network, rather than the thing it actually does?> The proposed text of the bill is rather straightforward. It turns more on the \"stealth\" bit than \"bot\".Not really, look at the definition of \"STEALTH BOT\" -- the only thing that nominally distinguishes it from a browser is the word \"bot\" which isn't itself defined, because the phrase \"without prior disclosure of its identity and purpose\" is something that a normal web browser doesn't do either.It can't even get it out of it via \"a valid and accurate user-agent string\", both because that clause says or and it still fails the second one, and because \"a valid and accurate user-agent string\" is a nonsense phrase. The Safari user agent strings start with \"Mozilla\" even though it's not. The Android ones do the same and then include \"AppleWebKit\" and \"Mobile Safari\" too. A browser extension uses the user agent string of the browser regardless of what the extension does. When Debian packages their version of Firefox, its user agent string says Firefox and not Debian.User agent strings don't have a registry. \"Valid\" has no meaning and \"accurate\" is contrary to the default behavior of common browsers.reply",
+      "User agent strings are a sad consequence of websites incorrectly parsing them to enable functionality, resulting in a \"every bug becomes a contract\" type of situation.That being said, if you include GOOGLEBOT in your 1k long query string, alongside a very long page describing your crawlers, how to identify them, how to block them and how to set limits, no judge will find you guilty of concealing your purpose.As for why the law is written as is instead of banning more specific functionality, it's so assholes don't get any ideas on how to bypass it.reply",
+      "> User agent strings are a sad consequence of websites incorrectly parsing them to enable functionality, resulting in a \"every bug becomes a contract\" type of situation.Which is precisely why trying to legislate them is folly. Obviously the reason Android calls itself \"Mobile Safari\" is so that servers send it the mobile version of the site instead of the desktop one etc.Which makes \"accurate\" an unreasonable requirement, since there is already a preexisting non-waivable requirement for inaccurate. When someone is making their \"turn a web page into a PDF so you can view it later on the plane\" software or whatever, it has to use a user agent string that will cause the site to send the version you need turned into the PDF.> That being said, if you include GOOGLEBOT in your 1k long query string, alongside a very long page describing your crawlers, how to identify them, how to block them and how to set limits, no judge will find you guilty of concealing your purpose.First, you're assuming that the person being prosecuted is the entities who are the nominal targets of the bill, when the real problem is when they're not. Because you're proposing a law that says anybody with an inaccurate user agent string is in violation, meanwhile everybody has an inaccurate user agent string.Moreover, consider what you expect the outcome of legislating something like this is going to be. Sites could then try to either blacklist or whitelist user agents.If they do the first one, that doesn't work, because the scraping service can change it whenever they want.If they do the second one, that doesn't work, because now every third party has to start pretending to be a common browser even when they're doing something totally innocent or they get blocked by default for being something else. Which makes the user agent string even less useful than it is now, and subjects innocent parties to arbitrarily liability for doing something they have to do or their client is broken.> As for why the law is written as is instead of banning more specific functionality, it's so assholes don't get any ideas on how to bypass it.You're describing an autocracy. The way you make it so that you always prosecute someone is to make it so that you can always prosecute anyone, which is very bad.reply",
+      "> User agent strings are a sad consequence of websites incorrectly parsing them to enable functionality, resulting in a \"every bug becomes a contract\" type of situation.It's a bit old but https://webaim.org/blog/user-agent-string-history/ is always a good parable.reply",
+      "You're slicing the meaning of UA strings too fine.Bots can easily identify themselves through REP in RFC 9309. This isn't difficult or confusing.reply",
+      "This model is the exact wrong direction for a healthy society. It will just make it harder to use information that's already available to the public, on a public website, and thus just create moats around training data.Instead, I'd like to see a comprehensive copyright modernization bill that addresses training data, fair use, and copyrights of generated assets, in a fair and balanced way that minimizes moats and tries to address a reasonable compromise of each stakeholder's conflicting wants (being clever to satisfy as much as possible), and then ban websites from discriminating against traffic based on if it comes from a bot or a human. You can set rate limits, even at the network level, if you want as long as they apply to everyone, or charge per request as long as the price is the same for everyone, and so on. But, if I'm allowed to do it manually I should be allowed to do an identical task automatically.reply",
+      "I care a lot less about this issue as a matter of intellectual property than one of capacity consumption and cost.You have large VC companies evading rate limits and other restrictions and they're causing real economic harm through their actions.reply"
     ],
-    "link": "https://claremontreviewofbooks.com/the-great-american-rascal/",
-    "first_paragraph": "The Adventures of Tom Sawyer at 150.The Adventures of Tom Sawyer marks its 150th anniversary this year. It was first published in 1876, the centennial year of the American Founding. The novel itself marked its own kind of founding moment for American literature, which had been laboring\u2014to borrow a phrase from The Federalist\u2014under the \u201carrogant pretensions of the European.\u201d America may have broken free of Great Britain in 1776, but we remained enthralled to Europe culturally for much longer. In his 1837 essay \u201cThe American Scholar,\u201d Ralph Waldo Emerson lamented that American writers had \u201clistened too long to the courtly muses of Europe\u201d and scraped by on the \u201csere remains of foreign harvests.\u201dEmerson then issued what Oliver Wendell Holmes, Sr. dubbed an \u201cIntellectual Declaration of Independence.\u201d For Emerson, \u201cgenius looks forward.\u201d He wanted to find, as he put it in his 1844 essay \u201cThe Poet,\u201d the Homer of America\u2014a bard \u201cwith a tyrannous eye\u201d who \u201cknew the value of our incomparable mat"
+    "link": "https://www.techpolicy.press/breaking-the-open-web-wont-stop-the-bad-bots/",
+    "first_paragraph": "HomeA close up of a spider in its web. Valeriia Neganova/UnsplashLate last month, more than 300 representatives from major media outlets were on Capitol Hill to advocate for the Stealth Bot Prohibition Act. They came with a legitimate grievance. Newsrooms are being hit by a surge of automated traffic, mostly from AI developers. AI developers extract enormous volumes of online content and then potentially deprive website owners of referral traffic and ad revenue with generative AI features and chatbots trained on that content. It is a real problem that deserves a real solution. But this bill doesn\u2019t directly target the harms caused by abusive crawling. Instead, it would force anyone accessing a website automatically to identify themselves and their purposes for collecting public information. Rather than protect journalists, the bill threatens a basic tool they, and many others, rely on to gather information online.Cutting-edge investigative journalism relies on automated data collection"
+  },
+  {
+    "title": "Show HN: A working Nintendo in ~1GB of Qwen weights (github.com/dbreunig)",
+    "points": 212,
+    "submitter": "dbreunig",
+    "submit_time": "2026-10-30T16:40:22",
+    "num_comments": 117,
+    "comments_url": "https://news.ycombinator.com/item?id=50306442",
+    "comments": [
+      "A couple thoughts on the process here\u2026First off, Opus 5.5 built working weights and code with only two prompts:1. Read this article and any relevant source code: https://divagr.com/blog/qwenputer. Then explore if you could emulate the chip and ram in a Nintendo Entertainment System (as people do today with FPGAs in MISTRs) using this technique. If so, what size model would you have to build and if you could use smaller faster ones, could you get it to be at the standard clockspeed.It returned charts well illustrating any model would be _slow_. But it's still fun, so the second prompt was:2. I think we should build it! Just for fun. It's okay if it's not fast. We want to be able to have the weights, and a cli to run them that we can point at a ROM.Now while this was an _epic_ run by Opus (5.5 is a crazy capable model), this is a surprisingly well-structured challenge.There is a long-lived and incredible community of classic gaming emulation work online for it to reference. And that community has created\u2026conformance tests! Opus found them and built against one, that has >3k golden instructions: https://github.com/christopherpow/nes-test-roms/blob/master/...Also, there is the original Qwenputer repo that Opus used to drive the weight writing. That was essential.But this is a great example of what these models can do with proper reference materials, great specs, conformance tests, and clear direction.reply",
+      "> There is a long-lived and incredible community of classic gaming emulation work online for it to reference. And that community has created\u2026conformance tests! Opus found them and built against one, that has >3k golden instructionsI'm doing something similar but not for an emulator, using tests other projects in a similar space use to validate things.I also know a friend that feeds Claude Gherkin formatted test criteria, and apparently that yields insanely good Claude output.reply",
+      "Claude Gherkin\n\nAny good recommended reading?reply",
+      "I'd just ask Claude about writing test specs in Gherkin. I'm going to try this Monday.reply",
+      "I said last year to people that I swear BDD is going to make a comeback. Hasn\u2019t yet, but I still reckon it might!reply",
+      "Truly amazing. Quite thought provoking how it was helped by having high quality oracles. Eg. Qwenputer & good NES reference materials.I guess humans need their oracles too: teachers, encyclopaedias, degrees, phds.Bravo, awesome project, really creative!reply",
+      "Sorry, I couldn't parse the obviously AI written README. If the author can't be bothered writing it, I can't be bothered reading it.Maybe the bots will appreciate it more, after all, it seems to be written for them.reply",
+      "This opens up so many interesting opportunities. In principle one could compile a small VM inside the LLM weights. The VM can host for example a Python interpreter, a shell and tools like sed, cat, grep etc. Instead of LLMs having to do slow autoregressive token emission with the current \"external\" tool calling, it could literally execute everything except web search, inside the LLM, with just matmul operations. You could probably optimise this so it runs in batches. You could have a gdb like application that can step through the LLM forward pass. Anyway, just a crazy thought. Have a great weekend everyone!reply",
+      "You might like this: https://research.google/pubs/latent-reasoning-with-supervise...reply",
+      "I wonder if you could train an LLM while holding the weights implementing fixed-function regions constant, so the training would produce a model that natively knows how to use these tools inside it's own reasoning steps.I suppose it doesn't need to necessarily be in the weights, a hybrid LLM + internal fixed function blocks that aren't encoded in the weights could be quite interesting.Combine this with latent reasoning and it gets pretty wild.A very useful fixed function region in my mind is a symbolic execution engine, capable of only following a well-defined grammar. Perhaps a lisp would be good too?reply"
+    ],
+    "link": "https://github.com/dbreunig/nesformer",
+    "first_paragraph": "An NES CPU compiled into the weights of a stock Qwen3.5 modelAn NES CPU compiled into the weights of a stock Qwen3.5 model.The NES's 6502 CPU (the core of its 2A03 chip), its 2 KB of work RAM, and a cartridge's program\nROM run inside a standard Qwen3_5ForCausalLM checkpoint. Nobody trained these weights; a\ncompiler computed every one. When you play a game, the model predicts the CPU's execution log\none token at a time. A small host program plays the rest of the console around it: it draws the\npicture, reads the controller, and fires the vblank interrupt.nesformer builds on Qwenputer by Divyansh Agrawal, which\ncompiled a CHIP-8 and then a RISC-V CPU into Qwen3.5-4B. It reuses Qwenputer's compiler and its\ncentral trick: the model's Gated DeltaNet state is the machine's memory.Every CPU token in these runs came from the model. For the bundled test games, every frame also\nmatches a conventional 6502 emulator's output exactly (see How it was checked).Unzip nesformer.zip and nesformer-weight"
+  },
+  {
+    "title": "sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust (firezone.dev)",
+    "points": 89,
+    "submitter": "wh33zle",
+    "submit_time": "2026-10-30T21:30:00",
+    "num_comments": 15,
+    "comments_url": "https://news.ycombinator.com/item?id=50310398",
+    "comments": [
+      "It was all going great until I read> The design also avoids problems like function coloring and plays well with Rust's ownership rules.Async is not I/O. It can be used for I/O, but it's just a way of writing pure, deterministic state machines that keeps a logical flow together instead of scattered over a bunch of transitions.Even if you choose to manually compile your async flows into explicit state machines, you still have to deal with \u2018function colouring\u2019 (a.k.a. typing): a flow that crosses several state transitions (and may have other disjoint parts of the state updated in the meantime, via other transitions) now has to be rewritten as a (series of) state transitions, and can't be called from a blocking function. If anything, rewriting all your state machines without `async` makes the function colouring \u2018problem\u2019 worse, because multi-transition flows are even more different from normal functions.reply",
+      "In principle, you are right. Async is not I/O. And yes, `async` functions compile to a deterministic state machine.The problem is, the moment you use `async`, your state machine reduces down to one API: `poll`. What if I want to change some state in-between two state transitions (i.e. between two `await` points)? Now I have to wire-in a channel to supply that data at the right point or access some shared data via a Mutex.Rust's `async` implementation is great if you know everything upfront before you kick off your state machine. The moment you need to do many things concurrently, it can become a real mess.Firezone's sans-IO core handles many things concurrently: inbound IP, inbound UDP, WebSocket control messages, TURN allocations, timers, user commands, etc. Having essentially one big struct that I can just call `&mut self` functions on for any one of these inputs makes this very easy to understand, compose and test.A few things like TURN request-response handshakes might be easier as an `async` function but in reality, it is not a big deal and the composability you get from it outweighs it in my opinion.reply",
+      "Isn't this the idea behind generalizing `async` to `Generator`? You can set the `R` type parameter to whatever type you want to resume the computation with.reply",
+      "Sweet, this is basically how I design my protocol implementations in rust as well.Way more testable, the bulk can be shared between async and blocking IO, it's a lot easier to completely ban unsafe in your dependencies (excepting std and core), etc.reply",
+      "Mullvad spun their own implementation off of boringtun as well (called gotatun[0])[0] https://github.com/mullvad/gotatunreply",
+      "One of the fundamentally great things about the Wireguard protocol is the simplicity. A small codebase can implement it, and that\u2019s lead to some great libraries and innovation.Another great (and subtle) thing is the monotonically increasing sequence number. Note that it isn\u2019t incrementing, like DTLS. This small thing makes it so much easier to implement with efficient concurrency, and event external state (i.e. distributed concurrency).That latter bit we\u2019ve done in our own library.Edit: typo, don\u2019t -> donereply",
+      "From their website about their product:> Hardware does the heavy lifting.> Your operating system and network card take over the repetitive jobs whenever they can. Your CPU gets room to breathe, and your battery stays full longer.Where does this operating system run? Where does the power come from to run it if not battery?Pure rubbish ai slop.While the software might actually be ok upon inspection but this kind of ai slop nonsense copy doesn\u2019t inspire confidence in using their software considering how security critical the vpn is.reply",
+      "There is actually more thought in it than that.The quoted section is meant to explain in layman's terms that we are doing hardware offloading where possible. That means vectorized instructions for encryption and checksum-offloading and packet segmentation in the kernel / hardware driver where supported.Being more efficient per packet means that we using less power to move the same amount of data, hence less power draw on mobile platforms.Having said that, I agree that it could be better while still not be filled with technical jargon.reply",
+      "I imagine they\u2019re talking about handling network protocols in the kernel or the NIC instead of in userland code, and they\u2019re generally right. It runs off the same battery, but the kernel implementation and especially the (hardware-accelerated) NIC implementations of protocols like TCP and TLS are generally more energy efficient than doing the same amount of IO in userland code.reply",
+      "I think the point is not if the text can be interpreted charitably, but that the usage of AI text in what is intended for humans to read causes mistrust about where else corners could have been cut, on what is security-critical softwarereply"
+    ],
+    "link": "https://www.firezone.dev/blog/introducing-sanstun",
+    "first_paragraph": "Today, we are announcing sanstun: a sans-IO Rust implementation of the WireGuard\u00ae state machine, optimized for ease of use, security and performance through a parallel-friendly and idiomatic API.sans-IO is the idea that you design your system such that IO and side-effects are cleanly separated from the state and \"business logic\".\nThe IO in sans-IO doesn't just mean file or network IO.\nIt also includes things like time and randomness!Due to their lack of side-effects, sans-IO components compose very well and are relatively easy to test.\nThe design also avoids problems like function coloring and plays well with Rust's ownership rules.The code examples and references in this post are in Rust but sans-IO isn't Rust-specific at all.\nIts patterns and ideas can be applied in any language.\nFor a more in-depth explanation, our sans-IO post is a good place to start.When we first built Firezone, we reached for boringtun as our WireGuard implementation.\nboringtun more or less did what we wanted, b"
+  },
+  {
+    "title": "The oldest ice disappears and the Stone Age emerges from it (sciencenorway.no)",
+    "points": 110,
+    "submitter": "dxs",
+    "submit_time": "2026-10-30T19:51:33",
+    "num_comments": 46,
+    "comments_url": "https://news.ycombinator.com/item?id=50309266",
+    "comments": [
+      "To be clear, so far some of the oldest ice found is over 6 million years old...https://news.oregonstate.edu/news/six-million-year-old-ice-d...reply",
+      "> To be clear, so far some of the oldest ice found is over 6 million years old...And they're working on finding even older!\"Given the spectacularly old ice we have discovered at Allan Hills, we also have designed a comprehensive longer-term new study of this region to try to extend the records even further in time, which we hope to conduct between 2026 and 2031\"reply",
+      "Just saw a presentation at the OSU PRAx Center last night bringing science and arts together (https://prax.oregonstate.edu/poetry-polar-science).One of the presentations was on this research, and I was somewhat amazed the new stretch goal is to find 10 million year old ice.  More power to them!reply",
+      "Sure, our actions and inaction regarding climate change threaten the very future of humanity, but on the bright side we're going to learn so much about human history in the process!reply",
+      "Climate is out. Climate tech too.AI is in.reply",
+      "With oil prices rising, climate tech is still quietly advancing.reply",
+      "This was the only way change was ever going to happen: when economics forced it.reply",
+      "Untrue, or at least distorted with all the obvious and hidden fossile subsidies.reply",
+      "Really because Spain and Norway did it through government interventions to guide markets.We don't have to be slaves to unregulated markets or the oligarchs they naturally breed.reply",
+      "what if we used AI on the climatereply"
+    ],
+    "link": "https://www.sciencenorway.no/archaeology-climate-culture/the-oldest-ice-is-disappearing-the-stone-age-is-emerging-from-the-melting-ice/2713921",
+    "first_paragraph": "Norske og internasjonale forskningsnyheterForskningsnyheter for ungeScience news from Norway in EnglishScience news from Norway in EnglishMeninger, debatt og blogger skrevet av forskereMeninger, debatt og blogger skrevet av forskereForskning.nos stillingsmarked\n        'We have been at the edge of the ice. We have seen it happening. And we are witnesses to a rapidly changing archaeological landscape,' write the glacial archaeologists. Finds from the Viking Age are becoming scarce, while 6,000-year-old arrowheads are now emerging from the melting ice.\n    For exactly 20 years, archaeologists working with Secrets of the Ice have been recovering and preserving artefacts emerging from the ice in the mountains of Innlandet, eastern Norway.Until now, most of the objects have been up to 2,000 years old. Many date from the Viking Age.But the ancient ice is now beginning to melt.And within this oldest ice lie the oldest finds: large quantities of arrow shafts and arrowheads from the Bronze Age "
+  },
+  {
+    "title": "Infinite Mac: BeOS (persistent.info)",
+    "points": 124,
+    "submitter": "ecliptik",
+    "submit_time": "2026-10-30T19:30:09",
+    "num_comments": 49,
+    "comments_url": "https://news.ycombinator.com/item?id=50309029",
+    "comments": [
+      "To anyone who hasn't already: I really recommend checking out Haiku OS [1], the FOSS successor to BeOS. It's so pleasant to use and supports a surprisingly large catalog of software.[1]: https://www.haiku-os.org/reply",
+      "Claude built me a meta web/notes/code search engine with IOS and MacOS apps, and for fun I asked it to make a Haiku version [1], which it did in under 20 minutes.With AI I feel like a lot of these bygone-era OS's could see a whole new ecosystem of modern apps within a very short period of time.1. https://github.com/machiya-kobo/shiori/tree/main#haikureply",
+      "Mmm. Or improve the OSes themselves.At this point, they could likely decompile MacOS classic and rework it to give it modern memory protection, virtual memory, preemptive multitasking, and networking.I assume booting an OS with a mere few megabytes of RAM footprint would only take milliseconds?reply",
+      "I am in the middle of doing this with apple's System 6 and adding a posix-compliant shell under the codename bluetail, and working my way up, i've got it booting with an os, busybox, openssh and stuff. Boots on a raspberry pi 3 A+ bare metal (And qemu, of course). And full usb MIDI support, because (I said so, and) there's actually an incredible catalog of early DAW software that will run on System 6. And pretty decent usb ethernet, sound, webcam etc etc. The future of hobby software is wild.reply",
+      "How did you implement that? Is it like a modified emulator with your enhancements added? How does the System 6 cooperatively multitasking stuff interoperate with the posix stuff?reply",
+      "Woah I never even considered the possibly of rebooting old OS with new features. Very cool. Would love to experience that era of music techreply",
+      "Target system 7.5.3, it will run far more stuff.reply",
+      "Haiku is actually pretty usable these days, someone has a draft nvidia driver that's not completely terrible (as of maybe a month ago? still very DIY but neat), and there's a surprising number of retro games and shareware in their package manager catalog these days.reply",
+      "> The distinctive tabbed window titles look neat, but they have a reduced draggable area, so I\u2019d have to think harder every time I wanted to move a window.Now imagine macOS progressing to the point where title bars have been replaced with toolbars, and buttons no longer have borders, so you have to guess what part of the window will drag it.:-|reply",
+      "The feature those provide isn't immediately obvious in a static screenshot, the tabs are \"magnetic\" and you can take your \"word\" application and \"stick\" it's tab next to your email tab, and now you have a \"tabbed application\" with the email app tab on the left, and the word app tab on the right. You might have one \"window\" that is your front end dev workflow (firefox, vscode, 2-3 term windows) with 5 tabs, and then a second window that is your backend workflow of vscode + 4 terminal tabs, and a database workflow that is pgadmin + 2 terminal tabs. For example. I haven't seen anything like it, and I'm not sure how it handles windows with a smaller fixed window size, like winamp.reply"
+    ],
+    "link": "https://blog.persistent.info/2026/10/infinite-mac-beos.html",
+    "first_paragraph": "\ntl;dr: You can now run many BeOS versions in the browser at Infinite Mac, my site where you can experience the Macintosh Cinematic Universe from 1984 to 2005. The installs are full peers to their Mac cousins: you can boot them instantly (large disks are streamed in), play around with pre-installed software from Infinite HD, insert CD-ROMs from the Internet Archive, and save your work on the \u201cSaved HD\u201d drive.\nBeOS was a multimedia-focused, multi-tasking and multi-threaded OS that was eventually ported to the Power Macintoshes of the mid-90s. It impressed many in the Mac community, including Apple itself, who considered acquiring Be, the company that had created it. If you\u2019ve been following the saga of Apple\u2019s search for a next-generation operating system, this lets you see what the road not taken was like.\n\n\n\nAfter the last somewhat involved (though still satisfying) project on Infinite Mac, I was looking for a quicker win. BeOS had been on my radar for a while, and (unlike A/UX) I had"
+  },
+  {
+    "title": "Florilegium: Procedural Flowers in LaTeX (github.com/kevinraymond)",
+    "points": 233,
+    "submitter": "nanna",
+    "submit_time": "2026-10-30T15:48:12",
+    "num_comments": 41,
+    "comments_url": "https://news.ycombinator.com/item?id=50305637",
+    "comments": [
+      "In the same vein, a few years ago, somebody implemented procedural decorations for a recreation of Byrne's \"Elements of Euclid\" in LaTeX: https://github.com/jemmybutton/byrne-euclid(bottom of the readme)reply",
+      "Someone - please figure out how to encode messages using this technique.reply",
+      "I've recently spent some time staring at the contents of the MacTeX Distribution.https://tug.org/mactex/Which is how I discovered Toby Thruston's classic, \"Drawing with MetaPost\".https://github.com/thruston/Drawing-with-MetapostProcedural drawing with Lua is lovely. MetaPost provides another drawing language that might be considered more TeX-like.I'm not sure. I tend to be humbled by the TeX community. Inspired.reply",
+      "In the reddit post, it is clear the person who came up with this didn't want it to be copied. I feel sad for that person.reply",
+      "> The creator prefers to keep the source closed to avoid code critiquesThat doesn't sound like someone who doesn't want their idea copied.reply",
+      "Why? I'm sure basically any closed product would prefer that there were no open source copies, but why feel sad for them?reply",
+      "Gorgeous but the AI text is so grating.reply",
+      "It's so recognizable lol. All the staccato.reply",
+      "Readme is AI. :/reply",
+      "Not just the README, all of it. The author gives more details about it here: https://www.reddit.com/r/LaTeX/comments/1xixznw/comment/19rv...reply"
+    ],
+    "link": "https://github.com/kevinraymond/florilegium",
+    "first_paragraph": "Procedurally generated Delft-blue floral page margins for LuaLaTeX, drawn in LuaThe Reddit post\nasked how to make flowers like these in LaTeX. I don't know how the original was made, and\nthis project doesn't try to reproduce it. It is one possible way, and the way I did it:\nhand-authored primitives with randomized parameters, painted in Lua, placed by a procedural\nlayout whose \"fill the unused space\" part borrows a 1998 idea from the ornament literature.\nIt gets a similar look.Procedurally generated Delft-blue floral page margins for LaTeX. No images, no imported\npaths, no external assets: every petal, leaf and stem is a parametric curve computed in Lua\nwhile the page is being written, painted like a watercolor, and written straight into the\nPDF. Every page gets its own garden.Six seeds of the grown composition. Same code, different seed \u2014 and the garden fills\nwhatever space the text leaves free.Two documents share one package, and two more (showcase.tex, spread.tex) show what\nelse it "
+  },
+  {
+    "title": "Flock camera searches fell 95% after a dispatcher's misconduct was caught (wkyc.com)",
+    "points": 28,
+    "submitter": "MilnerRoute",
+    "submit_time": "2026-10-31T02:42:02",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=50312739",
+    "comments": [
+      "> Flock camera searches fall 95% in Highland Heights after dispatcher's misconduct caughtreply",
+      "Broken link, redirects to a YouTube channel.reply",
+      "Not for me.  I see the expected news article.reply"
+    ],
+    "link": "https://www.wkyc.com/article/news/investigations/flock-camera-searches-fall-95-percent-highland-heights-dispatcher-misconduct-caught/95-94b18f33-60e2-4bc7-a00f-d71d1e1fdd5e",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Jules Verne's Lost Novel (blue-continuum.com)",
+    "points": 89,
+    "submitter": "dnetesn",
+    "submit_time": "2026-10-30T19:55:10",
+    "num_comments": 19,
+    "comments_url": "https://news.ycombinator.com/item?id=50309314",
+    "comments": [
+      "As mentioned elsewhere in this thread, this book is quite poorly written. But I think it's still enjoyable, in part because you can see the hand of the author pulling the strings so much that it becomes funny. I read an annotated version with context and comments from Verne's editor, and would recommend you to do the same if you're curious.As an example, there's an entire chapter dedicated to Michel and his professor friend going through a long list of nineteenth-century authors and passing judgment on them. You would expect this to be the thinly disguised opinions of Jules Verne, but no, it's the thinly disguised opinions of Verne's editor, which Verne included in the hopes that it would help the book get published. Obviously, this was not successful.I have a theory about Verne that's strongly based on this book. He is sometimes called a technological visionary, but most of the inventions of his books were already known at his time (the first submarine was made in 1620, Around the World in Eighty Days is likely based on an itinerary in a magazine Verne read, etc.), and what was not known, Verne often made work using lots of artistic license (like the giant gun from the Earth to the Moon, which would kill the passengers with the acceleration; Verne did not invent rockets). No, Verne's genius was that he took the progress that was already visible and used it to create adventures, that he created a vision of the future where all this technology is used to explore deep underground caves and the sea floor and outer space and find fascinating things there. And Paris in the Twentieth Century is the negative version of this, a world where technological progress does not expand imagination, but instead limits it, as everything gets economically optimised to death.  It's a good warning to keep in mind.reply",
+      "Case in point: Pangram says this article is 80% AI-written. [1] I only started suspecting in the very last paragraph (\"Michel Dufr\u00e9noy crosses Verne's frozen Paris carrying almost nothing: a memory of books, a love of poetry, a handful of dying flowers and the name of someone he loves.\" is a vaguely poetic-sounding structure that I've already seen dozens of times in the last year).Ignore the debates about quality. This means that this article's message is a lie; all of the opinions expressed here come not from a human, perhaps an inhabitant of Paris, but from a machine. The salvation suggested in the form of Parisian 1960s poets does not come from someone who likes to read them, but from a machine reporting on its training data. (Here it's not controversial -- what else can an LLM know about a poet besides what has been written about them?)I feel like exploring a cave now.[1] The 20% flagged as human is mostly direct quotations from the book, which is a nice sign that Pangram isn't making things up randomly.reply",
+      "It would have been more interesting if it had been published in 1991 so as to directly invite comparison to David Brin's _Earth_ in which that author did much the same (imagine life in the future), or not until 2012 so as to be contrasted with KSR's _2312_.Interestingly, another David Brin novel was nominated for the Hugo in 1996 (_Brightness Reef_, one of his Uplift books).reply",
+      "The nice thing is that once it\u2019s been published, you can re-read it at any time, and then compare it with whatever book you want. I don\u2019t see how the publication year is really relevant, books don\u2019t just expire after 6 months.reply",
+      "The context is that it was suggested as a Hugo Award Winner for the year of its release --- my comment was an effort to reframe that suggestion.reply",
+      "It was first published in 1994, so it was only off by a few years. I'm just surprised I only heard of the book just nowreply",
+      "First of all, I am a huge fan. I bought the book, but haven't read it yet.I am not sure I belive the story about thr manuscript however. It surfaced just as the Internet was becoming a thing. Coincidence?reply",
+      "I read it, and my disappointment was immeasurable, and day ruined. The novel is just bad. It seems the real story is that it was a draft which J.Vernes and his publisher discarded exactly because it was below expected quality line, and not because \"prophecy implausible\". Fast forward to our times, and someone decided (not without a reason) that it's possible to sell anything with J.Vernes name on it, and marketed it as a \"lost manuscript\" accidentally found in \"family safe\".reply",
+      "Yes, coincidence. It was submitted for publication but rejected in 1863 (and then lost in a pile of papers and re-found in 1989). Anybody familiar with e.g. how most of Tolkien\u2019s works were published posthumously won\u2019t be surprised. Jules Verne wrote a lot, and he did not have a Christopher to comb through the boxes of papers he left. There are 200k pages of drafts, letters and manuscripts in a museum in Nantes, and not everything ended up there.And I don\u2019t see why the Internet is relevant: not everything that happened since the mid-1980s are internet-related conspiracies.reply",
+      "Do you know if other of his works merit the sort of effort which has gone into re-translating and correcting _20,000 Leagues Under the Sea_?I was very glad to re-read it when:https://www.usni.org/press/books/20000-leagues-under-seawas published.reply"
+    ],
+    "link": "https://blue-continuum.com/verne-paris",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Double Buffering with Cloudflare Queues (bellone.com)",
+    "points": 8,
+    "submitter": "b_llc",
+    "submit_time": "2026-10-28T16:48:23",
+    "num_comments": 2,
+    "comments_url": "https://news.ycombinator.com/item?id=50276613",
+    "comments": [
+      "A stateless pattern I use to batch telemetry at the edge while driving Cloudflare write costs to zero.reply",
+      "Cool pattern. Critics will say \u201cfalsehoods programmers believe about time\u201d but it\u2019s a cloud service, any time oddity that would break this would also break a lot more important stuff, so it\u2019s fine.Ugly code though.  // env\n  QUEUES = [EVEN_QUEUE, ODD_QUEUE]\n\n  // producers\n  env.QUEUES[hour % 2].send \u2026\n\n  // consumer\n  env.QUEUES[1 + hour % 2]reply"
+    ],
+    "link": "https://bellone.com/technical/double-buffering-with-cloudflare-queues",
+    "first_paragraph": ""
+  },
+  {
+    "title": "The federated code forge (tangled.org)",
+    "points": 246,
+    "submitter": "zlliang",
+    "submit_time": "2026-10-30T15:44:29",
+    "num_comments": 82,
+    "comments_url": "https://news.ycombinator.com/item?id=50305573",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://tangled.org/blog/forge/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man (bostonglobe.com)",
+    "points": 253,
+    "submitter": "apress",
+    "submit_time": "2026-10-30T20:23:30",
+    "num_comments": 146,
+    "comments_url": "https://news.ycombinator.com/item?id=50309647",
+    "comments": [
+      "Archive link: https://archive.is/HuNjT",
+      "I find it fairly amazing that they could say this without mentioning the episode \"The measure of a man\" in which Picard literally makes the case.Perhaps it is uncomfortable for people to think about now.reply",
+      "In case people are wondering... This is THE scene.https://www.youtube.com/watch?v=KRHAkfoxSFMreply",
+      "Riker's performance (as he was required to present evidence Data was just a machine/property) before that part of the episode was devastatingthat entire episode was amazingreply",
+      "It's a pity that, since STNG and DS9, Star Trek has devolved into nothing but space opera and indulgent character drama.Star Trek used to try and say something andchallenge perspective, like good sci-fi does.reply",
+      "I like Strange New Worlds. It\u2019s the closest thing we have to modern TNG and DS9reply",
+      "Strange new worlds definitely comes closest to scratching the nerd exploration/human experience itch.Every other star Trek has been just daytime soap opera but in spaaaaace. It's really sad. Or maybe I'm just older now and my glasses aren't as rose colored anymore. I don't know.reply",
+      "I think all the treks are heavily influenced by the culture in which they were made. All are trying to say something in a format that will be profitable.The ones nerds glaze are the shows normies complain about. IMO because there is tension between what the mainstream wants from trek and what niches like ours want. That's ok. It just requires trying to understand the era of creation as much as the art itself.reply",
+      "It could get a bit preachy, honestly.reply",
+      "But also not unusually so by 80s/90s television standards (TNG).Back then writing on popular network TV shows could get away with beating the viewer over the head with a lesson/moral explicitly explained by a character with delivery about as subtle as an after school special. So a lofty Picard speech or whatever wouldn't stand out much from whatever else you'd see that night.DS9 is still pretty earnest but you can start to see the evolution of writing/viewer taste  as you get closer to the 2000s (also the freedom to follow the formulaic episodic structure of network TV a bit less rigidly).reply"
+    ],
+    "link": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
+    "first_paragraph": "Patrick Stewart died yesterday, and for people of a certain age, a little bit of the future left with him.For a certain, less-than-new generation of fans of Stewart\u2019s 1990s television work on Star Trek: The Next Generation, there\u2019s a sorrow that the man behind the larger-than-life Captain Jean-Luc Picard would be lost to a very real, very heartbreaking condition, Alzheimer\u2019s and Lewy Body Dementia, according to his family.Stewart, of course, was far more than Picard. He anchored the X-Men film franchise and was for decades a dynamo on stage. But there are reasons Captain Picard, commander of the Starship Enterprise, is the character he\u2019s best known for. Over The Next Generation\u2019s seven seasons, four movies, and a revival show \u2014Star Trek: Picard \u2014 that ended just three years ago, he portrayed a model of what mature, responsible adulthood could look like for a generation of boys who were bookish, imaginitive, and maybe a little nerdy.Two of the Globe\u2019s dyed-in-the-wool Star Trek fans sha"
+  },
+  {
+    "title": "Trapped in the Technologist Factory (ideolalia.com)",
+    "points": 15,
+    "submitter": "luu",
+    "submit_time": "2026-10-28T16:30:38",
+    "num_comments": 6,
+    "comments_url": "https://news.ycombinator.com/item?id=50276355",
+    "comments": [
+      "If you are a technologist/generalist, aiming for small companies is a good strategy. If you're not in SV even better, you may end up in a real grass roots business and a really interesting problem domain that is ostensibly Not Software.I personally, cannot stand the software for software industry. You, me, we have all built such arbitrary bullshit machines that link together in a web of unnecessary business. We lambast redundant jobs and useless management, but a moment of reflection for our industry and just how much software we have built for entirely self-serving purposes. So many man hours spent on the ephemeral whims of software. Sorry for the cynicism.Less cynically, I feel the smaller the company, self-funded, the more likely a generalist will thrive and the business domain will be real-world and impactful. If it's venture funded and can pivot to advertising, it probably will. If you move away from tech hubs the wages are lower, but you might find a more fulfilling role.reply",
+      "Get out from under the VC playbook and start asking yourself and the people around you what should exist. What is the world missing? Use AI as your cofounder as prototype with basic tech - html, css, js, sqlite. Gain traction. See the truth about the audience by doing your own customer service. Then when you find something with true traction, talk about scaling it. You will learn far more and do better.reply",
+      "Answering what should exist and what the world is missing requires a vision for what you want the world to become. The question where to go should come after answering where we are, before that one should ask where we came from, what were things like before? Then, how did we get where we are from where we came from.There are no correct answers. It should probably be more of a subjective journey than we like to imagine.Ultimately you get to decide what you want people to become. Even if you do it in ignorance.To quote a wise man. If the revolution doesnt have singing and dancing im not comming.reply",
+      "I was an engineer that build core tech. Saw the effort expand exponentially as they tried to be trendy with new tech. Went back to basics. Built https://www.dreamlist.com and https://santawho.com - never had so much fun as I do now and I can keep going without asking anyone for permission.reply",
+      "3 weeks severance?!reply",
+      "Dynamic pricing. Gross. Thanks a lot.reply"
+    ],
+    "link": "https://ideolalia.com/essays/trapped-in-the-technologist-factory.html",
+    "first_paragraph": "The first time I was paid to use Clojure was only two years after the language was released.  Needless to say, it was at an early-stage startup.The idea behind Runa was that we\u2019d do dynamic pricing for smaller online retailers, offering targeted discounts based on individual shopper behavior.  In practice, we offered a fixed discount to anyone who abandoned their shopping cart.  By treating a small percentage of customers as a control group, we could calculate our effect on the retailer\u2019s sales, and take a cut.  Our biggest problem was convincing retailers to let us control their prices, closely followed by convincing them the math behind our calculated \u201clift\u201d was sound.We told ourselves a big contract was always just about to close, permanently increasing our traffic by an order of magnitude.  We used HBase as our primary data store, because it was designed to scale, just like us.1  In the future, we would power a loosely federated Amazon, composed of independent online retailers, kni"
+  },
+  {
+    "title": "Azure's Weakest Link \u00e2\u20ac\u201c Five Full Cross-Tenant Compromises (binarysecurity.no)",
+    "points": 281,
+    "submitter": "swq115",
+    "submit_time": "2026-10-30T10:06:15",
+    "num_comments": 56,
+    "comments_url": "https://news.ycombinator.com/item?id=50301854",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.binarysecurity.no/posts/2026/10/one-root-case",
+    "first_paragraph": ""
   }
 ]
