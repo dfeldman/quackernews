@@ -1,379 +1,395 @@
 [
   {
-    "title": "Astra can read and write weights to improve Qwen (rikiyat.github.io)",
-    "points": 2254,
-    "submitter": "dbreunig",
-    "submit_time": "2026-11-02T18:21:28",
-    "num_comments": 725,
-    "comments_url": "https://news.ycombinator.com/item?id=50341174",
+    "title": "C++26 Disapproved (andreasfertig.com)",
+    "points": 145,
+    "submitter": "thatxliner",
+    "submit_time": "2026-11-04T00:33:22",
+    "num_comments": 59,
+    "comments_url": "https://news.ycombinator.com/item?id=50360164",
     "comments": [
-      "Respectfully to the authors and to everyone here, I ask you to actually read the paper before losing your mind, or at the very least plug it into Claude. It is a cool project but not as nearly as insane as people say. I think the blog writing and subsequent posting overstate the results.Part of my research is in weight space learning. For starters, we have had the ability to edit weights, to generate new weights, to identify weights for a while. Here is an example for larger models as early as 2023:\nhttps://rome.baulab.info/Weight space interpretability and learning is an active research community, has been for the past 3 years with many great papers. I suspect it is hitting non-interp folks harder because the authors hyped up their work, and people who are not in the field did not bother to read it before typing up X posts.Some experiments here are done on very small models (20K params). We already know that small models are more interpretable. In fact, much of editing here you can do by hand. For Qwen, the model fixed a looping bug that may have been known apriori, and it is basically a steering vector, a very established technique. This is clear when they then attempt to \"improve\" math capability, and it doesn't work. For me, this paper rather shows that OpenAI has done training on mechinterp  environment, in fact, maybe even on weight space learning datasets, which are open. But it does not show some insane \"well past what we\u2019d expect from humans or conventional algorithms\" (from the blog post), more like past what I would expect from a large model with no specialized harness. I still think it is cool work, but do check out recent advances in autointerp, to ground your expectation.On a personal note, I understand the need for promotion of your work, but I think healthy skepticism is fine too. Otherwise, your understanding of what problems need to be worked on and solved in science becomes warped.reply",
-      "I think a lot of the upvotes, including mine, are just realizing that this is a thing. We can see implications of this as the model sizes scale up, just like early LLMs weren't as impressive, but we could see where they were heading.reply",
-      "Scale is an interesting point here. Large overparametrized networks don't behave in the same way as small toy models do; this is one of the big caveats of many interp works. I expect naked weight edit will not work for large models. Why? Because an agent needs to know what it edits and reason on it. You could theoretically improve a model on some form of weight recognition; maybe it will work, maybe it won't. But again, we come up against a cost/benefit dilemma; it sounds exotic and sci-fi but likely impractical. Parameters of the model are connected and relate to each other. Instead, current SOTA auto-interp argues that what we need are better tools for models to know themselves, so rather than direct edit, we need to give models better understanding of large parameter geometries, then they apply edits with non-destructive approaches at scale. This is much harder to do than applying a steering vector.reply",
-      "What I have been reading makes me want to both agree and disagree with your take here. I think the fact that some of these things are not only established but are much simpler than one would think at first glance yields the much cooler realization that you can not only do a lot more than abliteration, but that humans can do it by hand if the thing is made legible.From my experience with models when it comes to discernment about particular things, the models, even the best ones, still are not very good. The thing that we are most missing I think is acceleration in creating editing tools for humans that make the otherwise inscrutable both visually legible and interactive.reply",
-      "A sibling comment mentioned that self-editing weights is potentially a path to a self-improving system. Does that resonate with you?reply",
-      "It does, one of my ongoing research papers is about it. But I would ask people to take a look at the established idea of Hypernetworks: https://arxiv.org/pdf/2306.06955v3\nModern version of the field comes from Google Brain around 2016 https://arxiv.org/pdf/1609.09106.In general my personal research thesis is that current deep learning is much less malleable and neuroplastic as it should be, I got into interpretability because of this. Many focus on safety, but I prioritize it as a toolbox that allows for greater shaping of the underlying intelligence system. If we can fully understand how learning happens, where information is stored and how it is processed, unlike in biological brains, we can apply edits and transformations in digital ones. And if I can use a technique to edit weights based on some underlying reasoning about a system (with a caveat that it leads to something worthwhile), so can an agent. Hence self-improvement. There are many interesting implication to weight space research, and I very much encourage people to read about it. But it is also very easy to overstate what is currently possible, in fact I'd say better to know what is not so one can make it possible.reply",
-      "Thank you for the perspective and context! Good grounding for understanding the topic.reply",
-      "> For Qwen, the model fixed a looping bug that may have been known aprioriIt was included in the prompt itself. The authors say they used claude code for the experiment, and claude wrote the prompt for astra, which included details of the looping bug. Then astra seems to have done h(looping) - h(loop fixed) and then gotten the usual steering vector.reply",
-      "Thank you for being the voice of moderation here. Good to hear a counterpoint from an authority on the topic.reply",
-      "Thanks, it's great to have some context. I think the most exciting thing about it is probably introducing a lot of people to a readily available low cost technique they can use to potentially build tiny models from scratch and/or tune an existing open weight model behaviorally. Yeah, nothing stunning is going to come out of it because you cannot unlock new capability, but even just being able to tweak the language of a model, make it slightly less sycophantic, boost a small model's ability to handle a case of interest slightly, I think changes the economics quite a bit, potentially. A world in which you use frontier models for the limited use case of tuning tinier more targeted ones is looking a lot more viable.reply"
+      "As someone who writes high-reliability C++ but is completely outside the standards process, I see the issues with C++ Contracts. It isn\u2019t clear that it solves a problem that anyone has in real codebases, especially after C++20 concepts.If you were already writing high-reliability C++ then the benefits are difficult to quantify. If you weren\u2019t writing high-reliability C++ then it saves you almost nothing over doing the standard idioms of high-reliability C++ that were already available to you at very marginally more cost. It does standardize expression of it in narrow cases but the payoff seems minimal.Most of what C++ Contracts delivers is a mashup of what you can already do with constexpr and C++20 Concepts. I like reliability features but this feature, as delivered, looks fairly useless if you already use reliability features. A compelling standard would need to make much deeper guarantees out of the box. And the compiler can already see through most compositions of constexpr and C++20 concepts, which is already very expressive.C++ Contracts looks a bit like a feature that was designed long before current standard features existed.reply",
+      "Your comment just made me realize contracts is different from concepts (which are basically bounded genetics, right\u2026?)reply",
+      "C++ concepts evaluate the properties of types at compile-time. You can inject arbitrary constraints on type properties anywhere in the code including conditional codegen. It is a way of asking if a type \u201ccan express this complex set of abstract things or has this enumerated set of properties\u201d with almost arbitrary detail. They are extremely powerful in terms of expressiveness and specialization of code. Insanely good for performance and reliability engineering.One of the best features to be added to C++ in many years.C++ contracts are an attempt to bring C asserts into the C++ age. The weakness of C++ contracts is that they are mostly syntactic sugar over C asserts. If you really care about this type of thing, you probably already have a custom C++ assertion framework that is at least as nuanced if not more.The promise of C++ contracts is that they can aid formal verification, which would be great. As delivered, it can\u2019t do much more than was already possible, which will inhibit adoption.reply",
+      "The weakness of C++ contracts is that they are mostly syntactic sugar over C asserts. \n\nThe sugar is actually one of my issues with them. The evaluation semantics are much more complicated / potentially slower than C asserts because of the sugar, and why you would have to pay those costs isn't obvious at first glance. Lisa Lippincott's excellent talk on the design of contracts [0] is what switched me from a sort of neutral support to disliking it. I think it's a stupid place for the national bodies to draw the line though. std::regex is acceptable, but a nothingburger like contracts tanks the vote?[0] https://www.youtube.com/watch?v=yhhSW-FSWkEreply",
+      "To be clear, I have a lot of issues with the contracts proposal. I probably wouldn\u2019t use despite living out on the standards frontier. I don\u2019t even use C asserts already because they are not expressive enough in important ways. This proposal kind of reifies the inadequacies.I think the risk is that C++ contracts become an evolutionary dead-end that hang around forever in code bases because they were standardized. It wouldn\u2019t be the first time this has happened.reply",
+      "A concept is a compile time requirement that bounds templates which are the generics in C++, so you are close.reply",
+      "Concepts are evaluated compile time and make a lot of TMP more elegant. Contracts are runtime check, akin to assertions.Phrased differently, contracts are to concepts what assert is to static_assert.reply",
+      "Concepts are for Types at compile time while Contracts are for Values at runtime.reply",
+      "Huh? Concepts are types of types. Contracts are fancier, structured runtime assertions. What does one have to do with the other? They're nothing alike.reply",
+      "They both start with the letter C, have two syllables, and have/had a hard time getting into the standard.  If you\u2019re not paying close attention, it\u2019s easy to get them confused.reply"
     ],
-    "link": "https://rikiyat.github.io/blog/weight-space-programming/",
-    "first_paragraph": "Rikiya Takehi*Jayden Teoh*Alex ZhangOmar Khattab MIT CSAILMIT CSAILMIT CSAILMIT CSAILNovember 2, 2026We find that frontier LLMs are surprisingly good at natively reading and writing neural network weights, well past what we\u2019d expect from humans or conventional algorithms. This might be a big deal for both optimization and interpretability.Just by looking at the raw weights, GPT-6 Astra can tell what a network was trained to do. And without any environment feedback, it has no trouble writing, from scratch, small game-playing networks that outplay networks trained with PPO for 100 million steps.Likewise, asked to make Qwen3.5-0.8B better at math without gradients, Astra identifies an issue in its weights causing reasoning loops that Qwen\u2019s own model card warns about, and fixes this by natively editing 0.016% of the weights. With the same sampling settings, this weight correction raises MATH-500 from 7.9% to 48.1% and generalizes out of the box to instruction following, raising IFEval by "
+    "link": "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive/",
+    "first_paragraph": "On October 23, 2026, the unthinkable happened. It was supposed to be a mere formality: C++26 was up for a vote by the ISO National Bodies (NBs). The options are always approval, rejection, or abstention. Comments are also allowed. Since 1998, this process had run quietly and smoothly. Not so on October 23, 2026. After a twelve-week voting period, the result is in: Disapproved!I would like to mention here that I am a member of the C++ Standardization Committee and, together with my colleagues, represent Germany\u2019s vote. ISO rules also stipulate that certain votes are internal to ISO, and the results\u2014or the breakdown of the results\u2014may not be published. This article contains my own personal views.As far as I know, this is the first time in the history of C++ that DIS ballot failed. When I searched the ISO system, I could only find one other DIS that was not approved: ISO/IEC DIS 26926 C++/CLI Language Specification dated August 11, 2006. It\u2019s possible that my search privileges aren\u2019t suff"
   },
   {
-    "title": "Show HN: Hacker Times, a New York Times-inspired version of Hacker News (hackertimes.ca)",
-    "points": 131,
-    "submitter": "polpenn",
-    "submit_time": "2026-11-03T01:53:34",
-    "num_comments": 46,
-    "comments_url": "https://news.ycombinator.com/item?id=50346981",
-    "comments": [
-      "Having the paragraph under the title reminds me of slashdot.org.reply",
-      "> Masthead set in Manufacturing ConsentI like the description for Manufacturing Consent font:https://fonts.google.com/specimen/Manufacturing+Consent/abou...https://github.com/google/fonts/blob/main/ofl/manufacturingc...reply",
-      "Reminds me of furniture descriptions in the Simsreply",
-      "I remember there was a similar project like this posted a while ago. Turns out there are multiple. Here are just a few (that are still online):A couple of months ago (so probably vibe-coded too):https://thefrontpage.dev/https://times.hntrends.net/https://hackernewstimes.com/This one even from 6 years ago:https://www.wolfgangfaust.com/project/paper-hn/ (https://news.ycombinator.com/item?id=23669650, 627 points, 133 comments)https://hn.algolia.com/?q=hackernews+newspaperreply",
-      "https://help.fivefilters.org/pdf-newspaper/screenshots.html#...reply",
-      "No shame in doing something that already exists for yourself. But at this point I think it wouldn't be asked too much to just ask your favorite agent to check first if someone already implemented your idea in the past and then consider if your vision is really distinct enough to warrant anther instance of whatever you want to build.reply",
-      "Neat. To-do: Give HN the ONION treatment? :-) https://theonion.com/reply",
-      "Was kinda filled with N-gate, but they stopped updating.http://n-gate.com/reply",
-      "This is great! Very readable and feels like a nice way to browse articles. I tend to gloss over stuff in the HN wall of text sometimes so this breaks the links up in a useful way. Nice job.reply",
-      "I don\u2019t think the pay wall is working.reply"
-    ],
-    "link": "https://hackertimes.ca/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "DiscImageStudio: burn visible artwork onto CDs, DVDs and Blu-ray discs (github.com/jiafeimiao-k-cat)",
-    "points": 102,
-    "submitter": "bpierre",
-    "submit_time": "2026-11-03T01:33:43",
-    "num_comments": 26,
-    "comments_url": "https://news.ycombinator.com/item?id=50346849",
-    "comments": [
-      "Throwback to lightscribe which I haven't thought of in many years: https://en.wikipedia.org/wiki/LightScribereply",
-      "Glad I read the article, this is fascinating:> In 2012, a LightScribe optical drive was successfully used by Maher El-Kady, a graduate of UCLA, to turn a specially prepared graphite oxide layer coated onto a DVD into graphene.[10] El-Kady and Richard Kaner, his lab professor, used an unmodified LightScribe drive. The disc was prepared by coating the disc with an aqueous solution of graphite oxide and allowing it to dry. Areas of the coating illuminated by the LightScribe laser were turned into graphene. Various shapes can be drawn, which allowed the scientist duo essentially to laser-print an ultracapacitor on graphene using consumer-grade technology.reply",
-      "I have a LightScribe compatible external CD/DVD burner. It came with a LightScribe disc that I haven\u2019t taken the plastic off still to this day. Since it only came with a single one I could never decide which one thing to use that one LightScribe disc for, back when I was still burning things on CD and DVD.reply",
-      "You didn't miss much. It took 20-30 minutes each pass, plus the extra cost for the discs.But even if you were fine with that, it came out too light under actual lighting conditions, even after you burned it twice, which defeats the use case of making it look professionally labeled. For home use, a Sharpie beat it in every way.reply",
-      "Huh, that wasn't my experience.  I mean, it absolutely was slow especially with sufficiently complex labels, but they generally came out fine.  Granted, you absolutely couldn't just drop any arbitrary image into the LightScribe software and have it come out looking good, you'd have to mess with the contrast, but black-and-white text and line art would come out fine.  And more legible than Sharpie, with my handwriting.reply",
-      "I have the same issue in video games. I always end up at the end not having used my unique items because I only have 1.reply",
-      "same but brainreply",
-      "DiscT@2 (1), the granddaddy of them all.This was followed up by Labelflash in 2007(2).(1) https://en.wikipedia.org/wiki/DiscT@2(2) https://en.wikipedia.org/wiki/Labelflashreply",
-      "I still have a DiscT@2 capable drive running (a Yamaha CRW-F1), though I haven't tried the imaging capability in... geez, 20 years.reply",
-      "I had one of these as well... What a trip down memory lane, thanks for sharing.reply"
-    ],
-    "link": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
-    "first_paragraph": "\u7b80\u4f53\u4e2d\u6587 | \u7e41\u9ad4\u4e2d\u6587 | English | \u65e5\u672c\u8a9eWindows \u684c\u9762\u7248\u652f\u6301\u8bbe\u8ba1\u4e0e\u523b\u5f55\uff0cLinux \u548c macOS \u7684\u5b9e\u9a8c\u6027\u547d\u4ee4\u884c\u7248\u53ef\u79bb\u7ebf\u751f\u6210 CD\u3001DVD \u548c\u84dd\u5149\u955c\u50cf\u3002\n\n\n\n\nDisc Image Studio \u53ef\u5c06\u4e00\u5f20\u56fe\u7247\u8f6c\u6362\u6210\u7b26\u5408 CD\u3001DVD \u4e0e\u5355\u5c42 BD-R \u5149\u76d8\u7269\u7406\u5c42\u7ea6\u675f\u7684\u6570\u636e\uff0c\u523b\u5f55\u540e\u5c06\u4f7f\u5149\u76d8\u76d8\u9762\u5448\u73b0\u8089\u773c\u53ef\u89c1\u7684\u56fe\u6848\u3002Windows \u4e0b\u8f7d win-x64.exe \u540e\u53ef\u76f4\u63a5\u8fd0\u884c\u3002Linux \u6216 macOS \u8bf7\u4e0b\u8f7d\u4e0e CPU \u5339\u914d\u7684\u5b9e\u9a8c\u6027 CLI \u538b\u7f29\u5305\uff0c\u89e3\u538b\u540e\u8fd0\u884c ./disc-image-studio --help\u3002\u8fd9\u4e9b\u53d1\u5e03\u5305\u5747\u81ea\u5e26 .NET \u8fd0\u884c\u65f6\u3002 GitHub Releases\u5728\u4e3b\u9875\u9009\u62e9 CD\u3001DVD \u6216\u84dd\u5149\uff0c\u6307\u5b9a\u8f93\u51fa\u4f4d\u7f6e\u540e\u521b\u5efa\u5de5\u7a0b\u3002\u5728\u8bbe\u8ba1\u9875\u5bfc\u5165\u56fe\u7247\uff0c\u7528\u56fe\u5c42\u5b8c\u6210\u6392\u7248\uff0c\u5e76\u5728\u53f3\u680f\u300c\u5f71\u8c03\u300d\u6a21\u5757\u8c03\u6574\u6296\u52a8\u3001\u4f3d\u9a6c\u3001\u4eae\u5ea6\u4e0e\u7070\u9636\u6863\u4f4d\u3002\u5728\u9884\u89c8\u9875\u6838\u5bf9\u76d8\u9762\u6295\u5f71\uff0c\u5728\u5bfc\u51fa\u9875\u751f\u6210 ISO / RAW / WAV+CUE\uff0c\u6216\u4f7f\u7528\u5373\u65f6\u523b\u5f55\u529f\u80fd\u76f4\u63a5\u5199\u5165\u7a7a\u767d\u76d8\u7247\u3002\u5373\u65f6\u523b\u5f55\u4e3a\u5b9e\u9a8c\u6027\u529f\u80fd\uff0c\u8bf7\u53ea\u4f7f\u7528\u53ef\u62a5\u5e9f\u7684\u6d4b\u8bd5\u4ecb\u8d28\u3002Disc Image Studio \u63d0\u4f9b\u4e86\u4e00\u5957\u667a\u80fd\u4e14\u7cbe\u51c6\u7684\u8f85\u52a9\u6807\u5b9a\u6d41\u7a0b\uff0c\u76f8\u8f83\u4eba\u5de5\u8089\u773c\u8bc6\u522b\u6807\u5b9a\uff0c\u8f85\u52a9\u6807\u5b9a\u7b97\u6cd5\u5c06\u53ef\u786e\u5b9a\u7684\u76d8\u9762\u7269\u7406\u6570\u636e\u7cbe\u786e\u5ea6\u4ece 10-6 \u63d0\u5347\u5230\u4e86 10-14\u3002\u6821\u51c6\u524d\u91c7\u7528\u6052\u5b9a\u8f68\u8ddd\uff0c\u5341\u5b57\u7ebf\u7684\u5f84\u5411\u7ebf\u6761\u51fa\u73b0\u660e\u663e\u5f2f\u66f2\uff1b\u4f7f\u7528\u8f85\u52a9\u6807\u5b9a\u5f97\u5230\u7684\u4e09\u6b21\u8f68\u8ddd\u53c2\u6570\u91cd\u65b0\u751f\u6210\u5e76\u523b\u5f55\u540e\uff0c\u7ebf\u6761\u66f4\u63a5\u8fd1\u5f84\u5411\u76f4\u7ebf\u3002\u6d41\u7a0b\u4e0e\u53c2\u6570\u8bf4\u660e\u89c1\u8f85\u52a9\u6807\u5b9a\u8bf4\u660e\u3002\u6784\u5efa\u56de\u5f52\u68c0\u67e5\uff1a\u7248\u672c\u89c4\u5219\u3001CI \u751f\u6210 EXE\u3001Release \u8349\u7a3f\u68c0\u67e5\u3001MSIX \u6253\u5305\u4e0e\u7b7e\u540d\u6d41\u7a0b\u89c1\u53d1\u5e03\u6307\u5357\u3002Linux\uff08glibc\uff09\u53ef\u9009 linux-x64 \u6216 linux-arm64\u3002Apple Silicon Mac \u9009 osx-arm64\uff0cIntel Mac \u9009 osx-x64\u3002CLI \u5728\u672c\u5730\u751f\u6210\u955c\u50cf\uff0c\u5b9e\u9645\u5199\u76d8\u53ef\u4ea4\u7ed9\u652f\u6301\u76f8\u5e94\u955c\u50cf\u6216\u97f3\u8f68\u7684\u523b\u5f55\u8f6f\u4ef6\u3002\u4f7f\u7528 .NET 10 SDK \u4ece\u6e90\u7801\u8fd0\u884c CLICLI \u53ef\u8bfb\u53d6 PNG\u3001JPEG\u3001BMP \u548c GIF\uff0c\u4f7f\u7528\u52a8\u753b\u56fe\u7247\u7684\u7b2c\u4e00\u5e27\u3002\u4e0b\u9762\u7684\u4f8b\u5b50\u7528\u4e24\u6247\u533a\u97f3\u8f68\u9a8c\u8bc1\u5b89\u88c5\uff0c\u540c\u65f6\u751f\u6210\u914d\u5957 CUE\u3002\u5404\u547d\u4ee4\u7684\u5b8c\u6574\u53c2\u6570\u89c1\u5bf9\u5e94\u6587\u6863\u3002Disc Image Studio \u7684\u5b9e\u73b0\u4e0e\u7269\u7406\u6a21\u578b\u4e3b\u8981\u53c2\u8003\u4ee5\u4e0b\u89c4\u8303\uff1aCD \u516c\u5171\u7f16\u7801\u90e8\u5206\u8fd8\u53c2\u8003\u4e86 ECMA-130\uff0c\u7b2c 2 \u7248\uff08CD-ROM\uff0c1996\uff09\u3002\u6b22\u8fce\u62a5\u544a\u95ee\u9898\u4e0e\u63d0\u4ea4\u4ee3\u7801\u3002\u5f00\u53d1\u73af\u5883\u642d\u5efa\u3001\u6a21\u5757\u8fb9\u754c\u89c4\u5219\u3001\u6d4b\u8bd5\u8981\u6c42"
-  },
-  {
-    "title": "Show HN: Subvocal \u2013 Talk to your computer without making noise",
-    "points": 619,
-    "submitter": "aarushyadav",
-    "submit_time": "2026-11-02T17:16:17",
-    "num_comments": 322,
-    "comments_url": "https://news.ycombinator.com/item?id=50340088",
-    "comments": [
-      "Just preordered -- glasses request: there's no way to say it nicely, I have a big nose. With a high bridge. Many glasses are really tough to get properly placed; may I request you not give up on the pads w/metal adjusters that you have in the product photos? Don't let a designer take them away from you, us folks not one standard deviation from 'normal' noses will thank you.Second, how tough is this signal processing? Will it be done on-glasses, or through an app? Third, what's the equivalent of a wake word for these? I'm reminded of the Apple Vision Pro radar to see if your fingers are clicking. I could imagine a lot of modalities where I want to just start talking and have things happen, and a lot where I don't want the glasses to pick it up. Fourth, I think a cool voice change demo would be rad -- not sure what latency is like, but if you could get it end to end under like 250ms you could probably have someone exaggerate the mouth movements and pipe out audio of them talking like someone else. Which would be another really cool demo.Super cool. You're going to be working 80 hour weeks for the next year, I'm excited to see what you put out!reply",
-      "Yep, we have been quite set on nose pads to keep them comfortable. I will keep you updated with the designs!The decoding is done via a companion app on your laptop or phone in the cloud, but end to end latency is still quite fast, under 500ms usually.To begin with we don't plan to have a wake word, but rather a trigger key on your connected device that you're entering text into (pressing Alt for example), similar to Wispr Flow. We're doing some R&D into the silent speech equivalent of voice activity detection, so we have a low power basic RF detection always-on, not enough to decode speech from but enough to detect rough movement, and when it detects speech-like activity beginning to start we can trigger full sensing within tens of ms. This would likely ship as a software update a few months after shipping, though.The voice change demo is something I've thought about actually, but we never got around to doing. Might film it soon :)reply",
-      "Also I note from your comments here you don\u2019t plan on local inference - that seems like a huge self own, provided the model is less than like 2b params. I\u2019m not saying people won\u2019t in practice prefer your cloud version, but you have this huge uphill battle ahead of you on privacy which can be wiped at the stroke of a pen with \u201cyep it will run on your Mac.\u201dYou can get both markets (ease of use and technical) by allowing it. Also i would bet that you gain almost no product security locking off local inference - the hardware is the hard bit. Once someone has your hardware in hand it will not take them long to reverse and build their own processing layer; you\u2019ll need to fight those people on patents and product quality.Heck for a v1 just allowing local sensor data would probably be enough for the tech enthusiasts. But please don\u2019t lock this off from the get go - it makes the sale harder and I don\u2019t think it gives you much in return.reply",
-      "Agreed.Cloud processing can be tempting as the primary revenue stream, but it entirely cuts off those users who cannot send arbitrary PII over the internet (regardless of encryption promises).It also invites the (especially now-LLM-empowered) enthusiasts to reverse engineer it.Instead, consider selling the glasses with >20% profit, and give local users a cheaper subscription to something else (maybe the model updates?) so they can also help keep the company sustainable.reply",
-      "Super cool. For a cool voice change demo we'll allow a gb200 over low latency wifi :) elevenlabs has deals with a number of professional actors and voice actors for licensed uses, seems like you could probably find an ethical and cool co-brand opportunity in there.Have fun building this! It's worth doing.reply",
-      "> The decoding is done via a companion app on your laptop or phone in the cloud, but end to end latency is still quite fast, under 500ms usually.Why don't you do this on the phone? You don't want to have your proprietary tech on the user device? Or maybe you wanted to save the recording on your cloud anyway so you can train on it later or otherwise use the data?reply",
-      "Wait. You are taking the RF response, sending it up to the cloud to interpret, and then sending the result back? Hard pass from me, sorry. Cool tech, but I don\u2019t want my internal thoughts anywhere near the cloud. Also, this would mean I couldn\u2019t use something like this on the subway when the phone signal goes out intermittently, right?reply",
-      "The commercial reality I\u2019m sure they\u2019re dealing with is that the percentage of users who care enough to deal with everything required for local inference is nowhere close to large enough to make it into an initial launch.reply",
-      "Fair enough! We take data security and privacy very seriously and have built many safeguards to prevent even us from accessing the raw data in the cloud. At some point in the future we hope to launch local inference models too!reply",
-      "Respectfully, talk is cheap. Every company says they take security and privacy seriously even after their database has been breached and their customers' plaintext passwords and credit card details have become public information.If you were actually serious about prioritizing privacy above securing an ongoing service relationship you would ship local inference as the default and only (possibly later) offer a cloud service as an optional add-on for those who want/need it.reply"
-    ],
-    "link": "item?id=50340088",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Scaling Git at OpenAI (openai.com)",
-    "points": 122,
-    "submitter": "makeramen",
-    "submit_time": "2026-11-02T23:47:56",
-    "num_comments": 56,
-    "comments_url": "https://news.ycombinator.com/item?id=50345924",
-    "comments": [
-      "Can anyone explain to me what this massive volume of code could actually be doing? They obviously have variations of model architectures, training infrastructure, serving infrastructure, and the source for their apps.Why would the volume that any of this be increasing exponentially? And what are all the engineers doing when (besides the model quality) their products don't seem to be changing very much?reply",
-      "What they do not have is a version of chatgpt.com that is not a slow, awkward, glitchy mess.As a user of Astra, it writes code that appears to work. It does not necessarily write sensible code that is architected in a way that makes sense based on what it does.  I just watched it do a major rework of a couple thousand lines of code by keeping the original organization and kludging up an adapter to make old code have new semantics.I would expect that this approach, coupled with lots of fun asking for changes and none of the grunt work of actually thinking about the result, could result in exponentially increasing amounts of mess.I haven\u2019t used a recent Anthropic model - maybe it\u2019s better at this.reply",
-      "Nah I made a workout app with Claude code. Today it loaded the same warmup exercise as my main block 3 times in a row. The program does not call AI to make the plan so that\u2019s the code it wrote lol. In general though the app is good enough if you know what you\u2019re doing which seems to be the theme with AI.reply",
-      "Everytime you use sites it should record the code, for example.  machine speed code needs machine speed vcs.reply",
-      "For one, they have the internal models that us normies don't have. Also, machine learning as a field is probably the most automate-able field for AI. It's 100% on computers without \"real world\" collisions at all, AI can do the whole stack today even with publicly available models. And since it's so empirical, you can make a lot of progress by just running more experiments with more compute.reply",
-      "Engineers are working on multiple sessions, and LLM is doing most of the commits/pushes. This is becoming norm at big techs.If you are wondering what these changes are, you can take a peek at https://github.com/openclaw/openclaw/commits/main/This isn't to say that such pace of iteration is good or bad. That's a separate discussion.reply",
-      "But \"big tech\" companies have a lot of different components. And they hit git scaling limits long before the current AI age. The commenter was asking about OAI, not big tech, committing much more code.reply",
-      "RL environments. RL environments as far as the eye can seereply",
-      "[facetious]many yaks to shave.\nmany bikesheds to paint.if you're paid by the line, why not go to town...reply",
-      "> Why would the volume that any of this be increasing exponentially?Surely it's obvious?Slop cannons firing at a rate so high no human can hope to restrain them.Such a colossal volume of slop that even the most well engineered, efficient technology on the planet, written by one of the greatest coders of all time, is no longer sufficient to contain it.reply"
-    ],
-    "link": "https://openai.com/index/scaling-git-at-openai/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "US boy names that became girl names and vice versa (namedaisy.com)",
-    "points": 336,
-    "submitter": "xoobdev",
-    "submit_time": "2026-11-02T16:34:36",
-    "num_comments": 338,
-    "comments_url": "https://news.ycombinator.com/item?id=50339397",
-    "comments": [
-      "> Of the 42 names that moved toward girls, 34 were driven mainly by an increase among girls, rather than a decline among boys.> Surprisingly, the same pattern held in the opposite direction. Of the 12 names that moved toward boys, 9 shifted mainly because fewer girls were receiving them, rather than because more boys were. In other words, whichever way a name moved, the biggest change usually came from girls.This is consistent with the observation that girl's names are more dynamic.reply",
-      "I have no data but feel that boys tend to get the family names and biblical names (in US anyways). It's rare to hear of a girl named Elizabeth III or Mary Junior but quite common for those concepts in boys. So I think the boy names are heavily weighted on probably the most popular ~25 or so names. Since girl names are more free to follow whatever is fashionable at the time, trends move faster.My son is named after his grandfather, and it's an overly common name in English (American and British). Definitely a top 3 most common for last several centuriesreply",
-      "I thought girls didn't use junior, III, etc. because traditionally girls adopt their husband's last name, so they would no longer have the same full name as their mother.reply",
-      "I hadn\u2019t thought about that but makes me wonder if it will become more common since not taking your husbands name has become more common. I wouldn\u2019t think so, but I\u2019m pushing 50 and can\u2019t think of ever meeting a female named after her mom so if it shows up at all in the data that would be interesting.Funny enough, I think it\u2019s common for the female middle name to be a mom/grandma/aunt name.reply",
-      "My guess is no, because carrying the family legacy is falling out of fashion as much as taking the husband's name, maybe even more so.reply",
-      "Family legacy is quite obsolete in modern society.Not every society wants to be modern.Modern society cuts family ties which is a lot of times not so great, but on the other hand it saves lots of people from abusive relationships.Once you can leave abusive parents or siblings, whole world of opportunities opens. Then again on the other hand not everyone can deal with such a freedom.Yet still I am personally supportive of modern approaches where people can choose their destiny and not being tied to a family legacy.reply",
-      "Doesn't everyone do that? My brother has a grandparents name as his middle. I never thought of it as a gendered traditionIs it a specific cultural thing I wonderreply",
-      "All the men on my dad's side of the family have the same middle name, with just a different first name.It's apparently not an uncommon tradition in several areas of the world to either have either the first or middle name be shared, and then a unique name for the unmatched one (e.g. John Alan Doe, John James Doe, John Matthew Doe - Alan John Doe, James John Doe, Matthew John Doe).reply",
-      "Possibly. I\u2019ve just heard it more with girls and wouldn\u2019t expect it\u2019s evenly common on relative basis but certainly could be wrongreply",
-      "> I have no data but feel that boys tend to get the family names and biblical names (in US anyways).Curiously, in the last few months in the U.S. I've met a Tamar and an Esther, both women given family names that were drawn from the bible.reply"
-    ],
-    "link": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
-    "first_paragraph": ""
-  },
-  {
-    "title": "European RISC-V Industrial Computing Initiative (erici.eu)",
-    "points": 17,
-    "submitter": "ymz5",
-    "submit_time": "2026-11-02T08:58:33",
-    "num_comments": 2,
-    "comments_url": "https://news.ycombinator.com/item?id=50334523",
-    "comments": [
-      "Vibe coded site and copyreply",
-      "i am tired of seeing same patterns and designs on Internet. It is kind of frustrationreply",
-      "Yet it will be worse when we aren't able to detect it as easilyreply"
-    ],
-    "link": "https://erici.eu",
-    "first_paragraph": "European RISC-V Industrial Computing Initiative\n          RVA23 silicon has arrived. The industrial computer built on it has not.\n          ERICI coordinates a reference stack, from firmware to real-time and\n          general-purpose operating systems: it fixes the interfaces between the layers\n          and verifies that they boot together on real RVA23 hardware. A box that boots\n          it is ERICI-compatible.\n        Why now\n        Today's industrial computers run on x86 and Arm: two instruction sets, each\n        owned and licensed by a single company. RISC-V is open, governed by a\n        non-profit, and implemented by many vendors. Until recently it lacked what\n        industrial systems need. That has changed.\n      No license for the instruction set, no single owner, no single country.\n            A machine expected to run for 15 years should not depend on one company's\n            roadmap, or one government's decisions.The RVA23 profile, ratified in October 2024, makes the "
-  },
-  {
-    "title": "Resisting Cognitive Surrender (knlb.dev)",
-    "points": 56,
-    "submitter": "knlb",
-    "submit_time": "2026-11-01T06:13:30",
-    "num_comments": 12,
-    "comments_url": "https://news.ycombinator.com/item?id=50323123",
-    "comments": [
-      "Great post. I particularly like the 4 column pr view idea. I\u2019ve built something similar to review speckit specs. The scaffolding to ensure that code actually works makes sense too.There\u2019s one thing that\u2019s bothering me though \u2014 all of these have us consuming what LLMs produce. I learned and internalized how things worked by building systems. At least within the constraints of the abstractions I was using. This makes me think of TikTok and shorts. Everybody is just watching. Maybe that\u2019s not charitable though. Maybe the abstraction has now changed from an \u201cos/gui/event loop\u201d to \u201cllm\u201d and the rest is just accidental complexity.reply",
-      ">> A more serious irony is that the automatic control system has been put in place because it can do the job better than the operator, yet the operator is being asked to monitor that it is working effectively.Automatic control is good for standard case, and the expected errors. For weird cases, for now humans are better to detect them and press the big red button.reply",
-      "It's funny that I'm reading this while rewatching Chernobyl. Never underestimate the ability of bureaucracy to completely fuck things up.reply",
-      "Except experience shows they aren't. Experience shows that when humans are just pressing \"ok\" 99% of the time they'll press it 100% of the time and completely miss the other cases.reply",
-      "\"Yup, looks good to me!\" said the human reviewing thousands of lines of generated code everyday.This has become common now, and I've seen it ruin large projects until nobody understands the codebase full of verbose nonsensical code and comments. It becomes impossible to further develop the project without AI. Contributors not using AI for any reason are all leaving because no one enjoys working with mindless robots (and humans) as colleagues. It's demeaning and devaluing their labor and humanity. They're not getting \"left behind\", they are leaving the madness of crowds behind.> ..the possibility of runaway dynamics: once a critical threshold is crossed, small increases in adoption can trigger rapid population-level shifts toward *persistent dependence, with abrupt losses in cognitive competence*.We can all see it happening. As this technology permeates society, the challenge to maintain control, coherence, and quality will become greater and ever more serious - for example, AI in healthcare, military, management and governance.reply",
-      "Even if the human's judgement is correct in every LGTM, there's a bias towards merging. Each merge that adds a feature but degrades understandability 1% will be merged. It won't be held back until it improves it by 5% instead. After 100 merges you have degraded understandability 100% even though nobody made an error.reply",
-      "I think it's about 63%reply",
-      "To be fair, models are more accurate than how they were earlier this year. In march I was still frustrated and was writing my own event loops because the model simply wasn't built for it. By January I was still hand checking statistical outputs to make sure it wasn't making any errors, and it was. After august it was pretty much over. There were no stats errors, code generated was shit but it could do what is asked. Instruction following is still a problem, and I sometimes catch silly things in the scrolling diffs, but it has been much easier since then.reply",
-      "I am often thinking recently of the littel loop diagrams from the \"The Capability Trap\" paper. We need to keep a loop reinvesting into our own Human capability in anything we're doing.reply",
-      "This is copium that is gone with the wind when the models perform up to the level of standard that the user requires. I'll give the author 6 months before they feel like its okay to just send it.Karpathy had the same trajectory. Primeagean had the same trajectory. I think in the end everyone except for Jonathan Blow will have the same trajectoryreply"
-    ],
-    "link": "https://knlb.dev/essays/surrender",
-    "first_paragraph": ""
-  },
-  {
-    "title": "If you love a website, back it up (mistys-internet.website)",
-    "points": 456,
-    "submitter": "ingve",
-    "submit_time": "2026-11-02T13:25:35",
-    "num_comments": 101,
-    "comments_url": "https://news.ycombinator.com/item?id=50336518",
-    "comments": [
-      "Wholeheartedly agree. It's sad to slowly see the bitrot in my own bookmarks, trying to pull up important resources or media from only a few years ago only to hit a 404 or domain placeholder. And many times there is nothing on Archive.org or similar.That ArchiveWeb extension looks excellent for custom captures. Picking the pages and elements you want during capture is a great feature.For quicker one-offs, SingleFile gives you a single HTML with all the media of a page: https://www.getsinglefile.comIf you're making archiving a more involved part of your workflow, I highly recommend ArchiveBox. It can save pretty much every type of file from everywhere, in almost every format you can imagine, while building a searchable index of the archives. Been using it successfully for many years: https://archivebox.ioreply",
-      "I have recently started using hister [0] this index\u2019s everything I read and allows me to half remember bits and have a LLM find it.[0] https://hister.org/reply",
-      "Can vouch for Hister! In the fairly short time I've been using it, I already had a few sites disappearing or changing content and hister kept the juicy information accessible.It was painless to set up and quick to use when needed, too.I also use Singlefile and Obsidian Web Clipper a lot, but Hister has been great and is now a first-class citizen in my system. It helps it works passively for those things that don't look important when you read them, but become relevant later.reply",
-      "By default it only keeps the latest copy of sites so I'm not sure how that prevents replacing with 404?reply",
-      "When it gets a 404 it doesn\u2019t overwrite the existing copyreply",
-      "I used ArchiveBox for years. It's really good. The self-hosting and maintenance gets annoying after a while though.Link rot really bothers me and I want people to get into archiving web pages so that eventually there will be a decentralized mirror of the unslopped web sitting on people's hard-drives, ready to share whenever someone needs it. So, I made a worse version of ArchiveBox ( https://memoryhole.app ). My philosophy is that, if people see how it is easy to start archiving and how useful it is, then they'll keep it up with SingleFile, or ArchiveBox or anything else.reply",
-      "I've been using Archivebox for years also, but it recent years it started to have multiple issues. My queues are full of pages that failed to scan, and it's been several versions since I actually had anything new there.I did small amount of troubleshooting a few times with no resolution, but now I'm thinking of switching my thought process. Maybe something like a \"web clipper\" is much better, as complex SPA pages often fail to archive well anyway. And I should focus on content itself, not the page. That SingleFile extension fits well here as well.Did you run into similar dilemmas at some point?reply",
-      "It's funny - I actually went through a similar transition and also realized it was a little too heavy-duty for my personal workflow.At this point I'm using Linkding (self-hosted bookmarks, which has an archive function) paired with Singlefile (which integrates with Linkding) which locally captures and uploads. For larger, or multi-page, captures I still fire off an Archivebox command. I run into blocks occasionally, but it also just feels like the open web is becoming less and less open in general.reply",
-      "> At this point I'm using Linkding (self-hosted bookmarks, which has an archive function) paired with Singlefile (which integrates with Linkding) which locally captures and uploads.I second this workflow, exactly what I switched to from Archivebox. Linkding has a built-in \"create HTML snapshot\" feature but the Singlefile browser extension works much better.reply",
-      "SingleFile is great for single pages. All the tweaking I do is enable or disable saving scripts, and it works for >90% of webpages. Output being a single file (heh) simplifies things enormously, there\u2019s no hierarchy or folders to deal with - hard to imagine your saved files not loading or breaking in some way as long as the original capture works.reply"
-    ],
-    "link": "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
-    "first_paragraph": "\nOct 29th, 2026 4:21 pm\nThis story starts with a little tragedy. See, I\u2019ve got these old webpages I love to go back and look on every now and then. There\u2019s websites that have been online unchanged for years and years, or decades, and there\u2019s something a little cozy about checking in on them every now and then to see an old friend is still doing okay. Sometimes, of course, tragedy strikes.There was this fansite called teapuppies.com for an old anime series and and toy line called Ochaken. It\u2019s about these cute cartoon dog characters who have tea leaves for ears, each of them named after a different kind of tea.1 The site had been online since 2004 and had basically not changed since 2005, but it was nice just having it around. Except when I went to visit it a few weeks ago, and discovered that not only was the site gone but the domain is now being used to serve online gambling ads.I work in web archiving, by the way. Which is to say that I should have known the site would go offline som"
-  },
-  {
-    "title": "Open-Source 5G Ran Platforms: A Dual Perspective on Performance and Capabilities (arxiv.org)",
-    "points": 15,
-    "submitter": "teleforce",
-    "submit_time": "2026-11-03T02:58:44",
+    "title": "Distinct cellular and genetic differences in colorectal cancer in young patients (dana-farber.org)",
+    "points": 29,
+    "submitter": "gmays",
+    "submit_time": "2026-11-04T03:20:13",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://arxiv.org/abs/2608.25820",
-    "first_paragraph": "arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs."
+    "link": "https://www.dana-farber.org/newsroom/news-releases/2026/study-reveals-distinct-cellular-and-genetic-differences-in-colorectal-cancer-in-younger-patients",
+    "first_paragraph": "Care and TreatmentLearn about Dana-Farber\u2019s expert cancer care and the innovative treatment options we offer for adults and children.Collaborating with BIDMCDana-Farber's collaboration with Beth Israel Deaconess Medical Center (BIDMC) is an important step in shaping the future of cancer care. Learn what to expect during this transition.Find Clinical TrialsSearch clinical trials for adult and pediatric cancers and blood disorders offered through Dana-Farber and our clinical partners.Refer a PatientFor adult patients: 877-441-3324For pediatric patients: 888-733-4662Support the Jimmy FundMake a donation or join an event to support Dana-Farber's mission.Why Choose Dana-FarberEach year, thousands of patients from around the world come to Dana-Farber for their cancer care. Find out why.Dana-Farber Cancer Institute researchers, along with Mass General Brigham researchers from the Gene Lay Institute of Immunology and Inflammation, and the Broad Institute, have uncovered biological clues to why"
   },
   {
-    "title": "Launch HN: Momentic (YC W24) \u2013 Agents that catch bugs by using your app (momentic.ai)",
-    "points": 137,
-    "submitter": "wuweiweiwu",
-    "submit_time": "2026-11-02T17:05:25",
-    "num_comments": 91,
-    "comments_url": "https://news.ycombinator.com/item?id=50339913",
+    "title": "The Internals of PostgreSQL (interdb.jp)",
+    "points": 188,
+    "submitter": "ibobev",
+    "submit_time": "2026-11-03T21:51:06",
+    "num_comments": 12,
+    "comments_url": "https://news.ycombinator.com/item?id=50358702",
     "comments": [
-      "Why is this better than running Opus 5.5 directly against my app with a custom Playwright-based harness for in my own subscription?reply",
-      "Hey I'm Gabe (one of the engineers @Momentic). In general Mo's advantage is in the total amount of bugs found. In comparison to claude code we find roughly 5x as many bugs at 35% less per bug (for the 60 min session).reply",
-      "Then stock claude code??? that's like... the lowest of bars.reply",
-      "You're right stock CC was pretty terrible. Thats why we compared against CC && Codex with agent browser and playwright mcp as well as devin. Do you have any other agents / configurations you'd like to see?We had someone recommend browser-use and are running it against the benchmark currently. We're hosting the results here if you'd like to see more: https://momentic.ai/qa-benchreply",
-      "I think all of those are very naive approaches. What I currently do is script out screenshot + application state pipelines and then run those screenshots and states through clef with questionnaires. The scripts are deterministic, clef costs pennies or less and is also reliable, the questionnaires are derived from the script with escalation to stronger lmm's if necessary (historically very infrequent from my usage). It isn't a \"drop in\" solution, but it is fairly trivial to set up and you can attach it to CI. It isn't perfect, but I've found it to be more successful and way more cost effective than throwing Claude or GPT models at it regardless of harness.reply",
-      "This sounds a lot like what we call an \"AI check\" in a regular Momentic test. These work great on known flows, and are actually one of the main reasons a lot of our customers love Momentic. Mo doesn't replace that; it builds on top of it by adding the ability to discover and test new flows that you didn't previously write scripts for, or don't want persistent scripts for. In the near future, Mo will also be able to propose durable tests that you can rerun later (essentially, exactly what you're describing), which will decrease cost and increase consistency significantly for already known flows.reply",
-      "Gotcha, so it's a harness optimizing narrowly for cost per task in discovering QA testing flows and eventually documenting those flows durably? Anything stopping someone from asking Mo what their context and tools look like?reply",
-      "Thoughts on the bitter lesson? Eg what if models just keep getting better?reply",
-      "Good question, in short our harness & e2e tests act as compliments with the frontier rather than competitors. Architectural choices and data you provide really matter for domain specific tasks. Mo will be working with harness specific tooling like: previous momentic test results, our KB, and eventually creating new Momentic regression. Having smarter/more capable models will improve the efficiency of AI generated tests (coverage/runtime) and ideally do less repetition in exploratory testing.reply",
-      "Or a custom zeroshot graph based on your actual QA requirementsreply"
+      "Related:The Internals of PostgreSQL - https://news.ycombinator.com/item?id=43241404 - March 2025 (40 comments)The Internals of PostgreSQL - https://news.ycombinator.com/item?id=30372750 - Feb 2022 (19 comments)The Internals of PostgreSQL - https://news.ycombinator.com/item?id=30086374 - Jan 2022 (39 comments)Internals of PostgreSQL - https://news.ycombinator.com/item?id=18950460 - Jan 2019 (25 comments)The internals of PostgreSQL - https://news.ycombinator.com/item?id=13488315 - Jan 2017 (53 comments)The Internals of PostgreSQL - https://news.ycombinator.com/item?id=12142364 - July 2016 (1 comment)(Reposts are fine after a year or so; links to past threads are just to satisfy extra-curious readers)reply",
+      "The latest Jepsen report on particledb triggered a new found interest in the SSI implementation in postgres.If you are just skimming this doc, The HoT update path is the section I would jump to.Understand HoT and then read the zHeap implementation notes (also of TOAST) puts a good mental model of what postgres does and what it doesn't do.reply",
+      "Incidentally, the 2020 Jepsen report on Postgres found a long-standing bug in the SSI implementation [0][0] https://news.ycombinator.com/item?id=41560556reply",
+      "The had a safe super intelligence bug dating back to 2011?Wow so ahead of their time.(And since I'm bad at sarcasm and don't wish to mislead, SSI = Serializable Snapshot Isolation in this context.)reply",
+      "Didn't find the new MVCC in there.  https://www.orioledb.com/reply",
+      "Because Postgres hasn't adopted that yet, and I'm not aware of any actual plan to adopt it? Tom Lane just did an interview where he said he doesn't see any world where they move away from dead tuples and vacuuming.reply",
+      "Users of software often do not blindly do, or not do, whatever the upstream open source project does.OrioleDB is friendlier to SSDs and is de facto \"the other\" MVCC of Postgres. OrioleDB may be still be \"beta\" but that hasn't stopped operators/users.MariaDB has some alternative MVCC, one of them is particularly outstanding.SSD endurance at scale has on and off been a major concern for me, so I empathize with that. Others deserve to know of OrioleDB, and Postgres more broadly is probably better off for it too.  https://www.uber.com/us/en/blog/postgres-to-mysql-migration/reply",
+      "Chapter 12 (full-text search) quietly changed under this book in Postgres 18: FTS now reads its dictionaries and config through the cluster's default collation provider instead of always libc, so clusters on ICU or the new builtin PG_UNICODE_FAST can see different behavior in FTS and pg_trgm \u2014 the release notes explicitly tell you to reindex those indexes after pg_upgrade. Also in 18, LIKE with nondeterministic collations stopped being an error, which was the main reason people avoided case-insensitive ICU collations on searchable columns.reply",
+      "The HOT chapter is the one with the most direct practical payoff. Two things worth knowing from it: HOT only kicks in when no indexed column changes and the new tuple fits on the same page, so an index on a frequently-updated column (status, updated_at) quietly disables it for every update to that table. And lowering fillfactor (say 80-90) on update-heavy tables leaves free space on each page so HOT can actually happen. Comparing n_tup_hot_upd to n_tup_upd in pg_stat_user_tables is a cheap way to see whether you're getting HOT updates before tuning anything.reply",
+      "Depends on how wide your columns are and how often your records are modified. Past a certain width and I\u2019m not sure lowering fillfactor is a good idea.reply"
     ],
-    "link": "https://momentic.ai/",
-    "first_paragraph": "QA Bench: Mo, Codex, Claude Code and Devin against 1,396 labeled bugs.Read the report  AgentsPlatformsRun anywhereMo is an AI QA engineer that tests your app end to end. Verify critical flows and find bugs from a prompt.Trusted by leading engineering teams. Trusted in production by teams shipping every day.  \"Our team's experience with Momentic has been great. Setting up tests is simple and the developer experience has been fantastic.\"  Erdem  Head of Developer Experience, Notion  \"Having E2E QA be part of the development process, run this fast (6.3x parallel), and at this scale (for every single pull request) is a true dream. Seriously, a green CI now has a measurable impact on my sleep quality.\"  Glavin  Founding AI Engineer, Coframe  \"Momentic makes it 3x faster for our team to write and maintain end-to-end tests. Startups win by shipping faster and better, and Momentic enabled us to do exactly that.\"  Alex  CTO, GPTZero  \"I just ran our first automated eval across 110 prompts. This"
+    "link": "https://www.interdb.jp/pg/index.html",
+    "first_paragraph": "After a temporary stay in Japan to focus on my health and personal responsibilities, I am fully recovered, ready, and excited to work abroad again.I am highly interested in returning to Europe, as well as opportunities in the Southern Hemisphere and Southeast Asia.Looking for:If your team is hiring, let\u2019s connect! Please feel free to reach out via e-Mail(hironobu @ interdb.jp or interdb.mx @ gmail.com) or DM.PostgreSQL is a well-designed, open-source multi-purpose relational database system which is widely used throughout the world.It is one huge system with the integrated subsystems, each of which has a particular complex feature and works cooperatively with each other.\nAlthough understanding of the internal mechanism is crucial for both administration and integration using PostgreSQL, its hugeness and complexity make it difficult.The main purposes of this documentation are to explain how each subsystem works, and to provide the whole picture of PostgreSQL.This documentation covers ve"
   },
   {
-    "title": "Self-Employed? Solopreneur? NIST Has a Cybersecurity Guide Just for You (nist.gov)",
-    "points": 160,
-    "submitter": "tomrod",
-    "submit_time": "2026-11-02T17:47:40",
-    "num_comments": 46,
-    "comments_url": "https://news.ycombinator.com/item?id=50340619",
+    "title": "Jailbreaking my car's navigation system just so I can change the time (nns.ee)",
+    "points": 684,
+    "submitter": "xx_ns",
+    "submit_time": "2026-11-02T16:29:19",
+    "num_comments": 284,
+    "comments_url": "https://news.ycombinator.com/item?id=50339288",
     "comments": [
-      "\u2018a lay-language resource\u2018.IMO this misses the mark. Yes, it\u2019s a decent attempt at simplifying cybersecurity, but if this is aimed at entry-level, non-technical people, it\u2019s not gonna work.One of my earliest jobs was to redesign training materials for one of the worlds largest companies. I stripped the training to its core, the true basics, and started there. The results were remarkable. I feel the urge to do the same with this document\u2026reply",
-      "Have to agree with you. You can\u2019t introduce concepts like phishing and MFA without actually explaining what they are.reply",
-      "To be fair the linked paper links to both MFA and Phishing along with links to almost every topic it touches.https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.50.pdfhttps://www.cisa.gov/sites/default/files/publications/fact-s...https://www.cisa.gov/sites/default/files/publications/MFA-Fa...reply",
-      "Kind proves the point it\u2019s not written for the layperson no?reply",
-      "Read the document; it does explain phishing/etc. for a layperson in simple terms in the document itself. The gp just pointed to more resources for further study mentioned in the document.reply",
-      "I'd be interested in a small sample of what you're talking about. I suspect that's a marketable product these days even if all you do is deslopify generated documentation.reply",
-      "I\u2019m seconding the request. Anything specific that you (xvxvx) would explain to a layman differently? Even the briefest of examples would be a nice thought to chew on. \u201cA should be B because C.\u201dI do a lot of explaining to non-techy people. My approach would be to print out the document and walk through it with them. Have the goal first be understanding of why certain things are a priority. Like it\u2019s a baseball game: the three outfielders and three infielders are important to covering all your bases. We\u2019re talking about this angle, in this context, and once the \u201cwhy\u201d is understood it\u2019ll help them interpret the document correctly.reply",
-      "Have you read CSWP50? Its not exactly written on the 3rd grade level. I think its a pretty good compromise between something only your IT department can understand and what a small employer needs to know. If anything, it leans too technical and verbose.Not only are there links to go deeper into each subject matter but also a part telling the employer how to hire help if they need cybersecurity help and with a link to the \"Small Business Cybersecurity Support Programs Finder\" directory. Ideally they should be asking around in the small business community for a local vendor, but this document does a lot of things right.I think this is an excellent document for small business and doesn't really talk down to them.reply",
-      "> I think this is an excellent document for small business and doesn't really talk down to them.Right, the gp has not read it or are intentionally trying to spread FUD.This is a good document as is generally the case for all NIST documents. It is even more relevant for the \"general public\" since every home has similar problems as far as cybersecurity is concerned.Cybersecurity knowledge is vital for everyone nowadays. Hence I highly encourage people to read this and other documents linked to.NIST is one of the few orgs who still do a pretty good job and hence should always be taken seriously. Based on their recommendations create your own checklist/workflow and have everybody at your org/home follow it.reply",
-      "This is my first time seeing \u201cSI\u201d in the wild. That is such a wrong term. It\u2019s jargon in a place where it doesn\u2019t belong.It\u2019s a darn fancy algorithm and a cool tool. Putting it on a pedestal instead of grounding it to reality is not going to help anyone. My condolences to the authors.reply"
+      "Awesome write up. Love it. And good thing you documented it, since in half a year you'll need it again.My takeaway: You should have just gotten the SD card and trusted the previous owner. Sometimes \"simple users\" do know. ^^reply",
+      "Yep. I didn't get into it in the article, but in reality the previous owner had already (accidentally) thrown the SD card in the trash, and was pretty much asking me if they want me for them to go digging through their trash to find it, and I told them not to worry about it.reply",
+      "\u201cNo worries, I\u2019ll hit HN\u2019s front page instead\u201d - much more fun!reply",
+      "Why did the previous owner ever remove the card in the first place if they knew it broke things?reply",
+      "Because if OP didn't want the card, then the card could be sold on ebay for 60 euros.reply",
+      "Nice writeup. But IIUC you can change it so that it automatically updates the time every 6 months?reply",
+      "That's kind of you :-)reply",
+      "I\u2019m a little confused by the description of that interaction - why wouldn\u2019t you take the SD card? Did they want to charge extra for it? Seems like even a 10 year old map (plus apparently other functionality) is something you\u2019d want.In any case, glad it took you on the wild goose chase that led to the write up!reply",
+      "> And good thing you documented it, since in half a year you'll need it again.Man this is too real for personal projects.  I really need to write down my findings and thoughts more for future me.reply",
+      "I started using an \"engineering notebook\" for things like that. They are called other things in other lines of work or school (lab notebook, captain's log, ...). In an actual engineering notebook, you would use a sewn binding where you can't add or remove pages, the pages are numbered, you have an index in the front, entries are made in strictly chronological order, you'd have someone else witness and sign pages, draw a diagonal line across empty areas so you can't remove things, only cross things out with a single line, etc. All that because you might need to prove you invented something and other legal CYA reasons. Most of these requirements, you don't need for personal projects, though. But the things that are useful: keeping track of projects, what settings you've tried, what the results were, and so on. That way you don't have to reproduce it from scratch again later. \"What settings did I need use to create the gerber files in kicad for manufacturing? How did I set ___ in the oscilloscope? What parts did I use to make that thing? What things did I wish I had checked last time? Where did I put those files?\" You can also print things out and tape them in for reference.reply"
     ],
-    "link": "https://www.nist.gov/news-events/news/2026/11/self-employed-solopreneur-nist-has-cybersecurity-guide-just-you",
-    "first_paragraph": ""
+    "link": "https://blog.nns.ee/2026/11/02/renault-hack/",
+    "first_paragraph": "The car that I drive is a 2014 Renault Latitude. It's not a fancy car by any means and is starting to show its age, but it gets me from point A to point B and does everything else reasonably well so I've never really had any reason to complain.When I bought the car, the previous owner asked me whether I wanted a \"navigation map SD card\" with it.They mentioned that the car apparently needs this SD card just to change the time on the clock, but I didn't really find that believable - not that they were lying to me, but perhaps they couldn't figure out how to enter the correct settings menu. After all, videos of similar head units online showed the menu with the clock settings option right there.Since the maps on the SD card were apparently very out of date and didn't function properly, I decided I didn't need it and the previous owner tossed it.I didn't really miss it. The dashboard display did show a large \"No maps found!\" message taking up the majority of the display, but it didn't both"
   },
   {
-    "title": "Show HN: Warsaw in voxels \u2013 An interactive 3D map of the city centre (p.migdal.pl)",
-    "points": 232,
-    "submitter": "stared",
-    "submit_time": "2026-11-02T16:25:26",
-    "num_comments": 38,
-    "comments_url": "https://news.ycombinator.com/item?id=50339221",
+    "title": "Stringman, an $800 open-source room scale gripper robot (neufangled.com)",
+    "points": 468,
+    "submitter": "nharada",
+    "submit_time": "2026-11-03T16:47:29",
+    "num_comments": 162,
+    "comments_url": "https://news.ycombinator.com/item?id=50354358",
     "comments": [
-      "There are quite a few such other projects, e.g. Streets of Prague (https://beta.streetsofprague.com/), were one can explore Prague in a top-down GTA2-like mode, based on real data.reply",
-      "It'd be cool to see these taken to the next level by showing actual live updated public transit and car trafficreply",
-      "there's an ex googler whos been pretending on yt for the last 6 months that he's building \"open source palantir\".he recently published his ai slop and it's basically a google earth running on open source maps with fake traffic drawn on the streets.looks impressive, until you zoom on your location and look out the window and compare what's on the screen vs real lifereply",
-      "Until you realize its streaming data and by zooming in to compare your location you just gave that dude your precise location.reply",
-      "this blew my mind! incredible!reply",
-      "wow thats super cool!  does it correctly texture the buildings?reply",
-      "This is neat but the FPS controls are very strange, I'd recommend changing the A/D movement to be a 'strafe' (lateral movement, no rotation) and reversing the mouse look directions (i.e. dragging right should rotate the camera to the right instead of dragging the screen like it might in figma)reply",
-      "Super neat project but I am getting fractional (<1 FPS) frame rates in FF on Linux. Granted, this is an older AMD PC and certainly no power house but it used to run actual Minecraft just fine.reply",
-      "Sounds like software rendering.Try activating webgl/webgpu (off by default on linux) in FF config (or use chromium).reply",
-      "It's almost unusably slow on my laptop.  3080ti mobile, windows 11, chrome.  I opened the profiler and the update appears to be fast enough; roughly hitting 30fps, but there are massive gaps between updates and the actual frame time seems to be about 120ms.Other than that, neat :)reply"
+      "Hi there, I'm Nathaniel, the creator of this robot. Thanks for posting it :)\nIf you have any questions feel free to ask.Can it kill you? no probably not. The tension limit kicks in and lets the line out if you pull too hard.Will it work in a room with a ceiling fan? usually its fine since you can lower the work area ceiling to exclude the fan.Will it make my kids learn to not pick up after themselves? They never will anyways.reply",
+      "> Can it kill you? no probably not. The tension limit kicks in and lets the line out if you pull too hard.Is there a physical safety? The anchors are attached to the wall, do they release with less tension than a human airway can withstand? I have experienced injuries that would prohibit me from exerting a \"backpack\" of force over my head.reply",
+      "There is a tension limit of 28 newtons on any single line. Beyond that, the motors release with a damped motion. This can be lowered, at the expense of payload capacity.reply",
+      "How far will they release? Is that physical or software? If the line is wrapped around my neck and anchored to the wall how does the motor releasing help me? I can see industrial applications but it seems like a dangerous thing to have in a home.reply",
+      "FYI they said the tension limit is 28 newtons.It takes about 38 newtons to lift a 4 litre bottle of milk.It'll be okay.reply",
+      "So it probably can't kill you with blunt force trauma but it could drop something toxic into your drink while you're in the other room. Which, you know, assumes some sort of hostile intent that a robot can't have on its own lol. So it can kill you but probably not accidentally.reply",
+      "If your adversary wants to murder you that badly, I doubt they're going to give up when they find out you don't have a Stringman wired up in your kitchen.reply",
+      "\"Any machine can be a blender if operated wrongly enough\"reply",
+      "I\u2019m going to go out on a limb and say that you should just have better survival instincts than a toddler and not let the line wrap around your neck. And if you do have toddlers, maybe keep them away from the hanging machine.reply",
+      "If that's the official stance, then this robot will kill people. You can't expect people to never leave a toddler in the same room with the robot, unless they fully realize the implications of having a killer robot at home. Otherwise the consumers are being deceivedProducts in the real world need to be better than thatreply"
     ],
-    "link": "https://p.migdal.pl/warsaw-vibe-voxel/",
-    "first_paragraph": ""
+    "link": "https://neufangled.com/",
+    "first_paragraph": "Room-scale cable robot$795In robotics, price is basically actuator count. Stringman reaches an entire room with four motors,\n                        hanging its gripper from lines anchored in the ceiling corners. Working from above, it reaches\n                        floors too cluttered for any wheeled or legged robot. And since the lifting force is shared by all\n                        motors, payload capacity scales with their combined torque instead of a single actuator's,\n                        peaking near the center of the room where the lines share the load most evenly.*0.75\u00a0m serial arm using the same DM-H6215 1\u00a0N\u00b7m direct drive actuators at rated torque, ignoring the weight of its own links. Stringman figure is for a 7\u00a0\u00d7\u00a07\u00a0\u00d7\u00a03\u00a0m room at the 28\u00a0N line tension limit, net of its 638\u00a0g gripper and marker.Stringman is open source and OSHWA certified. The mechanical CAD,\n                      the PCBs, and the control software are all published.We believe owners should be in contr"
   },
   {
-    "title": "SLAC researchers find proof of altermagnetism, a new magnetic phase (stanford.edu)",
-    "points": 57,
+    "title": "Giant canyon on Mars is still tectonically active (columbia.edu)",
+    "points": 41,
     "submitter": "gmays",
-    "submit_time": "2026-11-02T21:42:25",
-    "num_comments": 8,
-    "comments_url": "https://news.ycombinator.com/item?id=50344224",
-    "comments": [
-      "Link to pub - https://www.science.org/doi/10.1126/science.adv3196Physics aside, Chiral Altermagnon is a great band name.reply",
-      "Some of the sexiest sounding sentences in research findings I have read. \u201c Their results showed direct experimental evidence of chirality \u2013 an asymmetric magnetic structure, akin to a spiral staircase or a screw \u2013 in the spins of an altermagnetic candidate material.\u201dI appreciate the clarity that crystallizes in poetry that this author manages in their report!reply",
-      "Wait so this is distinct from antiferromagnetism how exactly, I thought the net-zero moment was the whole definition there?reply",
-      "The paper\u2019s abstract may answer your question. (see link above)reply",
-      "In fact, I think you will find it is exceptionally clear writing.  I think almost anyone can understand the differences and what is alter even with a quick read.reply",
-      "After reading the abstract and intro, I personally have more questions than when I started!reply",
-      "So Insane Clown Posse was right all along to question how fuckin' magnets work.reply",
-      "This is huge if truereply"
-    ],
-    "link": "https://www6.slac.stanford.edu/news/2026-10-29-slac-researchers-find-proof-altermagnetism-new-magnetic-phase",
-    "first_paragraph": "Learn about our science, people, facilities and partners. Discover our history and vision for the future.\nSLAC science explained\nCut through the jargon while exploring our research.Get an overview of research at SLAC:  X-ray and ultrafast science, particle and astrophysics, cosmology, particle accelerators, biology, energy and technology.Revealing nature\u2019s fastest processes with X-rays, lasers and electronsStudying the particles and forces that knit the cosmos togetherBuilding smaller, faster, more powerful accelerators for allUnderstanding the machinery of life at its most basic levelInventing new tools for science and societyBreaking new ground in securing abundant, affordable and reliable energy.\nThe Genesis Mission\nLearn about SLAC\u2019s role in this national intiative led by the Department of Energy.Learn more about the places where science happens at SLAC: our major facilities, institutes and centers.Linac Coherent Light SourceStanford Synchrotron Radiation LightsourceFacility for Ad"
-  },
-  {
-    "title": "Ask HN: Who is hiring? (November 2026)",
-    "points": 193,
-    "submitter": "whoishiring",
-    "submit_time": "2026-11-02T16:01:37",
-    "num_comments": 157,
-    "comments_url": "https://news.ycombinator.com/item?id=50338728",
-    "comments": [
-      "xxx"
-    ],
-    "link": "item?id=50338728",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Show HN: I built a little browser game to practice Vim commands (duy.run)",
-    "points": 7,
-    "submitter": "dh1011",
-    "submit_time": "2026-11-03T03:10:04",
+    "submit_time": "2026-11-04T01:40:42",
     "num_comments": 3,
-    "comments_url": "https://news.ycombinator.com/item?id=50347552",
+    "comments_url": "https://news.ycombinator.com/item?id=50360573",
     "comments": [
-      "xxx"
+      "If you were standing on the \"walls\" of the canyon, it would look like terrain with a 10%\u201315% slope. You wouldn't even notice it's a canyon.reply",
+      "The bit of mars that fascinates me is the Hellis Planitia[1] A huge hole roughly opposite the globe from the large volcano complex[2] coincidence.. I think not.I am vaguely surprised it was not higher rated for a rover mission. 7k meters down should do something interesting to the atmosphere if nothing else.1. https://trek.nasa.gov/mars/#v=0.1&x=72.07800218650755&y=-42....2. https://trek.nasa.gov/mars/#v=0.1&x=-116.4913302335018&y=16....reply",
+      "If there is life on Mars, it will be underground.So if you can get 7km down without digging, that's the first place to look!reply"
     ],
-    "link": "https://hjkl.duy.run",
-    "first_paragraph": "Little edits. Lasting skills.Learn Vim in your browser with short, hands-on editing challenges. Practice motions, text objects, search, marks, counts, and repeats in a real Vim editor \u2014 free, no sign-up.Pick the skills you want, then make small real edits in a browser Vim editor. Each skill runs two guided edits, two prompted edits, and two independent edits. Any valid edit that reaches the target text passes. Type :help in Normal mode for the current commands.Free, no account, nothing stored. Requires a desktop browser with a physical keyboard."
-  },
-  {
-    "title": "Egoless Mathematics in the AI Era (terrytao.wordpress.com)",
-    "points": 137,
-    "submitter": "smilelamp",
-    "submit_time": "2026-11-02T18:54:44",
-    "num_comments": 93,
-    "comments_url": "https://news.ycombinator.com/item?id=50341736",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://terrytao.wordpress.com/2026/11/02/egoless-mathematics-in-the-ai-era/",
-    "first_paragraph": "Updates on my research and expository papers, discussion of open problems, and other maths-related topics.  By Terence Tao2 November, 2026 in guest blog, opinion | Tags: AI, Amit Sahai, Jie Xue, Karthik C. S. | by Terence Tao \n[This is a guest post by Karthik C. S., Amit Sahai, and Jie Xue. This blog post was initially written in a different file format and converted using AI. \u2014 T.]\n\nThis is a good time for mathematicians to think carefully about the purpose of their work. The development of artificial intelligence brings that question before us with unusual force. Much of the discussion concerns which tasks machines will perform and which abilities will remain distinctively human. But our response also depends on a prior question: what do we understand mathematical work to be, and what gives it its worth? If our answer has become inseparable from the production of results and the demonstration of individual ability, the present uncertainty may reveal a difficulty in our conception of "
-  },
-  {
-    "title": "The SEC Should Block Anthropic's IPO to Protect the Public (techpolicy.press)",
-    "points": 274,
-    "submitter": "cdrnsf",
-    "submit_time": "2026-11-02T22:30:47",
-    "num_comments": 210,
-    "comments_url": "https://news.ycombinator.com/item?id=50344919",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
-    "first_paragraph": "HomeMatt Scherer is co-author of the recent report Brace for Impact: Protecting people and the economy when the AI bubble bursts.Anthropic CEO Dario Amodei looks on as United States President Donald Trump holds a press briefing with AI executives following a meeting on artificial intelligence, outside the West Wing of the White House on September 29, 2026 in Washington, DC. (Photo by Kevin Dietsch/Getty Images)Things are seldom what they seem when it comes to the finances of the AI industry. The AI ecosystem\u2019s circular business dealings, extensive use of financial engineering, and otherwise murky finances make it hard for investors, regulators, or workers saving for retirement to get an accurate financial picture of AI companies.That is particularly true of Anthropic, which filed the registration statement for its initial public offering (IPO) last week ahead of a planned November stock market debut.The company\u2019s topline financial figures look quite impressive for a startup, with reven"
-  },
-  {
-    "title": "Intel stock collapse worsens as $3.5T chip rout spreads (yahoo.com)",
-    "points": 160,
-    "submitter": "entryleveljobsc",
-    "submit_time": "2026-11-03T00:08:53",
-    "num_comments": 112,
-    "comments_url": "https://news.ycombinator.com/item?id=50346153",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://finance.yahoo.com/markets/article/the-intel-stock-collapse-is-getting-worse--and-the-37-trillion-chip-rout-is-spreading-212154947.html",
+    "link": "https://lamont.columbia.edu/news/giant-canyon-mars-still-tectonically-active-today",
     "first_paragraph": ""
   },
   {
-    "title": "Polyend releases the Tracker firmware source code (polyend.com)",
-    "points": 104,
-    "submitter": "austinallegro",
-    "submit_time": "2026-11-02T17:20:13",
-    "num_comments": 32,
-    "comments_url": "https://news.ycombinator.com/item?id=50340159",
+    "title": "Jelly Sheet (mrdoob.github.io)",
+    "points": 10,
+    "submitter": "memalign",
+    "submit_time": "2026-11-04T03:40:50",
+    "num_comments": 0,
+    "comments_url": "",
     "comments": [
-      "This has to be related to MWAVE's FM-1 viral popularity, largely due to open firmware right?https://arstechnica.com/gadgets/2026/10/from-impulse-purchas...https://github.com/aroum/fm1-custom-fwsee also:> Reverse Engineering of the M-VAVE FM-1 Pocket Synthesizer Firmwarehttps://news.ycombinator.com/item?id=49994065 (75 points - 50 comments)reply",
-      "That, plus the fact people were already poking into the closed firmware binary, plus the existence of an alternative firmware. By doing this, Polyend also kind of passes the responsibility of maintaining the Tracker devices to the community.It's also worth mentioning that the release is not just a source code release, they added a lot of great features like sample streaming, and dedicated velocity and timing lanes. And they released APIs so that people can easily create new synth engines and effects.reply",
-      "Bring Roland VSynth capabilities to it.reply",
-      "Yes. Custom firmware for audio gear has been A Thing for a long time, as far back as the 1990s. I worked on a company that offered a general DSP platform back in 2003, but it didn't take off because it was too difficult for most people to program. JJOS became very popular among users of Akai's MPC line (of whom there are very many) in the mid-2000s.The combinations of LLMs and agentic reverse-engineering skills have sent things into overdrive in recent months. As well as allowing people to repurpose cheap gear like the M-VAVE it has also revealed that a lot of larger vendors have been outright lying to their users about hardware limitations to more effectively segment their target market. In my the future is high quality controllers/converters with a generic SOC inside. Behringer is already going down this route and has the manufacturing heft to do it quickly and with a decent level of quality. Akai also seems to have jumped in on the trend.reply",
-      "For people afraid of bricking their units, I can't stress enough how groundbreaking it is that they're acknowledging that risk and still offering to repair your unit. You pay of course, because this is a risk you took, but at least they will have a look at it:    \"Out-of-Warranty Repairs Available: In the unlikely event that something ever goes wrong with your hardware while using custom firmware, it is not covered under standard warranty. However, Polyend is always happy to help get your instrument back up and running through its official out-of-warranty repair service (standard service, parts, and shipping fees apply.\"reply",
-      "Does the board come with a jtag interface to unbrick the device?reply",
-      "> groundbreaking it is thatHmm, out-of-warranty repairs for music hardware is pretty standard, at least here in Europe. I've done this with Elektron, Novation, Korg, Adam Audio, Yamaha and a bunch of other brands before as well, with everything from speakers to synths. Is it different in the US perhaps?I've even sent gear running custom firmware in for out-of-warranty repairs, without any questions asked about it. AFAIK, even if you're within warranty with custom firmware, they would need to prove it's specifically the fault of the custom firmware in order to deny warranty claims, they couldn't refuse it outright just because of the firmware on the device.reply",
-      "Modwiggler is filling with reverse engineering mods, I think it is super smart to get out in front of that. Modding is nothing new and open source music firmware \u00e0 la Mutable Instruments is a great example to learn from. Good move Polyend!reply",
-      "Relatedly, Erika Synths released the source code of the LXR-02 very recently as well: https://www.ericasynths.lv/news/post/lxropen(I/AI had fun porting it to wasm/web! I don't want to seem too self-link'y, so if anyone asks, happy to share the link)I also have a Polyend Tracker for sale if anyone's in the market..! It's a great device, I'm just trying to focus on having less right now.reply",
-      "Share the link!reply"
+      "xxx"
     ],
-    "link": "https://polyend.com/whats-up/tracker-the-biggest-update-yet/",
+    "link": "https://mrdoob.github.io/codevember-2026/01/",
+    "first_paragraph": "Drag the cloth \u00b7 Space to pause"
+  },
+  {
+    "title": "Show HN: HackerTV \u2013 HN's most-recommended Youtube videos as 24/7 TV channels (hackertv.org)",
+    "points": 246,
+    "submitter": "dsalzman",
+    "submit_time": "2026-11-03T01:18:09",
+    "num_comments": 50,
+    "comments_url": "https://news.ycombinator.com/item?id=50346755",
+    "comments": [
+      "What I would like to see for vibe coded novelty apps that are not realistically going to see updates are the prompts-as-source. For instance, I one-shotted a Roku app to play the HackerTube listings, and it works good enough:  Build a sideloadable Roku channel/app for browsing and playing videos from\n  https://hackertube.org/. Inspect HackerTube's API or video pages and use Roku\n  BrightScript/SceneGraph. Deliver a complete zipped Roku channel with source,\n  setup instructions, and any necessary metadata/proxy details. Aim for Roku\n  Developer Mode sideloading.reply",
+      "Nice. I like this. One minor usability issue I saw. In the guide, the channels start with the lowest on top and then go down to the higher ones. But the up and down arrows work the opposite way. For example, the down arrow moves me to a lower channel, which is the opposite direction of the guide. Maybe there is no elegant solution to this.reply",
+      "Okay, this is the best one I have seen. Thank you.reply",
+      "Love the multitude of ideas! Upvoted. I did repo\u2019s a couple days ago:https://news.ycombinator.com/item?id=50342272It has some cool stuff if you click around some. Feedback very welcome!reply",
+      "Oh damn this is much cooler than I expected! For some reason skimming through channels is more enjoyable than click a video I'd probably wouldn't click onreply",
+      "Love it ! Thank you for creating this. I am in the process of minimizing my digital consumption and was looking for something like this to live like if it's the 70s. Shameless plug: i have two chrome plugins to reduce digital distractions if anyone is interested. \nSanctum : https://chromewebstore.google.com/detail/sanctum-its-time-to...FlowTube : https://chromewebstore.google.com/detail/flowtube-%E2%80%93-...reply",
+      "Is someone working on HackerTldr?  Three sentences that describe the target page would save me a lot of time.Edit: HackerTV looks great, well worth the click :)reply",
+      "I'm looking forward to hacker games personally. I'd love to see what games are commented on here, other than factorioreply",
+      "Here is one version someone already made: https://hnarcade.com/reply",
+      "This is cool. It would be better if it linked to the hn comment/s and showed some gameplay on hover (also the splash page is unnecessary, ideally https://hnarcade.com/games/category/games should be the home page)reply"
+    ],
+    "link": "https://hackertv.org",
     "first_paragraph": ""
+  },
+  {
+    "title": "Japan's Jimi 'Mundane' Halloween Costumes of 2026 (spoon-tamago.com)",
+    "points": 147,
+    "submitter": "zdw",
+    "submit_time": "2026-11-02T04:31:20",
+    "num_comments": 24,
+    "comments_url": "https://news.ycombinator.com/item?id=50333131",
+    "comments": [
+      "The last one refilling detergent is a parody of The Milkmaid by Johannes Vermeer; everyone has seen it on textbooks and it has become a meme template on Japanese Twitter in recent years.1: https://en.wikipedia.org/wiki/The_Milkmaid_(Vermeer)reply",
+      "I heartily recommend \"Tim's Vermeer\": https://youtube.com/watch?v=94pCNUu6qFYreply",
+      "Thank you, I was confused by what simply appeared to be a picture of someone doing laundry.reply",
+      "I mean, that's a tough idea. That's literally just a picture of someone pouring detergent, not an actual costume. Would have to say this one is pretty lame...Just have to ask, how do you know this???reply",
+      "Some of these are very humorous because of the cultural disconnect (as an American, I have never experienced somebody asking to put their seat back).\"An expert on a very niche subject\" made me laugh out loud the hardest, because it's the one that's most \"just a guy\", and yet it's also exactly how it's described.reply",
+      "More about the expression, but the glasses are pulling their weight here too. Modern masterpiece.reply",
+      "These are masterpieces in my opinion. It\u2019s difficult to get the vibe exactly right when you\u2019re working with so little.Yes, a thousand times yes you can put your seat back you gentle soul.reply",
+      "> Yes, a thousand times yes you can put your seat back you gentle soul.Overjoyed that I understand this, allow me to explain it to those who don't.Seats on the Shinkansen [0] are bolt-upright by default. You basically have to recline them a little bit to be even vaguely comfortable.Every person, every time, asks the person in the seat behind them whether it's okay to recline their seat by 5\u00b0.The seat pitch on the Shinkansen is approximately 1 metre. There's a lot of room.[0]: My line, anyway \u2013 the E5 series cars that run the Hayabausa service.reply",
+      "The Japanese seem particularly adept at the concept of \"vibe\".reply",
+      "They are more like \"situational haikus\", or the transposition to practical humor of the concept of haiku.reply"
+    ],
+    "link": "https://spoon-tamago.com/japan-jimi-mundane-halloween-costumes-2026/",
+    "first_paragraph": "japanese art, design and cultureHappy Jimi Halloween to everyone who celebrates. It\u2019s that wonderful time of year when our favorite Japanese festival, Jimi Halloween, is on full display. Mundane Halloween, as we coined it back in 2018, is when people dress up in costumes so mundane they have to be explained.The tradition was started in 2014 by a group of adults at\u00a0Daily Portal Z\u00a0who kind of wanted to participate in the festivities of Halloween, but were too embarrassed to go all out in witch or zombie costumes. So instead of the flashy and flamboyant costumes they had been seeing gain popularity in Japan, they decided to dress up in mundane, everyday costumes.You can comb through social media using the hashtag #\u5730\u5473\u30cf\u30ed\u30a6\u30a3\u30f3 but below we present to you some of our favorites from this year\u2019s festivities. We\u2019ve been covering this event since 2018 so you can also take a look at\u00a0some past years\u00a0too!Person trying to take a group photo in a very small izakaya | @YSSkywalkerPerson who is about to a"
+  },
+  {
+    "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand (arstechnica.com)",
+    "points": 421,
+    "submitter": "bookofjoe",
+    "submit_time": "2026-11-02T14:02:42",
+    "num_comments": 177,
+    "comments_url": "https://news.ycombinator.com/item?id=50336918",
+    "comments": [
+      "Anyone that's never had the (dis)pleasure of working with tapes, there's some gotchas to know about before archiving and forgetting about it.When you create an archive, do not skip the step of reading it back. I'm not talking about just having the system confirm it is readable. I mean actually restoring the data from the tape. I've had tapes fail to retrieve data off of the tape even though the writing app confirmed it was readable.Drives can have issues reading data written by another drive. Drives can have issues reading a tape it wrote itself.Why write one when you can write two at twice the time/cost? In all of my experience with tape, I've never written just one tape. In the early days of DVDs, the images were written to LTO to send to have the discs pressed. Two were always sent on the chance one wasn't readable and schedules were so tight that the loss of a couple of days to send a new tape would wreck delivery dates. Another facility wrote three tapes: one kept on site, one sent to IronMountain, one sent to the client directly. Plenty of occasions saw the local copy unreadable and the IronMountain copy was retrieved. These were managed by large robotic tape libraries so each tape was written in a different drive at the same time so it was 3x cost while only 1x time.Use the drive cleaning cassette as recommended. Your dirty heads can cause the data to not be written/read correctly depending on which head is dirty. If you're having issues reading, clean the heads before giving up on the tape. If you're having issues reading a tape just written, do not think someone else will be able to read it.Ensure whoever might be using a tape you've written understands what was used to write the tape. Not all archivers are compatible. If you use the tar command to write to tape, people using a GUI app won't be able to read it.reply",
+      "I have worked with 5 different LTO tapes versions, 5 different other cassette formats (DAT, DDS, etc), and open spools\u2026 never, ever, ever in the 15 years had ANY problem (I\u2019ve probably used 1000 of them). We did cycle them very often, we did have proper maintenance of the drives, through. Now that, compared with RAID Disk arrays, where we had monthly failures, was much better. Also I would not trust the \u201esemi-permanent\u201c NVMEs, where after 1 year without power they get basically resetreply",
+      "1000 is a lot but it sounds like GP was a few orders of magnitude higher.reply",
+      "Yeah, we'd do 1000 in a year easy, but that number is easy to grow when every write takes 3 tapes. We had 3 robot towers each with 10 drives in them in our facility, and there were others at other facilities. There was an entire department for interacting with them. If the tape with your data was in a robot, you could have the restore started within an hour. If the tape was in the onsite library, it would be within a few hours as they decided what tape to unload from a robot.reply",
+      "I worked with a few more orders of magnitude and saw lots of errors.reply",
+      "What order of magnitude were the errors compared to the number of tapes?  1%?  0.1%?  0.01%?reply",
+      "If the error is 1 in 1,000 it's likely never to be found.  How often is data retrieved from tape?reply",
+      "If you follow the advice to have it read immediately after written, then 100% of tapes have data retrieved.reply",
+      "When I hear wildly differing stories like this I often wonder how much environmental conditions play a factor in the different experiences that people have.Perhaps one of you is living in a much more humid and/or hot environment that causes issues with the writing process.reply",
+      "Tapes were constantly kept in the data center, so constant temperature and humidity 25C/50%. As I said, Tapes were changed after N uses, drives properly serviced. So if you leave them at home, in the sun in summer and in winter expose them to 10C with humidity from 10% to 90%, old drives, never clean heads\u2026 IdK\nThat all being said, when I started working there, in my ignorance, I said \u201cTAPES?!?! They are not reliable\u201d due to my experience with audio tapes. But I was laughed at, and they told me about people putting 10 9 track spools in a car [0] (by the way, the same we used for billing backups!) and they went literally thousands of miles driving on partially dirt roads, in summer w/o AC, doing updates to systems, and also never ever had an issue. They were so sure they would work, that they did not take a second set, even when driving 1000 miles, and a read error would mean going back!!![0] https://en.wikipedia.org/wiki/9-track_tapereply"
+    ],
+    "link": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Safari introduces Adaptive Dark Mode in 27.3 (webkit.org)",
+    "points": 355,
+    "submitter": "paddingtone",
+    "submit_time": "2026-11-03T21:39:05",
+    "num_comments": 199,
+    "comments_url": "https://news.ycombinator.com/item?id=50358562",
+    "comments": [
+      "FYI, light-dark() in CSS is a thing now.https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/V...reply",
+      "And `:prefers-color-scheme` has been supported by all major browsers for seven years.reply",
+      "Windows 3 through windows 7 had pervasive support for dark mode as long as application developers didn't custom paint their user interfaces. Application developers started out almost all supporting system colors and gradually over the next 25 years or so started implementing their own custom-drawn interfaces, accelerated by embedded IE/mshtml views and then later even more by Electron. This concluded with practically zero interfaces supporting the system color scheme.reply",
+      "Yeah but \"dark mode\" for Win3 through WinXP was primarily to support passive matrix LCDs, which required inverted color schemes to appear with enough contrast to read. That is why the built-in \"high contrast\" color schemes look so aggressively awful.reply",
+      "Yeah, when dark mode became \"a thing\" my first reaction was \"...didn't we have this already?\"I was a theme junkie back in Windows 98 times, but stopped bothering since it became increasingly clear that Microsoft was not really interested in supporting them after XP.reply",
+      "Custom painting isn't the only thing that broke it. You can customize the style (colors) of the native widgets to get a desired look but IIRC you could choose from system colors (follows the theme/mode automatically) or exact colors. Some applications used a mix of them which made the UI look awful if you switched away from whatever the default theme was.reply",
+      "And broken in Chrome since the beginning:https://issues.chromium.org/issues/366412383reply",
+      "I wouldn't call this part of the situation a bug. I'm sure everyone has their own opinion about which is the \"right\" way to handle a mismatch of OS level preference and browser level theme though.The underlying problem is Chrome exposes no (normal) setting to override the OS level setting at all, not necessarily that the preference shall always follow the browser's theme specifically.reply",
+      "This issue is related to appearance setting inside Chrome itself (which sets Chrome's appearance, not how it should work with websites AFAIK). The core feature of prefers-color-scheme (following the OS-level setting) is working as intended.reply",
+      "It is not true that prefers-color-scheme should always follow the OS-level setting. The doc says \"The method by which the user expresses their preference can vary. It might be a system-wide setting exposed by the Operating System, or a setting controlled by the user agent.\"[1]So if the user sets dark mode in the browser, do they not explicitly express their preference for websites? How could they be more explicit about the setting?[1]https://drafts.csswg.org/mediaqueries-5/#prefers-color-schem...reply"
+    ],
+    "link": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
+    "first_paragraph": "Nov 3, 2026by Simon Fraser, Luming Yin, Lily Spiniolas, Joanne Pan, Veda Periwal and Jen SimmonsWe\u2019re excited to announce Adaptive Dark Mode in Safari 27.3 beta. When enabled by a user, Safari adapts light websites and presents them as dark.In the spring of 2019, Safari 12.1 became the first browser to support dark mode on the web. A lot of people love using dark mode, but not every website has a dark version. Almost 40% of web page loads are from users in dark mode, and yet only 10% of page loads support it. If you love dark mode, you\u2019ve probably hit a site that felt particularly bright. Adaptive Dark Mode is designed to close that gap, providing a consistent dark experience across the web.You can try it today in Safari 27.3 beta. To enable, first make sure your system appearance is set to dark. Then browse to a website with a bright background. Safari will offer a preview of Adaptive Dark Mode. Tap \u2018Try\u2019.For websites that signal support of dark mode with <meta name=\"color-scheme\" con"
+  },
+  {
+    "title": "Show HN: Uncracked City, detective game where you question LLM suspects that lie (uncracked.city)",
+    "points": 10,
+    "submitter": "passkey1510",
+    "submit_time": "2026-11-03T21:20:03",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=50358352",
+    "comments": [
+      "When I was growing up there was a wonderfully made interactive \u201cnovel\u201d game on early Macintosh called Sherlock Holmes. I\u2019ve always wondered when we\u2019ll get to a point where this can be done ad-hoc with any potential crime thriller. LA Noir introduced nuanced facial movements and dialog chains but I keep going back to that 1990s era Sherlock Holmes Consulting Detective.reply",
+      "This one? https://www.macintoshrepository.org/3485-sherlock-holmes-con...reply",
+      "Talking to lying LLMs is what I do all day for work. Can\u2019t imagine I\u2019d want to do the same in my free time.reply"
+    ],
+    "link": "https://uncracked.city",
+    "first_paragraph": "Unsolved filesThe cases nobody has cracked.A detective game set in real cities. Search the places, question the suspects, catch the lie, and write the report nobody has managed to write yet.Halloween caseSalem, 2025Salem, the morning after Halloween. Meg Ashcombe, the last of her family, lies at the foot of her grand staircase, one slipper on the thirteenth step, the front door bolted from inside. Half the town says the Grey Captain finally took her.Four suspects. One of them lies.Nobody has solved it yetWatch the teaser on YouTube01Every case happens in a real neighbourhood. Find the clues, open what is locked.02Ask your own questions, typed or spoken, in any of the game's six languages. Each suspect answers in their own voice. Some of them lie.03Hold a clue against a statement. When the lie cracks, write your report: three tries, not one more.Paris, Rio de Janeiro, Marrakech, Tokyo, Sydney: five training levels, each harder than the last. Then come the real cases, harder still. Each "
+  },
+  {
+    "title": "Qwen 3.8 27B on my laptop can interpret model weights, too (simonwillison.net)",
+    "points": 538,
+    "submitter": "theanonymousone",
+    "submit_time": "2026-11-03T17:40:00",
+    "num_comments": 170,
+    "comments_url": "https://news.ycombinator.com/item?id=50355251",
+    "comments": [
+      "Not making any claims about a specific model's capabilities, but all these \"can interpret model weights\" posts brings to mind the line in Shakespeare's Henry IVGLENDOWE: I can call spirits from the vasty deep.HOTSPUR: Why, so can I, or so can any man, but will they come when you do call for them?I can interpret weights too, but will that interpretation be correct?reply",
+      "They did test for correct interpretation, so what point are you making?reply",
+      "His point is that he has read Shakespeare but not the linked article.reply",
+      "He can call on comments from the vasty deep, but shalt we find them relevant?reply",
+      "These are famous games tested here though, and I tried to feed one problem to DeepSeek 4.1 Flash 1017 and it comes back at 66% confidence it is a Pac-Man (incorrect). That smells to me the problem setup heavily hint towards these 2D games. Might be resolution related to be honest.reply",
+      "To be honest I think the experiment would be insanely impressive even if you prompted explicitly that the game is one of 4 options.reply",
+      "From what I saw in the paper, no they did not.  They tested that the specific change introduced increased performance on a single task (the one mentioned in the prompt).  They did not study the impact of that change on overall model performance across a variety of benchmarks.  But maybe I missed something.reply",
+      "But increasing performance on a single task was the point of the change?reply",
+      "> I can interpret weights too, but will that interpretation be correct?Chances are much higher than a model can figure out what the patterns are, decipher them, and retain that knowledge in a meaningful way it can reason about. Me and you might take years or months to do all of that on our own, with a \"map\" of the weight we might be able to discuss it, but not as effortlessly as an LLM.Honestly, I had told a few different colleagues that reading a model is probably not that exclusive to frontier models. It's probably yet another reason OpenAI /  Anthropic don't release any big open weight models, but thankfully Google and Microsoft release reasonably sized models. Imagine a new GPT open weight release, it would get dissected drastically.reply",
+      "Further than that, aren't \"weights\" just another sequence of tokens? We see them as vectors, pass to the API or as strings into a chatbox interface. Is it so surprising that the high-dimensionality linear algebra machine crunches them and gives us back useful vectors that can be mapped to text?Isn't that what this whole technology paradigm is about? How is it surprising?Granted, it is cool. But I see so much of \"look at this cool thing I did with LLMs\" and honestly... we need more structured text, more explicit documentation, more ergonomic and intuitive CRUD applications.The amount of \"look at cool things\" is growing way faster than before and they are all sort of low effort now because the \"agentic\" LLM-VM looping apparatus can do a lot of heavy lifting and run with our prompts.And I mean, if one has jargon, knowledge, and intention, they can also leverage that into great structured text, ergonomic and intuitive CRUD apps etc, all of which add great value to our mundane pursuits of applied research, software products and services and so on.Honestly, I begin to think the problem is people dazzling themselves instead of doing the housekeeping that is the bulk of life. Technology choice is entirely secondary.reply"
+    ],
+    "link": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+    "first_paragraph": "3rd November 2026Yesterday\u2019s hot paper was Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights by Rikiya Takehi, Jayden Teoh, Alex Zhang, and Omar Khattab. The paper (OK, the authors classify is as a \u201cblog post\u201d, but it\u2019s paper-shaped) found that frontier models, in particular GPT-6 Astra, can both interpret and modify the raw weights of a machine learning model\u2014literally a text description of the model containing a bunch of floating point numbers. I\u2019ve been playing with one of the examples from the paper and I\u2019m delighted to share that Qwen 3.8 27B running on my laptop can do this as well!Here\u2019s the highlight from their abstract, describing impressive capabilities for GPT-6 Astra and coining the term Weight-Space Programming for when LLMs analyze and modify model weights:Just by looking at the raw weights, GPT-6 Astra can tell what a network was trained to do. And without any environment feedback, it has no trouble writing, from scratch, small gam"
+  },
+  {
+    "title": "Why Clip Art Was Everywhere Until It Wasn't [video] (youtube.com)",
+    "points": 17,
+    "submitter": "surprisetalk",
+    "submit_time": "2026-11-03T12:40:06",
+    "num_comments": 4,
+    "comments_url": "https://news.ycombinator.com/item?id=50351298",
+    "comments": [
+      "Now everyone just gets clipart tattoosreply",
+      "Brings me back to the days of going to dgl.microsoft.com in Internet Explorer to explore the library of Clip Art graphics online. This was during the Office XP and 2003 days. Even today, that style comes across as far more authentic than the tacky AI-generated flyers you see plastered everywhere now.reply",
+      "Is there a name for the \"clip art\" or the style that like almost every 'Dry Cleaner' uses.  I dont think its clip are but it shares many of the qualities and im talking coast to coast.reply",
+      "(2023)reply"
+    ],
+    "link": "https://www.youtube.com/watch?v=XfLlpxE6AYM",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Arrows to arrows, categories to queries (2025) (reasonablypolymorphic.com)",
+    "points": 14,
+    "submitter": "firstbase",
+    "submit_time": "2026-11-04T03:11:27",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://reasonablypolymorphic.com/blog/arrows-to-arrows/",
+    "first_paragraph": "\n\n\u2190\n\n\n\u2192\n\nOctober 14, 2025\n\nhaskell, category theory, programming, catlang\n\nI\u2019ve had a little time off of work as of late, and been spending it in characteristically unwise ways. In particular, I\u2019ve written a little programming language that compiles to SQL. I call it catlang. That\u2019s not to say that I\u2019ve written a new query language. It\u2019s a programming language, whose compiler spits out one giant SELECT statement. When you run that query in postgres, you get the output of your program.Why have I done this? Because I needed a funny compilation target to test out the actual features of the language, which is that its intermediary language is a bunch of abstract category theory nonsense. Which I\u2019ll get to. But I\u2019m sure you first want to see this bad boy in action.Behold, the function that returns 100 regardless of what input you give it. But it does it with the equivalent of a while loop:If you\u2019re familiar with arrow notation, you\u2019ll notice the above looks kinda like one big proc block. Th"
+  },
+  {
+    "title": "Postman silently auto-installs AI plugins and attempts to share all API data (github.com/postmanlabs)",
+    "points": 1127,
+    "submitter": "sidgarimella",
+    "submit_time": "2026-11-03T17:22:37",
+    "num_comments": 367,
+    "comments_url": "https://news.ycombinator.com/item?id=50354960",
+    "comments": [
+      "It's a shame what happened to Postman. It started as an excellent little developer tool for testing APIs. Then for some reason they raised over $400M in funding and hired 1,500+ employees, for what should have been a tiny OSS/passion project like curl or little snitch. Instead they now have to justify their valuation by forcing logins, collecting data, monthly subscriptions, AI features, etc.I still don't know how they're valued at $5B+ when I don't know a single developer who actually uses it anymorereply",
+      "> for some reason they raised over $400M in funding and hired 1,500+ employeesYou know the reason. A bunch of people were able to take home a lot of money because of that growth and now have the option to FIRE themselves whenever they want to shake off the stress.That's the founder mentality that Y Combinator exists to leverage or encourage and it's ubiquity is what separates the prevailing 21st century technology movement from the nerdy, academic, UNIX-y movement that gave us GNU, linux, curl, ffmpeg, redis, etcWe got to watch innovative products get pumped full of helium until they explode with bloat and rent-seeking instead of accumulating a growing foundation of sturdy technical building blocks as we could have had on the other path.AI now leads us into some new movement, the worst version of which a few model vendors protected by regulations absorb almost all technical accomplishment and lease it back out to everybody else, and the best version of which democratizes technical construction so widely that individuals can naively spin up effective solutions for the most idiosyncratic needs.We'll see how it goes.reply",
+      "I miss the UNIX-y movement so much :(reply",
+      "Yeah. The plucky rebels pretty much won against the evil empire, but the forces of darkness weren't completely beaten. They regrouped and then repurposed the rebels tools against them. The might of venture capital, big tech, SaaS, hyperscalers and AI was too much. The rebels weren't decisively beaten so much as eventually eroded out of any real significance.reply",
+      "It helps that the rebels donated copies of all their equipment to the dark forces.reply",
+      "MIT and other non copy left licenses were a mistake. In the 2000s and 2010s people were so concerned with usage and GitHub stars of their OSS that they just gave everything away to corporations and now don't have the right to complain anymore.reply",
+      "Like, what?  Solaris/SunOS, DEC Ultrix/Tru64, AIX, HP-UX, Xenix, etc., all with big bad monopolist AT&T's UNIX as their grandpappy.  UNIX was corporate to the hilt.reply",
+      "Corporate, sure, but painting DEC, (old) HP, and Sun with the same brush as AT&T, IBM, and Microsoft just because they sold proprietary, but generally well-documented and reliable hardware and software at whatever prices the market would bear seems unfair.reply",
+      "It's not dead??reply",
+      "It\u2019s as dead as rock and rollreply"
+    ],
+    "link": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+    "first_paragraph": "Opening Postman on my Mac was followed by unexpected changes to my coding agents: recurring MCP authentication warnings and Codex repeatedly routing API work through Postman skills. Investigation found a user-wide Postman plugin, a startup instruction hook, a remote MCP connection, a Claude Code plugin, and a separately installed Postman CLI.I consider automatically changing unrelated coding agents and attempting to approve your own instruction hook a severe consent and trust-boundary problem. An API client should not make itself the default workflow in other tools simply because I opened it.Postman desktop: 12.33.4. Codex Postman plugin: 1.1.0. Installed source revision: 6c8e452e0f4237f4bcc0901cb1ac442dec707e49. Investigation: October 25, 2026.From ~/Library/Application Support/Postman/logs/main.log, lines 11562-11563, timestamp 2026-10-24T09:34:14.418Z (12:34 Jerusalem time):Relevant sections of ~/.codex/config.toml:The installed hooks/codex-hooks.json registers a SessionStart comman"
+  },
+  {
+    "title": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer (arxiv.org)",
+    "points": 280,
+    "submitter": "ibobev",
+    "submit_time": "2026-11-03T21:40:53",
+    "num_comments": 48,
+    "comments_url": "https://news.ycombinator.com/item?id=50358582",
+    "comments": [
+      "I don't like:> Changing coordinates. Given a vector x expressed in the standard basis, we change coordinates by applying    x_eig = V^\u22121 x.\n\n> This operation does not change the vector itself; it only changes how the vector is represented, converting it into eigenvector coordinates.I'm sure the author knows about the difference between the vector and a coordinate vector given a basis. I just don't like this wording. It's weird to say applying a function doesn't affect a change.reply",
+      "That\u2019s active vs passive transformation and AFAIK mathematicians often think in passive ones but physicists would use both.\nAnd the one you quoted is passive.reply",
+      "Another book which I would highly recommend for learning the math (or at least getting a very good idea of how it works) behind machine learning/transformers is \"Why Machines Learn: The Elegant Math Behind Modern AI\" by Anil Ananthaswamy. I read it this past year and I found it was extremely good at pacing and building up intuition to the \"how and why\" of most important math concepts and discoveries in ML that have lead to where we are today. For those who don't already have a fairly deep understanding of linear algebra, statistics, and multivariate calculus, this book will be a far more gentle introduction yet still has enough rigor for you to come away with something.reply",
+      "Wow, this book is surprisingly readable! I like how he starts from basics of linear algebra.reply",
+      "My favorite little book is Fran\u00e7ois Fleuret's: The Little Book of Deep Learning\nhttps://fleuret.org/francois/lbdl.htmlreply",
+      "I love how that site offers a phone-formatted PDF as an option. How thoughtful!reply",
+      "You may enjoy the reflow feature on Koreader. It fits a pdfs content into a screenwidth single column layout. That text is also zoomable.reply",
+      "Does it work on scanned (non-\u201cdigital\u201d) PDFs as well? That has been my biggest pain point so far. Haven\u2019t tried Koreader yet.reply",
+      "i got duo to increase my reading.reply",
+      "Is it working out well for tech pdf's and books? Once I saw the form factor I realized it would be better than an iPad (less heavy, better battery) and that is the use case I am looking at. Might wait till v2.reply"
+    ],
+    "link": "https://arxiv.org/abs/2605.29713",
+    "first_paragraph": "\n      Press Enter to search \u00b7 Advanced search\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs."
+  },
+  {
+    "title": "We're training a Figma-fluent editing model (figma.com)",
+    "points": 93,
+    "submitter": "gmays",
+    "submit_time": "2026-11-01T04:05:23",
+    "num_comments": 42,
+    "comments_url": "https://news.ycombinator.com/item?id=50322603",
+    "comments": [
+      "Ex-Figma.For context, this blog was released the same day Canva made their announcement for Brush, which looks to be further along in this area: https://www.canva.com/newsroom/news/canva-brush/I'm glad Figma is pushing in this area. I do think that Figma has one of the best UI datasets out there in the world, and for the most part they've been sitting on it letting it get unused. Excited to see where they take this, but I do think they should be looking at image models in addition to LLM-based edit models (I'm biased as I left figma to start a image-mode-based UI design tool) as I find they're more capable in this area.reply",
+      "Canva designers tend to overcook everything, they lack taste. Easy win for Figma in the long run. That said, the open source Artcraft suite of apps (Figcraft is one of them) have a headless command layer that maps 1:1 to the UI, you can run the entire suite headless on a VPS and use your existing AI subs..reply",
+      "Is there a way I can tell figma what to do in natural language?Bring that layer up, move this box, etcreply",
+      "> Enhance 224 to 176. Enhance, stop. Move in, stop. Pull out, track right, stop. Center in, pull back. Stop. Track 45 right. Stop. Center and stop. Enhance 34 to 36. Pan right and pull back. Stop. Enhance 34 to 46. Pull back. Wait a minute, go right, stop. Enhance 57 to 19. Track 45 left. Stop. Enhance 15 to 23. Give me a hard copy right there.https://youtu.be/hHwjceFcF2Q?is=GWE74YfHzoEDaiWLEd: arguably there's some interesting bits in that scene beyond foreshadowing dejected designers slumped in a recliner, sipping cheap whiskey in front of a screen, adjusting pixel perfect layout across multiple devices using only a rasping monotone voice...https://blog.kenperlin.com/?p=16063reply",
+      "Install Codex and the Figma plugin.I haven't edited anything manually in Figma for a while now other than small tweaks.reply",
+      "Theoretically that's what the Figma agent is for, but I'll be honest in that it released after I left and I haven't tried it enough to tell whether or not it's effective.reply",
+      "Had launched this plugin earlier this year to do exactly that: https://www.figma.com/community/plugin/1589249271423490087/b...reply",
+      "it's been literally years and the best figma has to show is an announcement of an upcoming announcementmeanwhile, another commenter was right, the figma mcp is dogshitreply",
+      "I've used various combinations of Codex, Claude Code, GitHub Copilot, Figma's MCP, Figma Agent, Pen.dev, and Paper.design for product design. I have previous experience with front-end dev so I'm more technical than the average product designer.In my experience, Figma Agent and Figma's MCP leave something to be desired. I'm sure Figma Agent is useful for people who haven't used Claude Code or similar before, but it really requires most of your product's context to exist in Figma for it to do well.As soon as your product's context exists out of Figma, then it starts to drift and hallucinate its own styles. Using the MCP with an AI that has access to your code provides better results, but even it will have trouble remembering what page I'm asking it to edit.I know they're trying to address this by adding features such as guidelines and specs, along with linking your Figma files to GitHub repos, but my complaint with these features is a lot of the companies I have worked for do not use the very specific tech stack that Figma supports with these features. If it's anything like code connect, it may take years to get more broad support. Every company I have worked for is a C# Microsoft/Azure house.This does not help with my broader frustration with Figma which is there is a lack of focus/vision. They're trying to compete on all fronts by developing all these different products/features and it doesn't really feel like they have a cohesive story for what the future or product design is. Granted, I think most of us in this industry don't either, but when am I supposed to use Figma Make vs. Figma Agent vs. Code layers?They keep blurring the line between them when in all honesty I'm more interested in just using the AI agent I pay for to code what I need and bring it into a canvas for archiving/exploration when I need it.reply",
+      "They should just focus on having a good MCP available with a vision feedback loop (PNG snapshot), good docs, and the frontier models will be able to figure out the rest. Seems ambitious to train your own model. A good MCP really is not hard to make, and it's all they need to do to allow people to use AI well with their product.reply"
+    ],
+    "link": "https://www.figma.com/blog/training-a-figma-fluent-editing-model/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Show HN: Kairos \u2013 Open-source risk and fraud decisioning platform (github.com/finic-ai)",
+    "points": 80,
+    "submitter": "ayanb9440",
+    "submit_time": "2026-11-03T21:16:48",
+    "num_comments": 16,
+    "comments_url": "https://news.ycombinator.com/item?id=50358314",
+    "comments": [
+      "This isn\u2019t really a new problem.  Back in 1995, I was the Sr. Internet Mail Administrator at AOL.  We were doing everything we could to fight the spammers.We found that we would work on a new technique over a period of weeks or months, and then they would find a way to work around our technique in a single weekend.Rinse and repeat.The only thing that has changed is that the market for scammers has moved, and they\u2019ve gotten a lot better and faster at adapting to your protection techniques.reply",
+      "Not something I need but super cool that this is both open source and shows the realtime flow.reply",
+      "this is a new onehttps://news.ycombinator.com/item?id=49610571reply",
+      "Referring to \"decisioning\", which is unfortunately a real term in this space.Don't get me started on people who use \"decision on\" to mean \"enforce a decision\" (i.e. by blocking an action)reply",
+      "Is anybody else annoyed by made-up words like \"decisioning\" and \"proofing\"?You can't slap \"ing\" on a noun.  It's for verbs.  Stop nouning.reply",
+      "Language is what people use to communicate, not what's written in the books. It's fluid, and adapts to requirements as the requirements change.Would it be better if they invented a completely new word, with no clue as to what it means, rather than adapt an existing language structure to their purpose, which everyone understands immediately (even if they get grumpy at it)?reply",
+      "yes, but don't blame OP for it. this is effectively a term of art in their field.reply",
+      "I blame OP for perpetuating it.  And for extending it (to HN) outside their field.reply",
+      "There's a meta linux distribution with that name already :(https://kairos.io/reply",
+      "And an identity verification company: https://kairos.com/And an AI safety organization: https://kairos-project.org/And a DARPA program: https://www.darpa.mil/research/programs/knowledge-directed-a...Pick any ancient greek word and you'll probably find at least a handful of collisions.reply"
+    ],
+    "link": "https://github.com/finic-ai/kairos",
+    "first_paragraph": "Real time event intelligence, fraud and risk decisioning for financial behavior.\n\n\n\nKairos Cloud \u00b7 Docs \u00b7 Discord \u00b7 FinicKairos decides every sign-up, login, order, payment and payout as it happens, and keeps each decision with the signals behind it. It is an open-source alternative to Sardine, Sift, Riskified and SEON, with two things they don't have: your coding agent tunes it, and decision models catch fraud before you have the labels to train on.You send Kairos what happens in your product: sign-ups, logins, orders, payouts, chargebacks. It decides each request (approve, step up, review or block) and keeps every decision with the signals behind it.What makes Kairos different is who tunes it. Connect Claude Code, Cursor, Codex or any agent over MCP, and the agent can do the work of a fraud ML engineer:Kairos is built around Grayson, Finic's decision model. You ask it questions in plain language (\"Does the shipping address look like a reshipper?\", \"Is this email throwaway?\") and it a"
+  },
+  {
+    "title": "There is no posttraining data commons (openathena.ai)",
+    "points": 48,
+    "submitter": "lukasschwab",
+    "submit_time": "2026-11-03T14:45:47",
+    "num_comments": 14,
+    "comments_url": "https://news.ycombinator.com/item?id=50352641",
+    "comments": [
+      "Hi, I wrote this a few weeks ago. Didn't expect to see this here, etc., etc.Happy to answer any questions. We have a discord https://marin.community/reply",
+      "A very academic way of saying We have all the data in the world, except the data we actually need. You ask a company how something works and they say:\"Oh, theres a process.\"Great. Where is it documented?\"in a spreadsheet.\"Which spreadsheet?\"Well, theres the old spreadsheet, new spreadsheet, and the spreadsheet that Karen maintains.\"Where's Karen?\"She left in 2021.\"reply",
+      "Yeah exactly. I like to joke that I wrote this as a sublimated rant, but it's as much a meditation on why it was impossible to expect it to have been there.I don't get to break out my academic voice that often these days, so I appreciate the indulgence.reply",
+      "A posttraining data commons and the infrastructure surrounding it is the next great open source project IMO, akin to Postgres or Linux.The Marin project from Stanford (and I believe now ran by Openathena, the authors of this blog post) is really promising and cool: https://marin.community/reply",
+      "I was impressed by Marin's published evals policies: https://github.com/marin-community/marin/issues/9409Precise and very clearly written.reply",
+      "I think a post-training common would have to be somewhat protected, since these things would be created with great effort and would potentially impact people's ability to earn money in their jobs.I could also imagining them happening as state projects for the sake of competitiveness.reply",
+      "One of the things I'm/we're thinking through is how to do this in a way that\u2019s participatory rather than extractive. It's not necessary that what scientists would choose to automate with agents is the same as what a company trying to automate scientists would choose.If we can help people automate drudgery while giving them a real say in what gets built and control over how their work is used, I think there\u2019s a possibility of a much better outcome than the current trajectory. I\u2019m not sure we\u2019re in that world, but I think we should try.reply",
+      "I'm not sure I'll do it justice, but one of the general ideas behind open-model initiatives is that the economic impacts of specialized post-training are a fait accompli. OpenAI and Anthropic have spent $many-millions procuring closed posttraining data.The relevant question here is whether you want open-weight models \u2014 projects like Open Athena \u2014 to remain or become competitive in the same range of specialties.reply",
+      "They're already kinda protected, open weight releases rarely come with datasets, especially post-training datasets. NVIDIA is probably the exception.I also wonder when the NSA starts sharing their wiretaps/etc with labs for 'national security'. Probably already happening, to be honest.reply",
+      "NVIDIA has done great work with the open datasets and they're much appreciated, but it's worth mentioning that a large fraction of their post-training data is not released. cf. https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-1... But at leased they disclosed what wasn't released.reply"
+    ],
+    "link": "https://openathena.ai/blog/there-is-no-posttraining-data-commons/",
+    "first_paragraph": "We got extraordinarily lucky with pretraining data. Training large language models required a truly vast corpus of text, and it was just kind of lying around.Not exactly by accident. For the last 50 or so years, humanity has been busily creating and digitizing an enormous public record of human knowledge. Most obviously, Wikipedia\u2019s editors have assembled the most comprehensive encyclopedia humanity has ever produced. A vigorous open source movement created a couple petabytes of software source code. Communities on Stack Exchange spent more than a decade asking questions, arguing about answers, and carefully curating the results. Scientists uploaded their papers to ArXiv. Project Gutenberg\u2014almost as old as the internet itself\u2014produced digital editions of out-of-copyright books.And of course, billions of people made websites, commented, had arguments both petty and profound, uploaded photos and paintings, wrote fiction, and\u2014believe it or not\u2014sometimes went and told lies on the internet."
   }
 ]
