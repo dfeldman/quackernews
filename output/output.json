@@ -1,411 +1,355 @@
 [
   {
-    "title": "Ggml v1.0.0 (github.com/ggml-org)",
-    "points": 101,
+    "title": "SpaceX catches the Starship to end Flight 15 (spacex.com)",
+    "points": 927,
     "submitter": "",
-    "submit_time": "2026-11-14T02:28:29",
-    "num_comments": 18,
-    "comments_url": "https://news.ycombinator.com/item?id=50493062",
+    "submit_time": "2026-11-14T21:22:24",
+    "num_comments": 633,
+    "comments_url": "https://news.ycombinator.com/item?id=50500963",
     "comments": [
-      "What is really impressive about this project and llama.cpp as well is that they keep finding new ways to speed up the code on the same hardware. Every time I upgrade (once a month or so) there is usually a 5 to 10% speed boost.reply",
-      "Awesome! ggml and llama.cpp are the Linux of the AI world. Driving local inference one bit at a time.Wishing you unlimited power and may you never see a day of low battery. Respect and Love. Keep it up.reply",
-      "Long time llama.cpp user (and user of other ggml based AI programs) running on my crappy AMD card that only supports vulkan and it's usable thanks to GGML and llama.cpp, great program great project.reply",
-      "I prefer this entry point: https://github.com/ggml-org/ggmlreply",
-      "Imagine naming a library after yourself.> GGML is a C library for machine learning (ML) - the \"GG\" refers to the initials of its originator (Georgi Gerganov).https://github.com/rustformers/llm/blob/main/crates/ggml/REA...reply",
-      "Every single .exe file begins with the two letters MZ because Mark Zbikowski needed a \"magic number\" to begin the PE format.reply",
-      "There's ample precedent for this. When you're building something to scratch an itch, the name is secondary. You cast about for one. Ah, you have a name. That'll do.For example, DJ Delorie's djgpp project, built in 1989, was how I got into \"real\" programming on MS DOS.reply",
-      "> DJ Delorie's djgpp projectFun story time. I started programming on Turbo Pascal. I had read some C code from those demo scene guides, so felt I understood it fairly well by the time I got my hands on a copy of djgpp. I decided to port a relatively simple program I had written in Turbo Pascal, about 300 LOC, line-by-line. It was a small demo just doing a simple rotating, texture-mapped triangle.I carefully converted it, and went over it several time one line at a time, fixing it until I had read over it three times and was happy.I then ran the djgpp compiler...Now, what I hadn't realized at the time was the difference between C and C++. The examples I had seen was C, and I didn't really know what C++ was.The compiler churned on my code and spit out about 3500 errors and warnings (it counted for me).I was shocked. How did my 300 line C program manage to produce over 10 errors and warnings per line, on average?!I spent a long time trying to figure this one out. The first error was inside the first function, and the error made no sense to me.After several days of carefully going over each line and banging my head against the table, I suddenly saw it. There, at the very start of the program, before the line the first error or warning pointed to.In Turbo Pascal I had used const to define things like screen width and height. So I'd have  const SCREEN_WIDTH = 320;\n  const SCREEN_HEIGHT = 240;\n\nWell, C doesn't have const, but I had picked up it had #define. However, my Turbo Pascal habits had kicked in, and so I had written  #define SCREEN_WIDTH 320;\n  #define SCREEN_HEIGHT 240;\n\nI removed the two semi-colons and the program compiled and ran just fine...I ended up staying in Turbo Pascal, I preferred a compiler that gave me sensible errors and quickly. I did pick up C++ much later, and I guess ironically came to appreciate its const correctness.reply",
-      "For example, Debian. AWK. PKZIP. ARJ. Korn shell. Bourne shell. jemalloc, dlmalloc. djbdns.reply",
-      "Hey, it worked for Carnegie!reply"
+      "Starship is, essentially, Space Shuttle done right: fully reusable booster without solid boosters (avoids Challenger disaster) and orbiter stacked on top instead of on the side (avoid Columbia disaster).The original designs for the Space Shuttle had the booster (with wings!) return to the launch site, but the cost for two new crewed vehicles was too large, so they scaled it back to the compromised version.Even more revolutionary, compared to Shuttle, Starship is built on an assembly line. They can build a booster ever 4 weeks and a ship every 2 weeks.The future we were promised in the 1970s is about to become real.reply",
+      "I agree this is a good approach.But the Shuttle became what it became for reasons that Starship doesn\u2019t have to deal with. Shuttle had multiple masters (NASA and DoD) driving a bastardized design. The non-assembly line of NASA is a feature, not a bug: by spreading work across many congressional districts it mitigates political defunding risk. Im not defending those, but they are important context for those who pretend the differences are a signal of government incompetence.reply",
+      "Isn't the fact that spreading work across many congressional districts is necessary rather evidence of government incompetence?That's not a mitigating factor!\"Before you walk away thinking the government is incompetent, please remember that the government makes bad decisions on purpose\" ??reply",
+      "It\u2019s evidence that they are solving different problems. Does the fact that Musk spends hundreds of millions on election cycles mean he\u2019s incompetent, or he\u2019s trying to mitigate a political risk you and I don\u2019t have to deal with?reply",
+      "Sure every system has its unique problems but when you cut to the results, one is clearly way more efficient.reply",
+      "As said elsewhere, that simplistic take falls apart when you realize there would not be a SpaceX if there wasn\u2019t a NASA.reply",
+      "I'm not super convinced that the commercial aerospace industry really needed NASA once super high value satellite services came about in the 90s.The ideal of a good government industry program, is to create a domestic industry, and A: maintain it at a minimum level for whatever goal is in focus (defence, technology familiarity, investment certainty). And B to help it grow to be independent of the government, so the profits and funding can go elsewhere.To me, most of what NASA did after Skylab are a bit questionable. With most of the high profile stuff being of limited value compare to the RF and solid state electronics projects.reply",
+      "Can see your point, that spreading the constructions sites across different states was necessary in order to get it built, but in terms of pure engineering, this is probably a negative.Guess the point is that generally speaking, large scale engineering is typically not done at efficient and creative-levels when directed by the government. Governments have too many stakeholders that have needs that have little do with with engineering that need to be satisfied...And of course, there are exceptions -guessing the Gemini and Apollo programs would be a good examples.... oh, and am not trying to call you out, just trying to think through this for myself as well.reply",
+      "What makes you think Gemini and Apollo are counterexamples? They were successful, but were also heavily dependent on contractors and occurred when NASA funding was many multiples of today\u2019s budget when measured by percentage of GDP.reply",
+      "Well, they seemed like highly effective government programs as they were able to get people to the moon under a very tight deadline (and also knew they were extremely expensive programs. Kind of crazy the amounts relatively to gdp they were spending).And, if they weren't, backs up that the government is not typically a good overseer when it comes engineering programs(although, still seems like when there is a very strong need, governments can be very good partners).reply"
     ],
-    "link": "https://github.com/ggml-org/ggml/releases/tag/v1.0.0",
-    "first_paragraph": "\nSorry, something went wrong.\n There was an error while loading. Please reload this page.\nThere was an error while loading. Please reload this page.ggml 1.0.0 prunes the deprecated public API and the legacy DIAG_MASK ops, adds configurable YaRN truncation and FP8 support, and brings broad performance work across backends: few-row quantized matmuls and MoE fusion on CUDA/Metal, a Vulkan prefill FlashAttention path, a device-side MoE scheduler on SYCL, decomposed Adreno FlashAttention in OpenCL, new WebGPU kernels, expanded Hexagon op coverage, and scheduler improvements that avoid uploading unused inputs.417a024 ggml : bump version to 1.0.0 (#1690)\n771b3d9 requirements : fix numpy for python 3.14 (#1691)\nf154959 sync : llama.cpp\nec04faf fix(hexagon): make host build work with clang-cl on Windows ARM64 (llama/32011)\nb45738e examples : adapt to removal of ggml_diag_mask_inf\n1514439 sync : llama.cpp\n5f29555 ggml : prune (llama/29801)\n076861c hexagon: add Q5_0 and Q5_1 support (llama/32094)"
-  },
-  {
-    "title": "Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its GPUs (techpowerup.com)",
-    "points": 146,
-    "submitter": "",
-    "submit_time": "2026-11-14T02:52:59",
-    "num_comments": 77,
-    "comments_url": "https://news.ycombinator.com/item?id=50493251",
-    "comments": [
-      "40 year old gamer here having a flashback of all anti- competition practices Nvidia sustained for decades. Who here remembers GameWorks and PhysX effectively sabotaging multi-vendor optimization in titles like Witcher 3 and Watch Dogs? Expensive Gsync monitors? Trying to force OEMs to be GeForce  partners in exchange for full GPU support? Forcing EVGA exit from the market? And then completely shafting gamers when crypto and AI markets opened up?reply",
-      "I thought we knew a year ago that nVidia was doing circular finance?https://www.theguardian.com/technology/2025/dec/28/nvidia-in...reply",
-      "Most bubbles you see coming from a mile away. You just don't know how many miles away the actual pop is.reply",
-      "Yep. Slowly and all at once.reply",
-      "Especially if you ignore or avoid the evidence in front of your eyes.reply",
-      "Then why am I having trouble getting the GPU capacity I need?reply",
-      "GPU scarcity is a really poor proxy for the health of the AI market. I don\u2019t know if I should be surprised that someone so bullish about it doesn\u2019t understand this.reply",
-      "you should not be surprised. paper millions already borrowed against at stakereply",
-      "Does the math check out, though? For reference, Nvidia added $17B of non-marketable securities in 2025, and its total revenue was $215B. So, assuming all these equity investments went to GPU purchases, they only amount to 8% of its annual revenue.Since these firms (neoclouds and AI startups) will get consolidated if Nvidia puts too much money into them, I  assume the majority of their funds are coming from elsewhere.reply",
-      "I just am unable to understand whether it's a bad thing or not, you could frame it as being circular, but you could also see it as Nvidia simply giving hardware in exchange for startup equity, is that really fundamentally problematic, is it the scale at which it was done, or is it a valid but risky tactic?reply"
-    ],
-    "link": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+    "link": "https://www.spacex.com/launches/starship-flight-15",
     "first_paragraph": ""
   },
   {
-    "title": "FAA issues national ground stop \u2013\u00a0lifted 4.5 hours later (nbcnews.com)",
-    "points": 1436,
+    "title": "Lovable apps expose passport details and more than 200K private messages (crissyfield.de)",
+    "points": 715,
     "submitter": "",
-    "submit_time": "2026-11-13T21:05:53",
-    "num_comments": 1117,
-    "comments_url": "https://news.ycombinator.com/item?id=50489641",
+    "submit_time": "2026-11-14T17:43:10",
+    "num_comments": 292,
+    "comments_url": "https://news.ycombinator.com/item?id=50499017",
     "comments": [
-      "For those interested, there was a 2009 outage of the FAA Telecommunications Infrastructure that at a surface level seems like it could be a similar failure mode. At the very least, it is an interesting read on how the FAAs systems operate, since a lot of the discussion so far has been wild speculation from people with little knowledge on how the national airspace system actually operates: https://www.oig.dot.gov/library-item/29670Of particular note is this section:\nRisks of FTI Outages for Existing Operational Services \nAs of December 2009, Harris reported that there are a total of 20,982 services operating on the FTI network. While FAA has transitioned all 1,808 IP services supporting FAA flight plans to the new FTI fiber optic network, additional risks will be introduced when the Agency begins transitioning other FAA services, such as En Route Automation Modernization (ERAM) and NextGen platforms, which also require IP technology to operate. Moreover, there are 19,174 existing services that may be transitioned to the new FTI fiber optic network. According to FAA, transitioning these remaining services is important because FTI now connects older FAA systems that provide safety-critical voice and surveillance radar information by utilizing Time Division Multiplex (TDM) technology, instead of IP services.reply",
-      "TBH TDM is far superior and it\u2019s sad that the world discarded it. Packet switching is the worst thing to ever happen to phone calls.  Kids today have no idea how good it used to be (albeit at $0.50/min).reply",
-      "How do you \"overload\" a TDM system? It's just a multiplexer that turns one wideband link into N lower bandwidth links by bitwise interleaving. You can't \"overload\" it.\nWhatever assigns links might be overloaded, and that's usually something like a telephone switch.There's an unverified mention of a fiber cut, which might result in fewer circuits being available. That usually returns an \"all circuits busy\" signal.None of the explanations will make sense until they stop coming from unqualified political appointees.reply",
-      "It's probably not TDM end to end nowadays. If they're backhauling it via MPLS or similar then loss of fiber capacity might render the legacy link inoperable.reply",
-      "I mean the fidelity of modern mics/converters/codecs in devices now is much better, but ya the tradeoff of VoIP is latency/jitter/dropouts etcreply",
-      "TDM only implies (in the traditional 8-bit framing format, at least) that you're giving a 64 kbps timeslot to a caller. You can put any arbitrary payload in there, like AAC, Opus, or whatever. Preferably a codec without an intrinsic lookahead delay though. You can bond multiple 64k timeslots too.Glad someone else appreciates circuit switched technologies though :) . It really does shine in any application that isn't burst-y data transfers.reply",
-      "has there been work on good real time audio codecs? I wonder how good you can do if you limit yourself to a latency of <1 sample?reply",
-      "It was painful not having full duplex calls for so long.reply",
-      "wait what?  show me the data.by far the clearest phone calls i've ever been on which were not landline were 2001 era Sprint CDMA, probably because the vocoder bitrate was higher than in later configurations (like LTE), or the MOS scores were held to a higher standard then.reply",
-      "\u201cSee this admin is just like all the others\u201d sorry, no.reply"
+      "Hi, I\u2019m the author of this blog post. I submitted it to HN two weeks ago, but it didn\u2019t gain much traction, so I\u2019m glad to see it resubmitted. Happy to answer any questions, though I think the situation is fairly self-explanatory.reply",
+      "Technically speaking, is the \"leak\" or \"vulnerability\" in Loveable's architecture or in the Supabase database integration?If the real issue is with Supabase then it needs further investigation as several AI tools use Supabase as standard now, not to mention many opensource projects.reply",
+      "How many of the 159k analyzed sites leaked private data?Edit: The answer (as neathack tells it) is: 2.5% of the sites. The reply was buried below.reply",
+      "From the blog post:  Using datasets from the open web archive Common Crawl,\n  we identified and analyzed 159,041 Lovable projects from\n  December 2025 to September 2026. Of these, 34,545 used\n  Supabase.\n  \n  24,664 websites sent database records from Supabase as\n  soon as they loaded, without requiring a login or any\n  other interaction. That alone is not a security issue:\n  the data may be intended for public display. But by\n  making additional read-only requests, we were able to\n  retrieve more database content. We found records\n  containing email addresses in 10,560 tables across 7,403\n  of the 24,664 websites (30%).\n\nWhat isn\u2019t mentioned in the analysis is that we ran a System 1 decision model on each dataset to determine whether it contained privacy-sensitive data. Using a confidence threshold of 85%, we found that nearly 4,000 websites leaked such information.Edit: That's 15,9% of all Lovable websites that use Supabase.reply",
+      "Don't you think you should have reported this after you established the principle rather than to download more than you needed to do so? Because it looks to me as though you went from 'white hat hacker' to 'quite probably criminal' without a really good reason.reply",
+      "Do you think Lovable would be transparent as to the extent of the problem? Or would they use terminology like \u201ca small subset of our users\u201d and \u201cdata not including card details\u201d or whatever to minimize the issue.I\u2019d much rather live in a world where independent researchers can figure out the extent of the issue rather than go \u201cuh oh there might be an issue here, guess we\u2019ll never know the extent of it, let\u2019s trust them to fix it\u201d.reply",
+      "That's a good question. But it is a very fine line between being a white hat that reports a vulnerability in good faith and someone who actually exploits that vulnerability and turns a vulnerability report into an actual breach. This is - in my opinion, clearly the HN hive mind disagrees - across that line.For instance, if I run into a server and I see 'passport.jpg' in a directory listing I could  download it to see if it really is a passport. But at that point in time I am flirting with becoming a defendant in a data breach rather than that I'm reporting a possible vulnerability. Sure, you could argue that the site owner might close the hole and then they could downplay that it really was a passport photograph. But I care more about the hole being closed than that I care about the contents of the file, which clearly are not meant to be disclosed based on the filename alone.Independent researchers that are under contract with the companies they review sometimes have more leeway in what they are allowed to do. But downloading enough data to be able to run statistical analysis using LLMs is turning this into a reportable breach and that is a great way to get this whole thing to backfire, possibly to the point where the OP turns defendant.reply",
+      "One thought might be - did theythe article mentions \"we retrieved only parts of the datasets rather than downloading them in full\", so a charitable interpretation might be that for each identified source candidate, they spot checked (or had a model spot check) a few individual records to have incontrovertible proof of breach of privacy, and then ran an aggregate count query to gauge the extent of breach. I think that would be fairly in line with \"white hat\" behavior that's doing the smallest amount of extra work towards a solid proof and clearly not taking the obvious and easy next step of downloading the remainder that would be required for self enrichment. Difficult to argue that there is an intention of malice.A bad actor would be downloading /all/ the data and disclosing it to no one, and selling it while obscuring the source.That said I agree that that certainly might fall afoul of the letter of whatever local laws apply, and certainly prosecutors can also be over-zealous in their interpretations. So personally I would never risk doing something that comes up against that line, from a personal risk POV. But idk if it's fair to argue that this is NOT good faith.reply",
+      "I don't argue it is not good faith. I just wonder if OP realized that they might be crossing a line they shouldn't be crossing, ever, while doing security research without being under contract to the party they are investigating.Then at least you are under and NDA and there is no way for the company to spin it that you were a bad guy.The numbers mentioned are pretty serious: \"We found records\n  containing email addresses in 10,560 tables across 7,403\n  of the 24,664 websites (30%).\"To me - and please correct me if I'm wrong - that reads like 'we downloaded at least parts of 10560 tables'.reply",
+      "Im not sure why you're arguing for an nda. Ive done a lot of security work under contract, the nda consistently means the company will file the report away and never talk about it again.If you actually want change and things to be secured, this post might cause that. I dont understand the energy you are putting into convincing us thats a bad thing.reply"
     ],
-    "link": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
-    "first_paragraph": "BREAKING: Democrat Jonathan Kreiss-Tomkins wins the Alaska governor\u2019s raceFor YouSettings news AlertsThere are no new alerts at this timeU.S. air traffic was brought to a standstill Friday after the Federal Aviation Administration ordered a nationwide ground stop for departing flights that lasted more than five hours. The FAA lifted the ground stop at 8:15 p.m. ET, after more than 7,000 flights were canceled and airports across the country became packed with stranded, irritated passengers. The sudden and stunning alert was issued at 3:54 p.m. ET, \u201cdue to extraordinary circumstances and for reasons of safety,\u201d the FAA said. It offered no other information beyond stating that \u201call departing traffic should remain ground stopped until further notice.\u201dFollow along for live coverage.Hours later, Transportation Secretary Sean Duffy, in a White House news conference Friday evening, blamed the outage on an outdated air traffic control system in which the routers \u201cgot overloaded with data.\u201d By F"
+    "link": "https://www.crissyfield.de/research/lovable-en/",
+    "first_paragraph": "AI makes it easier to build your own web applications, but handling sensitive data still requires special\ncare. We examined 159,041 Lovable projects and found many cases where personal and confidential information was\naccessible without logging in.Diesen Artikel auf Deutsch lesenLovable is a Swedish AI startup founded in Stockholm in 2023 by Anton Osika and Fabian Hedin. The platform turns\nplain-language descriptions into web applications and is designed to be accessible even to people with little\nor no programming experience.Lovable grew out of Osika\u2019s open-source project \u201cGPT Engineer\u201d, released in 2023. The project evolved into the\nGPT Engineer App before being renamed Lovable in late 2024 and launching publicly that November.Visit the Lovable websiteLovable can build impressively sophisticated web projects with AI, from static websites to full applications\nwith user management and database connections. But as soon as an application handles confidential information,\none question bec"
   },
   {
-    "title": "Terminal borders that don't cost a cell (joshka.net)",
-    "points": 159,
-    "submitter": "",
-    "submit_time": "2026-11-13T23:06:40",
-    "num_comments": 77,
-    "comments_url": "https://news.ycombinator.com/item?id=50491423",
-    "comments": [
-      "A much better alternative to this would be to for more terminal emulators to implement overstrike mode (DECSET 20, as available on the VK100). That way you could just draw border characters over existing text cells to achieve the same thing.Unfortunately mintty is the only terminal emulator I'm aware of which supports overstrike [0], as this would open up a world of new possibilities for TUI apps if more widely supported.[0] https://github.com/mintty/mintty/wiki/CtrlSeqs#overstrikereply",
-      "Overstrike is underrated!I've really enjoyed using it on paper: https://hughpyle.com/ASR33/reply",
-      "I\u2019m not against overstrike, but I can think of one drawback of that solution: it becomes significantly harder to have rounded corners with a filled interior.But I\u2019m not trying to argue for nor against either solution.reply",
-      "There's some downsides to this - I can't recall where I called this out off the top of my head, but this also adds a bunch more things that that wouldn't do that are covered in the spec.reply",
-      "If you mean your proposal adds more things, that sounds like it might be over-complicated. To solve the problem of tightly-fitting boxes around terminal text -- if you consider that to be a real problem -- overstrike sounds like a really elegant solution.reply",
-      "cell borders sound even more elegant imo, they are a targeted, precise fix for a useful feature. overstrike sounds messy to me though I can see where it has a lot of uses.reply",
-      "Which things do you consider in your experience of writing tuis that are mentioned as being wanted in the blog post / rationale doc linked to be unnecessary?If you want those things then overstrike is insufficient.reply",
-      "Expecting Terminal Emulators to support overstrike is a high bar even many text editors don't even support strikethrough. Would love to see it thoughreply",
-      "I love this work and everything else Ratatui does but I have to ask: if you're changing the terminal protocol and the terminal itself to do this, why not do something more ambitious; a full monospaced information-dense UI framework, a terminal designed for user interfaces, rather than one designed to replicate the limitations of dumb terminals?reply",
-      "Yep,and I want to do that too :)I've written about it before, but in brief the mountain of standards is worth ripping out wholesale and doing write as a semantic protocol. It's needed to solve several things that work really poorly in terminals because their unit of compatibility is cells rather than a higher primitive. It's hard to bake something on top that works well.The need is most strong in Accessibility, Text wrapping, Scrollback handling (i.e. making the scrollback editable and not dead text), and various other bits that make writing highly functional TUIs. Coding agents tend to find all those edge cases.This often gets push back that it's easy, to which I can point nay sayers at the various many months long issues on things in Codex, Gemini, Claude etc. on flickering, scrolling, key handline, IME, ... doing anything moderately complex involves modeling a terminal in a terminal app effectively.Ghostty and Rex sort of do the opposite bit. If you think of  it like a stack, they write a new layer underneath that transports the cells on a better multiplexer layer 0. I think a new semantic layer 2 is an approach that would be neat to work with.reply"
-    ],
-    "link": "https://www.joshka.net/cell-borders/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "What Happened to 3Com? (dfarq.homeip.net)",
-    "points": 91,
-    "submitter": "",
-    "submit_time": "2026-11-13T23:48:59",
-    "num_comments": 53,
-    "comments_url": "https://news.ycombinator.com/item?id=50491830",
-    "comments": [
-      "I worked at 3Com in the mid 1980's. We had a smart guy (Stanford grad) working in manufacturing that was doing numerical analysis on failure rates and product returns. His analysis showed that the 3c50x PC Ethernet cards almost never failed and built a case for offering a lifetime warranty. He calculated that it would cost the company almost nothing to offer the warranty.They were high-quality cards and the lifetime warranty proved to be very popular.reply",
-      "I have such fond memories of the 3c509 cards...reply",
-      "I wrote my first and only Ethernet driver for the 3c509. The thrill of that first ping!reply",
-      "is this the card that needed sometimes to be toggled to work in Linuxreply",
-      "Back in the pre plug and play days, they were one of the few that would just always work.reply",
-      "I remember changing the jumpers on the board to allow it to enter \u201cpromiscuous mode\u201dreply",
-      "That sounds like a nice scam.reply",
-      "It came with the card. They said \u201cif you buy this, it\u2019ll last forever, at our expense\u201d.That sounds like a stupid scam unless you\u2019re super confident in your product.reply",
-      "What happens to such promises when the company is consumed by another?  I assume HP is still on the line for it.reply",
-      "HP used to provide lifetime warranties of their own branded gear, so they probably weren't too concerned with it.reply"
-    ],
-    "link": "https://dfarq.homeip.net/what-happened-to-3com/",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Unsloth Qwen3.8-27B Quantizations \u2013 Dynamic v3.1 Update (unsloth.ai)",
-    "points": 53,
-    "submitter": "",
-    "submit_time": "2026-11-14T00:06:04",
-    "num_comments": 6,
-    "comments_url": "https://news.ycombinator.com/item?id=50491980",
-    "comments": [
-      "There are so many of us with weak GPUs and these updates are massive wins. Still waiting for the 2080 moment where this 27B param model and a reasonable kv cache can exist and function at slow, but overnight-burning speeds ..reply",
-      "Figuring out local llms , but it did built me single page html . On 12 GB VRAM and 16 GB ram windows .reply",
-      "How does it compare to the 3.8-27B versions from TensorFold? I.e. does it make sense to run unsloth via TensorFold engine?reply",
-      "How do the smallest quants of this compare to Bonsai 2?reply",
-      "Bonsai 2 doesn't work at all, Unsloth's smallest... also doesn't work, but is still better.Bonsai's technology would be better suited for 100s of B models.reply",
-      "Awesome! I wonder how it does at Q5+ compared with v3.0reply"
-    ],
-    "link": "https://unsloth.ai/docs/models/qwen3.8",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped (orcasairband.com)",
-    "points": 239,
-    "submitter": "",
-    "submit_time": "2026-11-13T22:04:24",
-    "num_comments": 54,
-    "comments_url": "https://news.ycombinator.com/item?id=50490593",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://orcasairband.com/",
-    "first_paragraph": "Compiled automatically from the radio calls. It can be wrong or incomplete: not for navigation."
-  },
-  {
-    "title": "Show HN: Live map of U.S. flights during tonight's FAA nationwide ground stop (grounds.top)",
-    "points": 81,
-    "submitter": "",
-    "submit_time": "2026-11-13T23:17:39",
-    "num_comments": 11,
-    "comments_url": "https://news.ycombinator.com/item?id=50491545",
-    "comments": [
-      "I remember seeing a similar cool GIF for 9/11 flights, and thought it'd be cool to see if for today's ground stop too, and had Claude Code generate the website in ~30 mins.Liked it so much and thought I'd clean it up a bit, deploy, and share :) Enjoy!reply",
-      "Everyone I shared this with while stuck in transit today loved it. Thanks for inspiring some good vibes in Montreal!reply",
-      "Really fast work! I didn't know all of this data was publicly available.reply",
-      "What\u2019s underlying data source for it all?reply",
-      "Flight positions: adsb.fi community ADS-B network. Airport delay feed: FAA NAS Statusreply",
-      "Related:FAA issues national ground stophttps://news.ycombinator.com/item?id=50489641FAA lifted National Ground Stop at 0119Zhttps://news.ycombinator.com/item?id=50492601reply",
-      "Fun irony (beyond being Friday the 13th): FAA lost radar and frequencies between centers but ADS-B is broadcast by the planes themselves, so a couple hundred hobbyist receivers probably kept the full picture the whole time.reply",
-      "Wow, impressive TTM. Barely enough time for the domain to resolve!reply",
-      ">Barely enough time for the domain to resolve!contrary to popular belief, DNS doesn't actually need 24 hours (or whatever) to \"propagate\". It only needs enough time for caches to expire, if they exist. For non-existent domains this shouldn't be an issue.reply",
-      "Aside from regular caches (that use TTLs), there can also be a replication delay between primary master and secondary master servers.You make your changes to the zone file on the primary server. The secondary replicates the zone file (a \"zone transfer\") and uses its copy to serve requests, enabling you to have multiple authoritative servers.In the old days, the secondary server simply polled the primary server at a fixed interval to see if its zone data was out of date. It could potentially be hours if that's the schedule you chose. It wasn't uncommon to restart the secondary servers by hand if you needed something to propagate faster.Later, more sophisticated stuff was added like incremental zone transfers and the ability for the primary to send a notification to the secondary instead of relying only on polling. Those made it more practical to replicate quickly.There were scenarios back in the day when quick replication wasn't worth the cost. The primary and secondary servers might be on opposite sides of a 9600 baud modem connection where zone transfers would eat up a significant portion of available bandwidth.TLDR: DNS \"propagation\" is real, not a myth. It's just that today it's pretty trivial to make the propagation delay so tiny that it's negligible.reply"
-    ],
-    "link": "https://grounds.top/",
-    "first_paragraph": "On Nov 13, 2026 the FAA ordered a ground stop at every U.S. airport at 3:54 PM ET. This page shows tracked flights over the U.S., live and replayable, against the same time a week earlier.Rotate your phone for a bigger mapFlight positions: adsb.fi community ADS-B network. Airport delay feed: FAA NAS Status. An independent, unofficial page, not affiliated with the FAA. Hover or tap a dot to identify the aircraft.Read from the tracking data, not from official announcements. Times are Eastern.Departures in the 30 minutes before the selected time, as a share of the same half-hour a week earlier, at the 16 largest airports. An airport counts as back once it holds three-quarters of its usual departures for two readings in a row. Estimated commercial departures missed since 3:30 pm ET: the count for the same hours a week earlier minus this week's, from tracking data. On the right, how many left, out of the number a week earlier. Dot: departures in the last 30 minutes (red almost none, amber r"
-  },
-  {
-    "title": "Reverse engineering my Coway air purifier to ditch the cloud (scottjg.com)",
-    "points": 713,
-    "submitter": "",
-    "submit_time": "2026-11-12T22:03:09",
-    "num_comments": 205,
-    "comments_url": "https://news.ycombinator.com/item?id=50474959",
-    "comments": [
-      "> The fan downloads its root CA cert over plain HTTP. It was always MitM-able.The most fascinating part of this wave of LLM reverse engineering is seeing how many weird and poor choices were lying in plain sight.Any number of people could have discovered and exploited this, but it\u2019s tedious work. Most people who can do this are busy with their job and other things. Now LLMs enable people who understand these things to quickly get through the tedious parts, so they can do a lot more of this work in their free time than they could before.reply",
-      "> The most fascinating part of this wave of LLM reverse engineering is seeing how many weird and poor choices were lying in plain sight.\n\nI think what's interesting is that for decades one group of devs has been pushing for higher quality and security while other groups have been pushing for \"good enough\" or \"MVP\"[0]. Clearly the group that rushed won.But in some weird way we're coming to the day of reckoning. I'm sure we'll always have missed bugs but with a lot of what we're seeing it more seems like these were avoidable problems. Code issues I can easily imagine at least one person on the team said \"this isn't acceptable, we need to correct it\" and them getting overruled. I'm sure each and every one of you has seen, if not experienced, this.It'll be interesting to see if that continues. I suspect companies will still rush but from my experience even the best models happily produce shoddy code. And there's a feedback loop, the model's performance is influenced by the code's quality. So it's easy to degrade and get into a bad feedback loop. But I think people still value speed over quality, even in this world where Microsoft shit the bed[0] in quotes because the entire conversation is essentially about what is actually good enough and what actually is the minimum viable product.reply",
-      "I don't think it's fair to say that those who didn't push for more security pushed against it or just for good enough. They didn't care enough to push back, sure, they were coerced - maybe, they did wrong - probably. But there is a good enough in security too. If you want near-perfect security, keep if off the web. \nDon't get me wrong, I wish all products had minimal care for good practices, but I won't expect it the random Chinese made product.reply",
-      "> \"Clearly the group that rushed won\"This is has been the case since I started developing software in the 90's. As far as I, and likely many others, are concerned it might as well be a Software Aphorism.I think it will be very interesting as we continue to reverse engineer such things to find out just how poorly \"glued together\" the Paper Tigers really are....reply",
-      "\"The fan downloads its root CA cert over plain HTTP\"Would love to understand the decision-making behind this at Coway (or their firmware contractor). Anyone care to guess why someone would make this choice?reply",
-      "Hardware companies by and large don't get software. They just don't understand it. Their world is sourcing parts and assembly and packaging. They look at software like any other line item in the BOM: Like a screw or gasket. You source it from the cheapest supplier, and spoon it onto the product somewhere on the assembly line. These companies simply don't care about their software, and their requirements to their supplier amount to \"make something work.\" The quality bar is literally \"customer should not return the product.\"reply",
-      "> Anyone care to guess why someone would make this choice?My guess: At some point in the past, a firmware was developed without plans to include firmware update functionality. The team that did this was later burned when the client tried to use a new certificate that the hardcoded, unchangeable system didn't recognize.Angry meetings occurred, developers were chastised, and someone realized they could avoid that problem by fetching an updated root CA on demand. They did it over HTTP to avoid a chicken and egg problem.In hardware manufacturing, everything is about crossing items off the list of problems. A problem was raised, someone came up with an idea to solve that problem, and it was implemented. The practice might have spread to other products because it became institutional knowledge about how to avoid a problem that made a customer angry once.This is from my experience in the consumer hardware industry. If you're not watching the outsourced development closely, they will take the easiest route to solve the problem in front of them and nobody will consider any other consequences.reply",
-      "Probably something like \u201cWhat if the cert expires?\u201dreply",
-      "did firmware a long time. had two PIs try to force this on me for an IoT device. i pushed back and we missed a deadline. but it uses aws iot certs correctly in a secure element. the customer knew better and thanked me later, lead to 1099 workreply",
-      "3rd party SDK requires TLS and it's not easy to bypass. Development contract doesn't allow long-term support where they can push updates if/when proper CA bundle changes.Solution: ignore security in 1st party code outside 3rd party library that tries to prevent ignoring security.As far as I know, most of this cheap crap is basically supply chain management companies that contract a factory to manufacturer and contract a software development/IoT/chip company to write software. Everything is waterfall-style locked in with no ongoing support or funding after the production run is done. The software company doesn't care insomuch as it \"works\" and working to the SCM company is \"powers on and functions\", not \"is secure\". As such, there's not much accountability. If the endeavour gets bad publicity, they just close up shop and spin up a new brand.reply"
-    ],
-    "link": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
-    "first_paragraph": "November 11, 2026\n16 min readThe year is 2017. A string of annual wildfires rocks the West Coast. The sky looks like this in the daytime:My home, like many in the Bay Area, has no insulation and isn\u2019t really air sealed. To avoid choking on soot, a lot of people started buying air purifiers like this one:The venerable Coway AirmegaIt\u2019s an overpriced box fan with a HEPA filter and an air quality sensor. It has some controls for the fan speed, and it can also automatically ramp up if the air quality is bad. It\u2019s ugly, but they\u2019re so ubiquitous around here that I feel like no one even notices them anymore. Also, FWIW, the device works. It really does improve air quality.This device became a staple item in our household when my wife eventually started cranking up the fan at night for white noise (a dual purpose!). Over time, I have become accustomed to it and now also require it to sleep.Our home also has smart lighting, and it\u2019s all integrated with Apple Home. At night, I always press the "
-  },
-  {
-    "title": "FM-1 Workbench (m-vave.com)",
-    "points": 200,
-    "submitter": "",
-    "submit_time": "2026-11-13T19:14:02",
-    "num_comments": 136,
-    "comments_url": "https://news.ycombinator.com/item?id=50488325",
-    "comments": [
-      "Our algorithms must all be feeding us the same things, I was about to buy one of these yesterday. I've been excited by the various Groovebox firmwares in particular.I play music by sight (poorly) and can improvise a little bit on guitar, and would love to understand music theory better but so far do not.Is this a useful device to get a feel for creating music, or is it only really useful if you already understand music theory or improvisation?reply",
-      "I have an FM-1, and it's definitely a fun device for the price and worth having just to putz around while sitting on the couch. However, I don't think it's the easiest way to get started creating music. I personally have gotten much more value out of a DAW like FL Studio. I've tried to go DAWless (groove boxes, samplers, trackers, etc), but I always end up back in FL Studio.reply",
-      "If the OP is a software developer it's actually helpful to download a custom firmware's source code and have an LLM teach you how to use the firmware to play music and learn music theory at the same time, on one of the groove boxes.E.g. it'll tell you how to activate the arpeggiator, as well as what an arpeggio is, what notes comprise each chord, scales, etc, which are all programmed into the firmware.reply",
-      "Was kinda planning the same and I feel instead of buying a synth, I would be better off buying a starter MIDI keyboard to learn music theory and then emulate the FM-1 softwarereply",
-      "I have one, too. I think the groovebox firmwares are fun for sketching out ideas. Some people create fully developed songs, but I don\u2019t know, I think the more targeted firmwares are more interesting.Firmware like Obervave, Hortator, X0X, and FMini-1, with their limited scope and greater depth I find to be more useful, at least as part of a bigger workflow.reply",
-      "Grooveboxes can't really do anything that you haven't been able to do for 15 years with internet resources and pirated FL Studio (other DAWs are available). The main value is having a break from the computer & physical knobs to twiddle. If you value time away from the computer, something like Korg M01[D] on the [3]DS might be worth trying since you can't spend hours tweaking synth parameters (and I imagine it's much easier to sequence on).reply",
-      "A good groovebox doesn't have to be crippled. Yamaha did an excellent job with their QY-series, the QY-70 and QY-100 being completely fully fledged sequencers with many advanced features in addition to having very groovebox-like functionality. I feel that we have actually gone backwards in the last 20 years especially. Grooveboxes are easier to use and get going with than they used to be but lack a lot of features they used to have. Why not at least throw in a MIDI event list editor these days? But they often don't. Peak groovebox was the Yamaha RS7000, it has never been improved upon. Same basic software roots that they had in the QY series and the Yamaha sequencers you used to get in their flagship workstations before the color touch-screen era.reply",
-      "Throwing in an honorable mention for the Polyend Trackers - a full midi tracker in groovebox form with a big screen - and they've recently open sourced their firmware and are seeing an explosion of really cool custom firmwaresreply",
-      "In general, all synthesizers are distractions from the essentials of music: listening and performing. They replace that with poking around at knobs and setting modes and it does give results, but it can feel really ungrounded when you haven't trained to get any of it to go through your hands directly. I have an FM-1 and yes, it's fun. But I would say the grooveboxes are roughly equal to DJing as a practice, which is to say, they definitely can inspire ideas and awareness, they just don't lead you to go really deep most of the time.The thing to do for theory is basically to work on paper more, take careful notes and look for connections between one kind of theory and another, because often something that seems complex one way is simple in another. A groovebox can do this by presenting you with a palette of stuff that sounds good, and then you can go about breaking it down and studying it by hand.reply",
-      "> Our algorithms must all be feeding us the same thingsTwo days ago I watched a YouTube video about this and went to AliExpress to check prices. Tech nerd information bubble!reply"
-    ],
-    "link": "https://open.m-vave.com/fm1-workbench",
-    "first_paragraph": "\u6eda\u8f6e\u3001\uff0b\uff0f\u2212\u6216\u65b9\u5411\u952e\u6309\u6700\u5c0f\u6b65\u957f\u8c03\u8282\uff0c\u7f51\u9875\u8bd5\u542c\u5b9e\u65f6\u751f\u6548\u3002\u5de5\u7a0b\u53c2\u6570\u7528\u201c\u4fdd\u5b58\u5230\u8bbe\u5907\u201d\u5199\u5165\uff1bMIDI \u8def\u7531\u4e0e\u65f6\u949f\u6765\u6e90\u8bf7\u5728\u673a\u8eab\u8bbe\u7f6e\u3002\u4fdd\u5b58\u4f1a\u66ff\u6362\u6240\u9009\u69fd\u4f4d\uff0c\u5e76\u8f7d\u5165\u8be5\u9879\u76ee\u8fdb\u884c\u6821\u9a8c\u3002\u5b8c\u6210\u540e\u91cd\u542f\u8bbe\u5907\u4ecd\u53ef\u6062\u590d\uff1b\u91c7\u6837\u5e93\u5355\u72ec\u7ba1\u7406\u3002\u5207\u6362\u9884\u8bbe\u524d\u8bf7\u4fdd\u5b58\u4fee\u6539\u3002\u9762\u677f PRESETS \u65cb\u94ae\uff1a\u6362\u6574\u5957\u9884\u8bbe\u3002\u6b63\u5728\u8f7d\u5165\u2026\u5bfc\u51fa\u6587\u4ef6\u53ef\u5907\u4efd\u5230\u7535\u8111\uff1b\u6d4f\u89c8\u5668\u5b58\u6863\u4e0e\u8bbe\u5907\u9879\u76ee\u5206\u522b\u4fdd\u5b58\u3002\u6b64\u9884\u89c8\u4f7f\u7528\u6f14\u793a\u91c7\u6837\uff1b\u9879\u76ee\u6587\u4ef6\u4e0d\u5305\u542b\u91c7\u6837\u97f3\u9891\u3002\u6b63\u5728\u6821\u9a8c\u672c\u9875\u5185\u7f6e\u56fa\u4ef6\u3002\u8bf7\u8fde\u63a5 FM1 \u7684 USB-MIDI \u63a5\u53e3\u3002\u5237\u56de\u539f\u5382 V15\u5207\u56de\u5b98\u65b9 Open \u56fa\u4ef6 \u5f3a\u5236\u70e7\u5f55\uff08\u5176\u4ed6\u56fa\u4ef6\u8fc1\u79fb\uff09\u56de\u5237\u5c06\u5b89\u88c5\u539f\u5382 V15\uff0c\u5e76\u8986\u76d6\u56db\u4e2a\u97f3\u8272\u5e93\uff0c\u6062\u590d 128 \u4e2a\u51fa\u5382\u97f3\u8272\u3002Open \u9879\u76ee\u4e0e\u91c7\u6837\u683c\u5f0f\u4e0d\u517c\u5bb9\uff0c\u8bf7\u5148\u5bfc\u51fa\u5907\u4efd\u3002\u5df2\u662f V15 \u65f6\u53ea\u6062\u590d\u97f3\u8272\uff1b\u786e\u8ba4\u540e\u624d\u5f00\u59cb\u5199\u5165\u3002\u8b66\u544a\uff1a\u5185\u7f6e\u56fa\u4ef6\u53ef\u80fd\u4e0e\u5f53\u524d\u8bbe\u5907\u4e0d\u517c\u5bb9\u3002\u5f3a\u5236\u70e7\u5f55\u53ef\u80fd\u6e05\u9664\u6570\u636e\u3001\u5bfc\u81f4\u65e0\u6cd5\u5f00\u673a\uff0c\u5e76\u9700\u8981\u4e13\u7528\u5de5\u5177\u6062\u590d\u3002\u8bf7\u53ea\u8fde\u63a5\u76ee\u6807 FM1\uff1b\u4e0d\u652f\u6301 USB-MIDI \u5347\u7ea7\u534f\u8bae\u7684\u56fa\u4ef6\u4ecd\u65e0\u6cd5\u901a\u8fc7\u672c\u9875\u70e7\u5f55\u3002\u6b63\u5728\u68c0\u67e5\u7f51\u9875\u5185\u5bb9\u2026\u4ee5\u4e0b\u662f\u6d4f\u89c8\u5668\u672c\u6b21\u68c0\u6d4b\u5230\u7684\u7aef\u53e3\uff1b\u4fe1\u606f\u4ec5\u663e\u793a\u5728\u672c\u9875\u3002MIDI INMIDI OUT\u66f4\u65b0\u5e2e\u52a9\u7ba1\u7406\u8bbe\u5907\u9879\u76ee\u3001\u97f3\u8272\u548c\u91c7\u6837\u3002\u5907\u4efd\u6587\u4ef6\u4fdd\u5b58\u5728\u8fd9\u53f0\u7535\u8111\u3002\u7b49\u5f85\u8fde\u63a5\u652f\u6301\u9879\u76ee\u5e93\u7684\u56fa\u4ef6\u30028 \u69fd\u5171\u4eab\u7ea6 19.55 \u79d2\uff0c\u53ef\u81ea\u7531\u5206\u914d\u3002\u9879\u76ee\u4e0e\u91c7\u6837\u5206\u522b\u5907\u4efd\u3002\u5148\u8bfb\u53d6\u8bbe\u5907\u91c7\u6837\u5e93\uff0c\u518d\u9009\u69fd\u4f4d\u548c WAV\u3002\u5199\u5165\u4f1a\u66ff\u6362\u6574\u5e93\uff0c\u5f71\u54cd\u6240\u6709\u9879\u76ee\u3002WAV\uff1aPCM 8/16/24/32 \u4f4d\u6216 32 \u4f4d\u6d6e\u70b9\uff0c\u5355\u58f0\u9053\u6216\u7acb\u4f53\u58f0\uff0c8\u2013192 kHz\uff1b\u539f\u6587\u4ef6\u4e0d\u8d85\u8fc7 32 MiB\u3001120 \u79d2\u30028 \u69fd\u5171\u4eab\u7ea6 19.55 \u79d2\uff0c\u53ef\u81ea\u7531\u5206\u914d\uff1b\u6bcf\u6bb5\u6309 10 \u6beb\u79d2\u5411\u4e0a\u53d6\u6574\uff0c\u66ff\u6362\u65f6\u53ef\u590d\u7528\u5f53\u524d\u69fd\u7a7a\u95f4\u3002\u6b63\u5728\u8f7d\u5165\u5185\u7f6e\u91c7\u6837\u2026\u4ece\u7b2c\u4e00\u6bb5\u8282\u594f\uff0c\u5230\u4fdd\u5b58\u4f60\u7684\u4f5c\u54c1\u3002\u9002\u7528\u4e8e FM1 \u914d\u5957\u56fa\u4ef6\u4e0e\u7f51\u9875\u7f16\u8f91\u5668\u3002\u5171 10 \u7ae0\u6ca1\u6709\u627e\u5230\u5339\u914d\u7ae0\u8282\u3002\u8bd5\u8bd5\u201c\u4fdd\u5b58\u201d\u201c\u97f3\u91cf\u201d\u201cMIDI\u201d\u7b49\u5173\u952e\u8bcd\uff0c\u6216\u70b9\u51fb\u201c\u663e\u793a\u5168\u90e8\u7ae0\u8282\u201d\u3002\u7f51\u9875\u9876\u90e8\u548c\u5b9e\u673a HOME \u9875\u663e\u793a\u5f53\u524d\u7248\u672c\u3002\u5f00\u673a\u52a8\u753b\u7ea6 1 \u79d2\uff0c\u6309\u952e\u6216\u65cb\u94ae\u53ef\u8df3\u8fc7\uff1b\u5f00\u673a\u4e0d\u4f1a\u81ea\u52a8\u64ad\u653e\u3002FM1 \u6709 8 \u6761\u8f68\u9053\u30016 \u79cd\u97f3\u6e90\u300116 \u4e2a\u5185\u7f6e\u5de5\u7a0b\u3002\u6bcf\u8f68\u652f\u6301 16\u300132\u300148 \u6216 64 \u6b65\uff1b\u5e38\u7528\u64cd\u4f5c\u4f7f\u7528\u5355\u952e\uff0c\u5b8c\u6574\u7ec6\u8c03\u653e\u5728\u957f\u6309\u83dc\u5355\u548c\u7f51\u9875\u91cc\u3002\u7f51\u9875\u9876\u90e8\u201c\u4fdd\u5b58\u5230\u8bbe\u5907\u201d\u53ef\u76f4\u63a5\u9009\u69fd\u4fdd\u5b58\uff1b\u201c\u5b58\u5230\u6b64\u6d4f\u89c8\u5668\u201d\u53ea\u5b58\u672c\u673a\u6d4f\u89c8\u5668\uff1b\u201c\u5bfc\u51fa\u9879\u76ee\u6587\u4ef6\u201d\u751f\u6210\u7535\u8111\u5907\u4efd\u3002\u5b9e\u673a SAVE \u4fdd\u5b58\u5230\u8bbe\u5907\u69fd\u3002\u603b\u89c8\u8f6c K3\uff08STEP\uff09\u9009\u62e9\u5f53\u524d\u8f68\u7684\u6b65\u4f4d\u7f6e\uff0c\u5f55\u5165\u65f6\u53ef\u79fb\u52a8\u5199\u5165\u4f4d\u7f6e\u3002\u77ed\u6309"
-  },
-  {
-    "title": "Found: A protein that drives ageing without unleashing inflammation (nature.com)",
-    "points": 159,
-    "submitter": "",
-    "submit_time": "2026-11-13T19:25:21",
-    "num_comments": 24,
-    "comments_url": "https://news.ycombinator.com/item?id=50488470",
-    "comments": [
-      "Paper: https://www.cell.com/immunity/fulltext/S1074-7613(26)00440-1Granzyme K is the protein.reply",
-      "Granny Enzyme, you say?reply",
-      "Great, finally Leonardo DiCaprio will be able to find his life partner.reply",
-      "From the abstract of the paper, significantly more nuance.> Despite persistent immune aging phenotypes, GzmK deficiency markedly attenuated organ aging, effectively uncoupling immune and tissue aging... These findings identify GzmK as a tissue-specific driver of organismal aging but not immune aging or systemic inflammaging.reply",
-      "Paywallreply",
-      "Thank God! Finally, mice that don't age!reply",
-      "Interestingly, their lifespans would probably be affected very little.> GzmK does not affect steady-state immune aging or aged immune responses after challengeVirtually all old mice die of cancer, especially in the lab.  If GzmK doesn't mitigate immune system aging, GzmK-null mice are still going to die of cancer, for little or no change in lifespan.  (But presumably an improved healthspan due to reduced soft tissue and bone aging.)reply",
-      "> Virtually all old mice die of cancer, especially in the lab. If GzmK doesn't mitigate immune system aging, GzmK-null mice are still going to die of cancer, for little or no change in lifespan.Would introducing the cancer-reducing TP53 genes found in elephants[1][2] to mice help with this? Or would they likely just be too incompatible, with the species difference being too large?[1] https://news.cancerresearchuk.org/2023/08/12/can-elephants-g...[2] https://jamanetwork.com/journals/jama/fullarticle/2456041reply",
-      "> Virtually all old mice die of cancer, especially in the labBret Weinstein did research on this topic which suggested that this is caused by lab mice having extraordinarily long telomeres which cause them to be good at cell repair but bad at limiting neoplasm growth due to delayed apoptosis. The result of this combination would be that lab tests on potential damage done by preparations on these mice is less valid 'cause they are better at repairing such damage than the average mammal due to those long telomeres. It also means nearly all these mice succumb to cancer. They're not normal mice, at all.The reserve-capacity hypothesis: evolutionary origins and modern implications of the trade-off between tumor-suppression and tissue-repairBret S Weinstein  1 , Deborah Ciszekhttps://pubmed.ncbi.nlm.nih.gov/11909679/reply",
-      "This paper examined captive wild mice, which they caught themselves on school grounds, and noted that \"mice in both feeding groups died from various causes, chief among these a range of cancers\":> https://onlinelibrary.wiley.com/doi/10.1111/j.1474-9726.2006...So I think that even wild mice are prone to immune aging and cancer development.reply"
-    ],
-    "link": "https://www.nature.com/articles/d41586-026-03638-3",
-    "first_paragraph": "Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain\n            the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in\n            Internet Explorer). In the meantime, to ensure continued support, we are displaying the site without styles\n            and JavaScript.AdvertisementAge-related stiffening and scarring of liver tissue (pictured) declined in mice that were bioengineered to lack a certain enzyme.  Credit: Ziad M. El-Zaatari/Science Photo LibraryResearchers have found an enzyme that drives ageing in the body\u2019s tissues1. Drugs that reduce the levels of this protein might one day combat the effects of ageing without impairing the body\u2019s immune defences.Access Nature and 54 other Nature Portfolio journalsGet Nature+, our best-value online-access subscriptionSubscribe to this journalReceive 51 print issues and online accessRent or buy this articlePrices vary by article typePrices "
-  },
-  {
-    "title": "Nvidia director sold nearly $1B in stock weeks before the Jensen Huang scandal (yahoo.com)",
-    "points": 103,
-    "submitter": "",
-    "submit_time": "2026-11-14T02:21:36",
-    "num_comments": 25,
-    "comments_url": "https://news.ycombinator.com/item?id=50492993",
-    "comments": [
-      "Nothing out of the ordinary. Guy sold 4m shares over a few months (all of which have to be pre-announced 90 days in advance). Still has over 25m shares.reply",
-      "They can influence timing of information release;  Whether delaying or expediting.Just pointing out that even with the notice there is still room for shenanigans.reply",
-      "Aug 31 is about when the post-earnings window opened so could be routine?reply",
-      "1B worth is NOT routinereply",
-      "1B is the numerator.Think about what the denominator might be.reply",
-      "He sold ~%15 of his holdings.reply",
-      "Characterizing ~10 weeks to \"weeks\" is also a bit misleadingreply",
-      "Exactly. Put \"2.5 months\" in the headline and no one bats an eye.reply",
-      "I'm more interested in options activity leading up to this.reply",
-      "See also https://nvidia.cool.computer/reply"
-    ],
-    "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-director-sold-nearly-1b-160000846.html",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Elephants found to be increasingly isolated leading to fractured social networks (ucsd.edu)",
-    "points": 89,
-    "submitter": "",
-    "submit_time": "2026-11-14T02:02:42",
-    "num_comments": 15,
-    "comments_url": "https://news.ycombinator.com/item?id=50492860",
-    "comments": [
-      "Read it a few times to understand the core message because the thesis and title are slightly self-evident i.e. more isolation causes less socializing. But the crux seems to be:> \"We see individual elephants leaving and possibly dying at accelerating rates, but new individuals are not coming into the population,\u201d said Madsen. \u201cWith fewer individuals in the population, those who are left will naturally have fewer relationships. However, the remaining elephants are also changing their relationships with each other.\"In my opinion \"dying at accelerating rates\" is the/a key takeaway. Notably climate change doesn't seem to be explicitly mentioned and hate to see poaching be a direct cause:> Many elephant populations are already impacted through deaths resulting from poaching and conflicts with humans. Other contributing factors may be disruptions in habitat connectivity and less food available...Other comments mention other intelligent and social species and this reminds me of Puget Sound Southern resident killer whales [0] and their decrease in food availability and offspring viability.[0]: https://www.nature.org/en-us/about-us/where-we-work/united-s...reply",
-      "imagine we find out later that shifts in our socialisation isn't due to smartphones but some unknown factor that also affects intelligent animals...reply",
-      "Or imagine we find out later that shifts in our radio waves are also affecting intelligent animals!(like bees?)reply",
-      "hmmm check the myceliumreply",
-      "What a comforting thought, that killing off an intelligent species isn't really our fault.Bit of an escapist fantasy, though.reply",
-      "Well there are more microbes around us than there are stars in the universe. They survive without smart phones, intelligence, religion, society and stories that need to fit in a 3 inch chimp brain about the meaning of it all. One of them recently killed 6 million people. Life goes on.reply",
-      "The elephants are spending too much time confiding in Claude?reply",
-      "Even bigger tusks, Claudereply",
-      "Thought this was a joke about Mastodon at first ;Dreply",
-      "YC 26. Facebook, but for elephants. (Maybe pivot to doordash for lions?)reply"
-    ],
-    "link": "https://today.ucsd.edu/story/elephants-found-to-be-increasingly-isolated-leading-to-fractured-social-networks",
-    "first_paragraph": "With a troubling decline in the population, researchers warn of a tipping point for the highly social animalsHumans and many other social animals thrive in well-established community networks. Asian elephants are one example of a species that flourishes in groups that work together to access food and care for their young, among other social bonds.University of California San Diego scientists in the School of Biological Sciences studying the intricacies of Asian elephant community structures have documented a troubling downturn in the population of the animals resulting in fractured social communities. Their study is published on the cover of the November 12 issue of\u00a0Science.Analyzing the social dynamics of more than 440 wild female Asian elephants over 12 years at the Udawalawe National Park in Sri Lanka, the researchers studied key shifts in the demographics of the elephants that seemed to trigger social communities becoming smaller and more isolated.\u201cWe found that gradual accumulatio"
-  },
-  {
-    "title": "Amtrak booking system experiencing major issues amid nationwide FAA ground stop (fox5dc.com)",
-    "points": 146,
-    "submitter": "",
-    "submit_time": "2026-11-14T00:52:29",
-    "num_comments": 45,
-    "comments_url": "https://news.ycombinator.com/item?id=50492315",
-    "comments": [
-      "Amtrak's site has always been the worst example of a national rail websitereply",
-      "I use the app frequently and I actually love it. Pick two stations, pick a train, apple pay, done. It\u2019s not flashy, but I appreciate the simplicity.reply",
-      "Yeah the mobile app is excellentreply",
-      "I use the app daily and I ~hate it.If you have a month pass it frequently forgets at the end of the month, and you have to repeatedly look it up.  When you look a ticket, it doesn't remember it in the app, so you have to look it up again for your return trip.It also periodically forgets all of your tickets locally and needs to resync from the network.  It doesn't matter if you were just looking at the ticket three minutes ago.  This ie especially annoying if your train is underground after leaving the station, and they are collecting tickets while you have no Internet access.reply",
-      "Renfe in Spain is awfulreply",
-      "I don't know. Last year I was trying to buy bullet train tickets for an upcoming trip to Japan, only to find that the booking website operated only during daytime work hours (Japanese, of course). Then there was me trying to buy train tickets from Mt Fuji area to Tokyo. I could buy them, but they could only be picked up in Tokyo, not Mt Fuji! That was a pretty major wtf, given Tokyo was our final destination.reply",
-      "If you mean the Fuji Excursion it's because the Kawaguchiko side isn't the same agency so it's not like JR has machines there. JR's intended solution is digital tickets but I think this doesn't quite work with JR Pass.reply",
-      "That was the one. I get the reasons sort of, but as a traveler it sure was strange that I could buy the one-way ticket, but could only retrieve it at the destination and so couldn't board. Anyways, we ended up taking a bus instead.reply",
-      "ofuku-kippu is your friend.reply",
-      "Are you sure??? Because some of the ones I\u2019ve used in Europe and Asia are god awfulreply"
-    ],
-    "link": "https://www.fox5dc.com/news/amtrak-outage-ticket-booking-faa-ground-stop-november-13-2026",
-    "first_paragraph": "WASHINGTON - Amtrak said its booking system is returning to normal after a network outage that coincided with a nationwide FAA ground stop.An error message on Amtrak's website while attempting to book a ticket on Friday, Nov. 13, 2026. What we know:Users on social media started sharing frustrations over ticket reservations Friday afternoon, with travelers showing error messages on Amtrak's website and app.Hundreds of users reported issues on DownDetector, beginning shortly before 5 p.m. Friday, with another surge just before 6 p.m.What they're saying:In response to a request for comment, Amtrak's Communications Director W. Kyle Anderson said that \"Amtrak service is operating normally, and we are seeing increased demand for travel across our network.\"Responding to a frustrated customer Friday, Amtrak officials said in a post on X that the booking issues were related to a system-wide update, but did not elaborate.Around 9 p.m. officials said the booking systems were returning to normal.\u00a0"
-  },
-  {
-    "title": "After 600 experiments, here's what I discovered about JEPA world models (haddyalchaer.com)",
-    "points": 231,
-    "submitter": "",
-    "submit_time": "2026-11-13T17:55:28",
-    "num_comments": 37,
-    "comments_url": "https://news.ycombinator.com/item?id=50487185",
-    "comments": [
-      "There\u2019s a repeated theme here that I don\u2019t understand. For example:> (3) That's where I decided to build a harder test, where each task takes its start from one demonstration and its goal from another> (4)  I also built an interactive demo where I could place the block anywhere and pick any goal. [but]\nThe goals in the harder test are frames from expert demonstrationsWhy lean so hard on the demonstration examples? Surely the actual task here is to move between any two arbitrary poses.So if the demonstration set is statistically strange in any way, you keep banging into that. And even if you get great results, you still haven\u2019t shown that it generalizes to the generic system. And the one thing you know 100% about a physical robot system is that you will never encounter exactly the same situation twice.Is there actually a reason to pick eval examples from the demonstrations instead of independent samples from the underlying task?I\u2019m pretty sure that the T-shoving problem doesn\u2019t have goal reachability issues. And if it did, test 4 could run into them since the start pose is arbitrary.reply",
-      "Agreed, I don't know much about JEPA but i wish this article had explained / motivated the memory graph more. \"3. Fill gaps in memory with transformed memories\" in particular seemed really really damning for the models\u2014when you removed the examples from the demonstration that were near the goal state, the model completely broke. It seems like the only way you could make the model work again would be to manually flip and transform the memories it did have so there was something in the vicinity of the goal location.That seems like a really massive failure of the model to generalize? This doesn't seem like a new technique, it seems like you've discovered a pretty big issue with the fundamental setupreply",
-      "JEPA is very similar to Model Predictive Control. Here, you swap the model of the system with black-box simulator (a neural net), apply some version of dynamic programming / Bellman equation to find the optimal action over planning horizon.In the planning stage, by factoring out the optimization step from the rollout step, you can free the model to focus on learning the dynamics in latent space. (The other case, where the rollout+optimization happen in the learning loop, just becomes model-free RL.)My background straddles classical & data-driven controls. This was the first similarity that popped out to me when I first started learning about world models.Is JEPA just MPC but where the \"M\" is a latent-space model?reply",
-      "I think this is why it has a lot of potential. I'm also controls background, so I'm going to just throw stuff at the wall.I'm thinking it's both M and P. M for the reasons you've mentioned. Then there is P where a forward horizon prediction of both plant and the world.I think JEPA also touches on the perception tasks: What to do with sensor data? Classical control objectives are quite simple, drive the state to stable, follow a trajectory, stay safe. It's very deterministic: Sensor data is used to determine state. State is used to update dynamics, dynamics is used for the forward horizon.So. MPC works for things like self-driving because the car model is fairly knowable and world model is predictable (rules of the road, knowable dynamics of other cars).JEPA seems like a fusion of control, sensing, world model into an embedding space where the learning that occurs is a model free approach to how these are all related to each other.reply",
-      "Yeah not sure where the C comes from; models lack access to knobs and switches of the system they're on and taking over the OS isn't control over the hardware still since it can't upgrade its RAM, or GPUBut the M+P aspect def fits.reply",
-      "Yeah it looks like humans, other animals, and life in general are much more willing to instinctively control things in the transient regime, away from equilibriumI guess this is the new frontier. Rather than doing safe, predictable, boring control, push the envelope on what trajectories are possible, so that control becomes more lifelike and has a degree of autonomy to recover from error statesreply",
-      "Yes absolutely. JEPA is far from the first approach to apply a learned dynamics model to MPC - it's just been well-marketed.If you're interested, I'd recommend the TD-MPC series of papers, which also learn a latent world model, but achieves much better task performance in general. Unlike JEPA, TD-MPC learns to predict the task reward (what you'd call the cost in optimal control), so it's got a much better ability to rank trajectories during planning.reply",
-      "In LLM parlance, I guess you could say MPC rollout and planning is the \"harness\" around a JEPA style world model.reply",
-      "Hands-on learning is an awesome thing - especially in the age of AI!But maybe worth reframing away from \u201cdiscovering\u201d - hierarchical planning, sub-goals, action chunking etc. are well understood - this is more of a\u2026 transcript of your personal learning journey?Which is still cool to see.  But I read through expecting there to be some kind of novel results.  We probably need to categorize these kinds of posts a bit better.reply",
-      "Hm, I get your perspective, but completely disagree with your expectation. I'm not sure I would be entitled to expect a discovery that is novel with regard to current scientific knowledge unless I'm reading a paper. The fact that it is couched as \"I discovered\" and posted to a personal blog should be more than enough to convey that you might not find novel scientific discoveries within.reply"
-    ],
-    "link": "https://haddyalchaer.com/jepa",
-    "first_paragraph": ""
-  },
-  {
-    "title": "Jonathan Blow \u2013 If AI solved coding, why is my software still the same? [video] (youtube.com)",
-    "points": 175,
-    "submitter": "",
-    "submit_time": "2026-11-13T15:08:44",
-    "num_comments": 172,
-    "comments_url": "https://news.ycombinator.com/item?id=50484658",
-    "comments": [
-      "Because AI coding has only worked well in the last six months. Two years ago it sucked. A year ago it was flaky. Now, Claude nails a lot of problems routinely.What will next year bring?reply",
-      "I consider this comment spam at this point, because it's been repeated for years.reply",
-      "So it can never be right?reply",
-      "Be careful extrapolating. Do you actually understand why coding agents have gotten better?reply",
-      "My experience lines up with this.Last year, the frontier llms could produce working code, but the code looked brittle and overly defensive. Earlier this year, it got better and started to take more of the codebase into account. Since Claude 5.5, the quality improved substantially.A lot of these things could be improved with prompt engineering and steering, but much less so nowadays.But I don't think code quality is easy to measure, so the best we have is people's experience.reply",
-      "RLVR? Next RLCR?reply",
-      "Do you understand why rhetorical questions make for poor commentary?reply",
-      "Come on, don\u2019t be a potato just because you don\u2019t like someones opinion. The parent posts point is obvious and not rhetorical at all.It\u2019s more reasonable to extrapolate based on past evidence than arbitrary conjecture.Self driving cars are great!\u2026but fully autonomous (level 4+) driving turns out to be really much harder to do that the initial 6-12 of self driving demos suggested it would be.Its always easier to get the first prototypes and demos up, and its literally ALWAYS wrong to extrapolate exponential improvement based on that initial set of results.It should be a surprise to no one that AI coding follows a diminishing returns log curve, and that improvements are merely incremental after the initial burst of improvement.reply",
-      "Funny, because I remember being told the same thing six months ago. And more to the point: if AI coding allows you to conjure any software in no time and at almost no cost, why do we need to wait a year to see the results?A year to ship is the old paradigm. With 100% agentic vibecoding, everything should be amazing now.reply",
-      "for what it's worth, i've been saying many more \"thank you\" to my aireply"
-    ],
-    "link": "https://www.youtube.com/watch?v=IRK8h67ol7Q",
-    "first_paragraph": ""
-  },
-  {
-    "title": "How Not to Build a Music Player (alichraghi.github.io)",
-    "points": 63,
-    "submitter": "",
-    "submit_time": "2026-11-13T23:04:30",
-    "num_comments": 25,
-    "comments_url": "https://news.ycombinator.com/item?id=50491400",
-    "comments": [
-      "It's been under my skin for a long time now, but every single free music player app I've used in the past 8 years plays my locally stored mp3s in the exact same order each time the shuffle button is on. Many others complain about that too.I don't know if it's happening on Android OS level, but even VLC, plays songs in the exact same predictable order. I've left support notes on VLC's forums, and submitted the issue to issue cues and there are no responses each time.None of that encourages me to pay for a premium app, shuffle has been around since CD changers.reply",
-      "I would rather have the same \"random\" order than what Spotify does; random never plays some songs, and overplays other.  I get true random has the possibility of that, but when I've heard the same song for the 4th time in an hour, on a 20-hour playlist, something is wrong.reply",
-      "It sounds like maybe what you want is to have the \"shuffle\" mode play songs close to truly randomly while still penalizing songs that have been played too much recently. This gives us an optimization problem:    minimize KL(\u03c0 || uniform) - \u03b2 E_\u03c0[times played already],\n\nwhere \u03b2 is an inverse temperature determining how much you dislike repetition and \u03c0 is your policy. Here I've arbitrarily chosen a reverse KL divergence because it leads to a nicer closed form:    \u03c0(song) \u221d exp(-\u03b2\u22c5\"times song played already\").\n\nI wonder if anyone has implemented this before in a music playlist.reply",
-      "Easy version: Make a smart playlist whose criteria are 'last played is not in the last 3 weeks, last skipped is not in the last 3 weeks'. Randomize within that. Possibly add some other conditions like 'genre is not podcast'. I've been having iTunes/Music.app do this for... probably at least a decade, at this point, it doesn't track when you made playlists so this is just guessing.reply",
-      "I have this issue with youtube music only for some reason. For me \"Shuffle\" seems to be starting random, then after a handful of songs entering a loop of 6 or 7 songs. I never figured out why or looked it up, I just refresh the page. I know it must be only me somehow, but don't know what's happening.reply",
-      "I think you can have a rss feed of your playlist, you could grep the urls, | rand them like you want and play with mpv or just download everything with yt-dlp.reply",
-      "My car's player (reading from a flash drive full of MP3s) doesn't have \"shuffle\", it has \"random\". The difference is subtle, but it means that each time it advances to a new track, it selects that at random. The result is that I never hear all the tracks in an album/playlist without hearing a bunch of repeats. Infuriating!But when I play from my phone or PC, I use PlexAmp (backed by my Plex media server), which is the opposite extreme. Not only does it know what randomly shuffling is, but the server has analyzed the sonic profile of every track, and knows about similar artists and similar albums. So you can play an \"artist radio\" featuring that artist and other related stuff. And you can choose an auto DJ, which inserts between tracks the closest sonic match to the song it just played, or a brief detour of about 3 tracks that are spaced along the path from the track that just played to the one that's about to play. It's fantastic for discovering stuff you haven't heard in a long time within a very large library.reply",
-      "Pretty much every USB music player has the same faults:1. shuffle play does not work2. crashes if there are more than N songs3. does not find songs in subdirectoriesAll of these are trivial to fix. I do not understand the programmers who make the firmware.reply",
-      "wow hacker news wins again. i am going to fix these in my music player. i think 2 & 3 are chill already... and i can totally fix 1. thanks!reply",
-      "To implement shuffle play, it is not necessary to actually shuffle filenames in memory. Just generate a random number modulo the number of files, and then play that file. That way your program can shuffle play any number of files, no worries about running out of memory.By the way, the Roku box has a \"media player\" app in it by default, and it cannot shuffle play more than a handful of files. Completely useless.reply"
-    ],
-    "link": "https://alichraghi.github.io/blog/how-not-to-build-a-music-player/",
-    "first_paragraph": "The Twelve-Day War made me realize online music players aren\u2019t a viable option for those who live under an oppressive regime that disconnects the internet across the country as a way to silence public opinion.So, as soon as the connection came back, I started archiving tracks and looking for offline alternatives and discovered Strawberry. It\u2019s a feature-rich music player and kept me happy for quite a while, but I have this habit of looking at song lyrics and singing along! Strawberry fetches lyrics from the internet when it recognizes a song, but sometimes the lyrics weren\u2019t line-synced and worse, it displayed the timestamps next to the lyrics which I found pretty annoying to look at. I wasn\u2019t aware of other music players such as foobar2000 which my friend just pointed me to while writing this post.I decided to write my own music player and call it AMP with a few goals in mind: minimal feature-set, no C++ dependencies, proper system integration to make it feel like a native app, and of"
-  },
-  {
-    "title": "Philip Roth and David Remnick getting personal (2001) (skidmore.edu)",
-    "points": 13,
-    "submitter": "",
-    "submit_time": "2026-11-14T00:21:26",
-    "num_comments": 0,
-    "comments_url": "",
-    "comments": [
-      "xxx"
-    ],
-    "link": "https://salmagundi.skidmore.edu/articles/2001-philip-roth-david-remnick",
-    "first_paragraph": "In 2003, Philip Roth turned 70, a strange age for an enfant terrible. To his early admirers, Roth meant chutzpah, rude energy, sly comic\nmischief. Slowly, improbably, that changed. Roth\u2019s work deepened. Awards piled up. Respectability\u2014the fate of all successful rebels\u2014followed. By 2003, Roth had come full circle: The rebel was revered; the iconoclast, an icon.And so, celebrations were planned, tributes drafted. Generally,\nRoth shunned interviews\u2014he preferred silence, exile, and cunning\u2014but this time, he welcomed a BBC camera crew to his spare, wood-paneled studio (\u201cwhere I really wish I lived,\u201d he once said). As winter light streamed in, he serenely answered questions from a friendly inquisitor: The New Yorker\u2019s David Remnick.Theirs was a subtle yet strong rapport. Beneath Remnick\u2019s customary poise, his deliberate, thoughtful air, was an intense, fervent devotion. Growing up, he worshipped Roth. He had read Portnoy\u2019s Complaint around twenty times (a novel about compulsion, devoured com"
-  },
-  {
-    "title": "Perplexity Decider v1.3: Training, eval, and use cases (perplexity.ai)",
-    "points": 109,
-    "submitter": "",
-    "submit_time": "2026-11-13T19:24:47",
-    "num_comments": 21,
-    "comments_url": "https://news.ycombinator.com/item?id=50488464",
-    "comments": [
-      "This blog post acted as a rabbit hole into some interesting stuff:https://www.perplexity.ai/hub/blog/pii-trace-detecting-perso...https://www.perplexity.ai/hub/blog/a-local-first-agent-for-p...reply",
-      "Well congrats.Here are some thoughts not facts:On AA Decision Index.Decider v1.3 and Decider v.1.2 seem to have same benchmarks. However, V1.3 flash beats V1.2 flash by 4 points.I am not particulary excited about this pattern/trend of having flash versions for decision models. The whole point of Decision models was to deliver faster ouput for high volume requests at much cheaper cost than Reasoning models. Since  most reasoning models can and probably do outperform decision models already in accuracy but they are a lot slower and are pricier. Reasoning Models can already return structured ouput.So your flagship model must be fastest and most accurate.Unless it can handle some different form of input other than just image and text, I don't see the point of having both flagship and flash version for the same model.reply",
-      "> So your flagship model must be fastest and most accurate.That's rarely the way anything in life works though. Do you prioritize fastest OR most accurate? That's a question that depends on context, task difficulty, etc.You can use a 17M parameter NLI model for simple stuff and get orders of magnitude faster decisions. But the intelligence of that model will be quite a bit weaker.In some tasks you might be talking about very small differences in accuracy between that model and a 27B parameter LLM decision model for several orders of magnitude in speed. In other tasks, the 17M might be about as good as a random guess.reply",
-      "But isn't there still a meaningful spread of difficulty, risk tolerance, etc. in decision model relevant tasks? Especially at high volumes I think there would still be value in being able to make intelligence/cost/speed/calibration tradeoffs between modelsreply",
-      "Perplexity Decider is my favorite of these new decision models but this version is a step back in my benchmark for my use case. The decision index benchmark[1] actually agrees with this and makes me think I should look at a higher ranked modelhttps://huggingface.co/spaces/multimodalart/jev-decision-ind...reply",
-      "Any ideas what decider models are actually good? There does not seem to be a strong competitive benchmark culture (as with LLMs) for whatever reason?reply",
-      "I've found this fairly accurate: https://huggingface.co/spaces/multimodalart/jev-decision-ind...reply",
-      "That's good but I would definitely appreciate one with cost to run the benchmark  and cost vs accuracy breakdowns.reply",
-      "Artificial Analysis has an Index which also includes Cost per Task, Time per Task, accuracy, calibration etc. here: https://artificialanalysis.ai/evaluations/artificial-analysi...(caveat, I work at AA and helped build this Index)reply",
-      "just found this today and used it as one of the links I sent a coworker who hadn't heard of decision models yet!reply"
-    ],
-    "link": "https://www.perplexity.ai/hub/blog/perplexity-decider",
-    "first_paragraph": ""
-  },
-  {
-    "title": "The Other Nefertiti(2015) (alloversky.com)",
+    "title": "Kiri \u2013 The Modern Container Runtime (runkiri.com)",
     "points": 6,
     "submitter": "",
-    "submit_time": "2026-11-12T04:08:33",
+    "submit_time": "2026-11-15T04:40:41",
     "num_comments": 0,
     "comments_url": "",
     "comments": [
       "xxx"
     ],
-    "link": "https://alloversky.com/puzzlepieces/the-other-nefertiti",
+    "link": "https://runkiri.com/",
     "first_paragraph": ""
+  },
+  {
+    "title": "Show HN: Gawain \u2013 Require type hints on all Python variables (github.com/matheuzgomes)",
+    "points": 8,
+    "submitter": "",
+    "submit_time": "2026-11-15T04:39:25",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://github.com/matheuzgomes/gawain",
+    "first_paragraph": "Find every missing type hint in your Python code, in milliseconds.\n\n\n\n\ngawain requires type annotations on the variables, parameters, returns and class attributes of Python code,\nthen runs a type checker, ty or pyrefly, to check that the\ntypes are correct.Type checkers such as mypy, Pyright, ty and pyrefly infer the type of a variable that has no annotation. ruff's ANN\nrules and flake8-annotations ask for annotations on functions only. gawain also asks for them on variables and\nclass attributes.I built gawain only because I hate dict[str, Any] and wanted to do something about it. If your answer to\nthis is \"but Python already infers that\" or \"but my IDE infers it for me\", then don't use it, little padawan.Given shop.py:gawain check shop.py prints:retries = 3 passes, because a literal has an obvious type. PORT is a constant, so it needs Final[int].When every annotation is in place, gawain runs the type checker on the same files and prints what it reports.\nWith ty, the default, for\nprices"
+  },
+  {
+    "title": "How did Woz write the Apple 1 BASIC before building the computer? (retrocomputing.stackexchange.com)",
+    "points": 152,
+    "submitter": "",
+    "submit_time": "2026-11-14T22:22:49",
+    "num_comments": 55,
+    "comments_url": "https://news.ycombinator.com/item?id=50501594",
+    "comments": [
+      "What Woz did was the default way of writing assembly language programs for owners of 8-bit computers (mostly hobbyists).  You didn't have money for a second machine, so you wrote your program on paper, you entered it then tested it in situ.  Mostly you got it right, as doing it on paper was slow and meant you had the opportunity to put lots of thought into it.  8-bit instruction sets were simple enough that you eventually learned the most common instructions by heart.  There was a point where I could mostly translate a Z80 program from assembly to machine code from (my) memory.Maybe that is part of the nostalgia for the 8-bit days: the practice of \"slow programming\"?  It was relaxing, sort of like those \"slow tv\" shows.reply",
+      "I find it amusing that so many of the comments were surprised about hand-assembling 6502 code. When I came to the Apple ][, assemblers were relatively more accessible, but even at around $200, it was well beyond my financial means so I would write code longhand in spiral bound graph paper notebooks in four columns: Addresses, labels, hex codes (up to three bytes per opcode) and then the assembly code.And that $200 being out of bounds went pretty low: for the first couple years of my programming life, floppy disks were beyond my means, so any code I wrote lived in its official version as hand-written code and would have to be retyped any time I wanted it.reply",
+      "That's how I learned to program. I didn't have access to computer as a kid, so I read books, wrote programs on paper and when I got access to a computer I would type in the program and see if it worked. I now have an abundance of computers at home. What a weird timeline all in all.reply",
+      "Yes. My first serious program was done this way. At the start of the project (final year of EE degree, 1981) I didn't really understand what a program was, but I learned by studying the technical reference manual for the Intel 8085 CPU. It kind of seemed like magic, I can mold the functionality by storing codes in memory? Wow!I figured out exactly what I wanted to do, wrote it out very carefully on paper, looked up all the hex codes, wrote those out very carefully, adjusted addresses etc. as needed. This took many hours spread over weeks. Then I entered the whole thing on the hex keyboard and display of a primitive development board each time I needed it, perhaps an hour or so each time (I think I only did it twice). It worked first time, because why wouldn't it if you were sufficiently meticulous about your work in a process that was very obviously very intolerant of the tiniest mistake?I must admit my program (gather input information from some transducers, do some calculations, present some results) was likely somewhere between one and two orders of magnitude simpler than a complete Basic interpreter!reply",
+      "I think this comment is gold. Thanks for writing this. It feels like such a visceral description of the experience of \"programming\" back then. I've read a bunch of old books on programming or those that explain low level programming, but they mostly detailed the mechanics of programming, it feels like your comment captured something of the actual experience of it!reply",
+      "I got my first computer, a C64, when I was 14 in 1985, and wrote my 6510 assembly in paper as well.You had to carefully calculate the address distance for a branch instruction. The release of DISMON was a revolution: suddenly the computer did all of that for you. It even supported moving pieces of code to a different address to make space for inserting more instructions somewhere!reply",
+      "All I had was computer manuals in 1981. I wrote several assembly language programs on paper.reply",
+      "Since I learned to write machine code this way, I'll add a little bit of color.You can take the instruction set of a simple microprocessor, and lay out its instruction set in a tabular format. This made it relatively easy to see the correspondence between an instruction in assembly language and its numerical code.Handy \"reference cards\" were published for looking up the codes, printed on nice thick plastic. You can find these in a google image search for your favorite micro. I got by with a photocopy. Along with that, a programmer would have their own notes and diagrams taped to the walls for quick reference. Machines were simple enough that you really could have all of the vital information available at a glance.Today, the \"datasheet\" for a sophisticated 32 bit microcontroller is many thousands of pages.Microprocessors had relatively few transistors by today's standards, so the instruction decode logic had to be simple. Logical, if I may say so. This resulted in being able to describe operators and their operands as blocks of bits in an instruction word.I arrived late enough in the game that personal computers already existed, yet I got myself started by hand assembling for the microprocessor circuits that I brought up from scratch.reply",
+      "Long before 8-bit computers, I had 15 minutes of access every Saturday to an IBM 1620, so I had a week to write (and erase) code (initially FORTRAN II, later 1620 ASM) before getting anywhere near the computer. When I got to the machine room I had to punch the code on cards using an IBM 026 card punch. For my larger FORTRAN programs, it took most of the 15 minutes to compile them and punch an object deck, which I couldn't run until the next week.reply",
+      "My first exposure was Commodore PET computers at the high school (I'm old).  Nobody had home computers then, this stuff was crazy expensive, even a floppy disk (singular!) to save your work on the shared drive (on a dolly - it could be hotplugged) was >$20 in today's money.  But what you could use all you want was the line printer (a CBM 2022) and its consumables.  So at the end of whatever computer room time you could scrounge (lunch, who needs lunch?) you'd print off your 3-4 page epic program to continue coding and debugging with a pencil, on the long school bus ride. This does form \"slow\" habits.  To this day I detest autocomplete, autoindent, syntax highlighters and the like.  Never did hand assemble though.reply"
+    ],
+    "link": "https://retrocomputing.stackexchange.com/questions/17957",
+    "first_paragraph": ""
+  },
+  {
+    "title": "We're Asking an Appeals Court to Require a Warrant for ALPR Searches (eff.org)",
+    "points": 131,
+    "submitter": "",
+    "submit_time": "2026-11-15T02:00:54",
+    "num_comments": 25,
+    "comments_url": "https://news.ycombinator.com/item?id=50503255",
+    "comments": [
+      "I don't think they should be keeping data that's not involved in an active warrant.However, if they do anyway, there should be strong victims' rights protections so that the data is actually used during investigations.There was a string of burglaries in our area a few years ago, and panopticon N-1 (Google Map's auto recording of all phone GPS traces for marketing information) could have found the perpetrators pretty much instantly.They hit rural outbuildings in the middle of the night on camera, so timestamps were precise, but faces were obscured.  A reverse geofence warrant keyed on time of arrival / departure would have narrowed it down to just the crooks with extremely high probability, and other details in the videos would have corroborated the GPS traces.None of the victims were politically connected, so the police couldn't (by policy) run the reverse GPS lookups.  This is the worst of both worlds: Our data is recorded to be used against us later, but if ever it would be useful, we do not have access to it.  The same is true for vehicle black boxes / cameras.  They record a few seconds before airbag deploy, but you usually are not allowed to access them as part of an insurance dispute (even the ones from your own car).reply",
+      "Flock and ALPR usage is solved in USA if every state adopts New Hampshire's law:* Illegal to collect every plate for later analysis* Illegal to collect anything except for license plates (no drivers, pedestrians, etc.)* Must delete \"non hit\" plate images within 3 minutes* Strict forbidden to upload \"non hit\" camera imagery off the deviceI would add that it should also require a warrant to access the ALPR data, but it's a great start.https://gc.nh.gov/rsa/html/XXI/261/261-75-b.htmreply",
+      "This assumes that you don\u2019t get a new administration that decides to throw out all the laws that came before and uses this juicy panopticon camera system in whatever way they want, to do whatever they want.The cameras are an attractive nuisance for people in power, including any and all law enforcement types.  It only takes a few bad apples to spoil that entire ocean.The real threat is the cameras\u2019 very existence, and that is what has to be eliminated.  If a thing doesn\u2019t exist, then it can\u2019t be abused.That\u2019s an important thing to keep in mind, when you are required to keep in mind the lessons of 1930s Germany.  Or the Stasi from East Germany.When you figure out how to guarantee that you can never, ever again have a 1930s Germany situation pop up, and a government that just casually throws out all the old laws, then we can talk about whether those kinds of cameras might make sense again.reply",
+      "> assumes that you don\u2019t get a new administration that decides to throw out all the laws that came before and uses this juicy panopticon camera system in whatever way they want, to do whatever they want.What you're suggesting would mean that they wouldn't even have to throw out the laws. They could just install the new cameras themselves.  So there's no difference.It requires a reasonably balanced and trustworthy government no matter what.reply",
+      "The biggest argument against limits on storing \"non-hit\" data that the pro-Flock crowd is going to use is that \"we need the historical data to find evidence of the whereabouts of criminal suspects\".reply",
+      "Counter point police have been able to prosecute crime without being able to defacto track every single person in the US via car and the corrosive effect of having that ability outweighs the gains. Plus on top of all of that they've proven time and time again they can't be trusted to contain themselves or their collegues from rampant abuse to stalk exes, celebrities, etc. just because they can.reply",
+      ">>\"Counter point police have been able to prosecute crime without being able to defacto track every single person in the US\"This is not true, and I dont know why everyone believes that. Real-life policing looks nothing like Law and Order. Moreover, post-George Floyd, police have basically had a work stoppage. Real prosecution requires high agency work by the police and they aren't legally required to do that [1], so they don't, and no amount of voting and police union busting is going to help here. You can't require someone to be \"stellar\" at their jobs.Having had real egregious crimes happen around me has exposed me to just how much crime you can simply get away with...all the time. The rich get private security and investigators, us plebes get \"Sorry no one saw the shooting happen, so we can't do anything now please leave\"Flock has basically turned a high-agency job that police stopped doing, into a db lookup, that in some circumstances they can be forced into doing.I agree with EFF, record it all and put it all behind a real warrant and a civilian judge with a high bar for approval.[1]: https://en.wikipedia.org/wiki/Warren_v._District_of_ColumbiaP.S: Before you quote Benjamin Franklin at me, no I don't want a 100% hit rate, I just want a decent shot at crimes being solved by average police work and just even the slightest hint of deterrence.reply",
+      "Oh, I agree. I just want people to be aware of those potential arguments so they can be prepared.reply",
+      "And I personally think that in some cases that would actually be a net positive for society. Like a kid disappears or a body is found murdered or a serious crime occurs. Being able to look at who was coming and going to solve serious crimes is probably a good thing.But for tracking petty crimes and with the abuse of the system with things like officers monitoring their exes, as one example, makes the system far too dangerous for a free society. And because of that if they are going to ever get the public on board with flock then we are going to need to establish certain rights and guarantees.For me that would be things like warrants with the exceptions in only the most extreme cases like a kidnapping or a murder that literally just happened and immediate response was critical. \nNext I would want a reasonable time data was stored then deleted. That is not 2 years that is like maybe a couple weeks or perhaps a little longer. Having the history of when and where everyone goes is a huge privacy risk and should not be stored forever as it is a target. \nNext I would want rules that it is only used for certain investigations and crimes. Yes to violent crimes and sexual crimes and crimes against children and obvious things all of society can easily say yes those things are bad. But for most other crimes it should be constitutionally forbidden. Think of how laws and public beliefs change over time. Imagine this years back when being gay was a crime. Or tracking people who go to an abortion clinic.I could go on for a lot longer about how this type of system is dangerous in so many ways if not governed by very well thought out rules and rights given to the public. It is sad that the operators of these systems don't want to meet in the middle to something that most of the public could get on board with but they obviously know that total surveillance is very valuable data to have on people.reply",
+      "The original sin is requiring cars to display an identifying plate.  Imagine asking the framers about a similar ID display on horseback mounted travelers.That's the underlying rights violation-- and it's why solutions that otherwise try to restrict ALPR run into oddities about limiting people's ability to observe what is plainly visible in public.Failing that avenue, we should treat most broad involuntary data collection efforts as a form of stalking/harassment, and treat it accordingly-- including providing a strong civil path for anyone whose data was collected without their knoweldge especially given that law enforcement / prosecutors have a material conflict of interest which will prevent them from enforcing the law.reply"
+    ],
+    "link": "https://www.eff.org/deeplinks/2026/11/were-asking-appeals-court-require-warrant-alpr-searches",
+    "first_paragraph": "Today, along with the ACLU, EFF filed an amicus brief in the Sixth Circuit court of appeals in United States v. Sturdivant, a case where police warrantlessly tracked a suspect\u2019s movements using Automated License Plate Reader (ALPR) data. Our brief details the vast, interconnected network of ALPRs that constantly track drivers around the country and argues that this tracking is a \u201csearch\u201d under the meaning of the Fourth Amendment. Sturdivant involves a series of robberies in and around Cleveland, Ohio. Using surveillance camera footage, police identified the make, model, and color of the robber\u2019s car, but they did not know its license plate number. After running an open-ended search of two ALPR databases, Flock and ELSAG, officers learned a car belonging to the defendant had been tracked near sites of the robberies, eventually leading to his arrest. Faced with a motion to suppress the ALPR evidence, the district court held that Mr. Sturdivant had no reasonable expectation of privacy in "
+  },
+  {
+    "title": "A family tree of software job titles (zwischenzugs.com)",
+    "points": 251,
+    "submitter": "",
+    "submit_time": "2026-11-14T17:45:19",
+    "num_comments": 122,
+    "comments_url": "https://news.ycombinator.com/item?id=50499038",
+    "comments": [
+      "Recently I spoke to someone who wanted to know what they should call themselves seeing as they never learned software development, formally or otherwise, but that's not stopping them from releasing AI-powered Python projects in GitHub. I suggested Project Manager, but they took offense to that because (I think) they wanted to hear Software Engineer in order to apply to those jobs. My counter-argument was that, legal rules aside, a S.E. should be able to differentiate good code from bad, but my suggestion wasn't super well received.The point being: I'm always amazed at the cross-purpose impulse of arguing \"the title is not important\" while, simultaneously, really wanting to use the title.reply",
+      "As a software engineer (CS degree and ~10 years of pre-AI experience), I'd feel uncomfortable saying I was a Project Managerreply",
+      "Who would want to?reply",
+      "Prompt Editor (Senior)reply",
+      "LGTM-er (100% approval rate)reply",
+      "Project Manager is a great fit. I also heard and liked Director, which brings in good analogies from filmmaking and implies nothing about technical ability either way. Could even be Software Director.reply",
+      "Software Director could be confused for Director of Software Development.reply",
+      "Director of Software Directing?reply",
+      "As an analyst who vibe codes a lot I think it is perfect, along with Product Manager. There is a lot more to these roles, but I think they're the closest.reply",
+      "Member of Technical Staff, Applied AIreply"
+    ],
+    "link": "https://zwischenzugs.com/2026/11/03/a-family-tree-of-software-job-titles/",
+    "first_paragraph": "\nzwischenzugs.com\nFor a few years I was \u2018Head of DevOps\u2019. Before I got that job title I\u2019d done much the same work under other names, and since then I\u2019ve watched the same work get called SRE, and then it seemed to morph towards platform engineering. If you\u2019ve been in this industry for any length of time you\u2019ll have seen titles come and go like this, and you might have wondered where they all came from.So I (with the help of Mr Claude) built this family tree of software job titles, from the 1940s to now.It\u2019s here: ianmiell.github.io/sw-job-title-family-treeThere are 104 titles, from \u2018Computer\u2019 (a person, not a machine) at the top to \u2018AI Agent / Context Engineer\u2019 at the bottom.Time runs from top to bottom, in five-year rows. The titles sit in seven coloured columns by family:A solid arrow means the title grew out of its parent. A dashed arrow means influence, or a common career move. Landmark titles are in bold.On the site you can click a family to see just that column (here\u2019s Data & AI),"
+  },
+  {
+    "title": "Osint Case Studies (osintsearch.org)",
+    "points": 6,
+    "submitter": "",
+    "submit_time": "2026-11-15T03:33:41",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://osintsearch.org/blog/osint-case-studies",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Nvidia deliberately kept GPU prices high through circular financing deals (techspot.com)",
+    "points": 348,
+    "submitter": "",
+    "submit_time": "2026-11-14T22:26:30",
+    "num_comments": 181,
+    "comments_url": "https://news.ycombinator.com/item?id=50501631",
+    "comments": [
+      "If the price of the RTX 6000 (96gb blackwell gpu) drops to $2000 (original MSRP $8000, currently $16,000 usd due to \"scarcity\") then, all of a sudden, \"we have ai at home\" becomes real and why would you ever pay for a subscription for your company/family when you can run Qwen Flash Next (which runs great on consumer GPU via software like Strata) forever for free?Engineering types and power users need not apply,but For Everyone Else, the \"normies\", Qwen Flash Next is probably \"640k is enough for anyone\" territory.IPO, valuation etc depend heavily on frontier, or \"good enough\" AI to need to run on commercial grade GPUs. If Qwen Flash Next is good enough and runs on a $2000 GPU, why would you pay $20/30/100/200 per month in perpetuity?I wouldn't pick Qwen Flash Next to add kernel namespacing and cgroups v2 to my custom OS kernel, but it will happily implement the Plan.md that Fable 5.2 wrote for a dollar.reply",
+      "> Engineering types and power users need not apply,but For Everyone Else, the \"normies\", Qwen Flash Next is probably \"640k is enough for anyone\" territory.Why would any of those non-power-users buy a $2000 GPU that doubles as a space heater (seriously, try sitting next to one during long runs in the summer) and thousands more for a computer to host it, plus all of the trouble of setting it up, instead of a $20/month subscription?I do have the hardware to run Qwen3.8-Flash-Next at home, and I still heavily use my subscriptions even for simple tasks. The experience of using the apps on my phone on the go is great and I always have the option to scale the model up to the task.The people who are going to pay thousands of dollars up front to avoid $20 are power users and people who have different priorities and motivations, like independence or ultimate privacy. GPU prices dropping won\u2019t change that much.Also, you don\u2019t need an RTX6000 for Q3.8FN. There are much cheaper options right now at lower speeds.reply",
+      "Even if you own a RTX6000 anyway it's not obvious that it's cheaper to run Q3.8FN on it than buying tokens. Google tells me that it can produce ~1 million tokens per hour and uses 450W of power, which for me comes out to 18\u00a2 per million tokens. That's very similar to the price on OpenRouter. Maybe during the winter when all the waste heat cuts your heating bill a bit?reply",
+      "I did similar math for my card (9070 XT) and it is close to break-even on electricity cost alone nevermind the amortized cost and requirement to have a desktop for it to go into. The parallelization and faster speed of the cloud makes it feel more expensive but it's just doing the same work more quickly.The strongest case for local AI is for anything requiring privacy/discretion but I don't think individuals will collectively prioritize this. Convenience is king for the majority followed closely by cost. Businesses who care about protecting their competitive edge seem like the more likely candidates for local AI but only if ZDR providers aren't good enough.Local AI will probably end up where it is now: in the hands of hobbyists and/or privacy-minded people who already own a GPU for gaming.reply",
+      "The workstation edition defaults to 600 W, Max-Q to 300 W. 1M tokens/hr is 277 per second, which is roughly right for a single request at a time for a lot of models, not sure about Q3.8FN specifically, but these things scale really well to 16+ concurrents, I typically get 1-2k tps on Deepseek Flash when the cards are heavily loaded. MTP (a small network that predicts a few tokens which get checked in parallel against the full net, kind of like CPU branch prediction) makes a huge difference in single stream throughput.reply",
+      "it's probably not cheaper, but economics are only one concern at playreply",
+      "Bingo. It's always cheaper to rent...reply",
+      "> instead of a $20/month subscriptionAnd that $20 subscription isn't a good comparison. That gets you Astra or Opus. Better comparison is OpenAI's $8/month plan, which gets you Luna (which scores the same as Qwen on benchmarks). At that price, most of the cost isn't even the model; it's just hosting the infrastructure.reply",
+      "Partly, it's much faster than the cloud models. Also, those cards aren't that hot, the Max-Qs are rated at 300W, and can be limited to 250W.reply",
+      "Tokens per second is slower on most local setups than cloud models.reply"
+    ],
+    "link": "https://www.techspot.com/news/114558-nvidia-deliberately-kept-gpu-prices-high-through-circular.html",
+    "first_paragraph": ""
+  },
+  {
+    "title": "The Evolving Story of How Chemistry Became Biology (quantamagazine.org)",
+    "points": 13,
+    "submitter": "",
+    "submit_time": "2026-11-13T11:55:19",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112/",
+    "first_paragraph": "\nGet the latest news delivered to your inbox.\n\nAn editorially independent publication supported by the Simons Foundation.\nCreate a reading list by clicking the Read Later icon next to the articles you wish to save.Type search term(s) and press enterPopular\n                                    SearchesNovember 12, 2026Click to tell Google to prioritize Quanta and see more of the best coverage of science and math in your search and AI results.Scientists are homing in on the 200 million years after the conditions for life emerged on Earth but before our most ancient single-celled ancestor appeared.Mark Belan/Quanta MagazineSenior Staff WriterNovember 12, 2026Around 4.6 billion years ago, some 9 billion years after the birth of the universe, a cloud of gas and dust collapsed into the familiar blinding ball in our sky. Scraps of leftover material collided and accreted into the planets of the solar system, including our own. For the next few hundred million years, Earth was a hellish, molten "
+  },
+  {
+    "title": "KDE: The documentary [video] (kockatoo.org)",
+    "points": 417,
+    "submitter": "",
+    "submit_time": "2026-11-14T13:43:28",
+    "num_comments": 90,
+    "comments_url": "https://news.ycombinator.com/item?id=50496976",
+    "comments": [
+      "KDE is amazing. Outstanding performance, outstanding design, and endlessly configurable. But the most amazing thing of all is that you've achieved this while competing against teams like Microsoft's or Apple's, which spend millions of euros and are made up of thousands of people.Congratulations, team. Here's to 30 more years.reply",
+      "Total KDE fan and that's all I run at home. It's an interesting study also in desktop environment and software written in C++ and just how hard it is to get something that works for most people. Mistakes, corrections, building the basic blocks like Qt in the early days and keeping a bunch of people with differing cultures / tastes / backgrounds/needs motivated to make it better every day - fascinating achievement.Thank you KDE folks - I contribute in terms of bug reports and attempts at fixes sometimes but this time I am signing up for a monthly donation - I encourage people to do what they can to keep a good thing going! https://kde.org/donate/reply",
+      "Agreed. I'm a late-comer to KDE, having used Linux for over 20 years but only switched to KDE in the past year. Too many annoying design decisions in GNOME and I got sick of wasting time configuring the trendy minimalist WMs. I find KDE to be a breath of fresh air. It's got sensible defaults, gets out of my way for the most part, and it's improved a lot since I last tried it in the mid-2000s.reply",
+      "I also use KDE daily and need to add it to my yearly donations list (alongside FreeBSD, Signal, Bottles, and a few others).reply",
+      "Im a KDE user since the early Plasma 5 days, which is now more than a decade ago. It's awesome, usable, configurable, sleek and fun!A week ago I bought a cheap mini-htpc and put Plasma Bigscreen on it, using a phone with KDEconnect as remote. So easy to use! So much better than AndroidTV let alone proprietary crap.KDE is just great.reply",
+      "KDE connect for me is honestly the killer app in the whole ecosystem. In general at this point I'm less excited about the desktop itself because I've always lived in Emacs or the browser and most desktops more or less work these days, but the support system KDE has built around makes it stand out to me.Connect, KdenLive, Krita, KFind and a whole bunch of other stuff is very useful.reply",
+      "Yeah, additionally anyone at Microsoft that keeps throwing out half usable COM frameworks for C++ should spend some time with KParts, KIO and Qt D-Bus bindings, maybe they would finally learn how to properly design one.reply",
+      "I am a bit prod of having seen the original post looking for volunteers to build a Kool Desktop Environment. I was obsessively reading Usenet groups at the time. And I remember there were quite early betas published, I did not run them at first, but I remember much enthusiasm about it. So I feel familiar with the beginnings although I never participated in the project development-wise. All the way up to KDE 4 I was quite close to the project as a user. But since KDE 4 was so unstable and buggy, I left it around that time. This is also around the time when the documentary makes a big jump ahead chronologically.I feel the documentary explains less what happened the last 10-15 years. I recall Trolltech and Qt underwent a series of acquisitions. How is KDE and Qt developed now? Who are the main contributors and sponsors? Any big backers? This information I felt missing.reply",
+      "The problems in KDE 4.0 & 4.1 is long gone. It was at 3.5.x level around 4.6, and now it's just smooth and invisible. You can surely give another try.Qt is now its own company, namely Qt Group. Wikipedia quotes:> In 2018, the company had 5,000 customers. Approximately 80% of the Fortune 500 companies are customers of Qt Group.[22]So it's self-sustaining now.AFAIK, KDE is still mostly volunteer work, but the way they develop software is pretty robust.reply",
+      "Valve has been contracting KDE devs to fix bugs and add features for years now, as KDE is the desktop environment on SteamOS.reply"
+    ],
+    "link": "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c",
+    "first_paragraph": "It seems JavaScript is either blocked or disabled in your web browser. We totally get that. However, this page will not work without it.If you are concerned about the security and privacy (or lack thereof) of JavaScript web applications, you might want to review the source code of the instance you are trying to access, or look for security audits.We are sorry but it seems that PeerTube is not compatible with your web browser.Please try with the latest version of Mozilla Firefox.If you think this is a mistake, please report it."
+  },
+  {
+    "title": "500 Lines or Less A 3D Modeller (aosabook.org)",
+    "points": 28,
+    "submitter": "",
+    "submit_time": "2026-11-13T13:47:42",
+    "num_comments": 2,
+    "comments_url": "https://news.ycombinator.com/item?id=50483431",
+    "comments": [
+      "The code appears to be here (about ~903 lines):https://github.com/aosabook/500lines/tree/master/modeller/co...reply",
+      "Using a big library like OpenGL and then playing code golf seems at ends. Cool writeup but these always confuse mereply"
+    ],
+    "link": "https://aosabook.org/en/500L/a-3d-modeller.html",
+    "first_paragraph": "\n  \n  Erick Dransch\n  \n\n    If you enjoy these books, you may also enjoy\n    Software Design by Example in Python\n    and\n    Software Design by Example in JavaScript.\n  Erick is a software developer and 2D and 3D computer graphics enthusiast. He has worked on video games, 3D special effects software, and computer aided design tools. If it involves simulating reality, chances are he'd like to learn more about it. You can find him online at erickdransch.com.Humans are innately creative. We continuously design and build novel, useful, and interesting things. In modern times, we write software to assist in the design and creation process. Computer-aided design (CAD) software allows creators to design buildings, bridges, video game art, film monsters, 3D printable objects, and many other things before building a physical version of the design.At their core, CAD tools are a method of abstracting the 3-dimensional design into something that can be viewed and edited on a 2-dimensional screen."
+  },
+  {
+    "title": "PyPI's redesigned project pages with clearer security signals are now live (pypi.org)",
+    "points": 222,
+    "submitter": "",
+    "submit_time": "2026-11-14T15:40:52",
+    "num_comments": 97,
+    "comments_url": "https://news.ycombinator.com/item?id=50497892",
+    "comments": [
+      "Not very keen that the whole story of trust is basically centralisation - requiring \"big cloud\" and essentially promoting lock-in.Did I get that right? Seems a bit anti-pythonic.reply",
+      "I think at this point the group of devs+ who are not fully on board with control by and dependence on big tech/VC is a small niche unfortunately.reply",
+      "I don't think this is true. From my experience, developers are the people who care about this topic the most. Just look at HN, almost everyone (who speaks out) is against.reply",
+      "I'm very in favor of this work, but don't generally comment because these comment threads are full of folks strawmanning the work being done, and in my experience those folks aren't really interested in productive discussion.I'd be wary of trying to estimate the split of opinions based on who comments.reply",
+      "Can you explain the misconceptions? Currently what I see is a) a checkmark box that can only come from a large provider, and b) no good idea of what that checkmark box means in a practical sense, or why I should care or why pypi cared to implement it. What is the threat that this prevents? To me this seems to not particularly improve security but that it does create this pressure towards using a small subset of providers (even if that pressure is pretty light at the moment).(I've had a quick read through the various links but they mostly seem to emphasize what it's not, which is why I say that it doesn't seem to improve security, and especially I don't really see a motivation for why these other parties need to be involved in the way they are: the only benefit I can imagine is a third-party attestation that some artifact corresponds to some source code, which seems to be partly besides the point and partly solvable through better means)reply",
+      "I didn't reference misconceptions, for what it's worth. I referred to strawmanning, and if you're curious for some examples:https://news.ycombinator.com/item?id=50499144https://news.ycombinator.com/item?id=50500622https://news.ycombinator.com/item?id=50499218If you're curious to dig into what the checkmark means, why you should care, and why they implemented it, I'm not going to be able to do a better job than https://docs.pypi.org/attestations/security-model/reply",
+      "I believe you got that wrong.Here's some extra context [0]: https://github.com/pypi/warehouse/issues/20927. Loooots of links to click in.the point here being small service providers are _also_ able to get into this system, but I think there's an expectation of success.The bar for trusted publishers is very high though. I don't think it's high \"on purpose\" to leave out certain platforms for being too small, but in effect if (for example) your provider doesn't have a security contact point then that's going to rule them out here.reply",
+      "I\u2019d like to see support for trusted publisher signing and manual upload. Think of it as two step auth for artifact publishing. Pipeline generated artifacts and human upload of those verifiable artifacts. The current reality of trusted publishing, is devoid of trust, except it was triggered by a pipeline that pypi trusted. That pypi is now able to call out such trust is great btw, but as a project that currently does this two step generation, it feels like we are penalized for trying to introduce additional steps out of abundance of caution\u2026 separately, what mechanism does a client installer have to verify a pkg install was cryptographically attested to wrt to production?sans client verification of signatures by default, install is still roulette, and I\u2019m glad package managers have introduced package publication date based cool off options now.reply",
+      "You got that right. In this thread we have a ClosedAI employee promoting ClosedID services. Look at the sponsors of ClosedID:https://openid.net/foundation/sponsoring-members/We know why PyPI ripped out PGP support and has refused any verification mechanisms that other distributions use for decades.reply",
+      "I trust myself way more to with with a pgp key on my computer than figuring out how to use GitHub actions properly...reply"
+    ],
+    "link": "https://blog.pypi.org/posts/2026-11-06-ui-updates-complete/",
+    "first_paragraph": ""
+  },
+  {
+    "title": "Show HN: Turbo-Browser-MCP \u2013 Batch forms, DOM deltas and submit guards for MCP (github.com/tthanh2k6)",
+    "points": 4,
+    "submitter": "",
+    "submit_time": "2026-11-15T04:09:11",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://github.com/Tthanh2k6/turbo-browser-mcp",
+    "first_paragraph": "High-speed Playwright MCP server with multi-tab batching, compact delta DOM snapshots, React/Shadow DOM/iframe form filling, disk file uploads, and submit guards\n\n\n\nturbo-browser-mcp is a Playwright-based Model Context Protocol (MCP) server built to cut LLM token waste and multi-turn latency in browser automation. It consolidates 25-33 fine-grained browser primitives into 10 batched tools featuring delta DOM snapshots, single-turn React/Shadow DOM/iframe form prefill, direct disk file uploads (no Base64 in context), parallel tab sessions, network blocking presets, and a default human-in-the-loop Submit guard.All figures below come from benchmarks/benchmark.mjs (npm run benchmark) running headless Chromium locally with exact OpenAI o200k_base tokenization (tiktoken 0.14.0):Note on latency vs LLM inference turns: Eliminating 10 round-trips on a 10-field form saves both 7x in browser execution (574 ms -> 82 ms) and 10 separate LLM inference round-trips (2-5s per turn in agent loops) plus "
+  },
+  {
+    "title": "Why get an expensive Pi when I have an old phone? (thanks.fish)",
+    "points": 529,
+    "submitter": "",
+    "submit_time": "2026-11-10T14:16:05",
+    "num_comments": 289,
+    "comments_url": "https://news.ycombinator.com/item?id=50440709",
+    "comments": [
+      "Nowadays, I just get old laptops with broken screens and take the mainboard out. They are dirt cheap, often even have 16GB of RAM, you can just dump pretty much any linux on them and they are usually way faster than Pis.The boards are of course bigger, which I guess will be a non-starter for many. They'll also require active cooling unless you downclock them considerably. They often also require more power, although many mainboards can be configured down two a few watts of power consumption, depending on what peripherals and speed you need.Yeah, it's more work than just getting a Pi, but given the current prices, it makes sense for me.reply",
+      "The goal of raspberry pi's was to have a standard GPIO connected to a moderately powerful and cheap computer for educational purposes. Then it slowly evolved into many use cases because of it's vast community and standardization and availability, not to mention the large number of boards that connect to it. The standardization did erode a little but it still maintains that reputation because of the community and availability and now because its turned into a big brand. Many industrial projects depend on it.If you use the raspberry pi for homeservers or general compute (which I did/do sometimes) then the value proposition is quite poor regardless of pre AI prices unless you have very strict power requirements (in which case it probably fits the above use case already). The comparison with NUCs or mini PCs or laptop boards feels like it's a wrong comparison.The chips used in PIs are repurposed Broadcom SOCs that have inferior bus speeds compared to a general purpose processor from intel or amd, even few generations old. For any general purpose computing these chips will always be slower. its like comparing apples and oranges. I never really understood why people did that.reply",
+      "> its like comparing apples and oranges.Yeah, I don't disagree, but I would argue the Raspberry was always an applorange, and that's exactly what made it popular (together with the cheap price in the beginning, which made it basically an impulse buy). It brought people into microcontroller/embedded systems territory without having to actually deal with all of the stuff that made this so daunting. As you said, it is basically a normal Linux PC, just that it runs Arm and has GPIO.\nPeople who are really into electronics/embedded systems will use a proper microcontroller nowadays anyway, these have gotten so powerful and easy to use that there's really no reason for a Pi anymore. And on the other side, people who want a little server, a pi-hole, tailscale  or octoprint or whatever, can just use an old used laptop/miniPC or similar. Since the Pi has gotten so expensive, I see basically no reason to get one anymore.reply",
+      "Pi still makes the Pi Zero for like $15 that runs linux, if you want a cheap low power general computer running linuxreply",
+      "From Rasberry Pi's own page:  Central Computers -> 404\n  MicroCenter       -> endless loop\n  PiShop            -> sold out\n  Sparkfun          -> sold out\n  CanaKit           -> ? seems to only be a product listing ?\n  AdaFruit          -> sold out\n  Vilros            -> sold out\n\nIt's always like this with the Pi.reply",
+      "The 3b+ is still in stock or the 3b if the zero is enough and size isn\u2019t a factor.Still $35 for the 3b and $40 for the 3b+ but as an example, digikey has thousands in stock of bothreply",
+      "At least where I live, the Pi Zero is pretty much impossible to get, and when it's available, it's more like 60$.reply",
+      "Where do you live? I'll send you a Pi Zero if you need onereply",
+      "Sending would probably cost the difference, but check first where the gp lives.reply",
+      "You can run any OS on any Pi board other than the picoBy the way, I got a zero 2W a few months ago and it costed me 47\u20acreply"
+    ],
+    "link": "https://so.long.thanks.fish/why-pi-when-i-have-an-old-phone/",
+    "first_paragraph": "I\u2019m working on a project that needs a high resolution camera, GPS, storage, and a microcontroller to control some lights. (More on the project soon!) I\u2019ve been designing PCB adapters around a Raspberry Pi, an Arducam 64MP camera, and a GPS module. Every time I add another part, the bill grows.I\u2019m also trying an ESP32-P4 board, which will get its own post soon. But the alternative I keep coming back to is an old smartphone.I have a Redmi 13C 5G and a Huawei Mate 30 5G. Phones like these turn up second hand on Taobao for roughly \u00a5300\u2013500 (\u00a333\u201356 / \u20ac40\u201367 / $45\u201375). The Redmi gives me a camera that saves 50MP JPEGs; the Mate 30 has a 40MP main camera and a telephoto lens. Both already contain GPS, storage, a clock, a battery, mobile data, and a touchscreen. Their USB-C ports give me a route to the PCB that will handle the lights and other sensors.Here is the rough parts comparison I made while deciding what to build next:These are illustrative November 2026 listings. The more fully equipp"
+  },
+  {
+    "title": "One Man's Quest to Create the Perfect Whiskey Glass (nytimes.com)",
+    "points": 7,
+    "submitter": "",
+    "submit_time": "2026-11-13T17:37:32",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.nytimes.com/2026/11/13/dining/drinks/kurt-josef-zalto-whiskey-glass.html",
+    "first_paragraph": "An Austrian designer is unveiling a version that aims to solve an age-old problem for connoisseurs: how to keep the alcohol from overpowering the aroma.An Austrian designer is unveiling a version that aims to solve an age-old problem for connoisseurs: how to keep the alcohol from overpowering the aroma.The No. 11 whiskey glass, designed by Kurt Josef Zalto for Josefinenh\u00fctte, was the result of three years of research.Credit...Florentina Olareanu for The New York TimesSupported byBy Clay RisenAs a child in rural Austria, Kurt Josef Zalto would often accompany his father, a fifth-generation glassmaker, to his workshop, where he fell in love with the family business.\u201cIn a village like that, glass is not a product,\u201d he said. \u201cIt is the sound of the furnaces, the smell of the workshop, the work of your father and your neighbors.\u201dThirty years later, Mr. Zalto is one of the world\u2019s leading glassware designers, renowned for his ability to combine craftsmanship and science, relentlessly tweakin"
+  },
+  {
+    "title": "US loses measles-free status: Pan American Health Organization (2025) (paho.org)",
+    "points": 48,
+    "submitter": "",
+    "submit_time": "2026-11-15T00:48:11",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://www.paho.org/en/news/10-11-2025-paho-calls-regional-action-americas-lose-measles-elimination-status",
+    "first_paragraph": "User account menuWashington, D.C., 10 November 2025 (PAHO) \u2013The Pan American Health Organization (PAHO) announced today that the Region of the Americas has lost its verification as free from endemic measles transmission.The decision follows the conclusion of the PAHO Measles, Rubella, and Congenital Rubella Syndrome Elimination Regional Monitoring and Re-Verification Commission, which met in Mexico City from 4 to 7 November 2025 to review the epidemiological situation across the region.\u00a0The Director of PAHO, Dr. Jarbas Barbosa,\u00a0received\u00a0and agreed with the Commission\u2019s report indicating that endemic transmission of measles has been reestablished in Canada, where the virus has circulated for at least 12 months.\u00a0As a result, the Americas, which was the first region in the world to eliminate measles twice, has now lost its measles-free status. All other countries continue to maintain their measles elimination status.\u201cThis loss represents a setback\u2014but it is also reversible,\u201d\u00a0said Dr. Barb"
+  },
+  {
+    "title": "Astro Spiral: Greatest Car Stunt Was Also First Computer-Modeled Stunt (boldentrance.com)",
+    "points": 17,
+    "submitter": "",
+    "submit_time": "2026-11-12T23:04:23",
+    "num_comments": 0,
+    "comments_url": "",
+    "comments": [
+      "xxx"
+    ],
+    "link": "https://boldentrance.com/astro-spiral-the-greatest-car-stunt/",
+    "first_paragraph": "The corkscrew car jump in\u00a0The Man With The Golden Gun\u00a0is the coolest car stunt in any movie series. Following Bond tradition, the car stunt was done for real. No models or computer trickery. Well, to be honest, a computer was used but not in the way you might expect. This famous 1974 jump of an AMC Hornet X over a twisted, broken bridge was the first car stunt, or any stunt for that matter, to be extensively computer-modeled.As you can imagine, making this car perform a barrel roll in midair and land on the other side on its wheels is pretty complex. The twisted ends of the bridge have to be elevated at just the right angle, the car has to hit the bridge at just the right speed, and perform the airborne barrel roll at just the right moment to ensure an elegant and safe landing. In a stunt like this, safety is top priority, but making Bond look good is also important.Before we delve into how they did it, check out the stunt below. It was performed in just one take.The moment would have "
+  },
+  {
+    "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax (github.com/vaibhaav-tiwari)",
+    "points": 205,
+    "submitter": "",
+    "submit_time": "2026-11-14T15:04:15",
+    "num_comments": 11,
+    "comments_url": "https://news.ycombinator.com/item?id=50497589",
+    "comments": [
+      "I love this, there is nothing like recreating a model from first principles, plus makes me want to revisit Jax again (I'll do it after I spend enough time with Zig). Thanks for this!reply",
+      "Thanks for this! I've been trying to get local training working on Fedora with ROCm for a while now, and this is the first project that ran end-to-end on my RX 7600 XT 16GB.The whole reason for me buying the card was to play around with deep learning and models, so it's awesome to have a stepping off point now!No CUDA meant ROCm surprisingly just worked with JAX.Gotchas for anyone with a 7600 XT: it needed two env vars, HSA_OVERRIDE_GFX_VERSION=11.0.0 because JAX's plugin rejects gfx1102, and XLA_FLAGS=--xla_gpu_enable_triton_gemm=false to stop a GPU hang.I'm on Fedora 45 with the in-kernel amdgpu driver, rootless podman and AMD's rocm/jax image (ROCm 10.1, JAX 0.11.1). Nothing ROCm is installed on the host, which is nice.Container setup is in a PR if it helps anyone: https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax/pull/1reply",
+      "Post like these always drives a motivation to understand how inference or what OP did.For folks who are more familiar in this space, is there a good road map how to build and understand the intuition behind this? I\u2019m comfortable in Java and Python and do vanilla SWE work.reply",
+      "Intuition: there are YouTube videos from 3blue1brown [1] and Welch Labs [2] on neural networks, LLMs, and related tech that are good.Building: the videos/tutorials from Andrej Karpathy in Python [3] are considered to be very good at building and understanding the basics, from a small/toy neural network engine to transformers and tokenizers.There was a post here a few weeks ago [4] on reasoning models using Python/PyTorch with links to an older series on non-reasoning transformers.[1] https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_6700...[2] https://www.youtube.com/@WelchLabs/videos[3] https://karpathy.ai/zero-to-hero.html[4] https://news.ycombinator.com/item?id=50245138reply",
+      "I'm not an expert but there's https://jaxformer.com, https://github.com/karpathy/nanochat and, of course, the original \"Attention is all you need\" paper at https://arxiv.org/abs/1706.03762.reply",
+      "> to asking a language model to create a 3D end-to-end working model for me to capture the nuancesLove this! Yes, having a visual of the system makes it a lot easier to reason about and understandI wish all AI models came with interactive animated workflows of their architecture> so I wanted it to be different just for the sake of it and used various books by\u2026That\u2019s cool and great for your own project. At the same time it helps to use datasets that others have used, because then you can compare results more directlyExcellent write up, I really appreciate all the detail and the sample outputs at the end. Excited to see what I could apply for  this to the small <10M models I\u2019ve been trainingreply",
+      "Could you build and train a V4.1 the same way?reply",
+      "anyone got a c++ version of this?reply",
+      "thank you so so much for writing this, I will recreate it for learningreply",
+      "I wanted to understand what actually makes DeepSeek V3 different, so I rebuilt its three main ideas from scratch in pure JAX: Multi-head Latent Attention, mixture-of-experts with bias-based load balancing instead of an auxiliary loss, and multi-token prediction. The model is about 190 lines.It\u2019s a 36.2M-parameter version trained on a MacBook Air M5 (24 GB) with jax-metal, on 207 old detective novels. 12,000 steps took about 2.6 hours.Full write-up with diagrams and results: https://vaibhaav.in/writing/deepseek-v3-jax/The trained checkpoint and exact data are in the v1.0 release, so you can generate text without training.Would love corrections if I got anything wrong :)reply"
+    ],
+    "link": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
+    "first_paragraph": "DeepSeek V3 (MLA, DeepSeekMoE, aux-loss-free balancing, MTP) in 190 lines of pure JAX, trained on a MacBook Air. Write-up: vaibhaav.in/writing/deepseek-v3-jaxThe architecture from the DeepSeek-V3 technical report in 190 lines of pure JAX, pretrained from scratch on a MacBook Air on public-domain detective fiction.No Flax, no Equinox, no PyTorch. Params are plain dicts of arrays and every part of the model is a function you can read top to bottom in deepseek_v3.py.Read the write-up: DeepSeek V3 in 190 lines of pure JAX, with diagrams, the code explained piece by piece, and the results.One run of the default config on a MacBook Air M5 (24 GB):With balancing on and off, validation loss at step 2000 was the same (3.921 vs 3.923). The bias evens out the experts without costing anything, which is the paper's claim.Its own words, from the prompt \"The fog came in off the\":The fog came in off the bay, and the great trees were spreading and the stars were shining.This is an architecture demo, no"
+  },
+  {
+    "title": "Oxford Molecular Motors (ox.ac.uk)",
+    "points": 29,
+    "submitter": "",
+    "submit_time": "2026-11-11T17:06:08",
+    "num_comments": 3,
+    "comments_url": "https://news.ycombinator.com/item?id=50455732",
+    "comments": [
+      "Related proteins that are just as wonderful:https://en.wikipedia.org/wiki/ATP_synthasehttps://en.wikipedia.org/wiki/Type_III_secretion_systemreply",
+      "ATPsynthase is amazing.  I am constantly amazed that it actually looks like a motor, as well as being the endpoint of the complex system to produce ATP energy in a cell.reply",
+      "Molecular motor videos are pretty popular as short-form video. Some good ones here: https://www.youtube.com/@iJEPStudio/videosreply"
+    ],
+    "link": "https://www.physics.ox.ac.uk/research/group/oxford-molecular-motors/research/bacterial-flagellar-motor",
+    "first_paragraph": "Research groupThe bacterial flagellar motor is a rotary molecular engine powered by the flow of ions across the inner, or\u00a0cytoplasmic, membrane of a bacterial cell envelope. Each motor drives a protruding helical filament, and the rotating filaments provide the propulsive force for cells to swim.\u00a0 The flagellar motor is perhaps the best studied of all large molecular machines.\u00a0 The image on this page is a composite of structures, obtained mostly by cryo electron microscopy, mostly published in 2020 and 2021.These structures - along with the latest advances in our lab in optical measurement of live, working, single motors - will help us to understand in detail how the flagellar motor works.Filaments rotate at 100s of revs per second in swimming cells.\u00a0 The rotor is the heart of the motor: a set of rings in the cytoplasmic membrane, about 45 nm in diameter, and containing a total of a few hundred molecules of several different proteins.\u00a0 This is surrounded by a ring of independent torque"
   }
 ]
